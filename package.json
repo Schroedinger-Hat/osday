@@ -1,0 +1,24 @@
+{
+  "name": "osday-2023",
+  "version": "1.0.0",
+  "description": "OSday 2023",
+  "source": "src/index.html",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "scripts": {
+    "start": "parcel",
+    "build": "parcel build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Schrodinger-Hat/osday-2023.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Schrodinger-Hat/osday-2023/issues"
+  },
+  "homepage": "https://github.com/Schrodinger-Hat/osday-2023#readme",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
