@@ -1,0 +1,122 @@
+body {
+  color: #eceff4;
+  background-color: #2e3440;
+  margin: 0;
+  padding: 0;
+  font-family: Red Hat Display, sans-serif;
+  font-weight: normal;
+}
+
+.container {
+  position: relative;
+}
+
+.container:before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to right, #171717 0% 25%, #171717 35%, #171717f2 40%, #171717 45% 50%, #171717de 55%, #171717c2 60%, #1717175e 90%, #17171714 95%, #17171708 100%);
+  position: absolute;
+  top: 0;
+}
+
+.title-box {
+  width: 600px;
+  position: absolute;
+  top: 23.5%;
+  left: 80px;
+}
+
+.title-box h1 {
+  text-transform: uppercase;
+  color: #e50914;
+  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.title-box h1 span {
+  color: #eceff4;
+  font-weight: normal;
+}
+
+.title-box h2 {
+  margin-bottom: 0;
+  font-size: 26px;
+}
+
+.title-box ul {
+  padding-left: 0;
+  list-style: none;
+  display: inline-flex;
+}
+
+.title-box ul li:after {
+  content: " |";
+  padding: 0 10px 0 5px;
+}
+
+.title-box ul li:last-child:after {
+  display: none;
+}
+
+div.image {
+  flex-direction: row-reverse;
+  display: flex;
+}
+
+img {
+  height: 100vh;
+}
+
+.button {
+  color: #fff;
+  cursor: pointer;
+  text-align: center;
+  white-space: nowrap;
+  background-color: #e50914;
+  border-width: 1px;
+  border-color: #0000;
+  justify-content: center;
+  padding: calc(.5em - 1px) 1em;
+  text-decoration: none;
+}
+
+.button strong {
+  color: inherit;
+}
+
+.button .icon, .button .icon.is-large, .button .icon.is-medium, .button .icon.is-small {
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.button.is-hovered, .button:hover {
+  color: #363636;
+  border-color: #b5b5b5;
+}
+
+.button.is-focused, .button:focus {
+  color: #363636;
+  border-color: #e50914;
+}
+
+.button.is-focused:not(:active), .button:focus:not(:active) {
+  box-shadow: 0 0 0 .125em #e5091440;
+}
+
+.button.is-active, .button:active {
+  color: #363636;
+  border-color: #4a4a4a;
+}
+
+@media screen and (max-width: 992px) {
+  .title-box {
+    width: 100%;
+    padding: 10px;
+    top: auto;
+    left: auto;
+  }
+}
+
+/*# sourceMappingURL=index.4d663569.css.map */
