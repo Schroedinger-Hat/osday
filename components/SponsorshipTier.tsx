@@ -4,7 +4,7 @@ import React from 'react';
 type TSponsorshipTier = {
   title: string;
   link: string;
-  bg: string;
+  bg?: string;
 };
 
 const SponsorshipTier = ({
