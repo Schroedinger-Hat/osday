@@ -1,12 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import useScrollDirection from '../hooks/onScrollDirection';
 
 export default function Header() {
-  const scrollDirection = useScrollDirection();
-
   return (
-    <header className={`nav ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
+    <header className={`nav`}>
       <ul>
         <li>
           <Link href={'/'}>
