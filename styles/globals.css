@@ -228,6 +228,7 @@ div.image .img {
   top: 65%;
   font-size: 1rem;
   font-weight: bold;
+  z-index: 1;
 }
 
 .talks_container {
@@ -248,7 +249,7 @@ div.image .img {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  margin: 0.5em 1em;
+  margin: 1em 1em;
   padding: 0.5em;
 }
 
@@ -270,18 +271,29 @@ div.image .img {
 }
 
 .riva {
-  background: #171717 url('/micheleriva.png') no-repeat;
+  background: #171717 url('/michele-riva.jpg') no-repeat;
   background-size: cover;
 }
-
+.soligo {
+  background: #171717 url('/soligo.jpg') no-repeat;
+  background-size: cover;
+}
+.scasciafratte {
+  background: #171717 url('/scasciafratte.jpg') no-repeat;
+  background-size: cover;
+}
 .bartolesi {
-  background: #171717 url('/bartolesi.png') no-repeat;
+  background: #171717 url('/bartolesi.jpg') no-repeat;
+  background-size: cover;
+}
+.faye_franceschini {
+  background: #171717 url('/omar.jpg') no-repeat;
   background-size: cover;
 }
 
 @media screen and (max-width: 992px) {
   .title-box {
-    width: 100%;
+    width: 100%;  
     top: auto;
     left: auto;
     padding: 10px;

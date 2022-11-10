@@ -9,12 +9,14 @@ export default function Header() {
     <header className={`nav ${scrollDirection === 'down' ? 'hide' : 'show'}`}>
       <ul>
         <li>
-          <Image
-            width={50}
-            height={50}
-            alt="Schrodingers Hat Community Logo - Join the open source community"
-            src="/sh.png"
-          />
+          <Link href={'/'}>
+            <Image
+              width={50}
+              height={50}
+              alt="Schrodingers Hat Community Logo - Join the open source community"
+              src="/sh.png"
+            />
+          </Link>
         </li>
         <li>
           <Link href={'/Agenda'}>Agenda</Link>
