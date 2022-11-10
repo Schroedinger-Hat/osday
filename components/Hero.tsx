@@ -32,7 +32,7 @@ const Hero = ({
     <div className="title-box">
       {title ? (
         <h1>
-          {title} {props.originals ? <span>Originals</span> : null}
+          {title} {originals ? <span>Originals</span> : null}
         </h1>
       ) : (
         <h1>
