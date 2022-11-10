@@ -66,7 +66,7 @@ a {
 .header {
   position: sticky;
   top: 0px;
-  transition-property: all; 
+  transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
@@ -225,7 +225,7 @@ div.image .img {
   display: flex;
   flex-direction: column;
   left: 80px;
-  top: 65%;
+  top: 75%;
   font-size: 1rem;
   font-weight: bold;
   z-index: 1;
@@ -293,7 +293,7 @@ div.image .img {
 
 @media screen and (max-width: 992px) {
   .title-box {
-    width: 100%;  
+    width: 100%;
     top: auto;
     left: auto;
     padding: 10px;
@@ -353,4 +353,110 @@ div.image .img {
 .subtitle {
   color: #e50914;
   text-align: center;
+}
+
+.after_main {
+  position: absolute;
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  left: 80px;
+  top: 60%;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  padding-bottom: 2em;
+}
+
+.after_main a {
+  text-decoration: underline;
+}
+
+.after_main h2 {
+  width: 40%;
+}
+
+.after_main h3 {
+  font-size: 1.5rem;
+  width: 50%;
+}
+
+.after_main_container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 4em;
+}
+
+.after_main_container h3 {
+  font-size: 1.5rem;
+}
+
+.after_main_container li {
+  position: relative;
+  width: 18rem;
+  margin: 1rem 0;
+  font-size: 1.2rem;
+}
+
+.cfp_card {
+  background: #171717 url('/sh.png') no-repeat;
+  background-size: cover;
+  width: 18em;
+  height: 10em;
+  position: relative;
+  z-index: 1;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1em 1em;
+  padding: 0.5em;
+}
+
+.cfp_card p {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 0.5em;
+}
+
+.cfp_card::before {
+  content: '';
+  position: absolute;
+  background: #171717 url('/shsquared.png') no-repeat;
+  background-size: cover;
+  width: 24px;
+  height: 24px;
+  left: 0;
+  top: 0;
+  border-radius: 0 0 5px 0;
+}
+
+.jsts {
+  background: #171717 url('/javascript.png') no-repeat;
+  background-size: cover;
+}
+.opensource {
+  background: #171717 url('/opensource.png') no-repeat;
+  background-size: cover;
+}
+.cloud {
+  background: #171717 url('/cloud.webp') no-repeat;
+  background-size: cover;
+}
+.rustgopython {
+  background: #171717 url('/rust.png') no-repeat;
+  background-size: cover;
+}
+.dei {
+  background: #171717 url('/dei.jpeg') no-repeat;
+  background-size: cover;
+}
+.a11y {
+  background: #171717 url('/a11y.webp') no-repeat;
+  background-size: cover;
+}
+.greensustainability {
+  background: #171717 url('/greentech.png') no-repeat;
+  background-size: cover;
 }

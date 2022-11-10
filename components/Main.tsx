@@ -6,7 +6,7 @@ import TalkCard from './TalkCard';
 export default function Main() {
   return (
     <div className="container">
-      <Hero />
+      <Hero mainCta={{ text: 'Call for Papers', link: 'https://sessionize.com/opensourceday23' }} secondaryCta={{ text: 'Send us an email', link: 'mailto:osday@schrodinger-hat.it' }} />
       <div className="image">
         <Image className="img" alt="background" fill={true} src="/bg.jpg" />
       </div>
