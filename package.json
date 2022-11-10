@@ -1,24 +1,22 @@
 {
-  "name": "osday-2023",
-  "version": "1.0.0",
-  "description": "OSday 2023",
-  "source": "src/index.html",
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "name": "osday",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "start": "parcel",
-    "build": "parcel build && cp src/_redirects dist/_redirects"
+    "dev": "next dev",
+    "build": "next build && cp ./_redirects .next",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Schrodinger-Hat/osday-2023.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/Schrodinger-Hat/osday-2023/issues"
-  },
-  "homepage": "https://github.com/Schrodinger-Hat/osday-2023#readme",
-  "devDependencies": {
-    "parcel": "^2.7.0"
+  "dependencies": {
+    "@types/node": "18.11.9",
+    "@types/react": "18.0.25",
+    "@types/react-dom": "18.0.8",
+    "eslint": "8.27.0",
+    "eslint-config-next": "13.0.2",
+    "next": "13.0.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "4.8.4"
   }
 }
