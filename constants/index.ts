@@ -6,6 +6,12 @@ export type TTalkCard = {
   talkClass?: string;
 };
 
+export type TTypeCard = {
+  id: string;
+  title: string;
+  typeClass: string;
+};
+
 export const previousTalks: TTalkCard[] = [
   {
     id: 'riva2021',
@@ -43,5 +49,43 @@ export const previousTalks: TTalkCard[] = [
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=10020s',
     picture: '',
     talkClass: 'faye_franceschini'
+  }
+];
+
+export const cfpTypes: TTypeCard[] = [
+  {
+    id: 'jsts',
+    title: 'Javascript / Typescript',
+    typeClass: 'jsts'
+  },
+  {
+    id: 'opensource',
+    title: "Open Source (you don't say!)",
+    typeClass: 'opensource'
+  },
+  {
+    id: 'cloud',
+    title: 'Cloud and Serverless',
+    typeClass: 'cloud'
+  },
+  {
+    id: 'rustgopython',
+    title: 'Rust / Go / Python',
+    typeClass: 'rustgopython'
+  },
+  {
+    id: 'dei',
+    title: 'Diversity and Inclusion',
+    typeClass: 'dei'
+  },
+  {
+    id: 'a11y',
+    title: 'Accessibility',
+    typeClass: 'a11y'
+  },
+  {
+    id: 'greensustainability',
+    title: 'Green and Sustainable Development',
+    typeClass: 'greensustainability'
   }
 ];

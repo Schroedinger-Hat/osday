@@ -33,6 +33,11 @@ export default function Home() {
         <div className="image">
           <Image className="img" alt="background" fill={true} src="/bg.jpg" />
         </div>
+        <section className="after_main">
+          <h2>
+            Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <a href="https://discord.gg/RTXr8A3eFn">Discord</a>!
+          </h2>
+        </section>
       </div>
     </>
   )
