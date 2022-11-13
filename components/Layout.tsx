@@ -2,8 +2,28 @@ import Head from "next/head";
 import Script from "next/script";
 import Header from "./Header";
 import Footer from "./Footer";
+import { useRouter } from "next/router";
+import { useEffect } from "react";
 
 export default function Layout({ children, metas }: { children: JSX.Element, metas: { title: string, description: string, robots: string } }): JSX.Element {
+    const router = useRouter()
+    useEffect(() => {
+        const handleRouteChange = (url: string) => {
+            if ('gtag' in window) {
+                window.gtag('config', 'UA-175469686-4', {
+                    page_path: url,
+                });
+            }
+    };
+
+    router.events.on('routeChangeComplete', handleRouteChange)
+    router.events.on('hashChangeComplete', handleRouteChange)
+        return () => {
+            router.events.off('routeChangeComplete', handleRouteChange)
+            router.events.off('hashChangeComplete', handleRouteChange)
+        }
+    }, [router.events])
+    
     return (
         <>
             <Head>
