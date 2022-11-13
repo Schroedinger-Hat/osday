@@ -9,12 +9,12 @@ export default function Layout({ children, metas }: { children: JSX.Element, met
             <Head>
                 <meta charSet="utf-8" />
                 <title>{metas ? metas.title : 'Open Source Day 2023'}</title>
-                {metas.robots && <meta name="robots" content={metas.robots} />}
+                {metas && metas.robots && <meta name="robots" content={metas.robots} />}
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" type="image/png" href="/favicon-32x32.png" />
                 <meta
                     name="description"
-                    content={metas.description}
+                    content={metas ? metas.description : ''}
                 />
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
