@@ -8,7 +8,7 @@ export default function Layout({ children, metas }: { children: JSX.Element, met
         <>
             <Head>
                 <meta charSet="utf-8" />
-                <title>{metas.title ? metas.title : 'Open Source Day 2023'}</title>
+                <title>{metas ? metas.title : 'Open Source Day 2023'}</title>
                 {metas.robots && <meta name="robots" content={metas.robots} />}
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" type="image/png" href="/favicon-32x32.png" />
