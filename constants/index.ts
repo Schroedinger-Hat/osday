@@ -51,8 +51,6 @@ export const previousTalks: TTalkCard[] = [
     talkClass: 'faye_franceschini'
   }
 ];
-<<<<<<< HEAD
-=======
 
 export const cfpTypes: TTypeCard[] = [
   {
@@ -91,4 +89,3 @@ export const cfpTypes: TTypeCard[] = [
     typeClass: 'greensustainability'
   }
 ];
->>>>>>> 03b022b56ba5a9589afbc62bfff07b3e25801cb3
