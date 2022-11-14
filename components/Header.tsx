@@ -4,7 +4,14 @@ import Link from 'next/link';
 export default function Header() {
   return (
     <header className={`nav`}>
-      <ul>
+      <div>
+        <input id="menu-toggle" type="checkbox" />
+        <label className="menu-button-container" htmlFor="menu-toggle">
+          <div className="menu-button"></div>
+        </label>
+      </div>
+
+      <ul className='menu'>
         <li>
           <Link href={'/'}>
             <Image
@@ -16,22 +23,22 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Link href={'/Agenda'}>Agenda</Link>
+          <Link href={'/agenda'}>Agenda</Link>
         </li>
         <li>
-          <Link href={'/Venue'}>Venue</Link>
+          <Link href={'/venue'}>Venue</Link>
         </li>
         <li>
-          <Link href={'/About'}>About</Link>
+          <Link href={'/about'}>About</Link>
         </li>
         <li>
-          <Link href={'/Sponsor'}>Sponsor</Link>
+          <Link href={'/sponsor'}>Sponsor</Link>
         </li>
         <li>
-          <Link href={'/Speakers'}>Speakers</Link>
+          <Link href={'/speakers'}>Speakers</Link>
         </li>
         <li>
-          <Link href={'/CFP'}>CFP</Link>
+          <Link href={'/cfp'}>CFP</Link>
         </li>
       </ul>
       <ul>

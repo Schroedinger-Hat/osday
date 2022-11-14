@@ -48,7 +48,7 @@ export default function Layout({
       </Head>
       <main>
         <Header />
-        <section>{children}</section>
+        <section className='content'>{children}</section>
       </main>
       <Footer />
       <Script
