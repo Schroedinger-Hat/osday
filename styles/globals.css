@@ -63,20 +63,19 @@ a {
   );
 }
 
+main {
+  position: relative;
+}
+
 .header {
-  position: sticky;
-  top: 0px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
 
-.hide {
-  top: -6rem;
-}
-
 .nav {
   position: absolute;
+  top: 0;
   left: 1em;
   display: flex;
   width: 98%;
