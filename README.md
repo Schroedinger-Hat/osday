@@ -50,13 +50,12 @@
 
 ## About The Project
 
-Project description
+This is the repository of the site https://2023.osday.dev/ our second hybrid conference that will took place on Q1 of 2023. Enjoy :)
 
 ### Tech stack
 
 - [Next.js](https://nextjs.org/)
 - [React.js](https://reactjs.org/)
-- [Vue.js](https://vuejs.org/)
 
 <!-- USAGE EXAMPLES -->
 
