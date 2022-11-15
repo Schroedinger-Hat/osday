@@ -47,12 +47,11 @@ button {
 .container {
   position: relative;
   width: 100vw;
-  height: 100vh;
   background: linear-gradient(
     to bottom,
     transparent 0%,
     transparent 80%,
-    black 100%
+    #171717de 100%
   );
 }
 
@@ -72,12 +71,6 @@ button {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 80%,
-    black 100%
-  );
 }
 
 .header {
@@ -310,11 +303,9 @@ div.image .img {
 }
 
 .sponsors_2022 {
-  position: absolute;
   width: 100%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  top: 65%;
   font-size: 1rem;
   font-weight: bold;
   place-items: center;
@@ -566,8 +557,8 @@ div.image .img {
   /* Individual item */
   .bm-item {
     display: inline-block;
-    font-size: 2em;
-    padding: .5em 0;
+    font-size: 1.5em;
+    padding: 0.5em 0;
   }
 
   /* Styling of overlay */
@@ -589,21 +580,31 @@ div.image .img {
     padding: 0 0.2em 0 0.1em;
   }
 
+  .title-box {
+    position: relative;
+    z-index: 1;
+  }
+
   .talks_2021 {
     position: relative;
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    left: 0.5em;
+    left: 0;
     font-size: 1rem;
     z-index: 1;
     top: 80%;
     padding-bottom: 3em;
   }
 
+  .talks_2021 h2 {
+    text-align: center;
+  }
+
   .talks_container {
-    padding: 1.2em 1.5em 5em 1.5em;
+    justify-content: center;
+    padding-bottom: 2em;
   }
 
   main {
@@ -624,12 +625,12 @@ div.image .img {
   }
 
   .title-box p {
-    font-size: 1.5em;
+    font-size: 1.3em;
     max-width: 90%;
   }
 
   .after_main {
-    position: absolute;
+    position: relative;
     width: 100%;
     top: 55%;
     padding: 10px;
@@ -644,18 +645,15 @@ div.image .img {
     font-size: 1.5em;
   }
 
-
   .sponsors_2022 {
-    position: absolute;
     width: 100%;
     display: grid;
     grid-template-columns: repeat(1, 1fr);
-    top: 70%;
     font-size: 1rem;
     font-weight: bold;
     place-items: center;
   }
-  
+
   .card_sponsor {
     width: 90%;
     height: 30em;
@@ -671,7 +669,7 @@ div.image .img {
     align-items: center;
     background: white;
   }
-  
+
   .title {
     font-size: 24px;
     color: black;
