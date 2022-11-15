@@ -52,6 +52,13 @@ export default function Header() {
             CFP
           </Link>
         </Menu>
+        <Image
+          width={50}
+          height={50}
+          alt="Schrodingers Hat Community Logo - Join the open source community"
+          src="/sh.png"
+          className="mobile-logo"
+        />
       </div>
       <ul className="menu">
         <li>

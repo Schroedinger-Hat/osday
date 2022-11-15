@@ -484,7 +484,16 @@ div.image .img {
   }
 
   .mobile-menu {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .mobile-menu .mobile-logo {
     display: block;
+    position: relative;
+    margin: 0 10px;
+    top: 2em;
   }
 
   #page-wrap {
