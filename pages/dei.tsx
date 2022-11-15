@@ -1,34 +1,33 @@
-import Image from 'next/image';
 import Hero from '../components/Hero';
 
 export async function getStaticProps() {
   return {
     props: {
       metas: {
-        title: 'Speakers, Open Source Day 2023 - Florence',
+        title: 'DEI, Open Source Day 2023 - Florence',
         description: 'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social',
       }
     }
   }
 }
 
-export default function Home() {
+export default function DEI () {
   return (
     <>
       <div className="container">
         <Hero
           title="Open Source Day 2023"
-          subtitle="These are the great minds that will talk about tech and open source :) Coming soon"
+          subtitle="Diversity and Inclusion"
           date={{
             where: 'Florence',
             when: 'Coming soon',
             length: 'March 2023',
-            type: 'Speakers'
+            type: 'Diversity and Inclusion'
           }}
-          description="We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP"
+          description="Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
           originals={false}
         />
-
+       
       </div>
     </>
   );

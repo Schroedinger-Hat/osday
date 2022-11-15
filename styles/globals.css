@@ -40,6 +40,10 @@ main {
     url('/bg.jpg');
 }
 
+button {
+  all: unset;
+}
+
 .container {
   position: relative;
   width: 100vw;
@@ -502,11 +506,13 @@ div.image .img {
     position: relative;
     margin: 10px;
     top: 2em;
+    width: 36px;
+    height: 30px;
   }
 
   /* Color/shape of burger icon bars */
   .bm-burger-bars {
-    background: #373a47;
+    background: #fff;
   }
 
   /* Color/shape of burger icon bars on hover*/
@@ -560,6 +566,8 @@ div.image .img {
   /* Individual item */
   .bm-item {
     display: inline-block;
+    font-size: 2em;
+    padding: .5em 0;
   }
 
   /* Styling of overlay */
@@ -590,7 +598,12 @@ div.image .img {
     left: 0.5em;
     font-size: 1rem;
     z-index: 1;
-    top: 75%;
+    top: 80%;
+    padding-bottom: 3em;
+  }
+
+  .talks_container {
+    padding: 1.2em 1.5em 5em 1.5em;
   }
 
   main {

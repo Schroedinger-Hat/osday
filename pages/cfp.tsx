@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import CfpCard from '../components/CfpCard';
 import Hero from '../components/Hero';
 import { cfpTypes } from '../constants';
