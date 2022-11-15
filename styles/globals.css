@@ -47,12 +47,6 @@ button {
 .container {
   position: relative;
   width: 100vw;
-  background: linear-gradient(
-    to bottom,
-    transparent 0%,
-    transparent 80%,
-    #171717de 100%
-  );
 }
 
 .container::before {
@@ -121,10 +115,9 @@ button {
 }
 
 .title-box {
-  position: absolute;
   width: 600px;
-  top: 23.5%;
-  left: 80px;
+  margin-left: 80px;
+  margin-bottom: 2em;
   z-index: 1;
 }
 
@@ -222,12 +215,9 @@ div.image .img {
 }
 
 .talks_2021 {
-  position: absolute;
-  width: 90%;
   display: flex;
   flex-direction: column;
-  left: 80px;
-  top: 75%;
+  margin-left: 80px;
   font-size: 1rem;
   font-weight: bold;
   z-index: 1;
@@ -299,6 +289,7 @@ div.image .img {
     top: auto;
     left: auto;
     padding: 10px;
+    margin-left: 0;
   }
 }
 
@@ -356,12 +347,9 @@ div.image .img {
 }
 
 .after_main {
-  position: absolute;
-  width: 90%;
   display: flex;
   flex-direction: column;
-  left: 80px;
-  top: 67%;
+  margin-left: 80px;
   font-size: 1rem;
   font-weight: bold;
   z-index: 1;
@@ -605,6 +593,7 @@ div.image .img {
     z-index: 1;
     top: 80%;
     padding-bottom: 3em;
+    margin-left: 0;
   }
 
   .talks_2021 h2 {
@@ -644,6 +633,7 @@ div.image .img {
     top: 55%;
     padding: 10px;
     left: 0;
+    margin-left: 0;
   }
   .after_main h2 {
     width: 100%;
