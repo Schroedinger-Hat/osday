@@ -27,9 +27,7 @@ export default function Agenda() {
           description="We are still looking for Speakers and organising the event! Want to participate? :)"
           originals={false}
         />
-        <div className="image">
-          <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div>
+       
         <section className="after_main">
           <h2>
             Head over to the CFP page or contact us directly @ <a href="mailto:osday@schrodinger-hat.it">SH</a>

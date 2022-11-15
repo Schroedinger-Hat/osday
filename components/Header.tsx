@@ -1,10 +1,55 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { slide as Menu } from 'react-burger-menu';
 
 export default function Header() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setOpen(!isOpen);
+  };
+
+  const closeSideBar = () => {
+    setOpen(false);
+  };
+
   return (
     <header className={`nav`}>
-      <ul>
+      <div className="mobile-menu">
+        <Menu
+          pageWrapId={'page-wrap'}
+          customBurgerIcon={
+            <Image width={100} height={100} src="/sh.png" alt={''} />
+          }
+          isOpen={isOpen}
+          onOpen={handleIsOpen}
+          onClose={handleIsOpen}
+        >
+          <Link onClick={closeSideBar} href={'/'}>
+            Home
+          </Link>
+          <Link onClick={closeSideBar} href={'/agenda'}>
+            Agenda
+          </Link>
+          <Link onClick={closeSideBar} href={'/venue'}>
+            Venue
+          </Link>
+          <Link onClick={closeSideBar} href={'/about'}>
+            About
+          </Link>
+          <Link onClick={closeSideBar} href={'/sponsor'}>
+            Sponsor
+          </Link>
+          <Link onClick={closeSideBar} href={'/speakers'}>
+            Speakers
+          </Link>
+          <Link onClick={closeSideBar} href={'/cfp'}>
+            CFP
+          </Link>
+        </Menu>
+      </div>
+      <ul className="menu">
         <li>
           <Link href={'/'}>
             <Image
@@ -16,22 +61,22 @@ export default function Header() {
           </Link>
         </li>
         <li>
-          <Link href={'/Agenda'}>Agenda</Link>
+          <Link href={'/agenda'}>Agenda</Link>
         </li>
         <li>
-          <Link href={'/Venue'}>Venue</Link>
+          <Link href={'/venue'}>Venue</Link>
         </li>
         <li>
-          <Link href={'/About'}>About</Link>
+          <Link href={'/about'}>About</Link>
         </li>
         <li>
-          <Link href={'/Sponsor'}>Sponsor</Link>
+          <Link href={'/sponsor'}>Sponsor</Link>
         </li>
         <li>
-          <Link href={'/Speakers'}>Speakers</Link>
+          <Link href={'/speakers'}>Speakers</Link>
         </li>
         <li>
-          <Link href={'/CFP'}>CFP</Link>
+          <Link href={'/cfp'}>CFP</Link>
         </li>
       </ul>
       <ul>

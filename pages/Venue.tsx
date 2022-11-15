@@ -28,9 +28,6 @@ export default function Home() {
           description="Keep in touch through our channels (Discord, LinkedIn) to know which Venue will host us for this event :)"
           originals={false}
         />
-        <div className="image">
-          <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div>
         <section className="after_main">
           <h2>
             Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <a href="https://discord.gg/RTXr8A3eFn">Discord</a>!

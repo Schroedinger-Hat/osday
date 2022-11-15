@@ -3,7 +3,7 @@
 html,
 body {
   font-family: 'Red Hat Display', sans-serif;
-  background-color: #000;
+  background-color: #171717;
   color: #eceff4;
   font-weight: normal;
   padding: 0;
@@ -20,10 +20,36 @@ a {
   box-sizing: border-box;
 }
 
+main {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+      90deg,
+      #171717 0% 25%,
+      #171717 35%,
+      #171717 40%,
+      #171717fa 45%,
+      #171717f5 50%,
+      #171717de 55%,
+      #171717c2 60%,
+      #1717175e 90%,
+      #17171714 95%,
+      #17171708 100%
+    ),
+    url('/bg.jpg');
+}
+
 .container {
   position: relative;
   width: 100vw;
   height: 100vh;
+  background: linear-gradient(
+    to bottom,
+    transparent 0%,
+    transparent 80%,
+    black 100%
+  );
 }
 
 .container::before {
@@ -33,19 +59,6 @@ a {
   width: 100%;
   height: 100%;
   z-index: 1;
-  background-image: linear-gradient(
-    90deg,
-    #171717 0% 25%,
-    #171717 35%,
-    #171717 40%,
-    #171717fa 45%,
-    #171717f5 50%,
-    #171717de 55%,
-    #171717c2 60%,
-    #1717175e 90%,
-    #17171714 95%,
-    #17171708 100%
-  );
 }
 
 .container:after {
@@ -64,24 +77,16 @@ a {
 }
 
 .header {
-  position: sticky;
-  top: 0px;
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   transition-duration: 500ms;
 }
 
-.hide {
-  top: -6rem;
-}
-
 .nav {
-  position: absolute;
   left: 1em;
   display: flex;
   width: 98%;
   justify-content: space-between;
-  z-index: 2;
 }
 
 .nav ul {
@@ -361,7 +366,7 @@ div.image .img {
   display: flex;
   flex-direction: column;
   left: 80px;
-  top: 60%;
+  top: 67%;
   font-size: 1rem;
   font-weight: bold;
   z-index: 1;
@@ -459,4 +464,209 @@ div.image .img {
 .greensustainability {
   background: #171717 url('/greentech.png') no-repeat;
   background-size: cover;
+}
+
+.mobile-menu {
+  display: none;
+}
+
+@media screen and (max-width: 768px) {
+  .nav ul {
+    display: none;
+  }
+
+  .nav ul li {
+    margin: 0.5em;
+  }
+
+  .nav ul li img {
+    width: 32px;
+    height: 32px;
+  }
+
+  .content {
+    margin-top: 2em;
+  }
+
+  .mobile-menu {
+    display: block;
+  }
+
+  #page-wrap {
+    padding-bottom: 10px;
+    padding-top: 10px;
+  }
+
+  /* Position and sizing of burger button */
+  .bm-burger-button {
+    position: relative;
+    margin: 10px;
+    top: 2em;
+  }
+
+  /* Color/shape of burger icon bars */
+  .bm-burger-bars {
+    background: #373a47;
+  }
+
+  /* Color/shape of burger icon bars on hover*/
+  .bm-burger-bars-hover {
+    background: #a90000;
+  }
+
+  /* Position and sizing of clickable cross button */
+  .bm-cross-button {
+    height: 24px;
+    width: 24px;
+  }
+
+  /* Color/shape of close button cross */
+  .bm-cross {
+    background: #bdc3c7;
+  }
+
+  /*
+  Sidebar wrapper styles
+  Note: Beware of modifying this element as it can break the animations - you should not need to touch it in most cases
+  */
+  .bm-menu-wrap {
+    position: fixed;
+    height: 100%;
+    z-index: 1100;
+    width: 100vw !important;
+    height: 100vh !important;
+    transition: all 0.5s ease 0s;
+    top: 0 !important;
+  }
+
+  /* General sidebar styles */
+  .bm-menu {
+    background: #171717;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.15em;
+  }
+
+  /* Morph shape necessary with bubble or elastic */
+  .bm-morph-shape {
+    fill: #171717;
+  }
+
+  /* Wrapper for item list */
+  .bm-item-list {
+    color: #b8b7ad;
+    padding: 0.8em;
+  }
+
+  /* Individual item */
+  .bm-item {
+    display: inline-block;
+  }
+
+  /* Styling of overlay */
+  .bm-overlay {
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 80%,
+      black 100%
+    );
+  }
+
+  .title-box ul {
+    font-size: 0.8em;
+    max-width: 90%;
+  }
+
+  .title-box ul li::after {
+    padding: 0 0.2em 0 0.1em;
+  }
+
+  .talks_2021 {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    left: 0.5em;
+    font-size: 1rem;
+    z-index: 1;
+    top: 75%;
+  }
+
+  main {
+    background-image: linear-gradient(
+        90deg,
+        #171717 0% 25%,
+        #171717fa 35%,
+        #171717fa 40%,
+        #171717fa 45%,
+        #171717f5 50%,
+        #171717f5 55%,
+        #171717f5 60%,
+        #171717de 90%,
+        #171717de 95%,
+        #171717de 100%
+      ),
+      url('/bg.jpg');
+  }
+
+  .title-box p {
+    font-size: 1.5em;
+    max-width: 90%;
+  }
+
+  .after_main {
+    position: absolute;
+    width: 100%;
+    top: 55%;
+    padding: 10px;
+    left: 0;
+  }
+  .after_main h2 {
+    width: 100%;
+    font-size: 1.5em;
+  }
+  .after_main h3 {
+    width: 100%;
+    font-size: 1.5em;
+  }
+
+
+  .sponsors_2022 {
+    position: absolute;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    top: 70%;
+    font-size: 1rem;
+    font-weight: bold;
+    place-items: center;
+  }
+  
+  .card_sponsor {
+    width: 90%;
+    height: 30em;
+    padding: 2em;
+  }
+
+  .inner {
+    width: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: white;
+  }
+  
+  .title {
+    font-size: 24px;
+    color: black;
+    text-align: center;
+    font-weight: 700;
+    color: #181818;
+    text-shadow: 0px 2px 2px #e50914;
+    position: relative;
+    margin: 0 0 20px 0;
+  }
 }

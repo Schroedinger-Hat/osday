@@ -22,16 +22,13 @@ export default function Home() {
           subtitle="Would you like to become a Sponsor for Open Source Day 2023?"
           date={{
             where: 'Florence',
-            when: 'Today to February 2023',
+            when: 'To Feb 2023',
             length: '3 months',
             type: 'Call for sponsors'
           }}
           description="Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
           originals={false}
         />
-        <div className="image">
-          <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div>
         <section className="sponsors_2022">
           <SponsorshipTier title="Platinum Tier" link="#" />
           <SponsorshipTier title="Diamond Tier" link="#" />

@@ -6,10 +6,10 @@ export async function getStaticProps() {
     props: {
       metas: {
         title: '404, Open Source Day 2023 - Florence',
-        robots: 'noindex',
+        robots: 'noindex'
       }
     }
-  }
+  };
 }
 
 export default function _404() {
@@ -27,9 +27,6 @@ export default function _404() {
           }}
           description="It appears you may have found the secret season of the best show of this time, 404! Would you like to go back? :)"
         />
-        <div className="image">
-          <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div>
       </div>
     </>
   );
