@@ -1,1 +1,33 @@
-{}
+{
+  "Cfp" : {
+    "where": "Firenze",
+    "when": "Iniziata",
+    "lenght": "Chiude a Gennaio 2023",
+    "description": "Vorresti partecipare alla CFP? Vai sul sito Sessionize e applica la tua idea :)",
+    "maincta_text": "Applica il tuo paper :)",
+    "secondarycta_text": "Inviaci una mail",
+    "description_1": "Continua a leggere se vuoi saperne di più sugli argomenti di maggiore interesse per i partecipanti alla nostra comunità",
+    "description_2": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
+  },
+  "Footer" : {
+
+  },
+  "Header" : {
+
+  },
+  "Hero" : {
+
+  },
+  "Layout" : {
+
+  },
+  "Main" : {
+
+  },
+  "SponsorshipTier" : {
+
+  },
+  "TalkCard" : {
+
+  }
+}

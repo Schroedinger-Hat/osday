@@ -1,6 +1,7 @@
 import CfpCard from '../components/CfpCard';
 import Hero from '../components/Hero';
 import { cfpTypes } from '../constants';
+import { NextIntlProvider } from 'next-intl';
 
 export async function getStaticProps() {
   return {
@@ -14,6 +15,7 @@ export async function getStaticProps() {
 }
 
 export default function CFP() {
+  const t = useTranslations('Cfp');
   return (
     <>
       <div className="container">
@@ -21,30 +23,29 @@ export default function CFP() {
           title="Open Source Day 2023"
           subtitle="Call for papers"
           date={{
-            where: 'Florence',
-            when: 'Started',
-            length: 'Closes in Jan 2023',
+            where: {t('where')},
+            when: {t('when')},
+            length: {t('lenght')},
             type: 'CFP'
           }}
-          description="Want to participate in our Call for Papers? Head over to Sessionize and submit your ideas :)"
+          description={t('description')}
           originals={false}
           mainCta={{
-            text: 'Submit paper :)',
+            text: {t('maincta_text')},
             link: 'https://sessionize.com/opensourceday23'
           }}
           secondaryCta={{
-            text: 'Send us an email',
+            text: {t('secondarycta_text')}
             link: 'mailto:osday@schrodinger-hat.it'
           }}
         />
       
         <section className="after_main">
           <h2>
-            Read along if you would like to know more about the topics that are
-            of higher interest for our community attendees
+            {t('description_1')}
           </h2>
           <h3>
-            You can find all the community info on our website,{' '}
+            {t('description_2')} {' '}
             <a href="https://www.schrodinger-hat.it/">Schrodingers Hat</a>
           </h3>
           <div className="after_main_container">
