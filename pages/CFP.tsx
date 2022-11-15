@@ -38,9 +38,9 @@ export default function CFP() {
             link: 'mailto:osday@schrodinger-hat.it'
           }}
         />
-        <div className="image">
+        {/* <div className="image">
           <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div>
+        </div> */}
         <section className="after_main">
           <h2>
             Read along if you would like to know more about the topics that are

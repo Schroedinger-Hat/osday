@@ -1,17 +1,55 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import { useState } from 'react';
+import { slide as Menu } from 'react-burger-menu';
 
 export default function Header() {
+  const [isOpen, setOpen] = useState(false);
+
+  const handleIsOpen = () => {
+    setOpen(!isOpen);
+  };
+
+  const closeSideBar = () => {
+    setOpen(false);
+  };
+
   return (
     <header className={`nav`}>
-      <div>
-        <input id="menu-toggle" type="checkbox" />
-        <label className="menu-button-container" htmlFor="menu-toggle">
-          <div className="menu-button"></div>
-        </label>
+      <div className="mobile-menu">
+        <Menu
+          pageWrapId={'page-wrap'}
+          customBurgerIcon={
+            <Image width={100} height={100} src="/sh.png" alt={''} />
+          }
+          isOpen={isOpen}
+          onOpen={handleIsOpen}
+          onClose={handleIsOpen}
+        >
+          <Link onClick={closeSideBar} href={'/'}>
+            Home
+          </Link>
+          <Link onClick={closeSideBar} href={'/agenda'}>
+            Agenda
+          </Link>
+          <Link onClick={closeSideBar} href={'/venue'}>
+            Venue
+          </Link>
+          <Link onClick={closeSideBar} href={'/about'}>
+            About
+          </Link>
+          <Link onClick={closeSideBar} href={'/sponsor'}>
+            Sponsor
+          </Link>
+          <Link onClick={closeSideBar} href={'/speakers'}>
+            Speakers
+          </Link>
+          <Link onClick={closeSideBar} href={'/cfp'}>
+            CFP
+          </Link>
+        </Menu>
       </div>
-
-      <ul className='menu'>
+      <ul className="menu">
         <li>
           <Link href={'/'}>
             <Image

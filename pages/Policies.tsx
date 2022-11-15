@@ -28,9 +28,9 @@ export default function Policies() {
           description="Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
           originals={false}
         />
-        <div className="image">
+        {/* <div className="image">
           <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div>
+        </div> */}
       </div>
     </>
   );
