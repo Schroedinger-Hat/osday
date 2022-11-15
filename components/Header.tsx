@@ -19,15 +19,19 @@ export default function Header() {
       <div className="mobile-menu">
         <Menu
           pageWrapId={'page-wrap'}
-          customBurgerIcon={
-            <Image width={100} height={100} src="/sh.png" alt={''} />
-          }
           isOpen={isOpen}
           onOpen={handleIsOpen}
           onClose={handleIsOpen}
+          aria-label="Menu button opens sidebar with links"
         >
-          <Link onClick={closeSideBar} href={'/'}>
-            Home
+          <Link href={'/'}>
+            <Image
+              width={50}
+              height={50}
+              alt="Schrodingers Hat Community Logo - Join the open source community"
+              src="/sh.png"
+              onClick={closeSideBar}
+            />
           </Link>
           <Link onClick={closeSideBar} href={'/agenda'}>
             Agenda
