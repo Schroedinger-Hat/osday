@@ -1,3 +1,33 @@
 {
-    
+  "Cfp" : {
+    "where": "Florence",
+    "when": "Started",
+    "lenght": "Closes in Jan 2023",
+    "description": "Want to participate in our Call for Papers? Head over to Sessionize and submit your ideas :)",
+    "maincta_text": "Submit paper :)",
+    "secondarycta_text": "Send us an email",
+    "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
+    "description_2": "You can find all the community info on our website"
+  },
+  "Footer" : {
+
+  },
+  "Header" : {
+
+  },
+  "Hero" : {
+
+  },
+  "Layout" : {
+
+  },
+  "Main" : {
+
+  },
+  "SponsorshipTier" : {
+
+  },
+  "TalkCard" : {
+
+  }
 }
