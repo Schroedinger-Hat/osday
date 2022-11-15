@@ -28,9 +28,7 @@ export default function Home() {
           description="We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP"
           originals={false}
         />
-        {/* <div className="image">
-          <Image className="img" alt="background" fill={true} src="/bg.jpg" />
-        </div> */}
+
       </div>
     </>
   );
