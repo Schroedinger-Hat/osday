@@ -120,5 +120,13 @@
   "TalkCard": {},
   "SponsorshipTier": {
     "know_more": "Know more"
+  },
+  "Hero": {
+    "where": "Florence, Italy",
+    "when": "March 2023",
+    "length": "10h 20min",
+    "type": "Conference",
+    "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
+    "description_2": "the best companies and the best professionals in the sector and in open source projects"
   }
 }

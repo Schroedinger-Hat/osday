@@ -1,4 +1,5 @@
 import React from 'react';
+import { useTranslations } from 'next-intl';
 
 type THero = {
   title?: string;
@@ -28,6 +29,7 @@ const Hero = ({
   originals = true,
   ...props
 }: THero) => {
+  const t = useTranslations('Hero');
   return (
     <div className="title-box">
       {title ? (
@@ -51,10 +53,10 @@ const Hero = ({
         </ul>
       ) : (
         <ul>
-          <li>March 2023</li>
-          <li>Florence, Italy</li>
-          <li>10h 20min</li>
-          <li>Conference</li>
+          <li>{t('when')}</li>
+          <li>{t('where')}</li>
+          <li>{t('length')}</li>
+          <li>{t('type')}</li>
         </ul>
       )}
 
@@ -62,13 +64,9 @@ const Hero = ({
         <p>{description}</p>
       ) : (
         <>
+          <p>{t('description_1')}</p>
           <p>
-            We are coming back with a new edition of the Open Source Day
-            conference. In this season we are going to smash everything.
-          </p>
-          <p>
-            <i>Starring</i>: the best companies and the best professionals in
-            the sector and in open source projects
+            <i>Starring</i>: {t('description_2')}
           </p>
         </>
       )}
