@@ -2,9 +2,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
+import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
+  const t = useTranslations('Header');
 
   const handleIsOpen = () => {
     setOpen(!isOpen);
@@ -22,43 +24,43 @@ export default function Header() {
           isOpen={isOpen}
           onOpen={handleIsOpen}
           onClose={handleIsOpen}
-          aria-label="Menu button opens sidebar with links"
+          aria-label={t('menu_label')}
         >
           <Link href={'/'}>
             <Image
               width={50}
               height={50}
-              alt="Schrodingers Hat Community Logo - Join the open source community"
+              alt={t('sh_alt')}
               src="/sh.png"
               onClick={closeSideBar}
             />
           </Link>
           <Link onClick={closeSideBar} href={'/'}>
-            Home
+            {t('home_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/agenda'}>
-            Agenda
+            {t('agenda_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/venue'}>
-            Venue
+            {t('venue_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/about'}>
-            About
+            {t('about_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/sponsor'}>
-            Sponsor
+            {t('sponsor_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/speakers'}>
-            Speakers
+            {t('speakers_Link')}
           </Link>
           <Link onClick={closeSideBar} href={'/cfp'}>
-            CFP
+            {t('cfp_link')}
           </Link>
         </Menu>
         <Image
           width={50}
           height={50}
-          alt="Schrodingers Hat Community Logo - Join the open source community"
+          alt={t('sh_alt')}
           src="/sh.png"
           className="mobile-logo"
         />
@@ -66,34 +68,29 @@ export default function Header() {
       <ul className="menu">
         <li>
           <Link href={'/'}>
-            <Image
-              width={50}
-              height={50}
-              alt="Schrodingers Hat Community Logo - Join the open source community"
-              src="/sh.png"
-            />
+            <Image width={50} height={50} alt={t('sh_alt')} src="/sh.png" />
           </Link>
         </li>
         <li>
-          <Link href={'/'}>Home</Link>
+          <Link href={'/'}>{t('home_link')}</Link>
         </li>
         <li>
-          <Link href={'/agenda'}>Agenda</Link>
+          <Link href={'/agenda'}>{t('agenda_link')}</Link>
         </li>
         <li>
-          <Link href={'/venue'}>Venue</Link>
+          <Link href={'/venue'}>{t('venue_link')}</Link>
         </li>
         <li>
-          <Link href={'/about'}>About</Link>
+          <Link href={'/about'}>{t('about_link')}</Link>
         </li>
         <li>
-          <Link href={'/sponsor'}>Sponsor</Link>
+          <Link href={'/sponsor'}>{t('sponsor_link')}</Link>
         </li>
         <li>
-          <Link href={'/speakers'}>Speakers</Link>
+          <Link href={'/speakers'}>{t('speakers_Link')}</Link>
         </li>
         <li>
-          <Link href={'/cfp'}>CFP</Link>
+          <Link href={'/cfp'}>{t('cfp_link')}</Link>
         </li>
       </ul>
       <ul>
@@ -102,7 +99,7 @@ export default function Header() {
             className="notifications-menu"
             aria-haspopup="true"
             aria-expanded="false"
-            aria-label="Notifiche"
+            aria-label={t('updates')}
           >
             <svg
               width="24"
@@ -127,16 +124,11 @@ export default function Header() {
             target="_blank"
             rel="noreferrer"
           >
-            Edizione 2021
+            {t('edition')}
           </a>
         </li>
         <li>
-          <Image
-            width={50}
-            height={50}
-            src="/erwin.png"
-            alt="Picture of Erwin Schrodinger"
-          />
+          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
         </li>
       </ul>
     </header>

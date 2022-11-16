@@ -1,38 +1,48 @@
-import Hero from '../components/Hero'
+import Hero from '../components/Hero';
+import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
         title: 'Venue, Open Source Day 2023 - Florence',
-        description: 'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social',
-      }
+        description:
+          'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social'
+      },
+      messages: (await import(`../public/locales/${locale}.json`)).default
     }
-  }
+  };
 }
 
-export default function Home() {
+export default function Venue() {
+  const t = useTranslations('Venue');
+
   return (
     <>
       <div className="container">
         <Hero
-          title="Open Source Day 2023"
-          subtitle="We have a wonderful Venue"
+          title={t('title')}
+          subtitle={t('subtitle')}
           date={{
-            where: 'Florence',
-            when: 'Coming soon',
-            length: 'March 2023',
-            type: 'Venue'
+            where: t('where'),
+            when: t('when'),
+            length: t('length'),
+            type: t('type')
           }}
-          description="Keep in touch through our channels (Discord, LinkedIn) to know which Venue will host us for this event :)"
+          description={t('description')}
           originals={false}
         />
         <section className="after_main">
           <h2>
-            Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <a href="https://discord.gg/RTXr8A3eFn">Discord</a>!
+            {t.rich('heading', {
+              link: (children: ReactNode) => (
+                <a href="https://discord.gg/RTXr8A3eFn">{children}</a>
+              )
+            })}
           </h2>
         </section>
       </div>
     </>
-  )
+  );
 }
