@@ -21,7 +21,7 @@
     "cfp_link": "CFP",
     "updates": "Notification",
     "erwin_alt": "Picture of Erwin Schrodinger",
-    "edition": "Edizione 2021"
+    "edition": "Edition 2021"
   },
   "NotFound": {
     "title": "404 Page",
@@ -49,7 +49,7 @@
     "length": "March 2023",
     "type": "Agenda",
     "description": "We are still looking for Speakers and organising the event! Want to participate? :)",
-    "heading": "Head over to the CFP page or contact us directly @ <link>SH</link>",
+    "heading": "Head over to the <link href='https://sessionize.com/opensourceday23/'>CFP</link> page or contact us directly @ <link href='mailto:schrodinger.hat.show@gmail.com'>SH</link>",
     "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!"
   },
   "DEI": {
@@ -86,7 +86,7 @@
     "when": "Coming soon",
     "length": "March 2023",
     "type": "Speakers",
-    "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP"
+    "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our <link href='https://sessionize.com/opensourceday23/'>CFP</link>"
   },
   "Main": {
     "heading": "Take a look at the first edition",
@@ -114,8 +114,8 @@
     "when": "Coming soon",
     "length": "March 2023",
     "type": "Venue",
-    "description": "Keep in touch through our channels (Discord, LinkedIn) to know which Venue will host us for this event :)",
-    "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <link>Discord</link>!"
+    "description": "Keep in touch through our channels (Discord, LinkedIn or Twitter) to know which Venue will host us for this event :)",
+    "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on <link href='https://www.linkedin.com/company/schrodinger-hat/'>LinkedIn</link>, <link href='https://twitter.com/OSDayDev'>Twitter</link> or better yet, <link href='https://discord.gg/JrrrkUj4'>Discord</link>!"
   },
   "TalkCard": {},
   "SponsorshipTier": {
