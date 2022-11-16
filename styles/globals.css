@@ -12,11 +12,11 @@ body {
 }
 
 .bg-primary {
-  background: #2E3440;
+  background: #2e3440;
 }
 
 .bg-secondary {
-  background: #ECEFF4;
+  background: #eceff4;
 }
 
 .text-color-primary {
@@ -24,7 +24,7 @@ body {
 }
 
 .text-color-secondary {
-  color: #2E3440;
+  color: #2e3440;
 }
 
 .text-center {
@@ -43,7 +43,6 @@ a {
 main {
   position: relative;
   width: 100vw;
-  height: 100vh;
   background-image: linear-gradient(
       90deg,
       #171717 0% 25%,
@@ -302,6 +301,11 @@ div.image .img {
 }
 .faye_franceschini {
   background: #171717 url('/omar.jpg') no-repeat;
+  background-size: cover;
+}
+
+.trachitella {
+  background: #171717 url('/dario.jpg') no-repeat;
   background-size: cover;
 }
 
@@ -607,7 +611,6 @@ div.image .img {
   .talks_2021 {
     position: relative;
     width: 100%;
-    height: 100vh;
     display: flex;
     flex-direction: column;
     left: 0;

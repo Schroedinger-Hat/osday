@@ -49,6 +49,13 @@ export const previousTalks: TTalkCard[] = [
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=10020s',
     picture: '',
     talkClass: 'faye_franceschini'
+  },
+  {
+    id: 'operatorkerberus2021',
+    description: 'Capsule, storia di un operator kubernetes open source',
+    link: 'https://youtu.be/8z6CRK61JLA',
+    picture: '',
+    talkClass: 'trachitella'
   }
 ];
 
