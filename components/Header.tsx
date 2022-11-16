@@ -33,6 +33,9 @@ export default function Header() {
               onClick={closeSideBar}
             />
           </Link>
+          <Link onClick={closeSideBar} href={'/'}>
+            Home
+          </Link>
           <Link onClick={closeSideBar} href={'/agenda'}>
             Agenda
           </Link>
@@ -70,6 +73,9 @@ export default function Header() {
               src="/sh.png"
             />
           </Link>
+        </li>
+        <li>
+          <Link href={'/'}>Home</Link>
         </li>
         <li>
           <Link href={'/agenda'}>Agenda</Link>
