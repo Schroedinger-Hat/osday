@@ -36,9 +36,15 @@ export default function Venue() {
         <section className="after_main">
           <h2>
             {t.rich('heading', {
-              link: (children: ReactNode) => (
+              discord: (children: ReactNode) => (
                 <a href="https://discord.gg/RTXr8A3eFn">{children}</a>
-              )
+              ),
+              linkedin: (children: ReactNode) => (
+                <a href="https://www.linkedin.com/company/schrodinger-hat/">{children}</a>
+              ),
+              twitter: (children: ReactNode) => (
+                <a href="https://twitter.com/OSDayDev">{children}</a>
+              ),
             })}
           </h2>
         </section>

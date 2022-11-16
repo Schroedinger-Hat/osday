@@ -21,7 +21,7 @@
     "cfp_link": "CFP",
     "updates": "Notification",
     "erwin_alt": "Picture of Erwin Schrodinger",
-    "edition": "Edizione 2021"
+    "edition": "Edition 2021"
   },
   "NotFound": {
     "title": "404 Page",
@@ -49,7 +49,7 @@
     "length": "March 2023",
     "type": "Agenda",
     "description": "We are still looking for Speakers and organising the event! Want to participate? :)",
-    "heading": "Head over to the CFP page or contact us directly @ <link>SH</link>",
+    "heading": "Head over to the <cfp>CFP</cfp> page or contact us directly @ <link>SH</link>",
     "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!"
   },
   "DEI": {
@@ -114,8 +114,8 @@
     "when": "Coming soon",
     "length": "March 2023",
     "type": "Venue",
-    "description": "Keep in touch through our channels (Discord, LinkedIn) to know which Venue will host us for this event :)",
-    "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <link>Discord</link>!"
+    "description": "Keep in touch through our channels (Discord, LinkedIn or Twitter) to know which Venue will host us for this event :)",
+    "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> or better yet, <discord>Discord</discord>!"
   },
   "TalkCard": {},
   "SponsorshipTier": {
@@ -127,6 +127,6 @@
     "length": "10h 20min",
     "type": "Conference",
     "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
-    "description_2": "the best companies and the best professionals in the sector and in open source projects"
+    "description_2": "The best companies and the best professionals in the sector in Open Source projects"
   }
 }
