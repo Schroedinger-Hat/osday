@@ -182,7 +182,6 @@ div.image {
 }
 
 div.image .img {
-  height: 100vh;
   width: 100%;
 }
 
@@ -236,33 +235,26 @@ div.image .img {
 }
 
 .talks_2021 {
-  display: flex;
-  flex-direction: column;
-  margin-left: 80px;
   font-size: 1rem;
   font-weight: bold;
   z-index: 1;
+  margin: 5em 0 5em 80px;
 }
 
 .talks_container {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  width: 90%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+  gap: .5em 1em;
+  margin-bottom: 2em;
 }
 
 .talk_card {
   background: #171717 url('/osday2021.png') no-repeat;
   background-size: cover;
-  width: 18em;
-  height: 10em;
   position: relative;
   z-index: 1;
   border-radius: 0.5em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  margin: 1em 1em;
   padding: 0.5em;
 }
 
@@ -609,16 +601,8 @@ div.image .img {
   }
 
   .talks_2021 {
-    position: relative;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    left: 0;
-    font-size: 1rem;
-    z-index: 1;
-    top: 80%;
-    padding-bottom: 3em;
-    margin-left: 0;
+    justify-content: center;
+    margin: 3em 0 3em 0;
   }
 
   .talks_2021 h2 {
@@ -626,11 +610,12 @@ div.image .img {
   }
 
   .talks_container {
-    justify-content: center;
+    grid-template-columns: 1fr;
     padding-bottom: 2em;
   }
 
   main {
+    height: auto;
     background-image: linear-gradient(
         90deg,
         #171717 0% 25%,
@@ -710,5 +695,12 @@ div.image .img {
   footer span {
     display: inline-block;
     padding: 5px;
+  }
+
+  .talk_card {
+    width: 60%;
+    height: 20em;
+    background-size: contain;
+    margin: 0 auto;
   }
 }
