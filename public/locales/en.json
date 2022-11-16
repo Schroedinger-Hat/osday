@@ -13,7 +13,18 @@
 
   },
   "Header" : {
-
+    "menu_label": "Menu button opens sidebar with links",
+    "sh_alt": "Schrodingers Hat Community Logo - Join the open source community",
+    "home_link": "Home",
+    "agenda_link": "Agenda",
+    "venue_link": "Venue",
+    "about_link": "About",
+    "sponsor_link": "Sponsor",
+    "speakers_Link": "Speakers",
+    "cfp_link": "CFP",
+    "updates": "Notification",
+    "erwin_alt": "Picture of Erwin Schrodinger",
+    "edition": "Edizione 2021"
   },
   "Hero" : {
 

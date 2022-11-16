@@ -1,18 +1,23 @@
 import Hero from '../components/Hero';
 import SponsorshipTier from '../components/SponsorshipTier';
+import { useTranslations } from 'next-intl';
 
-export async function getStaticProps() {
+export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
         title: 'Sponsor, Open Source Day 2023 - Florence',
-        description: 'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social',
-      }
+        description:
+          'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social'
+      },
+      messages: (await import(`../public/locales/${locale}.json`)).default
     }
-  }
+  };
 }
 
-export default function Home() {
+export default function Sponsor() {
+  const t = useTranslations('Sponsor');
+
   return (
     <>
       <div className="container">

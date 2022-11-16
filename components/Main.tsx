@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import { previousTalks, TTalkCard } from '../constants';
 import Hero from './Hero';
 import TalkCard from './TalkCard';
