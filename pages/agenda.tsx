@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -34,14 +35,14 @@ export default function Agenda() {
         <section className="after_main">
           <h2>
             {t.rich('heading', {
-              link: (children: string) => (
+              link: (children: ReactNode) => (
                 <a href="mailto:osday@schrodinger-hat.it">{children}</a>
               )
             })}
           </h2>
           <h3>
             {t.rich('heading_2', {
-              link: (children: string) => (
+              link: (children: ReactNode) => (
                 <a href="https://www.schrodinger-hat.it/">{children}</a>
               )
             })}

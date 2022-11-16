@@ -1,5 +1,6 @@
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -35,7 +36,7 @@ export default function Venue() {
         <section className="after_main">
           <h2>
             {t.rich('heading', {
-              link: (children: string) => (
+              link: (children: ReactNode) => (
                 <a href="https://discord.gg/RTXr8A3eFn">{children}</a>
               )
             })}
