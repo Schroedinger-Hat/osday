@@ -49,7 +49,7 @@
     "length": "March 2023",
     "type": "Agenda",
     "description": "We are still looking for Speakers and organising the event! Want to participate? :)",
-    "heading": "Head over to the <link href='https://sessionize.com/opensourceday23/'>CFP</link> page or contact us directly @ <link href='mailto:schrodinger.hat.show@gmail.com'>SH</link>",
+    "heading": "Head over to the <cfp>CFP</cfp> page or contact us directly @ <link>SH</link>",
     "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!"
   },
   "DEI": {
@@ -86,7 +86,7 @@
     "when": "Coming soon",
     "length": "March 2023",
     "type": "Speakers",
-    "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our <link href='https://sessionize.com/opensourceday23/'>CFP</link>"
+    "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP"
   },
   "Main": {
     "heading": "Take a look at the first edition",
@@ -115,7 +115,7 @@
     "length": "March 2023",
     "type": "Venue",
     "description": "Keep in touch through our channels (Discord, LinkedIn or Twitter) to know which Venue will host us for this event :)",
-    "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on <link href='https://www.linkedin.com/company/schrodinger-hat/'>LinkedIn</link>, <link href='https://twitter.com/OSDayDev'>Twitter</link> or better yet, <link href='https://discord.gg/JrrrkUj4'>Discord</link>!"
+    "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> or better yet, <discord>Discord</discord>!"
   },
   "TalkCard": {},
   "SponsorshipTier": {
@@ -127,6 +127,6 @@
     "length": "10h 20min",
     "type": "Conference",
     "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
-    "description_2": "the best companies and the best professionals in the sector and in open source projects"
+    "description_2": "The best companies and the best professionals in the sector in Open Source projects"
   }
 }

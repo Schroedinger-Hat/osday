@@ -37,6 +37,9 @@ export default function Agenda() {
             {t.rich('heading', {
               link: (children: ReactNode) => (
                 <a href="mailto:osday@schrodinger-hat.it">{children}</a>
+              ),
+              cfp: (children: ReactNode) => (
+                <a href="https://sessionize.com/opensourceday23/">{children}</a>
               )
             })}
           </h2>

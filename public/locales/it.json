@@ -49,8 +49,8 @@
     "length": "Marzo 2023",
     "type": "Agenda",
     "description": "Stiamo ancora cercando Speakers e organizzando l'evento! Vuoi partecipare? :)",
-    "heading": "Visita la pagina della <link href='https://sessionize.com/opensourceday23/'>CFP</link> o contattaci direttamente @ <link href='mailto:schrodinger.hat.show@gmail.com'>SH</link>",
-    "heading_2": "Puoi trovare tutte le informazioni sulla nostra community sul nostro sito, <link href='https://www.schrodinger-hat.it/'>Schrodingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!"
+    "heading": "Visita la pagina della <cfp>CFP</cfp> o contattaci direttamente @ <link>SH</link>",
+    "heading_2": "Puoi trovare tutte le informazioni sulla nostra community sul nostro sito, <link>Schrodingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!"
   },
   "DEI": {
     "title": "Open Source Day 2023",
@@ -86,7 +86,7 @@
     "when": "Coming soon",
     "length": "Marzo 2023",
     "type": "Speakers",
-    "description": "Stiamo ancora valutando le vostre proposte, quindi se avete un'idea e volete parlarne visitate la nostra <link href='https://sessionize.com/opensourceday23/'>CFP</link>"
+    "description": "Stiamo ancora valutando le vostre proposte, quindi se avete un'idea e volete parlarne visitate la nostra CFP"
   },
   "Main": {
     "heading": "Dai uno sguardo alla prima edizione",
@@ -115,18 +115,18 @@
     "length": "Marzo 2023",
     "type": "Sede",
     "description": "Tenetevi in contatto attraverso i nostri canali social (Discord, Linkedin e Twitter) per sapere quale sede ci ospiterà per questo evento :)",
-    "heading": "Vuoi sapere di più sulla sede dell'evento :) Tenetevi aggiornati su <link href='https://www.linkedin.com/company/schrodinger-hat/'>LinkedIn</link>, <link href='https://twitter.com/OSDayDev'>Twitter</link> o meglio ancora, <link href='https://discord.gg/JrrrkUj4'>Discord</link>!"
+    "heading": "Vuoi sapere di più sulla sede dell'evento :) Tenetevi aggiornati su <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> o meglio ancora, <discord>Discord</discord>!"
   },
   "TalkCard": {},
   "SponsorshipTier": {
     "know_more": "Scopri di più"
   },
   "Hero": {
-    "where": "Florence, Italy",
-    "when": "March 2023",
+    "where": "Firenze",
+    "when": "Marzo 2023",
     "length": "10h 20min",
-    "type": "Conference",
-    "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
-    "description_2": "the best companies and the best professionals in the sector and in open source projects"
+    "type": "Conferenza",
+    "description_1": "Stiamo per tornare con una nuova edizione dell'Open Source Day. In questa stagione distruggeremo tutto.",
+    "description_2": "Le migliori aziende e i migliori professionisti del settore nei progetti Open Source"
   }
 }
