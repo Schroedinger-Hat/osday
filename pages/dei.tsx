@@ -21,15 +21,15 @@ export default function DEI() {
     <>
       <div className="container">
         <Hero
-          title="Open Source Day 2023"
-          subtitle="Diversity and Inclusion"
+          title={t('title')}
+          subtitle={t('subtitle')}
           date={{
-            where: 'Florence',
-            when: 'Coming soon',
-            length: 'March 2023',
-            type: 'Diversity and Inclusion'
+            where: t('where'),
+            when: t('when'),
+            length: t('length'),
+            type: t('type')
           }}
-          description="Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
+          description={t('description')}
           originals={false}
         />
       </div>

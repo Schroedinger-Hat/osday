@@ -20,15 +20,15 @@ export default function _404() {
     <>
       <div className="container">
         <Hero
-          title="404 Page"
-          subtitle="You are Lost - Season Finale"
+          title={t('title')}
+          subtitle={t('subtitle')}
           date={{
-            where: 'Anywhere',
-            when: 'Anytime',
-            length: 'Infinity',
-            type: 'HTTP Error'
+            where: t('where'),
+            when: t('when'),
+            length: t('length'),
+            type: t('type')
           }}
-          description="It appears you may have found the secret season of the best show of this time, 404! Would you like to go back? :)"
+          description={t('description')}
         />
       </div>
     </>

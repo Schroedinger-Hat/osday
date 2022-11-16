@@ -21,15 +21,15 @@ export default function Rules() {
     <>
       <div className="container">
         <Hero
-          title="Open Source Day 2023"
-          subtitle="Rules of Conduct"
+          title={t('title')}
+          subtitle={t('subtitle')}
           date={{
-            where: 'Florence',
-            when: 'Coming soon',
-            length: 'March 2023',
-            type: 'Rules of Conduct'
+            where: t('where'),
+            when: t('when'),
+            length: t('length'),
+            type: t('type')
           }}
-          description="Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
+          description={t('description')}
           originals={false}
         />
       </div>

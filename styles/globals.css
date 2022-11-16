@@ -651,11 +651,9 @@ div.image .img {
 
   .after_main {
     position: relative;
-    width: 100%;
-    top: 55%;
     padding: 10px;
-    left: 0;
     margin-left: 0;
+    padding-bottom: 2em;
   }
   .after_main h2 {
     width: 100%;
@@ -700,5 +698,14 @@ div.image .img {
     text-shadow: 0px 2px 2px #e50914;
     position: relative;
     margin: 0 0 20px 0;
+  }
+
+  footer {
+    margin-top: 1em;
+  }
+
+  footer span {
+    display: inline-block;
+    padding: 5px;
   }
 }
