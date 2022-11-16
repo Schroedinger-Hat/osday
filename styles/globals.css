@@ -11,6 +11,26 @@ body {
   overflow-x: hidden;
 }
 
+.bg-primary {
+  background: #2E3440;
+}
+
+.bg-secondary {
+  background: #ECEFF4;
+}
+
+.text-color-primary {
+  color: #eceff4;
+}
+
+.text-color-secondary {
+  color: #2E3440;
+}
+
+.text-center {
+  text-align: center;
+}
+
 a {
   color: inherit;
   text-decoration: none;
@@ -78,6 +98,7 @@ button {
   display: flex;
   width: 98%;
   justify-content: space-between;
+  margin-bottom: 5vw;
 }
 
 .nav ul {
@@ -115,6 +136,7 @@ button {
 }
 
 .title-box {
+  position: relative;
   width: 600px;
   margin-left: 80px;
   margin-bottom: 2em;
