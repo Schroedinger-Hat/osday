@@ -2,26 +2,26 @@
     "Cfp": {
       "where": "Florence",
       "when": "Started",
-      "lenght": "Closes in Jan 2023",
-      "description": "Want to participate in our Call for Papers? Head over to Sessionize and submit your ideas :)",
-      "maincta_text": "Submit paper :)",
-      "secondarycta_text": "Send us an email",
-      "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
-      "description_2": "You can find all the community info on our website"
+      "lenght": "Cierra en enero de 2023",
+      "description": "¿Quieres participar en nuestra convocatoria de ponencias? Dirígete a Sessionize y envía tus ideas :)",
+      "maincta_text": "Presentar el papel :)",
+      "secondarycta_text": "Envíanos un correo electrónico",
+      "description_1": "Siga leyendo si quiere saber más sobre los temas de mayor interés para los asistentes a nuestra comunidad",
+      "description_2": "Puede encontrar toda la información comunitaria en nuestro sitio web"
     },
     "Header": {
-      "menu_label": "Menu button opens sidebar with links",
-      "sh_alt": "Schrodingers Hat Community Logo - Join the open source community",
-      "home_link": "Home",
+      "menu_label": "El botón del menú abre la barra lateral con enlaces",
+      "sh_alt": "Logotipo de la Comunidad del Sombrero de Schrodingers - Únase a la comunidad de código abierto",
+      "home_link": "Inicio",
       "agenda_link": "Agenda",
-      "venue_link": "Venue",
-      "about_link": "About",
+      "venue_link": "Lugar de celebración",
+      "about_link": "A propósito de",
       "sponsor_link": "Sponsor",
       "speakers_Link": "Speakers",
       "cfp_link": "CFP",
-      "updates": "Notification",
-      "erwin_alt": "Picture of Erwin Schrodinger",
-      "edition": "Edizione 2021"
+      "updates": "Notificación",
+      "erwin_alt": "Imagen de Erwin Schrodinger",
+      "edition": "Edición 2021"
     },
     "NotFound": {
       "title": "404 Page",
@@ -30,76 +30,76 @@
       "when": "Anytime",
       "length": "Infinity",
       "type": "HTTP Error",
-      "description": "It appears you may have found the secret season of the best show of this time, 404! Would you like to go back? :)"
+      "description": "Parece que has encontrado la temporada secreta de la mejor serie de este tiempo, ¡404! ¿Te gustaría volver? :)"
     },
     "About": {
       "title": "Open Source Day 2023",
-      "subtitle": "About",
+      "subtitle": "A propósito de",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "About",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
+      "when": "Próximamente",
+      "length": "En marzo 2023",
+      "type": "A propósito de",
+      "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)"
     },
     "Agenda": {
       "title": "Open Source Day 2023",
       "subtitle": "Agenda",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
+      "when": "Próximamente",
+      "length": "En marzo 2023",
       "type": "Agenda",
-      "description": "We are still looking for Speakers and organising the event! Want to participate? :)",
-      "heading": "Head over to the CFP page or contact us directly @ <link>SH</link>",
-      "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!"
+      "description": "¡Seguimos buscando ponentes y organizando el evento! ¿Quieres participar? :)",
+      "heading": "Diríjase a la página de la CFP o póngase en contacto con nosotros directamente @ <link>SH</link>",
+      "heading_2": "Puede encontrar toda la información sobre la comunidad en nuestro sitio web <link>Schrodingers Hat</link> y si tiene alguna duda sobre la inclusión, la diversidad o la accesibilidad, pregúntenos en cualquier momento!"
     },
     "DEI": {
       "title": "Open Source Day 2023",
-      "subtitle": "Diversity and Inclusion",
+      "subtitle": "Diversidad e inclusión",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
+      "when": "Próximamente",
+      "length": "En marzo 2023",
       "type": "DEI",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
+      "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)"
     },
     "Policies": {
       "title": "Open Source Day 2023",
       "subtitle": "Policies",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
+      "when": "Próximamente",
+      "length": "En marzo 2023",
       "type": "Policies",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
+      "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)"
     },
     "Rules": {
       "title": "Open Source Day 2023",
       "subtitle": "Rules of Conduct",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "Rules of Conduct",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
+      "when": "Próximamente",
+      "length": "En marzo 2023",
+      "type": "Normas de conducta",
+      "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)"
     },
     "Speakers": {
       "title": "Open Source Day 2023",
-      "subtitle": "These are the great minds that will talk about tech and open source :) Coming soon",
+      "subtitle": "Estas son las grandes mentes que hablarán de tecnología y código abierto :) Próximamente",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
+      "when": "Próximamente",
+      "length": "En marzo 2023",
       "type": "Speakers",
-      "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP"
+      "description": "Todavía estamos estudiando sus propuestas, así que si tiene una idea y quiere hablar de ella, diríjase a nuestro CFP"
     },
     "Main": {
-      "heading": "Take a look at the first edition",
-      "email": "Send us an email"
+      "heading": "Echa un vistazo a la primera edición",
+      "email": "Envíanos un correo electrónico"
     },
     "Sponsor": {
       "title": "Open Source Day 2023",
-      "subtitle": "Would you like to become a Sponsor for Open Source Day 2023?",
+      "subtitle": "¿Desea convertirse en patrocinador del Día del Código Abierto 2023?",
       "where": "Florence",
-      "when": "To Feb 2023",
-      "length": "3 months",
+      "when": "A Feb 2023",
+      "length": "3 meses",
       "type": "Call for sponsors",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)",
+      "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)",
       "platinum": "Platinum Tier",
       "diamond": "Diamond Tier",
       "gold": "Gold Tier",
@@ -109,24 +109,24 @@
     },
     "Venue": {
       "title": "Open Source Day 2023",
-      "subtitle": "We have a wonderful Venue",
+      "subtitle": "Tenemos un lugar maravilloso",
       "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
+      "when": "Próximamente",
+      "length": "En marzo 2023",
       "type": "Venue",
-      "description": "Keep in touch through our channels (Discord, LinkedIn) to know which Venue will host us for this event :)",
-      "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <link>Discord</link>!"
+      "description": "Mantente en contacto a través de nuestros canales (Discord, LinkedIn) para saber qué sede nos acogerá para este evento :)",
+      "heading": "¿Quieres saber más sobre la sede de este evento? :) Mantente informado en LinkedIn, Twitter o mejor aún, <link>Discord</link>!"
     },
     "TalkCard": {},
     "SponsorshipTier": {
-      "know_more": "Know more"
+      "know_more": "Saber más"
     },
     "Hero": {
       "where": "Florence, Italy",
       "when": "March 2023",
       "length": "10h 20min",
       "type": "Conference",
-      "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
-      "description_2": "the best companies and the best professionals in the sector and in open source projects"
+      "description_1": "Volvemos con una nueva edición de la conferencia Open Source Day. En esta temporada vamos a destrozarlo todo.",
+      "description_2": "las mejores empresas y los mejores profesionales del sector y de los proyectos de código abierto"
     }
   }
