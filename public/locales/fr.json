@@ -1,132 +1,132 @@
 {
-    "Cfp": {
-      "where": "Florence",
-      "when": "Started",
-      "lenght": "Closes in Jan 2023",
-      "description": "Want to participate in our Call for Papers? Head over to Sessionize and submit your ideas :)",
-      "maincta_text": "Submit paper :)",
-      "secondarycta_text": "Send us an email",
-      "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
-      "description_2": "You can find all the community info on our website"
-    },
-    "Header": {
-      "menu_label": "Menu button opens sidebar with links",
-      "sh_alt": "Schrodingers Hat Community Logo - Join the open source community",
-      "home_link": "Home",
-      "agenda_link": "Agenda",
-      "venue_link": "Venue",
-      "about_link": "About",
-      "sponsor_link": "Sponsor",
-      "speakers_Link": "Speakers",
-      "cfp_link": "CFP",
-      "updates": "Notification",
-      "erwin_alt": "Picture of Erwin Schrodinger",
-      "edition": "Edizione 2021"
-    },
-    "NotFound": {
-      "title": "404 Page",
-      "subtitle": "You are Lost - Season Finale",
-      "where": "Anywhere",
-      "when": "Anytime",
-      "length": "Infinity",
-      "type": "HTTP Error",
-      "description": "It appears you may have found the secret season of the best show of this time, 404! Would you like to go back? :)"
-    },
-    "About": {
-      "title": "Open Source Day 2023",
-      "subtitle": "About",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "About",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
-    },
-    "Agenda": {
-      "title": "Open Source Day 2023",
-      "subtitle": "Agenda",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "Agenda",
-      "description": "We are still looking for Speakers and organising the event! Want to participate? :)",
-      "heading": "Head over to the CFP page or contact us directly @ <link>SH</link>",
-      "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!"
-    },
-    "DEI": {
-      "title": "Open Source Day 2023",
-      "subtitle": "Diversity and Inclusion",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "DEI",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
-    },
-    "Policies": {
-      "title": "Open Source Day 2023",
-      "subtitle": "Policies",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "Policies",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
-    },
-    "Rules": {
-      "title": "Open Source Day 2023",
-      "subtitle": "Rules of Conduct",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "Rules of Conduct",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)"
-    },
-    "Speakers": {
-      "title": "Open Source Day 2023",
-      "subtitle": "These are the great minds that will talk about tech and open source :) Coming soon",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "Speakers",
-      "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP"
-    },
-    "Main": {
-      "heading": "Take a look at the first edition",
-      "email": "Send us an email"
-    },
-    "Sponsor": {
-      "title": "Open Source Day 2023",
-      "subtitle": "Would you like to become a Sponsor for Open Source Day 2023?",
-      "where": "Florence",
-      "when": "To Feb 2023",
-      "length": "3 months",
-      "type": "Call for sponsors",
-      "description": "Let's find out how you can help the Open Source community achieve great results in organizing one of the best conferences ever! :)",
-      "platinum": "Platinum Tier",
-      "diamond": "Diamond Tier",
-      "gold": "Gold Tier",
-      "silver": "Silver Tier",
-      "community": "Community Tier",
-      "brand": "Brand Tier"
-    },
-    "Venue": {
-      "title": "Open Source Day 2023",
-      "subtitle": "We have a wonderful Venue",
-      "where": "Florence",
-      "when": "Coming soon",
-      "length": "March 2023",
-      "type": "Venue",
-      "description": "Keep in touch through our channels (Discord, LinkedIn) to know which Venue will host us for this event :)",
-      "heading": "Want to know more about the Venue for this event? :) Keep yourself posted on LinkedIn, Twitter or better yet, <link>Discord</link>!"
-    },
-    "TalkCard": {},
-    "SponsorshipTier": {
-      "know_more": "Know more"
-    },
-    "Hero": {
-      "where": "Florence, Italy",
-      "when": "March 2023",
-      "length": "10h 20min",
-      "type": "Conference",
-      "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
-      "description_2": "the best companies and the best professionals in the sector and in open source projects"
-    }
+  "Cfp" : {
+    "where" : "Florence",
+    "when" : "Started",
+    "lenght" : "Se termine en janvier 2023",
+    "description" : "Vous voulez participer à notre appel à communications ? Rendez-vous sur Sessionize et soumettez vos idées :)",
+    "maincta_text" : "Soumettre un article :)",
+    "secondarycta_text" : "Envoyez-nous un e-mail",
+    "description_1" : "Lisez ce qui suit si vous souhaitez en savoir plus sur les sujets qui intéressent le plus les participants de notre communauté",
+    "description_2" : "Vous pouvez trouver toutes les infos sur la communauté sur notre site web"
+  },
+  "Header" : {
+    "menu_label" : "Le bouton de menu ouvre la barre latérale avec des liens",
+    "sh_alt" : "Logo de la communauté Schrodingers Hat - Rejoignez la communauté open source",
+    "home_link" : "Home",
+    "agenda_link" : "Agenda",
+    "venue_link" : "Où",
+    "about_link" : "About",
+    "sponsor_link" : "Sponsor",
+    "speakers_Link" : "Conférenciers",
+    "cfp_link" : "CFP",
+    "updates" : "Notification",
+    "erwin_alt" : "Photo d'Erwin Schrodinger",
+    "edition" : "Edition 2021"
+  },
+  "NotFound" : {
+    "title" : "Page 404",
+    "subtitle" : "You are Lost - Season Finale",
+    "where" : "Partout",
+    "when" : "A tout moment",
+    "length" : "Infinité",
+    "type" : "Erreur HTTP",
+    "description" : "Il semble que vous ayez trouvé la saison secrète de la meilleure émission de l'époque, 404 ! Voulez-vous revenir en arrière ? :)"
+  },
+  "About" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "About",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "About",
+    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)"
+  },
+  "Agenda" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Agenda",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "Agenda",
+    "description" : "Nous sommes toujours à la recherche de conférenciers et nous organisons l'événement ! Vous voulez participer ? :)",
+    "heading" : "Rendez-vous sur la page <cfp>CFP</cfp> ou contactez-nous directement @ <link>SH</link>",
+    "heading_2" : "Vous pouvez trouver toutes les infos communautaires sur notre site web, <link>Schrodingers Hat</link> et si vous avez des questions sur l'inclusivité, la diversité ou l'accessibilité, n'hésitez pas à nous les poser à tout moment !"
+  },
+  "DEI" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Diversité et inclusion",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "DEI",
+    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)"
+  },
+  "Policies" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Politiques",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "Politiques",
+    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)"
+  },
+  "Rules" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Règles de conduite",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "Règles de conduite",
+    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)"
+  },
+  "Speakers" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Voici les grands esprits qui parleront de technologie et d'open source :) A venir",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "Speakers",
+    "description" : "Nous sommes toujours en train d'explorer vos propositions, donc si vous avez une idée et que vous souhaitez en parler, rendez-vous sur notre CFP"
+  },
+  "Main" : {
+    "heading" : "Jetez un coup d'oeil à la première édition",
+    "email" : "Envoyez-nous un e-mail"
+  },
+  "Sponsor" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Souhaitez-vous devenir un sponsor de l'Open Source Day 2023 ?",
+    "where" : "Florence",
+    "when" : "To Feb 2023",
+    "length" : "3 mois",
+    "type" : "Appel à sponsors",
+    "description" : "Découvrons comment vous pouvez aider la communauté Open Source à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)",
+    "platinum" : "Platinum Tier",
+    "diamond" : "Diamond Tier",
+    "gold" : "Gold Tier",
+    "silver" : "Silver Tier",
+    "Community" : "Community Tier",
+    "brand" : "Brand Tier"
+  },
+  "Venue" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Nous avons un lieu magnifique",
+    "where" : "Florence",
+    "when" : "Bientôt disponible",
+    "length" : "Mars 2023",
+    "type" : "Venue",
+    "description" : "Restez en contact via nos canaux (Discord, LinkedIn ou Twitter) pour savoir quel Venue nous accueillera pour cet événement :)",
+    "heading" : "Vous voulez en savoir plus sur le lieu de cet événement :). Tenez-vous au courant sur <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> ou mieux encore, <discord>Discord</discord> !"
+  },
+  "TalkCard" : {},
+  "SponsorshipTier" : {
+    "know_more" : "En savoir plus"
+  },
+  "Hero" : {
+    "where" : "Florence, Italie",
+    "when" : "Mars 2023",
+    "length" : "10h 20min",
+    "type" : "Conférence",
+    "description_1" : "Nous revenons avec une nouvelle édition de la conférence Open Source Day. Dans cette saison, nous allons tout casser.",
+    "description_2" : "Les meilleures entreprises et les meilleurs professionnels du secteur dans les projets Open Source"
   }
+}
