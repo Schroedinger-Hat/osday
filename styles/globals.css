@@ -57,6 +57,7 @@ main {
       #17171708 100%
     ),
     url('/bg.jpg');
+  background-size: cover;
 }
 
 button {
@@ -235,6 +236,7 @@ div.image .img {
   background: #171717 url('/osday2021.png') no-repeat;
   background-size: cover;
   position: relative;
+  height: 18em;
   z-index: 1;
   border-radius: 0.5em;
   padding: 0.5em;
