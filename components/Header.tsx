@@ -13,7 +13,7 @@ export default function Header() {
 
   const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
   const [languageCode, setLanguageCode] = useState('en');
-  const availableLocales = {
+  const availableLocales: any = {
     'it': '🇮🇹',
     'en': '🇬🇧',
     'fr': '🇫🇷',
@@ -49,7 +49,7 @@ export default function Header() {
       : null;
   }, []);
 
-  const setLanguage = (e: MouseEvent, lang: string = '') => {
+  const setLanguage = (e: any, lang: string = '') => {
     lang ? null : e.preventDefault();
     setLanguageSwitcherOpen(!languageSwitcherOpen);
     if (lang) {
