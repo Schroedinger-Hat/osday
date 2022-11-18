@@ -355,43 +355,32 @@ div.image .img {
   height: 30em;
   border-radius: 1em;
   position: relative;
-  padding: 2em;
   box-sizing: border-box;
-  display: flex;
   align-items: flex-end;
   text-decoration: none;
   margin-bottom: 2em;
   background-size: cover;
   z-index: 1;
-  border: 5px solid #e50914;
-}
-
-.inner {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  box-sizing: border-box;
-  padding: 40px;
+  border: 2px solid #181818;
 }
 
 .title {
-  font-size: 24px;
-  color: black;
+  font-size: 36px;
   text-align: center;
   font-weight: 700;
   color: #181818;
-  text-shadow: 0px 2px 2px #e50914;
-  position: relative;
-  margin: 0 0 20px 0;
 }
 
-.subtitle {
-  color: #e50914;
+.sponsorship_price {
   text-align: center;
+  color: #181818;
+  margin-top: -1em;
+  font-size: 20px;
+}
+
+.sponsorship_offer {
+  color: #181818;
+  margin: 1em 1em;
 }
 
 .after_main {
@@ -774,23 +763,11 @@ div.image .img {
     padding: 2em;
   }
 
-  .inner {
-    width: 80%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-  }
-
   .title {
     font-size: 24px;
-    color: black;
     text-align: center;
     font-weight: 700;
     color: #181818;
-    text-shadow: 0px 2px 2px #e50914;
     position: relative;
     margin: 0 0 20px 0;
   }
@@ -876,4 +853,36 @@ div.image .img {
   display: inline-block;
   justify-content: center;
   margin-right: 1em;
+}
+
+/** Sponsor card colors */
+
+.platinum {
+  background: -webkit-linear-gradient(rgba(229,229,229,0.7), rgba(229,229,229,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
+}
+
+.diamond {
+  background: -webkit-linear-gradient(rgba(199,249,255,0.7), rgba(199,249,255,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
+}
+
+.gold {
+  background: -webkit-linear-gradient(rgba(247,190,57,0.7), rgba(247,190,57,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
+}
+
+.silver {
+  background: -webkit-linear-gradient(rgba(121,121,121,0.7), rgba(121,121,121,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
+}
+
+.community {
+  background: -webkit-linear-gradient(rgba(112,168,66,0.7), rgba(112,168,66,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
+}
+
+.media {
+  background: -webkit-linear-gradient(rgba(59,89,152,0.7), rgba(59,89,152,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
