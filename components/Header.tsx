@@ -1,11 +1,13 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
+import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
   const t = useTranslations('Header');
 
   const handleIsOpen = () => {
@@ -15,6 +17,20 @@ export default function Header() {
   const closeSideBar = () => {
     setOpen(false);
   };
+
+  const handleNotification = () => {
+    setNotificationOpen(!notificationOpen);
+  };
+
+  useEffect(() => {
+    !getCookie('sh_notification')
+      ? setTimeout(() => {
+          !notificationOpen ? handleNotification() : null;
+
+          setCookie('sh_notification', 'true', 30);
+        }, 5000)
+      : null;
+  }, []);
 
   return (
     <header className={`nav`}>
@@ -95,11 +111,24 @@ export default function Header() {
       </ul>
       <ul>
         <li>
+          <a
+            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t('edition')}
+          </a>
+        </li>
+        <li>
+          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+        </li>
+        <li className="second-menu">
           <button
             className="notifications-menu"
             aria-haspopup="true"
             aria-expanded="false"
             aria-label={t('updates')}
+            onClick={handleNotification}
           >
             <svg
               width="24"
@@ -116,19 +145,32 @@ export default function Header() {
                 fill="currentColor"
               ></path>
             </svg>
+            <span className="notification-dot"></span>
           </button>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t('edition')}
-          </a>
-        </li>
-        <li>
-          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+          {notificationOpen === true ? (
+            <div className="notification-menu">
+              <ul>
+                <Link href="/cfp">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
+                    now live!
+                  </li>
+                </Link>
+                <Link href="/sponsor">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    Call for Sponsors is now open :D
+                  </li>
+                </Link>
+                <Link href="/about">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    OSday repo has been created :)
+                  </li>
+                </Link>
+              </ul>
+            </div>
+          ) : null}
         </li>
       </ul>
     </header>
