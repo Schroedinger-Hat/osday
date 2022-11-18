@@ -3,14 +3,14 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
-import { setCookie, getCookie } from '../utils';
 import { useRouter } from 'next/router';
+import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
   const router = useRouter();
   const { pathname } = router;
   const [isOpen, setOpen] = useState(false);
-  const [notificationOpen, setNotificationOpen] = useState(false);
+
   const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
   const [languageCode, setLanguageCode] = useState('en');
   const availableLocales = {
@@ -20,6 +20,8 @@ export default function Header() {
     'es': '🇪🇸'
   };
 
+
+  const [notificationOpen, setNotificationOpen] = useState(false);
   const t = useTranslations('Header');
   useEffect(() => {
     setLanguageCode(document.documentElement.lang);
