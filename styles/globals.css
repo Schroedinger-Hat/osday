@@ -375,6 +375,7 @@ div.image .img {
   text-align: center;
   color: #181818;
   margin-top: -1em;
+  font-size: 20px;
 }
 
 .sponsorship_offer {
@@ -857,26 +858,31 @@ div.image .img {
 /** Sponsor card colors */
 
 .platinum {
-  background-color: #E5E5E5;
+  background: -webkit-linear-gradient(rgba(229,229,229,0.7), rgba(229,229,229,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
 
 .diamond {
-  background-color: #C7F9FF;
+  background: -webkit-linear-gradient(rgba(199,249,255,0.7), rgba(199,249,255,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
 
 .gold {
-  background-color: #F7BE39;
+  background: -webkit-linear-gradient(rgba(247,190,57,0.7), rgba(247,190,57,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
 
 .silver {
-  background-color: #797979;
+  background: -webkit-linear-gradient(rgba(121,121,121,0.7), rgba(121,121,121,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
 
 .community {
-  background-color: #70A842;
+  background: -webkit-linear-gradient(rgba(112,168,66,0.7), rgba(112,168,66,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
 
 .brand {
-  background-color: #3B5998;
+  background: -webkit-linear-gradient(rgba(59,89,152,0.7), rgba(59,89,152,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
 }
-
