@@ -4,11 +4,26 @@ import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
 import { setCookie, getCookie } from '../utils';
+import { useRouter } from 'next/router';
 
 export default function Header() {
+  const router = useRouter();
+  const { pathname } = router;
   const [isOpen, setOpen] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(false);
+  const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
+  const [languageCode, setLanguageCode] = useState('en');
+  const availableLocales = {
+    'it': '🇮🇹',
+    'en': '🇬🇧',
+    'fr': '🇫🇷',
+    'es': '🇪🇸'
+  };
+
   const t = useTranslations('Header');
+  useEffect(() => {
+    setLanguageCode(document.documentElement.lang);
+  }, []);
 
   const handleIsOpen = () => {
     setOpen(!isOpen);
@@ -31,6 +46,14 @@ export default function Header() {
         }, 5000)
       : null;
   }, []);
+
+  const setLanguage = (e: MouseEvent, lang: string = '') => {
+    lang ? null : e.preventDefault();
+    setLanguageSwitcherOpen(!languageSwitcherOpen);
+    if (lang) {
+      setLanguageCode(lang);
+    }
+  }
 
   return (
     <header className={`nav`}>
@@ -167,6 +190,27 @@ export default function Header() {
                     <Image src="/sh.png" alt="" width="20" height="20" />
                     OSday repo has been created :)
                   </li>
+                </Link>
+              </ul>
+            </div>
+          ) : null}
+        </li>
+        <li className="language-switcher">
+          <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
+          {languageSwitcherOpen === true ? (
+            <div className="language-switcher-menu">
+              <ul>
+                <Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                  🇮🇹
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                  🇬🇧
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                  🇫🇷
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                  🇪🇸
                 </Link>
               </ul>
             </div>
