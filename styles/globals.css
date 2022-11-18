@@ -738,7 +738,19 @@ div.image .img {
 }
 
 .notifications-menu {
+  position: relative;
   cursor: pointer;
+}
+
+.notification-dot {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #e50914;
+  position: absolute;
+  top: 0;
+  left: -.2em;
+  border-radius: 8px;
 }
 
 .notification-menu ul {

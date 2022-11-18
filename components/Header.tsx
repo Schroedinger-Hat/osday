@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
+import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
@@ -20,6 +21,16 @@ export default function Header() {
   const handleNotification = () => {
     setNotificationOpen(!notificationOpen);
   };
+
+  useEffect(() => {
+    !getCookie('sh_notification')
+      ? setTimeout(() => {
+          !notificationOpen ? handleNotification() : null;
+
+          setCookie('sh_notification', 'true', 30);
+        }, 5000)
+      : null;
+  }, []);
 
   return (
     <header className={`nav`}>
@@ -134,6 +145,7 @@ export default function Header() {
                 fill="currentColor"
               ></path>
             </svg>
+            <span className="notification-dot"></span>
           </button>
           {notificationOpen === true ? (
             <div className="notification-menu">
