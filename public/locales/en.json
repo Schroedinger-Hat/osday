@@ -128,5 +128,14 @@
     "type": "Conference",
     "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
     "description_2": "The best companies and the best professionals in the sector in Open Source projects"
+  },
+  "Footer": {
+    "github_repo_1": "Open Source Day 2023 is an open source and",
+    "github_repo_2": "hosted on GitHub",
+    "github_issue_1": "If you find a bug or have an idea for a new feature, please",
+    "github_issue_2": "open an issue on GitHub.",
+    "rules": "Rules",
+    "privacy_policy": "Privacy Policy",
+    "dei": "DEI"
   }
 }
