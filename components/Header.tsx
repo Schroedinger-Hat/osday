@@ -95,6 +95,27 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfp'}>
             {t('cfp_link')}
           </Link>
+          <li className="language-switcher">
+            <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
+            {languageSwitcherOpen === true ? (
+              <div className="language-switcher-menu">
+                <ul>
+                  <Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                    🇮🇹
+                  </Link>
+                  <Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                    🇬🇧
+                  </Link>
+                  <Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                    🇫🇷
+                  </Link>
+                  <Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                    🇪🇸
+                  </Link>
+                </ul>
+              </div>
+            ) : null}
+          </li>
         </Menu>
         <Image
           width={50}
