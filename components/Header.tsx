@@ -4,11 +4,13 @@ import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
 import { useRouter } from 'next/router';
+import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
   const router = useRouter();
   const { pathname } = router;
   const [isOpen, setOpen] = useState(false);
+
   const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
   const [languageCode, setLanguageCode] = useState('en');
   const availableLocales = {
@@ -17,6 +19,9 @@ export default function Header() {
     'fr': '🇫🇷',
     'es': '🇪🇸'
   };
+
+
+  const [notificationOpen, setNotificationOpen] = useState(false);
 
   const t = useTranslations('Header');
   useEffect(() => {
@@ -31,6 +36,7 @@ export default function Header() {
     setOpen(false);
   };
 
+
   const setLanguage = (e: MouseEvent, lang: string = '') => {
     lang ? null : e.preventDefault();
     setLanguageSwitcherOpen(!languageSwitcherOpen);
@@ -38,6 +44,20 @@ export default function Header() {
       setLanguageCode(lang);
     }
   }
+
+  const handleNotification = () => {
+    setNotificationOpen(!notificationOpen);
+  };
+
+  useEffect(() => {
+    !getCookie('sh_notification')
+      ? setTimeout(() => {
+          !notificationOpen ? handleNotification() : null;
+
+          setCookie('sh_notification', 'true', 30);
+        }, 5000)
+      : null;
+  }, []);
 
   return (
     <header className={`nav`}>
@@ -139,11 +159,24 @@ export default function Header() {
       </ul>
       <ul>
         <li>
+          <a
+            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t('edition')}
+          </a>
+        </li>
+        <li>
+          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+        </li>
+        <li className="second-menu">
           <button
             className="notifications-menu"
             aria-haspopup="true"
             aria-expanded="false"
             aria-label={t('updates')}
+            onClick={handleNotification}
           >
             <svg
               width="24"
@@ -160,19 +193,32 @@ export default function Header() {
                 fill="currentColor"
               ></path>
             </svg>
+            <span className="notification-dot"></span>
           </button>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t('edition')}
-          </a>
-        </li>
-        <li>
-          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+          {notificationOpen === true ? (
+            <div className="notification-menu">
+              <ul>
+                <Link href="/cfp">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
+                    now live!
+                  </li>
+                </Link>
+                <Link href="/sponsor">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    Call for Sponsors is now open :D
+                  </li>
+                </Link>
+                <Link href="/about">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    OSday repo has been created :)
+                  </li>
+                </Link>
+              </ul>
+            </div>
+          ) : null}
         </li>
         <li className="language-switcher">
           <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
