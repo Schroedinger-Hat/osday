@@ -39,7 +39,7 @@ export default function Sponsor() {
           <SponsorshipTier title={t('gold')} card_color="gold" price={t('gold_price')} offer={t('gold_offer')}/>
           <SponsorshipTier title={t('silver')} card_color="silver" price={t('silver_price')} offer={t('silver_offer')}/>
           <SponsorshipTier title={t('community')} card_color='community' offer={t('community_offer')}/>
-          <SponsorshipTier title={t('brand')} card_color='brand' offer={t('brand_offer')}/>
+          <SponsorshipTier title={t('media')} card_color='media' offer={t('media_offer')}/>
         </section>
       </div>
     </>

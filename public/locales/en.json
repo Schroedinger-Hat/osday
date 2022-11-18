@@ -104,8 +104,8 @@
     "diamond": "Diamond Tier",
     "gold": "Gold Tier",
     "silver": "Silver Tier",
-    "community": "Community Tier",
-    "brand": "Brand Tier",
+    "community": "Community Partner",
+    "media": "Media Partner",
     "platinum_price": "3000€ + vat",
     "diamond_price": "1500€ + vat",
     "gold_price": "1000€ + vat",
@@ -115,7 +115,7 @@
     "gold_offer": "Social awarness, Logo on streaming video, Rollup, Logo on website, Logo on social post, Thanks post",
     "silver_offer": "Rollup, Logo on website, Logo on social post, Thanks post",
     "community_offer": "",
-    "brand_offer": ""
+    "media_offer": ""
   },
   "Venue": {
     "title": "Open Source Day 2023",

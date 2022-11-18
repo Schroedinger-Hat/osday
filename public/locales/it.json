@@ -104,8 +104,8 @@
     "diamond": "Diamond",
     "gold": "Gold",
     "silver": "Silver",
-    "community": "Community",
-    "brand": "Brand",
+    "community": "Community Partner",
+    "media": "Media Partner",
     "platinum_price": "3000€ + iva",
     "diamond_price": "1500€ + iva",
     "gold_price": "1000€ + iva",
@@ -115,7 +115,7 @@
     "gold_offer": "Post sui social con brand awareness, Rotazione logo su streaming conferenza, Rollup, Logo su sito, Logo sui post social, Ringraziamenti alla chiusura",
     "silver_offer": "Rollup, Logo su sito, Logo sui post social, Ringraziamenti alla chiusura",
     "community_offer": "",
-    "brand_offer": ""
+    "media_offer": ""
   },
   "Venue": {
     "title": "Open Source Day 2023",
