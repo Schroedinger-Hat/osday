@@ -3,12 +3,29 @@ import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
 import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
+  const router = useRouter();
+  const { pathname } = router;
   const [isOpen, setOpen] = useState(false);
+
+  const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
+  const [languageCode, setLanguageCode] = useState('en');
+  const availableLocales: any = {
+    'it': '🇮🇹',
+    'en': '🇬🇧',
+    'fr': '🇫🇷',
+    'es': '🇪🇸'
+  };
+
+
   const [notificationOpen, setNotificationOpen] = useState(false);
   const t = useTranslations('Header');
+  useEffect(() => {
+    setLanguageCode(document.documentElement.lang);
+  }, []);
 
   const handleIsOpen = () => {
     setOpen(!isOpen);
@@ -31,6 +48,14 @@ export default function Header() {
         }, 5000)
       : null;
   }, []);
+
+  const setLanguage = (e: any, lang: string = '') => {
+    lang ? null : e.preventDefault();
+    setLanguageSwitcherOpen(!languageSwitcherOpen);
+    if (lang) {
+      setLanguageCode(lang);
+    }
+  }
 
   return (
     <header className={`nav`}>
@@ -72,6 +97,27 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfp'}>
             {t('cfp_link')}
           </Link>
+          <li className="language-switcher">
+            <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
+            {languageSwitcherOpen === true ? (
+              <div className="language-switcher-menu">
+                <ul>
+                  <Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                    🇮🇹
+                  </Link>
+                  <Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                    🇬🇧
+                  </Link>
+                  <Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                    🇫🇷
+                  </Link>
+                  <Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                    🇪🇸
+                  </Link>
+                </ul>
+              </div>
+            ) : null}
+          </li>
         </Menu>
         <Image
           width={50}
@@ -167,6 +213,27 @@ export default function Header() {
                     <Image src="/sh.png" alt="" width="20" height="20" />
                     OSday repo has been created :)
                   </li>
+                </Link>
+              </ul>
+            </div>
+          ) : null}
+        </li>
+        <li className="language-switcher">
+          <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
+          {languageSwitcherOpen === true ? (
+            <div className="language-switcher-menu">
+              <ul>
+                <Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                  🇮🇹
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                  🇬🇧
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                  🇫🇷
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                  🇪🇸
                 </Link>
               </ul>
             </div>
