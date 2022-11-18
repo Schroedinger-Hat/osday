@@ -150,14 +150,24 @@ export default function Header() {
           {notificationOpen === true ? (
             <div className="notification-menu">
               <ul>
-                <li>
-                  <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
-                  now live!
-                </li>
-                <li>
-                  <Image src="/sh.png" alt="" width="20" height="20" />
-                  OSday repo has been created :)
-                </li>
+                <Link href="/cfp">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
+                    now live!
+                  </li>
+                </Link>
+                <Link href="/sponsor">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    Call for Sponsors is now open :D
+                  </li>
+                </Link>
+                <Link href="/about">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    OSday repo has been created :)
+                  </li>
+                </Link>
               </ul>
             </div>
           ) : null}

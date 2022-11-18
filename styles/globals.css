@@ -778,11 +778,10 @@ div.image .img {
 
 .notification-menu ul li {
   display: block;
-  width: 18em;
-  height: 2em;
-  flex-basis: calc(25% - 20px);
+  width: 20em;
+  height: 3em;
   border: 1px solid #4a4a4a;
-  padding: 0.8em;
+  padding: 1em 0 1em 0.5em;
   margin: 0;
   font-size: 0.8em;
 }
