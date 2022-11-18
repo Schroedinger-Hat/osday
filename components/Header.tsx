@@ -6,6 +6,7 @@ import { useTranslations } from 'next-intl';
 
 export default function Header() {
   const [isOpen, setOpen] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
   const t = useTranslations('Header');
 
   const handleIsOpen = () => {
@@ -14,6 +15,10 @@ export default function Header() {
 
   const closeSideBar = () => {
     setOpen(false);
+  };
+
+  const handleNotification = () => {
+    setNotificationOpen(!notificationOpen);
   };
 
   return (
@@ -95,11 +100,24 @@ export default function Header() {
       </ul>
       <ul>
         <li>
+          <a
+            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t('edition')}
+          </a>
+        </li>
+        <li>
+          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+        </li>
+        <li className="second-menu">
           <button
             className="notifications-menu"
             aria-haspopup="true"
             aria-expanded="false"
             aria-label={t('updates')}
+            onClick={handleNotification}
           >
             <svg
               width="24"
@@ -117,18 +135,20 @@ export default function Header() {
               ></path>
             </svg>
           </button>
-        </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t('edition')}
-          </a>
-        </li>
-        <li>
-          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+          {notificationOpen === true ? (
+            <div className="notification-menu">
+              <ul>
+                <li>
+                  <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
+                  now live!
+                </li>
+                <li>
+                  <Image src="/sh.png" alt="" width="20" height="20" />
+                  OSday repo has been created :)
+                </li>
+              </ul>
+            </div>
+          ) : null}
         </li>
       </ul>
     </header>

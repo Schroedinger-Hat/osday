@@ -731,3 +731,58 @@ div.image .img {
     margin: 0 auto;
   }
 }
+
+.second-menu {
+  display: block;
+  position: relative;
+}
+
+.notifications-menu {
+  cursor: pointer;
+}
+
+.notification-menu ul {
+  display: flex;
+  background-color: #171717a1;
+  flex-direction: column;
+  position: absolute;
+  right: -0.5em;
+  border-top: 2px solid #fff;
+  margin-top: 1em;
+  padding: 0;
+}
+
+.notification-menu ul::before {
+  position: absolute;
+  top: -5px;
+  right: 1em;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.notification-menu ul li {
+  display: block;
+  width: 18em;
+  height: 2em;
+  flex-basis: calc(25% - 20px);
+  border: 1px solid #4a4a4a;
+  padding: 0.8em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.notification-menu ul li:hover {
+  background-color: #171717;
+}
+
+.notification-menu ul li img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  justify-content: center;
+  margin-right: 1em;
+}
