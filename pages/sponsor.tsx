@@ -34,12 +34,12 @@ export default function Sponsor() {
           originals={false}
         />
         <section className="sponsors_2022">
-          <SponsorshipTier title={t('platinum')} link="#" />
-          <SponsorshipTier title={t('diamond')} link="#" />
-          <SponsorshipTier title={t('gold')} link="#" />
-          <SponsorshipTier title={t('silver')} link="#" />
-          <SponsorshipTier title={t('community')} link="#" />
-          <SponsorshipTier title={t('brand')} link="#" />
+          <SponsorshipTier title={t('platinum')} card_color="platinum" price={t('platinum_price')} offer={t('platinum_offer')}/>
+          <SponsorshipTier title={t('diamond')} card_color="diamond" price={t('diamond_price')} offer={t('diamond_offer')}/>
+          <SponsorshipTier title={t('gold')} card_color="gold" price={t('gold_price')} offer={t('gold_offer')}/>
+          <SponsorshipTier title={t('silver')} card_color="silver" price={t('silver_price')} offer={t('silver_offer')}/>
+          <SponsorshipTier title={t('community')} card_color='community' offer={t('community_offer')}/>
+          <SponsorshipTier title={t('brand')} card_color='brand' offer={t('brand_offer')}/>
         </section>
       </div>
     </>

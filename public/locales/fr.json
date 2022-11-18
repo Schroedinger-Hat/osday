@@ -105,7 +105,17 @@
     "gold" : "Gold Tier",
     "silver" : "Silver Tier",
     "Community" : "Community Tier",
-    "brand" : "Brand Tier"
+    "brand" : "Brand Tier",
+    "platinum_price": "3000€ + vat",
+    "diamond_price": "1500€ + vat",
+    "gold_price": "1000€ + vat",
+    "silver_price": "500€ + vat",
+    "platinum_offer": "Talk technique, Liste des participants, Stand dans la zone d'exposition, Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "diamond_offer": "Liste des participants, Stand dans la zone d'exposition, Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "gold_offer": "Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "silver_offer": "Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "community_offer": "",
+    "brand_offer": ""
   },
   "Venue" : {
     "title" : "Open Source Day 2023",
