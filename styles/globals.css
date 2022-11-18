@@ -563,6 +563,40 @@ div.image .img {
     height: 32px;
   }
 
+  .language-switcher-menu ul {
+    cursor: pointer;
+    display: inline-flex;
+    background-color: #171717a1;
+    flex-direction: column;
+    border-top: 2px solid #fff;
+    margin-top: 0.2em;
+    padding: 0;
+    position: relative;
+  }
+  
+  .language-switcher-menu ul::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #fff transparent;
+  }
+  
+  .language-switcher-menu ul li {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 1px solid #4a4a4a;
+    padding: 0.8em;
+    margin: 0;
+    font-size: 0.8em;
+  }
+  
+  .language-switcher-menu ul li:hover {
+    background-color: #171717;
+  }
+
   .content {
     margin-top: 2em;
   }
