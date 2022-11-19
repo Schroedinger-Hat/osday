@@ -88,7 +88,11 @@
     "when" : "Bientôt",
     "length" : "Mars 2023",
     "type" : "Speakers",
-    "description" : "Nous sommes toujours en train d'explorer vos propositions, donc si vous avez une idée et que vous souhaitez en parler, rendez-vous sur notre CFP"
+    "description" : "Nous sommes toujours en train d'explorer vos propositions, donc si vous avez une idée et que vous souhaitez en parler, rendez-vous sur notre CFP",
+    "heading": "Quelques éléments de réflexion :)",
+    "apply": "Postulez en tant que conférencier à notre événement à Florence en mars 2023",
+    "talk": "Donnez le meilleur de vous-mêmes et préparez un excellent discours pour que tout le monde se souvienne de la qualité de l'événement :D",
+    "event": "Le jour de l'événement, venez un peu plus tôt pour que nous puissions vous installer et essayer votre conférence.!"
   },
   "Main" : {
     "heading" : "Jetez un coup d'oeil à la première édition",

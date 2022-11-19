@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 html,
 body {
-  font-family: "Red Hat Display", sans-serif;
+  font-family: 'Red Hat Display', sans-serif;
   background-color: #171717;
   color: #eceff4;
   font-weight: normal;
@@ -117,11 +117,10 @@ button {
   height: 50px;
 }
 
-
 .nav ul li.language-switcher {
   font-size: 2em;
   position: relative;
-  margin: .2em .2em;
+  margin: 0.2em 0.2em;
 }
 
 .language-switcher-menu ul {
@@ -196,7 +195,7 @@ button {
 }
 
 .title-box ul li::after {
-  content: " |";
+  content: ' |';
   padding: 0 10px 0 5px;
 }
 
@@ -217,8 +216,10 @@ div.image .img {
 .button {
   border-color: #dbdbdb;
   border-width: 1px;
-  background-color: #e50914;
-  border-color: transparent;
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-color: transparent;
   color: #fff;
   cursor: pointer;
   justify-content: center;
@@ -273,62 +274,39 @@ div.image .img {
 .talks_container {
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: 0.5em 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em 2em;
   margin-bottom: 2em;
 }
 
 .talk_card {
-  background: #171717 url("/osday2021.png") no-repeat;
-  background-size: cover;
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
   position: relative;
-  height: 18em;
+  height: 16em;
   z-index: 1;
   border-radius: 0.5em;
   padding: 0.5em;
 }
 
 .talk_card p {
-  background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5em;
+  font-size: 1.7em;
 }
 
 .talk_card::before {
-  content: "";
+  content: '';
   position: absolute;
-  background: #171717 url("/shsquared.png") no-repeat;
+  background: #171717 url('/shsquared.png') no-repeat;
   background-size: cover;
   width: 24px;
   height: 24px;
   left: 0;
   top: 0;
   border-radius: 0 0 5px 0;
-}
-
-.riva {
-  background: #171717 url("/michele-riva.jpg") no-repeat;
-  background-size: cover;
-}
-.soligo {
-  background: #171717 url("/soligo.jpg") no-repeat;
-  background-size: cover;
-}
-.scasciafratte {
-  background: #171717 url("/scasciafratte.jpg") no-repeat;
-  background-size: cover;
-}
-.bartolesi {
-  background: #171717 url("/bartolesi.jpg") no-repeat;
-  background-size: cover;
-}
-.faye_franceschini {
-  background: #171717 url("/omar.jpg") no-repeat;
-  background-size: cover;
-}
-
-.trachitella {
-  background: #171717 url("/dario.jpg") no-repeat;
-  background-size: cover;
 }
 
 @media screen and (max-width: 992px) {
@@ -425,7 +403,7 @@ div.image .img {
 }
 
 .cfp_card {
-  background: #171717 url("/sh.png") no-repeat;
+  background: #171717 url('/sh.png') no-repeat;
   background-size: cover;
   width: 18em;
   height: 10em;
@@ -446,9 +424,9 @@ div.image .img {
 }
 
 .cfp_card::before {
-  content: "";
+  content: '';
   position: absolute;
-  background: #171717 url("/shsquared.png") no-repeat;
+  background: #171717 url('/shsquared.png') no-repeat;
   background-size: cover;
   width: 24px;
   height: 24px;
@@ -458,31 +436,31 @@ div.image .img {
 }
 
 .jsts {
-  background: #171717 url("/javascript.png") no-repeat;
+  background: #171717 url('/javascript.png') no-repeat;
   background-size: cover;
 }
 .opensource {
-  background: #171717 url("/opensource.png") no-repeat;
+  background: #171717 url('/opensource.png') no-repeat;
   background-size: cover;
 }
 .cloud {
-  background: #171717 url("/cloud.webp") no-repeat;
+  background: #171717 url('/cloud.webp') no-repeat;
   background-size: cover;
 }
 .rustgopython {
-  background: #171717 url("/rust.png") no-repeat;
+  background: #171717 url('/rust.png') no-repeat;
   background-size: cover;
 }
 .dei {
-  background: #171717 url("/dei.jpeg") no-repeat;
+  background: #171717 url('/dei.jpeg') no-repeat;
   background-size: cover;
 }
 .a11y {
-  background: #171717 url("/a11y.webp") no-repeat;
+  background: #171717 url('/a11y.webp') no-repeat;
   background-size: cover;
 }
 .greensustainability {
-  background: #171717 url("/greentech.png") no-repeat;
+  background: #171717 url('/greentech.png') no-repeat;
   background-size: cover;
 }
 
@@ -562,7 +540,7 @@ div.image .img {
     padding: 0;
     position: relative;
   }
-  
+
   .language-switcher-menu ul::before {
     content: '';
     width: 0;
@@ -571,7 +549,7 @@ div.image .img {
     border-width: 0 5px 5px 5px;
     border-color: transparent transparent #fff transparent;
   }
-  
+
   .language-switcher-menu ul li {
     display: block;
     width: auto;
@@ -581,7 +559,7 @@ div.image .img {
     margin: 0;
     font-size: 0.8em;
   }
-  
+
   .language-switcher-menu ul li:hover {
     background-color: #171717;
   }
@@ -679,7 +657,12 @@ div.image .img {
 
   /* Styling of overlay */
   .bm-overlay {
-    background: linear-gradient(to bottom, transparent 0%, transparent 80%, black 100%);
+    background: linear-gradient(
+      to bottom,
+      transparent 0%,
+      transparent 80%,
+      black 100%
+    );
   }
 
   .title-box ul {
@@ -725,7 +708,7 @@ div.image .img {
         #171717de 95%,
         #171717de 100%
       ),
-      url("/bg.jpg");
+      url('/bg.jpg');
   }
 
   .title-box p {
@@ -782,9 +765,8 @@ div.image .img {
   }
 
   .talk_card {
-    width: 60%;
+    width: 80%;
     height: 20em;
-    background-size: contain;
     margin: 0 auto;
   }
 
@@ -820,7 +802,7 @@ div.image .img {
   background-color: #e50914;
   position: absolute;
   top: 0;
-  left: -.2em;
+  left: -0.2em;
   border-radius: 8px;
 }
 
@@ -872,31 +854,55 @@ div.image .img {
 /** Sponsor card colors */
 
 .platinum {
-  background: -webkit-linear-gradient(rgba(229,229,229,0.7), rgba(229,229,229,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background: -webkit-linear-gradient(
+      rgba(229, 229, 229, 0.7),
+      rgba(229, 229, 229, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
   background-size: cover;
 }
 
 .diamond {
-  background: -webkit-linear-gradient(rgba(199,249,255,0.7), rgba(199,249,255,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background: -webkit-linear-gradient(
+      rgba(199, 249, 255, 0.7),
+      rgba(199, 249, 255, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
   background-size: cover;
 }
 
 .gold {
-  background: -webkit-linear-gradient(rgba(247,190,57,0.7), rgba(247,190,57,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background: -webkit-linear-gradient(
+      rgba(247, 190, 57, 0.7),
+      rgba(247, 190, 57, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
   background-size: cover;
 }
 
 .silver {
-  background: -webkit-linear-gradient(rgba(121,121,121,0.7), rgba(121,121,121,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background: -webkit-linear-gradient(
+      rgba(121, 121, 121, 0.7),
+      rgba(121, 121, 121, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
   background-size: cover;
 }
 
 .community {
-  background: -webkit-linear-gradient(rgba(112,168,66,0.7), rgba(112,168,66,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background: -webkit-linear-gradient(
+      rgba(112, 168, 66, 0.7),
+      rgba(112, 168, 66, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
   background-size: cover;
 }
 
 .media {
-  background: -webkit-linear-gradient(rgba(59,89,152,0.7), rgba(59,89,152,0.7)), url("https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background: -webkit-linear-gradient(
+      rgba(59, 89, 152, 0.7),
+      rgba(59, 89, 152, 0.7)
+    ),
+    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
   background-size: cover;
 }
