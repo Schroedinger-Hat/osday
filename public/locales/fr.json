@@ -76,8 +76,10 @@
     "where" : "Florence",
     "when" : "Bientôt",
     "length" : "Mars 2023",
-    "type" : "Règles de conduite",
-    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)"
+    "type" : "Règles",
+    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)",
+    "heading1": "Schrödinger Hat is dedicated to a harassment-free event for everyone.",
+    "heading2": "You can find our Rules of Conduct on our community website, <link>here</link>."
   },
   "Speakers" : {
     "title" : "Open Source Day 2023",

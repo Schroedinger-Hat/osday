@@ -673,7 +673,7 @@ div.image .img {
   /* Individual item */
   .bm-item {
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0.5em 0;
   }
 
@@ -786,6 +786,20 @@ div.image .img {
     height: 20em;
     background-size: contain;
     margin: 0 auto;
+  }
+
+  .footer-inner {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .text_section {
+    margin-top: -3em;
+  }
+
+  .text_section h3 {
+    font-size: 1.3em;
+    font-weight: initial;
   }
 }
 
