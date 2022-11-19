@@ -849,12 +849,6 @@ div.image .img {
 /** Sponsor card colors */
 
 .platinum {
-  background: -webkit-linear-gradient(
-      rgba(229, 229, 229, 0.7),
-      rgba(229, 229, 229, 0.7)
-    ),
-    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-  background-size: cover;
   background-image: linear-gradient(
     225deg,
     hsl(0deg 0% 52%) 0%,
@@ -872,12 +866,6 @@ div.image .img {
 }
 
 .diamond {
-  background: -webkit-linear-gradient(
-      rgba(199, 249, 255, 0.7),
-      rgba(199, 249, 255, 0.7)
-    ),
-    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-  background-size: cover;
   background-image: linear-gradient(
   225deg,
   hsl(211deg 73% 91%) 0%,
@@ -895,12 +883,6 @@ color: #171717;
 }
 
 .gold {
-  background: -webkit-linear-gradient(
-      rgba(247, 190, 57, 0.7),
-      rgba(247, 190, 57, 0.7)
-    ),
-    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-  background-size: cover;
   background-image: linear-gradient(
   225deg,
   hsl(54deg 95% 60%) 0%,
@@ -918,12 +900,6 @@ color: #171717
 }
 
 .silver {
-  background: -webkit-linear-gradient(
-      rgba(121, 121, 121, 0.7),
-      rgba(121, 121, 121, 0.7)
-    ),
-    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-  background-size: cover;
   background-image: linear-gradient(
   225deg,
   hsl(0deg 0% 88%) 0%,
@@ -941,12 +917,6 @@ color: #171717;
 }
 
 .community {
-  background: -webkit-linear-gradient(
-      rgba(112, 168, 66, 0.7),
-      rgba(112, 168, 66, 0.7)
-    ),
-    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-  background-size: cover;
   background-image: linear-gradient(
   225deg,
   hsl(288deg 86% 50%) 0%,
@@ -964,12 +934,6 @@ color: #171717;
 }
 
 .media {
-  background: -webkit-linear-gradient(
-      rgba(59, 89, 152, 0.7),
-      rgba(59, 89, 152, 0.7)
-    ),
-    url('https://images.unsplash.com/photo-1603796846097-bee99e4a601f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80');
-  background-size: cover;
   background-image: linear-gradient(
   225deg,
   hsl(124deg 86% 50%) 0%,
