@@ -1,6 +1,9 @@
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
+import CfpCard from '../components/CfpCard';
+import { TTalkCard } from '../constants';
+import TalkCard from '../components/TalkCard';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -14,8 +17,26 @@ export async function getStaticProps({ locale }: { locale: any }) {
     }
   };
 }
+
 export default function Agenda() {
   const t = useTranslations('Agenda');
+
+  const agendaInfo: TTalkCard[] = [
+    {
+      id: 'agenda_1',
+      description: t('agenda_1'),
+      link: 'https://sessionize.com/opensourceday23'
+    },
+    {
+      id: 'agenda_2',
+      description: t('agenda_2')
+    },
+    {
+      id: 'agenda_3',
+      description: t('agenda_3')
+    }
+  ];
+
   return (
     <>
       <div className="container">
@@ -50,6 +71,14 @@ export default function Agenda() {
               )
             })}
           </h3>
+        </section>
+
+        <section className="talks_2021">
+          <div className="talks_container">
+            {agendaInfo.map((talk: TTalkCard) => {
+              return <TalkCard key={talk.id} {...talk} />;
+            })}
+          </div>
         </section>
       </div>
     </>

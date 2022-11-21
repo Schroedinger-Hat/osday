@@ -50,7 +50,10 @@
     "type": "Agenda",
     "description": "Stiamo ancora cercando Speakers e organizzando l'evento! Vuoi partecipare? :)",
     "heading": "Visita la pagina della <cfp>CFP</cfp> o contattaci direttamente @ <link>SH</link>",
-    "heading_2": "Puoi trovare tutte le informazioni sulla nostra community sul nostro sito, <link>Schrodingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!"
+    "heading_2": "Puoi trovare tutte le informazioni sulla nostra community sul nostro sito, <link>Schrodingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!",
+    "agenda_1": "Our call for papers is still open! Want to join? :)",
+    "agenda_2": "Coming soon...",
+    "agenda_3": "Coming very soon..."
   },
   "DEI": {
     "title": "Open Source Day 2023",
