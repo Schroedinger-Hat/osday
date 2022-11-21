@@ -52,6 +52,14 @@ export default function Agenda() {
           originals={false}
         />
 
+        <section className="talks_2021">
+          <div className="talks_container">
+            {agendaInfo.map((talk: TTalkCard) => {
+              return <TalkCard key={talk.id} {...talk} />;
+            })}
+          </div>
+        </section>
+
         <section className="after_main">
           <h2>
             {t.rich('heading', {
@@ -70,14 +78,6 @@ export default function Agenda() {
               )
             })}
           </h3>
-        </section>
-
-        <section className="talks_2021">
-          <div className="talks_container">
-            {agendaInfo.map((talk: TTalkCard) => {
-              return <TalkCard key={talk.id} {...talk} />;
-            })}
-          </div>
         </section>
       </div>
     </>
