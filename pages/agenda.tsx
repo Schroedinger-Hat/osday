@@ -1,7 +1,6 @@
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
-import CfpCard from '../components/CfpCard';
 import { TTalkCard } from '../constants';
 import TalkCard from '../components/TalkCard';
 
