@@ -125,7 +125,8 @@
     "silver_offer": "Rollup, Logo su sito, Logo sui post social, Post di ringraziamento",
     "community_offer": "Logo su sito, Post di ringraziamento",
     "media_offer": "Logo su sito, Logo sui nostri materiali brandizzati, Logo sui post social, Post di ringraziamento",
-    "send_email": "Mandaci una <email>email</email>"
+    "send_email": "Mandaci una <email>email</email>",
+    "heading_sponsor": "We are currently involved in Open Source as a collective, as such we are using <link>Open Collective</link> to gather all the resources that will be needed to organise this event and future ones. Open Collective enables our community and partners to always check how our finances are dealt with in a public knowledge fashion. Want to know more? Send an <email>email</email>!"
   },
   "Venue": {
     "title": "Open Source Day 2023",
