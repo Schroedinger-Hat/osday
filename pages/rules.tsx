@@ -1,5 +1,7 @@
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
+import TextSection from '../components/TextSection';
+import { ReactNode } from 'react';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -31,6 +33,16 @@ export default function Rules() {
           }}
           description={t('description')}
           originals={false}
+        />
+        <TextSection
+          heading1={t('heading1')}
+          heading2={t.rich('heading2', {
+            link: (children: ReactNode) => (
+              <a href="https://www.schrodinger-hat.it/code-of-conduct">
+                {children}
+              </a>
+            )
+          })}
         />
       </div>
     </>

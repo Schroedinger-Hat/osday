@@ -76,8 +76,10 @@
     "where": "Florence",
     "when": "Próximamente",
     "length": "24 marzo 2023",
-    "type": "Normas de conducta",
-    "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)"
+    "type": "Normas",
+    "description": "Averigüemos cómo puede ayudar a la comunidad del código abierto a conseguir grandes resultados en la organización de una de las mejores conferencias de la historia :)",
+    "heading1": "Schrödinger Hat is dedicated to a harassment-free event for everyone.",
+    "heading2": "You can find our Rules of Conduct on our community website, <link>here</link>."
   },
   "Speakers": {
     "title": "Open Source Day 2023",
@@ -86,7 +88,11 @@
     "when": "Próximamente",
     "length": "24 marzo 2023",
     "type": "Speakers",
-    "description": "Todavía estamos estudiando sus propuestas, así que si tiene una idea y quiere hablar de ella, diríjase a nuestro CFP"
+    "description": "Todavía estamos estudiando sus propuestas, así que si tiene una idea y quiere hablar de ella, diríjase a nuestro CFP",
+    "heading": "Algunas cosas que hay que tener en cuenta:)",
+    "apply": "Solicite ser ponente en nuestro evento en Florencia en marzo de 2023",
+    "talk": "Da lo mejor de ti y prepara una gran charla para que todos recuerden lo buena que fue :D",
+    "event": "El día del evento, ven un poco antes para que podamos prepararte y probar tu charla!"
   },
   "Main": {
     "heading": "Echa un vistazo a la primera edición",
@@ -104,8 +110,18 @@
     "diamond": "Diamond Tier",
     "gold": "Gold Tier",
     "silver": "Silver Tier",
-    "community": "Community Tier",
-    "brand": "Brand Tier"
+    "community": "Community Partner",
+    "media": "Media Partner",
+    "platinum_price": "3000€ + vat",
+    "diamond_price": "1500€ + vat",
+    "gold_price": "1000€ + vat",
+    "silver_price": "500€ + vat",
+    "platinum_offer": "Talk técnica, Lista de asistentes, Stand en la zona de exposición, Concienciación social, Logotipo en el vídeo en streaming, Rollup, Logotipo en el sitio web, Logotipo en la publicación social, Publicación de agradecimiento",
+    "diamond_offer": "Lista de asistentes, Stand en la zona de exposición, Concienciación social, Logotipo en el vídeo en streaming, Rollup, Logotipo en el sitio web, Logotipo en la publicación social, Publicación de agradecimiento",
+    "gold_offer": "Concienciación social, Logotipo en el vídeo en streaming, Rollup, Logotipo en el sitio web, Logotipo en la publicación social, Publicación de agradecimiento",
+    "silver_offer": "Rollup, Logotipo en el sitio web, Logotipo en la publicación social, Publicación de agradecimiento",
+    "community_offer": "Logotipo en el sitio web, Publicación de agradecimiento",
+    "media_offer": "Logotipo en el sitio web, Logotipo en nuestros materiales de marca, Logotipo en la publicación social, Publicación de agradecimiento"
   },
   "Venue": {
     "title": "Open Source Day 2023",
@@ -128,5 +144,14 @@
     "type": "Conference",
     "description_1": "Volvemos con una nueva edición de la conferencia Open Source Day. En esta temporada vamos a destrozarlo todo.",
     "description_2": "las mejores empresas y los mejores profesionales del sector y de los proyectos de código abierto"
+  },
+  "Footer": {
+    "github_repo_1": "Open Source Day 2023 es un projecto open source que",
+    "github_repo_2": "se encuentra en GitHub",
+    "github_issue_1": "Si encuentras un bug o si tienes una idea para una nueva feature, por favor",
+    "github_issue_2": "abre una issue en GitHub.",
+    "rules": "Reglas",
+    "privacy_policy": "Privacy Policy",
+    "dei": "DEI"
   }
 }

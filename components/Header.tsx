@@ -1,12 +1,31 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { slide as Menu } from 'react-burger-menu';
 import { useTranslations } from 'next-intl';
+import { useRouter } from 'next/router';
+import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
+  const router = useRouter();
+  const { pathname } = router;
   const [isOpen, setOpen] = useState(false);
+
+  const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
+  const [languageCode, setLanguageCode] = useState('en');
+  const availableLocales: any = {
+    'it': '🇮🇹',
+    'en': '🇬🇧',
+    'fr': '🇫🇷',
+    'es': '🇪🇸'
+  };
+
+
+  const [notificationOpen, setNotificationOpen] = useState(false);
   const t = useTranslations('Header');
+  useEffect(() => {
+    setLanguageCode(document.documentElement.lang);
+  }, []);
 
   const handleIsOpen = () => {
     setOpen(!isOpen);
@@ -15,6 +34,28 @@ export default function Header() {
   const closeSideBar = () => {
     setOpen(false);
   };
+
+  const handleNotification = () => {
+    setNotificationOpen(!notificationOpen);
+  };
+
+  useEffect(() => {
+    !getCookie('sh_notification')
+      ? setTimeout(() => {
+          !notificationOpen ? handleNotification() : null;
+
+          setCookie('sh_notification', 'true', 30);
+        }, 5000)
+      : null;
+  }, []);
+
+  const setLanguage = (e: any, lang: string = '') => {
+    lang ? null : e.preventDefault();
+    setLanguageSwitcherOpen(!languageSwitcherOpen);
+    if (lang) {
+      setLanguageCode(lang);
+    }
+  }
 
   return (
     <header className={`nav`}>
@@ -56,6 +97,27 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfp'}>
             {t('cfp_link')}
           </Link>
+          <div className="language-switcher">
+            <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
+            {languageSwitcherOpen === true ? (
+              <div className="language-switcher-menu">
+                <ul>
+                  <li><Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                    🇮🇹
+                  </Link></li>
+                  <li><Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                    🇬🇧
+                  </Link></li>
+                 <li><Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                    🇫🇷
+                  </Link></li>
+                  <li><Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                    🇪🇸
+                  </Link></li>
+                </ul>
+              </div>
+            ) : null}
+          </div>
         </Menu>
         <Image
           width={50}
@@ -95,11 +157,24 @@ export default function Header() {
       </ul>
       <ul>
         <li>
+          <a
+            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
+            target="_blank"
+            rel="noreferrer"
+          >
+            {t('edition')}
+          </a>
+        </li>
+        <li>
+          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+        </li>
+        <li className="second-menu">
           <button
             className="notifications-menu"
             aria-haspopup="true"
             aria-expanded="false"
             aria-label={t('updates')}
+            onClick={handleNotification}
           >
             <svg
               width="24"
@@ -116,19 +191,53 @@ export default function Header() {
                 fill="currentColor"
               ></path>
             </svg>
+            <span className="notification-dot"></span>
           </button>
+          {notificationOpen === true ? (
+            <div className="notification-menu">
+              <ul>
+                <Link href="/cfp">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
+                    now live!
+                  </li>
+                </Link>
+                <Link href="/sponsor">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    Call for Sponsors is now open :D
+                  </li>
+                </Link>
+                <Link href="/about">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" />
+                    OSday repo has been created :)
+                  </li>
+                </Link>
+              </ul>
+            </div>
+          ) : null}
         </li>
-        <li>
-          <a
-            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t('edition')}
-          </a>
-        </li>
-        <li>
-          <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
+        <li className="language-switcher">
+          <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
+          {languageSwitcherOpen === true ? (
+            <div className="language-switcher-menu">
+              <ul>
+                <Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                  🇮🇹
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                  🇬🇧
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                  🇫🇷
+                </Link>
+                <Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                  🇪🇸
+                </Link>
+              </ul>
+            </div>
+          ) : null}
         </li>
       </ul>
     </header>

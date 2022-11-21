@@ -57,6 +57,7 @@ main {
       #17171708 100%
     ),
     url('/bg.jpg');
+  background-size: cover;
 }
 
 button {
@@ -116,6 +117,51 @@ button {
   height: 50px;
 }
 
+.nav ul li.language-switcher {
+  font-size: 2em;
+  position: relative;
+  margin: 0.2em 0.2em;
+}
+
+.language-switcher-menu ul {
+  z-index: 2;
+  cursor: pointer;
+  display: flex;
+  background-color: #171717a1;
+  flex-direction: column;
+  position: absolute;
+  right: 0;
+  border-top: 2px solid #fff;
+  margin-top: 0.2em;
+  padding: 0;
+}
+
+.language-switcher-menu ul::before {
+  position: absolute;
+  top: -5px;
+  right: auto;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.language-switcher-menu ul li {
+  display: block;
+  width: auto;
+  height: auto;
+  border: 1px solid #4a4a4a;
+  padding: 0.8em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.language-switcher-menu ul li:hover {
+  background-color: #171717;
+}
+
 .title-box {
   position: relative;
   width: 600px;
@@ -170,8 +216,10 @@ div.image .img {
 .button {
   border-color: #dbdbdb;
   border-width: 1px;
-  background-color: #e50914;
-  border-color: transparent;
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    border-color: transparent;
   color: #fff;
   cursor: pointer;
   justify-content: center;
@@ -226,23 +274,27 @@ div.image .img {
 .talks_container {
   width: 90%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  gap: .5em 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 2em 2em;
   margin-bottom: 2em;
 }
 
 .talk_card {
-  background: #171717 url('/osday2021.png') no-repeat;
-  background-size: cover;
+  background: #ED213A;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #93291E, #ED213A);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291E, #ED213A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  
+
   position: relative;
+  height: 16em;
   z-index: 1;
   border-radius: 0.5em;
   padding: 0.5em;
 }
 
 .talk_card p {
-  background-color: rgba(0, 0, 0, 0.8);
   padding: 0.5em;
+  font-size: 1.7em;
 }
 
 .talk_card::before {
@@ -255,32 +307,6 @@ div.image .img {
   left: 0;
   top: 0;
   border-radius: 0 0 5px 0;
-}
-
-.riva {
-  background: #171717 url('/michele-riva.jpg') no-repeat;
-  background-size: cover;
-}
-.soligo {
-  background: #171717 url('/soligo.jpg') no-repeat;
-  background-size: cover;
-}
-.scasciafratte {
-  background: #171717 url('/scasciafratte.jpg') no-repeat;
-  background-size: cover;
-}
-.bartolesi {
-  background: #171717 url('/bartolesi.jpg') no-repeat;
-  background-size: cover;
-}
-.faye_franceschini {
-  background: #171717 url('/omar.jpg') no-repeat;
-  background-size: cover;
-}
-
-.trachitella {
-  background: #171717 url('/dario.jpg') no-repeat;
-  background-size: cover;
 }
 
 @media screen and (max-width: 992px) {
@@ -307,43 +333,28 @@ div.image .img {
   height: 30em;
   border-radius: 1em;
   position: relative;
-  padding: 2em;
   box-sizing: border-box;
-  display: flex;
   align-items: flex-end;
   text-decoration: none;
   margin-bottom: 2em;
   background-size: cover;
   z-index: 1;
-  border: 5px solid #e50914;
-}
-
-.inner {
-  width: 50%;
-  height: 50%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: white;
-  box-sizing: border-box;
-  padding: 40px;
 }
 
 .title {
-  font-size: 24px;
-  color: black;
+  font-size: 36px;
   text-align: center;
   font-weight: 700;
-  color: #181818;
-  text-shadow: 0px 2px 2px #e50914;
-  position: relative;
-  margin: 0 0 20px 0;
 }
 
-.subtitle {
-  color: #e50914;
+.sponsorship_price {
   text-align: center;
+  margin-top: -1em;
+  font-size: 20px;
+}
+
+.sponsorship_offer {
+  margin: 1em 1em;
 }
 
 .after_main {
@@ -453,6 +464,54 @@ div.image .img {
   display: none;
 }
 
+.footer-inner {
+  margin: 0 40px;
+}
+
+.footer-top {
+  padding: 3rem 0;
+  display: flex;
+  border-bottom: 0.1rem solid #454f4f;
+  /* justify-content: space-between; */
+}
+
+.footer-top a {
+  border-radius: 50%;
+  background: white;
+  width: 2.5rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.75rem;
+}
+
+.footer-center {
+  border-bottom: 0.1rem solid #454f4f;
+}
+
+.footer-center a {
+  text-decoration: underline;
+  margin-left: 0.2rem;
+}
+
+.footer-footer {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.footer-footer span {
+  margin: 0 1rem;
+}
+
+.footer-footer-links {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
 @media screen and (max-width: 768px) {
   .nav ul {
     display: none;
@@ -465,6 +524,40 @@ div.image .img {
   .nav ul li img {
     width: 32px;
     height: 32px;
+  }
+
+  .language-switcher-menu ul {
+    cursor: pointer;
+    display: inline-flex;
+    background-color: #171717a1;
+    flex-direction: column;
+    border-top: 2px solid #fff;
+    margin-top: 0.2em;
+    padding: 0;
+    position: relative;
+  }
+
+  .language-switcher-menu ul::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 5px 5px 5px;
+    border-color: transparent transparent #fff transparent;
+  }
+
+  .language-switcher-menu ul li {
+    display: block;
+    width: auto;
+    height: auto;
+    border: 1px solid #4a4a4a;
+    padding: 0.8em;
+    margin: 0;
+    font-size: 0.8em;
+  }
+
+  .language-switcher-menu ul li:hover {
+    background-color: #171717;
   }
 
   .content {
@@ -554,7 +647,7 @@ div.image .img {
   /* Individual item */
   .bm-item {
     display: inline-block;
-    font-size: 1.5em;
+    font-size: 1.2em;
     padding: 0.5em 0;
   }
 
@@ -649,23 +742,10 @@ div.image .img {
     padding: 2em;
   }
 
-  .inner {
-    width: 80%;
-    height: 50%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background: white;
-  }
-
   .title {
     font-size: 24px;
-    color: black;
     text-align: center;
     font-weight: 700;
-    color: #181818;
-    text-shadow: 0px 2px 2px #e50914;
     position: relative;
     margin: 0 0 20px 0;
   }
@@ -680,9 +760,192 @@ div.image .img {
   }
 
   .talk_card {
-    width: 60%;
+    width: 80%;
     height: 20em;
-    background-size: contain;
     margin: 0 auto;
   }
+
+  .footer-inner {
+    margin: 0;
+    padding: 10px;
+  }
+
+  .text_section {
+    margin-top: -3em;
+  }
+
+  .text_section h3 {
+    font-size: 1.3em;
+    font-weight: initial;
+  }
+}
+
+.second-menu {
+  display: block;
+  position: relative;
+}
+
+.notifications-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.notification-dot {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background-color: #e50914;
+  position: absolute;
+  top: 0;
+  left: -0.2em;
+  border-radius: 8px;
+}
+
+.notification-menu ul {
+  display: flex;
+  background-color: #171717a1;
+  flex-direction: column;
+  position: absolute;
+  right: -0.5em;
+  border-top: 2px solid #fff;
+  margin-top: 1em;
+  padding: 0;
+}
+
+.notification-menu ul::before {
+  position: absolute;
+  top: -5px;
+  right: 1em;
+  content: '';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 5px 5px 5px;
+  border-color: transparent transparent #fff transparent;
+}
+
+.notification-menu ul li {
+  display: block;
+  width: 20em;
+  height: 3em;
+  border: 1px solid #4a4a4a;
+  padding: 1em 0 1em 0.5em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.notification-menu ul li:hover {
+  background-color: #171717;
+}
+
+.notification-menu ul li img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  justify-content: center;
+  margin-right: 1em;
+}
+
+/** Sponsor card colors */
+
+.platinum {
+  background-image: linear-gradient(
+    225deg,
+    hsl(0deg 0% 52%) 0%,
+    hsl(50deg 0% 46%) 11%,
+    hsl(50deg 0% 40%) 22%,
+    hsl(50deg 1% 34%) 33%,
+    hsl(50deg 1% 29%) 44%,
+    hsl(50deg 2% 24%) 56%,
+    hsl(50deg 3% 18%) 67%,
+    hsl(51deg 4% 13%) 78%,
+    hsl(50deg 7% 9%) 89%,
+    hsl(50deg 60% 2%) 100%
+  );
+  color: #fff;
+}
+
+.diamond {
+  background-image: linear-gradient(
+  225deg,
+  hsl(211deg 73% 91%) 0%,
+  hsl(202deg 93% 89%) 11%,
+  hsl(194deg 94% 86%) 22%,
+  hsl(185deg 83% 83%) 33%,
+  hsl(174deg 77% 81%) 44%,
+  hsl(161deg 79% 81%) 56%,
+  hsl(142deg 76% 83%) 67%,
+  hsl(107deg 71% 83%) 78%,
+  hsl(78deg 70% 78%) 89%,
+  hsl(55deg 76% 76%) 100%
+);
+color: #171717;
+}
+
+.gold {
+  background-image: linear-gradient(
+  225deg,
+  hsl(54deg 95% 60%) 0%,
+  hsl(53deg 83% 61%) 11%,
+  hsl(53deg 72% 61%) 22%,
+  hsl(52deg 60% 61%) 33%,
+  hsl(51deg 49% 60%) 44%,
+  hsl(50deg 38% 59%) 56%,
+  hsl(49deg 28% 58%) 67%,
+  hsl(48deg 18% 57%) 78%,
+  hsl(47deg 9% 56%) 89%,
+  hsl(0deg 0% 54%) 100%
+);
+color: #171717
+}
+
+.silver {
+  background-image: linear-gradient(
+  225deg,
+  hsl(0deg 0% 88%) 0%,
+  hsl(188deg 11% 82%) 11%,
+  hsl(188deg 17% 77%) 22%,
+  hsl(188deg 21% 72%) 33%,
+  hsl(188deg 24% 66%) 44%,
+  hsl(188deg 26% 61%) 56%,
+  hsl(188deg 28% 56%) 67%,
+  hsl(188deg 30% 50%) 78%,
+  hsl(187deg 42% 43%) 89%,
+  hsl(187deg 65% 35%) 100%
+);
+color: #171717;
+}
+
+.community {
+  background-image: linear-gradient(
+  225deg,
+  hsl(288deg 86% 50%) 0%,
+  hsl(284deg 77% 54%) 11%,
+  hsl(279deg 68% 55%) 22%,
+  hsl(274deg 59% 55%) 33%,
+  hsl(267deg 51% 55%) 44%,
+  hsl(258deg 44% 55%) 56%,
+  hsl(246deg 37% 54%) 67%,
+  hsl(230deg 35% 50%) 78%,
+  hsl(216deg 45% 44%) 89%,
+  hsl(204deg 67% 36%) 100%
+);
+color: #171717;
+}
+
+.media {
+  background-image: linear-gradient(
+  225deg,
+  hsl(124deg 86% 50%) 0%,
+  hsl(123deg 72% 57%) 11%,
+  hsl(126deg 59% 59%) 22%,
+  hsl(134deg 47% 59%) 33%,
+  hsl(148deg 36% 58%) 44%,
+  hsl(171deg 27% 56%) 56%,
+  hsl(199deg 34% 58%) 67%,
+  hsl(215deg 47% 61%) 78%,
+  hsl(223deg 64% 63%) 89%,
+  hsl(227deg 83% 65%) 100%
+);
+color: #171717;
 }

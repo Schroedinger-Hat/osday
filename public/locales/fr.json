@@ -76,17 +76,23 @@
     "where": "Florence",
     "when": "Bientôt",
     "length": "24 Mars 2023",
-    "type": "Règles de conduite",
-    "description": "Découvrez comment vous pouvez aider la communauté Open Source à se rassembler et à participer à l'une des meilleures conférences jamais organisées ! :)"
+    "type" : "Règles",
+    "description" : "Découvrons comment vous pouvez aider la communauté du logiciel libre à obtenir de grands résultats en organisant l'une des meilleures conférences jamais organisées ! :)",
+    "heading1": "Schrödinger Hat is dedicated to a harassment-free event for everyone.",
+    "heading2": "You can find our Rules of Conduct on our community website, <link>here</link>."
   },
-  "Speakers": {
-    "title": "Open Source Day 2023",
-    "subtitle": "Voici les grands esprits qui parleront de technologie et d'open source :) A venir",
-    "where": "Florence",
-    "when": "Bientôt",
-    "length": "24 Mars 2023",
-    "type": "Speakers",
-    "description": "Nous sommes toujours en train d'explorer vos propositions, donc si vous avez une idée et que vous souhaitez en parler, rendez-vous sur notre CFP"
+  "Speakers" : {
+    "title" : "Open Source Day 2023",
+    "subtitle" : "Voici les grands esprits qui parleront de technologie et d'open source :) A venir",
+    "where" : "Florence",
+    "when" : "Bientôt",
+    "length" : "Mars 2023",
+    "type" : "Speakers",
+    "description" : "Nous sommes toujours en train d'explorer vos propositions, donc si vous avez une idée et que vous souhaitez en parler, rendez-vous sur notre CFP",
+    "heading": "Quelques éléments de réflexion :)",
+    "apply": "Postulez en tant que conférencier à notre événement à Florence en mars 2023",
+    "talk": "Donnez le meilleur de vous-mêmes et préparez un excellent discours pour que tout le monde se souvienne de la qualité de l'événement :D",
+    "event": "Le jour de l'événement, venez un peu plus tôt pour que nous puissions vous installer et essayer votre conférence.!"
   },
   "Main": {
     "heading": "Jetez un coup d'oeil à la première édition",
@@ -100,12 +106,22 @@
     "length": "3 mois",
     "type": "Appel à sponsors",
     "description": "Découvrez comment vous pouvez aider la communauté Open Source à se rassembler et à participer à l'une des meilleures conférences jamais organisées ! :)",
-    "platinum": "Platinum Tier",
-    "diamond": "Diamond Tier",
-    "gold": "Gold Tier",
-    "silver": "Silver Tier",
-    "Community": "Community Tier",
-    "brand": "Brand Tier"
+    "platinum" : "Platinum Tier",
+    "diamond" : "Diamond Tier",
+    "gold" : "Gold Tier",
+    "silver" : "Silver Tier",
+    "Community" : "Community Partner",
+    "media" : "Media Partner",
+    "platinum_price": "3000€ + vat",
+    "diamond_price": "1500€ + vat",
+    "gold_price": "1000€ + vat",
+    "silver_price": "500€ + vat",
+    "platinum_offer": "Talk technique, Liste des participants, Stand dans la zone d'exposition, Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "diamond_offer": "Liste des participants, Stand dans la zone d'exposition, Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "gold_offer": "Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "silver_offer": "Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
+    "community_offer": "Logo sur le site web, Post de remerciement",
+    "media_offer": "Logo sur le site web, Logo sur notre matériel de marque, Logo sur le post social, Post de remerciement"
   },
   "Venue": {
     "title": "Open Source Day 2023",
@@ -128,5 +144,14 @@
     "type": "Conférence",
     "description_1": "Nous revenons avec une nouvelle édition de la conférence Open Source Day. Dans cette saison, nous allons tout déchirer.",
     "description_2": "Les meilleures entreprises et les meilleurs professionnels du secteur dans les projets Open Source"
+    },
+"Footer": {
+    "github_repo_1": "Open Source Day 2023 est une open source et",
+    "github_repo_2": "hébergé sur GitHub",
+    "github_issue_1": "Si vous trouvez un bug ou avez une idée pour une nouvelle feature, veuillez",
+    "github_issue_2": "ouvrir un issue sur GitHub.",
+    "rules": "Règles",
+    "privacy_policy": "Privacy Policy",
+    "dei": "DEI"
   }
 }

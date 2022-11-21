@@ -3,7 +3,6 @@ export type TTalkCard = {
   description: string;
   link?: string;
   picture?: string;
-  talkClass?: string;
 };
 
 export type TTypeCard = {
@@ -18,44 +17,38 @@ export const previousTalks: TTalkCard[] = [
     description:
       'Zero effort, high performances and secure GraphQL APIs with Hasura',
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=2675s',
-    picture: '',
-    talkClass: 'riva'
+    picture: ''
   },
   {
     id: 'bartolesi2021',
     description: 'How to create awesome VSCode extensions',
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=6850s',
-    picture: '',
-    talkClass: 'bartolesi'
+    picture: ''
   },
   {
     id: 'kerberus2021',
     description:
       'Project Kerberus for self-service resource provisioning and managament',
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=4275s',
-    picture: '',
-    talkClass: 'soligo'
+    picture: ''
   },
   {
     id: 'opensource2021',
     description: 'Contribute to Open Source: the right way',
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=1157s',
-    picture: '',
-    talkClass: 'scasciafratte'
+    picture: ''
   },
   {
     id: 'augmentedreality2021',
     description: '3D e Argumented Reality with google model-viewer',
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=10020s',
-    picture: '',
-    talkClass: 'faye_franceschini'
+    picture: ''
   },
   {
     id: 'operatorkerberus2021',
     description: 'Capsule, storia di un operator kubernetes open source',
     link: 'https://youtu.be/8z6CRK61JLA',
-    picture: '',
-    talkClass: 'trachitella'
+    picture: ''
   }
 ];
 
