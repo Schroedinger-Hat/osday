@@ -4,9 +4,13 @@ import { TTalkCard } from '../constants';
 const TalkCard = ({ description, link }: TTalkCard) => {
   return (
     <div className={`talk_card`}>
-      <p>
-        <a href={link}>{description}</a>
-      </p>
+      {link ? (
+        <p>
+          <a href={link}>{description}</a>
+        </p>
+      ) : (
+        <p>{description} </p>
+      )}
     </div>
   );
 };
