@@ -6,13 +6,15 @@ type TSponsorshipTier = {
   card_color: string;
   price?: string;
   offer: string;
+  emailLink: any;
 };
 
 const SponsorshipTier = ({
   title = 'Tier #',
   card_color = '#',
   price = '',
-  offer = ''
+  offer = '',
+  emailLink = ''
 }: TSponsorshipTier) => {
   const t = useTranslations('SponsorshipTier');
 
@@ -24,6 +26,9 @@ const SponsorshipTier = ({
         <h3 className="sponsorship_offer">
           <ul>{offer.length > 0 && offer.split(",").map((item) => <li key={item}>{item} </li>)}</ul>
         </h3>
+        <div className="sponsorship_footer">
+          {emailLink}
+        </div>
       </div>
     </>
   );

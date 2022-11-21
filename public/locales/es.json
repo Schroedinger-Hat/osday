@@ -121,7 +121,8 @@
     "gold_offer": "Concienciación social, Logotipo en el vídeo en streaming, Rollup, Logotipo en el sitio web, Logotipo en la publicación social, Publicación de agradecimiento",
     "silver_offer": "Rollup, Logotipo en el sitio web, Logotipo en la publicación social, Publicación de agradecimiento",
     "community_offer": "Logotipo en el sitio web, Publicación de agradecimiento",
-    "media_offer": "Logotipo en el sitio web, Logotipo en nuestros materiales de marca, Logotipo en la publicación social, Publicación de agradecimiento"
+    "media_offer": "Logotipo en el sitio web, Logotipo en nuestros materiales de marca, Logotipo en la publicación social, Publicación de agradecimiento",
+    "send_email": "Envíanos un <email>email</email>"
   },
   "Venue": {
     "title": "Open Source Day 2023",

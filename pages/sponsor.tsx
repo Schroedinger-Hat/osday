@@ -1,6 +1,7 @@
 import Hero from '../components/Hero';
 import SponsorshipTier from '../components/SponsorshipTier';
 import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -34,12 +35,54 @@ export default function Sponsor() {
           originals={false}
         />
         <section className="sponsors_2022">
-          <SponsorshipTier title={t('platinum')} card_color="platinum" price={t('platinum_price')} offer={t('platinum_offer')}/>
-          <SponsorshipTier title={t('diamond')} card_color="diamond" price={t('diamond_price')} offer={t('diamond_offer')}/>
-          <SponsorshipTier title={t('gold')} card_color="gold" price={t('gold_price')} offer={t('gold_offer')}/>
-          <SponsorshipTier title={t('silver')} card_color="silver" price={t('silver_price')} offer={t('silver_offer')}/>
-          <SponsorshipTier title={t('community')} card_color='community' offer={t('community_offer')}/>
-          <SponsorshipTier title={t('media')} card_color='media' offer={t('media_offer')}/>
+          <SponsorshipTier title={t('platinum')} card_color="platinum" price={t('platinum_price')} offer={t('platinum_offer')} 
+            emailLink={t.rich('send_email', {
+                email: (children: ReactNode) => (
+                  <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Platinum Tier"><u>{children}</u></a>
+                )
+              })
+            }
+          />
+          <SponsorshipTier title={t('diamond')} card_color="diamond" price={t('diamond_price')} offer={t('diamond_offer')}
+            emailLink={t.rich('send_email', {
+                email: (children: ReactNode) => (
+                  <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Diamond Tier"><u>{children}</u></a>
+                )
+              })
+            }
+          />
+          <SponsorshipTier title={t('gold')} card_color="gold" price={t('gold_price')} offer={t('gold_offer')}
+            emailLink={t.rich('send_email', {
+                email: (children: ReactNode) => (
+                  <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Gold Tier"><u>{children}</u></a>
+                )
+              })
+            }
+          />
+          <SponsorshipTier title={t('silver')} card_color="silver" price={t('silver_price')} offer={t('silver_offer')}
+            emailLink={t.rich('send_email', {
+                email: (children: ReactNode) => (
+                  <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Silver Tier"><u>{children}</u></a>
+                )
+              })
+            }
+          />
+          <SponsorshipTier title={t('community')} card_color='community' offer={t('community_offer')}
+            emailLink={t.rich('send_email', {
+                email: (children: ReactNode) => (
+                  <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner"><u>{children}</u></a>
+                )
+              })
+            }
+          />
+          <SponsorshipTier title={t('media')} card_color='media' offer={t('media_offer')}
+            emailLink={t.rich('send_email', {
+                email: (children: ReactNode) => (
+                  <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Media Partner"><u>{children}</u></a>
+                )
+              })
+            }
+          />
         </section>
       </div>
     </>
