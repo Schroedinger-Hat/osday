@@ -121,7 +121,8 @@
     "gold_offer": "Sensibilisation social, Logo sur la vidéo en continu, Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
     "silver_offer": "Rollup, Logo sur le site web, Logo sur le post social, Post de remerciement",
     "community_offer": "Logo sur le site web, Post de remerciement",
-    "media_offer": "Logo sur le site web, Logo sur notre matériel de marque, Logo sur le post social, Post de remerciement"
+    "media_offer": "Logo sur le site web, Logo sur notre matériel de marque, Logo sur le post social, Post de remerciement",
+    "send_email": "Envoyez-nous un <email>email</email>"
   },
   "Venue": {
     "title": "Open Source Day 2023",
