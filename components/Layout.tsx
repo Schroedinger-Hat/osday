@@ -69,6 +69,19 @@ export default function Layout({
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                 <link rel="icon" type="image/png" href="/favicon-32x32.png" />
                 <meta name="description" content={metas ? metas.description : ''} />
+
+                <meta property="og:title" content="Open Source Day 2023" />
+                <meta property="og:type" content="article" />
+                <meta property="og:image" content="https://osday.dev/intro.png" />
+                <meta property="og:url" content="https://2023.osday.dev" />
+                <meta name="twitter:card" content="https://osday.dev/intro.png" />
+
+                <meta property="og:description" content="Open Source Day 2023 coming soon on March 2023. Stay tuned on our social" />
+                <meta property="og:site_name" content="Open Source Day 2023" />
+                <meta name="twitter:image:alt" content="Open Source Day 2023" />
+
+                <meta name="twitter:site" content="@schrodinger_hat" />
+
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
                 <link
                     rel="preconnect"
