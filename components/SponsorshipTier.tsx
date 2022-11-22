@@ -1,5 +1,4 @@
 import React from 'react';
-import { useTranslations } from 'next-intl';
 
 type TSponsorshipTier = {
   title: string;
@@ -16,7 +15,6 @@ const SponsorshipTier = ({
   offer = '',
   emailLink = ''
 }: TSponsorshipTier) => {
-  const t = useTranslations('SponsorshipTier');
 
   return (
     <>

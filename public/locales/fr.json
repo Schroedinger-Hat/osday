@@ -113,7 +113,7 @@
     "diamond" : "Diamond Tier",
     "gold" : "Gold Tier",
     "silver" : "Silver Tier",
-    "Community" : "Community Partner",
+    "community" : "Community Partner",
     "media" : "Media Partner",
     "platinum_price": "3000€ + vat",
     "diamond_price": "1500€ + vat",
@@ -138,7 +138,6 @@
     "description": "Restez en contact via nos canaux (Discord, LinkedIn ou Twitter) pour savoir quel Venue nous accueillera pour cet événement :)",
     "heading": "Vous voulez en savoir plus sur le lieu de cet événement :). Tenez-vous au courant sur <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> ou mieux encore, <discord>Discord</discord> !"
   },
-  "TalkCard": {},
   "SponsorshipTier": {
     "know_more": "En savoir plus"
   },
