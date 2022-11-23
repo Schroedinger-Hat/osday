@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import SponsorshipTier from '../components/SponsorshipTier';
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
+import Image from 'next/image';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -34,6 +35,20 @@ export default function Sponsor() {
           description={t('description')}
           originals={false}
         />
+        <section className='current_sponsors'>
+          <h3>Sponsored by</h3>
+          <div className='sponsors_logo'>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
+              <Image width={60} height={60} src="/github.png" alt="Github" />
+            </a>
+            <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
+              <Image width={70} height={70} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
+            </a>
+            <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
+              <Image width={60} height={60} src="/jb_beam.svg" alt="JetBrains" />
+            </a>
+          </div>
+        </section>
         <section className="sponsors_2022">
           <SponsorshipTier
             title={t('platinum')}
