@@ -23,6 +23,15 @@
     "erwin_alt": "Imagen de Erwin Schrodinger",
     "edition": "Edición 2021"
   },
+  "InternalError": {
+    "title": "500 Page",
+    "subtitle": "Err err",
+    "where": "Anywhere",
+    "when": "Anytime",
+    "length": "Infinity",
+    "type": "HTTP Error",
+    "description": "Parece que has encontrado ¡500! ¿Te gustaría volver? :)"
+  },
   "NotFound": {
     "title": "404 Page",
     "subtitle": "You are Lost - Season Finale",
@@ -136,7 +145,7 @@
     "length": "24 marzo 2023",
     "type": "Venue",
     "description": "Mantente en contacto a través de nuestros canales (Discord, LinkedIn) para saber qué sede nos acogerá para este evento :)",
-    "heading": "¿Quieres saber más sobre la sede de este evento? :) Mantente informado en LinkedIn, Twitter o mejor aún, <link>Discord</link>!"
+    "heading": "Quiere saber más sobre el lugar :) ¡Manténgase actualizado en <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> o mejor aún, <discord>Discord</discord>!"
   },
   "SponsorshipTier": {
     "know_more": "Saber más"

@@ -23,6 +23,15 @@
     "erwin_alt": "Photo d'Erwin Schrodinger",
     "edition": "Edition 2021"
   },
+  "InternalError": {
+    "title": "Page 500",
+    "subtitle": "Err err",
+    "where": "Partout",
+    "when": "A tout moment",
+    "length": "Infinité",
+    "type": "Erreur HTTP",
+    "description": "Il semble que vous ayez trouvé le 500 ! Voulez-vous revenir en arrière ? :)"
+  },
   "NotFound": {
     "title": "Page 404",
     "subtitle": "You are Lost - Season Finale",
