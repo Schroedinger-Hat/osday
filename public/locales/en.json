@@ -23,6 +23,15 @@
     "erwin_alt": "Picture of Erwin Schrodinger",
     "edition": "Edition 2021"
   },
+  "InternalError": {
+    "title": "500 Page",
+    "subtitle": "Err err",
+    "where": "Anywhere",
+    "when": "Anytime",
+    "length": "Infinity",
+    "type": "HTTP Error",
+    "description": "It appears you may have found the 500! Would you like to go back? :)"
+  },
   "NotFound": {
     "title": "404 Page",
     "subtitle": "You are Lost - Season Finale",
