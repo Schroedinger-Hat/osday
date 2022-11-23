@@ -1,4 +1,3 @@
-import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
 
 export default function TextSection({

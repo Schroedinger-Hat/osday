@@ -1,33 +1,38 @@
-import Hero from "../components/Hero";
-import SponsorshipTier from "../components/SponsorshipTier";
-import { useTranslations } from "next-intl";
-import { ReactNode } from "react";
+import Hero from '../components/Hero';
+import SponsorshipTier from '../components/SponsorshipTier';
+import { useTranslations } from 'next-intl';
+import { ReactNode } from 'react';
+import SponsorshipTable from '../components/SponsorshipTable';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: "Sponsor, Open Source Day 2023 - Florence",
-        description: "Open Source Day 2023 coming soon on March 2023. Stay tuned on our social",
+        title: 'Sponsor, Open Source Day 2023 - Florence',
+        description:
+          'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social'
       },
-      messages: (await import(`../public/locales/${locale}.json`)).default,
-    },
+      messages: (await import(`../public/locales/${locale}.json`)).default
+    }
   };
 }
 
 export default function Sponsor() {
-  const t = useTranslations("Sponsor");
+  const t = useTranslations('Sponsor');
 
   return (
     <>
       <div className="container">
         <Hero
-          title={t("title")}
-          subtitle={t("subtitle")}
-          description={t("description")}
+          title={t('title')}
+          subtitle={t('subtitle')}
+          description={t('description')}
           originals={false}
         />
-        <section className="sponsors_2022">
+
+        <SponsorshipTable />
+
+        {/* <section className="sponsors_2022">
           <SponsorshipTier
             title={t("platinum")}
             card_color="platinum"
@@ -104,8 +109,8 @@ export default function Sponsor() {
               ),
             })}
           />
-        </section>
-
+        </section> */}
+        {/* 
         <section className="after_main">
           <h2>
             {t.rich("heading_sponsor", {
@@ -117,7 +122,7 @@ export default function Sponsor() {
               ),
             })}
           </h2>
-        </section>
+        </section> */}
       </div>
     </>
   );
