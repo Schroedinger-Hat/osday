@@ -10,20 +10,23 @@ export default function Footer() {
       <footer>
         <div className="footer-inner">
           <div className="footer-top">
-            <a href="https://www.facebook.com/schrodingerhat" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/schrodingerhat" target="_blank" rel="noreferrer" title="Facebook">
               <Image width={30} height={30} src="/icons/facebook.svg" alt="Facebook" />
             </a>
-            <a href="https://twitter.com/OSDayDev" target="_blank" rel="noreferrer">
+            <a href="https://twitter.com/OSDayDev" target="_blank" rel="noreferrer" title="Twitter">
               <Image width={30} height={30} src="/icons/twitter.svg" alt="Twitter" />
             </a>
-            <a href="https://discord.com/invite/RTXr8A3eFn" target="_blank" rel="noreferrer">
+            <a href="https://discord.com/invite/RTXr8A3eFn" target="_blank" rel="noreferrer" title="Discord">
               <Image width={30} height={30} src="/icons/discord.svg" alt="Discord" />
             </a>
-            <a href="https://www.instagram.com/schrodinger_hat/" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/schrodinger_hat/" target="_blank" rel="noreferrer" title="Instagram">
               <Image width={30} height={30} src="/icons/instagram.svg" alt="Instagram" />
             </a>
-            <a href="https://github.com/Schrodinger-Hat/osday-2023/" target="_blank" rel="noreferrer">
-              <Image width={30} height={30} src="/icons/github.svg" alt="Gthub" />
+            <a href="https://github.com/Schrodinger-Hat/osday-2023/" target="_blank" rel="noreferrer" title="Github">
+              <Image width={30} height={30} src="/icons/github.svg" alt="Github" />
+            </a>
+            <a href="https://opencollective.com/schrodinger-hat/contribute" title="OpenCollective" target="_blank" rel="noreferrer">
+              <Image width={30} height={30} src="/icons/opencollective.svg" alt="OpenCollective" />
             </a>
           </div>
           <div className="footer-center">
