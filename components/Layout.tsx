@@ -5,7 +5,7 @@ import Footer from './Footer';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
 import CookieConsent from "react-cookie-consent";
-
+import Link from 'next/link';
 
 export default function Layout({
     children,
@@ -106,7 +106,7 @@ export default function Layout({
                 buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
                 expires={150}
             >
-                This website uses cookies to enhance the user experience.
+                This website uses cookies to enhance the user experience. <Link href='/cookie'><u>Cookie policy</u></Link>
             </CookieConsent>
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=UA-175469686-4"
