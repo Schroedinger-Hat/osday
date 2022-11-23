@@ -356,6 +356,46 @@ div.image .img {
   place-items: center;
 }
 
+.sponsortable {
+  width: 100%;
+  margin-left: 80px;
+  font-size: 1rem;
+  font-weight: bold;
+  z-index: 1;
+  padding-bottom: 2em;
+}
+
+.sponsortable table {
+  border-collapse: collapse;
+  padding: 20px;
+}
+
+.sponsortable_rows {
+  text-align: center;
+}
+
+.sponsortable_rows tr {
+  border-bottom: 2px solid #a1a1a1;
+}
+
+.sponsortable_rows td {
+  padding: 2em 4em;
+}
+
+.sponsortable_rows td:nth-child(1) {
+  text-align: left;
+}
+
+
+.sponsortable_tiers_card span {
+  display: flex;
+  background-color: #e50914;
+  width: 8em;
+  height: 8em;
+  justify-content: center;
+  align-items: center;
+}
+
 .card_sponsor {
   width: 80%;
   height: 30em;

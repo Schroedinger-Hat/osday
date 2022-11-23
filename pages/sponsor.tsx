@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import SponsorshipTier from '../components/SponsorshipTier';
 import { useTranslations } from 'next-intl';
 import { ReactNode } from 'react';
+import SponsorshipTable from '../components/SponsorshipTable';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -34,7 +35,10 @@ export default function Sponsor() {
           description={t('description')}
           originals={false}
         />
-        <section className="sponsors_2022">
+
+        <SponsorshipTable />
+
+        {/* <section className="sponsors_2022">
           <SponsorshipTier
             title={t('platinum')}
             card_color="platinum"
@@ -111,8 +115,8 @@ export default function Sponsor() {
               )
             })}
           />
-        </section>
-
+        </section> */}
+{/* 
         <section className="after_main">
           <h2>
             {t.rich('heading_sponsor', {
@@ -128,7 +132,7 @@ export default function Sponsor() {
               )
             })}
           </h2>
-        </section>
+        </section> */}
       </div>
     </>
   );
