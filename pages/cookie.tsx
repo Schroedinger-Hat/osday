@@ -34,13 +34,8 @@ export default function DEI() {
             <h4>What types of cookies do we use?</h4>
             <h5>Necessary cookies</h5>
             <p>
-              Necessary cookies allow us to offer you the best possible experience when accessing and navigating through our website and using its features.
-              For example, these cookies let us recognize that you have created an account and have logged into that account.
-            </p>
-            <h5>Functionality cookies</h5>
-            <p>
-              Functionality cookies let us operate the site in accordance with the choices you make.
-              For example, we will recognize your username and remember how you customized the site during future visits.
+              Necessary cookies allow us to offer you the best possible experience when accessing and navigating through our website.
+              For example, these cookies let us recognize that you have visualize our static notification.
             </p>
             <h5>Analytical cookies</h5>
             <p>
