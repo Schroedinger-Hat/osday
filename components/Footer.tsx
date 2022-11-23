@@ -10,7 +10,7 @@ export default function Footer() {
       <footer>
         <div className="footer-inner">
           <div className="footer-top">
-            <a href="" target="_blank" rel="noreferrer">
+            <a href="https://www.facebook.com/schrodingerhat" target="_blank" rel="noreferrer">
               <Image width={30} height={30} src="/icons/facebook.svg" alt="Facebook" />
             </a>
             <a href="https://twitter.com/OSDayDev" target="_blank" rel="noreferrer">
@@ -19,7 +19,7 @@ export default function Footer() {
             <a href="https://discord.com/invite/RTXr8A3eFn" target="_blank" rel="noreferrer">
               <Image width={30} height={30} src="/icons/discord.svg" alt="Discord" />
             </a>
-            <a href="" target="_blank" rel="noreferrer">
+            <a href="https://www.instagram.com/schrodinger_hat/" target="_blank" rel="noreferrer">
               <Image width={30} height={30} src="/icons/instagram.svg" alt="Instagram" />
             </a>
             <a href="https://github.com/Schrodinger-Hat/osday-2023/" target="_blank" rel="noreferrer">
@@ -49,7 +49,7 @@ export default function Footer() {
               <Link href={'/dei'}>{t('dei')}</Link>
             </p>
             <p>Made with ❤️ in Florence & Paris</p>
-            <p>©2023 Schrödinger Hat</p>
+            <p>©{(new Date()).getFullYear()} Schrödinger Hat</p>
           </div>
         </div>
       </footer>
