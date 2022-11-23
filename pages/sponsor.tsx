@@ -106,10 +106,11 @@ export default function Sponsor() {
                 <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Media Partner">
                   <u>{children}</u>
                 </a>
-              ),
+              )
             })}
           />
         </section> */}
+
         {/* 
         <section className="after_main">
           <h2>
