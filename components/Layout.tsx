@@ -4,6 +4,8 @@ import Header from './Header';
 import Footer from './Footer';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
+import CookieConsent from "react-cookie-consent";
+
 
 export default function Layout({
     children,
@@ -96,6 +98,16 @@ export default function Layout({
                 <section className='content'>{children}</section>
             </main>
             <Footer />
+            <CookieConsent
+                location="bottom"
+                buttonText="Of course!"
+                cookieName="cookiepolicy"
+                style={{ background: "#2B373B" }}
+                buttonStyle={{ color: "#4e503b", fontSize: "13px" }}
+                expires={150}
+            >
+                This website uses cookies to enhance the user experience.
+            </CookieConsent>
             <Script
                 src="https://www.googletagmanager.com/gtag/js?id=UA-175469686-4"
                 strategy="afterInteractive"
