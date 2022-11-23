@@ -81,6 +81,17 @@ button {
   width: 98%;
   justify-content: space-between;
   margin-bottom: 5vw;
+  transition: background 150ms ease-in-out;
+}
+
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: #171717;
+  transition: background 150ms ease-in-out;
 }
 
 .nav ul {
@@ -541,6 +552,12 @@ div.image .img {
 }
 
 @media screen and (max-width: 768px) {
+  .sticky {
+    position: relative;
+    width: auto;
+    transition: none;
+  }
+
   .nav ul {
     display: none;
   }
