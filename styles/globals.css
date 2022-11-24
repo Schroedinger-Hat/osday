@@ -713,6 +713,7 @@ div.image .img {
   }
 
   .talks_container {
+    width: 100%;
     grid-template-columns: 1fr;
     padding-bottom: 2em;
   }
@@ -788,7 +789,7 @@ div.image .img {
   }
 
   .talk_card {
-    width: 80%;
+    width: 95%;
     height: 20em;
     margin: 0 auto;
   }
