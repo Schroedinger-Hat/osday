@@ -198,20 +198,19 @@ export default function Header() {
               <ul>
                 <Link href="/cfp">
                   <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> CFP is
-                    now live!
+                    <Image src="/sh.png" alt="" width="20" height="20" /> {t('notification.n1')}
                   </li>
                 </Link>
                 <Link href="/sponsor">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" />
-                    Call for Sponsors is now open :D
+                    {t('notification.n2')}
                   </li>
                 </Link>
                 <Link href="/about">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" />
-                    OSday repo has been created :)
+                    {t('notification.n3')}
                   </li>
                 </Link>
               </ul>

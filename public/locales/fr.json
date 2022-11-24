@@ -21,7 +21,12 @@
     "cfp_link": "CFP",
     "updates": "Notification",
     "erwin_alt": "Photo d'Erwin Schrodinger",
-    "edition": "Edition 2021"
+    "edition": "Edition 2021",
+    "notification": {
+      "n1": "CFP est maintenant en ligne !",
+      "n2": "La Call for sponsor est ouvert!",
+      "n3": "Le repo OSday a été créé :)"
+    }
   },
   "InternalError": {
     "title": "Page 500",
@@ -152,7 +157,7 @@
   },
   "Hero": {
     "where": "Florence, Italie",
-    "when": "Mars 2023",
+    "when": "24 Mars 2023",
     "length": "10h 20min",
     "type": "Conférence",
     "description_1": "Nous revenons avec une nouvelle édition de la conférence Open Source Day. Dans cette saison, nous allons tout déchirer.",

@@ -21,7 +21,12 @@
     "cfp_link": "CFP",
     "updates": "Notification",
     "erwin_alt": "Foto di Erwin Schrodinger",
-    "edition": "Edizione 2021"
+    "edition": "Edizione 2021",
+    "notification": {
+      "n1": "La CFP è aperta!",
+      "n2": "La Call for Sponsors è aperta :D",
+      "n3": "La repository OSday è stata creata!"
+    }
   },
   "InternalError": {
     "title": "500 Page",
@@ -152,7 +157,7 @@
   },
   "Hero": {
     "where": "Firenze",
-    "when": "Marzo 2023",
+    "when": "24 Marzo 2023",
     "length": "10h 20min",
     "type": "Conferenza",
     "description_1": "Stiamo per tornare con una nuova edizione dell'Open Source Day. In questa stagione distruggeremo tutto.",
