@@ -1019,3 +1019,28 @@ div.image .img {
   width: 32px;
   height: 32px;
 }
+
+
+
+.sticky .notifications-menu {
+  position: relative;
+  cursor: pointer;
+}
+
+.sticky .notification-menu ul li {
+  display: block;
+  width: 20em;
+  height: 3em;
+  border: 1px solid #4a4a4a;
+  padding: 1em 0 3em 0.5em;
+  margin: 0;
+  font-size: 0.8em;
+}
+
+.sticky .notification-menu ul li img {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  justify-content: center;
+  margin-right: 1em;
+}
