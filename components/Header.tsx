@@ -7,9 +7,12 @@ import { useRouter } from 'next/router';
 import { setCookie, getCookie } from '../utils';
 
 export default function Header() {
+  const t = useTranslations('Header');
   const router = useRouter();
   const { pathname } = router;
   const [isOpen, setOpen] = useState(false);
+  const [isSticky, setSticky] = useState(false);
+  const [notificationOpen, setNotificationOpen] = useState(false);
 
   const [languageSwitcherOpen, setLanguageSwitcherOpen] = useState(false);
   const [languageCode, setLanguageCode] = useState('en');
@@ -20,11 +23,16 @@ export default function Header() {
     'es': '🇪🇸'
   };
 
-
-  const [notificationOpen, setNotificationOpen] = useState(false);
-  const t = useTranslations('Header');
+  
   useEffect(() => {
     setLanguageCode(document.documentElement.lang);
+
+    const handleScroll = () => setSticky(window.pageYOffset > 120);
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
 
   const handleIsOpen = () => {
@@ -58,7 +66,7 @@ export default function Header() {
   }
 
   return (
-    <header className={`nav`}>
+    <header className={`nav${isSticky ? ' sticky' : ''}`}>
       <div className="mobile-menu">
         <Menu
           pageWrapId={'page-wrap'}
