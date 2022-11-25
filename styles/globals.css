@@ -84,16 +84,6 @@ button {
   transition: background 150ms ease-in-out;
 }
 
-.sticky {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10;
-  width: 100%;
-  background: #171717;
-  transition: background 150ms ease-in-out;
-}
-
 .nav ul {
   list-style-type: none;
   display: flex;
@@ -1002,4 +992,30 @@ div.image .img {
   text-align: center;
   height: 3em;
   width: 100%;
+}
+
+
+.sticky {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100%;
+  background: #171717;
+  transition: background 350ms ease-in;
+  height: 50px;
+}
+
+.sticky ul li {
+  font-size: .8em;
+}
+
+.sticky ul li img {
+  width: 32px;
+  height: 32px;
+}
+
+.sticky .menu img {
+  width: 32px;
+  height: 32px;
 }
