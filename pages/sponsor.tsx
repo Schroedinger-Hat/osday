@@ -35,22 +35,23 @@ export default function Sponsor() {
           originals={false}
         />
         <section className="current_sponsors">
-          <h2>Silver Partners</h2>
+          <h2 className="sponsors_thanks" style={{ textAlign: "center" }}>Thanks to our sponsors</h2>
+          <h3 className="sponsors_tier">Silver</h3>
           <div className="sponsors_logo">
             <a href="https://www.nephila.digital/it/" target="_blank" rel="noreferrer">
-              <Image width={250} height={60} src="/nephila_logo.png" alt="Nephila" />
+              <Image width={400} height={100} src="/nephila_logo.png" alt="Nephila" />
             </a>
           </div>
-          <h2>Swag Partners</h2>
+          <h3 className="sponsors_tier">Swag</h3>
           <div className="sponsors_logo">
             <a href="https://github.com/" target="_blank" rel="noreferrer">
-              <Image width={60} height={60} src="/github.png" alt="Github" />
+              <Image width={100} height={100} src="/github.png" alt="Github" />
             </a>
             <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
-              <Image width={70} height={70} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
+              <Image width={110} height={110} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
             </a>
             <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
-              <Image width={60} height={60} src="/jb_beam.svg" alt="JetBrains" />
+              <Image width={100} height={100} src="/jb_beam.svg" alt="JetBrains" />
             </a>
           </div>
         </section>
