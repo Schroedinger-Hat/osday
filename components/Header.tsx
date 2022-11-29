@@ -27,13 +27,14 @@ export default function Header() {
   useEffect(() => {
     setLanguageCode(document.documentElement.lang);
 
-    const handleScroll = () => setSticky(window.pageYOffset > 120);
+    const handleScroll = () => setSticky(window.pageYOffset > 20);
     window.addEventListener('scroll', handleScroll);
+    console.log(window.pageYOffset)
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isSticky]);
 
   const handleIsOpen = () => {
     setOpen(!isOpen);
@@ -66,7 +67,10 @@ export default function Header() {
   }
 
   return (
+    <div>
+      <div className={`${isSticky ? `replacement` : ``}`}></div>
     <header className={`nav${isSticky ? ' sticky' : ''}`}>
+
       <div className="mobile-menu">
         <Menu
           pageWrapId={'page-wrap'}
@@ -248,5 +252,6 @@ export default function Header() {
         </li>
       </ul>
     </header>
+    </div>
   );
 }

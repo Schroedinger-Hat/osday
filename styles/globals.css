@@ -75,13 +75,21 @@ button {
   transition-duration: 500ms;
 }
 
+.replacement{
+  position: relative;
+  background-color: transparent;
+  height: 100px;
+  width: 100%;
+}
+
 .nav {
   left: 1em;
   display: flex;
-  width: 98%;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 5vw;
-  transition: background 150ms ease-in-out;
+  transition: 350ms ease-in-out;
+  height: 100px;
 }
 
 .nav ul {
@@ -751,9 +759,9 @@ div.image .img {
   top: 0;
   z-index: 10;
   width: 100%;
-  background: #171717;
-  transition: background 350ms ease-in;
-  height: 50px;
+  background: #1717177c;
+  transition: 350ms ease-in;
+  margin-bottom: 5vh;
 }
 
 .sticky ul li {
