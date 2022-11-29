@@ -357,6 +357,30 @@ div.image .img {
   place-items: center;
 }
 
+.current_sponsors {
+  margin: 0 80px 80px 80px;
+}
+
+.sponsors_thanks {
+  font-size: 2.5em;
+}
+
+.sponsors_tier {
+  border-bottom: 0.1rem solid #454f4f;
+}
+
+.sponsors_logo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 4em;
+}
+
+.sponsors_logo img {
+  padding: .05em;
+}
+
 .card_sponsor {
   width: 80%;
   height: 30em;
