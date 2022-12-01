@@ -1,6 +1,5 @@
 import Hero from "../components/Hero";
 import SponsorshipTier from "../components/SponsorshipTier";
-import SponsorTable from "../components/SponsorTable";
 import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
 
@@ -34,7 +33,6 @@ export default function Sponsor() {
           description={t("description")}
           originals={false}
         />
-        <SponsorTable/>
         <section className="sponsors_2022">
           <SponsorshipTier
             title={t("platinum")}

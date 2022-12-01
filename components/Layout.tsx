@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script';
 import Header from './Header';
+import SponsorTable from './SponsorTable';
 import Footer from './Footer';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -62,6 +63,15 @@ export default function Layout({
         };
     }, [router.events]);
 
+    const areSponsorVisible = () => {
+        if (typeof window !== 'undefined' && !!window) {
+            const path = window.location.pathname;
+            const splittedPath = path.split('/');
+            return splittedPath[splittedPath.length - 1] === 'sponsor' || splittedPath.length === 2
+        }
+        return false;
+    };
+
     return (
         <>
             <Head>
@@ -96,6 +106,7 @@ export default function Layout({
             <main>
                 <Header />
                 <section className='content'>{children}</section>
+                <SponsorTable isVisible={areSponsorVisible()}/>
             </main>
             <Footer />
             <CookieConsent
