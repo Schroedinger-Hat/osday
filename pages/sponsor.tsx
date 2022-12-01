@@ -2,7 +2,6 @@ import Hero from "../components/Hero";
 import SponsorshipTier from "../components/SponsorshipTier";
 import { useTranslations } from "next-intl";
 import { ReactNode } from "react";
-import Image from "next/image";
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -34,27 +33,6 @@ export default function Sponsor() {
           description={t("description")}
           originals={false}
         />
-        <section className="current_sponsors">
-          <h2 className="sponsors_thanks" style={{ textAlign: "center" }}>Thanks to our sponsors</h2>
-          <h3 className="sponsors_tier">Silver</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.nephila.digital/it/" target="_blank" rel="noreferrer">
-              <Image width={400} height={100} src="/nephila_logo.png" alt="Nephila" />
-            </a>
-          </div>
-          <h3 className="sponsors_tier">Swag</h3>
-          <div className="sponsors_logo">
-            <a href="https://github.com/" target="_blank" rel="noreferrer">
-              <Image width={100} height={100} src="/github.png" alt="Github" />
-            </a>
-            <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
-              <Image width={110} height={110} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
-            </a>
-            <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
-              <Image width={100} height={100} src="/jb_beam.svg" alt="JetBrains" />
-            </a>
-          </div>
-        </section>
         <section className="sponsors_2022">
           <SponsorshipTier
             title={t("platinum")}

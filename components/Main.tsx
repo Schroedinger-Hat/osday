@@ -2,7 +2,6 @@ import { previousTalks, TTalkCard } from '../constants';
 import Hero from './Hero';
 import TalkCard from './TalkCard';
 import { useTranslations } from 'next-intl';
-import { t } from 'i18next';
 
 export default function Main() {
   const t = useTranslations('Main');

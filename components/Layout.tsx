@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Script from 'next/script';
 import Header from './Header';
+import SponsorTable from './SponsorTable';
 import Footer from './Footer';
 import { useRouter } from 'next/router';
 import { useEffect, useState } from 'react';
@@ -62,6 +63,10 @@ export default function Layout({
         };
     }, [router.events]);
 
+    const areSponsorVisible = () => {
+        return router.asPath === '/sponsor' || router.asPath === '/';
+    };
+
     return (
         <>
             <Head>
@@ -96,6 +101,7 @@ export default function Layout({
             <main>
                 <Header />
                 <section className='content'>{children}</section>
+                <SponsorTable isVisible={areSponsorVisible()}/>
             </main>
             <Footer />
             <CookieConsent
