@@ -1,10 +1,11 @@
-import Footer from '../components/Footer';
 import Main from '../components/Main';
+import SponsorTable from '../components/SponsorTable';
 
 export default function Home() {
   return (
     <>
       <Main />
+      <SponsorTable />
     </>
   );
 }
