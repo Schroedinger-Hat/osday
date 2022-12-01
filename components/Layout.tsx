@@ -64,12 +64,7 @@ export default function Layout({
     }, [router.events]);
 
     const areSponsorVisible = () => {
-        if (typeof window !== 'undefined' && !!window) {
-            const path = window.location.pathname;
-            const splittedPath = path.split('/');
-            return splittedPath[splittedPath.length - 1] === 'sponsor' || splittedPath.length === 2
-        }
-        return false;
+        return router.asPath === '/sponsor' || router.asPath === '/';
     };
 
     return (
