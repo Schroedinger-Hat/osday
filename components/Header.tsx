@@ -27,13 +27,13 @@ export default function Header() {
   useEffect(() => {
     setLanguageCode(document.documentElement.lang);
 
-    const handleScroll = () => setSticky(window.pageYOffset > 120);
+    const handleScroll = () => setSticky(window.pageYOffset > 60);
     window.addEventListener('scroll', handleScroll);
 
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [isSticky]);
 
   const handleIsOpen = () => {
     setOpen(!isOpen);
