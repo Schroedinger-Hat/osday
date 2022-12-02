@@ -113,7 +113,9 @@
   },
   "Main": {
     "heading": "Take a look at the first edition",
-    "email": "Send us an email"
+    "email": "Send us an email",
+    "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
+    "description_2": "Starring: The best companies and the best professionals in the sector in Open Source projects"
   },
   "Sponsor": {
     "title": "Open Source Day 2023",
@@ -159,9 +161,7 @@
     "where": "Florence, Italy",
     "when": "March 24th 2023",
     "length": "10h 20min",
-    "type": "Conference",
-    "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
-    "description_2": "The best companies and the best professionals in the sector in Open Source projects"
+    "type": "Conference"
   },
   "Footer": {
     "github_repo_1": "Open Source Day 2023 is an open source and",
@@ -170,6 +170,25 @@
     "github_issue_2": "open an issue on GitHub.",
     "rules": "Rules",
     "privacy_policy": "Privacy Policy",
-    "dei": "DEI"
+    "dei": "DEI",
+    "coc": "Code of conduct"
+  },
+  "CodeOfConduct": {
+    "title": "Open Source Day 2023",
+    "subtitle": "Code of conduct",
+    "where": "Firenze",
+    "when": "Coming soon",
+    "length": "24 Marzo 2023",
+    "type": "Code of conduct",
+    "shortVersion_title": "Short version",
+    "shortVersion_text": "Schrödinger Hat is dedicated to a harassment-free event for everyone.",
+    "longVersion_title": "Longer version",
+    "longVersion_text": "Schrödinger Hat is dedicated to providing a harassment-free event experience for everyone, regardless of gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion (or lack thereof), or technology choices. We do not tolerate harassment of event participants in any form. Sexual language and imagery is not appropriate for any event venue, including talks, workshops, parties, Twitter and other online media. Event participants violating these rules may be sanctioned or expelled from the event without a refund at the discretion of the Schrödinger Hat organisers.",
+    "completeVersion_title": "Full version",
+    "completeVersion_text": "Schrödinger Hat is dedicated to providing a harassment-free event experience for everyone. Harassment includes, but is not limited to: Offensive verbal comments related to gender, gender identity and expression, age, sexual orientation, disability, physical appearance, body size, race, ethnicity, religion, technology choices. Sexual language and images in public spaces. Deliberate intimidation, threats, stalking or following. Harassing photography or recording. Sustained disruption of talks or other events. Inappropriate physical contact. Unwelcome sexual attention. Advocating for, or encouraging, any of the above behaviour Sponsors, speakers, recruiters and organisers should not use sexualised images, activities, or other material. All staff and organisers related to the event (Schrödinger Hat organisers, venue staff and sponsor's staff - including volunteers) should not use sexualised clothing/uniforms/costumes, or otherwise create a sexualised environment. Schrödinger Hat organisers may also provide an additional code of conduct for the needs of individual communication channels or events.",
+    "enforcement_title": "Enforcement",
+    "enforcement_text": "Anyone asked to stop any harassing behavior are expected to comply immediately. If anyone engages in harassing behavior, the Schrödinger Hat organisers may take any action they deem appropriate, including warning the offender or expulsion from the event with no refund. This applies to all Schrödinger Hat events and associated communication channels. Everyone using Schrödinger Hat services or attending Schrödinger Hat events is subject to the anti-harassment policy; this includes attendees, sponsors, speakers, recruiters and organisers.",
+    "reporting_title": "Reporting",
+    "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: schrodinger.hat.show@gmail.com Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
   }
 }

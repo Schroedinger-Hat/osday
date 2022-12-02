@@ -44,15 +44,17 @@ export default function Footer() {
             </p>
           </div>
           <div className="footer-footer">
-            <p className="footer-footer-links">
+            <p className="left">
               <Link href={'/policies'}>{t('privacy_policy')}</Link>
               <span>|</span>
               <Link href={'/rules'}>{t('rules')}</Link>
               <span>|</span>
               <Link href={'/dei'}>{t('dei')}</Link>
+              <span>|</span>
+              <Link href={'/code-of-conduct'}>{t('coc')}</Link>
             </p>
-            <p>Made with ❤️ in Florence & Paris</p>
-            <p>©{(new Date()).getFullYear()} Schrödinger Hat</p>
+            <p className="center">Made with ❤️ in Florence & Paris</p>
+            <p className="right">©{(new Date()).getFullYear()} Schrödinger Hat</p>
           </div>
         </div>
       </footer>
