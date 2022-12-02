@@ -54,14 +54,7 @@ const Hero = ({
           <li>{props.date.length}</li>
           <li>{props.date.type}</li>
         </ul>
-      ) : (
-        <ul>
-          <li>{t('when')}</li>
-          <li>{t('where')}</li>
-          <li>{t('length')}</li>
-          <li>{t('type')}</li>
-        </ul>
-      )}
+      ) : null}
 
       {description ? (
         <p>{description}</p>
