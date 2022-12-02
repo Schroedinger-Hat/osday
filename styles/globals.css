@@ -338,16 +338,6 @@ div.image .img {
   border-radius: 5px 0 5px 0;
 }
 
-@media screen and (max-width: 992px) {
-  .title-box {
-    width: 100%;
-    top: auto;
-    left: auto;
-    padding: 10px;
-    margin-left: 0;
-  }
-}
-
 .sponsors_2022 {
   width: 100%;
   display: grid;
@@ -552,17 +542,23 @@ div.image .img {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  align-items: center;
+  flex-direction: row;
 }
 
 .footer-footer span {
   margin: 0 1rem;
 }
 
-.footer-footer-links {
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+.footer-footer p {
+  width: 33%;
+}
+
+.footer-footer .center {
+  text-align: center;
+}
+
+.footer-footer .right {
+  text-align: right;
 }
 
 .second-menu {
@@ -774,8 +770,6 @@ div.image .img {
   height: 32px;
 }
 
-
-
 .sticky .notifications-menu {
   position: relative;
   cursor: pointer;
@@ -804,8 +798,27 @@ div.image .img {
   margin: 5em 80px 5em 80px;
 }
 
+@media screen and (max-width: 992px) {
+  .title-box {
+    width: 100%;
+    top: auto;
+    left: auto;
+    padding: 10px;
+    margin-left: 0;
+  }
 
-
+  .footer-footer p {
+    width: 100%;
+  }
+  
+  .footer-footer .center {
+    text-align: left;
+  }
+  
+  .footer-footer .right {
+    text-align: left;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .sticky {
