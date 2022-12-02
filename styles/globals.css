@@ -1014,22 +1014,9 @@ div.image .img {
     padding-bottom: 2em;
   }
 
-  main {
-    height: auto;
-    background-image: linear-gradient(
-        90deg,
-        #171717 0% 25%,
-        #171717fa 35%,
-        #171717fa 40%,
-        #171717fa 45%,
-        #171717f5 50%,
-        #171717f5 55%,
-        #171717f5 60%,
-        #171717de 90%,
-        #171717de 95%,
-        #171717de 100%
-      ),
-      url('/bg.jpg');
+  .image-background {
+    background-size: auto;
+    background-repeat: no-repeat;
   }
 
   .title-box p {
