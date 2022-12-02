@@ -99,8 +99,10 @@ export default function Layout({
                 {locales.map((l, index) => <link key={index} rel="alternate" href={`https://${alternates[index]}`} hrefLang={`${l}-${l}`} />)}
             </Head>
             <main>
-                <Header />
-                <section className='content'>{children}</section>
+                <div className='image-background'>
+                    <Header />
+                    <section className='content'>{children}</section>
+                </div>
                 <SponsorTable isVisible={areSponsorVisible()}/>
             </main>
             <Footer />
