@@ -30,6 +30,7 @@ export default function Venue() {
             length: t('length'),
             type: t('type')
           }}
+          showTicketBtn={true}
           description={t('description')}
           originals={false}
         />
