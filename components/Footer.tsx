@@ -50,6 +50,8 @@ export default function Footer() {
               <Link href={'/rules'}>{t('rules')}</Link>
               <span>|</span>
               <Link href={'/dei'}>{t('dei')}</Link>
+              <span>|</span>
+              <Link href={'/code-of-conduct'}>{t('coc')}</Link>
             </p>
             <p>Made with ❤️ in Florence & Paris</p>
             <p>©{(new Date()).getFullYear()} Schrödinger Hat</p>

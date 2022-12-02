@@ -5,6 +5,7 @@ type THero = {
   title?: string;
   subtitle?: string;
   description?: string;
+  description_2?: string;
   date?: {
     where: string;
     when: string;
@@ -26,6 +27,7 @@ const Hero = ({
   title,
   subtitle,
   description,
+  description_2,
   originals = true,
   ...props
 }: THero) => {
@@ -64,10 +66,13 @@ const Hero = ({
         <p>{description}</p>
       ) : (
         <>
-          <p>{t('description_1')}</p>
-          <p>
-            <i>Starring</i>: {t('description_2')}
-          </p>
+        </>
+      )}
+
+      {description_2 ? (
+        <p>{description_2}</p>
+      ) : (
+        <>
         </>
       )}
 

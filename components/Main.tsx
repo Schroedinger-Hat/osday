@@ -9,6 +9,8 @@ export default function Main() {
   return (
     <div className="container">
       <Hero
+        description={t('description_1')}
+        description_2={t('description_2')}
         mainCta={{
           text: 'Call for Papers',
           link: 'https://sessionize.com/opensourceday23'

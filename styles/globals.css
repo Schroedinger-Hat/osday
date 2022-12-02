@@ -799,6 +799,11 @@ div.image .img {
   margin-right: 1em;
 }
 
+.codeconduct {
+  font-size: 1rem;
+  margin: 5em 80px 5em 80px;
+}
+
 
 
 
@@ -1085,5 +1090,10 @@ div.image .img {
     background: #171717;
     transition: background 350ms ease-in;
     height: 100px;
+  }
+
+  .codeconduct {
+    justify-content: center;
+    margin: 3em 0.5em 3em 0.5em;
   }
 }
