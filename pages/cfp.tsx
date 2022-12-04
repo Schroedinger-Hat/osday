@@ -24,12 +24,6 @@ export default function CFP() {
         <Hero
           title="Open Source Day 2023"
           subtitle="Call for papers"
-          date={{
-            where: t('where'),
-            when: t('when'),
-            length: t('lenght'),
-            type: 'CFP'
-          }}
           description={t('description')}
           originals={false}
           mainCta={{

@@ -238,6 +238,7 @@ div.image .img {
     #ed213a
   ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   border-color: transparent;
+  border-radius: 0.25em;
   color: #fff;
   cursor: pointer;
   justify-content: center;
@@ -841,6 +842,16 @@ div.image .img {
     position: relative;
     width: auto;
     transition: none;
+  }
+  
+  .cta-container {
+    display: flex;
+    flex-flow: column;
+    row-gap: 10px;
+  }
+
+  .cta-container .button {
+    margin: 0;
   }
 
   .nav ul {
