@@ -27,7 +27,7 @@ export default function Header() {
   useEffect(() => {
     setLanguageCode(document.documentElement.lang);
 
-    const handleScroll = () => setSticky(window.pageYOffset > 180);
+    const handleScroll = () => setSticky(window.pageYOffset > 20);
     window.addEventListener('scroll', handleScroll);
 
     return () => {

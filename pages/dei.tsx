@@ -43,6 +43,7 @@ export default function DEI() {
         <TextSection
           heading1={phrases.heading1}
           heading2={phrases.heading2}
+          text={'On our events we are going to guarantee these values, in-person and online environemnt.Our attendees should take care too of these values, if not we could speak to them and eventually take them out of the event.'}
         />
       </div>
     </>

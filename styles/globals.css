@@ -744,6 +744,9 @@ div.image .img {
   width: 100%;
 }
 
+.text-section-text {
+  max-width: 33%;
+}
 
 .sticky {
   position: fixed;
@@ -803,6 +806,11 @@ div.image .img {
 
 
 @media screen and (max-width: 768px) {
+
+  .text-section-text {
+    max-width: 100%;
+  }
+
   .sticky {
     position: relative;
     width: auto;
