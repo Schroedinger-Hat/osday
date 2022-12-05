@@ -25,7 +25,8 @@
     "notification": {
       "n1": "¡CFP ya está activo!",
       "n2": "La convocatoria para patrocinadores ya está abierta :D",
-      "n3": "Se ha creado el repositorio OSday :)"
+      "n3": "Se ha creado el repositorio OSday :)",
+      "n4": "Las entradas ya están disponibles"
     }
   },
   "InternalError": {
