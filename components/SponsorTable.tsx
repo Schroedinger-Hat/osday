@@ -14,7 +14,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                 <h3 className="sponsors_tier">Silver</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
-                    <Image width={400} height={100} src="/nephila_logo.png" alt="Nephila" />
+                    <Image width={300} height={100} src="/nephila_logo.svg" alt="Nephila" />
                     </a>
                 </div>
                 <h3 className="sponsors_tier">Media</h3>
