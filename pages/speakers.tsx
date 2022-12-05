@@ -41,12 +41,6 @@ export default function Speakers() {
         <Hero
           title={t('title')}
           subtitle={t('subtitle')}
-          date={{
-            where: t('where'),
-            when: t('when'),
-            length: t('length'),
-            type: t('type')
-          }}
           description={t('description')}
           originals={false}
         />

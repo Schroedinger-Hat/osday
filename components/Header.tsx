@@ -105,6 +105,7 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfp'}>
             {t('cfp_link')}
           </Link>
+          <a className='button' target='_blank' href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'} rel="noreferrer">Free Tickets</a>
           <div className="language-switcher">
             <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
             {languageSwitcherOpen === true ? (
@@ -161,6 +162,16 @@ export default function Header() {
         </li>
         <li>
           <Link href={'/cfp'}>{t('cfp_link')}</Link>
+        </li>
+        <li>
+          <a
+            className='button'
+            target='_blank'
+            href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'}
+            rel="noreferrer"
+          >
+            Free Tickets
+          </a>
         </li>
       </ul>
       <ul>

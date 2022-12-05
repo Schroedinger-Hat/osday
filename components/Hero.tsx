@@ -21,6 +21,7 @@ type THero = {
     text: string;
   };
   originals?: boolean;
+  showTicketBtn?: boolean;
 };
 
 const Hero = ({
@@ -53,14 +54,7 @@ const Hero = ({
           <li>{props.date.length}</li>
           <li>{props.date.type}</li>
         </ul>
-      ) : (
-        <ul>
-          <li>{t('when')}</li>
-          <li>{t('where')}</li>
-          <li>{t('length')}</li>
-          <li>{t('type')}</li>
-        </ul>
-      )}
+      ) : null}
 
       {description ? (
         <p>{description}</p>
@@ -78,26 +72,48 @@ const Hero = ({
 
       <br />
 
-      {props.mainCta ? (
-        <a
-          href={props.mainCta.link}
-          target="_blank"
-          className="button"
-          rel="noreferrer"
-        >
-          {props.mainCta.text}
-        </a>
-      ) : null}
-      {props.secondaryCta ? (
-        <a
-          href={props.secondaryCta.link}
-          target="_blank"
-          className="button"
-          rel="noreferrer"
-        >
-          {props.secondaryCta.text}
-        </a>
-      ) : null}
+      <div className='cta-container'>
+        {props.mainCta ? (
+          <>
+            <a
+              href={props.mainCta.link}
+              target="_blank"
+              className="button"
+              rel="noreferrer"
+            >
+              {props.mainCta.text}
+            </a>
+            <a
+              className='button'
+              target='_blank'
+              href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'}
+              rel="noreferrer"
+            >
+              Free Tickets
+            </a>
+            </>
+        ) : null}
+        {props.showTicketBtn && (
+          <a
+            className='button'
+            target='_blank'
+            href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'}
+            rel="noreferrer"
+          >
+            Free Tickets
+          </a>
+        )}
+        {props.secondaryCta ? (
+          <a
+            href={props.secondaryCta.link}
+            target="_blank"
+            className="button"
+            rel="noreferrer"
+          >
+            {props.secondaryCta.text}
+          </a>
+        ) : null}
+      </div>
     </div>
   );
 };

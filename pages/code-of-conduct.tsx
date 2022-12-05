@@ -22,12 +22,6 @@ export default function CodeOfConduct() {
             <Hero
               title={t('title')}
               subtitle={t('subtitle')}
-              date={{
-                where: t('where'),
-                when: t('when'),
-                length: t('length'),
-                type: t('type')
-              }}
             />
             <div className='codeconduct'>
               <h3>{t('shortVersion_title')}</h3>
