@@ -451,6 +451,36 @@ div.image .img {
   margin: 1em 1em;
 }
 
+@media screen and (max-width: 768px) {
+  .sponsortable {
+    padding-left: 10px;
+    padding-bottom: 2em;
+    margin: 0;
+  }
+
+  .sponsortable_rows tr {
+    display: flex;
+    flex-wrap: wrap;
+    border-bottom: 2px solid #a1a1a1;
+  }
+
+  .sponsortable_rows td:nth-child(1) {
+    flex: 1 1 100%;
+  }
+  .sponsortable_rows td {
+    padding: 0;
+  }
+
+  .sponsortable_tiers_card span {
+    display: flex;
+    background-color: #e50914;
+    width: 4em;
+    height: 4em;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
 .after_main {
   display: flex;
   flex-direction: column;
@@ -850,6 +880,7 @@ div.image .img {
   margin-right: 1em;
 }
 
+<<<<<<< HEAD
 .codeconduct {
   font-size: 1rem;
   margin: 5em 80px 5em 80px;
@@ -877,6 +908,8 @@ div.image .img {
   }
 }
 
+=======
+>>>>>>> 0c640fa (continued work on table)
 @media screen and (max-width: 768px) {
   .sticky {
     position: relative;
@@ -1158,9 +1191,12 @@ div.image .img {
     transition: background 350ms ease-in;
     height: 100px;
   }
+<<<<<<< HEAD
 
   .codeconduct {
     justify-content: center;
     margin: 3em 0.5em 3em 0.5em;
   }
+=======
+>>>>>>> 0c640fa (continued work on table)
 }
