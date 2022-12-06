@@ -22,6 +22,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.wearedevelopers.com/" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/WeAreDevelopers_logo.svg" alt="WeAreDevelopers" />
                     </a>
+                </div>
+                <h3 className="sponsors_tier">Community</h3>
+                <div className="sponsors_logo">
                     <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/grusp_logo.svg" alt="Grusp" />
                     </a>
@@ -30,9 +33,6 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     </a>
                     <a href="https://pisa.dev/" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/pisa-dev_logo.svg" alt="PisaDev" />
-                    </a>
-                    <a href="https://firenze.dev/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/firenze-dev_logo.svg" alt="Firenzedev" />
                     </a>
                 </div>
                 <h3 className="sponsors_tier">Swag</h3>
