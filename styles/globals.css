@@ -294,6 +294,7 @@ div.image .img {
   font-weight: bold;
   z-index: 1;
   margin: 5em 0 5em 80px;
+  padding-bottom: 1em;
 }
 
 .talks_container {
@@ -504,6 +505,11 @@ div.image .img {
 
 .after_main h3 {
   font-size: 1.5rem;
+  width: 50%;
+}
+
+.after_main .text-section-text {
+  font-size: 1.2rem;
   width: 50%;
 }
 
@@ -879,7 +885,6 @@ div.image .img {
   margin-right: 1em;
 }
 
-<<<<<<< HEAD
 .codeconduct {
   font-size: 1rem;
   margin: 5em 80px 5em 80px;
@@ -907,8 +912,6 @@ div.image .img {
   }
 }
 
-=======
->>>>>>> 0c640fa (continued work on table)
 @media screen and (max-width: 768px) {
   .sticky {
     position: relative;
@@ -1128,6 +1131,12 @@ div.image .img {
     font-size: 1.5em;
   }
 
+  .after_main .text-section-text {
+    font-size: 1.2rem;
+    width: 100%;
+    font-weight: normal;
+  }
+
   .sponsors_2022 {
     width: 100%;
     display: grid;
@@ -1188,12 +1197,9 @@ div.image .img {
     transition: background 350ms ease-in;
     height: 100px;
   }
-<<<<<<< HEAD
 
   .codeconduct {
     justify-content: center;
     margin: 3em 0.5em 3em 0.5em;
   }
-=======
->>>>>>> 0c640fa (continued work on table)
 }
