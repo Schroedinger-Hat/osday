@@ -9,6 +9,14 @@
     "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
     "description_2": "You can find all the community info on our website"
   },
+  "Cfv": {
+    "where": "Firenze",
+    "when": "Iniziata",
+    "lenght": "Chiude a Febbraio 2023",
+    "description": "Vorresti aiutarci a organizzare l'evento? Entriamo in contatto e conosciamoci!",
+    "maincta_text": "Inviaci una mail :)",
+    "description_1": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
+  },
   "Header": {
     "menu_label": "Menu button opens sidebar with links",
     "sh_alt": "Schrodingers Hat Community Logo - Join the open source community",
@@ -19,6 +27,7 @@
     "sponsor_link": "Sponsor",
     "speakers_Link": "Speakers",
     "cfp_link": "CFP",
+    "cfv_link": "CFV",
     "updates": "Notification",
     "erwin_alt": "Picture of Erwin Schrodinger",
     "edition": "Edition 2021",
