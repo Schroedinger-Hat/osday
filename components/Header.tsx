@@ -167,6 +167,9 @@ export default function Header() {
           <Link href={'/cfp'}>{t('cfp_link')}</Link>
         </li>
         <li>
+          <Link href={'/cfv'}>{t('cfv_link')}</Link>
+        </li>
+        <li>
           <a
             className='button'
             target='_blank'
