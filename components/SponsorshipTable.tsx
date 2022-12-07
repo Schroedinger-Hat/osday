@@ -69,6 +69,20 @@ export default function SponsorshipTable() {
   return (
     <>
       <div className="sponsortable">
+        <div className="sponsortable_tiers_mobile">
+            <div className="sponsortable_tiers_card">
+              <span className="">silver</span>
+            </div>
+            <div className="sponsortable_tiers_card">
+              <span className="">gold</span>
+            </div>
+            <div className="sponsortable_tiers_card">
+              <span className="">diamond</span>
+            </div>
+            <div className="sponsortable_tiers_card">
+              <span className="">platinum</span>
+            </div>
+        </div>
         <table>
           <thead className="sponsortable_tiers">
             <tr>
