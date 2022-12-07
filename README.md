@@ -50,7 +50,7 @@
 
 ## About The Project
 
-This is the repository of the site https://2023.osday.dev/ our second hybrid conference that will took place on Q1 of 2023. Enjoy :)
+This is the repository of the site https://2023.osday.dev/ our second hybrid conference to be held on March 24th 2023. Enjoy :)
 
 ### Tech stack
 
