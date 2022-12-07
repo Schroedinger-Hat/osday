@@ -10,12 +10,12 @@
     "description_2": "You can find all the community info on our website"
   },
   "Cfv": {
-    "where": "Firenze",
-    "when": "Iniziata",
-    "lenght": "Chiude a Febbraio 2023",
-    "description": "Vorresti aiutarci a organizzare l'evento? Entriamo in contatto e conosciamoci!",
-    "maincta_text": "Inviaci una mail :)",
-    "description_1": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
+    "where": "Florence",
+    "when": "Started",
+    "lenght": "Closes in Jan 2023",
+    "description": "Would you like to help us organize the event? Let's get in touch and get to know each other!",
+    "maincta_text": "Send us a mail :)",
+    "description_1": "You can find all the information about the community on our website"
   },
   "Header": {
     "menu_label": "Menu button opens sidebar with links",
