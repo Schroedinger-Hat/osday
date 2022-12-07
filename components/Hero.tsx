@@ -93,7 +93,7 @@ const Hero = ({
             </a>
             </>
         ) : null}
-        {props.showTicketBtn && (
+        {props.showTicketBtn ? (
           <a
             className='button'
             target='_blank'
@@ -102,7 +102,7 @@ const Hero = ({
           >
             Free Tickets
           </a>
-        )}
+        ) : null}
         {props.secondaryCta ? (
           <a
             href={props.secondaryCta.link}
