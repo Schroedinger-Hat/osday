@@ -37,7 +37,7 @@ const Hero = ({
     <div className="title-box">
       {title ? (
         <h1>
-          {title} {originals ? <span>Originals</span> : null}
+          {title} {originals && <span>Originals</span>}
         </h1>
       ) : (
         <h1>
@@ -47,33 +47,27 @@ const Hero = ({
 
       {subtitle ? <h2>{subtitle}</h2> : <h2>Open Source Day 2023</h2>}
 
-      {props.date ? (
+      {props.date && (
         <ul>
           <li>{props.date.when}</li>
           <li>{props.date.where}</li>
           <li>{props.date.length}</li>
           <li>{props.date.type}</li>
         </ul>
-      ) : null}
-
-      {description ? (
-        <p>{description}</p>
-      ) : (
-        <>
-        </>
       )}
 
-      {description_2 ? (
+      {description && (
+        <p>{description}</p>
+      )}
+
+      {description_2 && (
         <p>{description_2}</p>
-      ) : (
-        <>
-        </>
       )}
 
       <br />
 
       <div className='cta-container'>
-        {props.mainCta ? (
+        {props.mainCta && (
           <>
             <a
               href={props.mainCta.link}
@@ -84,8 +78,8 @@ const Hero = ({
               {props.mainCta.text}
             </a>
             </>
-        ) : null}
-        {props.showTicketBtn ? (
+        )}
+        {props.showTicketBtn && (
           <a
             className='button'
             target='_blank'
@@ -94,8 +88,8 @@ const Hero = ({
           >
             Free Tickets
           </a>
-        ) : null}
-        {props.secondaryCta ? (
+        )}
+        {props.secondaryCta && (
           <a
             href={props.secondaryCta.link}
             target="_blank"
@@ -104,7 +98,7 @@ const Hero = ({
           >
             {props.secondaryCta.text}
           </a>
-        ) : null}
+        )}
       </div>
     </div>
   );
