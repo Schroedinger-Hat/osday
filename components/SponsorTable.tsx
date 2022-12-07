@@ -34,6 +34,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://pisa.dev/" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/pisa-dev_logo.svg" alt="PisaDev" />
                     </a>
+                    <a href="https://firenze.dev/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/firenze-dev_logo.svg" alt="Firenzedev" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Swag</h3>
                 <div className="sponsors_logo">
