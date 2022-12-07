@@ -34,6 +34,7 @@ export default function CFP() {
             text: t('secondarycta_text'),
             link: 'mailto:osday@schrodinger-hat.it'
           }}
+          showTicketBtn
         />
 
         <section className="after_main">
