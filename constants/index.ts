@@ -40,7 +40,7 @@ export const previousTalks: TTalkCard[] = [
   },
   {
     id: 'augmentedreality2021',
-    description: '3D e Argumented Reality with google model-viewer',
+    description: '3D e Augmented Reality with google model-viewer',
     link: 'https://www.youtube.com/watch?v=8z6CRK61JLA&t=10020s',
     picture: ''
   },
