@@ -16,7 +16,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   };
 }
 
-export default function CFP() {
+export default function CFV() {
   const t = useTranslations('Cfv');
   return (
     <>
