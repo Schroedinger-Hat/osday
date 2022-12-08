@@ -9,6 +9,14 @@
     "description_1": "Siga leyendo si quiere saber más sobre los temas de mayor interés para los asistentes a nuestra comunidad",
     "description_2": "Puede encontrar toda la información comunitaria en nuestro sitio web"
   },
+  "Cfv": {
+    "where": "Florencia",
+    "when": "Started",
+    "lenght": "Closes in Jan 2023",
+    "description": "¿Te gustaría ayudarnos a organizar el evento? Pongámonos en contacto y conozcámonos!",
+    "maincta_text": "Envíanos un correo :)",
+    "description_1": "Puedes encontrar toda la información sobre la comunidad en nuestra web"
+  },
   "Header": {
     "menu_label": "El botón del menú abre la barra lateral con enlaces",
     "sh_alt": "Logotipo de la Comunidad del Sombrero de Schrodingers - Únase a la comunidad de código abierto",
@@ -19,6 +27,7 @@
     "sponsor_link": "Sponsor",
     "speakers_Link": "Speakers",
     "cfp_link": "CFP",
+    "cfv_link": "CFV",
     "updates": "Notificación",
     "erwin_alt": "Imagen de Erwin Schrodinger",
     "edition": "Edición 2021",
