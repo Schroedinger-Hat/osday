@@ -1,4 +1,3 @@
-import CfpCard from '../components/CfvCard';
 import Hero from '../components/Hero';
 import { cfpTypes } from '../constants';
 import { useTranslations } from 'next-intl';
