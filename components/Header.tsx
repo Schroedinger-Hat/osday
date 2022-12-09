@@ -23,11 +23,10 @@ export default function Header() {
     'es': '🇪🇸'
   };
 
-
   useEffect(() => {
     setLanguageCode(document.documentElement.lang);
 
-    const handleScroll = () => setSticky(window.pageYOffset > 60);
+    const handleScroll = () => setSticky(window.scrollY > 60 || isSticky && window.scrollY > 0);
     window.addEventListener('scroll', handleScroll);
 
     return () => {

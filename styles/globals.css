@@ -8,7 +8,7 @@ body {
   font-weight: normal;
   padding: 0;
   margin: 0;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .bg-primary {
@@ -86,6 +86,9 @@ button {
 }
 
 .nav {
+  position: sticky;
+  z-index: 10;
+  top: 0;
   left: 1em;
   display: flex;
   width: 98%;
@@ -759,10 +762,6 @@ div.image .img {
 
 
 .sticky {
-  position: fixed;
-  left: 0;
-  top: 0;
-  z-index: 10;
   width: 100%;
   background: #171717;
   transition: all 250ms cubic-bezier(0.4, 0, 1, 1);
@@ -838,12 +837,6 @@ div.image .img {
 }
 
 @media screen and (max-width: 768px) {
-  .sticky {
-    position: relative;
-    width: auto;
-    transition: none;
-  }
-  
   .cta-container {
     display: flex;
     flex-flow: column;
@@ -1109,9 +1102,7 @@ div.image .img {
   }
 
   .sticky {
-    position: fixed;
     left: 0;
-    top: 0;
     z-index: 10;
     width: 100%;
     background: #171717;
