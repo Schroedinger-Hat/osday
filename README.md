@@ -101,7 +101,7 @@ Project Link: [https://github.com/Schrodinger-Hat/osday-2023](https://github.com
 [contributors-url]: https://github.com/Schrodinger-Hat/osday-2023/graphs/contributors
 [forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
 [forks-url]: https://github.com/Schrodinger-Hat/osday-2023/network/members
-[stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/Best-README-Template.svg?style=for-the-badge
+[stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/osday-2023?style=for-the-badge
 [stars-url]: https://github.com/Schrodinger-Hat/osday-2023/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
 [issues-url]: https://github.com/Schrodinger-Hat/osday-2023/issues
