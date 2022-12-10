@@ -17,16 +17,17 @@ const TicketCounter = () => {
                 "Authorization": "Bearer " + process.env.NEXT_PUBLIC_EVENTBRITE_AUTH_TOKEN
             }
         });
-        console.log(res);
-        const data = await res.json();
-        const tickets: TEventbrite[] = data.ticket_classes;
+        if (res.status === 200) {
+            const data = await res.json();
+            const tickets: TEventbrite[] = data.ticket_classes;
 
-        setInPersonTicketAvailability(() => {
-            return getTicketAvailability(tickets, 0);
-        });
-        setOnlineTicketAvailability(() => {
-            return getTicketAvailability(tickets, 1)
-        });
+            setInPersonTicketAvailability(() => {
+                return getTicketAvailability(tickets, 0);
+            });
+            setOnlineTicketAvailability(() => {
+                return getTicketAvailability(tickets, 1)
+            });
+        }
     }
 
     function getTicketAvailability(tickets: TEventbrite[], index: number) : number {

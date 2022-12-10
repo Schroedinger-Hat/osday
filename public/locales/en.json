@@ -207,7 +207,7 @@
   },
   "TicketCounter": {
     "title": "Ticket availability:",
-    "in_person": "En persona:",
+    "in_person": "In person:",
     "online": "Online:"
   }
 }
