@@ -13,7 +13,7 @@ export default function Footer() {
             <a href="https://www.facebook.com/schrodingerhat" target="_blank" rel="noreferrer" title="Facebook">
               <Image width={30} height={30} src="/icons/facebook.svg" alt="Facebook" />
             </a>
-            <a href="https://twitter.com/OSDayDev" target="_blank" rel="noreferrer" title="Twitter">
+            <a href="https://twitter.com/schrodinger_hat" target="_blank" rel="noreferrer" title="Twitter">
               <Image width={30} height={30} src="/icons/twitter.svg" alt="Twitter" />
             </a>
             <a href="https://discord.com/invite/RTXr8A3eFn" target="_blank" rel="noreferrer" title="Discord">
