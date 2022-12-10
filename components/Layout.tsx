@@ -102,8 +102,8 @@ export default function Layout({
                 <div className='image-background'>
                     <Header />
                     <section className='content'>{children}</section>
+                    <SponsorTable isVisible={areSponsorVisible()}/>
                 </div>
-                <SponsorTable isVisible={areSponsorVisible()}/>
             </main>
             <Footer />
             <CookieConsent
