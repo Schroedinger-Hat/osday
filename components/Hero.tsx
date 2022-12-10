@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
+import TicketCounter from './TicketCounter';
 
 type THero = {
   title?: string;
@@ -22,6 +23,7 @@ type THero = {
   };
   originals?: boolean;
   showTicketBtn?: boolean;
+  showTicketAvailability?: boolean;
 };
 
 const Hero = ({
@@ -99,6 +101,14 @@ const Hero = ({
             {props.secondaryCta.text}
           </a>
         )}
+      </div>
+
+      <br />
+
+      <div className='cta-container'>
+          {props.showTicketAvailability && (
+            <TicketCounter />
+          )}
       </div>
     </div>
   );

@@ -19,7 +19,7 @@ export default function Main() {
           text: t('email'),
           link: 'mailto:osday@schrodinger-hat.it'
         }}
-        showTicketBtn
+        showTicketAvailability
       />
       <section className="talks_2021">
         <h2>{t('heading')}</h2>

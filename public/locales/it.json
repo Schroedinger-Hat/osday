@@ -204,5 +204,10 @@
     "enforcement_text": "A chiunque venga chiesto di interrompere qualsiasi comportamento molesto è tenuto a conformarsi immediatamente. Se qualcuno si atteggia in comportamenti molesti, gli organizzatori di Schrödinger Hat possono intraprendere qualsiasi azione ritengano appropriata, compreso l'avvertimento del trasgressore o l'espulsione dall'evento senza rimborso. Tutti coloro che utilizzano i servizi Schrödinger Hat o partecipano a eventi Schrödinger Hat sono soggetti alla politica anti-molestie; questo include partecipanti, sponsor, relatori, reclutatori e organizzatori.",
     "reporting_title": "Segnalazione",
     "reporting_text": "Se vieni molestato, se noti che qualcun altro è molestato o hai altre preoccupazioni, contatta immediatamente un membro del personale di Schrödinger Hat. Puoi fare una segnalazione personale tramite: Servizio di messaggistica diretta di Twitter: @schrodinger_hat. Email: schrodinger.hat.show@gmail.com Telefono (i numeri dell'organizzatore sono condivisi all'inizio dell'evento e tracciati durante l'evento). Rivolgiti a un organizzatore che assicurerà che la conversazione si svolga in privato. Non ti verrà chiesto di confrontarti con nessuno e non diremo a nessuno chi sei. Ci identificheremo all'inizio di ogni evento. Lo staff di Schrödinger Hat sarà lieto di aiutare i partecipanti a contattare la sicurezza della sede (se disponibile) o le forze dell'ordine locali, fornire assistenti o aiutare in altro modo coloro che sono molestati a sentirsi al sicuro per la durata dell'evento . Apprezziamo la tua presenza. Ci aspettiamo che tutti seguano queste regole in tutti gli eventi organizzati da Schrödinger Hat (meetup, workshop, altri eventi ed eventi sociali post meetup)."
+  },
+  "TicketCounter": {
+    "title": "Disponibilità biglietti:",
+    "in_person": "In presenza:",
+    "online": "Online:"
   }
 }
