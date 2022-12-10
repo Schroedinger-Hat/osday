@@ -38,7 +38,7 @@ export default function Venue() {
                 <a href="https://www.linkedin.com/company/schrodinger-hat/">{children}</a>
               ),
               twitter: (children: ReactNode) => (
-                <a href="https://twitter.com/OSDayDev">{children}</a>
+                <a href="https://twitter.com/schrodinger_hat">{children}</a>
               ),
             })}
           </h2>
