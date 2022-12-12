@@ -356,12 +356,7 @@ div.image .img {
 }
 
 .sponsors_2022 {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  font-size: 1rem;
-  font-weight: bold;
-  place-items: center;
+  display: none;
 }
 
 .current_sponsors {
@@ -393,10 +388,12 @@ div.image .img {
   font-size: 1rem;
   font-weight: bold;
   z-index: 1;
-  padding-bottom: 2em;
+  padding: 4em 0;
+  margin: 2em 0 2em 80px;
 }
 
 .sponsortable table {
+  width: 75%;
   border-collapse: collapse;
   padding: 20px;
 }
@@ -417,17 +414,32 @@ div.image .img {
   text-align: left;
 }
 
+.sponsortable_rows td span {
+  opacity: .5;
+}
+
+.sponsortable_rows td .confirmed_tier {
+  color: #ed213a;
+  opacity: 1;
+}
+
 .sponsortable_tiers_mobile {
   display: none;
 }
 
 .sponsortable_tiers_card span {
   display: flex;
-  background-color: #e50914;
-  width: 8em;
+  background: #ed213a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291e, #ed213a);  width: 8em;
   height: 8em;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
 }
 
 .card_sponsor {
@@ -461,9 +473,14 @@ div.image .img {
 
 @media screen and (max-width: 768px) {
   .sponsortable {
+    padding: 0;
     padding-left: 10px;
     padding-bottom: 2em;
     margin: 0;
+  }
+
+  .sponsortable_onlyDesktop {
+    display: none;
   }
 
   .sponsortable table {
@@ -823,37 +840,25 @@ div.image .img {
 }
 
 .community {
-  background-image: linear-gradient(
-    225deg,
-    hsl(288deg 86% 50%) 0%,
-    hsl(284deg 77% 54%) 11%,
-    hsl(279deg 68% 55%) 22%,
-    hsl(274deg 59% 55%) 33%,
-    hsl(267deg 51% 55%) 44%,
-    hsl(258deg 44% 55%) 56%,
-    hsl(246deg 37% 54%) 67%,
-    hsl(230deg 35% 50%) 78%,
-    hsl(216deg 45% 44%) 89%,
-    hsl(204deg 67% 36%) 100%
-  );
-  color: #171717;
+  background: #ed213a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291e, #ed213a);
+  color: #fff;
 }
 
 .media {
-  background-image: linear-gradient(
-    225deg,
-    hsl(124deg 86% 50%) 0%,
-    hsl(123deg 72% 57%) 11%,
-    hsl(126deg 59% 59%) 22%,
-    hsl(134deg 47% 59%) 33%,
-    hsl(148deg 36% 58%) 44%,
-    hsl(171deg 27% 56%) 56%,
-    hsl(199deg 34% 58%) 67%,
-    hsl(215deg 47% 61%) 78%,
-    hsl(223deg 64% 63%) 89%,
-    hsl(227deg 83% 65%) 100%
-  );
-  color: #171717;
+  background: #ed213a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291e, #ed213a);
+  color: #fff;
 }
 
 .sponsorship_footer {
@@ -1172,11 +1177,12 @@ div.image .img {
     font-size: 1rem;
     font-weight: bold;
     place-items: center;
+    margin-top: 4em;
   }
 
   .card_sponsor {
     width: 90%;
-    height: 30em;
+    height: 18em;
     padding: 2em;
   }
 
