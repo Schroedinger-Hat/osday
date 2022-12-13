@@ -29,10 +29,10 @@ const premiums: TPremiums[] = [
     has: {
       community: true,
       brand: true,
-      silver: false,
+      silver: true,
       gold: true,
       diamond: true,
-      platinum: false
+      platinum: true
     }
   },
   {
@@ -43,7 +43,7 @@ const premiums: TPremiums[] = [
       brand: true,
       silver: true,
       gold: true,
-      diamond: false,
+      diamond: true,
       platinum: true
     }
   },
@@ -53,8 +53,8 @@ const premiums: TPremiums[] = [
     has: {
       community: true,
       brand: true,
-      silver: false,
-      gold: false,
+      silver: true,
+      gold: true,
       diamond: true,
       platinum: true
     }
