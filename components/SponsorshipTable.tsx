@@ -92,7 +92,7 @@ const premiums: TPremiums[] = [
       silver: false,
       gold: false,
       diamond: true,
-      platinum: false
+      platinum: true
     }
   },
   {
