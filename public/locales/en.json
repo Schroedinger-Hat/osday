@@ -137,6 +137,7 @@
     "length": "3 months",
     "type": "Call for sponsors",
     "description": "We are looking for companies that believe in our project, and want to sponsor us. Are you interested ? Send us an email! :)",
+    "maincta_text": "Get in touch with us!",
     "platinum": "Platinum Tier",
     "diamond": "Diamond Tier",
     "gold": "Gold Tier",
@@ -154,6 +155,7 @@
     "community_offer": "Logo on our website, Thanks post.",
     "media_offer": "Logo on our website, Logo on our branded materials, Logo on social post, Thanks post",
     "send_email": "Send us an <email>email</email>",
+    "send_email_sm": "<email>email us</email>",
     "heading_sponsor": "We are currently involved in Open Source as a collective, as such we are using <link>Open Collective</link> to gather all the resources that will be needed to organise this event and future ones. Open Collective enables our community and partners to always check how our finances are dealt with in a public knowledge fashion. Want to know more? Send an <email>email</email>!"
   },
   "Venue": {

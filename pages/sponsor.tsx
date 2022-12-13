@@ -26,6 +26,11 @@ export default function Sponsor() {
           subtitle={t('subtitle')}
           description={t('description')}
           originals={false}
+          mainCta={{
+            text: t('maincta_text'),
+            link: 'https://sessionize.com/opensourceday23'
+          }}
+          showTicketBtn
         />
 
         <SponsorshipTable />
