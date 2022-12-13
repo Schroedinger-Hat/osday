@@ -12,21 +12,19 @@ const TicketCounter = () => {
     const [onlineTicketAvailability, setOnlineTicketAvailability] = useState<number>();
 
     const ticketClasses = async () => {
-        const res = await fetch('https://www.eventbriteapi.com/v3/events/441134303577/ticket_classes/', {
-            headers: {
-                "Authorization": "Bearer " + process.env.NEXT_PUBLIC_EVENTBRITE_AUTH_TOKEN
-            }
-        });
+        const res = await fetch('api/eventbrite');
         if (res.status === 200) {
             const data = await res.json();
             const tickets: TEventbrite[] = data.ticket_classes;
-
-            setInPersonTicketAvailability(() => {
-                return getTicketAvailability(tickets, 0);
-            });
-            setOnlineTicketAvailability(() => {
-                return getTicketAvailability(tickets, 1)
-            });
+            console.log(tickets)
+            if (tickets && tickets.length > 0) {
+                setInPersonTicketAvailability(() => {
+                    return getTicketAvailability(tickets, 0);
+                });
+                setOnlineTicketAvailability(() => {
+                    return getTicketAvailability(tickets, 1)
+                });
+            }
         }
     }
 
