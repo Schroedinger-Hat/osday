@@ -153,16 +153,28 @@ export default function SponsorshipTable() {
       <div className="sponsortable">
         <div className="sponsortable_tiers_mobile">
           <div className="sponsortable_tiers_card">
-            <span className="">Silver <br />&euro; 500 </span>
+            <span className="">
+              Silver <br />
+              &euro; 500{' '}
+            </span>
           </div>
           <div className="sponsortable_tiers_card">
-            <span className="">Gold <br />&euro; 1000 </span>
+            <span className="">
+              Gold <br />
+              &euro; 1000{' '}
+            </span>
           </div>
           <div className="sponsortable_tiers_card">
-            <span className="">Diamond <br />&euro; 1500 </span>
+            <span className="">
+              Diamond <br />
+              &euro; 1500{' '}
+            </span>
           </div>
           <div className="sponsortable_tiers_card">
-            <span className="">Platinum <br />&euro; 3000 </span>
+            <span className="">
+              Platinum <br />
+              &euro; 3000{' '}
+            </span>
           </div>
         </div>
         <table>
@@ -241,14 +253,70 @@ export default function SponsorshipTable() {
             })}
           </tbody>
           <tfoot>
-            <tr className='sponsortable_footer'>
+            <tr className="sponsortable_footer">
               <td></td>
-              <td><i>email us</i></td>
-              <td><i>email us</i></td>
-              <td>&euro; 500</td>
-              <td>&euro; 1000</td>
-              <td>&euro; 1500</td>
-              <td>&euro; 3000</td>
+              <td>
+                <i>
+                  {t.rich('send_email_sm', {
+                    email: (children: ReactNode) => (
+                      <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                        <u>{children}</u>
+                      </a>
+                    )
+                  })}
+                </i>
+              </td>
+              <td>
+                <i>
+                  {t.rich('send_email_sm', {
+                    email: (children: ReactNode) => (
+                      <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                        <u>{children}</u>
+                      </a>
+                    )
+                  })}
+                </i>
+              </td>
+              <td>
+                &euro; 500 <br />
+                {t.rich('send_email_sm', {
+                  email: (children: ReactNode) => (
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                      <u>{children}</u>
+                    </a>
+                  )
+                })}
+              </td>
+              <td>
+                &euro; 1000 <br />
+                {t.rich('send_email_sm', {
+                  email: (children: ReactNode) => (
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                      <u>{children}</u>
+                    </a>
+                  )
+                })}
+              </td>
+              <td>
+                &euro; 1500 <br />
+                {t.rich('send_email_sm', {
+                  email: (children: ReactNode) => (
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                      <u>{children}</u>
+                    </a>
+                  )
+                })}
+              </td>
+              <td>
+                &euro; 3000 <br />
+                {t.rich('send_email_sm', {
+                  email: (children: ReactNode) => (
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                      <u>{children}</u>
+                    </a>
+                  )
+                })}
+              </td>
             </tr>
           </tfoot>
         </table>
