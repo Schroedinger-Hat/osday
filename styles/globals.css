@@ -548,6 +548,10 @@ div.image .img {
     justify-content: center;
     align-items: center;
   }
+
+  .sponsor_heading {
+    padding: 20px;
+  }
 }
 
 .after_main {

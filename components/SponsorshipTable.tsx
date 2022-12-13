@@ -347,6 +347,9 @@ export default function SponsorshipTable() {
             })}
           />
         </section>
+
+        <h4 className="sponsor_heading">{t('sponsor_deadline')}</h4>
+
       </div>
     </>
   );

@@ -34,6 +34,7 @@ export default function Sponsor() {
         />
 
         <SponsorshipTable />
+
       </div>
     </>
   );
