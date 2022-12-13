@@ -392,6 +392,22 @@ div.image .img {
   margin: 2em 0 2em 80px;
 }
 
+.sponsortable_footer {
+  background: #ed213a; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #93291e,
+    #ed213a
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #93291e, #ed213a);  width: 8em;
+  align-items: center;
+  text-align: center;
+}
+
+.sponsortable_footer td {
+  padding: 2em 0;
+}
+
 .sponsortable table {
   width: 75%;
   border-collapse: collapse;
@@ -480,6 +496,10 @@ div.image .img {
   }
 
   .sponsortable_onlyDesktop {
+    display: none;
+  }
+
+  .sponsortable_footer {
     display: none;
   }
 

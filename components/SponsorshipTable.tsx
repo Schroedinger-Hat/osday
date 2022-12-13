@@ -153,16 +153,16 @@ export default function SponsorshipTable() {
       <div className="sponsortable">
         <div className="sponsortable_tiers_mobile">
           <div className="sponsortable_tiers_card">
-            <span className="">silver</span>
+            <span className="">Silver <br />&euro; 500 </span>
           </div>
           <div className="sponsortable_tiers_card">
-            <span className="">gold</span>
+            <span className="">Gold <br />&euro; 1000 </span>
           </div>
           <div className="sponsortable_tiers_card">
-            <span className="">diamond</span>
+            <span className="">Diamond <br />&euro; 1500 </span>
           </div>
           <div className="sponsortable_tiers_card">
-            <span className="">platinum</span>
+            <span className="">Platinum <br />&euro; 3000 </span>
           </div>
         </div>
         <table>
@@ -240,6 +240,17 @@ export default function SponsorshipTable() {
               );
             })}
           </tbody>
+          <tfoot>
+            <tr className='sponsortable_footer'>
+              <td></td>
+              <td><i>email us</i></td>
+              <td><i>email us</i></td>
+              <td>&euro; 500</td>
+              <td>&euro; 1000</td>
+              <td>&euro; 1500</td>
+              <td>&euro; 3000</td>
+            </tr>
+          </tfoot>
         </table>
 
         <section className="sponsors_2022">
