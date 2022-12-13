@@ -205,5 +205,10 @@
     "enforcement_text": "Anyone asked to stop any harassing behavior are expected to comply immediately. If anyone engages in harassing behavior, the Schrödinger Hat organisers may take any action they deem appropriate, including warning the offender or expulsion from the event with no refund. This applies to all Schrödinger Hat events and associated communication channels. Everyone using Schrödinger Hat services or attending Schrödinger Hat events is subject to the anti-harassment policy; this includes attendees, sponsors, speakers, recruiters and organisers.",
     "reporting_title": "Reporting",
     "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: schrodinger.hat.show@gmail.com Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
+  },
+  "TicketCounter": {
+    "title": "Disponibilidad de entradas:",
+    "in_person": "En persona:",
+    "online": "Online:"
   }
 }
