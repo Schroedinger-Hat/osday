@@ -549,6 +549,11 @@ div.image .img {
     align-items: center;
   }
 
+  .sponsortable_rows td .confirmed_tier {
+    color: #ed213a;
+    opacity: 1;
+  }
+
   .sponsor_heading {
     padding: 20px;
   }
