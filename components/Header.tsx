@@ -107,6 +107,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
           </Link>
+          <Link onClick={closeSideBar} href={'/edition2021'}>
+            {t('edition')}
+          </Link>
           <a className='button' target='_blank' href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'} rel="noreferrer">Free Tickets</a>
           <div className="language-switcher">
             <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
@@ -181,13 +184,7 @@ export default function Header() {
       </ul>
       <ul>
         <li>
-          <a
-            href="https://www.youtube.com/watch?v=8z6CRK61JLA&t=1s"
-            target="_blank"
-            rel="noreferrer"
-          >
-            {t('edition')}
-          </a>
+          <Link href={'/edition2021'}>{t('edition')}</Link>
         </li>
         <li>
           <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />

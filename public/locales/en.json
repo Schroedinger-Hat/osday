@@ -65,6 +65,10 @@
     "type": "About",
     "description": "The Open Source Day is at its second edition in Florence, Italy! This year we decided to go even bigger! In this edition we are going to have a full day, plus the after party, full of people passionate about the open source environment: maintainers, junior dev, senior dev, engineer manager, full stack, and so on will attend the event. Feel free to have a chat with the speakers and the sponsors."
   },
+  "2021": {
+    "subtitle": "Open Source Day 2021",
+    "watch": "Look now at last year's talks!"
+  },
   "Agenda": {
     "title": "Open Source Day 2023",
     "subtitle": "Agenda",
@@ -124,7 +128,6 @@
     "event": "On the day of the event, come a little earlier so that we can set you up and try your talk!"
   },
   "Main": {
-    "heading": "Take a look at the first edition",
     "email": "Send us an email",
     "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything.",
     "description_2": "Starring: The best companies and the best professionals in the sector in Open Source projects"
