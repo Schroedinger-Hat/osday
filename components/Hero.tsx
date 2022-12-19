@@ -24,6 +24,7 @@ type THero = {
   originals?: boolean;
   showTicketBtn?: boolean;
   showTicketAvailability?: boolean;
+  showViewOnMap?: boolean;
 };
 
 const Hero = ({
@@ -99,6 +100,16 @@ const Hero = ({
             rel="noreferrer"
           >
             {props.secondaryCta.text}
+          </a>
+        )}
+        {props.showViewOnMap && (
+          <a
+            className='button'
+            target='_blank'
+            href='https://goo.gl/maps/6b6ULhE4aGFyzPkp6'
+            rel='noreferrer'
+          >
+            View on Map
           </a>
         )}
       </div>

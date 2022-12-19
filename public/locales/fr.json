@@ -166,12 +166,13 @@
   "Venue": {
     "title": "Open Source Day 2023",
     "subtitle": "Nous avons un lieu magnifique",
-    "where": "Bientôt disponible",
-    "when": "24 Mars 2023",
-    "length": "Florence, Italie",
-    "type": "Venue",
     "description": "Restez en contact via nos canaux (Discord, LinkedIn ou Twitter) pour savoir quel Venue nous accueillera pour cet événement :)",
-    "heading": "Vous voulez en savoir plus sur le lieu de cet événement :). Tenez-vous au courant sur <linkedin>LinkedIn</linkedin>, <twitter>Twitter</twitter> ou mieux encore, <discord>Discord</discord> !"
+    "heading": "ARRIVÉE SUR LE LIEU DE L'ÉVÉNEMENT",
+    "train_infos": "De la gare centrale de Firenze SMN, vous pouvez rejoindre le lieu à pied (15min.), ou prendre un bus (lignes C4/6 arrêt : Soderini Torrino Santa Rosa).",
+    "plane_infos_1": "De l'aéroport de Florence : prendre le tramway, ligne T2, arrêt : Alamanni - Stazione Santa Maria Novella",
+    "plane_infos_2": "De l'aéroport de Pise : prendre le PisaMover pour la gare, puis prendre un <link_train>train</link_train> pour Firenze Santa Maria Novella (1h)",
+    "plane_infos_3": "Depuis l'aéroport de Bologne, vous pouvez choisir de rejoindre Florence en <link_bus>bus</link_bus>(1h30) ou en <link_train>train</link_train> (30min. avec Frecciarossa ou 1h avec le train régional)",
+    "car_infos": "Voici une liste de <link>parking payant</link>. Les plus proches du lieu de réunion sont : Porta al Prato - Leopolda, Stazione S.M.N et S. Lorenzo - Mercato Centrale"
   },
   "SponsorshipTier": {
     "know_more": "En savoir plus"

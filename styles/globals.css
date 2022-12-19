@@ -952,6 +952,20 @@ div.image .img {
   margin: 5em 80px 5em 80px;
 }
 
+.arrival {
+  margin-bottom: 20px;
+  display: flex;
+}
+
+.arrival .icon {
+  margin-top: 20px;
+}
+
+.arrival .infos {
+  margin-left: 20px;
+  width: 50%;
+}
+
 @media screen and (max-width: 992px) {
   .title-box {
     width: 100%;
@@ -971,6 +985,10 @@ div.image .img {
 
   .footer-footer .right {
     text-align: left;
+  }
+
+  .arrival .infos {
+    width: 100%;
   }
 }
 
