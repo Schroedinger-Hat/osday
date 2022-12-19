@@ -1,6 +1,5 @@
 import { previousTalks, TTalkCard } from '../constants';
 import Hero from './Hero';
-import TalkCard from './TalkCard';
 import { useTranslations } from 'next-intl';
 
 export default function Main() {
@@ -21,14 +20,6 @@ export default function Main() {
         }}
         showTicketAvailability
       />
-      <section className="talks_2021">
-        <h2>{t('heading')}</h2>
-        <div className="talks_container">
-          {previousTalks.map((talk: TTalkCard) => {
-            return <TalkCard key={talk.id} {...talk} />;
-          })}
-        </div>
-      </section>
     </div>
   );
 }
