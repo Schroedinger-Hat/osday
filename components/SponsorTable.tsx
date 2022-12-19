@@ -11,6 +11,12 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
             <>
                 <section className="current_sponsors">
                 <h2 className="sponsors_thanks" style={{ textAlign: "center" }}>Thanks to our sponsors</h2>
+                <h3 className="sponsors_tier">Supporter</h3>
+                <div className="sponsors_logo">
+                    <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
+                    <Image width={300} height={150} src="/nanabianca_logo.svg" alt="Nana Bianca" />
+                    </a>
+                </div>
                 <h3 className="sponsors_tier">Silver</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
