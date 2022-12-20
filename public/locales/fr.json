@@ -166,14 +166,15 @@
   },
   "Venue": {
     "title": "Open Source Day 2023",
-    "subtitle": "Nous avons un lieu magnifique",
-    "description": "Restez en contact via nos canaux (Discord, LinkedIn ou Twitter) pour savoir quel Venue nous accueillera pour cet événement :)",
+    "subtitle": "L'événement est organisé par Nana Bianca, au cœur de Florence",
+    "description": "Piazza del Cestello, 10, 50127, Florence, Italy",
     "heading": "ARRIVÉE SUR LE LIEU DE L'ÉVÉNEMENT",
     "train_infos": "De la gare centrale de Firenze SMN, vous pouvez rejoindre le lieu à pied (15min.), ou prendre un bus (lignes C4/6 arrêt : Soderini Torrino Santa Rosa).",
     "plane_infos_1": "De l'aéroport de Florence : prendre le tramway, ligne T2, arrêt : Alamanni - Stazione Santa Maria Novella",
     "plane_infos_2": "De l'aéroport de Pise : prendre le PisaMover pour la gare, puis prendre un <link_train>train</link_train> pour Firenze Santa Maria Novella (1h)",
     "plane_infos_3": "Depuis l'aéroport de Bologne, vous pouvez choisir de rejoindre Florence en <link_bus>bus</link_bus>(1h30) ou en <link_train>train</link_train> (30min. avec Frecciarossa ou 1h avec le train régional)",
-    "car_infos": "Voici une liste de <link>parking payant</link>. Les plus proches du lieu de réunion sont : Porta al Prato - Leopolda, Stazione S.M.N et S. Lorenzo - Mercato Centrale"
+    "car_infos": "Voici une liste de <link>parking payant</link>. Les plus proches du lieu de réunion sont : Porta al Prato - Leopolda, Stazione S.M.N et S. Lorenzo - Mercato Centrale",
+    "information": "Si vous avez besoin d'aide, ou si vous voulez plus d'informations, envoyez-nous un <link>email</link>"
   },
   "SponsorshipTier": {
     "know_more": "En savoir plus"
