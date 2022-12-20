@@ -75,6 +75,14 @@ export default function Venue() {
               </p>
             </div>
           </div>
+          <div className='information'>
+            <p>{t.rich('information', {
+                    link: (children: ReactNode) => (
+                      <a href="mailto:osday@schrodinger-hat.it">{children}</a>
+                    )
+                })}
+            </p>
+          </div>
         </section>
       </div>
     </>
