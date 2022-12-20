@@ -219,7 +219,7 @@ export default function Header() {
               <ul>
                 <Link target="_blank" href="https://www.nanabianca.it/">
                   <li>
-                    <Image src="/nanabianca_logo.svg" alt="" width="20" height="20" /> {t('notification.n5')}
+                    <Image src="/sh.png" alt="" width="20" height="20" /> {t('notification.n5')}
                   </li>
                 </Link>
                 <Link target="_blank" href="https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577">
