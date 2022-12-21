@@ -35,6 +35,18 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={80} height={80} src="/kube-careers_logo.svg" alt="Kube Careers" />
                     </a>
                 </div>
+                <h3 className="sponsors_tier">Swag</h3>
+                <div className="sponsors_logo">
+                    <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
+                    </a>
+                    <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/jb_beam.svg" alt="JetBrains" />
+                    </a>
+                    <a href="https://www.github.com/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
+                    </a>
+                </div>
                 <h3 className="sponsors_tier">Community</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
@@ -48,15 +60,6 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     </a>
                     <a href="https://firenze.dev/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/firenze-dev_logo.svg" alt="Firenzedev" />
-                    </a>
-                </div>
-                <h3 className="sponsors_tier">Swag</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
-                    </a>
-                    <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/jb_beam.svg" alt="JetBrains" />
                     </a>
                 </div>
                 </section>
