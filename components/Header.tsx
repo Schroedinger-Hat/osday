@@ -219,29 +219,29 @@ export default function Header() {
               <ul>
                 <Link target="_blank" href="https://www.nanabianca.it/">
                   <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> {t('notification.n5')}
+                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n5'))}
                   </li>
                 </Link>
                 <Link target="_blank" href="https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577">
                   <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> {t('notification.n4')}
+                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n4'))}
                   </li>
                 </Link>
                 <Link href="/cfp">
                   <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> {t('notification.n1')}
+                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n1'))}
                   </li>
                 </Link>
                 <Link href="/sponsor">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" />
-                    {t('notification.n2')}
+                    {substringNotification(t('notification.n2'))}
                   </li>
                 </Link>
                 <Link href="/about">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" />
-                    {t('notification.n3')}
+                    {substringNotification(t('notification.n3'))}
                   </li>
                 </Link>
               </ul>
@@ -272,4 +272,12 @@ export default function Header() {
       </ul>
     </header>
   );
+}
+
+
+function substringNotification(notification: string): string {
+  if (notification.length > 35) {
+    return notification.substring(0, 35) + '...'
+  }
+  return notification;
 }
