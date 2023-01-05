@@ -10,7 +10,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
       metas: {
         title: 'Agenda, Open Source Day 2023 - Florence',
         description:
-          'Open Source Day 2023 coming soon on March 2023. Stay tuned on our social'
+          'Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social'
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -43,6 +43,12 @@ export default function Agenda() {
           title={t('title')}
           subtitle={t('subtitle')}
           description={t('description')}
+          date={{
+            when: '24th of March',
+            where: 'Florence',
+            length: '1 Day',
+            type: 'Conf'
+          }}
           originals={false}
           mainCta={{
             text: t('maincta_text'),
