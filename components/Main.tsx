@@ -10,6 +10,12 @@ export default function Main() {
       <Hero
         description={t('description_1')}
         description_2={t('description_2')}
+        date={{
+          when: '24th of March',
+          where: 'Florence',
+          length: '1 Day',
+          type: 'Conf'
+        }}
         mainCta={{
           text: 'Call for Papers',
           link: 'https://sessionize.com/opensourceday23'
