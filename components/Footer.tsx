@@ -28,6 +28,9 @@ export default function Footer() {
             <a href="https://opencollective.com/schrodinger-hat/contribute" title="OpenCollective" target="_blank" rel="noreferrer">
               <Image width={30} height={30} src="/icons/opencollective.svg" alt="OpenCollective" />
             </a>
+            <a href="https://www.linkedin.com/company/schrodinger-hat/" title="Linkedin" target="_blank" rel="noreferrer">
+              <Image width={28} height={28} src="/icons/linkedin.svg" alt="Linkedin" />
+            </a>
           </div>
           <div className="footer-center">
             <p>
