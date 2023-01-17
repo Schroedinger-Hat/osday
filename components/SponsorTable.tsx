@@ -20,7 +20,10 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                 <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://devmy.it/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={100} src="/devmy_logo.svg" alt=".devmy" />
+                    <Image width={300} height={100} src="/devmy_logo.svg" alt="devmy" />
+                    </a>
+                    <a href="https://sighup.io/" target="_blank" rel="noreferrer">
+                    <Image width={300} height={100} src="/sighup_logo.svg" alt="SIGHUP" />
                     </a>
                 </div>
                 <h3 className="sponsors_tier">Silver</h3>
