@@ -60,18 +60,6 @@ const premiums: TPremiums[] = [
     }
   },
   {
-    type: 'posterLogo',
-    text: 'Logo on poster',
-    has: {
-      community: false,
-      brand: false,
-      silver: true,
-      gold: true,
-      diamond: true,
-      platinum: true
-    }
-  },
-  {
     type: 'socialAwareness',
     text: 'Social Awareness',
     has: {
@@ -84,13 +72,13 @@ const premiums: TPremiums[] = [
     }
   },
   {
-    type: 'attendees',
-    text: "Attendee's list",
+    type: 'posterLogo',
+    text: 'Logo on poster',
     has: {
       community: false,
       brand: false,
-      silver: false,
-      gold: false,
+      silver: true,
+      gold: true,
       diamond: true,
       platinum: true
     }
@@ -115,6 +103,18 @@ const premiums: TPremiums[] = [
       brand: false,
       silver: false,
       gold: true,
+      diamond: true,
+      platinum: true
+    }
+  },
+  {
+    type: 'attendees',
+    text: "Attendee's list",
+    has: {
+      community: false,
+      brand: false,
+      silver: false,
+      gold: false,
       diamond: true,
       platinum: true
     }
@@ -349,7 +349,6 @@ export default function SponsorshipTable() {
         </section>
 
         <h4 className="sponsor_heading">{t('sponsor_deadline')}</h4>
-
       </div>
     </>
   );
