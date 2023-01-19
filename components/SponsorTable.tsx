@@ -55,6 +55,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.github.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
                     </a>
+                    <a href="https://mule.to/p3n8" target="_blank" rel="noreferrer">
+                    <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Community</h3>
                 <div className="sponsors_logo">
