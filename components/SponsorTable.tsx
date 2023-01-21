@@ -76,6 +76,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.pignolalug.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/plug_logo.png" alt="Plug" />
                     </a>
+                    <a href="https://pointerpodcast.it/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/pointerpodcast_logo.png" alt="Pointer Podcast" />
+                    </a>
                 </div>
                 </section>
             </>
