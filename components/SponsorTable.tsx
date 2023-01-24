@@ -25,6 +25,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://sighup.io/" target="_blank" rel="noreferrer">
                     <Image width={300} height={100} src="/sighup_logo.svg" alt="SIGHUP" />
                     </a>
+                    <a href="https://www.20tab.com/" target="_blank" rel="noreferrer">
+                    <Image width={300} height={100} src="/20tab_logo.svg" alt="20tab" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Silver</h3>
                 <div className="sponsors_logo">
