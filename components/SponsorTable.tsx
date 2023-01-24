@@ -80,6 +80,12 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={100} height={100} src="/pointerpodcast_logo.png" alt="Pointer Podcast" />
                     </a>
                 </div>
+                <h3 className="sponsors_tier"></h3>
+                <div className="sponsors_logo">
+                    <a href="http://comune.fi.it/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/patrocinio_firenze.png" alt="Comune di Firenze" />
+                    </a>
+                </div>
                 </section>
             </>
         );
