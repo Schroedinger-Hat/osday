@@ -82,7 +82,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                 </div>
                 <h3 className="sponsors_tier"></h3>
                 <div className="sponsors_logo">
-                    <a href="http://comune.fi.it/" target="_blank" rel="noreferrer">
+                    <a href="https://www.comune.fi.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/patrocinio_firenze.png" alt="Comune di Firenze" />
                     </a>
                 </div>
