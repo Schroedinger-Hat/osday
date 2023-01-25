@@ -82,6 +82,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://pointerpodcast.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/pointerpodcast_logo.png" alt="Pointer Podcast" />
                     </a>
+                    <a href="https://www.productmanagementday.com/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/productmanagementday_logo.png" alt="PMD" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Patronage</h3>
                 <div className="sponsors_logo">
