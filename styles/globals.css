@@ -369,8 +369,8 @@ div.image .img {
 
 .sponsors_tier {
   text-align: center;
-  padding: 2rem;
-  margin: 6rem;
+  padding: 20px;
+  margin: 40px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-bottom: 0.1rem solid #454f4f;
 }
