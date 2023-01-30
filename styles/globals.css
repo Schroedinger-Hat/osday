@@ -673,8 +673,6 @@ div.image .img {
 
 .footer-inner {
   text-align: center;
-  /* margin-left: auto;
-  margin-right: auto; */
   margin: 0 40px;
 }
 
@@ -683,7 +681,6 @@ div.image .img {
   display: flex;
   border-bottom: 0.1rem solid #454f4f;
   justify-content: center;
-  /* justify-content: space-between; */
 }
 
 .footer-top a {
