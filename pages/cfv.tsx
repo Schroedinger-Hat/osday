@@ -22,7 +22,7 @@ export default function CFV() {
       <div className="container">
         <Hero
           title="Open Source Day 2023"
-          subtitle="Call for volounteers"
+          subtitle="Call for volunteers"
           description={t('description')}
           originals={false}
           mainCta={{
