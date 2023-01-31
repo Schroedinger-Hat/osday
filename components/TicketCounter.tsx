@@ -16,7 +16,6 @@ const TicketCounter = () => {
         if (res.status === 200) {
             const data = await res.json();
             const tickets: TEventbrite[] = data.ticket_classes;
-            console.log(tickets)
             if (tickets && tickets.length > 0) {
                 setInPersonTicketAvailability(() => {
                     return getTicketAvailability(tickets, 0);
