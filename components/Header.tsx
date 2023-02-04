@@ -217,6 +217,11 @@ export default function Header() {
           {notificationOpen === true ? (
             <div className="notification-menu">
               <ul>
+              <Link target="_blank" href="https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577">
+                  <li>
+                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n6'))}
+                  </li>
+                </Link>
                 <Link target="_blank" href="https://www.nanabianca.it/">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n5'))}
