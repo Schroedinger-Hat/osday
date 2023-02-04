@@ -1,9 +1,9 @@
 {
   "Cfp": {
     "where": "Florence",
-    "when": "Started",
-    "lenght": "Closes in Jan 2023",
-    "description": "Want to participate in our Call for Papers? Head over to Sessionize and submit your ideas :)",
+    "when": "Closed",
+    "lenght": "Closed",
+    "description": "Thank you for participating in our CFP! We are now done selecting the talks.",
     "maincta_text": "Submit paper :)",
     "secondarycta_text": "Send us an email",
     "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
@@ -117,12 +117,12 @@
   },
   "Speakers": {
     "title": "Open Source Day 2023",
-    "subtitle": "These are the great minds that will talk about tech and open source :) Coming soon",
+    "subtitle": "The CFP closed on the 30th of January. Agenda coming soon :)",
     "where": "Florence",
     "when": "Coming soon",
     "length": "March 24th, 2023",
     "type": "Speakers",
-    "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP",
+    "description": "We received more than a 140 submissions from more than a 100 Speakers. The community vote was done on Discord. The Speaker lineup will be public soon!",
     "heading": "A few things to think about :)",
     "apply": "Apply as Speaker at our event in Florence in March 2023",
     "talk": "Give it your best and prepare a great talk so everyone will remember how good it was :D",
