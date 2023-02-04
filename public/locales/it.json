@@ -3,7 +3,7 @@
     "where": "Firenze",
     "when": "Iniziata",
     "lenght": "Chiude a Gennaio 2023",
-    "description": "Vorresti partecipare alla CFP? Vai sul sito Sessionize e applica la tua idea :)",
+    "description": "Grazie per aver partecipato alla CFP! La selezione è terminata.",
     "maincta_text": "Applica il tuo paper :)",
     "secondarycta_text": "Inviaci una mail",
     "description_1": "Continua a leggere se vuoi saperne di più sugli argomenti di maggiore interesse per i partecipanti alla nostra comunità",
@@ -36,7 +36,8 @@
       "n2": "La Call for Sponsors è aperta",
       "n3": "La repository OSday è stata creata!",
       "n4": "I biglietti sono ora disponibili",
-      "n5": "Pubblicazione della sede"
+      "n5": "Pubblicazione della sede",
+      "n6": "CFP chiusa! Hai preso il biglietto? :)"
     }
   },
   "InternalError": {
@@ -77,7 +78,7 @@
     "when": "Coming soon",
     "length": "24 Marzo 2023",
     "type": "Agenda",
-    "description": "Stiamo ancora cercando Speakers e organizzando l'evento! Vuoi partecipare? :)",
+    "description": "Stiamo ancora organizzando l'evento! Vuoi partecipare? :)",
     "heading": "Visita la pagina della <cfp>CFP</cfp> o contattaci direttamente @ <link>SH</link>",
     "heading_2": "Puoi trovare tutte le informazioni sulla nostra community sul nostro sito, <link>Schrodingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!",
     "maincta_text": "Applica il tuo paper :)",
@@ -117,12 +118,12 @@
   },
   "Speakers": {
     "title": "Open Source Day 2023",
-    "subtitle": "Queste sono le grandi menti che parleranno di tecnologia e Open Source :) Coming soon",
+    "subtitle": "La CFP si è conclusa il 30 gennaio. Agenda in arrivo :)",
     "where": "Firenze",
     "when": "Coming soon",
     "length": "24 Marzo 2023",
     "type": "Speakers",
-    "description": "Stiamo ancora valutando le vostre proposte, quindi se avete un'idea e volete parlarne visitate la nostra CFP",
+    "description": "Abbiamo ricevuto più di 140 candidature da oltre 100 relatori. La votazione della comunità si è svolta su Discord. La scaletta degli oratori sarà resa pubblica a breve!",
     "heading": "Ecco alcune cose a cui pensare prima della conferenza :)",
     "apply": "Partecipa come Speaker alla conferenza a Firenze, Marzo 2023",
     "talk": "Dai il meglio di te così che tutti si ricordino quanto è stato bello il tuo talk :D",

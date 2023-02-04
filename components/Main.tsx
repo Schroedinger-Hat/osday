@@ -16,14 +16,11 @@ export default function Main() {
           length: '1 Day',
           type: 'Conf'
         }}
-        mainCta={{
-          text: 'Call for Papers',
-          link: 'https://sessionize.com/opensourceday23'
-        }}
         secondaryCta={{
           text: t('email'),
           link: 'mailto:osday@schrodinger-hat.it'
         }}
+        showTicketBtn
         showTicketAvailability
       />
     </div>

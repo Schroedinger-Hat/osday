@@ -1,9 +1,9 @@
 {
   "Cfp": {
     "where": "Florence",
-    "when": "Started",
-    "lenght": "Closes in Jan 2023",
-    "description": "Want to participate in our Call for Papers? Head over to Sessionize and submit your ideas :)",
+    "when": "Closed",
+    "lenght": "Closed",
+    "description": "Thank you for participating in our CFP! We are now done selecting the talks.",
     "maincta_text": "Submit paper :)",
     "secondarycta_text": "Send us an email",
     "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
@@ -36,7 +36,8 @@
       "n2": "Call for Sponsors is now open",
       "n3": "OSday repo has been created",
       "n4": "Tickets are now available",
-      "n5": "Announcement of the venue"
+      "n5": "Announcement of the venue",
+      "n6": "CFP Closed! Get your ticket now :)"
     }
   },
   "InternalError": {
@@ -77,7 +78,7 @@
     "when": "Coming soon",
     "length": "March 24th, 2023",
     "type": "Agenda",
-    "description": "We are still looking for Speakers and organising the event! Join us on the 24th of March 2023! Want to participate? :)",
+    "description": "We are still organising the event! Join us on the 24th of March 2023! Want to participate? :)",
     "heading": "Head over to the <cfp>CFP</cfp> page or contact us directly @ <link>SH</link>",
     "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!",
     "maincta_text": "Submit paper :)",
@@ -117,12 +118,12 @@
   },
   "Speakers": {
     "title": "Open Source Day 2023",
-    "subtitle": "These are the great minds that will talk about tech and open source :) Coming soon",
+    "subtitle": "The CFP closed on the 30th of January. Agenda coming soon :)",
     "where": "Florence",
     "when": "Coming soon",
     "length": "March 24th, 2023",
     "type": "Speakers",
-    "description": "We are still exploring your submissions so if you have an idea and you would like to talk about it head over to our CFP",
+    "description": "We received more than a 140 submissions from more than a 100 Speakers. The community vote was done on Discord. The Speaker lineup will be public soon!",
     "heading": "A few things to think about :)",
     "apply": "Apply as Speaker at our event in Florence in March 2023",
     "talk": "Give it your best and prepare a great talk so everyone will remember how good it was :D",

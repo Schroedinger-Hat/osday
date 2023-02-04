@@ -3,7 +3,7 @@
     "where": "Florence",
     "when": "Started",
     "lenght": "Se termine en janvier 2023",
-    "description": "Vous voulez participer à notre appel à communications ? Rendez-vous sur Sessionize et soumettez vos idées :)",
+    "description": "Merci d'avoir participé à notre CFP ! Nous avons maintenant terminé la sélection.",
     "maincta_text": "Soumettre un article :)",
     "secondarycta_text": "Envoyez-nous un e-mail",
     "description_1": "Lisez ce qui suit si vous souhaitez en savoir plus sur les sujets qui intéressent le plus les participants de notre communauté",
@@ -36,7 +36,8 @@
       "n2": "La Call for sponsor est ouvert!",
       "n3": "Le repo OSday a été créé",
       "n4": "Les billets sont maintenant disponibles",
-      "n5": "Annonce du lieu de l'événement"
+      "n5": "Annonce du lieu de l'événement",
+      "n6": "CFP fermé ! Achetez votre billet maintenant :)"
     }
   },
   "InternalError": {
@@ -77,7 +78,7 @@
     "when": "Bientôt",
     "length": "24 Mars 2023",
     "type": "Agenda",
-    "description": "Nous sommes toujours à la recherche de conférenciers et nous organisons l'événement ! Vous voulez participer ? :)",
+    "description": "Nous sommes toujours à organisons l'événement ! Vous voulez participer ? :)",
     "heading": "Rendez-vous sur la page <cfp>CFP</cfp> ou contactez-nous directement @ <link>SH</link>",
     "heading_2": "Vous pouvez trouver toutes les infos communautaires sur notre site web, <link>Schrodingers Hat</link> et si vous avez des questions sur l'inclusivité, la diversité ou l'accessibilité, n'hésitez pas à nous les poser à tout moment !",
     "maincta_text": "Soumettre un article :)",
@@ -117,12 +118,12 @@
   },
   "Speakers": {
     "title": "Open Source Day 2023",
-    "subtitle": "Voici les grands esprits qui parleront de technologie et d'open source :) A venir",
+    "subtitle": "Le CFP a été clôturé le 30 janvier. L'agenda sera bientôt disponible :)",
     "where": "Florence",
     "when": "Bientôt",
     "length": "Mars 2023",
     "type": "Speakers",
-    "description": "Nous sommes toujours en train d'explorer vos propositions, donc si vous avez une idée et que vous souhaitez en parler, rendez-vous sur notre CFP",
+    "description": "Nous avons reçu plus de 140 propositions de plus de 100 intervenants. Le vote de la communauté s'est fait sur Discord. La liste des orateurs sera bientôt rendue publique!",
     "heading": "Quelques éléments de réflexion :)",
     "apply": "Postulez en tant que conférencier à notre événement à Florence en mars 2023",
     "talk": "Donnez le meilleur de vous-mêmes et préparez un excellent discours pour que tout le monde se souvienne de la qualité de l'événement :D",
