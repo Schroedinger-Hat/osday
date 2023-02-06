@@ -94,7 +94,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.productmanagementday.com/" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/productmanagementday_logo.png" alt="PMD" />
                     </a>
-                    <a href="https://www.associazionefrda.it/" target="_blank" rel="noreferrer">
+                    <a href="https://www.associazionefrida.it/" target="_blank" rel="noreferrer">
                     <Image width={150} height={100} src="/frida_logo.png" alt="Frida" />
                     </a>
                 </div>
