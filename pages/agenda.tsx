@@ -58,42 +58,52 @@ export default function Agenda() {
           showTicketBtn
         />
 
-{/*         <section className="talks_2021">
+        <div className="timeline">
+          <div className="container-timeline left-timeline">
+            <div className="content-timeline">
+              <h2>09:00</h2>
+              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+          <div className="container-timeline right-timeline">
+            <div className="content-timeline">
+              <h2>09:30</h2>
+              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+          <div className="container-timeline left-timeline">
+            <div className="content-timeline">
+              <h2>10:00</h2>
+              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+          <div className="container-timeline right-timeline">
+            <div className="content-timeline">
+              <h2>10:30</h2>
+              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+          <div className="container-timeline left-timeline">
+            <div className="content-timeline">
+              <h2>11:00</h2>
+              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+          <div className="container-timeline right-timeline">
+            <div className="content-timeline">
+              <h2>11:30</h2>
+              <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
+            </div>
+          </div>
+        </div>
+
+        <section className="talks_2021">
           <div className="talks_container">
             {agendaInfo.map((talk: TTalkCard) => {
               return <TalkCard key={talk.id} {...talk} />;
             })}
           </div>
-        </section> */}
-
-        <section className="talks_2021">
-          {/* <SpeakerHero
-            title="The unknown world of Physics and Quantums"
-            name="Erwin Schrodinger"
-            time="Friday, 10:00AM"
-            talk="Fight an alligator and win. Eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter i like fish but scamper this cat happen now, it was too purr-fect!!! or meow to be let in scoot butt on the rug trip on catnip."
-          /> */}
         </section>
-
-{/*         <section className="after_main">
-          <h2>
-            {t.rich('heading', {
-              link: (children: ReactNode) => (
-                <a href="mailto:osday@schrodinger-hat.it">{children}</a>
-              ),
-              cfp: (children: ReactNode) => (
-                <a href="https://sessionize.com/opensourceday23/">{children}</a>
-              )
-            })}
-          </h2>
-          <h3>
-            {t.rich('heading_2', {
-              link: (children: ReactNode) => (
-                <a href="https://www.schrodinger-hat.it/">{children}</a>
-              )
-            })}
-          </h3>
-        </section> */}
       </div>
     </>
   );
