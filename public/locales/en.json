@@ -124,10 +124,115 @@
     "length": "March 24th, 2023",
     "type": "Speakers",
     "description": "We received more than a 140 submissions from more than a 100 Speakers. The community vote was done on Discord. The Speaker lineup will be public soon!",
-    "heading": "A few things to think about :)",
-    "apply": "Apply as Speaker at our event in Florence in March 2023",
-    "talk": "Give it your best and prepare a great talk so everyone will remember how good it was :D",
-    "event": "On the day of the event, come a little earlier so that we can set you up and try your talk!"
+    "artem": {
+      "name": "Artem Trofimov",
+      "job_title": "ML infrastructure lead @ Nebius",
+      "talk_title": "ʎzy: an open-source platform for hybrid ML pipelines",
+      "talk": "Data science teams often face the following problem: there is plenty of existing code for data preprocessing and model training that works well on the local machine and there is a need to speed it up/scale it out using a cloud/on-prem cluster. Within this problem, on the one hand, a company wants to efficiently utilize expensive hardware. On the other hand, it is important to ensure that data scientists do not need to change their code significantly and can continue to work using familiar dev tools. ʎzy [ˈlɪzɪ] is an open-source platform (https://github.com/lambdazy/lzy) for running distributed pipelines for ML/DS that is built upon k8s. ʎzy’s role is a middleware between the user’s code and a remote cluster. We aim to lower the entry threshold into distributed computing with high hardware utilization while keeping flexibility for advanced users. ʎzy automatically migrates the user environment to any cluster and optimizes the execution of pipelines defined as ordinary python code.",
+      "description": "Artem Trofimov has both academic and industrial experience in building distributed systems for data science problems. He was a research engineer at JetBrains Research and then joined Yandex Cloud and worked as a team lead of the Yandex DataSphere. Currently, he is a lead of the machine learning infrastructure team at Nebius. ",
+      "github_url": "https://github.com/mrMakaronka",
+      "twitter_url": "",
+      "linkedin_url": ""
+    },
+    "matteo": {
+      "name": "Matteo Collina",
+      "job_title": "Plaformatic Co-Founder and CTO, Node.js TSC member, Fastify Lead Maintainer",
+      "talk_title": "Why are there no incentives for security in Open Source?",
+      "talk": "Open Source has both “won” and “lost” at the same time. Every company in the world leverages Open Source Software (OSS) to build products. However, every software is vulnerable, and OSS is no exception. Yet, despite the strong incentive for companies all over the world to discover and fix them, the majority use open source without paying for it. Security scanners allow companies to discover vulnerable OSS they depend upon, but those vulnerabilities should also be fixed. While there are some incentives in discovering security vulnerabilities via bounty programs, there are none to fix them. A typical email to an OSS maintainer is more like a threat: if you do not fix it in the next month or so, I am going to make this public. In Node.js we have experimented with a public bounty program with https://github.com/nodejs/security-wg, and several companies sponsor full-time researchers to discover vulnerabilities. However, the OSS maintainers receive no compensation for their time in fixing the vulnerability. How can we solve this conundrum?",
+      "description": "Matteo is the Co-Founder and CTO of Platformatic.dev with the goal to remove all friction from backend development. He is also a prolific Open Source author in the JavaScript ecosystem and modules he maintain are downloaded more than 12 billion times a year. Previously he was Chief Software Architect at NearForm, the best professional services company in the JavaScript ecosystem. In 2014, he defended his Ph.D. thesis titled 'Application Platforms for the Internet of Things'. Matteo is a member of the Node.js Technical Steering Committee focusing on streams, diagnostics and http. He is also the author of the fast logger Pino and of the Fastify web framework. Matteo is an renowed international speaker after more than 60 conferences, including OpenJS World, Node.js Interactive, NodeConf.eu, NodeSummit, JSConf.Asia, WebRebels, and JsDay just to name a few. He is also co-author of the book 'Node.js Cookbook, Third Edition' edited by Packt. In the summer he loves sailing the Sirocco.",
+      "github_url": "https://github.com/mcollina",
+      "twitter_url": "https://twitter.com/matteocollina",
+      "linkedin_url": "https://www.linkedin.com/in/matteocollina/"
+    },
+    "alina": {
+      "name": "Alina Dima",
+      "job_title": "Senior Developer Advocate, AWS IoT Ecosystem Services",
+      "talk_title": "Ensuring IoT Application Edge Resilience with the Open Source AWS IoT Device Client",
+      "talk": "One of the challenges IoT solutions face is ensuring application reliability at Edge and in the Cloud. IoT solution reliability can be impacted by events outside of your control. Examples include: the network provider drops the connection, the application crashes or a technician unplugs and plugs the device back in, power cuts, low battery life. Building resilience in your application is the solution to ensuring reliability, and it is your responsibility, as an engineer, to build resilience in your IoT application. This session will look at application resilience at edge, and using open source tools to achieve this. We will focus on MQTT connection resilience, message delivery, and application runtime resilience.",
+      "description": "Alina Dima is a Senior Developer Advocate in the IoT Ecosystem Services team at Amazon Web Services. She is passionate about helping developers accelerate their journeys in the IoT ecosystem, and working with IoT communities to build better and move faster, from prototype to scale. Alina has worked in various industries such as telecommunications, manufacturing, automotive, retail, and photovoltaic. With nearly 20 years of experience as a software engineer, technical delivery manager and architect, she has designed and built multiple highly scalable, operationally ready IoT solutions, with millions of devices running in production today. Alina has shared her knowledge at various events, such as re:Invent, AWS Summits and online Webinars.",
+      "github_url": "https://github.com/alinadima",
+      "twitter_url": "https://twitter.com/fay_ette",
+      "linkedin_url": "https://www.linkedin.com/in/alina-dima/"
+    },
+    "jason": {
+      "name": "Jason Dellaluce",
+      "name_2": "Michele Zuccala",
+      "job_title": "Open Source Engineer, Sysdig",
+      "job_title_2": "Senior Director of Engineering, Runtime Security @ Sysdig",
+      "talk_title": "Reliable and Cost-effective Cloud Security with Falco",
+      "talk": "As the modern cloud grows in complexity, container security based on attack prevention and surface reduction become less effective. Most new cloud environments collect activity logs and store them for later inspection, which consumes lots of storage and loses the benefits of runtime visibility, or apply fine-grained runtime control on access and operations, which is more intrusive and brings scalability concerns. Falco, the Cloud Native Runtime Security tool, offers an open source alternative based on non-invasive runtime detection and low resource consumption. Falco is like a security camera that observes all the activity in your system and alerts you whenever suspicious behavior is detected. Historically, Falco was focused on containers and system security by observing data coming from the Linux kernel, but has more recently evolved to also bring real-time telemetry over logs of cloud services. In this talk, you’ll learn the basics of the project and how you can employ it as an open-source all-in-one solution for detecting malicious attacks in a faster and cost-effective manner and for securing your applications and cloud infrastructure.",
+      "description": "Jason Dellaluce is an Open Source Engineer at Sysdig and a core maintainer of Falco, the CNCF tool for Cloud Native Runtime Security. On a daily basis, he contributes to the Falco Community and is exposed to Linux, Kubernetes, Containers, Security, eBPF, and the Open Source world in general. Most recently, he contributed to Falco by playing a key role in the development of the new Plugin System, by guiding the last few version releases, and by leading many optimization and renovation efforts. Prior to his current role, Jason graduated from a MSc in Computer Engineering after studying at University of Bologna, Italy and University of California, Irvine.",
+      "description_2": "Michele is currently Senior Director of Engineering at Sysdig, the company which created and open-sourced Falco, the Security Runtime Engine for Kubernetes and Cloud-Native technologies. Before joining Sysdig, his most relevant journey consisted of 5 years as CTO of a scale-up in Milan, Italy. Former soccer referee, currently a skiier, a sailor and a scuba diver; also a core Falco maintainer and active part of the Falco community.",
+      "github_url": "https://github.com/jasondellaluce",
+      "twitter_url": "https://twitter.com/jasondellaluce",
+      "linkedin_url": "https://www.linkedin.com/in/jasondellaluce/",
+      "github_url_2": "https://github.com/zuc",
+      "twitter_url_2": "https://twitter.com/zuc",
+      "linkedin_url_2": "https://www.linkedin.com/in/mzuccala"
+    },
+    "francesco": {
+      "name": "Francesco Corti",
+      "job_title": "Senior Product Manager for Backstage at Spotify",
+      "talk_title": "Organization and challenges (with best practices) behind a successful open-source project",
+      "talk": "Bringing to success an open-source project is hard, but growing it from an organizational and business point-of-view, organically to the growth of the community, their enthusiasts, and the contributors is an equally interesting challenge for all the companies behind. Growing the maintainers accordingly with the scale of contributions and support, managing the business expectations with the expectations of the open source (and not paying) adopters, growing the product accordingly, those are only some of the topics that every mature Business Open Source organization discusses (on a recurrent basis I would say). In this talk you will learn more about these challenges through practical examples based on the direct experience after having worked directly with several, structured, successful, worldwide, Business Open Source organizations in community-driven projects.",
+      "description": "Product Manager, Open Source enthusiast, Tech writer, Speaker, Developer at heart.  I'm a passionate and skillful software professional with more than 5 years in product management and developer relations as well as more than 20 years of experience in the industry, doing a variety of roles in product management, developer relations, software development, team leading, consultancy, pre-sales, project management and much more.  Product Manager at Spotify (and previously at Alfresco, Hyland), I'm an Open Source advocate and enthusiast for the most modern Developer Experience of frameworks and products, both in Cloud and On-Premise. Working on Backstage (https://backstage.io/), an open platform for building developer portals, I'm proud of the enablement of millions of developers in their simple and complex projects.  Author for Packt Publishing (book author and video-course author), I’m also founder of the Hop User Group Italia to promote the Open Source Business Intelligence Platform.",
+      "twitter_url": "https://twitter.com/FrkCorti",
+      "linkedin_url": "https://www.linkedin.com/in/fcorti/"
+    },
+    "rafael": {
+      "name": "Rafael Gonzaga",
+      "name_2": "Michele Riva",
+      "job_title": "Staff Engineer, Nearform",
+      "job_title_2": "Staff Engineer @NearForm, Google GDE, Microsoft MVP, Published Author, International Speaker",
+      "talk_title": "5 Ways You Could Have Hacked Node.js",
+      "talk": "All languages and runtimes are or were vulnerable to some kind of threat. We contribute directly to Node.js Security and during the year 2022, we've performed many Security Releases and some of them were really hard to think about. Did you know you can make money by finding critical vulnerabilities in Node.js? In this talk, We’ll show you 5 ways you can have hacked Node.js and how the Node.js team deals with vulnerabilities.",
+      "description": "Rafael is a Staff Engineer at NearForm, working full-time on the Node.js runtime as a TSC (Technical Steering Committee) member, especially in the security working group. He's also the maintainer of popular JavaScript libraries such as Fastify and Clinic.js, and he's specialized in performance enhancements and software architecture optimization",
+      "description_2": "I'm a passionate and experienced software engineer, Google GDE, and Microsoft MVP working full-time on open-source software. I currently work as a Staff Engineer at NearForm while traveling the world to speak at international conferences. I am also developing Lyra, the next-generation full-text search engine written entirely in TypeScript.I am always up for speaking about software, philosophy, photography... or literally whatever comes to your mind!",
+      "github_url": "https://github.com/RafaelGSS",
+      "twitter_url": "https://twitter.com/_rafaelgss",
+      "linkedin_url": "https://www.linkedin.com/in/rafaelgss/",
+      "github_url_2": "https://github.com/MicheleRiva",
+      "twitter_url_2": "https://twitter.com/MicheleRivaCode",
+      "linkedin_url_2": "https://www.linkedin.com/in/micheleriva95"
+    },
+    "filip": {
+      "name": "Filip Grebowski",
+      "job_title": "Developer Advocate at Permit.io",
+      "talk_title": "This Open Source Tool Turns Building Access Management from Scary to Simple",
+      "talk": "Broken Access Control is the top vulnerability in the OWASP Top 10 security risk list. Today more than ever, proper configuration and enforcement of access control are critical to modern organizations, as privacy and compliance awareness are at their peak. Yet, building authorization or permissions management is a painful process for developers. This is due to complex and ever-evolving requirements, and lack of knowledge for avoiding common pitfalls. OPAL (Open Policy Administration Layer) is an open-source administration layer for OPA (Open-Policy Agent). OPAL detects changes to both policy and policy data in real-time and pushes live updates to policy engines, making them real-time and event-driven. OPAL uses Git as the source-of-truth for policy, enabling Git Ops workflow for policy delivery and versioning. Today, OPAL is used by thousands of engineers, including developers from Tesla, Zapier, Cisco, and Accenture. In his talk, Filip Grebowski will explain the challenges of managing modern authorization and access control and how these challenges can be solved by using open source tools like OPAL. In the end, he will provide use cases and tips for implementing simple and scalable authorization.",
+      "description": "Filip Grebowski is a Developer Advocate at Permit.io, where he brings his expertise as an accomplished Engineer. With a deep-seated passion for creative web development, Filip is also a YouTube mentor, poised to hit the 100k subscriber milestone and has already amassed an impressive 6 million views. Filip's journey with Cisco began during his university years and by the time he graduated, he was already working with the tech giant in Silicon Valley. Post-university, Filip continued to work with Cisco and took on a leadership role, successfully guiding a team and driving the company's frontend initiatives to new heights. Filip is a successful open-source project creator and an active member of the open-source community.",
+      "linkedin_url": "https://www.linkedin.com/in/developerfilip/"
+    },
+    "serena": {
+      "name": "Serena Sensini",
+      "job_title": "Enterprise Architect, author and founder@TheRedCode",
+      "talk_title": "One library a day keeps the doctor away",
+      "talk": "NLP represents a field with myriad opportunities for real-life use cases: one of the best examples is the healthcare sector, where medical research and patient care can rely on different technologies that can enhance the information that has already been collected. Many companies lease commercial NLP software, but which are the open source alternatives? Let's discover MedSpaCy, a recent library of tools for performing clinical NLP with a real-use case application!",
+      "description": "I started programming in VB when I was 6 taking advantage of my father’s strong passion for computer science. I’ve always dreamt of being an engineer and I’ve worn different “hats”: data scientist, data analyst, web developer, sysadmin… This gave me the opportunity to gain experience in the design and dev of solutions from scratch. During the day I’m an Enterprise Architect, while I love writing at night when I get a hot cup of tea!",
+      "github_url": "https://github.com/serenasensini",
+      "twitter_url": "https://twitter.com/s_sensini",
+      "linkedin_url": "https://www.linkedin.com/in/serena-sensini/"
+    },
+    "liran": {
+      "name": "Liran Tal",
+      "job_title": "GitHub Star | Director of Developer Advocacy at Snyk",
+      "talk_title": "The Unexpected Demise of Open Source Libraries",
+      "talk": "Hello there dear developer building your app on open source dependencies. Oh wait, did you think open source code lives forever? Think again! Did you hear about the maintainer discontinuing a library despite having tens of millions of downloads? What about a maintainer who intentionally introduced code to break the functionality of his package which receives millions of downloads? So, did you ever wonder why dependencies die? Join me on a journey full of humor and horror across real-world incidents to learn how even the mightiest of open source projects got defeated. What can we learn from past incidents on the continuous struggles of open source software sustainability, maintainer burnout, and how it impacts us.",
+      "description": "Liran Tal is an award-winning software developer, security researcher, and open source champion in the JavaScript community. He's an internationally recognized GitHub Star, acknowledged for his open source advocacy, and has received the OpenJS Foundation's Pathfinder for Security for his work on Node.js security. His contributions to developer security education include leading OWASP projects, building supply chain security tools, participation in CNCF and OpenSSF initiatives, and authoring books such as O'Reilly's Serverless Security. He leads the developer advocacy team at Snyk.io and is on a mission to empower developers with better application security skills.",
+      "github_url": "https://github.com/lirantal",
+      "twitter_url": "https://twitter.com/liran_tal",
+      "linkedin_url": "https://www.linkedin.com/in/talliran/"
+    },
+    "federico": {
+      "name": "Federico Terzi",
+      "job_title": "Creator of Espanso.org, Software Architect at AnimaApp",
+      "talk_title": "Challenges of Cross-Platform Development in Rust: The Espanso Case Study",
+      "talk": "Building performant cross-platform software is riddled with challenges. In this talk, we’ll discuss the technical journey of Espanso, a popular open-source Rust application, covering the main challenges encountered along the way, along with many useful patterns to solve them (including Rust-specific tips, CI automation, code-signing, distribution, and more)",
+      "description": "I’m a passionate Software Engineer specialized in Front-end development and System programming, with a Master’s degree in Computer Engineering.  I'm currently working as a Software Architect at AnimaApp, where we are working hard to automate the boring parts of Front-end development.  I love creating side-projects. Some of them are used by tens of thousands of daily active users, with Espanso.org being my most popular one.  I also enjoy publishing technical content on my Blog and YouTube channel.",
+      "github_url": "https://github.com/federico-terzi/",
+      "twitter_url": "https://twitter.com/terzi_federico",
+      "linkedin_url": "https://www.linkedin.com/in/federico-terzi/"
+    }
   },
   "Main": {
     "email": "Send us an email",

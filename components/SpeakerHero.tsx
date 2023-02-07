@@ -1,40 +1,37 @@
 import React from 'react';
-import Image from 'next/image';
+import SpeakerInfo from './SpeakerInfo';
 
 type TSpeakerHero = {
-  name?: string;
-  time?: string;
-  title?: string;
-  talk?: string;
-  image?: string;
+  name: string;
+  name_2?: string;
+  jobDescription: string;
+  jobDescription_2?: string;
+  title: string;
+  talk: string;
+  image: string;
+  image_2?: string;
+  githubUrl?: string;
+  linkedinUrl?: string;
+  twitterUrl?: string;
+  githubUrl_2?: string;
+  linkedinUrl_2?: string;
+  twitterUrl_2?: string;
 };
 
-const SpeakerHero = ({ name, time, title, talk, image }: TSpeakerHero) => {
+const SpeakerHero = ({ name, jobDescription, title, talk, image, image_2, name_2, jobDescription_2, githubUrl, linkedinUrl, twitterUrl, githubUrl_2, linkedinUrl_2, twitterUrl_2 }: TSpeakerHero) => {
   return (
     <div className="speaker_hero">
-      <Image
-        className="speaker_hero-image"
-        width={128}
-        height={128}
-        src="/erwin.png"
-        alt="Speaker"
-      />
-      <div className="speaker_hero-info">
-        {name ? (
-          <h1>{name}</h1>
-        ) : (
-          <h1>
-            Coming <span>Soon</span>
-          </h1>
-        )}
-        {time ? (
-          <p className="speaker_hero-time">{time}</p>
-        ) : (
-          <p className="speaker_hero-time">Time yet to be revealed</p>
-        )}
-
-        {title ? <h2 className="speaker_hero-title">{title}</h2> : <h2 className="speaker_hero-title">Title yet to be revealed</h2>}
-        {talk ? <p className="speaker_hero-talk">{talk}</p> : false}
+      <div className='speaker_info'>
+        <SpeakerInfo name={name} jobDescription={jobDescription} image={image} githubUrl={githubUrl} twitterUrl={twitterUrl} linkedinUrl={linkedinUrl}/>
+        {
+          name_2 && image_2 && jobDescription_2 ? 
+          <SpeakerInfo name={name_2} jobDescription={jobDescription_2} image={image_2} githubUrl={githubUrl_2} twitterUrl={twitterUrl_2} linkedinUrl={linkedinUrl_2}/>
+          : ''
+        }
+      </div>
+      <div className="speaker_talk">
+        <h2 className="speaker_hero-title">{title}</h2>
+        <p className="speaker_hero-talk">{talk}</p>
       </div>
     </div>
   );

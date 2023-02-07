@@ -67,12 +67,12 @@ export default function Agenda() {
         </section> */}
 
         <section className="talks_2021">
-          <SpeakerHero
+          {/* <SpeakerHero
             title="The unknown world of Physics and Quantums"
             name="Erwin Schrodinger"
             time="Friday, 10:00AM"
             talk="Fight an alligator and win. Eat a rug and furry furry hairs everywhere oh no human coming lie on counter don't get off counter i like fish but scamper this cat happen now, it was too purr-fect!!! or meow to be let in scoot butt on the rug trip on catnip."
-          />
+          /> */}
         </section>
 
 {/*         <section className="after_main">
