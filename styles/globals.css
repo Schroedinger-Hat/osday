@@ -1311,6 +1311,7 @@ div.image .img {
   flex-wrap: nowrap;
   justify-content: flex-start;
   align-items: center;
+  box-shadow: 1px 1px 5px darkgrey;
 }
 
 .speaker_hero-image {
@@ -1330,11 +1331,15 @@ div.image .img {
   width: 100% !important;
 }
 
+.speaker_social {
+  margin-top: 5px;
+}
+
 .speaker_social a {
   border-radius: 50%;
   background: white;
-  width: 2.5rem;
-  height: 2.5rem;
+  width: 1.5rem;
+  height: 1.5rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -1359,5 +1364,20 @@ div.image .img {
   .talks_container {
     grid-template-columns: 1fr;
     padding-bottom: 2em;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .speaker_info {
+    width: 100%;
+    margin-right: 0%;
+  }
+  
+  .speaker_talk {
+    width: 100%;
+  }
+  
+  .speaker_hero {
+    display: block;
   }
 }

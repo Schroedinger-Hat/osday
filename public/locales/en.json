@@ -118,21 +118,19 @@
   },
   "Speakers": {
     "title": "Open Source Day 2023",
-    "subtitle": "The CFP closed on the 30th of January. Agenda coming soon :)",
+    "subtitle": "The offical speakers!",
     "where": "Florence",
     "when": "Coming soon",
     "length": "March 24th, 2023",
     "type": "Speakers",
-    "description": "We received more than a 140 submissions from more than a 100 Speakers. The community vote was done on Discord. The Speaker lineup will be public soon!",
+    "description": "We received more than a 140 submissions from more than a 100 Speakers. The community vote was done on Discord.",
     "artem": {
       "name": "Artem Trofimov",
       "job_title": "ML infrastructure lead @ Nebius",
       "talk_title": "ʎzy: an open-source platform for hybrid ML pipelines",
       "talk": "Data science teams often face the following problem: there is plenty of existing code for data preprocessing and model training that works well on the local machine and there is a need to speed it up/scale it out using a cloud/on-prem cluster. Within this problem, on the one hand, a company wants to efficiently utilize expensive hardware. On the other hand, it is important to ensure that data scientists do not need to change their code significantly and can continue to work using familiar dev tools. ʎzy [ˈlɪzɪ] is an open-source platform (https://github.com/lambdazy/lzy) for running distributed pipelines for ML/DS that is built upon k8s. ʎzy’s role is a middleware between the user’s code and a remote cluster. We aim to lower the entry threshold into distributed computing with high hardware utilization while keeping flexibility for advanced users. ʎzy automatically migrates the user environment to any cluster and optimizes the execution of pipelines defined as ordinary python code.",
       "description": "Artem Trofimov has both academic and industrial experience in building distributed systems for data science problems. He was a research engineer at JetBrains Research and then joined Yandex Cloud and worked as a team lead of the Yandex DataSphere. Currently, he is a lead of the machine learning infrastructure team at Nebius. ",
-      "github_url": "https://github.com/mrMakaronka",
-      "twitter_url": "",
-      "linkedin_url": ""
+      "github_url": "https://github.com/mrMakaronka"
     },
     "matteo": {
       "name": "Matteo Collina",

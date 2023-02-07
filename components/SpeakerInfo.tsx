@@ -20,23 +20,23 @@ const SpeakerInfo = ({name, jobDescription, image, githubUrl, linkedinUrl, twitt
             src={image}
             alt="Speaker"
         />
-      <p>{name}, {jobDescription}</p>
+      <span><h1>{name}</h1><i>{jobDescription}</i></span>
       <div className='speaker_social'>
         {twitterUrl ? 
           <a href={twitterUrl} target="_blank" rel="noreferrer" title="Twitter">
-            <Image width={30} height={30} src="/icons/twitter.svg" alt="Twitter" />
+            <Image width={15} height={15} src="/icons/twitter.svg" alt="Twitter" />
           </a>
           : ''
         }
         {linkedinUrl ? 
           <a href={linkedinUrl} title="Linkedin" target="_blank" rel="noreferrer">
-            <Image width={28} height={28} src="/icons/linkedin.svg" alt="Linkedin" />
+            <Image width={15} height={15} src="/icons/linkedin.svg" alt="Linkedin" />
           </a> 
           : ''
         }
         {githubUrl ? 
           <a href={githubUrl} target="_blank" rel="noreferrer" title="Github">
-            <Image width={30} height={30} src="/icons/github.svg" alt="Github" />
+            <Image width={15} height={15} src="/icons/github.svg" alt="Github" />
           </a> 
           : ''
         }
