@@ -1329,6 +1329,7 @@ div.image .img {
 
 .speaker_hero-talk {
   width: 100% !important;
+  white-space: pre-line;
 }
 
 .speaker_social {
