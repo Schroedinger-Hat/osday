@@ -583,6 +583,19 @@ div.image .img {
   padding: 1em;
 }
 
+.content-timeline:hover {
+  background: #80101d;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right,
+      #93291e,
+      #80101d);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right,
+      #93291e,
+      #80101d);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
 @media screen and (max-width: 768px) {
   .sponsortable {
     padding: 0;

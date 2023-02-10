@@ -10,7 +10,7 @@ type TSpeakerInfo = {
     twitterUrl?: string;
 }
 
-const SpeakerInfo = ({name, jobDescription, image, githubUrl, linkedinUrl, twitterUrl}: TSpeakerInfo) => {
+const SpeakerInfo = ({ name, jobDescription, image, githubUrl, linkedinUrl, twitterUrl}: TSpeakerInfo) => {
     return (
         <>
         <Image
