@@ -50,10 +50,10 @@ export default function Agenda() {
           <AgendaCard hour='11:40' isBreak={false} speakerName={s('federico.name')} talkTitle={s('federico.talk_title')} icon='/icons/microphone.svg' position='left' link={s('federico.id')}/>
           <AgendaCard hour='12:10' isBreak={true} breakTitle='Lunch break' icon='/icons/fork-and-knife.svg' position='right'/>
           <AgendaCard hour='14:00' isBreak={true} breakTitle='Afternoon intro' icon='/icons/microphone.svg' position='left'/>
-          <AgendaCard hour='14:15' isBreak={false} speakerName={s('jason.name')} secondSpeakerName={s('jason.name_2')} talkTitle={s('jason.talk_title')} icon='/icons/microphone.svg' position='right' link={s('jason.id')}/>
-          <AgendaCard hour='14:50' isBreak={false} speakerName={s('matteo.name')} talkTitle={s('matteo.talk_title')} icon='/icons/microphone.svg' position='left' link={s('matteo.id')}/>
-          <AgendaCard hour='15:25' isBreak={false} speakerName={s('serena.name')} talkTitle={s('serena.talk_title')} icon='/icons/microphone.svg' position='right' link={s('serena.id')}/>
-          <AgendaCard hour='15:55' isBreak={true} breakTitle='Coffee break & Open Debate & Giveaway' icon='/icons/coffee.svg' position='left'/>
+          <AgendaCard hour='14:10' isBreak={false} speakerName={s('jason.name')} secondSpeakerName={s('jason.name_2')} talkTitle={s('jason.talk_title')} icon='/icons/microphone.svg' position='right' link={s('jason.id')}/>
+          <AgendaCard hour='14:45' isBreak={false} speakerName={s('matteo.name')} talkTitle={s('matteo.talk_title')} icon='/icons/microphone.svg' position='left' link={s('matteo.id')}/>
+          <AgendaCard hour='15:20' isBreak={false} speakerName={s('serena.name')} talkTitle={s('serena.talk_title')} icon='/icons/microphone.svg' position='right' link={s('serena.id')}/>
+          <AgendaCard hour='15:50' isBreak={true} breakTitle='Coffee break & Open Debate & Giveaway' icon='/icons/coffee.svg' position='left'/>
           <AgendaCard hour='16:30' isBreak={false} speakerName={s('artem.name')} talkTitle={s('artem.talk_title')} icon='/icons/microphone.svg' position='right' link={s('artem.id')}/>
           <AgendaCard hour='17:05' isBreak={false} speakerName={s('francesco.name')} talkTitle={s('francesco.talk_title')} icon='/icons/microphone.svg' position='left' link={s('francesco.id')}/>
           <AgendaCard hour='17:40' isBreak={true} breakTitle="Conclusion with Schrödinger Hat's admin" icon='/icons/microphone.svg' position='right'/>
