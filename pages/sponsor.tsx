@@ -28,7 +28,7 @@ export default function Sponsor() {
           originals={false}
           mainCta={{
             text: t('maincta_text'),
-            link: 'https://sessionize.com/opensourceday23'
+            link: 'mailto:osday@schrodinger-hat.it'
           }}
           showTicketBtn
         />
