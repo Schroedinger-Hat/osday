@@ -2,6 +2,7 @@ import React from 'react';
 import SpeakerInfo from './SpeakerInfo';
 
 type TSpeakerHero = {
+  id: string;
   name: string;
   name_2?: string;
   jobDescription: string;
@@ -18,9 +19,9 @@ type TSpeakerHero = {
   twitterUrl_2?: string;
 };
 
-const SpeakerHero = ({ name, jobDescription, title, talk, image, image_2, name_2, jobDescription_2, githubUrl, linkedinUrl, twitterUrl, githubUrl_2, linkedinUrl_2, twitterUrl_2 }: TSpeakerHero) => {
+const SpeakerHero = ({id, name, jobDescription, title, talk, image, image_2, name_2, jobDescription_2, githubUrl, linkedinUrl, twitterUrl, githubUrl_2, linkedinUrl_2, twitterUrl_2 }: TSpeakerHero) => {
   return (
-    <div className="speaker_hero">
+    <div className="speaker_hero" id={id}>
       <div className='speaker_info'>
         <SpeakerInfo name={name} jobDescription={jobDescription} image={image} githubUrl={githubUrl} twitterUrl={twitterUrl} linkedinUrl={linkedinUrl}/>
         {

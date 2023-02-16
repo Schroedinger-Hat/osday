@@ -78,7 +78,7 @@
     "when": "Coming soon",
     "length": "March 24th, 2023",
     "type": "Agenda",
-    "description": "We are still organising the event! Join us on the 24th of March 2023! Want to participate? :)",
+    "description": "This is the official Agenda for the OSDay2023!",
     "heading": "Head over to the <cfp>CFP</cfp> page or contact us directly @ <link>SH</link>",
     "heading_2": "You can find all the community info on our website, <link>Schrodingers Hat</link> and if you have any questions about inclusivity, diversity or accessibility please ask us at any time!",
     "maincta_text": "Submit paper :)",
@@ -125,6 +125,7 @@
     "type": "Speakers",
     "description": "We received more than a 140 submissions from more than a 100 Speakers. The community vote was done on Discord.",
     "artem": {
+      "id": "artem",
       "name": "Artem Trofimov",
       "job_title": "ML infrastructure lead at Nebius",
       "talk_title": "ʎzy: an open-source platform for hybrid ML pipelines",
@@ -133,6 +134,7 @@
       "github_url": "https://github.com/mrMakaronka"
     },
     "matteo": {
+      "id": "matteo",
       "name": "Matteo Collina",
       "job_title": "Co-Founder and CTO at Platformatic, Node.js TSC member, Fastify Lead Maintainer",
       "talk_title": "Why are there no incentives for security in Open Source?",
@@ -143,6 +145,7 @@
       "linkedin_url": "https://www.linkedin.com/in/matteocollina/"
     },
     "alina": {
+      "id": "alina",
       "name": "Alina Dima",
       "job_title": "Senior Developer Advocate, AWS IoT Ecosystem Services",
       "talk_title": "Ensuring IoT Application Edge Resilience with the Open Source AWS IoT Device Client",
@@ -153,6 +156,7 @@
       "linkedin_url": "https://www.linkedin.com/in/alina-dima/"
     },
     "jason": {
+      "id": "jason",
       "name": "Jason Dellaluce",
       "name_2": "Michele Zuccala",
       "job_title": "Open Source Engineer at Sysdig",
@@ -169,6 +173,7 @@
       "linkedin_url_2": "https://www.linkedin.com/in/mzuccala"
     },
     "francesco": {
+      "id": "francesco",
       "name": "Francesco Corti",
       "job_title": "Senior Product Manager for Backstage at Spotify",
       "talk_title": "Organization and challenges (with best practices) behind a successful open-source project",
@@ -178,6 +183,7 @@
       "linkedin_url": "https://www.linkedin.com/in/fcorti/"
     },
     "rafael": {
+      "id": "rafael",
       "name": "Rafael Gonzaga",
       "name_2": "Michele Riva",
       "job_title": "Staff Engineer at Nearform",
@@ -194,6 +200,7 @@
       "linkedin_url_2": "https://www.linkedin.com/in/micheleriva95"
     },
     "filip": {
+      "id": "filip",
       "name": "Filip Grebowski",
       "job_title": "Developer Advocate at Permit.io",
       "talk_title": "This Open Source Tool Turns Building Access Management from Scary to Simple",
@@ -202,6 +209,7 @@
       "linkedin_url": "https://www.linkedin.com/in/developerfilip/"
     },
     "serena": {
+      "id": "serena",
       "name": "Serena Sensini",
       "job_title": "Enterprise Architect at Dedalus, author and founder@TheRedCode",
       "talk_title": "One library a day keeps the doctor away",
@@ -212,6 +220,7 @@
       "linkedin_url": "https://www.linkedin.com/in/serena-sensini/"
     },
     "liran": {
+      "id": "liran",
       "name": "Liran Tal",
       "job_title": "Director of Developer Advocacy at Snyk, Github Star",
       "talk_title": "The Unexpected Demise of Open Source Libraries",
@@ -222,6 +231,7 @@
       "linkedin_url": "https://www.linkedin.com/in/talliran/"
     },
     "federico": {
+      "id": "federico",
       "name": "Federico Terzi",
       "job_title": "Software Architect at AnimaApp, Creator of Espanso.org",
       "talk_title": "Challenges of Cross-Platform Development in Rust: The Espanso Case Study",
