@@ -107,7 +107,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={100} height={100} src="/pensieri_in_codice-logo.svg" alt="Pensieri in codice" />
                     </a>
                     <a href="https://www.eddiehub.org/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/eddiehub_logo.png" alt="EddieHub" />
+                    <Image width={80} height={100} src="/eddiehub_logo.png" alt="EddieHub" />
                     </a>
                 </div>
                 <h3 className="sponsors_tier">Patronage</h3>
