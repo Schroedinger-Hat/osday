@@ -41,6 +41,7 @@ export default function Agenda() {
         />
 
         <div className="timeline">
+          <AgendaCard hour='8:00' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg' position='right'/>
           <AgendaCard hour='8:50' isBreak={true} breakTitle='Morning intro' icon='/icons/microphone.svg' position='left'/>
           <AgendaCard hour='9:00' isBreak={false} speakerName={s('liran.name')} talkTitle={s('liran.talk_title')} icon='/icons/microphone.svg' position='right' link={s('liran.id')}/>
           <AgendaCard hour='9:35' isBreak={false} speakerName={s('rafael.name')} secondSpeakerName={s('rafael.name_2')} talkTitle={s('rafael.talk_title')} icon='/icons/microphone.svg' position='left' link={s('rafael.id')}/>
