@@ -112,6 +112,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.eddiehub.org/" target="_blank" rel="noreferrer">
                     <Image width={80} height={100} src="/eddiehub_logo.png" alt="EddieHub" />
                     </a>
+                    <a href="https://www.devdreams.it/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/devdreams-logo.png" alt="DevDreams" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Patronage</h3>
                 <div className="sponsors_logo">
