@@ -34,6 +34,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.develer.com/" target="_blank" rel="noreferrer">
                     <Image width={300} height={70} src="/develer_logo.png" alt="Develer" />
                     </a>
+                    <a href="https://www.shopware.com/" target="_blank" rel="noreferrer">
+                    <Image width={300} height={200} src="/shopware_logo.svg" alt="Shopware" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Gold</h3>
                 <div className="sponsors_logo">
