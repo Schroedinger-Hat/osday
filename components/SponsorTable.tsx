@@ -46,6 +46,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.nearform.com/" target="_blank" rel="noreferrer">
                         <Image width={300} height={100} src="/nearform_logo.svg" alt="NearForm" />
                     </a>
+                    <a href="https://sysdig.com/" target="_blank" rel="noreferrer">
+                        <Image width={300} height={90} src="/sysdig_logo.svg" alt="sysdig" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Silver</h3>
                 <div className="sponsors_logo">
