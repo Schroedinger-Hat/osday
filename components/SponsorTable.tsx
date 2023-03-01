@@ -38,7 +38,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={300} height={200} src="/shopware_logo.svg" alt="Shopware" />
                     </a>
                     <a href="https://lavorodigitaleitalia.it/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={200} src="/lavorio-digitale-italia_logo.png" alt="Lavorio Digitale Italia" />
+                    <Image width={200} height={150} src="/lavorio-digitale-italia_logo.png" alt="Lavorio Digitale Italia" />
                     </a>
                 </div>
                 <h3 className="sponsors_tier">Gold</h3>
