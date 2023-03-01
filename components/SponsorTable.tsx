@@ -58,6 +58,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://snyk.io/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/snyk-logo.png" alt="Snyk" />
                     </a>
+                    <a href="https://www.permit.io/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/permitio-logo.svg" alt="Permit.io" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
