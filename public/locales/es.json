@@ -187,7 +187,7 @@
       "name": "Rafael Gonzaga",
       "name_2": "Michele Riva",
       "job_title": "Staff Engineer at Nearform",
-      "job_title_2": "Staff Engineer at NearForm, Google GDE, Microsoft MVP, Published Author, International Speaker",
+      "job_title_2": "CTO and Co-Founder at OramaSearch, Google GDE, Microsoft MVP, Published Author, International Speaker",
       "talk_title": "5 Ways You Could Have Hacked Node.js",
       "talk": "All languages and runtimes are or were vulnerable to some kind of threat. We contribute directly to Node.js Security and during the year 2022, we've performed many Security Releases and some of them were really hard to think about. Did you know you can make money by finding critical vulnerabilities in Node.js? In this talk, We’ll show you 5 ways you can have hacked Node.js and how the Node.js team deals with vulnerabilities.",
       "description": "Rafael is a Staff Engineer at NearForm, working full-time on the Node.js runtime as a TSC (Technical Steering Committee) member, especially in the security working group. He's also the maintainer of popular JavaScript libraries such as Fastify and Clinic.js, and he's specialized in performance enhancements and software architecture optimization",
