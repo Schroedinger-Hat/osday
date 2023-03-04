@@ -59,7 +59,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={250} height={100} src="/sparkfabrik_logo.svg" alt="Sparkfabrik" />
                     </a>
                     <a href="https://platformatic.dev/" target="_blank" rel="noreferrer">
-                    <Image width={200} height={100} src="/platformatic-logo.svg" alt="Platformatic" />
+                    <Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />
                     </a>
                     <a href="https://snyk.io/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/snyk-logo.png" alt="Snyk" />
