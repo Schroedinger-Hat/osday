@@ -56,7 +56,7 @@ export default function Agenda() {
           <AgendaCard hour='14:45' isBreak={false} speakerName={s('matteo.name')} talkTitle={s('matteo.talk_title')} icon='/icons/microphone.svg' position='right' link={s('matteo.id')}/>
           <AgendaCard hour='15:20' isBreak={false} speakerName={s('serena.name')} talkTitle={s('serena.talk_title')} icon='/icons/microphone.svg' position='left' link={s('serena.id')}/>
           <AgendaCard hour='15:50' isBreak={true} breakTitle='Coffee break & Giveaway' icon='/icons/coffee.svg' position='right'/>
-          <AgendaCard hour='16:30' isBreak={false} speakerName={s('artem.name')} talkTitle={s('artem.talk_title')} icon='/icons/microphone.svg' position='left' link={s('artem.id')}/>
+          <AgendaCard hour='16:30' isBreak={false} speakerName={s('paolinelli.name')} talkTitle={s('paolinelli.talk_title')} icon='/icons/microphone.svg' position='left' link={s('paolinelli.id')}/>
           <AgendaCard hour='17:05' isBreak={false} speakerName={s('francesco.name')} talkTitle={s('francesco.talk_title')} icon='/icons/microphone.svg' position='right' link={s('francesco.id')}/>
           <AgendaCard hour='17:40' isBreak={true} breakTitle="Conclusion with Schrödinger Hat's admin" icon='/icons/microphone.svg' position='left'/>
           <AgendaCard hour='18:00' isBreak={true} breakTitle="Aperitivo" icon='/icons/drink.svg' position='right'/>

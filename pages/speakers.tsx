@@ -39,7 +39,7 @@ export default function Speakers() {
             <SpeakerHero id={t('serena.id')} image='/speakers/serena-sensini.jpg' name={t('serena.name')} talk={t('serena.talk')} title={t('serena.talk_title')} jobDescription={t('serena.job_title')} githubUrl={t('serena.github_url')} twitterUrl={t('serena.twitter_url')} linkedinUrl={t('serena.linkedin_url')} />
             <SpeakerHero id={t('liran.id')} image='/speakers/liran-tal.png' name={t('liran.name')} talk={t('liran.talk')} title={t('liran.talk_title')} jobDescription={t('liran.job_title')} githubUrl={t('liran.github_url')} twitterUrl={t('liran.twitter_url')} linkedinUrl={t('liran.linkedin_url')} />
             <SpeakerHero id={t('federico.id')} image='/speakers/federico-terzi.png' name={t('federico.name')} talk={t('federico.talk')} title={t('federico.talk_title')} jobDescription={t('federico.job_title')} githubUrl={t('federico.github_url')} twitterUrl={t('federico.twitter_url')} linkedinUrl={t('federico.linkedin_url')} />
-            <SpeakerHero id={t('artem.id')} image='/speakers/artem-trofimov.png' name={t('artem.name')} talk={t('artem.talk')} title={t('artem.talk_title')} jobDescription={t('artem.job_title')} githubUrl={t('artem.github_url')} />
+            <SpeakerHero id={t('paolinelli.id')} image='/speakers/federico-paolinelli.jpg' name={t('paolinelli.name')} talk={t('paolinelli.talk')} title={t('paolinelli.talk_title')} jobDescription={t('paolinelli.job_title')} githubUrl={t('paolinelli.github_url')} twitterUrl={t('paolinelli.twitter_url')} linkedinUrl={t('paolinelli.linkedin_url')} />
           </div>
         </section>
       </div>
