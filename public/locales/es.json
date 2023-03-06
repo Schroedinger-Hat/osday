@@ -124,14 +124,16 @@
     "length": "24 marzo 2023",
     "type": "Speakers",
     "description": "Recibimos más de 140 propuestas de más de 100 ponentes. La votación de la comunidad se realizó en Discord.",
-    "artem": {
-      "id": "artem",
-      "name": "Artem Trofimov",
-      "job_title": "ML infrastructure lead at Nebius",
-      "talk_title": "ʎzy: an open-source platform for hybrid ML pipelines",
-      "talk": "Data science teams often face the following problem: there is plenty of existing code for data preprocessing and model training that works well on the local machine and there is a need to speed it up/scale it out using a cloud/on-prem cluster. Within this problem, on the one hand, a company wants to efficiently utilize expensive hardware. On the other hand, it is important to ensure that data scientists do not need to change their code significantly and can continue to work using familiar dev tools.\n\n ʎzy [ˈlɪzɪ] is an open-source platform (https://github.com/lambdazy/lzy) for running distributed pipelines for ML/DS that is built upon k8s. ʎzy’s role is a middleware between the user’s code and a remote cluster. We aim to lower the entry threshold into distributed computing with high hardware utilization while keeping flexibility for advanced users. ʎzy automatically migrates the user environment to any cluster and optimizes the execution of pipelines defined as ordinary python code.",
-      "description": "Artem Trofimov has both academic and industrial experience in building distributed systems for data science problems. He was a research engineer at JetBrains Research and then joined Yandex Cloud and worked as a team lead of the Yandex DataSphere. Currently, he is a lead of the machine learning infrastructure team at Nebius. ",
-      "github_url": "https://github.com/mrMakaronka"
+    "paolinelli": {
+      "id": "paolinelli",
+      "name": "Federico Paolinelli",
+      "job_title": "Principal Software Engineer at Red Hat",
+      "talk_title": "How to tame a maintainer",
+      "talk": "Contributing to Open Source is hard. Too often we submit a pull request without hearing back from the maintainers, wasting our time that could be spent elsewhere. Being a long time open source contributor, and just recently maintaining MetalLB, a fairly popular open source project, I will share the insights and the issues a contributor (and a maintainer) faces when dealing with new contributions. \n\n I will provide hints and reasons to maximize the chances to steer the maintainers' attention to our work, to gain their trust and establish a profitful relation with the community behind a project.",
+      "description": "Federico works remotely for Red Hat, contributing to network features of the OpenShift container platform. He contributed to a variety of networking and kubernetes related projects, and lately he has been maintaining and leading the MetalLB project, the Kubernetes load balancer implementation for bare metal. Beyond that, he is an active opensource supporter with contributions to various projects, Firefox for Android and Athens, the go dependency proxy among the others.",
+      "github_url": "https://github.com/fedepaol",
+      "twitter_url": "https://twitter.com/fedepaol",
+      "linkedin_url": "https://www.linkedin.com/in/federico-paolinelli-2374954/"
     },
     "matteo": {
       "id": "matteo",
