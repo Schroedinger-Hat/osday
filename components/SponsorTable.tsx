@@ -82,6 +82,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://codemotion.com/" target="_blank" rel="noreferrer">
                     <Image width={300} height={150} src="/codemotion_logo.svg" alt="Codemotion" />
                     </a>
+                    <a href="https://www.linkedin.com/company/datapizza" target="_blank" rel="noreferrer">
+                    <Image width={330} height={100} src="/datapizza_logo.png" alt="Datapizza" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Swag</h3>
                 <div className="sponsors_logo">
