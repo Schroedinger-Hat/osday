@@ -37,7 +37,7 @@ export default function CodeOfConduct() {
 
           <p>
             Titolare del trattamento è l&lsquo; Associazione non riconosciuta
-            Schrodinger Hat, in persona dei soci Michele Lombardi, Gabriele
+            Schrodinger Hat, in persona dei soci Miki Lombardi, Gabriele
             Puliti, Nicola Puppa, Davide Imola, Lorenzo Pieri (in seguito,
             “Titolare”). L&lsquo; Associazione non riconosciuta Schrodinger Hat,
             provvede a svolgere attività didattica in ambito di progettazione
