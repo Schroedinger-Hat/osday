@@ -48,9 +48,7 @@ export default function Footer() {
           </div>
           <div className="footer-footer">
             <p className="left">
-              <Link href={'/policies'}>{t('privacy_policy')}</Link>
-              <span>|</span>
-              <Link href={'/rules'}>{t('rules')}</Link>
+              <Link href={'/privacy-and-permissions'}>{t('privacy_permissions')}</Link>
               <span>|</span>
               <Link href={'/dei'}>{t('dei')}</Link>
               <span>|</span>
