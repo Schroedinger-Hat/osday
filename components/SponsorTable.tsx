@@ -139,6 +139,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.gdgpisa.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/logo-gdg-pisa.svg" alt="GDG Pisa" />
                     </a>
+                    <a href="https://t.me/+IxwjMC4ytMU4YjRk" target="_blank" rel="noreferrer">
+                    <Image width={120} height={100} src="/hr-feat-ict_logo.png" alt="HR feat. ICT" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Patronage</h3>
                 <div className="sponsors_logo">
