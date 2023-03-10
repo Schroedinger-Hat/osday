@@ -54,7 +54,7 @@ export default function Footer() {
               <span>|</span>
               <Link href={'/code-of-conduct'}>{t('coc')}</Link>
             </p>
-            <p className="center">Made with ❤️ in Florence & Paris</p>
+            <p className="center">Made with ❤️ in Florence & Paris and Netlify</p>
             <p className="right">©{(new Date()).getFullYear()} Schrödinger Hat</p>
           </div>
         </div>
