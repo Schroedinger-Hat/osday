@@ -86,6 +86,32 @@ Contributions are what make the open source community such an amazing place to l
 If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
 Don't forget to give the project a star! Thanks again!
 
+## Contributors
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/404answernotfound"><img src="https://avatars.githubusercontent.com/u/79904453?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Lorenzo Pieri</b></sub></a></td>
+      <td align="center"><a href="https://github.com/nicpuppa"><img src="https://avatars.githubusercontent.com/u/72783243?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicola Puppa</b></sub></a></td>
+      <td align="center"><a href="https://github.com/thejoin95"><img src="https://avatars.githubusercontent.com/u/6616203?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Miki Lombardi</b></sub></a></td>
+      <td align="center"><a href="https://github.com/wabri"><img src="https://avatars.githubusercontent.com/u/12409541?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Gabriele Puliti</b></sub></a></td>
+      <td align="center"><a href="https://github.com/pewpewnor"><img src="https://avatars.githubusercontent.com/u/125549982?v=4?s=100" width="100px;" alt=""/><br /><sub><b>pewpewnor</b></sub></a></td>
+      <td align="center"><a href="https://github.com/davideimola"><img src="https://avatars.githubusercontent.com/u/14623986?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Davide Imola</b></sub></a></td>
+      <td align="center"><a href="https://github.com/AngyDev"><img src="https://avatars.githubusercontent.com/u/44018650?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Angela Busato</b></sub></a></td>
+    </tr>
+    <tr>      
+      <td align="center"><a href="https://github.com/N-dcool"><img src="https://avatars.githubusercontent.com/u/107427909?v=4?s=100" width="100px;" alt=""/><br /><sub><b>NARESH CHOUDHARY</b></sub></a></td>
+      <td align="center"><a href="https://github.com/Balastrong"><img src="https://avatars.githubusercontent.com/u/7253929?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Leonardo Montini</b></sub></a></td>
+      <td align="center"><a href="https://github.com/Cadienvan"><img src="https://avatars.githubusercontent.com/u/5492927?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Michael Di Prisco</b></sub></a></td>  
+      <td align="center"><a href="https://github.com/cortinico"><img src="https://avatars.githubusercontent.com/u/3001957?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nicola Corti</b></sub></a></td>
+      <td align="center"><a href="https://github.com/mateonunez"><img src="https://avatars.githubusercontent.com/u/11861080?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Mateo Nunez</b></sub></a></td>
+      <td align="center"><a href="https://github.com/tarunsamanta2k20"><img src="https://avatars.githubusercontent.com/u/55488549?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Tarun Samanta</b></sub></a></td>
+      <td align="center"><a href="https://github.com/and-kushnir"><img src="https://avatars.githubusercontent.com/u/73612844?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Andrey Kushnir
+</b></sub></a></td>
+    </tr>
+  </tbody>
+</table>
+
 <!-- CONTACT -->
 
 ## Contact
@@ -105,4 +131,3 @@ Project Link: [https://github.com/Schrodinger-Hat/osday-2023](https://github.com
 [stars-url]: https://github.com/Schrodinger-Hat/osday-2023/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
 [issues-url]: https://github.com/Schrodinger-Hat/osday-2023/issues
-
