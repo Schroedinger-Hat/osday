@@ -143,7 +143,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={120} height={100} src="/hr-feat-ict_logo.png" alt="HR feat. ICT" />
                     </a>
                     <a href="https://linktr.ee/continuousdelivery" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/logo-CD.svg" alt="Continous Delivery" />
+                    <Image width={150} height={150} src="/logo-CD.svg" alt="Continous Delivery" />
                     </a>
                 </div>
                 <h3 className="sponsors_tier">Patronage</h3>
