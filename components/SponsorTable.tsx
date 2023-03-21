@@ -103,6 +103,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://mule.to/p3n8" target="_blank" rel="noreferrer">
                     <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule" />
                     </a>
+                    <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
+                    <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Community</h3>
                 <div className="sponsors_logo">
