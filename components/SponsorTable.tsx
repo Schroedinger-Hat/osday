@@ -67,6 +67,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.permit.io/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/permitio-logo.svg" alt="Permit.io" />
                     </a>
+                    <a href="https://www.oramasearch.com/" target="_blank" rel="noreferrer">
+                    <Image width={150} height={100} src="/logo-orama.svg" alt="Orama Search" />
+                    </a>
                 </div>
                 <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
