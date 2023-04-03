@@ -101,16 +101,16 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/speakers'}>
             {t('speakers_Link')}
           </Link>
-          <Link onClick={closeSideBar} href={'/cfp'}>
+{/*           <Link onClick={closeSideBar} href={'/cfp'}>
             {t('cfp_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
-          </Link>
+          </Link> */}
           <Link onClick={closeSideBar} href={'/edition2021'}>
             {t('edition')}
           </Link>
-          <a className='button' target='_blank' href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'} rel="noreferrer">Free Tickets</a>
+{/*           <a className='button' target='_blank' href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'} rel="noreferrer">Free Tickets</a> */}
           <div className="language-switcher">
             <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
             {languageSwitcherOpen === true ? (
@@ -165,13 +165,13 @@ export default function Header() {
         <li>
           <Link href={'/speakers'}>{t('speakers_Link')}</Link>
         </li>
-        <li>
+{/*         <li>
           <Link href={'/cfp'}>{t('cfp_link')}</Link>
         </li>
         <li>
           <Link href={'/cfv'}>{t('cfv_link')}</Link>
-        </li>
-        <li>
+        </li> */}
+{/*         <li>
           <a
             className='button'
             target='_blank'
@@ -180,7 +180,7 @@ export default function Header() {
           >
             Free Tickets
           </a>
-        </li>
+        </li> */}
       </ul>
       <ul>
         <li>
@@ -217,36 +217,9 @@ export default function Header() {
           {notificationOpen === true ? (
             <div className="notification-menu">
               <ul>
-              <Link target="_blank" href="https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577">
-                  <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n6'))}
-                  </li>
-                </Link>
-                <Link target="_blank" href="https://www.nanabianca.it/">
-                  <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n5'))}
-                  </li>
-                </Link>
-                <Link target="_blank" href="https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577">
-                  <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n4'))}
-                  </li>
-                </Link>
-                <Link href="/cfp">
+                <Link href="https://www.schrodinger-hat.it/">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n1'))}
-                  </li>
-                </Link>
-                <Link href="/sponsor">
-                  <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" />
-                    {substringNotification(t('notification.n2'))}
-                  </li>
-                </Link>
-                <Link href="/about">
-                  <li>
-                    <Image src="/sh.png" alt="" width="20" height="20" />
-                    {substringNotification(t('notification.n3'))}
                   </li>
                 </Link>
               </ul>

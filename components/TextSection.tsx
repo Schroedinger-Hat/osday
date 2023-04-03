@@ -9,7 +9,6 @@ export default function TextSection({
   heading2: string | ReactNode;
   text?: string | ReactNode | null;
 }) {
-  // const t = useTranslations('TextSection');
   return (
     <section className="after_main text_section">
       <h3>{heading1}</h3>

@@ -30,7 +30,6 @@ export default function Sponsor() {
             text: t('maincta_text'),
             link: 'mailto:osday@schrodinger-hat.it'
           }}
-          showTicketBtn
         />
 
         <SponsorshipTable />

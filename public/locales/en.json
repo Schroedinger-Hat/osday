@@ -26,18 +26,13 @@
     "about_link": "About",
     "sponsor_link": "Sponsor",
     "speakers_Link": "Speakers",
-    "cfp_link": "CFP",
-    "cfv_link": "CFV",
+    "cfp_link": "CFP (ended)",
+    "cfv_link": "CFV (ended)",
     "updates": "Notification",
     "erwin_alt": "Picture of Erwin Schrodinger",
     "edition": "Edition 2021",
     "notification": {
-      "n1": "CFP is now live!",
-      "n2": "Call for Sponsors is now open",
-      "n3": "OSday repo has been created",
-      "n4": "Tickets are now available",
-      "n5": "Announcement of the venue",
-      "n6": "CFP Closed! Get your ticket now :)"
+      "n1": "The conference was incredible! Thank you for participating!"
     }
   },
   "InternalError": {
@@ -246,8 +241,8 @@
   },
   "Main": {
     "email": "Send us an email",
-    "description_1": "We are coming back with a new edition of the Open Source Day conference. In this season we are going to smash everything. Join us on the 24th of March 2023!",
-    "description_2": "Starring: The best companies and the best professionals in the sector in Open Source projects"
+    "description_1": "Open Source Day 2023 was amazing! So many incredible speakers and participants. You, being there, made this event possible and beautiful. Thank you for being there :)",
+    "description_2": "We are coming back in 2024, stay tuned and join us on Discord or LinkedIn"
   },
   "Sponsor": {
     "title": "Open Source Day 2023",
