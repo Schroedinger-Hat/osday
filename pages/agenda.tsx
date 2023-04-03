@@ -37,7 +37,6 @@ export default function Agenda() {
             text: t('secondarycta_text'),
             link: 'mailto:osday@schrodinger-hat.it'
           }}
-          showTicketBtn
         />
 
         <div className="timeline">
