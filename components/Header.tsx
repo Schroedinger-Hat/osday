@@ -110,6 +110,7 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/edition2021'}>
             {t('edition')}
           </Link>
+          <a className='button' target='_blank' href={'https://www.flickr.com/photos/197981994@N04/albums/72177720307039165'} rel="noreferrer">{t('photo_link')}</a>
 {/*           <a className='button' target='_blank' href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'} rel="noreferrer">Free Tickets</a> */}
           <div className="language-switcher">
             <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
@@ -165,6 +166,14 @@ export default function Header() {
         <li>
           <Link href={'/speakers'}>{t('speakers_Link')}</Link>
         </li>
+        <a
+            className='button'
+            target='_blank'
+            href={'https://www.flickr.com/photos/197981994@N04/albums/72177720307039165'}
+            rel="noreferrer"
+        >
+          {t('photo_link')}
+        </a>
 {/*         <li>
           <Link href={'/cfp'}>{t('cfp_link')}</Link>
         </li>
