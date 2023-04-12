@@ -1,4 +1,4 @@
-# osday-2023
+# osday
 <div align='center'>
   
 [![Contributors][contributors-shield]][contributors-url]
@@ -118,16 +118,16 @@ Don't forget to give the project a star! Thanks again!
 
 Schrodinger's Hat Team - [@schrodinger_hat](mailto:osday@schrodinger-hat.it)
 
-Project Link: [https://github.com/Schrodinger-Hat/osday-2023](https://github.com/Schrodinger-Hat/osday-2023)
+Project Link: [https://github.com/Schrodinger-Hat/osday](https://github.com/Schrodinger-Hat/osday)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
-[contributors-url]: https://github.com/Schrodinger-Hat/osday-2023/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
-[forks-url]: https://github.com/Schrodinger-Hat/osday-2023/network/members
-[stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/osday-2023?style=for-the-badge
-[stars-url]: https://github.com/Schrodinger-Hat/osday-2023/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/osday-2023.svg?style=for-the-badge
-[issues-url]: https://github.com/Schrodinger-Hat/osday-2023/issues
+[contributors-shield]: https://img.shields.io/github/contributors/Schrodinger-Hat/osday.svg?style=for-the-badge
+[contributors-url]: https://github.com/Schrodinger-Hat/osday/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/osday.svg?style=for-the-badge
+[forks-url]: https://github.com/Schrodinger-Hat/osday/network/members
+[stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/osday?style=for-the-badge
+[stars-url]: https://github.com/Schrodinger-Hat/osday/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/osday.svg?style=for-the-badge
+[issues-url]: https://github.com/Schrodinger-Hat/osday/issues
