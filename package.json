@@ -16,7 +16,7 @@
     "eslint-config-next": "^13.1.6",
     "i18next": "^22.0.4",
     "next": "13.0.2",
-    "next-intl": "^2.9.1",
+    "next-intl": "^2.14.6",
     "react": "18.2.0",
     "react-burger-menu": "^3.0.8",
     "react-cookie-consent": "^8.0.1",
