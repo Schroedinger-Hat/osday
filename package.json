@@ -13,7 +13,7 @@
     "@types/react": "18.0.25",
     "@types/react-dom": "18.0.8",
     "eslint": "8.27.0",
-    "eslint-config-next": "^13.1.6",
+    "eslint-config-next": "^13.4.4",
     "i18next": "^22.0.4",
     "next": "13.0.2",
     "next-intl": "^2.9.1",
