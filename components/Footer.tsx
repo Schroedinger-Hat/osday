@@ -25,7 +25,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/schrodinger-hat/" title="Linkedin" target="_blank" rel="noreferrer">
               <Image width={28} height={28} src="/icons/linkedin.svg" alt="Linkedin" />
             </a>
-            <a href="https://github.com/Schrodinger-Hat/osday-2023/" target="_blank" rel="noreferrer" title="Github">
+            <a href="https://github.com/Schrodinger-Hat/osday/" target="_blank" rel="noreferrer" title="Github">
               <Image width={30} height={30} src="/icons/github.svg" alt="Github" />
             </a>
             <a href="https://opencollective.com/schrodinger-hat/contribute" title="OpenCollective" target="_blank" rel="noreferrer">
@@ -35,13 +35,13 @@ export default function Footer() {
           <div className="footer-center">
             <p>
               {t('github_repo_1')}
-              <a href="https://github.com/Schrodinger-Hat/osday-2023/" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Schrodinger-Hat/osday/" target="_blank" rel="noreferrer">
               {t('github_repo_2')}
               </a>
             </p>
             <p>
               {t('github_issue_1')}
-              <a href="https://github.com/Schrodinger-Hat/osday-2023/issues" target="_blank" rel="noreferrer">
+              <a href="https://github.com/Schrodinger-Hat/osday/issues" target="_blank" rel="noreferrer">
               {t('github_issue_2')}
               </a>
             </p>

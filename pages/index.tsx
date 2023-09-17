@@ -8,14 +8,34 @@ import { TTalkCard, talks2023 } from "../constants";
 export default function Home() {
   return (
     <>
-      <Main />
-      <section className="talks_2023">
+      <div className="title-box" style={{
+        width: 'auto',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        height: 'calc(100vh - 335px)',
+      }}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          alignItems: 'center',
+          margin: 'auto',
+        }}>
+          <h1>
+            Schrödinger Hat <span>Originals</span>
+          </h1>
+
+        <h2>Open Source Day 2024</h2>
+        <h3>We are coming, again. Stay tuned.</h3>
+        </div>
+    </div>
+      {/* <section className="talks_2023">
         <div className="talks_container">
           {talks2023.map((talk: TTalkCard) => {
               return <TalkCard key={talk.id} {...talk} />;
             })}
         </div>
-      </section>
+      </section> */}
     </>
   );
 }
@@ -24,9 +44,9 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: "Open Source Day 2023 - Florence",
+        title: "Open Source Day 2024 - Florence",
         description:
-          "Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social",
+          "Open Source Day 2024. We are coming, again. Stay tuned on our social",
       },
       messages: (await import(`../public/locales/${locale}.json`)).default,
     },
