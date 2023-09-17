@@ -48,7 +48,7 @@ const Hero = ({
         </h1>
       )}
 
-      {subtitle ? <h2>{subtitle}</h2> : <h2>Open Source Day 2023</h2>}
+      {subtitle ? <h2>{subtitle}</h2> : <h2>Open Source Day 2024</h2>}
 
       {props.date && (
         <ul>
