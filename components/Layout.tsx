@@ -83,7 +83,7 @@ export default function Layout({
                 <meta property="og:url" content="https://2024.osday.dev" />
                 <meta name="twitter:card" content="https://osday.dev/intro.png" />
 
-                <meta property="og:description" content="Open Source Day 2024 coming soon on March 2024. Stay tuned on our social" />
+                <meta property="og:description" content="Open Source Day 2024 coming soon on March 2024. Stay tuned on our socials" />
                 <meta property="og:site_name" content="Open Source Day 2024" />
                 <meta name="twitter:image:alt" content="Open Source Day 2024" />
 
