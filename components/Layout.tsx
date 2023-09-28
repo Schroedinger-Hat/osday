@@ -100,7 +100,7 @@ export default function Layout({
             </Head>
             <main>
                 <div className='image-background'>
-                    {/* <Header /> */}
+                    <Header />
                     <section className='content'>{children}</section>
                     {/* <SponsorTable isVisible={areSponsorVisible()}/> */}
                 </div>
