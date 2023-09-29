@@ -13,7 +13,7 @@ export default function Home() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: 'calc(100vh - 335px)',
+        height: 'calc(100vh - 550px)',
       }}>
         <div style={{
           display: 'flex',

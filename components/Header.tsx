@@ -83,7 +83,7 @@ export default function Header() {
               onClick={closeSideBar}
             />
           </Link>
-          <Link onClick={closeSideBar} href={'/'}>
+          {/*<Link onClick={closeSideBar} href={'/'}>
             {t('home_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/agenda'}>
@@ -100,13 +100,17 @@ export default function Header() {
           </Link>
           <Link onClick={closeSideBar} href={'/speakers'}>
             {t('speakers_Link')}
-          </Link>
+          </Link>*/}
 {/*           <Link onClick={closeSideBar} href={'/cfp'}>
             {t('cfp_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
           </Link> */}
+
+          <Link onClick={closeSideBar} target='_blank' href={'https://2023.osday.dev'}>
+            {t('edition')}
+          </Link>
           <Link onClick={closeSideBar} href={'/edition2021'}>
             {t('edition')}
           </Link>
@@ -148,7 +152,7 @@ export default function Header() {
             <Image width={50} height={50} alt={t('sh_alt')} src="/sh.png" />
           </Link>
         </li>
-        <li>
+        {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
         </li>
         <li>
@@ -173,7 +177,7 @@ export default function Header() {
             rel="noreferrer"
         >
           {t('photo_link')}
-        </a>
+            </a>*/}
 {/*         <li>
           <Link href={'/cfp'}>{t('cfp_link')}</Link>
         </li>
@@ -193,9 +197,9 @@ export default function Header() {
       </ul>
       <ul>
         <li>
-          <Link href={'/edition2021'}>{t('edition')}</Link>
+          <Link className='button' target='_blank' href={'https://2023.osday.dev'}>{t('edition')}</Link>
         </li>
-        <li>
+        {/*<li>
           <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
         </li>
         <li className="second-menu">
@@ -235,6 +239,7 @@ export default function Header() {
             </div>
           ) : null}
         </li>
+      */}
         <li className="language-switcher">
           <a onClick={(e) => setLanguage(e)} href="#">{availableLocales[languageCode]}</a>
           {languageSwitcherOpen === true ? (
