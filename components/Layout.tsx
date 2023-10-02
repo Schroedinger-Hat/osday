@@ -129,6 +129,11 @@ export default function Layout({
                 gtag('send', 'pageview');
                 `}
             </Script>
+            <Script
+                async
+                src="https://eocampaign1.com/form/e9fb84c2-ebfc-11ed-8424-fbce0ce9d7bc.js"
+                data-form="e9fb84c2-ebfc-11ed-8424-fbce0ce9d7bc"
+            />
         </>
     );
 }

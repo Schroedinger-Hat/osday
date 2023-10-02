@@ -1494,6 +1494,10 @@ div.image .img {
   width: 60%;
 }
 
+.slide-in-container-inner .mastfoot {
+  display: none !important;
+}
+
 @media screen and (max-width: 1500px) {
   .talks_container {
     grid-template-columns: 1fr;
