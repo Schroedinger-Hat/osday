@@ -17,6 +17,10 @@
     "maincta_text": "Envoyez-nous un mail :)",
     "description_1": "Vous pouvez trouver toutes les informations sur la communauté sur notre site web"
   },
+  "Landing": {
+    "title": "Nous arrivons, à nouveau. Restez à l'écoute",
+    "support_us": "Aidez-nous OSDay24"
+  },
   "Header": {
     "menu_label": "Le bouton de menu ouvre la barre latérale avec des liens",
     "sh_alt": "Logo de la communauté Schrodingers Hat - Rejoignez la communauté open source",

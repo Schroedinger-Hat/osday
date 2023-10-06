@@ -1,12 +1,8 @@
-import { t } from "i18next";
-import Main from "../components/Main";
-import SpeakerHero from "../components/SpeakerHero";
-import TextSection from "../components/TextSection";
-import TalkCard from "../components/TalkCard";
-import { TTalkCard, talks2023 } from "../constants";
 import Link from "next/link";
+import { useTranslations } from "next-intl";
 
 export default function Home() {
+  const t = useTranslations('Landing');
   return (
     <>
       <div className="title-box" style={{
@@ -27,8 +23,8 @@ export default function Home() {
           </h1>
 
         <h2>Open Source Day 2024</h2>
-        <h3>We are coming, again. Stay tuned.</h3>
-        <Link className='button' href={'/sponsor'}>Support OSDay24</Link>
+        <h3>{t('title')}</h3>
+        <Link className='button' href={'/sponsor'}>{t('support_us')}</Link>
         </div>
     </div>
       {/* <section className="talks_2023">
