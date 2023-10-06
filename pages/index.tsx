@@ -4,6 +4,7 @@ import SpeakerHero from "../components/SpeakerHero";
 import TextSection from "../components/TextSection";
 import TalkCard from "../components/TalkCard";
 import { TTalkCard, talks2023 } from "../constants";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
 
         <h2>Open Source Day 2024</h2>
         <h3>We are coming, again. Stay tuned.</h3>
+        <Link className='button' href={'/sponsor'}>Support OSDay24</Link>
         </div>
     </div>
       {/* <section className="talks_2023">
