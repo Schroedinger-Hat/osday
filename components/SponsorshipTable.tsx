@@ -7,11 +7,10 @@ type TPremiums = {
   text: string;
   has: {
     community: boolean;
-    brand: boolean;
     silver: boolean;
     gold: boolean;
-    diamond: boolean;
     platinum: boolean;
+    diamond: boolean;
   };
   image?: string;
   url?: string;
@@ -28,11 +27,10 @@ const premiums: TPremiums[] = [
     text: 'Thank you',
     has: {
       community: true,
-      brand: true,
       silver: true,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
     }
   },
   {
@@ -40,11 +38,10 @@ const premiums: TPremiums[] = [
     text: 'Social post with logo',
     has: {
       community: true,
-      brand: true,
       silver: true,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
     }
   },
   {
@@ -52,11 +49,10 @@ const premiums: TPremiums[] = [
     text: 'Logo on website',
     has: {
       community: true,
-      brand: true,
       silver: true,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
     }
   },
   {
@@ -64,11 +60,21 @@ const premiums: TPremiums[] = [
     text: 'Social Awareness',
     has: {
       community: true,
-      brand: true,
       silver: true,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
+    }
+  },
+  {
+    type: 'badge',
+    text: 'Conference Badge',
+    has: {
+      community: false,
+      silver: false,
+      gold: true,
+      platinum: true,
+      diamond: true,
     }
   },
   {
@@ -76,11 +82,10 @@ const premiums: TPremiums[] = [
     text: 'Logo on poster',
     has: {
       community: false,
-      brand: false,
       silver: true,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
     }
   },
   {
@@ -88,11 +93,10 @@ const premiums: TPremiums[] = [
     text: 'Rollup Logo Print',
     has: {
       community: false,
-      brand: false,
       silver: true,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
     }
   },
   {
@@ -100,11 +104,43 @@ const premiums: TPremiums[] = [
     text: 'Logo in streaming',
     has: {
       community: false,
-      brand: false,
+      silver: true,
+      gold: true,
+      platinum: true,
+      diamond: true,
+    }
+  },
+  {
+    type: 'jobOffer',
+    text: 'Job Offer',
+    has: {
+      community: false,
       silver: false,
       gold: true,
+      platinum: true,
       diamond: true,
-      platinum: true
+    }
+  },
+  {
+    type: 'jobInNewsletter',
+    text: 'Job Offer in Newsletter',
+    has: {
+      community: false,
+      silver: false,
+      gold: false,
+      platinum: false,
+      diamond: true,
+    }
+  },
+  {
+    type: 'jobInDiscord',
+    text: 'Job Offer pinned Discord',
+    has: {
+      community: false,
+      silver: false,
+      gold: false,
+      platinum: false,
+      diamond: true,
     }
   },
   {
@@ -112,37 +148,34 @@ const premiums: TPremiums[] = [
     text: "Attendee's list",
     has: {
       community: false,
-      brand: false,
       silver: false,
       gold: false,
+      platinum: true,
       diamond: true,
-      platinum: true
+    }
+  },
+  {
+    type: 'unattendedBooth',
+    text: 'Unattended Booth',
+    has: {
+      community: false,
+      silver: false,
+      gold: true,
+      platinum: false,
+      diamond: false,
     }
   },
   {
     type: 'standExpoArea',
-    text: 'Stand in Expo Area',
+    text: 'Stand in Conference Hall',
     has: {
       community: false,
-      brand: false,
       silver: false,
       gold: false,
+      platinum: true,
       diamond: true,
-      platinum: true
     }
   },
-  {
-    type: 'techTalk',
-    text: 'Tech talk (non commercial)',
-    has: {
-      community: false,
-      brand: false,
-      silver: false,
-      gold: false,
-      diamond: false,
-      platinum: true
-    }
-  }
 ];
 
 export default function SponsorshipTable() {
@@ -155,25 +188,25 @@ export default function SponsorshipTable() {
           <div className="sponsortable_tiers_card">
             <span className="">
               Silver <br />
-              &euro; 500{' '}
-            </span>
-          </div>
-          <div className="sponsortable_tiers_card">
-            <span className="">
-              Gold <br />
               &euro; 1000{' '}
             </span>
           </div>
           <div className="sponsortable_tiers_card">
             <span className="">
-              Diamond <br />
-              &euro; 1500{' '}
+              Gold <br />
+              &euro; 2000{' '}
             </span>
           </div>
           <div className="sponsortable_tiers_card">
             <span className="">
               Platinum <br />
               &euro; 3000{' '}
+            </span>
+          </div>
+          <div className="sponsortable_tiers_card">
+          <span className="">
+              Diamond <br />
+              &euro; 4000{' '}
             </span>
           </div>
         </div>
@@ -185,19 +218,16 @@ export default function SponsorshipTable() {
                 <span className="">community</span>
               </th>
               <th className="sponsortable_tiers_card">
-                <span className="">brand</span>
-              </th>
-              <th className="sponsortable_tiers_card">
                 <span className="">silver</span>
               </th>
               <th className="sponsortable_tiers_card">
                 <span className="">gold</span>
               </th>
               <th className="sponsortable_tiers_card">
-                <span className="">diamond</span>
+                <span className="">platinum</span>
               </th>
               <th className="sponsortable_tiers_card">
-                <span className="">platinum</span>
+                <span className="">diamond</span>
               </th>
             </tr>
           </thead>
@@ -208,13 +238,6 @@ export default function SponsorshipTable() {
                   <td>{premium.text}</td>
                   <td className="sponsortable_onlyDesktop">
                     {premium.has.community ? (
-                      <span className="confirmed_tier">&#10004;</span>
-                    ) : (
-                      <span>&#10007;</span>
-                    )}
-                  </td>
-                  <td className="sponsortable_onlyDesktop">
-                    {premium.has.brand ? (
                       <span className="confirmed_tier">&#10004;</span>
                     ) : (
                       <span>&#10007;</span>
@@ -235,14 +258,14 @@ export default function SponsorshipTable() {
                     )}
                   </td>
                   <td>
-                    {premium.has.diamond ? (
+                    {premium.has.platinum ? (
                       <span className="confirmed_tier">&#10004;</span>
                     ) : (
                       <span>&#10007;</span>
                     )}
                   </td>
                   <td>
-                    {premium.has.platinum ? (
+                    {premium.has.diamond ? (
                       <span className="confirmed_tier">&#10004;</span>
                     ) : (
                       <span>&#10007;</span>
@@ -259,49 +282,28 @@ export default function SponsorshipTable() {
                 <i>
                   {t.rich('send_email_sm', {
                     email: (children: ReactNode) => (
-                      <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                      <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Community Partner">
                         <u>{children}</u>
                       </a>
                     )
                   })}
                 </i>
-              </td>
-              <td>
-                <i>
-                  {t.rich('send_email_sm', {
-                    email: (children: ReactNode) => (
-                      <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
-                        <u>{children}</u>
-                      </a>
-                    )
-                  })}
-                </i>
-              </td>
-              <td>
-                &euro; 500 <br />
-                {t.rich('send_email_sm', {
-                  email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
-                      <u>{children}</u>
-                    </a>
-                  )
-                })}
               </td>
               <td>
                 &euro; 1000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Silver Partner">
                       <u>{children}</u>
                     </a>
                   )
                 })}
               </td>
               <td>
-                &euro; 1500 <br />
+                &euro; 2000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Gold Partner">
                       <u>{children}</u>
                     </a>
                   )
@@ -311,7 +313,17 @@ export default function SponsorshipTable() {
                 &euro; 3000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Platinum Partner">
+                      <u>{children}</u>
+                    </a>
+                  )
+                })}
+              </td>
+              <td>
+                &euro; 4000 <br />
+                {t.rich('send_email_sm', {
+                  email: (children: ReactNode) => (
+                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Diamond Partner">
                       <u>{children}</u>
                     </a>
                   )
@@ -328,7 +340,7 @@ export default function SponsorshipTable() {
             offer={t('community_offer')}
             emailLink={t.rich('send_email', {
               email: (children: ReactNode) => (
-                <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Community Partner">
+                <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Community Partner">
                   <u>{children}</u>
                 </a>
               )
@@ -340,7 +352,7 @@ export default function SponsorshipTable() {
             offer={t('media_offer')}
             emailLink={t.rich('send_email', {
               email: (children: ReactNode) => (
-                <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2023, Media Partner">
+                <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Media Partner">
                   <u>{children}</u>
                 </a>
               )

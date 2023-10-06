@@ -95,9 +95,6 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/about'}>
             {t('about_link')}
           </Link>
-          <Link onClick={closeSideBar} href={'/sponsor'}>
-            {t('sponsor_link')}
-          </Link>
           <Link onClick={closeSideBar} href={'/speakers'}>
             {t('speakers_Link')}
           </Link>*/}
@@ -107,7 +104,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
           </Link> */}
-
+          <Link onClick={closeSideBar} href={'/sponsor'}>
+            {t('sponsor_link')}
+          </Link>
           <Link onClick={closeSideBar} target='_blank' href={'https://2023.osday.dev'}>
             {t('edition')}
           </Link>
@@ -165,9 +164,6 @@ export default function Header() {
           <Link href={'/about'}>{t('about_link')}</Link>
         </li>
         <li>
-          <Link href={'/sponsor'}>{t('sponsor_link')}</Link>
-        </li>
-        <li>
           <Link href={'/speakers'}>{t('speakers_Link')}</Link>
         </li>
         <a
@@ -196,6 +192,9 @@ export default function Header() {
         </li> */}
       </ul>
       <ul>
+        <li>
+          <Link href={'/sponsor'}>{t('sponsor_link')}</Link>
+        </li>
         <li>
           <Link className='button' target='_blank' href={'https://2023.osday.dev'}>{t('edition')}</Link>
         </li>
