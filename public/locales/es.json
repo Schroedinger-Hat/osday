@@ -17,6 +17,10 @@
     "maincta_text": "Envíanos un correo :)",
     "description_1": "Puedes encontrar toda la información sobre la comunidad en nuestra web"
   },
+  "Landing": {
+    "title": "Estamos llegando, otra vez. Estad atentos",
+    "support_us": "Ayúdenos a OSDay24"
+  },
   "Header": {
     "menu_label": "El botón del menú abre la barra lateral con enlaces",
     "sh_alt": "Logotipo de la Comunidad del Sombrero de Schrodingers - Únase a la comunidad de código abierto",

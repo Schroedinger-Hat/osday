@@ -17,6 +17,10 @@
     "maincta_text": "Inviaci una mail :)",
     "description_1": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
   },
+  "Landing": {
+    "title": "Stiamo tornando, ancora una volta.",
+    "support_us": "Supporta OSDay24"
+  },
   "Header": {
     "menu_label": "Il pulsante del menu apre la barra laterale con i collegamenti",
     "sh_alt": "Logo Community Schrodingers Hat - Unisciti alla Community",
