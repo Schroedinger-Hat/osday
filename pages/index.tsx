@@ -5,12 +5,11 @@ export default function Home() {
   const t = useTranslations('Landing');
   return (
     <>
-      <div className="title-box" style={{
+      <div className="title-box landing-page" style={{
         width: 'auto',
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        height: 'calc(100vh - 550px)',
       }}>
         <div style={{
           display: 'flex',

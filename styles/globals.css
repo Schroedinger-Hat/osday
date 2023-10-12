@@ -182,6 +182,10 @@ button {
   z-index: 1;
 }
 
+.title-box.landing-page {
+  height: calc(100vh - 550px); /* temporary, landing page */
+}
+
 .title-box h1 {
   text-transform: uppercase;
   font-weight: bold;
@@ -1302,6 +1306,10 @@ div.image .img {
   .title-box {
     position: relative;
     z-index: 1;
+  }
+
+  .title-box.landing-page {
+    height: auto;
   }
 
   .talks_2021, .talks_2023 {

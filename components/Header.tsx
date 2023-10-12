@@ -111,7 +111,7 @@ export default function Header() {
             {t('edition')}
           </Link>
           <Link onClick={closeSideBar} href={'/edition2021'}>
-            {t('edition')}
+            {t('edition21')}
           </Link>
           <a className='button' target='_blank' href={'https://www.flickr.com/photos/197981994@N04/albums/72177720307039165'} rel="noreferrer">{t('photo_link')}</a>
 {/*           <a className='button' target='_blank' href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'} rel="noreferrer">Free Tickets</a> */}
@@ -194,6 +194,9 @@ export default function Header() {
       <ul>
         <li>
           <Link href={'/sponsor'}>{t('sponsor_link')}</Link>
+        </li>
+        <li>
+          <Link href={'/edition2021'} target='_blank'>{t('edition21')}</Link>
         </li>
         <li>
           <Link className='button' target='_blank' href={'https://2023.osday.dev'}>{t('edition')}</Link>
