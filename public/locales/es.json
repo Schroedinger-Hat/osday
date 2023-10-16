@@ -59,6 +59,17 @@
     "type": "HTTP Error",
     "description": "Parece que has encontrado la temporada secreta de la mejor serie de este tiempo, ¡404! ¿Te gustaría volver? :)"
   },
+  "Newsletter": {
+    "title": "Open Source Day 2024",
+    "subtitle": "El open source te quiere",
+    "where": "Ovunque",
+    "when": "Una volta al mese",
+    "length": "07/08 Marzo 2024",
+    "type": "Newsletter",
+    "description": "Suscríbase al boletín para estar al día sobre el Día del Software Libre 2024, la Sesión Schrodinger y otras noticias. No enviaremos spam, lo prometemos.",
+    "subscribe": "Me suscribo",
+    "thanks": "Gracias por inscribirte, hasta pronto."
+  },
   "About": {
     "title": "Open Source Day 2024",
     "subtitle": "A propósito de",

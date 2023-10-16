@@ -59,6 +59,17 @@
     "type": "Erreur HTTP",
     "description": "Il semble que vous ayez trouvé la saison secrète de la meilleure émission de l'époque, 404 ! Voulez-vous revenir en arrière ? :)"
   },
+  "Newsletter": {
+    "title": "Open Source Day 2024",
+    "subtitle": "L'open source vous aime !",
+    "where": "Ovunque",
+    "when": "Una volta al mese",
+    "length": "07/08 Marzo 2024",
+    "type": "Newsletter",
+    "description": "Inscrivez-vous à la lettre d'information pour rester au courant de l'Open Source Day 2024, de la session Schrodinger et d'autres nouvelles. Nous ne ferons pas de spam, promis.",
+    "subscribe": "Je m'abonne",
+    "thanks": "Merci de vous être inscritə, à bientôt !"
+  },
   "About": {
     "title": "Open Source Day 2024",
     "subtitle": "About",
