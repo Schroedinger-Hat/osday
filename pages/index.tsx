@@ -23,7 +23,14 @@ export default function Home() {
 
         <h2>Open Source Day 2024</h2>
         <h3>{t('title')}</h3>
-        <Link className='button' href={'/sponsor'}>{t('support_us')}</Link>
+        <div style={{
+          display: 'grid',
+          gridAutoFlow: 'column',
+          gridGap: '1em',
+        }}>
+          <Link className='button' href={'/newsletter'}>Newsletter</Link>
+          <Link className='button' href={'/sponsor'}>{t('support_us')}</Link>
+        </div>
         </div>
     </div>
       {/* <section className="talks_2023">

@@ -78,6 +78,12 @@ button {
   width: 100vw;
 }
 
+.auto-grid {
+  display: grid;
+  grid-gap: 1em;
+  grid-auto-flow: column;
+}
+
 .header {
   transition-property: all;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -286,6 +292,10 @@ div.image .img {
 .button:active {
   border-color: #4a4a4a;
   color: #363636;
+}
+
+.button-lg {
+  padding: 0.65em 2em;
 }
 
 .talks_2021, .talks_2023 {
@@ -600,7 +610,46 @@ div.image .img {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
+/* newsletter */
+.newsletter-image {
+  margin: 0 3em;
+  padding: 1em;
+}
+
+.newsletter-subscribe {
+  margin-top: 1em;
+}
+
+.input-newsletter {
+  max-width: 30vw;
+  width: 100%;
+  font-size: medium;
+  border-radius: 0.25em;
+  padding: 1em 0.5em;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #363636;
+  margin-bottom: 1.5em;
+}
+
+.input-newsletter:focus,
+.input-newsletter:hover {
+  background: #4a4a4a;
+  border-left: 2px solid #f2f2f2;
+}
+
+/* utility */
+.clearfix {
+  clear: both;
+}
+
 @media screen and (max-width: 768px) {
+  .auto-grid {
+    grid-auto-flow: row;
+  }
+
   .sponsortable {
     padding: 0;
     padding-left: 10px;
@@ -696,6 +745,15 @@ div.image .img {
 
   .right-timeline {
     left: 0%;
+  }
+
+  .newsletter-image {
+    margin: 0;
+    width: 100vw;;
+  }
+
+  .newsletter-subscribe {
+    max-width: 100%;
   }
 }
 
