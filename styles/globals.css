@@ -755,6 +755,10 @@ div.image .img {
   .newsletter-subscribe {
     max-width: 100%;
   }
+
+  .input-newsletter {
+    max-width: 100vw;
+  }
 }
 
 .after_main {
