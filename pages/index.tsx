@@ -1,38 +1,12 @@
 import Link from "next/link";
 import { useTranslations } from "next-intl";
+import Main from "../components/Main";
 
 export default function Home() {
-  const t = useTranslations('Landing');
+  const t = useTranslations("Landing");
   return (
     <>
-      <div className="title-box landing-page" style={{
-        width: 'auto',
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-      }}>
-        <div style={{
-          display: 'flex',
-          flexDirection: 'column',
-          alignItems: 'center',
-          margin: 'auto',
-        }}>
-          <h1>
-            Schrödinger Hat <span>Originals</span>
-          </h1>
-
-        <h2>Open Source Day 2024</h2>
-        <h3>{t('title')}</h3>
-        <div style={{
-          display: 'grid',
-          gridAutoFlow: 'column',
-          gridGap: '1em',
-        }}>
-          <Link className='button' href={'/newsletter'}>Newsletter</Link>
-          <Link className='button' href={'/sponsor'}>{t('support_us')}</Link>
-        </div>
-        </div>
-    </div>
+      <Main />
       {/* <section className="talks_2023">
         <div className="talks_container">
           {talks2023.map((talk: TTalkCard) => {

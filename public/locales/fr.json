@@ -1,9 +1,9 @@
 {
   "Cfp": {
     "where": "Florence",
-    "when": "Started",
-    "lenght": "Se termine en janvier 2024",
-    "description": "Merci d'avoir participé à notre CFP ! Nous avons maintenant terminé la sélection.",
+    "when": "Open until January 31st",
+    "length": "3 months",
+    "description": "Are you ready to give your talk at the best conference about Open Source?",
     "maincta_text": "Soumettre un article :)",
     "secondarycta_text": "Envoyez-nous un e-mail",
     "description_1": "Lisez ce qui suit si vous souhaitez en savoir plus sur les sujets qui intéressent le plus les participants de notre communauté",
@@ -12,14 +12,15 @@
   "Cfv": {
     "where": "Florence",
     "when": "Commencé",
-    "lenght": "Se termine en janvier 2024",
+    "length": "Se termine en janvier 2024",
     "description": "Vous souhaitez nous aider à organiser l'événement ? Prenons contact et faisons connaissance !",
     "maincta_text": "Envoyez-nous un mail :)",
     "description_1": "Vous pouvez trouver toutes les informations sur la communauté sur notre site web"
   },
   "Landing": {
     "title": "Nous arrivons, à nouveau. Restez à l'écoute",
-    "support_us": "Aidez-nous OSDay24"
+    "support_us": "Aidez-nous OSDay24",
+    "newsletter": "Newsletter"
   },
   "Header": {
     "menu_label": "Le bouton de menu ouvre la barre latérale avec des liens",
@@ -31,8 +32,8 @@
     "sponsor_link": "Sponsor",
     "speakers_Link": "Conférenciers",
     "photo_link": "Photos",
-    "cfp_link": "CFP (ended)",
-    "cfv_link": "CFV (ended)",
+    "cfp_link": "CFP",
+    "cfv_link": "CFV",
     "updates": "Notification",
     "erwin_alt": "Photo d'Erwin Schrodinger",
     "edition": "Edition 2023",
@@ -77,7 +78,7 @@
     "when": "Bientôt",
     "length": "24 Mars 2024",
     "type": "About",
-    "description": "L'Open Source Day en est à sa deuxième édition à Florence, en Italie ! Cette année, nous avons décidé de faire encore plus fort ! Dans cette édition, nous allons avoir une journée complète, plus l'after party, pleine de gens passionnés par l'environnement open source : mainteneurs, junior dev, senior dev, ingénieur manager, full stack, et ainsi de suite participeront à l'événement. N'hésitez pas à discuter avec les intervenants et les sponsors."
+    "description": "L'Open Source Day en est à sa troisième édition à Florence, en Italie ! Cette année, nous avons décidé de le rendre encore plus grand ! Dans cette édition, nous aurons deux jours complets, plus une after party entre les deux jours, pleine de gens passionnés par l'environnement open source : mainteneurs, développeurs juniors, développeurs seniors, ingénieurs de gestion, full stack, et ainsi de suite participeront à l'événement. N'hésitez pas à discuter avec les intervenants et les sponsors."
   },
   "2021": {
     "subtitle": "Open Source Day 2021",
@@ -314,7 +315,7 @@
     "type": "Conférence"
   },
   "Footer": {
-    "github_repo_1": "Open Source Day 2024 est une open source et",
+    "github_repo_1": "Open Source Day 2024 est une open source project et",
     "github_repo_2": "hébergé sur GitHub",
     "github_issue_1": "Si vous trouvez un bug ou avez une idée pour une nouvelle feature, veuillez",
     "github_issue_2": "ouvrir un issue sur GitHub.",

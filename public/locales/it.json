@@ -1,9 +1,9 @@
 {
   "Cfp": {
-    "where": "Firenze",
-    "when": "Iniziata",
-    "lenght": "Chiude a Gennaio 2024",
-    "description": "Grazie per aver partecipato alla CFP! La selezione è terminata.",
+    "where": "Florence",
+    "when": "Open until January 31st",
+    "length": "3 months",
+    "description": "Are you ready to give your talk at the best conference about Open Source?",
     "maincta_text": "Applica il tuo paper :)",
     "secondarycta_text": "Inviaci una mail",
     "description_1": "Continua a leggere se vuoi saperne di più sugli argomenti di maggiore interesse per i partecipanti alla nostra comunità",
@@ -12,14 +12,15 @@
   "Cfv": {
     "where": "Firenze",
     "when": "Iniziata",
-    "lenght": "Chiude a Febbraio 2024",
+    "length": "Chiude a Febbraio 2024",
     "description": "Vorresti aiutarci a organizzare l'evento? Entriamo in contatto e conosciamoci!",
     "maincta_text": "Inviaci una mail :)",
     "description_1": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
   },
   "Landing": {
     "title": "Stiamo tornando, ancora una volta.",
-    "support_us": "Supporta OSDay24"
+    "support_us": "Supporta OSDay24",
+    "newsletter": "Newsletter"
   },
   "Header": {
     "menu_label": "Il pulsante del menu apre la barra laterale con i collegamenti",
@@ -77,7 +78,7 @@
     "when": "Coming soon",
     "length": "24 Marzo 2024",
     "type": "About",
-    "description": "L'Open Source Day e' arrivato alla sua seconda edizione a Firenze, Italia! Quest'anno abbiamo deciso di puntare in alto per una conferenza ancora più in grande! In questa edizione avremo un intero giorno, più una festa di fine evento, piena di persone appassionate del mondo open source: maintainers, junior dev, senior dev, engineer manager, full stack, e molti altri saranno all'evento. Sentitevi liberi di parlare e discutere con gli speakers e con gli sponsors."
+    "description": "L'Open Source Day e' arrivato alla sua terza edizione a Firenze, Italia! Quest'anno abbiamo deciso di puntare in alto per una conferenza ancora più in grande! In questa edizione avremo due giorni di fantastici e coinvolgenti eventi e una festa tra i due giorni, piena di persone appassionate del mondo open source: maintainers, junior dev, senior dev, engineer manager, full stack, e molti altri saranno all'evento. Sentitevi liberi di parlare e discutere con gli speakers e con gli sponsors."
   },
   "2021": {
     "subtitle": "Open Source Day 2021",

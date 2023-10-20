@@ -1,24 +1,29 @@
-import { previousTalks, TTalkCard } from '../constants';
-import Hero from './Hero';
-import { useTranslations } from 'next-intl';
+import { previousTalks, TTalkCard } from "../constants";
+import Hero from "./Hero";
+import { useTranslations } from "next-intl";
 
 export default function Main() {
-  const t = useTranslations('Main');
+  const t = useTranslations("Main");
+  const tLanding = useTranslations("Landing");
 
   return (
     <div className="container">
       <Hero
-        description={t('description_1')}
-        description_2={t('description_2')}
+        description={t("description_1")}
+        description_2={t("description_2")}
         date={{
-          when: '24th of March',
-          where: 'Florence',
-          length: '1 Day',
-          type: 'Conf'
+          when: "7th and 8th of March",
+          where: "Florence",
+          length: "2 Days",
+          type: "Conf",
+        }}
+        mainCta={{
+          text: tLanding("support_us"),
+          link: "/sponsor",
         }}
         secondaryCta={{
-          text: t('email'),
-          link: 'mailto:osday@schrodinger-hat.it'
+          text: tLanding("newsletter"),
+          link: "/newsletter",
         }}
       />
     </div>

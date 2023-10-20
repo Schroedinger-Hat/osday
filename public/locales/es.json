@@ -1,9 +1,9 @@
 {
   "Cfp": {
     "where": "Florence",
-    "when": "Started",
-    "lenght": "Cierra en enero de 2024",
-    "description": "¡Gracias por participar en nuestro CFP! Ya hemos terminado de seleccionar las ponencias.",
+    "when": "Open until January 31st",
+    "length": "3 months",
+    "description": "Are you ready to give your talk at the best conference about Open Source?",
     "maincta_text": "Presentar el papel :)",
     "secondarycta_text": "Envíanos un correo electrónico",
     "description_1": "Siga leyendo si quiere saber más sobre los temas de mayor interés para los asistentes a nuestra comunidad",
@@ -12,14 +12,15 @@
   "Cfv": {
     "where": "Florencia",
     "when": "Started",
-    "lenght": "Closes in Jan 2024",
+    "length": "Closes in Jan 2024",
     "description": "¿Te gustaría ayudarnos a organizar el evento? Pongámonos en contacto y conozcámonos!",
     "maincta_text": "Envíanos un correo :)",
     "description_1": "Puedes encontrar toda la información sobre la comunidad en nuestra web"
   },
   "Landing": {
     "title": "Estamos llegando, otra vez. Estad atentos",
-    "support_us": "Ayúdenos a OSDay24"
+    "support_us": "Ayúdenos a OSDay24",
+    "newsletter": "Newsletter"
   },
   "Header": {
     "menu_label": "El botón del menú abre la barra lateral con enlaces",
@@ -31,8 +32,8 @@
     "sponsor_link": "Sponsor",
     "speakers_Link": "Speakers",
     "photo_link": "Fotos",
-    "cfp_link": "CFP (ended)",
-    "cfv_link": "CFV (ended)",
+    "cfp_link": "CFP",
+    "cfv_link": "CFV",
     "updates": "Notificación",
     "erwin_alt": "Imagen de Erwin Schrodinger",
     "edition": "Edición 2023",
@@ -77,7 +78,7 @@
     "when": "Próximamente",
     "length": "24 marzo 2024",
     "type": "A propósito de",
-    "description": "¡El Día del Código Abierto llega a su segunda edición en Florencia, Italia! ¡Este año hemos decidido hacerlo aún más grande! En esta edición vamos a tener un día completo, además de la fiesta posterior, lleno de gente apasionada por el entorno de código abierto: mantenedores, junior dev, senior dev, ingeniero gerente, full stack, y así sucesivamente asistirán al evento. No dudes en charlar con los ponentes y los patrocinadores"
+    "description": "¡El Día del Código Abierto llega a su tercera edición en Florencia, Italia! ¡Este año hemos decidido hacerlo aún más grande! En esta edición vamos a tener dues días completi, además de la fiesta posterior entres dos dias, lleno de gente apasionada por el entorno de código abierto: mantenedores, junior dev, senior dev, ingeniero gerente, full stack, y así sucesivamente asistirán al evento. No dudes en charlar con los ponentes y los patrocinadores"
   },
   "2021": {
     "subtitle": "Open Source Day 2021",

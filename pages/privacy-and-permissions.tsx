@@ -6,9 +6,9 @@ export async function getStaticProps({ locale }: { locale: any }) {
     props: {
       metas: {
         title:
-          "Privacy and Permissions policies, Open Source Day 2023 - Florence",
+          "Privacy and Permissions policies, Open Source Day 2024 - Florence",
         description:
-          "Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social",
+          "Open Source Day 2024 coming on the 24th of March 2023. Stay tuned on our social",
       },
       messages: (await import(`../public/locales/${locale}.json`)).default,
     },
