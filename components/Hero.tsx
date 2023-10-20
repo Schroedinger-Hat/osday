@@ -86,7 +86,7 @@ const Hero = ({
           <a
             className='button'
             target='_blank'
-            href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'}
+            href={'https://www.eventbrite.it/e/open-source-day-2024-tickets-731947624047'}
             rel="noreferrer"
           >
             Free Tickets
