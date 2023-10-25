@@ -1,4 +1,5 @@
 import '../styles/globals.css';
+import '../styles/ticket.css';
 import type { AppProps } from 'next/app';
 import Layout from '../components/Layout';
 import { NextIntlProvider } from 'next-intl';

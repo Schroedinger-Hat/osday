@@ -70,6 +70,19 @@
     "subscribe": "I am signing up",
     "thanks": "Thanks for signing up, see you soon!"
   },
+  "Ticket": {
+    "title": "See you soon at the #OSDay2024",
+    "subtitle": "You love the open source and the open source loves you!",
+    "where": "Ovunque",
+    "when": "Una volta al mese",
+    "length": "07/08 Marzo 2024",
+    "type": "Ticket",
+    "description": "Thank you for signing up to our flaghship event, hope to meet you there!",
+    "share_now": "Share now",
+    "copy_share": "Copy & Share",
+    "copied": "Copied!",
+    "copy": "Copy the link and share it on the social media with #OSDay24!"
+  },
   "About": {
     "title": "Open Source Day 2024",
     "subtitle": "About",
