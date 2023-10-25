@@ -611,12 +611,19 @@ div.image .img {
 }
 
 /* newsletter */
-.newsletter-image {
+.newsletter-image,
+.ticket-image {
   margin: 0 3em;
   padding: 1em;
 }
 
-.newsletter-subscribe {
+.ticket-image {
+  max-width: 100%;
+  margin-right: 3em;
+}
+
+.newsletter-subscribe,
+.ticket-share {
   margin-top: 1em;
 }
 
@@ -747,12 +754,14 @@ div.image .img {
     left: 0%;
   }
 
-  .newsletter-image {
+  .newsletter-image,
+  .ticket-image {
     margin: 0;
     width: 100vw;;
   }
 
-  .newsletter-subscribe {
+  .newsletter-subscribe,
+  .ticket-share {
     max-width: 100%;
   }
 
@@ -1165,6 +1174,14 @@ div.image .img {
 .arrival .infos {
   margin-left: 20px;
   width: 50%;
+}
+
+.ticket-container .title-box {
+  width: auto;
+}
+
+.ticket-container .auto-grid {
+  margin-bottom: 10em;
 }
 
 @media screen and (max-width: 992px) {
