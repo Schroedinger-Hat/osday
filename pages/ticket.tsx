@@ -10,7 +10,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
         title: 'Ticket, Open Source Day 2023 - Florence',
         description:
           'Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social',
-        image: 'https://2024.osday.dev/osday-ticket.png',
+        image: 'https://2024.osday.dev/api/ticket?tid=${tid}',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -19,8 +19,8 @@ export async function getStaticProps({ locale }: { locale: any }) {
 
 export default function Ticket() {
   const t = useTranslations('Ticket');
-
   const [shared, setShared] = useState(false);
+
   let tid = '';
   if (typeof window !== 'undefined') {
     tid = (new URLSearchParams(window.location.search)).get('tid') || '';
@@ -37,11 +37,10 @@ export default function Ticket() {
   const canShare = typeof (navigator) !== 'undefined' && 'share' in navigator;
   
   const shareHandle = async () => {
-    console.log('qui')
     try {
       await navigator.share(shareData);
     } catch (err) {
-      navigator.clipboard.writeText(window.location.href);
+      navigator.clipboard.writeText(`https://2024.osday.dev/api/ticket?tid=${tid}`);
       setShared(true);
       setTimeout(() => setShared(false), 2500);
     }
