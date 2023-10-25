@@ -70,6 +70,19 @@
     "subscribe": "Me suscribo",
     "thanks": "Gracias por inscribirte, hasta pronto."
   },
+  "Ticket": {
+    "title": "Hast pronto en el #OSDay24!",
+    "subtitle": "Tu amas el open source y el open source ama ti!",
+    "where": "everywhere",
+    "when": "Una vez al mes",
+    "length": "07/08 marzo 2024",
+    "type": "Ticket",
+    "description": "Gracias por registrarte en el evento #OSDay24, ¡hasta pronto!",
+    "share_now": "Compartir",
+    "copy_share": "Copiar y compartir",
+    "copied": "¡Copiado!",
+    "copy": "¡Copia el enlace y comparte en las redes sociales!"
+  },
   "About": {
     "title": "Open Source Day 2024",
     "subtitle": "A propósito de",
