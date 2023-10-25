@@ -161,3 +161,9 @@ export const talks2023: TTalkCard[] = [
     picture: "",
   },
 ];
+
+export type TicketImage = {
+  name: string;
+  year: string;
+  dates: string;
+};
