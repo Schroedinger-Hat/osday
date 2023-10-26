@@ -9,7 +9,7 @@ import { setCookie, getCookie } from '../utils';
 export default function Header() {
   const t = useTranslations('Header');
   const router = useRouter();
-  const { pathname } = router;
+  const { asPath } = router;
   const [isOpen, setOpen] = useState(false);
   const [isSticky, setSticky] = useState(false);
   const [notificationOpen, setNotificationOpen] = useState(false);
@@ -120,16 +120,16 @@ export default function Header() {
             {languageSwitcherOpen === true ? (
               <div className="language-switcher-menu">
                 <ul>
-                  <li><Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                  <li><Link onClick={(e) => setLanguage(e, 'it')} href={asPath} locale="it">
                     🇮🇹
                   </Link></li>
-                  <li><Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                  <li><Link onClick={(e) => setLanguage(e, 'en')} href={asPath} locale="en">
                     🇬🇧
                   </Link></li>
-                 <li><Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                 <li><Link onClick={(e) => setLanguage(e, 'fr')} href={asPath} locale="fr">
                     🇫🇷
                   </Link></li>
-                  <li><Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                  <li><Link onClick={(e) => setLanguage(e, 'es')} href={asPath} locale="es">
                     🇪🇸
                   </Link></li>
                 </ul>
@@ -247,16 +247,16 @@ export default function Header() {
           {languageSwitcherOpen === true ? (
             <div className="language-switcher-menu">
               <ul>
-                <Link onClick={(e) => setLanguage(e, 'it')} href={pathname} locale="it">
+                <Link onClick={(e) => setLanguage(e, 'it')} href={asPath} locale="it">
                   🇮🇹
                 </Link>
-                <Link onClick={(e) => setLanguage(e, 'en')} href={pathname} locale="en">
+                <Link onClick={(e) => setLanguage(e, 'en')} href={asPath} locale="en">
                   🇬🇧
                 </Link>
-                <Link onClick={(e) => setLanguage(e, 'fr')} href={pathname} locale="fr">
+                <Link onClick={(e) => setLanguage(e, 'fr')} href={asPath} locale="fr">
                   🇫🇷
                 </Link>
-                <Link onClick={(e) => setLanguage(e, 'es')} href={pathname} locale="es">
+                <Link onClick={(e) => setLanguage(e, 'es')} href={asPath} locale="es">
                   🇪🇸
                 </Link>
               </ul>

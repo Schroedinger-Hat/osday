@@ -1,31 +1,32 @@
 import { useState } from 'react';
-import Hero from '../components/Hero';
-import TicketImage from '../components/TicketImage';
+import Hero from '../../components/Hero';
+import TicketImage from '../../components/TicketImage';
 import { useTranslations } from 'next-intl';
+import { NextRouter, useRouter } from 'next/router';
 
-export async function getStaticProps({ locale }: { locale: any }) {
+export async function getServerSideProps({ params, locale }: { params: any, locale: any }) {
+  const { tid } = params;
+  const messages = await (await fetch(`https://osday.dev/locales/${locale}.json`)).json();
+
   return {
     props: {
       metas: {
         title: 'Ticket, Open Source Day 2023 - Florence',
         description:
           'Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social',
-        image: 'https://2024.osday.dev/api/ticket?tid=${tid}',
+        image: `https://2024.osday.dev/api/ticket?tid=${tid}`,
       },
-      messages: (await import(`../public/locales/${locale}.json`)).default
+      messages: messages,
     }
   };
 }
 
 export default function Ticket() {
   const t = useTranslations('Ticket');
+  const router = useRouter() as NextRouter & { query: { tid: string } };;
   const [shared, setShared] = useState(false);
 
-  let tid = '';
-  if (typeof window !== 'undefined') {
-    tid = (new URLSearchParams(window.location.search)).get('tid') || '';
-  }
-
+  const { tid } = router.query;
   const osdayURL = 'https://2024.osday.dev';
 
   const shareData = {
