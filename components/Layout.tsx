@@ -82,6 +82,7 @@ export default function Layout({
                 <meta property="og:image" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
                 <meta property="og:url" content="https://2024.osday.dev" />
                 <meta name="twitter:card" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
+                <meta name="twitter:image" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
 
                 <meta property="og:description" content="Open Source Day 2024 coming soon on March 2024. Stay tuned on our socials" />
                 <meta property="og:site_name" content="Open Source Day 2024" />
@@ -95,7 +96,8 @@ export default function Layout({
                     href="https://fonts.gstatic.com"
                     crossOrigin="anonymous"
                 />
-                <link rel="canonical" href={`https://${alternates[0]}`} />
+
+                {!metas.image && <link rel="canonical" href={`https://${alternates[0]}`} />}
                 {locales.map((l, index) => <link key={index} rel="alternate" href={`https://${alternates[index]}`} hrefLang={`${l}-${l}`} />)}
             </Head>
             <main>
