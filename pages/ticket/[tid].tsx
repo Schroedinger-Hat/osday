@@ -12,9 +12,9 @@ export async function getServerSideProps({ params, locale }: { params: any, loca
   return {
     props: {
       metas: {
-        title: 'Ticket, Open Source Day 2023 - Florence',
+        title: 'Get the ticket - OSDay2024',
         description:
-          'Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social',
+          '07-08 March 2024 Florence',
         image: `https://2024.osday.dev/api/ticket?tid=${tid}`,
       },
       messages: messages,
@@ -26,7 +26,7 @@ export default function Ticket() {
   const t = useTranslations('Ticket');
   const router = useRouter() as NextRouter & { query: { tid: string } };;
   const [shared, setShared] = useState(false);
-console.log(router)
+
   const { tid } = router.query;
   const osdayURL = 'https://2024.osday.dev';
   const sharerURL = `${osdayURL}/ticket/${tid}`;
