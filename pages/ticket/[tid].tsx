@@ -3,6 +3,7 @@ import Hero from '../../components/Hero';
 import TicketImage from '../../components/TicketImage';
 import { useTranslations } from 'next-intl';
 import { NextRouter, useRouter } from 'next/router';
+import Image from 'next/image';
 
 export async function getServerSideProps({ params, locale }: { params: any, locale: any }) {
   const { tid } = params;
@@ -25,9 +26,10 @@ export default function Ticket() {
   const t = useTranslations('Ticket');
   const router = useRouter() as NextRouter & { query: { tid: string } };;
   const [shared, setShared] = useState(false);
-
+console.log(router)
   const { tid } = router.query;
   const osdayURL = 'https://2024.osday.dev';
+  const sharerURL = `${osdayURL}/ticket/${tid}`;
 
   const shareData = {
     title: "Open Source Day 2024",
@@ -41,7 +43,7 @@ export default function Ticket() {
     try {
       await navigator.share(shareData);
     } catch (err) {
-      navigator.clipboard.writeText(`https://2024.osday.dev/api/ticket?tid=${tid}`);
+      navigator.clipboard.writeText(sharerURL);
       setShared(true);
       setTimeout(() => setShared(false), 2500);
     }
@@ -76,6 +78,24 @@ export default function Ticket() {
                 className='ticket-share button button-lg'
               >
                 {canShare ? t('share_now') : t('copy_share')}
+              </a>
+              <a
+                type='button'
+                target='_blank'
+                rel='noreferrer'
+                href={'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Just got my free ticket for @schrodinger_hat #OSDay24 Conf — claim yours!\n\n' + sharerURL)}
+                className='ticket-share social-button'
+              >
+                <Image width={30} height={30} src="/icons/twitter.svg" alt="Twitter" />
+              </a>
+              <a
+                type='button'
+                target='_blank'
+                rel='noreferrer'
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${sharerURL}?utm_source=linkedin&utm_medium=sharer&utm_campaign=osday24_ticket`}
+                className='ticket-share social-button'
+              >
+                <Image width={28} height={28} src="/icons/linkedin.svg" alt="Linkedin" />
               </a>
             </div>
           </div>
