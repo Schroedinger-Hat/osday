@@ -88,9 +88,9 @@
     "subtitle": "About",
     "where": "Florence",
     "when": "Coming soon",
-    "length": "March 24th, 2024",
+    "length": "March 7-8, 2024",
     "type": "About",
-    "description": "The Open Source Day is at its second edition in Florence, Italy! This year we decided to go even bigger! In this edition we are going to have a full day, plus the after party, full of people passionate about the open source environment: maintainers, junior dev, senior dev, engineer manager, full stack, and so on will attend the event. Feel free to have a chat with the speakers and the sponsors."
+    "description": "The Open Source Day is at its third edition in Florence, Italy! This year we decided to go even bigger! In this edition we are going to have two full days of conference, full of people passionate about the open source environment: maintainers, junior dev, senior dev, engineer manager, full stack, and so on will attend the event. Feel free to have a chat with the speakers and the sponsors."
   },
   "2021": {
     "subtitle": "Open Source Day 2021",
@@ -271,7 +271,7 @@
   },
   "Main": {
     "email": "Send us an email",
-    "description_1": "Open Source Day 2024 was amazing! So many incredible speakers and participants. You, being there, made this event possible and beautiful. Thank you for being there :)",
+    "description_1": "Open Source Day 2023 was amazing! So many incredible speakers and participants. You, being there, made this event possible and beautiful. Thank you for being there :)",
     "description_2": "We are coming back in 2024, stay tuned and join us on Discord or LinkedIn"
   },
   "Sponsor": {

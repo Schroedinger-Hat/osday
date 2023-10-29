@@ -6,7 +6,7 @@ const TalkCard = ({ description, link }: TTalkCard) => {
     <div className={`talk_card`}>
       {link ? (
         <p>
-          <a href={link}>{description}</a>
+          <a href={link} target="_blank" rel="noreferrer">{description}</a>
         </p>
       ) : (
         <p>{description} </p>

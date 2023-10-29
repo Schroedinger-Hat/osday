@@ -11,9 +11,9 @@ export default function Main() {
         description={t('description_1')}
         description_2={t('description_2')}
         date={{
-          when: '24th of March',
+          when: '7-8 March 2024',
           where: 'Florence',
-          length: '1 Day',
+          length: '2 Days',
           type: 'Conf'
         }}
         secondaryCta={{
