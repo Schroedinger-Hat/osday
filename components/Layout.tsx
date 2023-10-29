@@ -77,17 +77,16 @@ export default function Layout({
                 <link rel="icon" type="image/png" href="/favicon-32x32.png" />
                 <meta name="description" content={metas ? metas.description : ''} />
 
-                <meta property="og:title" content="Open Source Day 2024" />
+                <meta property="og:title" content={metas.title ? metas.title : "Open Source Day 2024"} />
                 <meta property="og:type" content="article" />
                 <meta property="og:image" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
                 <meta property="og:url" content="https://2024.osday.dev" />
+                <meta property="og:description" content={metas.description ? metas.description : "Open Source Day 2024 coming soon on March 2024. Stay tuned on our socials"} />
+                <meta property="og:site_name" content="Open Source Day 2024" />
+                
                 <meta name="twitter:card" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
                 <meta name="twitter:image" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
-
-                <meta property="og:description" content="Open Source Day 2024 coming soon on March 2024. Stay tuned on our socials" />
-                <meta property="og:site_name" content="Open Source Day 2024" />
                 <meta name="twitter:image:alt" content="Open Source Day 2024" />
-
                 <meta name="twitter:site" content="@schrodinger_hat" />
 
                 <link rel="preconnect" href="https://fonts.googleapis.com" />
