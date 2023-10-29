@@ -83,6 +83,18 @@ export default function Header() {
               onClick={closeSideBar}
             />
           </Link>
+          <Link onClick={closeSideBar} href={'/'}>
+            {t('home_link')}
+          </Link>
+          <Link onClick={closeSideBar} href={'/venue'}>
+            {t('venue_link')}
+          </Link>
+          <Link onClick={closeSideBar} href={'/about'}>
+            {t('about_link')}
+          </Link>
+          <Link onClick={closeSideBar} href={'/sponsor'}>
+            {t('sponsor_link')}
+          </Link>
           {/*<Link onClick={closeSideBar} href={'/'}>
             {t('home_link')}
           </Link>
@@ -104,9 +116,6 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
           </Link> */}
-          <Link onClick={closeSideBar} href={'/sponsor'}>
-            {t('sponsor_link')}
-          </Link>
           <Link onClick={closeSideBar} target='_blank' href={'https://2023.osday.dev'}>
             {t('edition')}
           </Link>
@@ -151,6 +160,18 @@ export default function Header() {
             <Image width={50} height={50} alt={t('sh_alt')} src="/sh.png" />
           </Link>
         </li>
+        <li>
+          <Link href={'/'}>{t('home_link')}</Link>
+        </li>
+        <li>
+          <Link href={'/venue'}>{t('venue_link')}</Link>
+        </li>
+        <li>
+          <Link href={'/about'}>{t('about_link')}</Link>
+        </li>
+        <li>
+          <Link href={'/sponsor'}>{t('sponsor_link')}</Link>
+        </li>
         {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
         </li>
@@ -192,9 +213,6 @@ export default function Header() {
         </li> */}
       </ul>
       <ul>
-        <li>
-          <Link href={'/sponsor'}>{t('sponsor_link')}</Link>
-        </li>
         <li>
           <Link href={'/edition2021'} target='_blank'>{t('edition21')}</Link>
         </li>
