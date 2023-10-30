@@ -20,6 +20,7 @@ export default function Main() {
           text: t('email'),
           link: 'mailto:osday@schrodinger-hat.it'
         }}
+        showNewsletter
       />
     </div>
   );
