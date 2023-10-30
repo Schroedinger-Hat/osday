@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslations } from 'next-intl';
 import TicketCounter from './TicketCounter';
+import Link from 'next/link';
 
 type THero = {
   title?: string;
@@ -25,6 +26,7 @@ type THero = {
   showTicketBtn?: boolean;
   showTicketAvailability?: boolean;
   showViewOnMap?: boolean;
+  showNewsletter?: boolean;
 };
 
 const Hero = ({
@@ -111,6 +113,9 @@ const Hero = ({
           >
             View on Map
           </a>
+        )}
+        {props.showNewsletter && (
+          <Link className='button' href={'/newsletter'}>Newsletter</Link>
         )}
       </div>
 
