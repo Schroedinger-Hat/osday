@@ -29,6 +29,7 @@ export default function Ticket() {
 
   const { tid } = router.query;
   const osdayURL = 'https://2024.osday.dev';
+  const imageURL = `https://2024.osday.dev/api/ticket?tid=${tid}`;
   const sharerURL = `${osdayURL}/ticket/${tid}`;
 
   const shareData = {
@@ -78,6 +79,15 @@ export default function Ticket() {
                 className='ticket-share button button-lg'
               >
                 {canShare ? t('share_now') : t('copy_share')}
+              </a>
+              <a
+                type='button'
+                target='_blank'
+                rel='noreferrer'
+                className='ticket-image button button-lg'
+                href={imageURL}
+              >
+                Image of your ticket
               </a>
               <a
                 type='button'
