@@ -26,6 +26,10 @@ export default function CFP() {
           subtitle="Call for papers"
           description={t("description")}
           originals={false}
+          mainCta={{
+            text: "Call for papers",
+            link: "https://sessionize.com/opensourceday24",
+          }}
           secondaryCta={{
             text: t("secondarycta_text"),
             link: "mailto:osday@schrodinger-hat.it",
