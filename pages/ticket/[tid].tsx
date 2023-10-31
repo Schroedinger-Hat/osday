@@ -16,6 +16,7 @@ export async function getServerSideProps({ params, locale }: { params: any, loca
         description:
           '07-08 March 2024 Florence',
         image: `https://2024.osday.dev/api/ticket?tid=${tid}`,
+        url: `https://2024.osday.dev/ticket/${tid}`,
       },
       messages: messages,
     }
@@ -29,6 +30,7 @@ export default function Ticket() {
 
   const { tid } = router.query;
   const osdayURL = 'https://2024.osday.dev';
+  const imageURL = `${osdayURL}/api/ticket?tid=${tid}`;
   const sharerURL = `${osdayURL}/ticket/${tid}`;
 
   const shareData = {
@@ -99,9 +101,15 @@ export default function Ticket() {
               </a>
             </div>
           </div>
-          <div className="ticket-image">
-            <TicketImage name={attendeeName} year='2024' dates='07 - 08 March 2024' />
-          </div>
+              <a
+                type='button'
+                target='_blank'
+                rel='noreferrer'
+                className='ticket-image'
+                href={imageURL}
+              >
+                <TicketImage name={attendeeName} year='2024' dates='07 - 08 March 2024' />
+              </a>
         </div>
       </div>
     </>
