@@ -104,7 +104,7 @@ export default function Ticket() {
                 type='button'
                 target='_blank'
                 rel='noreferrer'
-                className='ticket-image button button-lg'
+                className='ticket-image'
                 href={imageURL}
               >
                 <TicketImage name={attendeeName} year='2024' dates='07 - 08 March 2024' />
