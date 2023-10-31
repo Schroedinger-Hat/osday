@@ -84,15 +84,6 @@ export default function Ticket() {
                 type='button'
                 target='_blank'
                 rel='noreferrer'
-                className='ticket-image button button-lg'
-                href={imageURL}
-              >
-                Image of your ticket
-              </a>
-              <a
-                type='button'
-                target='_blank'
-                rel='noreferrer'
                 href={'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Just got my free ticket for @schrodinger_hat #OSDay24 Conf — claim yours!\n\n' + sharerURL)}
                 className='ticket-share social-button'
               >
@@ -109,9 +100,15 @@ export default function Ticket() {
               </a>
             </div>
           </div>
-          <div className="ticket-image">
-            <TicketImage name={attendeeName} year='2024' dates='07 - 08 March 2024' />
-          </div>
+              <a
+                type='button'
+                target='_blank'
+                rel='noreferrer'
+                className='ticket-image button button-lg'
+                href={imageURL}
+              >
+                <TicketImage name={attendeeName} year='2024' dates='07 - 08 March 2024' />
+              </a>
         </div>
       </div>
     </>
