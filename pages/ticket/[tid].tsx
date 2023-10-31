@@ -16,6 +16,7 @@ export async function getServerSideProps({ params, locale }: { params: any, loca
         description:
           '07-08 March 2024 Florence',
         image: `https://2024.osday.dev/api/ticket?tid=${tid}`,
+        url: `https://2024.osday.dev/ticket?tid=${tid}`,
       },
       messages: messages,
     }

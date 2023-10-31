@@ -13,7 +13,7 @@ export default function Layout({
     metas
 }: {
     children: JSX.Element;
-    metas: { title: string; description: string; image: string; robots: string };
+    metas: { title: string; description: string; image: string; url: string; robots: string };
 }): JSX.Element {
     const router = useRouter();
     const [alternates, setAlternates] = useState<string[]>([]);
@@ -80,7 +80,7 @@ export default function Layout({
                 <meta property="og:title" content={metas.title ? metas.title : "Open Source Day 2024"} />
                 <meta property="og:type" content="article" />
                 <meta property="og:image" content={metas.image ? metas.image : 'https://osday.dev/intro24.png'} />
-                <meta property="og:url" content="https://2024.osday.dev" />
+                <meta property="og:url" content={metas.url ? metas.url : 'https://2024.osday.dev'} />
                 <meta property="og:description" content={metas.description ? metas.description : "Open Source Day 2024 coming soon on March 2024. Stay tuned on our socials"} />
                 <meta property="og:site_name" content="Open Source Day 2024" />
                 
