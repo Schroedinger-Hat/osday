@@ -372,6 +372,7 @@ div.image .img {
 
 .talk_card_inner.dellaluce:hover {
   background-image: url("/gifs_2023/dellaluce.gif");
+  background-position: 80% 10%;
 }
 
 .talk_card_inner.terzi:hover {
@@ -384,6 +385,7 @@ div.image .img {
 
 .talk_card_inner.paolinelli:hover {
   background-image: url("/gifs_2023/paolinelli.gif");
+  background-position: 80% 10%;
 }
 
 .talk_card_inner.collina:hover {
