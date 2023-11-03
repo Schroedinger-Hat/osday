@@ -336,6 +336,9 @@ div.image .img {
   left: 0;
   width: 100%;
   height: 100%;
+  background-size: cover; /* Cover the whole area */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-position: 50% 10%;
 }
 
 .talk_card_inner:hover p{
@@ -352,72 +355,43 @@ div.image .img {
 
 .talk_card_inner.liran:hover {
   background-image: url("/gifs_2023/liran.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
+  
 }
 
 .talk_card_inner.alina:hover {
   background-image: url("/gifs_2023/alina.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card_inner.riva:hover {
   background-image: url("/gifs_2023/riva.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card_inner.grebowski:hover {
   background-image: url("/gifs_2023/grebowski.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card_inner.dellaluce:hover {
   background-image: url("/gifs_2023/dellaluce.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 80% 10%;
 }
 
 .talk_card_inner.terzi:hover {
   background-image: url("/gifs_2023/terzi.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card_inner.sensini:hover {
   background-image: url("/gifs_2023/sensini.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card_inner.paolinelli:hover {
   background-image: url("/gifs_2023/paolinelli.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 80% 10%;
 }
 
 .talk_card_inner.collina:hover {
   background-image: url("/gifs_2023/collina.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card_inner.corti:hover {
   background-image: url("/gifs_2023/corti.gif");
-  background-size: cover; /* Cover the whole area */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-position: 50% 10%;
 }
 
 .talk_card p {
