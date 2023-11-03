@@ -3,6 +3,7 @@ export type TTalkCard = {
   description: string;
   link?: string;
   picture?: string;
+  author?: string;
 };
 
 export type TTypeCard = {
@@ -96,6 +97,7 @@ export const talks2023: TTalkCard[] = [
     description: "The Unexpected Demise of Open Source Libraries - Liran Tal",
     link: "https://www.youtube.com/watch?v=ijqCliQQvrY",
     picture: "",
+    author: "liran",
   },
   {
     id: "alina1",
@@ -103,6 +105,7 @@ export const talks2023: TTalkCard[] = [
       "Ensuring IoT Application Edge Resilience with the Open Source AWS IoT Device Client - Alina Dima",
     link: "https://www.youtube.com/watch?v=xz2St9pxiQw",
     picture: "",
+    author: "alina",
   },
   {
     id: "rivagonzaga1",
@@ -110,6 +113,7 @@ export const talks2023: TTalkCard[] = [
       "5 Ways You Could Have Hacked Node js - Rafael Gonzaga, Michele Riva",
     link: "https://www.youtube.com/watch?v=Y1jiF430k2Q",
     picture: "",
+    author: "riva",
   },
   {
     id: "grebowski1",
@@ -117,6 +121,7 @@ export const talks2023: TTalkCard[] = [
       "This Open Source Tool Turns Building Access Management from Scary to Simple - Filip Grebowski",
     link: "https://www.youtube.com/watch?v=-0pGBLFP0Kw",
     picture: "",
+    author: "grebowski",
   },
   {
     id: "terzi1",
@@ -124,6 +129,7 @@ export const talks2023: TTalkCard[] = [
       "Challenges of Cross Platform Development in Rust - Federico Terzi",
     link: "https://www.youtube.com/watch?v=hXSH6YRs950",
     picture: "",
+    author: "terzi",
   },
   {
     id: "dellalucezuccala1",
@@ -131,27 +137,29 @@ export const talks2023: TTalkCard[] = [
       "Reliable and Cost effective Cloud Security with Falco - Jason Dellaluce, Michele Zuccala",
     link: "https://www.youtube.com/watch?v=DpQH-h3HcHA",
     picture: "",
+    author: "dellaluce",
   },
   {
     id: "sensini1",
-    description:
-      "One library a day keeps the doctor away - Serena Sensini",
+    description: "One library a day keeps the doctor away - Serena Sensini",
     link: "https://www.youtube.com/watch?v=K0M06pR4Gz0",
     picture: "",
+    author: "sensini",
   },
   {
     id: "paolinelli1",
-    description:
-      "How to tame a maintainer - Federico Paolinelli",
+    description: "How to tame a maintainer - Federico Paolinelli",
     link: "https://www.youtube.com/watch?v=VN8V2mgiVj4",
     picture: "",
+    author: "paolinelli",
   },
   {
-    id: "dellalucezuccala1",
+    id: "collina1",
     description:
       "Why are there no incentives for security in Open Source? - Matteo Collina",
     link: "https://www.youtube.com/watch?v=c37PWKBhDsI",
     picture: "",
+    author: "collina",
   },
   {
     id: "corti1",
@@ -159,6 +167,7 @@ export const talks2023: TTalkCard[] = [
       "Organization and challenges with best practices behind a successful os project - Francesco Corti",
     link: "https://www.youtube.com/watch?v=vZXsv2Q7K_w",
     picture: "",
+    author: "corti",
   },
 ];
 
