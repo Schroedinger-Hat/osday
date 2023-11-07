@@ -130,24 +130,24 @@ export const sponsor = async (args?: string[]): Promise<string> => {
   return `
   Contact us at events@schrodinger-hat.it
 
-    +--------------------------+-----------------+-----------------+-----------------+-----------------+
-  | offers                   | silver          | gold            | platinum        | diamond         |
-  +--------------------------+-----------------+-----------------+-----------------+-----------------+---+
-  | Thank you                | ✔               | ✔               | ✔               | ✔               | ✔ |
-  | Social post with logo    | ✔               | ✔               | ✔               | ✔               | ✔ |
-  | Logo on website          | ✔               | ✔               | ✔               | ✔               | ✔ |
-  | Social Awareness         | ✔               | ✔               | ✔               | ✔               | ✔ |
-  | Conference Badge         | ✗               | ✗               | ✔               | ✔               | ✔ |
-  | Logo on poster           | ✗               | ✔               | ✔               | ✔               | ✔ |
-  | Rollup Logo Print        | ✗               | ✔               | ✔               | ✔               | ✔ |
-  | Logo in streaming        | ✗               | ✔               | ✔               | ✔               | ✔ |
-  | Job Offer                | ✗               | ✗               | ✔               | ✔               | ✔ |
-  | Job Offer in Newsletter  | ✗               | ✗               | ✗               | ✗               | ✔ |
-  | Job Offer pinned Discord | ✗               | ✗               | ✗               | ✗               | ✔ |
-  | Attendee's list          | ✗               | ✗               | ✗               | ✔               | ✔ |
-  | Unattended Booth         | ✗               | ✗               | ✔               | ✗               | ✗ |
-  | Stand in Conference Hall | ✗               | ✗               | ✗               | ✔               | ✔ |
-  | price                    | € 1000 email us | € 2000 email us | € 3000 email us | € 4000 email us |
+  +------------------------+-----------------+-----------------+-----------------+-----------------+-------------------+
+  |                          | community       | silver          | gold            | platinum        | diamond         |
+  +--------------------------+-----------------+-----------------+-----------------+-----------------+-----------------+
+  | Thank you                | ✔               | ✔               | ✔               | ✔               | ✔               |
+  | Social post with logo    | ✔               | ✔               | ✔               | ✔               | ✔               |
+  | Logo on website          | ✔               | ✔               | ✔               | ✔               | ✔               |
+  | Social Awareness         | ✔               | ✔               | ✔               | ✔               | ✔               |
+  | Conference Badge         | ✗               | ✗               | ✔               | ✔               | ✔               |
+  | Logo on poster           | ✗               | ✔               | ✔               | ✔               | ✔               |
+  | Rollup Logo Print        | ✗               | ✔               | ✔               | ✔               | ✔               |
+  | Logo in streaming        | ✗               | ✔               | ✔               | ✔               | ✔               |
+  | Job Offer                | ✗               | ✗               | ✔               | ✔               | ✔               |
+  | Job Offer in Newsletter  | ✗               | ✗               | ✗               | ✗               | ✔               |
+  | Job Offer pinned Discord | ✗               | ✗               | ✗               | ✗               | ✔               |
+  | Attendee's list          | ✗               | ✗               | ✗               | ✔               | ✔               |
+  | Unattended Booth         | ✗               | ✗               | ✔               | ✗               | ✗               |
+  | Stand in Conference Hall | ✗               | ✗               | ✗               | ✔               | ✔               |
+  | price                    |     email us    | € 1000 email us | € 2000 email us | € 3000 email us | € 4000 email us |
   +--------------------------+-----------------+-----------------+-----------------+-----------------+
 
   `;
