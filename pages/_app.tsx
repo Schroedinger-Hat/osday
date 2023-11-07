@@ -1,15 +1,36 @@
-import '../styles/globals.css';
-import '../styles/ticket.css';
-import type { AppProps } from 'next/app';
-import Layout from '../components/Layout';
-import { NextIntlProvider } from 'next-intl';
+import React from 'react';
+import '../styles/global.css';
+import Head from 'next/head';
 
-export default function App({ Component, pageProps }: AppProps) {
+const App = ({ Component, pageProps }) => {
+  const inputRef = React.useRef<HTMLInputElement>(null);
+
+  const onClickAnywhere = () => {
+    inputRef.current.focus();
+  };
+
   return (
-    <NextIntlProvider messages={pageProps.messages}>
-      <Layout metas={pageProps.metas}>
-        <Component {...pageProps} />
-      </Layout>
-    </NextIntlProvider>
+    <>
+      <Head>
+        <meta
+          name="viewport"
+          content="initial-scale=1.0, width=device-width"
+          key="viewport"
+          maximum-scale="1"
+        />
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+      </Head>
+
+      <div
+        className="text-light-foreground dark:text-dark-foreground min-w-max text-xs md:min-w-full md:text-base"
+        onClick={onClickAnywhere}
+      >
+        <main className="bg-light-background dark:bg-dark-background w-full h-full p-2">
+          <Component {...pageProps} inputRef={inputRef} />
+        </main>
+      </div>
+    </>
   );
-}
+};
+
+export default App;

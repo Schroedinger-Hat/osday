@@ -1,36 +1,14 @@
-import Hero from '../components/Hero';
-import { useTranslations } from 'next-intl';
+import React from 'react';
+import { useRouter } from 'next/router';
 
-export async function getStaticProps({ locale }: { locale: any }) {
-  return {
-    props: {
-      metas: {
-        title: '404, Open Source Day 2023 - Florence',
-        robots: 'noindex'
-      },
-      messages: (await import(`../public/locales/${locale}.json`)).default
-    }
-  };
-}
+const NotFoundPage = () => {
+  const router = useRouter();
 
-export default function _404() {
-  const t = useTranslations('NotFound');
+  React.useEffect(() => {
+    router.replace('/');
+  });
 
-  return (
-    <>
-      <div className="container">
-        <Hero
-          title={t('title')}
-          subtitle={t('subtitle')}
-          date={{
-            where: t('where'),
-            when: t('when'),
-            length: t('length'),
-            type: t('type')
-          }}
-          description={t('description')}
-        />
-      </div>
-    </>
-  );
-}
+  return null;
+};
+
+export default NotFoundPage;

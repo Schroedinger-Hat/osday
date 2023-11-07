@@ -1,0 +1,40 @@
+{
+  "readmeUrl": "https://raw.githubusercontent.com/schrodinger-hat/osday/2024/README.md",
+  "title": "OSDay",
+  "name": "Schrodinger Hat",
+  "ascii": "Schrodinger Hat",
+  "social": {
+    "github": "https://github.com/schrodinger-hat",
+    "linkedin": "https://www.linkedin.com/company/schrodinger-hat",
+    "sessionize": "https://sessionize.com/opensourceday24",
+    "eventbrite": "https://www.eventbrite.it/e/open-source-day-2024-tickets-731947624047"
+  },
+  "email": "events@schrodinger-hat.it",
+  "ps1_hostname": "osday",
+  "ps1_username": "hatter",
+  "repo": "https://github.com/schrodinger-hat/osday",
+  "venue": "https://maps.app.goo.gl/rnLfFw6LNpdUiHKGA",
+  "donate_urls": {
+    "opencollective": "https://opencollective.com/schrodinger_hat"
+  },
+  "colors": {
+    "light": {
+      "background": "#2E3440",
+      "foreground": "#81A1C1",
+      "yellow": "#EBCB8B",
+      "green": "#A3BE8C",
+      "gray": "#81A1C1",
+      "blue": "#5E81AC",
+      "red": "#81A1C1"
+    },
+    "dark": {
+      "background": "#2E3440",
+      "foreground": "#81A1C1",
+      "yellow": "#EBCB8B",
+      "green": "#A3BE8C",
+      "gray": "#81A1C1",
+      "blue": "#5E81AC",
+      "red": "#81A1C1"
+    }
+  }
+}

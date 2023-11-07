@@ -51,6 +51,8 @@
 
 This is the repository of the site https://osday.dev/ our hybrid conference. Enjoy :)
 
+Terminal provided by https://github.com/Cveinnt/LiveTerm
+
 ### Tech stack
 
 - [Next.js](https://nextjs.org/)
