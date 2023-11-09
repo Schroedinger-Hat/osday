@@ -19,6 +19,21 @@ const App = ({ Component, pageProps }) => {
           maximum-scale="1"
         />
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
+        <title>Open Source Day 2024</title>
+
+        <meta name="description" content='The open source conference made by the open source for the open source' />
+
+        <meta property="og:title" content="Open Source Day 2024" />
+        <meta property="og:type" content="article" />
+        <meta property="og:image" content='https://2024.osday.dev/intro24.png' />
+        <meta property="og:url" content='https://terminal.osday.dev' />
+        <meta property="og:description" content="Open Source Day 2024 coming soon on the 07-08 March 2024. Stay tuned on our socials" />
+        <meta property="og:site_name" content="Open Source Day 2024" />
+        
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:image" content='https://2024.osday.dev/intro24.png' />
+        <meta name="twitter:image:alt" content="Open Source Day 2024" />
+        <meta name="twitter:site" content="@schrodinger_hat" />
       </Head>
 
       <div
