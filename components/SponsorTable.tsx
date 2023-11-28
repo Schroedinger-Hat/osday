@@ -17,7 +17,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={300} height={150} src="/nanabianca_logo.svg" alt="Nana Bianca" />
                     </a>
                 </div>
-                <h3 className="sponsors_tier">Diamond</h3>
+                {/* <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://devmy.it/" target="_blank" rel="noreferrer">
                     <Image width={300} height={100} src="/devmy_logo.svg" alt="devmy" />
@@ -88,10 +88,10 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.linkedin.com/company/datapizza" target="_blank" rel="noreferrer">
                     <Image width={330} height={100} src="/datapizza_logo.png" alt="Datapizza" />
                     </a>
-                </div>
+                </div> */}
                 <h3 className="sponsors_tier">Swag</h3>
                 <div className="sponsors_logo">
-                    <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
+                    {/* <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
                     </a>
                     <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
@@ -99,15 +99,15 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     </a>
                     <a href="https://www.github.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
-                    </a>
-                    <a href="https://mule.to/p3n8" target="_blank" rel="noreferrer">
+                    </a> */}
+                    <a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank" rel="noreferrer">
                     <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule" />
                     </a>
-                    <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
+                    {/* <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
                     <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
-                    </a>
+                    </a> */}
                 </div>
-                <h3 className="sponsors_tier">Community</h3>
+                {/* <h3 className="sponsors_tier">Community</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/grusp_logo.svg" alt="Grusp" />
@@ -157,7 +157,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.comune.fi.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/patrocinio_firenze.png" alt="Comune di Firenze" />
                     </a>
-                </div>
+                </div> */}
                 </section>
             </>
         );

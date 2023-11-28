@@ -1,6 +1,7 @@
 import TalkCard from "../components/TalkCard";
 import { TTalkCard, talks2023 } from "../constants";
 import Main from "../components/Main";
+import SponsorTable from "../components/SponsorTable";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
               return <TalkCard key={talk.id} {...talk} />;
             })}
         </div>
+        <SponsorTable isVisible></SponsorTable>
       </section>
     </>
   );

@@ -1,6 +1,7 @@
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
 import SponsorshipTable from '../components/SponsorshipTable';
+import SponsorTable from '../components/SponsorTable';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -33,6 +34,8 @@ export default function Sponsor() {
         />
 
         <SponsorshipTable />
+
+        <SponsorTable isVisible></SponsorTable>
 
       </div>
     </>
