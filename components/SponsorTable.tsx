@@ -89,6 +89,15 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={330} height={100} src="/datapizza_logo.png" alt="Datapizza" />
                     </a>
                 </div> */}
+                <h3 className="sponsors_tier">Media</h3>
+                <div className="sponsors_logo">
+                    <a href="https://kube.events/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/kube-events_logo.svg" alt="Kube Events" />
+                    </a>
+                    <a href="https://kube.careers/" target="_blank" rel="noreferrer">
+                    <Image width={80} height={80} src="/kube-careers_logo.svg" alt="Kube Careers" />
+                    </a>
+                </div>
                 <h3 className="sponsors_tier">Swag</h3>
                 <div className="sponsors_logo">
                     {/* <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
