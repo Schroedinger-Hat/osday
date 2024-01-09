@@ -58,6 +58,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.sparkfabrik.com/" target="_blank" rel="noreferrer">
                     <Image width={250} height={100} src="/sparkfabrik_logo.svg" alt="Sparkfabrik" />
                     </a>
+                    <a href="https://www.birdie.care/" target="_blank" rel="noreferrer">
+                    <Image width={250} height={100} src="/birdie.svg" alt="Birdie" />
+                    </a>
                     {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
                     {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
                     {/*</a>*/}
