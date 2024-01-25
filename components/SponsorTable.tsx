@@ -43,7 +43,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                 </div>*/}
                 <h3 className="sponsors_tier">Gold</h3>
                 <div className="sponsors_logo">
-                    <a href="https://www.claranet.com/" target="_blank" rel="noreferrer">
+                    <a href="https://www.claranet.com/it" target="_blank" rel="noreferrer">
                         <Image width={300} height={125} src="/CLARANET.png" alt="Claranet" />
                     </a>
                 </div> 
