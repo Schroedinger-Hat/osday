@@ -14,7 +14,7 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                 <h3 className="sponsors_tier">Supporter</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={150} src="/nanabianca_logo.svg" alt="Nana Bianca" />
+                    <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca" />
                     </a>
                 </div>
                 {/* <h3 className="sponsors_tier">Diamond</h3>
@@ -40,16 +40,13 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://lavorodigitaleitalia.it/" target="_blank" rel="noreferrer">
                     <Image width={200} height={150} src="/lavorio-digitale-italia_logo.png" alt="Lavorio Digitale Italia" />
                     </a>
-                </div>
+                </div>*/}
                 <h3 className="sponsors_tier">Gold</h3>
                 <div className="sponsors_logo">
-                    <a href="https://www.nearform.com/" target="_blank" rel="noreferrer">
-                        <Image width={300} height={100} src="/nearform_logo.svg" alt="NearForm" />
+                    <a href="https://www.claranet.com/" target="_blank" rel="noreferrer">
+                        <Image width={300} height={125} src="/CLARANET.png" alt="Claranet" />
                     </a>
-                    <a href="https://sysdig.com/" target="_blank" rel="noreferrer">
-                        <Image width={300} height={90} src="/sysdig_logo.svg" alt="sysdig" />
-                    </a>
-                </div> */}
+                </div> 
                 <h3 className="sponsors_tier">Silver</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
