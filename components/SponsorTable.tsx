@@ -164,6 +164,10 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/pensieri_in_codice-logo.svg" alt="Pensieri in codice" />
                     </a>
+                    
+                    <a href="https://italiaopensource.com/" target="_blank" rel="noreferrer">
+                    <Image width={150} height={150} src="/logo-italia-opensource.png" alt="Italia Open-Source" />
+                    </a>
                 </div>
                 {/*
                 <h3 className="sponsors_tier">Patronage</h3>
