@@ -116,8 +116,9 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
                     </a> */}
                 </div>
-                {/* <h3 className="sponsors_tier">Community</h3>
+                 <h3 className="sponsors_tier">Community</h3>
                 <div className="sponsors_logo">
+                    {/*
                     <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/grusp_logo.svg" alt="Grusp" />
                     </a>
@@ -159,14 +160,19 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     </a>
                     <a href="https://linktr.ee/continuousdelivery" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/logo-CD.svg" alt="Continous Delivery" />
+                    </a> */}
+                    <a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
+                    <Image width={100} height={100} src="/pensieri_in_codice-logo.svg" alt="Pensieri in codice" />
                     </a>
                 </div>
+                {/*
                 <h3 className="sponsors_tier">Patronage</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.comune.fi.it/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/patrocinio_firenze.png" alt="Comune di Firenze" />
                     </a>
-                </div> */}
+                </div>
+                */}
                 </section>
             </>
         );
