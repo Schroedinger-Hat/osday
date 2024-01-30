@@ -17,6 +17,12 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca" />
                     </a>
                 </div>
+                <h3 className="sponsors_tier">Diamond</h3>
+                <div className="sponsors_logo">
+                    <a href="https://www.spindox.it/en/" target="_blank" rel="noreferrer">
+                    <Image width={500} height={200} src="/Spindox_logo.png" alt="Spindox" />
+                    </a>
+                </div>
                 {/* <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://devmy.it/" target="_blank" rel="noreferrer">
