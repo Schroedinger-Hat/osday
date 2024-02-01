@@ -2,28 +2,35 @@ import React from 'react';
 import Image from "next/image";
 
 type TSponsorTable = {
-    isVisible: boolean
+  isVisible: boolean
 };
 
-const SponsorTable = ({isVisible} : TSponsorTable) => {
-    if (isVisible) {
-        return (
-            <>
-                <section className="current_sponsors">
-                <h2 className="sponsors_thanks" style={{ textAlign: "center" }}>Thanks to our sponsors</h2>
-                <h3 className="sponsors_tier">Supporter</h3>
+const SponsorTable = ({isVisible}: TSponsorTable) => {
+  if (isVisible) {
+    return (
+      <>
+        <section className="current_sponsors">
+          <h2 className="sponsors_thanks" style={{textAlign: "center"}}>Thanks to our sponsors</h2>
+          <h3 className="sponsors_tier">Supporter</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
+              <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca"/>
+            </a>
+          </div>
+          {/* <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
                     <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca" />
                     </a>
                 </div>
-                <h3 className="sponsors_tier">Diamond</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.spindox.it/en/" target="_blank" rel="noreferrer">
-                    <Image width={500} height={200} src="/Spindox_logo.png" alt="Spindox" />
-                    </a>
-                </div>
-                {/* <h3 className="sponsors_tier">Diamond</h3>
+                */}
+          <h3 className="sponsors_tier">Diamond</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.spindox.it/en/" target="_blank" rel="noreferrer">
+              <Image width={500} height={200} src="/Spindox_logo.png" alt="Spindox"/>
+            </a>
+          </div>
+          {/* <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://devmy.it/" target="_blank" rel="noreferrer">
                     <Image width={300} height={100} src="/devmy_logo.svg" alt="devmy" />
@@ -47,37 +54,37 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={200} height={150} src="/lavorio-digitale-italia_logo.png" alt="Lavorio Digitale Italia" />
                     </a>
                 </div>*/}
-                <h3 className="sponsors_tier">Gold</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.claranet.com/it" target="_blank" rel="noreferrer">
-                        <Image width={300} height={125} src="/CLARANET.png" alt="Claranet" />
-                    </a>
-                </div> 
-                <h3 className="sponsors_tier">Silver</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
-                    <Image width={250} height={100} src="/nephila_logo.svg" alt="Nephila" />
-                    </a>
-                    <a href="https://www.sparkfabrik.com/" target="_blank" rel="noreferrer">
-                    <Image width={250} height={100} src="/sparkfabrik_logo.svg" alt="Sparkfabrik" />
-                    </a>
-                    <a href="https://www.birdie.care/" target="_blank" rel="noreferrer">
-                    <Image width={250} height={100} src="/birdie.svg" alt="Birdie" />
-                    </a>
-                    {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
-                    {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
-                    {/*</a>*/}
-                    {/*<a href="https://snyk.io/" target="_blank" rel="noreferrer">*/}
-                    {/*<Image width={100} height={100} src="/snyk-logo.png" alt="Snyk" />*/}
-                    {/*</a>*/}
-                    {/*<a href="https://www.permit.io/" target="_blank" rel="noreferrer">*/}
-                    {/*<Image width={100} height={100} src="/permitio-logo.svg" alt="Permit.io" />*/}
-                    {/*</a>*/}
-                    {/*<a href="https://www.oramasearch.com/" target="_blank" rel="noreferrer">*/}
-                    {/*<Image width={150} height={100} src="/logo-orama.svg" alt="Orama Search" />*/}
-                    {/*</a>*/}
-                </div>
-                    {/* <h3 className="sponsors_tier">Media</h3>
+          <h3 className="sponsors_tier">Gold</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.claranet.com/it" target="_blank" rel="noreferrer">
+              <Image width={300} height={125} src="/CLARANET.png" alt="Claranet"/>
+            </a>
+          </div>
+          <h3 className="sponsors_tier">Silver</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
+              <Image width={250} height={100} src="/nephila_logo.svg" alt="Nephila"/>
+            </a>
+            <a href="https://www.sparkfabrik.com/" target="_blank" rel="noreferrer">
+              <Image width={250} height={100} src="/sparkfabrik_logo.svg" alt="Sparkfabrik"/>
+            </a>
+            <a href="https://www.birdie.care/" target="_blank" rel="noreferrer">
+              <Image width={250} height={100} src="/birdie.svg" alt="Birdie"/>
+            </a>
+            {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
+            {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
+            {/*</a>*/}
+            {/*<a href="https://snyk.io/" target="_blank" rel="noreferrer">*/}
+            {/*<Image width={100} height={100} src="/snyk-logo.png" alt="Snyk" />*/}
+            {/*</a>*/}
+            {/*<a href="https://www.permit.io/" target="_blank" rel="noreferrer">*/}
+            {/*<Image width={100} height={100} src="/permitio-logo.svg" alt="Permit.io" />*/}
+            {/*</a>*/}
+            {/*<a href="https://www.oramasearch.com/" target="_blank" rel="noreferrer">*/}
+            {/*<Image width={150} height={100} src="/logo-orama.svg" alt="Orama Search" />*/}
+            {/*</a>*/}
+          </div>
+          {/* <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.wearedevelopers.com/" target="_blank" rel="noreferrer">
                     <Image width={200} height={150} src="/WeAreDevelopers_logo.svg" alt="WeAreDevelopers" />
@@ -95,18 +102,21 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <Image width={330} height={100} src="/datapizza_logo.png" alt="Datapizza" />
                     </a>
                 </div> */}
-                <h3 className="sponsors_tier">Media</h3>
-                <div className="sponsors_logo">
-                    <a href="https://kube.events/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/kube-events_logo.svg" alt="Kube Events" />
-                    </a>
-                    <a href="https://kube.careers/" target="_blank" rel="noreferrer">
-                    <Image width={80} height={80} src="/kube-careers_logo.svg" alt="Kube Careers" />
-                    </a>
-                </div>
-                <h3 className="sponsors_tier">Swag</h3>
-                <div className="sponsors_logo">
-                    {/* <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
+          <h3 className="sponsors_tier">Media</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.wearedevelopers.com/" target="_blank" rel="noreferrer">
+              <Image width={200} height={150} src="/WeAreDevelopers_logo.svg" alt="WeAreDevelopers"/>
+            </a>
+            <a href="https://kube.events/" target="_blank" rel="noreferrer">
+              <Image width={100} height={100} src="/kube-events_logo.svg" alt="Kube Events"/>
+            </a>
+            <a href="https://kube.careers/" target="_blank" rel="noreferrer">
+              <Image width={80} height={80} src="/kube-careers_logo.svg" alt="Kube Careers"/>
+            </a>
+          </div>
+          <h3 className="sponsors_tier">Swag</h3>
+          <div className="sponsors_logo">
+            {/* <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
                     </a>
                     <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
@@ -115,22 +125,23 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://www.github.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
                     </a> */}
-                    <a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank" rel="noreferrer">
-                    <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule" />
-                    </a>
-                    {/* <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
+            <a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank"
+               rel="noreferrer">
+              <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule"/>
+            </a>
+            {/* <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
                     <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
                     </a> */}
-                </div>
-                 <h3 className="sponsors_tier">Community</h3>
-                <div className="sponsors_logo">
-                    {/*
-                    <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/grusp_logo.svg" alt="Grusp" />
-                    </a>
-                    <a href="https://www.theredcode.it/" target="_blank" rel="noreferrer">
-                    <Image width={80} height={80} src="/the-red-code_logo.png" alt="TheRedCode" />
-                    </a>
+          </div>
+          <h3 className="sponsors_tier">Community</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
+              <Image width={100} height={100} src="/grusp_logo.svg" alt="Grusp"/>
+            </a>
+            <a href="https://www.theredcode.it/" target="_blank" rel="noreferrer">
+              <Image width={80} height={80} src="/the-red-code_logo.png" alt="TheRedCode"/>
+            </a>
+            {/*
                     <a href="https://pisa.dev/" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/pisa-dev_logo.svg" alt="PisaDev" />
                     </a>
@@ -167,15 +178,16 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     <a href="https://linktr.ee/continuousdelivery" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/logo-CD.svg" alt="Continous Delivery" />
                     </a> */}
-                    <a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/pensieri_in_codice-logo.svg" alt="Pensieri in codice" />
-                    </a>
-                    
-                    <a href="https://italiaopensource.com/" target="_blank" rel="noreferrer">
-                    <Image width={150} height={150} src="/logo-italia-opensource.png" alt="Italia Open-Source" />
-                    </a>
-                </div>
-                {/*
+            <a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
+              <Image width={100} height={100} src="/pensieri_in_codice-logo.svg"
+                     alt="Pensieri in codice"/>
+            </a>
+
+            <a href="https://italiaopensource.com/" target="_blank" rel="noreferrer">
+              <Image width={150} height={150} src="/logo-italia-opensource.png" alt="Italia Open-Source"/>
+            </a>
+          </div>
+          {/*
                 <h3 className="sponsors_tier">Patronage</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.comune.fi.it/" target="_blank" rel="noreferrer">
@@ -183,11 +195,11 @@ const SponsorTable = ({isVisible} : TSponsorTable) => {
                     </a>
                 </div>
                 */}
-                </section>
-            </>
-        );
-    }
-    return null;
+        </section>
+      </>
+    );
+  }
+  return null;
 };
 
 export default SponsorTable;
