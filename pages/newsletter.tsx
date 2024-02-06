@@ -43,7 +43,7 @@ export default function Newsletter() {
       return;
     }
 
-    const res = await fetch('api/email-octupus', {
+    const res = await fetch('/api/email-octupus', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
