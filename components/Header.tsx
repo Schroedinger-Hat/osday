@@ -96,9 +96,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/sponsor"}>
             {t("sponsor_link")}
           </Link>
-          {/* <Link onClick={closeSideBar} href={'/agenda'}>
+          <Link onClick={closeSideBar} href={'/agenda'}>
             {t('agenda_link')}
-          </Link> */}
+          </Link>
           {/*<Link onClick={closeSideBar} href={'/'}>
             {t('home_link')}
           </Link>
@@ -221,9 +221,9 @@ export default function Header() {
         <li>
           <Link href={"/sponsor"}>{t("sponsor_link")}</Link>
         </li>
-        {/* <li>
+        <li>
           <Link href={'/agenda'}>{t('agenda_link')}</Link>
-        </li> */}
+        </li>
         {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
         </li>

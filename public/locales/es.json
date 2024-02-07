@@ -149,6 +149,11 @@
     "length": "24 marzo 2024",
     "type": "Speakers",
     "description": "Recibimos más de 140 propuestas de más de 100 ponentes. La votación de la comunidad se realizó en Discord.",
+    "tbd": {
+      "id": "tbd",
+      "name": "TBD",
+      "talk_title": "TBD"
+    },
     "pj": {
       "id": "pj",
       "name": "PJ Hagerty",

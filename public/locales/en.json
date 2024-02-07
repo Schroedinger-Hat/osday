@@ -148,6 +148,11 @@
     "when": "Coming soon",
     "length": "March 07-08, 2024",
     "type": "Speakers",
+    "tbd": {
+      "id": "tbd",
+      "name": "TBD",
+      "talk_title": "TBD"
+    },
     "pj": {
       "id": "pj",
       "name": "PJ Hagerty",
