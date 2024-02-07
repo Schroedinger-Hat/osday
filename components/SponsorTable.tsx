@@ -71,6 +71,9 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://www.birdie.care/" target="_blank" rel="noreferrer">
               <Image width={250} height={100} src="/birdie.svg" alt="Birdie"/>
             </a>
+            <a href="https://haystack.deepset.ai/?utm_campaign=developer-relations&utm_source=osday-italy&utm_medium=website" target="_blank" rel="noreferrer">
+              <Image width={250} height={100} src="/haystack_deepset.svg" alt="Haystack (by deepset)"/>
+            </a>            
             {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
             {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
             {/*</a>*/}
