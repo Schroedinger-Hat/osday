@@ -108,11 +108,11 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/about'}>
             {t('about_link')}
           </Link>
-          <Link onClick={closeSideBar} href={'/speakers'}>
-            {t('speakers_Link')}
-          </Link>*/}
           <Link onClick={closeSideBar} href={"/cfp"}>
             {t("cfp_link")}
+          </Link>*/}
+          <Link onClick={closeSideBar} href={'/speakers'}>
+            {t('speakers_Link')}
           </Link>
           {/*          <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
@@ -234,7 +234,7 @@ export default function Header() {
           <Link href={'/about'}>{t('about_link')}</Link>
         </li>
         <li>
-          <Link href={'/speakers'}>{t('speakers_Link')}</Link>
+          <Link href={"/cfp"}>{t("cfp_link")}</Link>
         </li>
         <a
             className='button'
@@ -245,7 +245,7 @@ export default function Header() {
           {t('photo_link')}
             </a>*/}
         <li>
-          <Link href={"/cfp"}>{t("cfp_link")}</Link>
+          <Link href={'/speakers'}>{t('speakers_Link')}</Link>
         </li>
         {/*<li>
           <Link href={'/cfv'}>{t('cfv_link')}</Link>
