@@ -310,7 +310,7 @@ div.image .img {
 .talks_container {
   width: 93%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
   gap: 2em 2em;
   margin-bottom: 2em;
 }
@@ -1612,6 +1612,7 @@ div.image .img {
 .speaker_hero-image {
   margin: 1em;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .speaker_hero-time {
