@@ -272,6 +272,67 @@
       "talk": "The talk is summarizing my 15 years of making open source tools. Some of them became popular (PostCSS, Autoprefixer, and Nano ID have more than 60 M downloads per month) but most projects were not popular (and their fails taught me more that successes' projects).\n\nThe talk is not about the dark patterns, but about the things which many maintainers forget: about the users and the fact, that users don’t have enough time: Why open source dream is a lie?, What are good and bad reasons to create an open source project?, How to write docs readable (even for users who have a hard-working day)?, What to do if you are not a native English speaker?, How to deal with hate?\n\nA few tricks to reduce burnout a little.",
       "twitter_url": "https://twitter.com/sitnikcode",
       "linkedin_url": "https://www.linkedin.com/in/sinik/"
+    },
+    "mario": {
+      "id": "mario",
+      "name": "Mario Fiore Vitale",
+      "job_title": "Senior Software Engineer at Red Hat",
+      "talk_title": "Dealing with data consistency - a CDC approach to dual writes",
+      "talk": "Are data consistencies keeping you up at night? We will explore how Change Data Capture (CDC) can be used to synchronize data across multiple systems without compromising integrity. The spotlight of this tech talk will be on Debezium, an open-source CDC platform that excels in capturing and delivering database changes across various systems. We will see how it can be used to enable seamless dual writes, ensuring data consistency across multiple data stores without compromising performances.",
+      "twitter_url": "https://twitter.com/mvitale86",
+      "linkedin_url": "https://www.linkedin.com/in/mfvitale/"
+    },
+    "roman": {
+      "id": "roman",
+      "name": "Roman Khavronenko",
+      "job_title": "Software Engineer at VictoriaMetrics",
+      "talk_title": "How to monitor the monitoring",
+      "talk": "Monitoring protects us from the unknown, and makes us see through the complexity of distributed systems and hardware.But what is monitoring if not another complex distributed system? And what happens when it fails?\n\nVictoriaMetrics is an open-source distributed monitoring solution for metrics. Users trust it to provide observability for their services and infrastructure. But as with any distributed system, combining unique settings, versatile workload, and hardware specifics could result in unexpected state of VictoriaMetrics software. In the talk, Roman Khavronenko will cover how the monitoring approach evolved over time after encountering many unique VictoriaMetrics support cases.\n\nWhat is Monitoring of Monitoring? How to build engineer-friendly Grafana dashboards, create meaningful alerts, and compile troubleshooting guides for open-source product?\n\nDiscuss these and other monitoring-related questions together with Roman!",
+      "twitter_url": "https://twitter.com/hagen1778",
+      "linkedin_url": "https://www.linkedin.com/in/roman-khavronenko-47b51a63/"
+    },
+    "alessandro": {
+      "id": "alessandro",
+      "name": "Alessandro Albano",
+      "job_title": "IT Senior Developer Java EE at Spindox",
+      "talk_title": "Designing Accessible and Inclusive Software: An Opportunity for All",
+      "talk": "",
+      "linkedin_url": "https://www.linkedin.com/in/alessandro-albano-57b015122/"
+    },
+    "sasha": {
+      "id": "sasha",
+      "name": "Sasha Denisov",
+      "job_title": "Chief Software Engineer at EPAM",
+      "talk_title": "Flutter and AppleTV. Story of one challenge",
+      "talk": "Flutter, an open-sourced framework by Google, officially supports six platforms (Android, iOS, Web, MacOS, Linux, Windows), but, unfortunately, no TV platforms are on the list. While Flutter applications can indeed be developed for TV platforms, and launching your app on Android TV can be relatively easy, the situation with Apple TV is far more complex. But, as you remember, Flutter is open-source, so we can fork it and create our own Flutter. In this talk, I will describe step-by-step how we solved this task and finally launched a Flutter application on AppleTV",
+      "linkedin_url": "https://www.linkedin.com/in/aleks-denisov/",
+      "twitter_url": "https://twitter.com/ShuregDenisov"
+    },
+    "arafat": {
+      "id": "arafat",
+      "name": "Arafat Khan",
+      "job_title": "Engineer at Sourcegraph",
+      "talk_title": "Flipping the Script: How Open-Source AI is Rewriting the Rulebook",
+      "talk": "This energetic talk is a vibrant exploration into open-source AI tooling, reimagining AI as an innovator's playground. It takes a dynamic journey through cutting-edge open source tools like Mixtral (an LLM), Llama Index (Open source RAG tooling), and Cody (AI Coding editor). Packed with live demos and engaging development stories, it bridges AI ethics and community-driven innovation. Get set for an electrifying leap into programming's future, where open-source AI isn't just a concept but a revolution in the making!",
+      "twitter_url": "https://twitter.com/arafatkatze"
+    },
+    "sohan": {
+      "id": "sohan",
+      "name": "Sohan Maheshwar",
+      "job_title": "Developer Advocate Lead at Fermyon",
+      "talk_title": "A Greener, Cost-Effective Cloud with Serverless WebAssembly",
+      "talk": "Software Carbon Intensity (SCI) quantifies emissions from an application, combining operational and hardware emissions. Serverless functions reduce operational emissions by running apps on-demand, but faces cold-start delays. WebAssembly (Wasm) offers a solution to cold-start issues with near-instant startup, akin to containers but more efficiently.\n\nWasm modules are just as secure as containers with default sandboxing, yet they start almost instantly (in microseconds). In this session, we discuss why Wasm is the ideal & greenest unit of compute for Serverless applications and how you can get started using Serverless Wasm with Spin - an open source developer tool. We’ll demo running AI inferencing Spin applications and discuss how it also enables better GPU resource sharing. By the end, you’ll have an understanding of the characteristics that make Wasm a cost-effective and sustainable unit for a greener cloud.",
+      "linkedin_url": "https://www.linkedin.com/in/sohanmaheshwar/",
+      "twitter_url": "https://twitter.com/soganmageshwar"
+    },
+    "noah": {
+      "id": "noah",
+      "name": "Noah Jelich",
+      "job_title": "Developer Advocate Lead at Fermyon",
+      "talk_title": "Unveiling WasmCov: Revolutionizing Test Coverage Across Wasm Ecosystems",
+      "talk": "WebAssembly (Wasm) has seen widespread adoption, yet a significant challenge persists—lack of support for comprehensive test coverage solutions like LLVM. In the realm of blockchain, where code vulnerabilities can have severe consequences, relying on automated testing becomes paramount. This presentation delves into the limitations of current test coverage suites for Wasm and introduces an innovative solution - WasmCov. Developed by Noah Jelich and Bartosz Barwikowski at Hacken, WasmCov pioneers the field of Wasm module coverage, providing a robust testing tool to fortify smart contract development in blockchain environments.",
+      "linkedin_url": "https://www.linkedin.com/in/njelich/",
+      "twitter_url": "https://twitter.com/NoahJelich"
     }
   },
   "Main": {

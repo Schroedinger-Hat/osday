@@ -1661,28 +1661,12 @@ div.image .img {
   display: none !important;
 }
 
-@media screen and (min-width: 641px) and (max-width: 1100px) {
-  .talks_container {
-    grid-template-columns: 1fr 1fr;
-    padding-bottom: 2em;
-  }
-}
-
-@media screen and (min-width: 1101px) and (max-width: 1500px) {
-  .talks_container {
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-bottom: 2em;
-  }
-}
-
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 1000px) {
   .talks_container {
     grid-template-columns: 1fr;
     padding-bottom: 2em;
   }
-}
 
-@media screen and (max-width: 500px) {
   .speaker_info {
     width: 100%;
     margin-right: 0%;
