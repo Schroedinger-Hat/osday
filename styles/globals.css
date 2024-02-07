@@ -1256,6 +1256,35 @@ div.image .img {
   margin-bottom: 10em;
 }
 
+.agenda-nav-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2em;
+}
+
+.agenda-nav {
+  background: #eb374c4f;
+  padding: .5em 0em;
+}
+
+.agenda-nav .nav-button {
+  margin: 0 .5em;
+  cursor: pointer;
+  padding: .5em .6em;
+}
+
+.agenda-nav .nav-button:first-child {
+  margin-left: 0;
+}
+
+.agenda-nav .nav-button:last-child {
+  margin-right: 0;
+}
+
+.nav-button.is-active {
+  background: #ed213a;
+}
+
 @media screen and (max-width: 992px) {
   .title-box {
     width: 100%;
@@ -1287,6 +1316,17 @@ div.image .img {
     position: relative;
     width: auto;
     transition: none;
+  }
+
+  .agenda-nav .nav-button {
+    width: 100%;
+    display: inline-grid;
+    margin: 0;
+  }
+
+  .agenda-nav .nav-button:last-child,
+  .agenda-nav .nav-button:last-child {
+    padding: 0.5em 0.6em;
   }
 
   .cta-container {

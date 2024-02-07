@@ -96,11 +96,11 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/sponsor"}>
             {t("sponsor_link")}
           </Link>
+          {/* <Link onClick={closeSideBar} href={'/agenda'}>
+            {t('agenda_link')}
+          </Link> */}
           {/*<Link onClick={closeSideBar} href={'/'}>
             {t('home_link')}
-          </Link>
-          <Link onClick={closeSideBar} href={'/agenda'}>
-            {t('agenda_link')}
           </Link>
           <Link onClick={closeSideBar} href={'/venue'}>
             {t('venue_link')}
@@ -221,11 +221,11 @@ export default function Header() {
         <li>
           <Link href={"/sponsor"}>{t("sponsor_link")}</Link>
         </li>
+        {/* <li>
+          <Link href={'/agenda'}>{t('agenda_link')}</Link>
+        </li> */}
         {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
-        </li>
-        <li>
-          <Link href={'/agenda'}>{t('agenda_link')}</Link>
         </li>
         <li>
           <Link href={'/venue'}>{t('venue_link')}</Link>
