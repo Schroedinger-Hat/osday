@@ -57,7 +57,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
           <h3 className="sponsors_tier">Gold</h3>
           <div className="sponsors_logo">
             <a href="https://www.claranet.com/it" target="_blank" rel="noreferrer">
-              <Image width={300} height={125} src="/CLARANET.png" alt="Claranet"/>
+              <Image width={300} height={125} src="/CLARANET.png" alt="Claranet"/> 
             </a>
           </div>
           <h3 className="sponsors_tier">Silver</h3>
@@ -72,7 +72,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
               <Image width={250} height={100} src="/birdie.svg" alt="Birdie"/>
             </a>
             <a href="https://haystack.deepset.ai/?utm_campaign=developer-relations&utm_source=osday-italy&utm_medium=website" target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/haystack_deepset.svg" alt="Haystack (by deepset)"/>
+              <Image width={250} height={100} src="/haystack_deepset_logo.svg" alt="Haystack (by deepset)"/>
             </a>            
             {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
             {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
