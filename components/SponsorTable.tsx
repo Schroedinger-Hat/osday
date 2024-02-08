@@ -24,7 +24,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
                     </a>
                 </div>
                 */}
-          <h3 className="sponsors_tier">Diamond</h3>
+          <h3 className="sponsors_tier">Platinum</h3>
           <div className="sponsors_logo">
             <a href="https://www.spindox.it/en/" target="_blank" rel="noreferrer">
               <Image width={500} height={200} src="/Spindox_logo.png" alt="Spindox"/>
