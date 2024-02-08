@@ -386,7 +386,7 @@
     "stefano": {
       "id": "stefano",
       "name": "Stefano Fiorucci",
-      "job_title": "NLP Engineer, Craftsman and Explorer",
+      "job_title": "Software/NLP Engineer at deepset",
       "talk_title": "Large Language Models for Devs: from zero to your first LLM application",
       "talk": "The rise of ChatGPT and Large Language Models has revolutionized the tech landscape, leaving developers overwhelmed by the infinite opportunities and intrigued by the technical challenges posed by their complex nature.\n\nThis session provides a developer-centric introduction to LLMs, focused on practical applications.No pre-existing knowledge of LLMs and NLP is required.\n\nYou will gain insights into: using closed and open-source models, how to effectively prompt LLMs, vector databases, implementing Retrieval Augmented Generation applications (answer generation based on your data), building more complex applications.\n\nThrough a hands-on approach, I will show code examples using open-source tools: Haystack LLM framework, Hugging Face Transformers, Ollama, and more. I will also show how you can switch from proprietary to open models.",
       "linkedin_url": "https://www.linkedin.com/in/stefano-fiorucci/",
