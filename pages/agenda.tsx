@@ -111,7 +111,7 @@ export default function Agenda() {
               <AgendaCard hour='15:30' isBreak={false} speakerName={s('federico.name')} talkTitle={s('federico.talk_title')} icon='/icons/microphone.svg' position='left' link={s('federico.id')}/>
               <AgendaCard hour='16:15' isBreak={false} speakerName={s('sabrina.name')} talkTitle={s('sabrina.talk_title')} icon='/icons/microphone.svg' position='right' link={s('sabrina.id')}/>
               {/* <AgendaCard hour='16:00' isBreak={true} breakTitle='Coffee break & Giveaway' icon='/icons/coffee.svg' position='right'/> */}
-              <AgendaCard hour='17:00' isBreak={false} speakerName={s('andrei.name')} talkTitle={s('andrei.talk_title')} icon='/icons/microphone.svg' position='left' link={s('andrei.id')}/>
+              <AgendaCard hour='17:00' isBreak={false} speakerName={s('andrey.name')} talkTitle={s('andrey.talk_title')} icon='/icons/microphone.svg' position='left' link={s('andrey.id')}/>
               <AgendaCard hour='18:30' isBreak={true} breakTitle="Schrödinger Hat Final greetings" icon='/icons/microphone.svg' position='right'/>
             </>
           )}
