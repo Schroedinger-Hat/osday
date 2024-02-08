@@ -338,6 +338,85 @@
       "talk": "WebAssembly (Wasm) has seen widespread adoption, yet a significant challenge persists—lack of support for comprehensive test coverage solutions like LLVM. In the realm of blockchain, where code vulnerabilities can have severe consequences, relying on automated testing becomes paramount. This presentation delves into the limitations of current test coverage suites for Wasm and introduces an innovative solution - WasmCov. Developed by Noah Jelich and Bartosz Barwikowski at Hacken, WasmCov pioneers the field of Wasm module coverage, providing a robust testing tool to fortify smart contract development in blockchain environments.",
       "linkedin_url": "https://www.linkedin.com/in/njelich/",
       "twitter_url": "https://twitter.com/NoahJelich"
+    },
+    "christina": {
+      "id": "christina",
+      "name": "Christina Dahlén",
+      "job_title": "Developer & Project Lead at 84codes",
+      "talk_title": "Why Writing To Disk Is Faster: Building a Message Broker",
+      "talk": "This talk introduces LavinMQ, an open-source message broker engineered for optimal resource utilisation and high performance. The presentation covers the basics of message queuing, discussing its practical applications. Then we'll delve into LavinMQ's technical details, showcasing its exceptional performance through benchmark comparisons and architectural examples. Beyond message broker development, the session provides actionable tips for enhancing network applications that are performance or resource sensitive. Join me for an exploration of LavinMQ and learn more about performance optimisation for network applications.",
+      "linkedin_url": "https://www.linkedin.com/in/christinadahlen/"
+    },
+    "eriol": {
+      "id": "eriol",
+      "name": "Eriol Fox",
+      "job_title": "OSS Designer and Product manager",
+      "talk_title": "The secret lives of OSS designers",
+      "talk": "In October 2023 Superbloom.design published findings from 10-16 week diary studies reported by designers actively working on OSS contributions. The diary studies aim was to investigate some of the key questions relating to design in OSS and fill some of the larger systemic “gaps” of information from non-code contributors’ experiences in OSS. There is existing research about designers in open source, but it has focused on analysis of data on issue trackers or interviews with designers.\n\nThis session will cover an overview of the study, some of the key learnings and recommendations from Superbloom Designers on how to improve and progress design in OSS.\n\nMixed into this talk will be overviews and insight into the world of design in OSS tools along with some ways to work with designers in your OSS projects.",
+      "linkedin_url": "https://www.linkedin.com/in/eriolfox/",
+      "twitter_url": "https://twitter.com/EriolDoesDesign"
+    },
+    "graziano": {
+      "id": "graziano",
+      "name": "Graziano Casto",
+      "job_title": "Technical Product Expert at Mia-Platform",
+      "talk_title": "Practical Policy-as-Code (PaC) with OPA and a managed sidecar container",
+      "talk": "The cloud-native landscape brings incredible advantages, but it also introduces new security challenges, making safeguarding a top priority. In the traditional policy enforcement model, manual management leaves organizations vulnerable to inevitable breaches due to human error – a matter of 'when,' not 'if.' Enter Policy-as-Code (PaC), a game-changing approach that leverages code to define and manage policies, transforming rules and conditions into actionable directives. By keeping policy definitions in source code control, whenever a change is made, it can be tested, validated, and then executed. The goal of PaC is not to detect policy violations but to prevent them. In this session we delve into the practical implementation of a Policy-as-Code strategy for your organization using Rönd and Open Policy Agent, two powerful open-source projects that could help you to redefine your security paradigm.",
+      "linkedin_url": "https://www.linkedin.com/in/castograziano/",
+      "twitter_url": "https://twitter.com/cst_grzn"
+    },
+    "paolo": {
+      "id": "paolo",
+      "name": "Paolo Insogna",
+      "job_title": "Staff Developer Experience Engineer at NearForm",
+      "talk_title": "From Smart Home to Smart Cats: extending my home automation to my pets",
+      "talk": "When going online and searching for new gadgets for our home, we often find Alexa, HomeKit or Google Assistant compatibility badges. Are these compatibility layers hard to code? What if I want to code mine?\n\nThe truth is that every gadget that is connected to the internet is probably speaking to an HTTP or MQTT API. And this means you know how to use it. In this talk, I will show you how I easily made my cat’s life way technological.",
+      "linkedin_url": "https://www.linkedin.com/in/pinsogna/",
+      "twitter_url": "https://twitter.com/p_insogna"
+    },
+    "costa": {
+      "id": "costa",
+      "name": "Costa Tsaousis",
+      "job_title": "Founder & CEO at Netdata",
+      "talk_title": "Netdata: Open Source, Distributed Observability Pipeline - Journey and Challenges.",
+      "talk": "Netdata is a powerful open-source, distributed observability pipeline designed to provide higher fidelity, easier scalability, and a lower cost of ownership compared to traditional monitoring solutions. This presentation will offer an in-depth overview of the journey we've undertaken in building Netdata, highlighting the challenges we've faced and the innovative solutions we've developed to address them.\n\nIn this presentation, we will delve into the history of Netdata, starting from its inception. We'll discuss the initial goals of creating a monitoring tool that could offer high-resolution metrics, auto-detection of metrics, and real-time visualization, all with minimal configuration required. We'll also explore how Netdata garnered rapid attention and support from the open-source community.\n\nThe presentation will then shift focus to the evolution of Netdata, including the development of: a very efficient database engine (Netdata vs Prometheus: 35% less cpu utilization, 49% less memory, 12% less bandwidth, 98% less disk I/O, and 75% less size on disk for the same dataset), a powerful alerting engine that uses statistical analysis, machine learning and templates for fully automated alerts, a streaming protocol supporting streaming of live data, replication of metrics, and support for routing interactive queries between Netdata agents",
+      "linkedin_url": "https://www.linkedin.com/in/costatsaousis/",
+      "twitter_url": "https://twitter.com/CostaTsaousis"
+    },
+    "stefano": {
+      "id": "stefano",
+      "name": "Stefano Fiorucci",
+      "job_title": "NLP Engineer, Craftsman and Explorer",
+      "talk_title": "Large Language Models for Devs: from zero to your first LLM application",
+      "talk": "The rise of ChatGPT and Large Language Models has revolutionized the tech landscape, leaving developers overwhelmed by the infinite opportunities and intrigued by the technical challenges posed by their complex nature.\n\nThis session provides a developer-centric introduction to LLMs, focused on practical applications.No pre-existing knowledge of LLMs and NLP is required.\n\nYou will gain insights into: using closed and open-source models, how to effectively prompt LLMs, vector databases, implementing Retrieval Augmented Generation applications (answer generation based on your data), building more complex applications.\n\nThrough a hands-on approach, I will show code examples using open-source tools: Haystack LLM framework, Hugging Face Transformers, Ollama, and more. I will also show how you can switch from proprietary to open models.",
+      "linkedin_url": "https://www.linkedin.com/in/stefano-fiorucci/",
+      "twitter_url": "https://twitter.com/theanakin87"
+    },
+    "edoardo": {
+      "id": "edoardo",
+      "name": "Edoardo Dusi",
+      "job_title": "Developer Relations Engineer at SparkFabrik",
+      "talk_title": "WebAssembly: The Next Frontier of Cloud Computing",
+      "talk": "In this talk, we will explore how WebAssembly (Wasm) is poised to become a major player in the future of cloud computing. Wasm is a binary format that can be compiled from many different languages and run on a variety of operating systems and architectures. Its near-native performance, portability, and security make it an ideal solution for addressing the challenges of distributed application development, deployment, and maintenance.\n\nOne of the fastest-growing Cloud Native trends is the adoption of Wasm, with projects such as Docker+Wasm (now in Beta) launched with a partnership between Docker and the CNCF’s Wasm runtime WasmEdge. Wasm's efficiency and speed make it ideal for on-demand scaling, while its sandboxed environment and deny-by-default approach to granting access to capabilities provide enhanced safety and security.\n\nIn this talk, we will delve into the key value propositions offered by Wasm and how it can help address the challenges posed by CPU diversity, multiple operating environments, security concerns, distributed application architecture, and scalability.",
+      "linkedin_url": "https://www.linkedin.com/in/edoardodusi/",
+      "twitter_url": "https://twitter.com/edodusi"
+    },
+    "omar": {
+      "id": "omar",
+      "name": "Omar Diop",
+      "job_title": "Technical Lead at Learnn",
+      "talk_title": "Perfect Pitch: Unveiling the Mathematical Symphony Behind a Guitar Tuner",
+      "talk": "Join me on a musical journey through the world of open source software as I share the story behind crafting from scratch an online guitar tuner.\n\nIn this talk, we'll explore the delightful intersection of mathematics and development, where a simple curiosity led to the creation of an open-source tuner using React and Next.js.\n\nI'll share insights and challenges into the implementation of the tuner, navigating through the algorithmic landscape of autocorrelation and frequency calculations.",
+      "linkedin_url": "https://www.linkedin.com/in/omar-diop-dev/"
+    },
+    "napoletano": {
+      "id": "napoletano",
+      "name": "Franscesco Napoletano",
+      "job_title": "Staff Software Engineer at sysdig",
+      "talk_title": "10 secrets to still be a rockstar developer after 40 - #7 will surprise you!",
+      "talk": "If you're a software engineer in your 40s or beyond, you might be wondering about the future of your career. In this talk we'll explore the practical strategies and opportunities available to experienced developers in a funny and catchy way.\n\nWe'll discuss how to stay relevant in the industry, the benefits of mentorship, the potential for transitioning into management roles and how you can continue to make meaningful contributions (also, but not only) in the opensource world.",
+      "linkedin_url": "https://www.linkedin.com/in/francesconapoletano/",
+      "twitter_url": "https://twitter.com/napodev"
     }
   },
   "Main": {
