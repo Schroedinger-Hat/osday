@@ -149,6 +149,11 @@
     "length": "24 Marzo 2024",
     "type": "Speakers",
     "description": "Abbiamo ricevuto più di 140 candidature da oltre 100 relatori. La votazione della comunità si è svolta su Discord.",
+    "tbd": {
+      "id": "tbd",
+      "name": "TBD",
+      "talk_title": "TBD"
+    },
     "pj": {
       "id": "pj",
       "name": "PJ Hagerty",
