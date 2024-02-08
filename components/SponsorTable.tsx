@@ -71,7 +71,8 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://www.birdie.care/" target="_blank" rel="noreferrer">
               <Image width={250} height={100} src="/birdie.svg" alt="Birdie"/>
             </a>
-            <a href="https://haystack.deepset.ai/?utm_campaign=developer-relations&utm_source=osday-italy&utm_medium=website" target="_blank" rel="noreferrer">
+            <a href="https://haystack.deepset.ai/?utm_campaign=developer-relations&utm_source=osday-italy&utm_medium=website"
+               target="_blank" rel="noreferrer">
               <Image width={250} height={100} src="/haystack_deepset_logo.svg" alt="Haystack (by deepset)"/>
             </a>        
             <a href="https://www.netdata.cloud/" target="_blank" rel="noreferrer">
@@ -80,15 +81,18 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
             {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
             {/*</a>*/}
-            {/*<a href="https://snyk.io/" target="_blank" rel="noreferrer">*/}
-            {/*<Image width={100} height={100} src="/snyk-logo.png" alt="Snyk" />*/}
-            {/*</a>*/}
-            {/*<a href="https://www.permit.io/" target="_blank" rel="noreferrer">*/}
-            {/*<Image width={100} height={100} src="/permitio-logo.svg" alt="Permit.io" />*/}
-            {/*</a>*/}
-            {/*<a href="https://www.oramasearch.com/" target="_blank" rel="noreferrer">*/}
-            {/*<Image width={150} height={100} src="/logo-orama.svg" alt="Orama Search" />*/}
-            {/*</a>*/}
+            <a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
+              <Image width={250} height={66} src="/victoria-metrics.svg" alt="VictoriaMetrics"/>
+            </a>
+            <a href="https://cometa.rocks/" target="_blank" rel="noreferrer">
+              <Image width={250} height={58} src="/cometa.png" alt="Co.meta"/>
+            </a>
+            <a href="https://learnn.com/" target="_blank" rel="noreferrer">
+              <Image width={150} height={100} src="/learnn.svg" alt="Learnn"/>
+            </a>
+            <a href="https://www.elastic.co/" target="_blank" rel="noreferrer">
+              <Image width={150} height={100} src="/elastic.svg" alt="Elastic"/>
+            </a>
           </div>
           {/* <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
@@ -191,6 +195,9 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
 
             <a href="https://italiaopensource.com/" target="_blank" rel="noreferrer">
               <Image width={150} height={150} src="/logo-italia-opensource.png" alt="Italia Open-Source"/>
+            </a>
+            <a href="https://latinasintech.org/" target="_blank" rel="noreferrer">
+              <Image width={150} height={150} src="/latinasintech.png" alt="Latinas In Tech"/>
             </a>
           </div>
           {/*
