@@ -30,6 +30,11 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
               <Image width={500} height={200} src="/Spindox_logo.png" alt="Spindox"/>
             </a>
           </div>
+          <div className="sponsors_logo">
+            <a href="http://www.suse.com/" target="_blank" rel="noreferrer">
+              <Image width={500} height={200} src="/Suse_logo.png" alt="Suse"/>
+            </a>
+          </div>
           {/* <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://devmy.it/" target="_blank" rel="noreferrer">
