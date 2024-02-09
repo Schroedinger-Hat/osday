@@ -98,6 +98,9 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://www.elastic.co/" target="_blank" rel="noreferrer">
               <Image width={150} height={100} src="/elastic.svg" alt="Elastic"/>
             </a>
+            <a href="https://patchstack.com/" target="_blank" rel="noreferrer">
+              <Image width={184} height={21} src="/patchstack_logo.svg" alt="Patchstack"/>
+            </a>
           </div>
           {/* <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
