@@ -101,9 +101,9 @@ export default function Agenda() {
               <AgendaCard hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg' position='right'/>
               <AgendaCard hour='9:50' isBreak={true} breakTitle='Morning intro' icon='/icons/microphone.svg' position='left'/>
               <AgendaCard hour='10:00' isBreak={false} speakerName={s('nathan.name')} talkTitle={s('nathan.talk_title')} icon='/icons/microphone.svg' position='right' link={s('nathan.id')}/>
-              <AgendaCard hour='10:45' isBreak={false} speakerName={s('tbd.name')} talkTitle={s('tbd.talk_title')} icon='/icons/microphone.svg' position='left' link={s('tbd.id')}/>
+              <AgendaCard hour='10:45' isBreak={false} speakerName={s('noam.name')} talkTitle={s('noam.talk_title')} icon='/icons/microphone.svg' position='left' link={s('tbd.id')}/>
               {/* <AgendaCard hour='10:40' isBreak={true} breakTitle='Coffee break' icon='/icons/coffee.svg' position='left'/> */}
-              <AgendaCard hour='11:30' isBreak={false} speakerName={s('tbd.name')} talkTitle={s('tbd.talk_title')} icon='/icons/microphone.svg' position='right' link={s('tbd.id')}/>
+              <AgendaCard hour='11:30' isBreak={false} speakerName={s('christina.name')} talkTitle={s('christina.talk_title')} icon='/icons/microphone.svg' position='right' link={s('tbd.id')}/>
               <AgendaCard hour='12:15' isBreak={true} breakTitle='Lunch break' icon='/icons/fork-and-knife.svg' position='left'/>
               <AgendaCard hour='14:00' isBreak={true} breakTitle='Afternoon intro' icon='/icons/microphone.svg' position='right'/>
               <AgendaCard hour='14:05' isBreak={false} speakerName={s('valeria.name')} talkTitle={s('valeria.talk_title')} icon='/icons/microphone.svg' position='left' link={s('valeria.id')}/>
@@ -120,7 +120,7 @@ export default function Agenda() {
             <>
               <AgendaCard hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg' position='right'/>
               <AgendaCard hour='9:50' isBreak={true} breakTitle='Morning intro' icon='/icons/microphone.svg' position='left'/>
-              <AgendaCard hour='10:00' isBreak={false} speakerName={s('tbd.name')} talkTitle={s('tbd.talk_title')} icon='/icons/microphone.svg' position='right' link={s('tbd.id')}/>
+              <AgendaCard hour='10:00' isBreak={false} speakerName={s('maciek.name')} talkTitle={s('maciek.talk_title')} icon='/icons/microphone.svg' position='right' link={s('tbd.id')}/>
               <AgendaCard hour='10:45' isBreak={false} speakerName={s('graziano.name')} talkTitle={s('graziano.talk_title')} icon='/icons/microphone.svg' position='left' link={s('graziano.id')}/>
               {/* <AgendaCard hour='10:40' isBreak={true} breakTitle='Coffee break' icon='/icons/coffee.svg' position='left'/> */}
               <AgendaCard hour='11:30' isBreak={false} speakerName={s('paolo.name')} talkTitle={s('paolo.talk_title')} icon='/icons/microphone.svg' position='right' link={s('paolo.id')}/>
