@@ -416,6 +416,24 @@
       "talk": "If you're a software engineer in your 40s or beyond, you might be wondering about the future of your career. In this talk we'll explore the practical strategies and opportunities available to experienced developers in a funny and catchy way.\n\nWe'll discuss how to stay relevant in the industry, the benefits of mentorship, the potential for transitioning into management roles and how you can continue to make meaningful contributions (also, but not only) in the opensource world.",
       "linkedin_url": "https://www.linkedin.com/in/francesconapoletano/",
       "twitter_url": "https://twitter.com/napodev"
+    },
+    "maciek": {
+      "id": "maciek",
+      "name": "Maciek Palmowski",
+      "job_title": "Security Community Manager at Patchstack",
+      "talk_title": "Is the headless architecture really the future for CMSs?",
+      "talk": "There are many companies and experts all over the world claiming that headless architecture is something that will not only change how we develop software but also make our websites and applications faster and more secure.\n\nBut is it true? Together we'll dive into many aspects of headless (like performance, developer experience, and security) so we can decide if headless is the true game-changer or just an empty buzzword.",
+      "linkedin_url": "https://www.linkedin.com/in/maciejpalmowski/",
+      "twitter_url": "https://twitter.com/palmiak_fp"
+    },
+    "noam": {
+      "id": "noam",
+      "name": "Noam Honig",
+      "job_title": "Creator of Remult",
+      "talk_title": "Meet Your New BFF: Backend to Frontend without the Duct Tape",
+      "talk": "Even with all of the incredible frameworks available today vs. a decade ago (or even two––for devs who have been around as long as I have), it still feels like much of our work as fullstack developers is still repetitive, and held together by duct tape code we shouldn’t be writing.\n\nThis is because we write a lot of duplicate and boilerplate code for everyday things such as simple database CRUD, data validation, authorization, and data-type conversions, but the majority of these tasks haven’t advanced at the pace of modern web architecture.\n\nIn this live coding session we'll turn a front-end app into a fullstack app with code that is easy to write, follow &, most importantly maintain, with end-to-end typesafety (say no to GraphQL!), consistent and encapsulated validations, live querying, access control, secured APIs, you get the idea.\n\nYou’ll come away from this session able to build apps for modern web architecture while still maintaining our code DRY and increase productivity.",
+      "linkedin_url": "https://www.linkedin.com/in/noamhonig/",
+      "twitter_url": "https://twitter.com/noamhonig"
     }
   },
   "Main": {
