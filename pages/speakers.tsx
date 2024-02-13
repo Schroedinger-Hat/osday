@@ -60,6 +60,7 @@ export default function Speakers() {
             <SpeakerHero id={t('maciek.id')} image='/speakers/2024/maciek-palmowski.jpg' name={t('maciek.name')} talk={t('maciek.talk')} title={t('maciek.talk_title')} jobDescription={t('maciek.job_title')} linkedinUrl={t('maciek.linkedin_url')} twitterUrl={t('maciek.twitter_url')}/>
             <SpeakerHero id={t('noam.id')} image='/speakers/2024/noam-honig.jpg' name={t('noam.name')} talk={t('noam.talk')} title={t('noam.talk_title')} jobDescription={t('noam.job_title')} linkedinUrl={t('noam.linkedin_url')} twitterUrl={t('noam.twitter_url')}/>
             <SpeakerHero id={t('vipul.id')} image='/speakers/2024/vipul-siddharth.jpeg' name={t('vipul.name')} talk={t('vipul.talk')} title={t('vipul.talk_title')} jobDescription={t('vipul.job_title')} linkedinUrl={t('vipul.linkedin_url')} twitterUrl={t('vipul.twitter_url')}/>
+            <SpeakerHero id={t('sal.id')} image='/speakers/2024/sal-kimmich.png' name={t('sal.name')} talk={t('sal.talk')} title={t('sal.talk_title')} jobDescription={t('sal.job_title')} linkedinUrl={t('sal.linkedin_url')} twitterUrl={t('sal.twitter_url')}/>
           </div>
         </section>
       </div>

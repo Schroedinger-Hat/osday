@@ -69,7 +69,7 @@ export default function Agenda() {
               <AgendaCard hour='15:20' isBreak={false} speakerName={s('abdel.name')} talkTitle={s('abdel.talk_title')} icon='/icons/microphone.svg' position='left' link={s('abdel.id')}/>
               <AgendaCard hour='16:00' isBreak={false} speakerName={s('vipul.name')} talkTitle={s('vipul.talk_title')} icon='/icons/microphone.svg' position='right' link={s('vipul.id')}/>
               {/* <AgendaCard hour='16:00' isBreak={true} breakTitle='Coffee break & Giveaway' icon='/icons/coffee.svg' position='right'/> */}
-              <AgendaCard hour='16:40' isBreak={false} speakerName={s('tbd.name')} talkTitle={s('tbd.talk_title')} icon='/icons/microphone.svg' position='left' link={s('tbd.id')}/>
+              <AgendaCard hour='16:40' isBreak={false} speakerName={s('sal.name')} talkTitle={s('sal.talk_title')} icon='/icons/microphone.svg' position='left' link={s('sal.id')}/>
               <AgendaCard hour='17:20' isBreak={false} speakerName={s('francesco.name')} talkTitle={s('francesco.talk_title')} icon='/icons/microphone.svg' position='right' link={s('francesco.id')}/>
               <AgendaCard hour='18:30' isBreak={true} breakTitle="Aperitivo" icon='/icons/drink.svg' position='left'/>
             </>
