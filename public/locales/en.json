@@ -434,6 +434,15 @@
       "talk": "Even with all of the incredible frameworks available today vs. a decade ago (or even two––for devs who have been around as long as I have), it still feels like much of our work as fullstack developers is still repetitive, and held together by duct tape code we shouldn’t be writing.\n\nThis is because we write a lot of duplicate and boilerplate code for everyday things such as simple database CRUD, data validation, authorization, and data-type conversions, but the majority of these tasks haven’t advanced at the pace of modern web architecture.\n\nIn this live coding session we'll turn a front-end app into a fullstack app with code that is easy to write, follow &, most importantly maintain, with end-to-end typesafety (say no to GraphQL!), consistent and encapsulated validations, live querying, access control, secured APIs, you get the idea.\n\nYou’ll come away from this session able to build apps for modern web architecture while still maintaining our code DRY and increase productivity.",
       "linkedin_url": "https://www.linkedin.com/in/noamhonig/",
       "twitter_url": "https://twitter.com/noamhonig"
+    },
+    "sal": {
+      "id": "sal",
+      "name": "Sal Kimmich",
+      "job_title": "Open Source Security",
+      "talk_title": "From Earth to Orbit: The Journey of Linux in Space",
+      "talk": "Explore the remarkable journey of Linux from terrestrial applications to its crucial role in space missions. This talk will highlight key milestones in how Linux has been adapted for use in space, discussing both technical advancements and the broader implications for the open source community. Discover how Linux is not only a tool for exploration but also a testament to the power of open source collaboration in pushing the boundaries of what's possible.",
+      "linkedin_url": "https://www.linkedin.com/in/salkimmich/",
+      "twitter_url": "https://twitter.com/Sal_on_Cyber"
     }
   },
   "Main": {
