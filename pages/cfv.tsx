@@ -6,9 +6,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'CFV, Open Source Day 2023 - Florence',
-        description:
-          'Open Source Day 2023 coming on the 24th of March 2023. Stay tuned on our social'
+        title: 'CFV, Open Source Day 2024 - Florence',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -21,7 +19,7 @@ export default function CFV() {
     <>
       <div className="container">
         <Hero
-          title="Open Source Day 2023"
+          title="Open Source Day 2024"
           subtitle="Call for volunteers"
           description={t('description')}
           originals={false}
