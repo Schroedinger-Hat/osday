@@ -5,7 +5,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'Cookie, Open Source Day 2043 - Florence',
+        title: 'Cookie, Open Source Day 2024 - Florence',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
