@@ -104,6 +104,9 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://sourcegraph.com/" target="_blank" rel="noreferrer">
               <Image width={150} height={50} src="/sourcegraph.svg" alt="Sourcegraph"/>
             </a>
+            <a href="https://mia-platform.eu/" target="_blank" rel="noreferrer">
+              <Image width={250} height={130} src="/mia-platform.png" alt="Mia Platform"/>
+            </a>
           </div>
           {/* <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
