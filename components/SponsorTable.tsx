@@ -107,6 +107,9 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://mia-platform.eu/" target="_blank" rel="noreferrer">
               <Image width={250} height={130} src="/mia-platform.png" alt="Mia Platform"/>
             </a>
+            <a href="https://transact-ecsel.eu/" target="_blank" rel="noreferrer">
+              <Image width={150} height={100} src="/transact_silver.svg" alt="transact"/>
+            </a>
           </div>
           {/* <h3 className="sponsors_tier">Media</h3>
                 <div className="sponsors_logo">
