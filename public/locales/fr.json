@@ -333,7 +333,7 @@
     "noah": {
       "id": "noah",
       "name": "Noah Jelich",
-      "job_title": "Developer Advocate Lead at Fermyon",
+      "job_title": "Lead Security Researcher at Hacken Cybersecurity Services",
       "talk_title": "Unveiling WasmCov: Revolutionizing Test Coverage Across Wasm Ecosystems",
       "talk": "WebAssembly (Wasm) has seen widespread adoption, yet a significant challenge persists—lack of support for comprehensive test coverage solutions like LLVM. In the realm of blockchain, where code vulnerabilities can have severe consequences, relying on automated testing becomes paramount. This presentation delves into the limitations of current test coverage suites for Wasm and introduces an innovative solution - WasmCov. Developed by Noah Jelich and Bartosz Barwikowski at Hacken, WasmCov pioneers the field of Wasm module coverage, providing a robust testing tool to fortify smart contract development in blockchain environments.",
       "linkedin_url": "https://www.linkedin.com/in/njelich/",
