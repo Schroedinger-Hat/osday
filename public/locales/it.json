@@ -229,7 +229,7 @@
     },
     "nathan": {
       "id": "nathan",
-      "name": "Nathan Marss",
+      "name": "Nathan Marrs",
       "job_title": "Tech Lead of Data Visualization at Grafana Labs",
       "talk_title": "How to Monetize Your OSS Project While Keeping Its Soul Intact: A Grafana Story",
       "talk": "Join Nathan for an engaging talk that uncovers the art of monetizing open-source projects without compromising their core principles. In this captivating presentation, attendees will delve into the real-world success story of Grafana, where Nathan will share actionable insights and strategies for achieving financial sustainability while preserving the soul of your beloved open-source endeavor.\n\nNathan's talk promises to be an eye-opener for open-source enthusiasts, project maintainers, and business-minded individuals alike. Whether you're passionate about Grafana or eager to unlock the potential of your own OSS project, this presentation offers a roadmap for harmonizing monetary success with open-source ethos.",
@@ -333,7 +333,7 @@
     "noah": {
       "id": "noah",
       "name": "Noah Jelich",
-      "job_title": "Developer Advocate Lead at Fermyon",
+      "job_title": "Lead Security Researcher at Hacken Cybersecurity Services",
       "talk_title": "Unveiling WasmCov: Revolutionizing Test Coverage Across Wasm Ecosystems",
       "talk": "WebAssembly (Wasm) has seen widespread adoption, yet a significant challenge persists—lack of support for comprehensive test coverage solutions like LLVM. In the realm of blockchain, where code vulnerabilities can have severe consequences, relying on automated testing becomes paramount. This presentation delves into the limitations of current test coverage suites for Wasm and introduces an innovative solution - WasmCov. Developed by Noah Jelich and Bartosz Barwikowski at Hacken, WasmCov pioneers the field of Wasm module coverage, providing a robust testing tool to fortify smart contract development in blockchain environments.",
       "linkedin_url": "https://www.linkedin.com/in/njelich/",
