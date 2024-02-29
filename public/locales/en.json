@@ -367,7 +367,7 @@
     "paolo": {
       "id": "paolo",
       "name": "Paolo Insogna",
-      "job_title": "Staff Developer Experience Engineer at NearForm",
+      "job_title": "Node.js TSC and Staff DX Engineer at NearForm",
       "talk_title": "From Smart Home to Smart Cats: extending my home automation to my pets",
       "talk": "When going online and searching for new gadgets for our home, we often find Alexa, HomeKit or Google Assistant compatibility badges. Are these compatibility layers hard to code? What if I want to code mine?\n\nThe truth is that every gadget that is connected to the internet is probably speaking to an HTTP or MQTT API. And this means you know how to use it. In this talk, I will show you how I easily made my cat’s life way technological.",
       "linkedin_url": "https://www.linkedin.com/in/pinsogna/",
