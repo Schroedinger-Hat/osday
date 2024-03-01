@@ -10,9 +10,10 @@ type TAgendaCard = {
     icon: string;
     position: string;
     link?: string;
+    subtitle?: string;
 }
 
-const AgendaCard = ({hour, talkTitle, speakerName, secondSpeakerName, isBreak, breakTitle, icon, position, link}: TAgendaCard) => {
+const AgendaCard = ({hour, talkTitle, speakerName, secondSpeakerName, isBreak, breakTitle, icon, position, link, subtitle}: TAgendaCard) => {
     return (
         <>
         {
@@ -21,6 +22,7 @@ const AgendaCard = ({hour, talkTitle, speakerName, secondSpeakerName, isBreak, b
                 <div className="content-timeline">
                     <Image width={30} height={30} src={icon} alt=""/><h3>{hour}</h3>
                     <h1>{breakTitle}</h1>
+                    {subtitle && <h3>{subtitle}</h3>}
                 </div>
             </div> 
             : 
