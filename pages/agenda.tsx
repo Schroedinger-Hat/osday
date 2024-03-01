@@ -2,6 +2,7 @@ import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
 import AgendaCard from '../components/AgendaCard';
 import { useState } from 'react';
+import { YT_LIVE_LINKS } from '../constants';
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
@@ -52,6 +53,14 @@ export default function Agenda() {
             {NavBar(2)}
           </div>
         </div>
+
+        {new Date().getTime() > 1709798400000 && 
+        <div className="container-stream-link">
+          <h2>We are live!</h2>
+          <a className="button" href={YT_LIVE_LINKS[trackSelected.toLowerCase()]} rel="nofollow" target="_blank">
+            Click to follow the live stream on YouTube!
+          </a>
+        </div>}
 
         <div className="timeline">
           {trackSelected === 'Alpha1' && (
