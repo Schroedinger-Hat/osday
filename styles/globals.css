@@ -580,6 +580,14 @@ div.image .img {
   margin-left: -3px;
 }
 
+.container-stream-link {
+  display: flex;
+  place-content: center;
+  margin-bottom: 1em;
+  flex-direction: column;
+  align-items: center;
+}
+
 .container-timeline {
   padding: 10px 40px;
   position: relative;

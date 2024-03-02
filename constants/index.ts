@@ -176,3 +176,14 @@ export type TicketImage = {
   year: string;
   dates: string;
 };
+
+interface MapStream {
+  [key: string]: string;
+}
+
+export const YT_LIVE_LINKS: MapStream = {
+  alpha1: "https://youtube.com/live/_mA4mvYpU68",
+  alpha2: "https://youtube.com/live/8owI4xBEIl0",
+  beta1: "https://youtube.com/live/te8tNwnej0M",
+  beta2: "https://youtube.com/live/Va6vIYCVxj0",
+}
