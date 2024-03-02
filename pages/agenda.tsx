@@ -63,7 +63,7 @@ export default function Agenda() {
               {/* <AgendaCard hour='10:40' isBreak={true} breakTitle='Coffee break' icon='/icons/coffee.svg' position='left'/> */}
               <AgendaCard hour='11:30' isBreak={false} speakerName={s('iulia.name')} talkTitle={s('iulia.talk_title')} icon='/icons/microphone.svg' position='right' link={s('iulia.id')}/>
               <AgendaCard hour='12:15' isBreak={true} breakTitle='Lunch break' icon='/icons/fork-and-knife.svg' position='left'/>
-              <AgendaCard hour='14:00' isBreak={true} breakTitle='Afternoon intro' subtitle='Presented by Miki Lombardi & Maciek Palmowski' icon='/icons/microphone.svg' position='right'/>
+              <AgendaCard hour='14:00' isBreak={true} breakTitle='Afternoon intro' subtitle='Presented by Miki Lombardi & Irine Kokilashvili' icon='/icons/microphone.svg' position='right'/>
               <AgendaCard hour='14:05' isBreak={false} speakerName={s('fabien.name')} talkTitle={s('fabien.talk_title')} icon='/icons/microphone.svg' position='left' link={s('fabien.id')}/>
               <AgendaCard hour='14:40' isBreak={false} speakerName={s('samantha.name')} talkTitle={s('samantha.talk_title')} icon='/icons/microphone.svg' position='right' link={s('samantha.id')}/>
               <AgendaCard hour='15:20' isBreak={false} speakerName={s('abdel.name')} talkTitle={s('abdel.talk_title')} icon='/icons/microphone.svg' position='left' link={s('abdel.id')}/>
