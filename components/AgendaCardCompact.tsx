@@ -16,7 +16,7 @@ const AgendaCardCompact = ({hour, talkTitle, speakerName, secondSpeakerName, isB
     return (
         <>
         <div className={`compact`}>
-            <hr className={`divider`}></hr>
+            <hr></hr>
         </div>
         {
             isBreak ?
@@ -39,7 +39,6 @@ const AgendaCardCompact = ({hour, talkTitle, speakerName, secondSpeakerName, isB
                             :
                             <h4> {speakerName} </h4>
                         }
-                       
                         <span className={'description'}>{talkTitle}</span>
                 </a>
             </div> 

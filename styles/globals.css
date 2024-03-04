@@ -1267,7 +1267,6 @@ div.image .img {
 .compact {
   padding: .1em;
   margin-top: -0.25em;
-  
   margin-left: 1em;
   margin-right:1em;
 }
@@ -1275,10 +1274,12 @@ div.image .img {
 .compact .description {
   display:inline-block;
   padding-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .compact p{
   display:inline-block;
+  margin: auto;
 }
 
 .compact h1 {
@@ -1297,13 +1298,13 @@ div.image .img {
   display:inline;
 }
 
-.compact .divider{
-  margin-left: 0em;
-  padding: 0em;
+.compact.clickable .description:hover{
+  color: #ed213a;
 }
 
 .agenda-nav .compact {
  margin-top: 1em;
+ padding: .4em
 }
 .agenda-nav-container {
   display: flex;
