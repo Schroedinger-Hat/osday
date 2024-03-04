@@ -36,10 +36,10 @@ export default function Agenda() {
   };
 
   const ViewButton = (
-     <span 
+     <div 
       className='nav-button'>
-      <Link href={'/agenda'}>Timeline View</Link>
-    </span>
+      <Link className="button" href={"/agenda"}>Timeline View</Link>
+    </div>
   )
   
   return (
