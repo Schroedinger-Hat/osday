@@ -37,17 +37,7 @@ export default function Agenda() {
 
   return (
     <>
-      <div className=".container">
-        <Hero
-          title={t('title')}
-          subtitle={t('subtitle')}
-          description={t('description')}
-          originals={false}
-          secondaryCta={{
-            text: t('secondarycta_text'),
-            link: 'mailto:osday@schrodinger-hat.it'
-          }}
-        />
+          <div className=".container">
 
         <div className='agenda-nav-container'>
           <div className='agenda-nav compact'>

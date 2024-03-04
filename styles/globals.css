@@ -1302,6 +1302,9 @@ div.image .img {
   color: #ed213a;
 }
 
+.agenda-nav.compact {
+  margin-top: 1em;
+}
 .agenda-nav .compact {
  margin-top: 1em;
  padding: .4em
