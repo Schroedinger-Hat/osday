@@ -38,21 +38,20 @@ export default function Agenda() {
   const ViewButton = (
      <div 
       className='nav-button'>
-      <Link className="button" href={"/agenda"}>Timeline View</Link>
+      <Link className="button " href={"/agenda"}>Timeline View</Link>
     </div>
   )
   
   return (
     <>
-          <div className=".container">
-
-        <div className='agenda-nav-container'>
-          {ViewButton}
-          <div className='agenda-nav compact'>
-            {NavBar(1)}
-            {NavBar(2)}
-          </div>
-        </div>
+          <div className="container">
+            <div className='agenda-nav-container'>
+              {ViewButton}
+              <div className='agenda-nav '>
+                {NavBar(1)}
+                {NavBar(2)}
+              </div>
+            </div>
 
         {new Date().getTime() > 1709798400000 && 
         <div className="container-stream-link">

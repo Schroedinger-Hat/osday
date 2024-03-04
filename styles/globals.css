@@ -1264,6 +1264,10 @@ div.image .img {
   margin-bottom: 10em;
 }
 
+.nav-button  {
+  padding: .5em;
+}
+
 .compact {
   padding: .1em;
   margin-top: -0.25em;
