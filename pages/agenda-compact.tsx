@@ -92,7 +92,7 @@ export default function Agenda() {
           {trackSelected === 'Beta1' && (
             <>
               <div className={`agenda-nav compact`}>
-                <h1> OS Day 1 - Beta Track (07.04)</h1>
+                <h1> OS Day 1 - Beta Track (07.03)</h1>
               </div>
               <AgendaCardCompact hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg'  />
               <AgendaCardCompact hour='9:50' isBreak={true} breakTitle='Morning intro' subtitle='Presented by Patrick Raedler' icon='/icons/microphone.svg'  />
