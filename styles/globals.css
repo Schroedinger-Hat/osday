@@ -1264,6 +1264,55 @@ div.image .img {
   margin-bottom: 10em;
 }
 
+.nav-button  {
+  padding: .5em;
+}
+
+.compact {
+  padding: .1em;
+  margin-top: -0.25em;
+  margin-left: 1em;
+  margin-right:1em;
+}
+
+.compact .description {
+  display:inline-block;
+  padding-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.compact p{
+  display:inline-block;
+  margin: auto;
+}
+
+.compact h1 {
+  padding-left: 0.5em;
+  margin:  auto;
+}
+.compact h3{
+  display:inline-block;
+  width: 4em;
+  padding-left: 0.5em;
+  margin:auto;
+  font-style: oblique;
+}
+
+.compact h4{
+  display:inline;
+}
+
+.compact.clickable .description:hover{
+  color: #ed213a;
+}
+
+.agenda-nav.compact {
+  margin-top: 1em;
+}
+.agenda-nav .compact {
+ margin-top: 1em;
+ padding: .4em
+}
 .agenda-nav-container {
   display: flex;
   justify-content: center;
@@ -1726,5 +1775,24 @@ div.image .img {
 
   .speaker_hero {
     display: block;
+  }
+}
+
+@media print {
+
+  .agenda-nav-container {
+    display:none;
+  }
+
+  .nav {
+    display:none;
+  }
+
+  .footer-footer {
+    display: none;
+  }
+
+  .footer-inner {
+    display: none;
   }
 }
