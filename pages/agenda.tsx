@@ -1,4 +1,5 @@
 import Hero from '../components/Hero';
+import Link from 'next/link';
 import { useTranslations } from 'next-intl';
 import AgendaCard from '../components/AgendaCard';
 import { useState } from 'react';
@@ -51,6 +52,9 @@ export default function Agenda() {
           <div className='agenda-nav'>
             {NavBar(1)}
             {NavBar(2)}
+            <div className="compact button">
+              <Link href={'/agenda-compact'}>Compact View</Link>
+            </div>
           </div>
         </div>
 
