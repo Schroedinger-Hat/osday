@@ -35,17 +35,22 @@ export default function Agenda() {
     });
   };
 
+  const ViewButton = (
+     <span 
+      className='nav-button'>
+      <Link href={'/agenda'}>Timeline View</Link>
+    </span>
+  )
+  
   return (
     <>
           <div className=".container">
 
         <div className='agenda-nav-container'>
           <div className='agenda-nav compact'>
+            {ViewButton}
             {NavBar(1)}
             {NavBar(2)}
-            <div className="compact button">
-            <Link href={'/agenda'}>Timeline View</Link>
-            </div>
           </div>
         </div>
 
@@ -62,7 +67,7 @@ export default function Agenda() {
           {trackSelected === 'Alpha1' && (
             <>
               <div className={`agenda-nav compact`}>
-                <h1 > Alpha Track (March 7th)</h1>
+                <h1 > OS Day 1 - Alpha Track (07.04)</h1>
               </div>
               <AgendaCardCompact hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg' />
               <AgendaCardCompact hour='9:50' isBreak={true} breakTitle='Morning intro' subtitle='Presented by Lorenzo Pieri & Maciek Palmowski' icon='/icons/microphone.svg'  />
@@ -87,7 +92,7 @@ export default function Agenda() {
           {trackSelected === 'Beta1' && (
             <>
               <div className={`agenda-nav compact`}>
-                <h1> Beta Track (March 7th)</h1>
+                <h1> OS Day 1 - Beta Track (07.04)</h1>
               </div>
               <AgendaCardCompact hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg'  />
               <AgendaCardCompact hour='9:50' isBreak={true} breakTitle='Morning intro' subtitle='Presented by Patrick Raedler' icon='/icons/microphone.svg'  />
@@ -112,7 +117,7 @@ export default function Agenda() {
           {trackSelected === 'Alpha2' && (
             <>
               <div className={`agenda-nav compact`}>
-                <h1> Alpha Track (March 8th)</h1>
+                <h1> OS Day 2 - Alpha Track (08.04)</h1>
               </div>
               <AgendaCardCompact hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg'  />
               <AgendaCardCompact hour='9:50' isBreak={true} breakTitle='Morning intro' subtitle='Presented by Miki Lombardi & Noah Jelic' icon='/icons/microphone.svg'  />
@@ -135,7 +140,7 @@ export default function Agenda() {
           {trackSelected === 'Beta2' && (
             <>
               <div className={`agenda-nav compact`}>
-                <h1> Beta Track (March 8th)</h1>
+                <h1> OS Day 2 - Beta Track (08.04)</h1>
               </div>
               <AgendaCardCompact hour='8:30' isBreak={true} breakTitle='Open gate' icon='/icons/pencil.svg'  />
               <AgendaCardCompact hour='9:50' isBreak={true} breakTitle='Morning intro' subtitle='Presented by Davide Imola' icon='/icons/microphone.svg'  />

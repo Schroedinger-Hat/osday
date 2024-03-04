@@ -34,6 +34,13 @@ export default function Agenda() {
     });
   };
 
+  const ViewButton = (
+    <span 
+     className='nav-button'>
+     <Link href={'/agenda-compact'}>Compact View</Link>
+   </span>
+ )
+
   return (
     <>
       <div className="container">
@@ -50,11 +57,9 @@ export default function Agenda() {
 
         <div className='agenda-nav-container'>
           <div className='agenda-nav'>
+            {ViewButton}
             {NavBar(1)}
             {NavBar(2)}
-            <div className="compact button">
-              <Link href={'/agenda-compact'}>Compact View</Link>
-            </div>
           </div>
         </div>
 

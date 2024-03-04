@@ -1773,3 +1773,22 @@ div.image .img {
     display: block;
   }
 }
+
+@media print {
+
+  .agenda-nav-container {
+    display:none;
+  }
+
+  .nav {
+    display:none;
+  }
+
+  .footer-footer {
+    display: none;
+  }
+
+  .footer-inner {
+    display: none;
+  }
+}
