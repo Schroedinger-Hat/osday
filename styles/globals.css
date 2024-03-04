@@ -1264,6 +1264,47 @@ div.image .img {
   margin-bottom: 10em;
 }
 
+.compact {
+  padding: .1em;
+  margin-top: -0.25em;
+  
+  margin-left: 1em;
+  margin-right:1em;
+}
+
+.compact .description {
+  display:inline-block;
+  padding-left: 0.5em;
+}
+
+.compact p{
+  display:inline-block;
+}
+
+.compact h1 {
+  padding-left: 0.5em;
+  margin:  auto;
+}
+.compact h3{
+  display:inline-block;
+  width: 4em;
+  padding-left: 0.5em;
+  margin:auto;
+  font-style: oblique;
+}
+
+.compact h4{
+  display:inline;
+}
+
+.compact .divider{
+  margin-left: 0em;
+  padding: 0em;
+}
+
+.agenda-nav .compact {
+ margin-top: 1em;
+}
 .agenda-nav-container {
   display: flex;
   justify-content: center;
