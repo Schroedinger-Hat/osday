@@ -71,6 +71,7 @@ export default function Agenda() {
               {/* <AgendaCardCompact hour='10:40' isBreak={true} breakTitle='Coffee break' icon='/icons/coffee.svg'  /> */}
               <AgendaCardCompact hour='11:30' isBreak={false} speakerName={s('iulia.name')} talkTitle={s('iulia.talk_title')} icon='/icons/microphone.svg'   link={s('iulia.id')}/>
               <AgendaCardCompact hour='12:15' isBreak={true} breakTitle='Lunch break' icon='/icons/fork-and-knife.svg'  />
+              <AgendaCardCompact hour='13:30' isBreak={true} breakTitle='Open Debate' subtitle='30min of open discussion' icon='/icons/microphone.svg' />
               <AgendaCardCompact hour='14:00' isBreak={true} breakTitle='Afternoon intro' subtitle='Presented by Miki Lombardi & Irine Kokilashvili' icon='/icons/microphone.svg'  />
               <AgendaCardCompact hour='14:05' isBreak={false} speakerName={s('fabien.name')} talkTitle={s('fabien.talk_title')} icon='/icons/microphone.svg'   link={s('fabien.id')}/>
               <AgendaCardCompact hour='14:40' isBreak={false} speakerName={s('samantha.name')} talkTitle={s('samantha.talk_title')} icon='/icons/microphone.svg'   link={s('samantha.id')}/>
@@ -95,6 +96,7 @@ export default function Agenda() {
               {/* <AgendaCardCompact hour='10:40' isBreak={true} breakTitle='Coffee break' icon='/icons/coffee.svg'  /> */}
               <AgendaCardCompact hour='11:30' isBreak={false} speakerName={s('roman.name')} talkTitle={s('roman.talk_title')} icon='/icons/microphone.svg'   link={s('roman.id')}/>
               <AgendaCardCompact hour='12:15' isBreak={true} breakTitle='Lunch break' icon='/icons/fork-and-knife.svg'  />
+              <AgendaCardCompact hour='13:30' isBreak={true} breakTitle='Open Debate' subtitle='30min of open discussion' icon='/icons/microphone.svg' />
               <AgendaCardCompact hour='14:00' isBreak={true} breakTitle='Afternoon intro' subtitle='Presented by Davide Imola' icon='/icons/microphone.svg'  />
               <AgendaCardCompact hour='14:05' isBreak={false} speakerName={s('alessandro.name')} talkTitle={s('alessandro.talk_title')} icon='/icons/microphone.svg'   link={s('alessandro.id')}/>
               <AgendaCardCompact hour='14:40' isBreak={false} speakerName={s('sasha.name')} talkTitle={s('sasha.talk_title')} icon='/icons/microphone.svg'   link={s('sasha.id')}/>
