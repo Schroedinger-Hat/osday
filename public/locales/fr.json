@@ -494,6 +494,25 @@
     "car_infos": "Voici une liste de <link>parking payant</link>. Les plus proches du lieu de réunion sont : Porta al Prato - Leopolda, Stazione S.M.N et S. Lorenzo - Mercato Centrale",
     "information": "Si vous avez besoin d'aide, ou si vous voulez plus d'informations, envoyez-nous un <link>email</link>"
   },
+  "Faq": {
+    "title": "Open Source Day 2024",
+    "subtitle": "FAQ",
+    "description": "Les questions les plus fréquentes",
+    "heading": "Voici quelques questions-réponses utiles",
+    "faq_question_0": "Comment se déroule l'after party ? Puis-je amener un invité ?",
+    "faq_question_1": "Puis-je arriver plus tard que l'après-midi ?",
+    "faq_question_2": "Y aura-t-il de la nourriture offerte ?",
+    "faq_question_3": "Existe-t-il une version en ligne ? Allez-vous télécharger les conférences ?",
+    "faq_question_4": "Ai-je besoin de documents pour entrer dans la salle ?",
+    "faq_question_5": "Y a-t-il un programme pour l'événement ?",
+    "faq_answer_0": "L'after party est organisée à 18h30 dans le bar situé dans l'enceinte de l'événement. Les places sont limitées aux seuls participants présents. Malheureusement, nous avons estimé le nombre de personnes en tenant compte d'un éventuel retrait de billets le jour de l'événement. En entrant dans la salle, vous obtiendrez donc un document à présenter au personnel pour obtenir des boissons. En cas de dépassement du nombre de participants, nous ne pourrons malheureusement pas offrir plus, mais nous espérons que vous pourrez tout de même profiter de cette opportunité de réseautage.",
+    "faq_answer_1": "Bien sûr ! Vous pouvez entrer quand vous le souhaitez. Un membre du personnel sera présent à l'entrée pour vérifier les billets et vous remettre le badge.",
+    "faq_answer_2": "Nous proposons de la nourriture uniquement pendant l'after party, en guise d'apéritif. Nous avons organisé un prix réduit avec le lieu, tant pour le lancement que pour les pauses café. Vous pouvez acheter votre propre nourriture au <link_stellar>The Stellar</link_stellar>.",
+    "faq_answer_3": "L'événement sera retransmis sur YouTube pour les deux jours et les deux pistes. Vous pouvez visionner les enregistrements quand vous le souhaitez. De plus, toutes les conférences seront téléchargées séparément quelques jours après l'événement.",
+    "faq_answer_4": "Non, seul le billet est nécessaire.",
+    "faq_answer_5": "Oui, l'ordre du jour est disponible sur le site de la conférence ! Aller à l'<link_agenda>agenda</link_agenda>",
+    "information": "Comme nous avons découvert plusieurs grèves pendant les journées de la conférence affectant les avions et les trains, nous avons mis à jour le site web avec des informations supplémentaires pour atteindre le <link_venue>lieu</link_venue>.<space></space>Si vous avez d'autres questions, veuillez nous contacter par email à <u>events@schrodinger-hat.it</u> ou par un message direct sur notre page <link_linkedin>LinkedIn</link_linkedin>."
+  },
   "SponsorshipTier": {
     "know_more": "En savoir plus"
   },
