@@ -28,6 +28,7 @@
     "agenda_link": "Agenda",
     "venue_link": "Sede",
     "about_link": "About",
+    "faq_link": "Faq",
     "sponsor_link": "Sponsor",
     "speakers_Link": "Speakers",
     "photo_link": "Foto",
@@ -493,6 +494,25 @@
     "plane_infos_3": "Dall'aeroporto di Bologna: c'è un <link_minibus>minibus</link_minibus> che vi porterà alla stazione ferroviaria di Bologna Centrale. Poi si può scegliere di raggiungere Firenze con <link_bus>autobus</link_bus> (1:30h) o con <link_train>treno</link_train>. Non scegliete la soluzione del treno di 1 ora e più, a meno che non vogliate vedere tutte le stazioni tra Bologna e Firenze (30 minuti con il Frecciarossa o 1 ora con il treno regionale). Esiste anche un'altra compagnia di <link_italo>treno</link_italo> che effettua questa tratta",
     "car_infos": "Ecco una lista di <link>parcheggi a pagamento</link>. I più vicini sono: Porta al Prato - Leopolda, Stazione S.M.N and S. Lorenzo - Mercato Centrale",
     "information": "Se hai bisogno di aiuto, o ti servono più informazioni, mandaco una <link>email</link>"
+  },
+  "Faq": {
+    "title": "Open Source Day 2024",
+    "subtitle": "FAQ",
+    "description": "Le domande più frequenti",
+    "heading": "Ecco alcune utili domande e risposte",
+    "faq_question_0": "Come funziona l'after party? Posso portare un ospite?",
+    "faq_question_1": "Posso arrivare più tardi del pomeriggio?",
+    "faq_question_2": "Ci sarà del cibo offerto?",
+    "faq_question_3": "Esiste una versione online? Avete intenzione di caricare i discorsi?",
+    "faq_question_4": "Ho bisogno di qualche documento per entrare nella sede?",
+    "faq_question_5": "C'è un programma per l'evento?",
+    "faq_answer_0": "L'after party è organizzato alle 18:30 presso il Bar della sede dell'evento. I posti sono limitati ai soli partecipanti presenti. Purtroppo abbiamo stimato un numero di persone considerando un possibile abbandono dei biglietti il giorno dell'evento, quindi entrando nel locale si otterrà qualcosa da mostrare al personale per ottenere le bevande. Nel caso in cui il numero di persone fosse superato, purtroppo non potremo più darvi la possibilità di partecipare all'evento, ma ci auguriamo che possiate comunque approfittare di questa opportunità di networking.",
+    "faq_answer_1": "Naturalmente! Potete entrare quando volete. Un membro dello staff sarà presente all'ingresso solo per controllare i biglietti e consegnare il badge.",
+    "faq_answer_2": "Offriamo cibo solo durante l'after party come aperitivo. Abbiamo organizzato un prezzo scontato con il locale, sia per il lancio che per il coffee break. È possibile acquistare il proprio cibo presso <link_stellar>The Stellar</link_stellar>.",
+    "faq_answer_3": "L'evento sarà trasmesso su YouTube per entrambi i giorni e per entrambi i brani. Potrete vedere le registrazioni quando vorrete. Inoltre, tutti gli interventi saranno caricati separatamente qualche giorno dopo l'evento.",
+    "faq_answer_4": "No, è necessario solo il biglietto.",
+    "faq_answer_5": "Sì, l'agenda è disponibile sul sito web della conferenza! Vai all'<link_agenda>agenda</link_agenda>",
+    "information": "Poiché abbiamo scoperto diversi scioperi che coinvolgono i giorni della conferenza e che interessano aerei e treni, abbiamo aggiornato il sito web con ulteriori informazioni per raggiungere il <link_venue>luogo</link_venue>.<space></space>Se avete altre domande, contattateci con un'e-mail all'indirizzo <u>events@schrodinger-hat.it</u> o attraverso un messaggio diretto alla nostra pagina <link_linkedin>LinkedIn</link_linkedin>."
   },
   "SponsorshipTier": {
     "know_more": "Scopri di più"
