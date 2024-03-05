@@ -489,8 +489,8 @@
     "heading": "RAGGIUNGERE LA SEDE",
     "train_infos": "Dalla stazione di Firenze SMN, puoi raggiungere la sede a piedi (15min.), o prendere un autobus (linee C4/6 fermata: Soderini Torrino Santa Rosa)",
     "plane_infos_1": "Dall'aeroporto di Firenze: prendere il tram, linea T2, fermata: Alamanni - Stazione Santa Maria Novella",
-    "plane_infos_2": "Dall'aeroporto di Pisa: prendere il PisaMover fino alla stazione, poi prendere un <link_train>treno</link_train> per Firenze Santa Maria Novella (1h)",
-    "plane_infos_3": "Dall'aeroporto di Bologna: puoi scegliere di raggiungere Firenze con il <link_bus>bus</link_bus>(1:30h) oppure con il <link_train>treno</link_train> (30min. con il Frecciarossa oppure 1h con treno regionale)",
+    "plane_infos_2": "Dall'aeroporto di Pisa: Prendere il PisaMover dall'aeroporto a Pisa Centrale. Pisamover permette di raggiungere l'aeroporto con un servizio navetta in meno di 3 minuti. La navetta è attiva dalle 6.00 a mezzanotte. Poi prendete un <link_train>treno</link_train> per Firenze Santa Maria Novella (1h/1h30m).",
+    "plane_infos_3": "Dall'aeroporto di Bologna: c'è un <link_minibus>minibus</link_minibus> che vi porterà alla stazione ferroviaria di Bologna Centrale. Poi si può scegliere di raggiungere Firenze con <link_bus>autobus</link_bus> (1:30h) o con <link_train>treno</link_train>. Non scegliete la soluzione del treno di 1 ora e più, a meno che non vogliate vedere tutte le stazioni tra Bologna e Firenze (30 minuti con il Frecciarossa o 1 ora con il treno regionale). Esiste anche un'altra compagnia di <link_italo>treno</link_italo> che effettua questa tratta",
     "car_infos": "Ecco una lista di <link>parcheggi a pagamento</link>. I più vicini sono: Porta al Prato - Leopolda, Stazione S.M.N and S. Lorenzo - Mercato Centrale",
     "information": "Se hai bisogno di aiuto, o ti servono più informazioni, mandaco una <link>email</link>"
   },

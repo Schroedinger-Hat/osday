@@ -487,8 +487,8 @@
     "heading": "ARRIVAL AT THE VENUE",
     "train_infos": "From the main station Firenze SMN, you can reach the venue by walk (15min.), or take a bus (lines C4/6 stop: Soderini Torrino Santa Rosa)",
     "plane_infos_1": "From Florence Airport: take the tram, line T2, stop: Alamanni - Stazione Santa Maria Novella",
-    "plane_infos_2": "From Pisa Airport: take the PisaMover for the train station, than take a <link_train>train</link_train> to Firenze Santa Maria Novella (1h)",
-    "plane_infos_3": "From Bologna Airport: you can choose to reach Florence by <link_bus>bus</link_bus>(1:30h) or by <link_train>train</link_train> (30min. with Frecciarossa or 1h with regional train)",
+    "plane_infos_2": "From Pisa Airport: Take the PisaMover from the airport to Pisa Centrale. Pisamover allows you to reach the airport with a shuttle service in less than 3 minutes. The shuttle runs from 6.00 a.m. to midnight. Then take a <link_train>train</link_train> to Firenze Santa Maria Novella (1h/1h30m)",
+    "plane_infos_3": "From Bologna Airport: there is a <link_minibus>minibus</link_minibus> that can get you to Bologna Centrale train station. Then you can choose to reach Florence by <link_bus>bus</link_bus>(1:30h) or by <link_train>train</link_train>. You should not choose the train 1hour+ solution unless you want to see all the stations between bologna and florence (30min. with Frecciarossa or 1h with regional train). There are also another <link_italo>train</link_italo> company that do this route",
     "car_infos": "Here a list of <link>paid parking</link>. The nearest to the venue are: Porta al Prato - Leopolda, Stazione S.M.N and S. Lorenzo - Mercato Centrale",
     "information": "If you need help, or need more information send us an <link>email</link>"
   },
