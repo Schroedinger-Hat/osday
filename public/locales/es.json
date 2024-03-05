@@ -489,8 +489,8 @@
     "heading": "LLEGADA A LA SEDE",
     "train_infos": "Desde la estación principal Firenze SMN, se puede llegar a pie (15 minutos) o en autobús (líneas C4/6, parada: Soderini Torrino Santa Rosa)",
     "plane_infos_1": "Desde el aeropuerto de Florencia: tomar el tranvía, línea T2, parada: Alamanni - Stazione Santa Maria Novella",
-    "plane_infos_2": "Desde el aeropuerto de Pisa: coja el PisaMover hasta la estación de tren, después coja un <link_train>tren</link_train> a Firenze Santa Maria Novella (1h)",
-    "plane_infos_3": "Desde el aeropuerto de Bolonia: puede optar por llegar a Florencia en <link_bus>autobús</link_bus>(1:30h) o en <link_train>tren</link_train> (30min. con Frecciarossa o 1h con tren regional)",
+    "plane_infos_2": "Desde el aeropuerto de Pisa: Tome el PisaMover desde el aeropuerto hasta Pisa Centrale. Pisamover le permite llegar al aeropuerto con un servicio de lanzadera en menos de 3 minutos. El servicio de lanzadera funciona desde las 6.00 hasta medianoche. A continuación, tome un <link_train>tren</link_train> hasta Firenze Santa Maria Novella (1h/1h30m).",
+    "plane_infos_3": "Desde el aeropuerto de Bolonia: hay un <link_minibus>minibús</link_minibus> que puede llevarte a la estación de tren Bologna Centrale. Luego puedes elegir llegar a Florencia en <link_bus>autobús</link_bus>(1:30h) o en <link_train>tren</link_train>. No deberías elegir la solución de tren 1h+ a no ser que quieras ver todas las estaciones entre bolonia y florencia (30min. con Frecciarossa o 1h con tren regional). También hay otra compañía de <link_italo>tren</link_italo> que hace esta ruta",
     "car_infos": "Aquí una lista de <link>aparcamientos de pago</link>. Los más cercanos al lugar de celebración son: Porta al Prato - Leopolda, Stazione S.M.N y S. Lorenzo - Mercato Centrale",
     "information": "Si necesita ayuda o más información, envíenos un <link>correo electrónico</link>"
   },
