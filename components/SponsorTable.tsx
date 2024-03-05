@@ -92,9 +92,6 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
               <Image width={250} height={66} src="/victoria-metrics.svg" alt="VictoriaMetrics"/>
             </a>
-            <a href="https://cometa.rocks/" target="_blank" rel="noreferrer">
-              <Image width={250} height={58} src="/cometa.png" alt="Co.meta"/>
-            </a>
             <a href="https://learnn.com/" target="_blank" rel="noreferrer">
               <Image width={150} height={100} src="/learnn.svg" alt="Learnn"/>
             </a>
