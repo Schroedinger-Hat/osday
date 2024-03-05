@@ -1376,6 +1376,14 @@ div.image .img {
     transition: none;
   }
 
+  .agenda-nav-container {
+    flex-direction: column;
+  }
+
+  .nav-button .button {
+    display: flex;
+  }
+
   .agenda-nav .nav-button {
     width: 100%;
     display: inline-grid;
