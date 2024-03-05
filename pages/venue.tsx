@@ -45,22 +45,22 @@ export default function Venue() {
               <p>{t('plane_infos_1')}</p>
               <p>{t.rich('plane_infos_2', {
                     link_train: (children: ReactNode) => (
-                      <a rel="nofollow" target="_blank" href="https://www.trenitalia.com/en.html">{children}</a>
+                      <a rel="noreferrer" target="_blank" href="https://www.trenitalia.com/en.html">{children}</a>
                     )
                   })}
               </p>
               <p>{t.rich('plane_infos_3', {
                     link_italo: (children: ReactNode) => (
-                      <a rel="nofollow" target="_blank" href="https://biglietti.italotreno.it/">{children}</a>
+                      <a rel="noreferrer" target="_blank" href="https://biglietti.italotreno.it/">{children}</a>
                     ),
                     link_minibus: (children: ReactNode) => (
-                      <a rel="nofollow" target="_blank" href="https://www.marconiexpress.it/en/">{children}</a>
+                      <a rel="noreferrer" target="_blank" href="https://www.marconiexpress.it/en/">{children}</a>
                     ),
                     link_bus: (children: ReactNode) => (
-                      <a rel="nofollow" target="_blank" href="https://www.appenninoshuttle.it/">{children}</a>
+                      <a rel="noreferrer" target="_blank" href="https://www.appenninoshuttle.it/">{children}</a>
                     ),
                     link_train: (children: ReactNode) => (
-                      <a rel="nofollow" target="_blank" href="https://www.trenitalia.com/en.html">{children}</a>
+                      <a rel="noreferrer" target="_blank" href="https://www.trenitalia.com/en.html">{children}</a>
                     )
                   })}
               </p>
