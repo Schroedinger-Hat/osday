@@ -126,7 +126,7 @@ export default function Agenda() {
               <AgendaCardCompact hour='11:30' isBreak={false} speakerName={s('christina.name')} talkTitle={s('christina.talk_title')} icon='/icons/microphone.svg'   link={s('tbd.id')}/>
               <AgendaCardCompact hour='12:15' isBreak={true} breakTitle='Lunch break' icon='/icons/fork-and-knife.svg'  />
               <AgendaCardCompact hour='14:00' isBreak={true} breakTitle='Afternoon intro' subtitle='Presented by Lorenzo Pieri & Sabrina Mazzola' icon='/icons/microphone.svg'  />
-              <AgendaCardCompact hour='14:05' isBreak={false} speakerName={s('valeria.name')} talkTitle={s('valeria.talk_title')} icon='/icons/microphone.svg'   link={s('valeria.id')}/>
+              <AgendaCardCompact hour='14:05' isBreak={false} breakTitle='Schrödinger Hat: A year in review' subtitle='Presented by the Schrödinger Hat team' icon='/icons/microphone.svg' />
               <AgendaCardCompact hour='14:45' isBreak={false} speakerName={s('santosh.name')} talkTitle={s('santosh.talk_title')} icon='/icons/microphone.svg'   link={s('santosh.id')}/>
               <AgendaCardCompact hour='15:30' isBreak={false} speakerName={s('federico.name')} talkTitle={s('federico.talk_title')} icon='/icons/microphone.svg'   link={s('federico.id')}/>
               <AgendaCardCompact hour='16:15' isBreak={false} speakerName={s('sabrina.name')} talkTitle={s('sabrina.talk_title')} icon='/icons/microphone.svg'   link={s('sabrina.id')}/>
