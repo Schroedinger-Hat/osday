@@ -63,13 +63,13 @@ export default function Agenda() {
           </div>
         </div>
 
-        {new Date().getTime() > 1709798400000 && 
+        {/*
         <div className="container-stream-link">
           <h2>We are live!</h2>
           <a className="button" href={YT_LIVE_LINKS[trackSelected.toLowerCase()]} target="_blank" rel="noreferrer">
             Click to follow the live stream on YouTube!
           </a>
-        </div>}
+        </div>*/}
 
         <div className="timeline">
           {trackSelected === 'Alpha1' && (
