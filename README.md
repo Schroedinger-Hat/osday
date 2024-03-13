@@ -49,6 +49,24 @@
 
 ## About The Project
 
+Schrödinger Hat is a collective of people based in Europe with the passion of the open source world.
+
+We recently created our no-profit organisation in Italy.
+
+In 2020 we started this community, contributed to a podcast, open source projects and so on.
+In 2021 we dediced to create a missing conference called "Open Source Day". During the covid era we managed to create a 50 in-person people and 100 online people conference in the heart of Florence with less than 1000€ of budget.
+
+In 2022 we made a Call For Contributors gaining 4 people in the admin team: now we are 6 people organising things.
+In 2023 we get back on organising the open source day but bigger. 300 in-person people with more than 400 online persons. Huge. 10k of budget.
+
+In 2024 we wanted to have fun so we decided to create a multi track in a two days conference with people coming all around the globe with more than 32 speakers. Still 10k budget.
+
+In 2025..?
+
+You can find some event photos on [Flickr](https://www.flickr.com/photos/197981994@N04/albums/with/72177720315430384) and the replays on our [YouTube channel](https://www.youtube.com/@SchrodingerHat/videos).
+
+## About The Development of the website
+
 This is the repository of the site https://osday.dev/ our hybrid conference. Enjoy :)
 
 ### Tech stack
