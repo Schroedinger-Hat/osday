@@ -114,6 +114,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/speakers'}>
             {t('speakers_Link')}
           </Link>
+          <Link onClick={closeSideBar} href={'/gallery'}>
+            Gallery
+          </Link>
           {/*          <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
           </Link> */}
@@ -137,7 +140,7 @@ export default function Header() {
           >
             {t("photo_link")}
           </a> */}
-          {new Date().getTime() < 1709805651000 &&
+          {/*
           <a
             className="button"
             target="_blank"
@@ -148,12 +151,10 @@ export default function Header() {
           >
             Free Tickets
           </a>
-          }
-          {new Date().getTime() > 1709798400000 &&
             <Link className="button" onClick={closeSideBar} href={'/agenda'}>
               We are live!
             </Link>
-          }
+          */}
           <div className="language-switcher">
             <a onClick={(e) => setLanguage(e)} href="#">
               {availableLocales[languageCode]}
@@ -254,10 +255,13 @@ export default function Header() {
         <li>
           <Link href={'/speakers'}>{t('speakers_Link')}</Link>
         </li>
+        <li>
+          <Link href={'/gallery'}>Gallery</Link>
+        </li>
         {/*<li>
           <Link href={'/cfv'}>{t('cfv_link')}</Link>
         </li> */}
-        {new Date().getTime() < 1709805651000 &&
+        {/*
         <li>
           <a
             className="button"
@@ -270,13 +274,13 @@ export default function Header() {
             Free Tickets
           </a>
         </li>
-        }
+          */}
         <li>
-          {new Date().getTime() > 1709798400000 &&
+          {/*
             <Link className="button" onClick={closeSideBar} href={'/agenda'}>
               We are live!
             </Link>
-          }
+        */}
         </li>
       </ul>
       <ul>
