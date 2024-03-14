@@ -45,6 +45,11 @@ export default function Newsletter() {
       return;
     }
 
+    setNewsletterState((prev) => ({
+      ...prev,
+      waiting: true,
+    }));
+
     const res = await fetch('/api/email-octupus', {
       method: 'POST',
       headers: {
@@ -56,15 +61,16 @@ export default function Newsletter() {
     if (res.status === 200) {
         const data = await res.json();
         if (data.id) {
-          setNewsletterState(() => {
-            return {
-              ...newsletterState,
-              subscribed: true,
-              waiting: false,
-            }
-          })
+          setNewsletterState((prev) => ({
+            ...prev,
+            subscribed: true,
+          }));
         }
     }
+    setNewsletterState((prev) => ({
+      ...prev,
+      waiting: false,
+    }));
 }
 
   return (
