@@ -66,6 +66,16 @@ export default function Newsletter() {
             subscribed: true,
           }));
         }
+        if (data.error?.code) {
+          switch (data.error.code) {
+            case "MEMBER_EXISTS_WITH_EMAIL_ADDRESS":
+              alert('You are already subscribed to our newsletter');
+              break;
+            default:
+              alert('An error occurred, please try again later');
+              break;
+          }
+        }
     }
     setNewsletterState((prev) => ({
       ...prev,
