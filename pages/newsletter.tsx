@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useRef, useState } from 'react';
 import Image from 'next/image';
 import Hero from '../components/Hero';
 import { useTranslations } from 'next-intl';
@@ -24,6 +24,7 @@ export default function Newsletter() {
       email: '',
       emailError: false,
   });
+  const emailInputRef = useRef<HTMLInputElement>(null);
 
   const newsletterImage = newsletterState.subscribed ?
     '/newsletter/lore.jpg'
@@ -34,6 +35,7 @@ export default function Newsletter() {
     return;
     
     if(!newsletterState.email.match(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/i)) {
+      emailInputRef?.current?.focus();
       setNewsletterState(() => {
         return {
           ...newsletterState,
@@ -78,6 +80,7 @@ export default function Newsletter() {
             />
             <div className='title-box'>
               {!newsletterState.subscribed ? <input
+                ref={emailInputRef}
                 type='email'
                 className='input-newsletter mb-2'
                 style={{
