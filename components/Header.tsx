@@ -120,6 +120,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/gallery'}>
             Gallery
           </Link>
+          <Link onClick={closeSideBar} href={'/schroddy'}>
+            Schroddy
+          </Link>
           {/*          <Link onClick={closeSideBar} href={'/cfv'}>
             {t('cfv_link')}
           </Link> */}
@@ -263,6 +266,9 @@ export default function Header() {
         </li>
         <li>
           <Link href={'/gallery'}>Gallery</Link>
+        </li>
+        <li>
+          <Link href={'/schroddy'}>Schroddy</Link>
         </li>
         {/*<li>
           <Link href={'/cfv'}>{t('cfv_link')}</Link>
