@@ -5,7 +5,7 @@ import { Center, Edges } from '@react-three/drei';
 
 const ThreeScene: FC = () => {
     const stl = useLoader(STLLoader, [
-        "trophy2024.stl",
+        "/trophy2024.stl",
     ]);
     const group = useRef<any>(null!);
     const materialProps = {
