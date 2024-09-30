@@ -92,7 +92,7 @@ export default function Header() {
           </Link>
           <Link onClick={closeSideBar} href={"/about"}>
             {t("about_link")}
-          </Link>
+          </Link>{/* 
           <Link onClick={closeSideBar} href={"/faq"}>
             {t("faq_link")}
           </Link>
@@ -101,7 +101,7 @@ export default function Header() {
           </Link>
           <Link onClick={closeSideBar} href={'/agenda'}>
             {t('agenda_link')}
-          </Link>
+          </Link> */}
           {/*<Link onClick={closeSideBar} href={'/'}>
             {t('home_link')}
           </Link>
@@ -114,9 +114,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/cfp"}>
             {t("cfp_link")}
           </Link>*/}
-          <Link onClick={closeSideBar} href={'/speakers'}>
+          {/* <Link onClick={closeSideBar} href={'/speakers'}>
             {t('speakers_Link')}
-          </Link>
+          </Link> */}
           <Link onClick={closeSideBar} href={'/gallery'}>
             Gallery
           </Link>
@@ -132,6 +132,13 @@ export default function Header() {
             href={"https://2023.osday.dev"}
           >
             {t("edition")}
+          </Link>
+          <Link
+            onClick={closeSideBar}
+            target="_blank"
+            href={"https://2024.osday.dev"}
+          >
+            {t("edition24")}
           </Link>
           <Link onClick={closeSideBar} href={"/edition2021"}>
             {t("edition21")}
@@ -231,7 +238,7 @@ export default function Header() {
         </li>
         <li>
           <Link href={"/about"}>{t("about_link")}</Link>
-        </li>
+        </li>{/* 
         <li>
           <Link href={"/faq"}>{t("faq_link")}</Link>
         </li>
@@ -240,7 +247,7 @@ export default function Header() {
         </li>
         <li>
           <Link href={'/agenda'}>{t('agenda_link')}</Link>
-        </li>
+        </li> */}
         {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
         </li>
@@ -308,6 +315,15 @@ export default function Header() {
             href={"https://2023.osday.dev"}
           >
             {t("edition")}
+          </Link>
+        </li>
+        <li>
+          <Link
+            className="button"
+            target="_blank"
+            href={"https://2024.osday.dev"}
+          >
+            {t("edition24")}
           </Link>
         </li>
         {/*<li>

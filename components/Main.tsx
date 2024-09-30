@@ -11,14 +11,12 @@ export default function Main() {
         description={t("description_1")}
         description_2={t("description_2")}
         date={{
-          when: "7-8 March 2024",
+          when: "March 2025",
           where: "Florence",
-          length: "2 Days",
-          type: "Conf",
         }}
         secondaryCta={{
           text: t("email"),
-          link: "mailto:osday@schrodinger-hat.it",
+          link: "mailto:events@schroedinger-hat.org",
         }}
         showTicketBtn
         showNewsletter

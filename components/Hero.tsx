@@ -11,8 +11,8 @@ type THero = {
   date?: {
     where: string;
     when: string;
-    length: string;
-    type: string;
+    length?: string;
+    type?: string;
   };
   mainCta?: {
     link: string;
@@ -50,14 +50,14 @@ const Hero = ({
         </h1>
       )}
 
-      {subtitle ? <h2>{subtitle}</h2> : <h2>Open Source Day 2024</h2>}
+      {subtitle ? <h2>{subtitle}</h2> : <h2>Open Source Day 2025</h2>}
 
       {props.date && (
         <ul>
           <li>{props.date.when}</li>
           <li>{props.date.where}</li>
-          <li>{props.date.length}</li>
-          <li>{props.date.type}</li>
+          {props.date.length && <li>{props.date.length}</li>}
+          {props.date.type && <li>{props.date.type}</li>}
         </ul>
       )}
 

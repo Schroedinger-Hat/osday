@@ -3,8 +3,8 @@ import { TicketImage } from '../constants';
 
 const TicketImage = ({
     name = '',
-    year = '2024',
-    dates = '07 - 08 March 2024'
+    year = '2025',
+    dates = '07 - 08 March 2025'
 }: TicketImage) => {
   return (
 <svg

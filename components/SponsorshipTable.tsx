@@ -282,7 +282,7 @@ export default function SponsorshipTable() {
                 <i>
                   {t.rich('send_email_sm', {
                     email: (children: ReactNode) => (
-                      <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Community Partner">
+                      <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Community Partner">
                         <u>{children}</u>
                       </a>
                     )
@@ -293,7 +293,7 @@ export default function SponsorshipTable() {
                 &euro; 1000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Silver Partner">
+                    <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Silver Partner">
                       <u>{children}</u>
                     </a>
                   )
@@ -303,7 +303,7 @@ export default function SponsorshipTable() {
                 &euro; 2000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Gold Partner">
+                    <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Gold Partner">
                       <u>{children}</u>
                     </a>
                   )
@@ -313,7 +313,7 @@ export default function SponsorshipTable() {
                 &euro; 3000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Platinum Partner">
+                    <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Platinum Partner">
                       <u>{children}</u>
                     </a>
                   )
@@ -323,7 +323,7 @@ export default function SponsorshipTable() {
                 &euro; 4000 <br />
                 {t.rich('send_email_sm', {
                   email: (children: ReactNode) => (
-                    <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Diamond Partner">
+                    <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Diamond Partner">
                       <u>{children}</u>
                     </a>
                   )
@@ -340,7 +340,7 @@ export default function SponsorshipTable() {
             offer={t('community_offer')}
             emailLink={t.rich('send_email', {
               email: (children: ReactNode) => (
-                <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Community Partner">
+                <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Community Partner">
                   <u>{children}</u>
                 </a>
               )
@@ -352,7 +352,7 @@ export default function SponsorshipTable() {
             offer={t('media_offer')}
             emailLink={t.rich('send_email', {
               email: (children: ReactNode) => (
-                <a href="mailto:osday@schrodinger-hat.it?subject=OSDay 2024, Media Partner">
+                <a href="mailto:events@schroedinger-hat.org?subject=OSDay 2025, Media Partner">
                   <u>{children}</u>
                 </a>
               )
