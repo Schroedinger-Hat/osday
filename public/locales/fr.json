@@ -19,7 +19,7 @@
   },
   "Landing": {
     "title": "Nous arrivons, à nouveau. Restez à l'écoute",
-    "support_us": "Aidez-nous OSDay24"
+    "support_us": "Aidez-nous OSDay25"
   },
   "Header": {
     "menu_label": "Le bouton de menu ouvre la barre latérale avec des liens",
@@ -37,6 +37,7 @@
     "updates": "Notification",
     "erwin_alt": "Photo d'Erwin Schrodinger",
     "edition": "Edition 2023",
+    "edition24": "Edition 2024",
     "edition21": "Edition 2021",
     "notification": {
       "n1": "The conference was incredible! Thank you for participating!"
@@ -61,24 +62,24 @@
     "description": "Il semble que vous ayez trouvé la saison secrète de la meilleure émission de l'époque, 404 ! Voulez-vous revenir en arrière ? :)"
   },
   "Newsletter": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "L'open source vous aime !",
     "where": "Ovunque",
     "when": "Una volta al mese",
     "length": "07/08 Marzo 2024",
     "type": "Newsletter",
-    "description": "Inscrivez-vous à la lettre d'information pour rester au courant de l'Open Source Day 2024, de la session Schrodinger et d'autres nouvelles. Nous ne ferons pas de spam, promis.",
+    "description": "Inscrivez-vous à la lettre d'information pour rester au courant de l'Open Source Day 2025, de la session Schrodinger et d'autres nouvelles. Nous ne ferons pas de spam, promis.",
     "subscribe": "Je m'abonne",
     "thanks": "Merci de vous être inscritə, à bientôt !"
   },
   "Ticket": {
-    "title": "A bientôt à l'Open Source Day 2024",
+    "title": "A bientôt à l'Open Source Day 2025",
     "subtitle": "Vous aimez l'open source et l'open source vous aime !",
     "where": "everywhere",
     "when": "une fois par mois",
     "duration": "07/08 mars 2024",
     "type": "ticket",
-    "description": "Merci de vous être inscrite à l'événement #OSDay24, à bientôt !",
+    "description": "Merci de vous être inscrite à l'événement #OSDay25, à bientôt !",
     "share_now": "share",
     "copy_share": "Copier et partager",
     "copied": "Copié !",
@@ -90,7 +91,7 @@
     "description": "Schroddy est notre façon de dire \"merci\" lorsque quelqu'un prend la parole à la conférence Open Source Day ou a accompli quelque chose de grand dans l'écosystème."
   },
   "About": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "About",
     "where": "Florence",
     "when": "Bientôt",
@@ -103,7 +104,7 @@
     "watch": "Regardez maintenant les discussions de l'année dernière!"
   },
   "Agenda": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "Agenda",
     "where": "Florence",
     "when": "Bientôt",
@@ -119,7 +120,7 @@
     "agenda_3": "Joignez-vous à nous le 24 mars 2024"
   },
   "DEI": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "Diversité et inclusion",
     "where": "Florence",
     "when": "Bientôt",
@@ -128,7 +129,7 @@
     "description": "Découvrez comment vous pouvez aider la communauté Open Source à se rassembler et à participer à l'une des meilleures conférences jamais organisées ! :)"
   },
   "Policies": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "Politiques",
     "where": "Florence",
     "when": "Bientôt",
@@ -137,7 +138,7 @@
     "description": "Découvrez comment vous pouvez aider la communauté Open Source à se rassembler et à participer à l'une des meilleures conférences jamais organisées ! :)"
   },
   "Rules": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "Règles de conduite",
     "where": "Florence",
     "when": "Bientôt",
@@ -148,8 +149,8 @@
     "heading2": "You can find our Rules of Conduct on our community website, <link>here</link>."
   },
   "Speakers": {
-    "title": "Open Source Day 2024",
-    "subtitle": "Les orateurs officiels !",
+    "title": "Découvrez les orateurs de l'édition 2024",
+    "subtitle": "Regardez ces êtres humains étonnants",
     "where": "Florence",
     "when": "Bientôt",
     "length": "Mars 2024",
@@ -455,12 +456,12 @@
   "Main": {
     "heading": "Jetez un coup d'oeil à la première édition",
     "email": "Envoyez-nous un e-mail",
-    "description_1": "Open Source Day 2023 was amazing! So many incredible speakers and participants. You, being there, made this event possible and beautiful. Thank you for being there :)",
-    "description_2": "We are coming back in 2024, stay tuned and join us on Discord or LinkedIn"
+    "description_1": "Les éditions 2023 et 2024 de l'Open Source Day ont été extraordinaires ! Tant de conférenciers et de participants incroyables. Vous, en étant là, avez rendu cet événement possible et beau.",
+    "description_2": "Nous reviendrons en 2025, restez à l'écoute et rejoignez-nous sur Discord ou LinkedIn."
   },
   "Sponsor": {
-    "title": "Open Source Day 2024",
-    "subtitle": "Souhaitez-vous devenir un sponsor de l'Open Source Day 2024 ?",
+    "title": "Open Source Day 2025",
+    "subtitle": "Souhaitez-vous devenir un sponsor de l'Open Source Day 2025 ?",
     "where": "Florence",
     "when": "24 Février 2024",
     "length": "3 mois",
@@ -489,7 +490,7 @@
     "heading_sponsor": "We are currently involved in Open Source as a collective, as such we are using <link>Open Collective</link> to gather all the resources that will be needed to organise this event and future ones. Open Collective enables our community and partners to always check how our finances are dealt with in a public knowledge fashion. Want to know more? Send an <email>email</email>!"
   },
   "Venue": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "L'événement est organisé par Nana Bianca, au cœur de Florence",
     "description": "Lungarno Soderini 21, 50127, Florence, Italy",
     "heading": "ARRIVÉE SUR LE LIEU DE L'ÉVÉNEMENT",
@@ -501,7 +502,7 @@
     "information": "Si vous avez besoin d'aide, ou si vous voulez plus d'informations, envoyez-nous un <link>email</link>"
   },
   "Faq": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "FAQ",
     "description": "Les questions les plus fréquentes",
     "heading": "Voici quelques questions-réponses utiles",
@@ -529,7 +530,7 @@
     "type": "Conférence"
   },
   "Footer": {
-    "github_repo_1": "Open Source Day 2024 est une open source projet et",
+    "github_repo_1": "Open Source Day 2025 est une open source projet et",
     "github_repo_2": "hébergé sur GitHub",
     "github_issue_1": "Si vous trouvez un bug ou avez une idée pour une nouvelle feature, veuillez",
     "github_issue_2": "ouvrir un issue sur GitHub.",
@@ -540,7 +541,7 @@
     "privacy_permissions": "Privacy and Permissions"
   },
   "CodeOfConduct": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "Code de conduite",
     "where": "Firenze",
     "when": "Coming soon",
@@ -558,7 +559,7 @@
     "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: schrodinger.hat.show@gmail.com Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
   },
   "PrivacyAndPermissions": {
-    "title": "Open Source Day 2024",
+    "title": "Open Source Day 2025",
     "subtitle": "Privacy and Permissions Policies",
     "where": "Firenze",
     "when": "Coming soon",
