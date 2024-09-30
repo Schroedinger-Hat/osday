@@ -120,6 +120,12 @@ export default function Header() {
           <Link onClick={closeSideBar} href={'/gallery'}>
             Gallery
           </Link>
+          <Link
+            href="https://shop.schroedinger-hat.org/"
+            target="_blank"
+          >
+            Shop
+          </Link>
           <Link onClick={closeSideBar} href={'/schroddy'}>
             Schroddy
           </Link>
@@ -273,6 +279,14 @@ export default function Header() {
         </li>
         <li>
           <Link href={'/gallery'}>Gallery</Link>
+        </li>
+        <li>
+          <Link
+            href="https://shop.schroedinger-hat.org/"
+            target="_blank"
+          >
+            Shop
+          </Link>
         </li>
         <li>
           <Link href={'/schroddy'}>Schroddy</Link>
