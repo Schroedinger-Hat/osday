@@ -7,9 +7,9 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: "CFP, Open Source Day 2024 - Florence",
+        title: "CFP, Open Source Day 2025 - Florence",
         description:
-          "Open Source Day 2024 coming on the 7th and 8th of March 2024. Stay tuned on our social",
+          "Open Source Day 2025 coming on the 7th and 8th of March 2025. Stay tuned on our social",
       },
       messages: (await import(`../public/locales/${locale}.json`)).default,
     },
@@ -22,7 +22,7 @@ export default function CFP() {
     <>
       <div className="container">
         <Hero
-          title="Open Source Day 2024"
+          title="Open Source Day 2025"
           subtitle="Call for papers"
           description={t("description")}
           originals={false}
@@ -32,7 +32,7 @@ export default function CFP() {
           }}
           secondaryCta={{
             text: t("secondarycta_text"),
-            link: "mailto:osday@schrodinger-hat.it",
+            link: "mailto:events@schroedinger-hat.org",
           }}
           showTicketBtn
         />

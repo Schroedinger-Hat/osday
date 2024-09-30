@@ -6,7 +6,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'CFV, Open Source Day 2024 - Florence',
+        title: 'CFV, Open Source Day 2025 - Florence',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -19,13 +19,13 @@ export default function CFV() {
     <>
       <div className="container">
         <Hero
-          title="Open Source Day 2024"
+          title="Open Source Day 2025"
           subtitle="Call for volunteers"
           description={t('description')}
           originals={false}
           mainCta={{
             text: t('maincta_text'),
-            link: 'mailto:osday@schrodinger-hat.it'
+            link: 'mailto:events@schroedinger-hat.org'
           }}
         />
 

@@ -9,12 +9,12 @@ export default function Home() {
     <>
       <Main />
       <div style={{marginBottom: '4em'}} className="container-stream-link">
-        <h2 className="sponsors_thanks">We are live!</h2>
-        <Link href="/agenda" className="button">
+        <h2 className="sponsors_thanks">We are coming, again!</h2>
+        {/*<Link href="/agenda" className="button">
           Click to discover the agenda!
-        </Link>
+        </Link>*/}
       </div>
-      <SponsorTable isVisible></SponsorTable>
+      {/*<SponsorTable isVisible></SponsorTable>*/}
       {/* <section className="talks_2023">
         <h1>Last edition talks:</h1>
         <div className="talks_container">
@@ -31,9 +31,9 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: "Open Source Day 2024 - Florence",
+        title: "Open Source Day 2025 - Florence",
         description:
-          "Open Source Day 2024. We are coming, again. Stay tuned on our social",
+          "Open Source Day 2025. We are coming, again. Stay tuned on our social",
       },
       messages: (await import(`../public/locales/${locale}.json`)).default,
     },

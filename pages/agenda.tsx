@@ -9,9 +9,9 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'Agenda, Open Source Day 2024 - Florence',
+        title: 'Agenda, Open Source Day 2025 - Florence',
         description:
-          'Open Source Day 2024 coming on the 07-08th of March 2024. Stay tuned on our social'
+          'Open Source Day 2025 coming on the 07-08th of March 2025. Stay tuned on our social'
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -51,7 +51,7 @@ export default function Agenda() {
           originals={false}
           secondaryCta={{
             text: t('secondarycta_text'),
-            link: 'mailto:osday@schrodinger-hat.it'
+            link: 'mailto:events@schroedinger-hat.org'
           }}
         />
 

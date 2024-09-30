@@ -12,11 +12,11 @@ export async function getServerSideProps({ params, locale }: { params: any, loca
   return {
     props: {
       metas: {
-        title: 'Get the ticket - OSDay2024',
+        title: 'Get the ticket - OSDay2025',
         description:
-          '07-08 March 2024 Florence',
-        image: `https://2024.osday.dev/api/ticket?tid=${tid}`,
-        url: `https://2024.osday.dev/ticket/${tid}`,
+          '07-08 March 2025 Florence',
+        image: `https://2025.osday.dev/api/ticket?tid=${tid}`,
+        url: `https://2025.osday.dev/ticket/${tid}`,
       },
       messages: messages,
     }
@@ -29,12 +29,12 @@ export default function Ticket() {
   const [shared, setShared] = useState(false);
 
   const { tid } = router.query;
-  const osdayURL = 'https://2024.osday.dev';
+  const osdayURL = 'https://2025.osday.dev';
   const imageURL = `${osdayURL}/api/ticket?tid=${tid}`;
   const sharerURL = `${osdayURL}/ticket/${tid}`;
 
   const shareData = {
-    title: "Open Source Day 2024",
+    title: "Open Source Day 2025",
     text: "Join me in the the open source conference made by the open source",
     url: osdayURL,
   };
@@ -108,7 +108,7 @@ export default function Ticket() {
                 className='ticket-image'
                 href={imageURL}
               >
-                <TicketImage name={attendeeName} year='2024' dates='07 - 08 March 2024' />
+                <TicketImage name={attendeeName} year='2025' dates='07 - 08 March 2025' />
               </a>
         </div>
       </div>

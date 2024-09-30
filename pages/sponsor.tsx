@@ -7,7 +7,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'Sponsor, Open Source Day 2024 - Florence',
+        title: 'Sponsor, Open Source Day 2025 - Florence',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -27,7 +27,7 @@ export default function Sponsor() {
           originals={false}
           mainCta={{
             text: t('maincta_text'),
-            link: 'mailto:osday@schrodinger-hat.it'
+            link: 'mailto:events@schroedinger-hat.org'
           }}
         />
 

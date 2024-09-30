@@ -5,7 +5,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'Cookie, Open Source Day 2024 - Florence',
+        title: 'Cookie, Open Source Day 2025 - Florence',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -47,7 +47,7 @@ export default function DEI() {
               You will find general information about cookies and details on how to delete cookies from your device.
             </p>
             <h4>Contacting us</h4>
-            <p>If you have any questions about this policy or our use of cookies, please contact us osday@schrodinger-hat.it.</p>
+            <p>If you have any questions about this policy or our use of cookies, please contact us events@schroedinger-hat.org.</p>
           </>
           }
           />

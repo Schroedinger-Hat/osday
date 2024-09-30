@@ -7,7 +7,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'Venue, Open Source Day 2024 - Florence',
+        title: 'Venue, Open Source Day 2025 - Florence',
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }
@@ -82,7 +82,7 @@ export default function Venue() {
           <div className='information'>
             <p>{t.rich('information', {
                     link: (children: ReactNode) => (
-                      <a href="mailto:osday@schrodinger-hat.it">{children}</a>
+                      <a href="mailto:events@schroedinger-hat.org">{children}</a>
                     )
                 })}
             </p>
