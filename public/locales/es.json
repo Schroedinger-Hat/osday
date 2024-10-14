@@ -23,7 +23,7 @@
   },
   "Header": {
     "menu_label": "El botón del menú abre la barra lateral con enlaces",
-    "sh_alt": "Logotipo de la Comunidad del Sombrero de Schrodingers - Únase a la comunidad de código abierto",
+    "sh_alt": "Logotipo de la Comunidad del Sombrero de Schroedingers - Únase a la comunidad de código abierto",
     "home_link": "Inicio",
     "agenda_link": "Agenda",
     "venue_link": "Lugar de celebración",
@@ -35,7 +35,7 @@
     "cfp_link": "CFP",
     "cfv_link": "CFV",
     "updates": "Notificación",
-    "erwin_alt": "Imagen de Erwin Schrodinger",
+    "erwin_alt": "Imagen de Erwin Schroedinger",
     "edition": "Edición 2023",
     "edition24": "Edición 2024",
     "edition21": "Edición 2021",
@@ -68,7 +68,7 @@
     "when": "Una volta al mese",
     "length": "07/08 Marzo 2024",
     "type": "Newsletter",
-    "description": "Suscríbase al boletín para estar al día sobre el Día del Software Libre 2024, la Sesión Schrodinger y otras noticias. No enviaremos spam, lo prometemos.",
+    "description": "Suscríbase al boletín para estar al día sobre el Día del Software Libre 2024, la Sesión Schroedinger y otras noticias. No enviaremos spam, lo prometemos.",
     "subscribe": "Me suscribo",
     "thanks": "Gracias por inscribirte, hasta pronto."
   },
@@ -112,7 +112,7 @@
     "type": "Agenda",
     "description": "¡Esta es la agenda oficial del OSDay2024!",
     "heading": "Diríjase a la página de la CFP o póngase en contacto con nosotros directamente @ <link>SH</link>",
-    "heading_2": "Puede encontrar toda la información sobre la comunidad en nuestro sitio web <link>Schrodingers Hat</link> y si tiene alguna duda sobre la inclusión, la diversidad o la accesibilidad, pregúntenos en cualquier momento!",
+    "heading_2": "Puede encontrar toda la información sobre la comunidad en nuestro sitio web <link>Schroedingers Hat</link> y si tiene alguna duda sobre la inclusión, la diversidad o la accesibilidad, pregúntenos en cualquier momento!",
     "maincta_text": "Presentar el papel :)",
     "secondarycta_text": "Envíanos un correo electrónico",
     "agenda_1": "Our call for papers is still open! Want to join? :)",
@@ -518,7 +518,7 @@
     "faq_answer_3": "El evento se retransmitirá en YouTube los dos días y las dos pistas. Podrá ver las grabaciones cuando quiera. Además, todas las charlas se subirán por separado unos días después del evento.",
     "faq_answer_4": "No, sólo se necesita el billete.",
     "faq_answer_5": "Sí, la agenda está disponible en el sitio web de la conferencia. Ir a la <link_agenda>agenda</link_agenda>",
-    "information": "Como hemos descubierto diferentes huelgas relacionadas con los días de la conferencia que afectan a aviones y trenes, hemos actualizado el sitio web con más información para llegar a la <link_venue>venue</link_venue>.<space></space>Si tiene alguna otra pregunta, póngase en contacto con nosotros con un correo electrónico a <u>events@schrodinger-hat.it</u> o a través de un mensaje directo a nuestra página <link_linkedin>LinkedIn</link_linkedin>."
+    "information": "Como hemos descubierto diferentes huelgas relacionadas con los días de la conferencia que afectan a aviones y trenes, hemos actualizado el sitio web con más información para llegar a la <link_venue>venue</link_venue>.<space></space>Si tiene alguna otra pregunta, póngase en contacto con nosotros con un correo electrónico a <u>events@schroedinger-hat.it</u> o a través de un mensaje directo a nuestra página <link_linkedin>LinkedIn</link_linkedin>."
   },
   "SponsorshipTier": {
     "know_more": "Saber más"
@@ -556,7 +556,7 @@
     "enforcement_title": "Enforcement",
     "enforcement_text": "Anyone asked to stop any harassing behavior are expected to comply immediately. If anyone engages in harassing behavior, the Schrödinger Hat organisers may take any action they deem appropriate, including warning the offender or expulsion from the event with no refund. This applies to all Schrödinger Hat events and associated communication channels. Everyone using Schrödinger Hat services or attending Schrödinger Hat events is subject to the anti-harassment policy; this includes attendees, sponsors, speakers, recruiters and organisers.",
     "reporting_title": "Reporting",
-    "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: schrodinger.hat.show@gmail.com Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
+    "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: social@schroedinger-hat.org Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
   },
   "PrivacyAndPermissions": {
     "title": "Open Source Day 2025",
@@ -574,7 +574,7 @@
     "enforcement_title": "Enforcement",
     "enforcement_text": "Anyone asked to stop any harassing behavior are expected to comply immediately. If anyone engages in harassing behavior, the Schrödinger Hat organisers may take any action they deem appropriate, including warning the offender or expulsion from the event with no refund. This applies to all Schrödinger Hat events and associated communication channels. Everyone using Schrödinger Hat services or attending Schrödinger Hat events is subject to the anti-harassment policy; this includes attendees, sponsors, speakers, recruiters and organisers.",
     "reporting_title": "Reporting",
-    "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: schrodinger.hat.show@gmail.com Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
+    "reporting_text": "If you are being harassed, notice that someone else is being harassed, or have any other concerns, please contact a member of Schrödinger Hat staff immediately. You can make a personal report by: Twitter's direct message service: @schrodinger_hat. Email: social@schroedinger-hat.org Phone (organiser's numbers are shared at the beginning of the event and monitored during the event). Reaching out to an organiser who will make sure the conversation is held privately. You will not be asked to confront anyone and we won't tell anyone who you are. We will identify ourselves at the beginning of each event. Schrödinger Hat staff will be happy to help participants contact venue security (if available) or local law enforcement, provide escorts, or otherwise assist those experiencing harassment to feel safe for the duration of the event. We value your attendance. We expect everyone to follow these rules at the all the events organised by Schrödinger Hat (meetups, workshops, other events and post meetup related social events)."
   },
   "TicketCounter": {
     "title": "Disponibilidad de entradas:",

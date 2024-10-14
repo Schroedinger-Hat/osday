@@ -23,23 +23,24 @@ export default function CodeOfConduct() {
           <h3>Oggetto del trattamento</h3>
 
           <p>
-            Informativa ai sensi dell&lsquo;art. 13 del Regolamento UE 679/2016. Ai
-            sensi dell&lsquo;art. 13 del Regolamento UE 679/2016, recante disposizioni
-            a tutela delle persone e di altri soggetti rispetto al trattamento
-            dei dati personali, desideriamo informarLa che i dati personali da
-            Lei forniti formeranno oggetto di trattamento nel rispetto della
-            normativa sopra richiamata.
+            Informativa ai sensi dell&lsquo;art. 13 del Regolamento UE 679/2016.
+            Ai sensi dell&lsquo;art. 13 del Regolamento UE 679/2016, recante
+            disposizioni a tutela delle persone e di altri soggetti rispetto al
+            trattamento dei dati personali, desideriamo informarLa che i dati
+            personali da Lei forniti formeranno oggetto di trattamento nel
+            rispetto della normativa sopra richiamata.
           </p>
 
           <h3>Titolare</h3>
 
           <p>
             Titolare del trattamento è l&lsquo; Associazione non riconosciuta
-            Schrodinger Hat, in persona dei soci Miki Lombardi, Gabriele
+            Schroedinger Hat, in persona dei soci Miki Lombardi, Gabriele
             Puliti, Nicola Puppa, Davide Imola, Lorenzo Pieri (in seguito,
-            “Titolare”). L&lsquo; Associazione non riconosciuta Schrodinger Hat,
-            provvede a svolgere attività didattica in ambito di progettazione
-            software e di organizzazione di corsi formativi e di istruzione.
+            “Titolare”). L&lsquo; Associazione non riconosciuta Schroedinger
+            Hat, provvede a svolgere attività didattica in ambito di
+            progettazione software e di organizzazione di corsi formativi e di
+            istruzione.
           </p>
 
           <h3>Tipologia di dati trattati</h3>
@@ -49,27 +50,28 @@ export default function CodeOfConduct() {
             trattati i Vostri dati comuni (a titolo esemplificativo e non
             esaustivo: nome, cognome, luogo di nascita, codice fiscale, luogo di
             residenza, ecc.). Questi dati saranno trattati dal titolare del
-            trattamento per espletamento dell&lsquo;attività professionale richiesta
-            nel rispetto della normativa vigente in materia di protezione dei
-            dati.
+            trattamento per espletamento dell&lsquo;attività professionale
+            richiesta nel rispetto della normativa vigente in materia di
+            protezione dei dati.
           </p>
 
           <h3>Dati personali di Suoi familiari</h3>
 
           <p>
-            Per la gestione dell&lsquo;incarico professionale ricevuto il Titolare
-            potrà, altresì, trattare dati personali di Vostri familiari al fine
-            di procedere all&lsquo;emissione della corretta intestazione della fattura
-            per il pagamento della prestazione erogata dall&lsquo;azienda. In tal
-            senso Vi impegnate ad informare i Vostri familiari di tali
-            trattamenti, anche fornendo loro la presente informativa.
+            Per la gestione dell&lsquo;incarico professionale ricevuto il
+            Titolare potrà, altresì, trattare dati personali di Vostri familiari
+            al fine di procedere all&lsquo;emissione della corretta intestazione
+            della fattura per il pagamento della prestazione erogata
+            dall&lsquo;azienda. In tal senso Vi impegnate ad informare i Vostri
+            familiari di tali trattamenti, anche fornendo loro la presente
+            informativa.
           </p>
 
           <h3>Finalità del trattamento</h3>
 
           <p>
-            l&lsquo;Associazione non riconosciuta Schrodinger Hat, raccoglie e tratta
-            i dati personali di:
+            l&lsquo;Associazione non riconosciuta Schroedinger Hat, raccoglie e
+            tratta i dati personali di:
             <ul>
               <li>Clienti e potenziali clienti </li>
               <li>familiari dei clienti e dei potenziali clienti </li>
@@ -88,8 +90,8 @@ export default function CodeOfConduct() {
               </li>
 
               <li>
-                adempiere agli obblighi di legge che gravano sull&lsquo;azienda in
-                forza di norme civilistiche, fiscali e contabili (tra cui,
+                adempiere agli obblighi di legge che gravano sull&lsquo;azienda
+                in forza di norme civilistiche, fiscali e contabili (tra cui,
                 obbligo di conservazione delle scritture contabili);
               </li>
             </ol>
@@ -102,12 +104,13 @@ export default function CodeOfConduct() {
             trattamento:
             <ul>
               <li>
-                sia necessario all&lsquo;esecuzione di un contratto di cui siete parte
-                o nel caso in cui vi sia il consenso dell&lsquo;interessato ex D.Lgs.
-                81/2008. Il conferimento dei Vostri dati è obbligatorio per
-                poter erogare i servizi dell&lsquo;azienda e l&lsquo;eventuale rifiuto di
-                fornire tali dati potrebbe comportare la mancata o parziale
-                prosecuzione del rapporto;
+                sia necessario all&lsquo;esecuzione di un contratto di cui siete
+                parte o nel caso in cui vi sia il consenso
+                dell&lsquo;interessato ex D.Lgs. 81/2008. Il conferimento dei
+                Vostri dati è obbligatorio per poter erogare i servizi
+                dell&lsquo;azienda e l&lsquo;eventuale rifiuto di fornire tali
+                dati potrebbe comportare la mancata o parziale prosecuzione del
+                rapporto;
               </li>
               <li>
                 sia necessario per adempiere un obbligo legale incombente sul
@@ -205,16 +208,16 @@ export default function CodeOfConduct() {
             Tra i diritti a Voi riconosciuti dal GDPR rientrano quelli di:
             <ul>
               <li>
-                chiedere al Titolare l&lsquo;accesso ai Vostri i dati personali ed
-                alle informazioni relative agli stessi (art. 15 GDPR); la
+                chiedere al Titolare l&lsquo;accesso ai Vostri i dati personali
+                ed alle informazioni relative agli stessi (art. 15 GDPR); la
                 rettifica dei dati inesatti o l&lsquo;integrazione di quelli
                 incompleti (art. 16 GDPR); la cancellazione (c.d. “diritto
-                all&lsquo;oblio”) dei dati personali che Vi riguardano (al verificarsi
-                di una delle condizioni indicate nell&lsquo;art. 17, paragrafo 1,
-                GDPR, e nel rispetto delle eccezioni previste nel paragrafo 3
-                dello stesso articolo); la limitazione del trattamento dei Suoi
-                dati personali (al ricorrere di una delle ipotesi indicate
-                nell&lsquo;art. 18, paragrafo 1 GDPR);
+                all&lsquo;oblio”) dei dati personali che Vi riguardano (al
+                verificarsi di una delle condizioni indicate nell&lsquo;art. 17,
+                paragrafo 1, GDPR, e nel rispetto delle eccezioni previste nel
+                paragrafo 3 dello stesso articolo); la limitazione del
+                trattamento dei Suoi dati personali (al ricorrere di una delle
+                ipotesi indicate nell&lsquo;art. 18, paragrafo 1 GDPR);
               </li>
 
               <li>
@@ -247,14 +250,15 @@ export default function CodeOfConduct() {
               </li>
 
               <li>
-                proporre reclamo a un&lsquo;autorità di controllo (Autorità Garante
-                per la protezione dei dati personali - www.garanteprivacy.it).
+                proporre reclamo a un&lsquo;autorità di controllo (Autorità
+                Garante per la protezione dei dati personali -
+                www.garanteprivacy.it).
               </li>
             </ul>
-            L&lsquo;esercizio dei suindicati diritti può essere esercitato mediante
-            comunicazione scritta al Titolare del trattamento da inviare via
-            mail all&lsquo;indirizzo di seguito indicato:
-            schrodinger.hat.show@gmail.com
+            L&lsquo;esercizio dei suindicati diritti può essere esercitato
+            mediante comunicazione scritta al Titolare del trattamento da
+            inviare via mail all&lsquo;indirizzo di seguito indicato:
+            social@schroedinger-hat.org
           </p>
         </div>
       </div>
