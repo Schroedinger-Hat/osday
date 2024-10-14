@@ -258,7 +258,7 @@ export default function CodeOfConduct() {
             L&lsquo;esercizio dei suindicati diritti può essere esercitato
             mediante comunicazione scritta al Titolare del trattamento da
             inviare via mail all&lsquo;indirizzo di seguito indicato:
-            schroedinger.hat.show@gmail.com
+            social@schroedinger-hat.org
           </p>
         </div>
       </div>
