@@ -92,7 +92,8 @@ export default function Header() {
           </Link>*/}
           <Link onClick={closeSideBar} href={"/about"}>
             {t("about_link")}
-          </Link>{/* 
+          </Link>
+          {/*
           <Link onClick={closeSideBar} href={"/faq"}>
             {t("faq_link")}
           </Link>
@@ -117,16 +118,13 @@ export default function Header() {
           {/* <Link onClick={closeSideBar} href={'/speakers'}>
             {t('speakers_Link')}
           </Link> */}
-          <Link onClick={closeSideBar} href={'/gallery'}>
+          <Link onClick={closeSideBar} href={"/gallery"}>
             Gallery
           </Link>
-          <Link
-            href="https://shop.schroedinger-hat.org/"
-            target="_blank"
-          >
+          <Link href="https://shop.schroedinger-hat.org/" target="_blank">
             Shop
           </Link>
-          <Link onClick={closeSideBar} href={'/schroddy'}>
+          <Link onClick={closeSideBar} href={"/schroddy"}>
             Schroddy
           </Link>
           {/*          <Link onClick={closeSideBar} href={'/cfv'}>
@@ -244,7 +242,8 @@ export default function Header() {
         </li>*/}
         <li>
           <Link href={"/about"}>{t("about_link")}</Link>
-        </li>{/* 
+        </li>
+        {/*
         <li>
           <Link href={"/faq"}>{t("faq_link")}</Link>
         </li>
@@ -275,21 +274,18 @@ export default function Header() {
           {t('photo_link')}
             </a>*/}
         <li>
-          <Link href={'/speakers'}>{t('speakers_Link')}</Link>
+          <Link href={"/speakers"}>{t("speakers_Link")}</Link>
         </li>
         <li>
-          <Link href={'/gallery'}>Gallery</Link>
+          <Link href={"/gallery"}>Gallery</Link>
         </li>
         <li>
-          <Link
-            href="https://shop.schroedinger-hat.org/"
-            target="_blank"
-          >
+          <Link href="https://shop.schroedinger-hat.org/" target="_blank">
             Shop
           </Link>
         </li>
         <li>
-          <Link href={'/schroddy'}>Schroddy</Link>
+          <Link href={"/schroddy"}>Schroddy</Link>
         </li>
         {/*<li>
           <Link href={'/cfv'}>{t('cfv_link')}</Link>
@@ -371,7 +367,7 @@ export default function Header() {
           {notificationOpen === true ? (
             <div className="notification-menu">
               <ul>
-                <Link href="https://www.schrodinger-hat.it/">
+                <Link href="https://schroedinger-hat.org/">
                   <li>
                     <Image src="/sh.png" alt="" width="20" height="20" /> {substringNotification(t('notification.n1'))}
                   </li>

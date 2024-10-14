@@ -41,7 +41,7 @@ export default function CFP() {
           <h2>{t("description_1")}</h2>
           <h3>
             {t("description_2")}{" "}
-            <a href="https://www.schrodinger-hat.it/">Schrodingers Hat</a>
+            <a href="https://schroedinger-hat.org/">Schroedingers Hat</a>
           </h3>
           <div className="after_main_container">
             {cfpTypes.map((type) => {

@@ -1,5 +1,5 @@
 <div align='center'>
-  
+
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -11,21 +11,21 @@
 <br />
 <div align="center">
   <h1>OpenSourceDay</h1>
-  
-  <a href="https://github.com/Schrodinger-Hat/osday">
+
+  <a href="https://github.com/Schroedinger-Hat/osday">
     <img src="public/sh.png" alt="Logo" width="80" height="80">
   </a>
 
   <p align="center">
     <br />
-    <a href="https://github.com/Schrodinger-Hat/osday/blob/main/README.md"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Schroedinger-Hat/osday/blob/main/README.md"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://osday.dev/">View Demo</a>
     ·
-    <a href="https://github.com/Schrodinger-Hat/osday/issues">Report Bug</a>
+    <a href="https://github.com/Schroedinger-Hat/osday/issues">Report Bug</a>
     ·
-    <a href="https://github.com/Schrodinger-Hat/osday/issues">Request Feature</a>
+    <a href="https://github.com/Schroedinger-Hat/osday/issues">Request Feature</a>
   </p>
 </div>
 
@@ -63,7 +63,7 @@ In 2024 we wanted to have fun so we decided to create a multi track in a two day
 
 In 2025..?
 
-You can find some event photos on [Flickr](https://www.flickr.com/photos/197981994@N04/albums/with/72177720315430384) and the replays on our [YouTube channel](https://www.youtube.com/@SchrodingerHat/videos).
+You can find some event photos on [Flickr](https://www.flickr.com/photos/197981994@N04/albums/with/72177720315430384) and the replays on our [YouTube channel](https://youtube.com/c/SchrödingerHat).
 
 ## About The Development of the website
 
@@ -107,18 +107,18 @@ Don't forget to give the project a star! Thanks again!
 
 ## Contact
 
-Schrodinger's Hat Team - [@schrodinger_hat](mailto:osday@schrodinger-hat.it)
+Schroedinger's Hat Team - [@schrodinger_hat](mailto:osday@schrodinger-hat.org)
 
-Project Link: [https://github.com/Schrodinger-Hat/osday](https://github.com/Schrodinger-Hat/osday)
+Project Link: [https://github.com/Schroedinger-Hat/osday](https://github.com/Schroedinger-Hat/osday)
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
 
-[contributors-shield]: https://img.shields.io/github/contributors/Schrodinger-Hat/osday.svg?style=for-the-badge
-[contributors-url]: https://github.com/Schrodinger-Hat/osday/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/Schrodinger-Hat/osday.svg?style=for-the-badge
-[forks-url]: https://github.com/Schrodinger-Hat/osday/network/members
-[stars-shield]: https://img.shields.io/github/stars/Schrodinger-Hat/osday?style=for-the-badge
-[stars-url]: https://github.com/Schrodinger-Hat/osday/stargazers
-[issues-shield]: https://img.shields.io/github/issues/Schrodinger-Hat/osday.svg?style=for-the-badge
-[issues-url]: https://github.com/Schrodinger-Hat/osday/issues
+[contributors-shield]: https://img.shields.io/github/contributors/Schroedinger-Hat/osday.svg?style=for-the-badge
+[contributors-url]: https://github.com/Schroedinger-Hat/osday/graphs/contributors
+[forks-shield]: https://img.shields.io/github/forks/Schroedinger-Hat/osday.svg?style=for-the-badge
+[forks-url]: https://github.com/Schroedinger-Hat/osday/network/members
+[stars-shield]: https://img.shields.io/github/stars/Schroedinger-Hat/osday?style=for-the-badge
+[stars-url]: https://github.com/Schroedinger-Hat/osday/stargazers
+[issues-shield]: https://img.shields.io/github/issues/Schroedinger-Hat/osday.svg?style=for-the-badge
+[issues-url]: https://github.com/Schroedinger-Hat/osday/issues
