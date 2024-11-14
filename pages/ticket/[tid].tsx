@@ -14,7 +14,7 @@ export async function getServerSideProps({ params, locale }: { params: any, loca
       metas: {
         title: 'Get the ticket - OSDay2025',
         description:
-          '07-08 March 2025 Florence',
+          '21 March 2025 Florence',
         image: `https://2025.osday.dev/api/ticket?tid=${tid}`,
         url: `https://2025.osday.dev/ticket/${tid}`,
       },
@@ -85,7 +85,7 @@ export default function Ticket() {
                 type='button'
                 target='_blank'
                 rel='noreferrer'
-                href={'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Just got my free ticket for @schrodinger_hat #OSDay24 Conf — claim yours!\n\n' + sharerURL)}
+                href={'https://twitter.com/intent/tweet?text=' + encodeURIComponent('Just got my free ticket for @schrodinger_hat #OSDay25 Conf — claim yours!\n\n' + sharerURL)}
                 className='ticket-share social-button'
               >
                 <Image width={30} height={30} src="/icons/twitter.svg" alt="Twitter" />
@@ -94,7 +94,7 @@ export default function Ticket() {
                 type='button'
                 target='_blank'
                 rel='noreferrer'
-                href={`https://www.linkedin.com/sharing/share-offsite/?url=${sharerURL}?utm_source=linkedin&utm_medium=sharer&utm_campaign=osday24_ticket`}
+                href={`https://www.linkedin.com/sharing/share-offsite/?url=${sharerURL}?utm_source=linkedin&utm_medium=sharer&utm_campaign=osday25_ticket`}
                 className='ticket-share social-button'
               >
                 <Image width={28} height={28} src="/icons/linkedin.svg" alt="Linkedin" />
@@ -108,7 +108,7 @@ export default function Ticket() {
                 className='ticket-image'
                 href={imageURL}
               >
-                <TicketImage name={attendeeName} year='2025' dates='07 - 08 March 2025' />
+                <TicketImage name={attendeeName} year='2025' dates='21 March 2025' />
               </a>
         </div>
       </div>
