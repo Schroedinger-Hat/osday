@@ -1,40 +1,43 @@
-import Hero from '../components/Hero';
-import { useTranslations } from 'next-intl';
-import SponsorshipTable from '../components/SponsorshipTable';
-import SponsorTable from '../components/SponsorTable';
+import Hero from "../components/Hero";
+import { useTranslations } from "next-intl";
+import SponsorshipTable from "../components/SponsorshipTable";
+import SponsorTable from "../components/SponsorTable";
 
 export async function getStaticProps({ locale }: { locale: any }) {
   return {
     props: {
       metas: {
-        title: 'Sponsor, Open Source Day 2025 - Florence',
+        title: "Sponsor, Open Source Day 2025 - Florence",
       },
-      messages: (await import(`../public/locales/${locale}.json`)).default
-    }
+      messages: (await import(`../public/locales/${locale}.json`)).default,
+    },
   };
 }
 
 export default function Sponsor() {
-  const t = useTranslations('Sponsor');
+  const t = useTranslations("Sponsor");
 
   return (
     <>
       <div className="container">
         <Hero
-          title={t('title')}
-          subtitle={t('subtitle')}
-          description={t('description')}
+          title={t("title")}
+          subtitle={t("subtitle")}
+          description={t("description")}
           originals={false}
           mainCta={{
-            text: t('maincta_text'),
-            link: 'mailto:events@schroedinger-hat.org'
+            text: t("maincta_text"),
+            link: "mailto:events@schroedinger-hat.org",
+          }}
+          secondaryCta={{
+            text: "Sponsorship PDF",
+            link: "https://osday.dev/osday2025-sponsorship-proposal.pdf",
           }}
         />
 
         <SponsorshipTable />
 
-        <SponsorTable isVisible></SponsorTable>
-
+        {/* <SponsorTable isVisible></SponsorTable> */}
       </div>
     </>
   );
