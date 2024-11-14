@@ -93,31 +93,33 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/about"}>
             {t("about_link")}
           </Link>
-          {/*
+
           <Link onClick={closeSideBar} href={"/faq"}>
             {t("faq_link")}
           </Link>
           <Link onClick={closeSideBar} href={"/sponsor"}>
             {t("sponsor_link")}
           </Link>
-          <Link onClick={closeSideBar} href={'/agenda'}>
-            {t('agenda_link')}
-          </Link> */}
+          {/*
+                      <Link onClick={closeSideBar} href={'/agenda'}>
+                        {t('agenda_link')}
+                      </Link>
+                        */}
           {/*<Link onClick={closeSideBar} href={'/'}>
-            {t('home_link')}
-          </Link>
-          <Link onClick={closeSideBar} href={'/venue'}>
-            {t('venue_link')}
-          </Link>
-          <Link onClick={closeSideBar} href={'/about'}>
-            {t('about_link')}
-          </Link>
-          <Link onClick={closeSideBar} href={"/cfp"}>
-            {t("cfp_link")}
-          </Link>*/}
+                        {t('home_link')}
+                      </Link>
+                      <Link onClick={closeSideBar} href={'/venue'}>
+                        {t('venue_link')}
+                      </Link>
+                      <Link onClick={closeSideBar} href={'/about'}>
+                        {t('about_link')}
+                      </Link>
+                      <Link onClick={closeSideBar} href={"/cfp"}>
+                        {t("cfp_link")}
+                      </Link>*/}
           {/* <Link onClick={closeSideBar} href={'/speakers'}>
-            {t('speakers_Link')}
-          </Link> */}
+                        {t('speakers_Link')}
+                      </Link> */}
           <Link onClick={closeSideBar} href={"/gallery"}>
             Gallery
           </Link>
@@ -127,9 +129,11 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/schroddy"}>
             Schroddy
           </Link>
-          {/*          <Link onClick={closeSideBar} href={'/cfv'}>
-            {t('cfv_link')}
-          </Link> */}
+          {/*
+                    <Link onClick={closeSideBar} href={'/cfv'}>
+                        {t('cfv_link')}
+                    </Link>
+                    */}
           <Link
             onClick={closeSideBar}
             target="_blank"
@@ -243,15 +247,15 @@ export default function Header() {
         <li>
           <Link href={"/about"}>{t("about_link")}</Link>
         </li>
-        {/*
-        <li>
+
+        {/* <li>
           <Link href={"/faq"}>{t("faq_link")}</Link>
-        </li>
+        </li> */}
         <li>
           <Link href={"/sponsor"}>{t("sponsor_link")}</Link>
         </li>
-        <li>
-          <Link href={'/agenda'}>{t('agenda_link')}</Link>
+        {/* <li>
+          <Link href={"/agenda"}>{t("agenda_link")}</Link>
         </li> */}
         {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
