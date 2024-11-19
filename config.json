@@ -1,15 +1,15 @@
 {
-  "readmeUrl": "https://raw.githubusercontent.com/schrodinger-hat/osday/2024/README.md",
+  "readmeUrl": "https://raw.githubusercontent.com/schrodinger-hat/osday/2025/README.md",
   "title": "OSDay",
   "name": "Schrodinger Hat",
   "ascii": "Schrodinger Hat",
   "social": {
     "github": "schrodinger-hat",
     "linkedin": "https://www.linkedin.com/company/schrodinger-hat",
-    "sessionize": "https://sessionize.com/opensourceday24",
-    "eventbrite": "https://www.eventbrite.it/e/open-source-day-2024-tickets-731947624047"
+    "sessionize": "https://sessionize.com/open-source-day-2025/",
+    "eventbrite": "https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257"
   },
-  "email": "events@schrodinger-hat.it",
+  "email": "events@schroedinger-hat.org",
   "ps1_hostname": "osday",
   "ps1_username": "hatter",
   "repo": "https://github.com/schrodinger-hat/osday",

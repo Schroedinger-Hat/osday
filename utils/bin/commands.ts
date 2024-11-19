@@ -128,33 +128,33 @@ export const rm = async (args?: string[]): Promise<string> => {
 
 export const sponsor = async (args?: string[]): Promise<string> => {
   return `
-  Contact us at events@schrodinger-hat.it
+  Contact us at events@schroedinger-hat.org
 
-  +------------------------+-----------------+-----------------+-----------------+-----------------+-------------------+
-  |                          | community       | silver          | gold            | platinum        | diamond         |
-  +--------------------------+-----------------+-----------------+-----------------+-----------------+-----------------+
-  | Thank you                | ✔               | ✔               | ✔               | ✔               | ✔               |
-  | Social post with logo    | ✔               | ✔               | ✔               | ✔               | ✔               |
-  | Logo on website          | ✔               | ✔               | ✔               | ✔               | ✔               |
-  | Social Awareness         | ✔               | ✔               | ✔               | ✔               | ✔               |
-  | Conference Badge         | ✗               | ✗               | ✔               | ✔               | ✔               |
-  | Logo on poster           | ✗               | ✔               | ✔               | ✔               | ✔               |
-  | Rollup Logo Print        | ✗               | ✔               | ✔               | ✔               | ✔               |
-  | Logo in streaming        | ✗               | ✔               | ✔               | ✔               | ✔               |
-  | Job Offer                | ✗               | ✗               | ✔               | ✔               | ✔               |
-  | Job Offer in Newsletter  | ✗               | ✗               | ✗               | ✗               | ✔               |
-  | Job Offer pinned Discord | ✗               | ✗               | ✗               | ✗               | ✔               |
-  | Attendee's list          | ✗               | ✗               | ✗               | ✔               | ✔               |
-  | Unattended Booth         | ✗               | ✗               | ✔               | ✗               | ✗               |
-  | Stand in Conference Hall | ✗               | ✗               | ✗               | ✔               | ✔               |
-  | price                    |     email us    | € 1000 email us | € 2000 email us | € 3000 email us | € 4000 email us |
-  +--------------------------+-----------------+-----------------+-----------------+-----------------------------------+
+  +------------------------+-----------------+-----------------+-------------------+
+  |                          | community       | silver          | gold            |
+  +--------------------------+-----------------+-----------------+-----------------+
+  | Thank you                | ✔               | ✔               | ✔               |
+  | Social post with logo    | ✔               | ✔               | ✔               |
+  | Logo on website          | ✔               | ✔               | ✔               |
+  | Social Awareness         | ✔               | ✔               | ✔               |
+  | Conference Badge         | ✗               | ✗               | ✔               |
+  | Logo on poster           | ✗               | ✔               | ✔               |
+  | Rollup Logo Print        | ✗               | ✔               | ✔               |
+  | Logo in streaming        | ✗               | ✔               | ✔               |
+  | Job Offer                | ✗               | ✗               | ✔               |
+  | Job Offer in Newsletter  | ✗               | ✗               | ✗               |
+  | Job Offer pinned Discord | ✗               | ✗               | ✗               |
+  | Attendee's list          | ✗               | ✗               | ✗               |
+  | Unattended Booth         | ✗               | ✗               | ✔               |
+  | Stand in Conference Hall | ✗               | ✗               | ✗               |
+  | price                    |     email us    | € 1000 email us | € 2000 email us |
+  +--------------------------+-----------------+-----------------+-----------------+
 
   `;
 };
 
 export const gui = async (args?: string[]): Promise<string> => {
-  window.open('https://2024.osday.dev');
+  window.open('https://2025.osday.dev');
   return 'redirecting';
 };
 
