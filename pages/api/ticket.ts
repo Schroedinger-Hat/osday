@@ -3,10 +3,6 @@ import svg2img from 'svg2img';
 import fs from 'fs';
 import path from 'path'
 
-
-
-
-
 export default async function handler(
     req: NextApiRequest,
     res: NextApiResponse<any>
