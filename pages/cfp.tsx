@@ -9,7 +9,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
       metas: {
         title: "CFP, Open Source Day 2025 - Florence",
         description:
-          "Open Source Day 2025 coming on the 7th and 8th of March 2025. Stay tuned on our social",
+          "Open Source Day 2025 coming on the 21st of March 2025. Stay tuned on our social",
       },
       messages: (await import(`../public/locales/${locale}.json`)).default,
     },
@@ -28,7 +28,7 @@ export default function CFP() {
           originals={false}
           mainCta={{
             text: "Call for papers",
-            link: "https://sessionize.com/opensourceday24",
+            link: "https://sessionize.com/open-source-day-2025/",
           }}
           secondaryCta={{
             text: t("secondarycta_text"),

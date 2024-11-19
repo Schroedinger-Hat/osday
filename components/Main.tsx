@@ -11,7 +11,7 @@ export default function Main() {
         description={t("description_1")}
         description_2={t("description_2")}
         date={{
-          when: "March 2025",
+          when: "21 March 2025",
           where: "Florence",
         }}
         secondaryCta={{

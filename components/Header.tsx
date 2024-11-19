@@ -100,6 +100,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/sponsor"}>
             {t("sponsor_link")}
           </Link>
+          <Link onClick={closeSideBar} href={"/cfp"}>
+            {t("cfp_link")}
+          </Link>
           {/*
                       <Link onClick={closeSideBar} href={'/agenda'}>
                         {t('agenda_link')}
@@ -114,9 +117,7 @@ export default function Header() {
                       <Link onClick={closeSideBar} href={'/about'}>
                         {t('about_link')}
                       </Link>
-                      <Link onClick={closeSideBar} href={"/cfp"}>
-                        {t("cfp_link")}
-                      </Link>*/}
+                      */}
           {/* <Link onClick={closeSideBar} href={'/speakers'}>
                         {t('speakers_Link')}
                       </Link> */}
@@ -161,17 +162,18 @@ export default function Header() {
           >
             {t("photo_link")}
           </a> */}
-          {/*
+          {new Date().getTime() > 1732407058000 &&
           <a
             className="button"
             target="_blank"
             href={
-              "https://www.eventbrite.it/e/open-source-day-2024-tickets-731947624047"
+              "https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257"
             }
             rel="noreferrer"
           >
             Free Tickets
-          </a>
+          </a>}
+          {/*
             <Link className="button" onClick={closeSideBar} href={'/agenda'}>
               We are live!
             </Link>
@@ -254,6 +256,9 @@ export default function Header() {
         <li>
           <Link href={"/sponsor"}>{t("sponsor_link")}</Link>
         </li>
+        <li>
+          <Link href={"/cfp"}>{t("cfp_link")}</Link>
+        </li>
         {/* <li>
           <Link href={"/agenda"}>{t("agenda_link")}</Link>
         </li> */}
@@ -266,9 +271,6 @@ export default function Header() {
         <li>
           <Link href={'/about'}>{t('about_link')}</Link>
         </li>
-        <li>
-          <Link href={"/cfp"}>{t("cfp_link")}</Link>
-        </li>
         <a
             className='button'
             target='_blank'
@@ -276,10 +278,10 @@ export default function Header() {
             rel="noreferrer"
         >
           {t('photo_link')}
-            </a>*/}
+            </a>
         <li>
           <Link href={"/speakers"}>{t("speakers_Link")}</Link>
-        </li>
+        </li>*/}
         <li>
           <Link href={"/gallery"}>Gallery</Link>
         </li>
@@ -294,27 +296,26 @@ export default function Header() {
         {/*<li>
           <Link href={'/cfv'}>{t('cfv_link')}</Link>
         </li> */}
-        {/*
+        {new Date().getTime() > 1732407058000 &&
         <li>
           <a
             className="button"
             target="_blank"
             href={
-              "https://www.eventbrite.it/e/open-source-day-2024-tickets-731947624047"
+              "https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257"
             }
             rel="noreferrer"
           >
             Free Tickets
           </a>
-        </li>
-          */}
-        <li>
+        </li>}
           {/*
+        <li>
             <Link className="button" onClick={closeSideBar} href={'/agenda'}>
               We are live!
             </Link>
-        */}
         </li>
+        */}
       </ul>
       <ul>
         <li>

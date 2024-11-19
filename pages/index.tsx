@@ -9,20 +9,20 @@ export default function Home() {
     <>
       <Main />
       <div style={{marginBottom: '4em'}} className="container-stream-link">
-        <h2 className="sponsors_thanks">We are coming, again!</h2>
         {/*<Link href="/agenda" className="button">
           Click to discover the agenda!
         </Link>*/}
       </div>
-      {/*<SponsorTable isVisible></SponsorTable>*/}
-      {/* <section className="talks_2023">
+      <SponsorTable isVisible></SponsorTable>
+      {<section className="talks_2023">
         <h1>Last edition talks:</h1>
         <div className="talks_container">
+          {/* @TODO - add talks 2024 */}
           {talks2023.map((talk: TTalkCard) => {
               return <TalkCard key={talk.id} {...talk} />;
             })}
         </div>
-      </section> */}
+      </section>}
     </>
   );
 }

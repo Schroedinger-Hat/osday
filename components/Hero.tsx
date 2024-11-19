@@ -84,11 +84,11 @@ const Hero = ({
             </a>
             </>
         )}
-        {props.showTicketBtn && (
+        {props.showTicketBtn && new Date().getTime() > 1732407058000 && (
           <a
             className='button'
             target='_blank'
-            href={'https://www.eventbrite.it/e/open-source-day-2024-tickets-731947624047'}
+            href={'https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257'}
             rel="noreferrer"
           >
             Free Tickets

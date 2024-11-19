@@ -42,13 +42,13 @@ const TicketCounter = () => {
             <h3>{t('title')}</h3>
 			<a 
                 target='_blank'
-                href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'}
+                href={'https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257'}
                 rel="noreferrer"
                 className="button"
             >{t('in_person')} {inPersonTicketAvailability}</a>
             <a 
                 target='_blank'
-                href={'https://www.eventbrite.it/e/open-source-day-2023-tickets-441134303577'}
+                href={'https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257'}
                 rel="noreferrer"
                 className="button"
             >{t('online')} {onlineTicketAvailability}</a>

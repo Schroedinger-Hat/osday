@@ -3,7 +3,7 @@
     "where": "Florence",
     "when": "Started",
     "lenght": "Se termine en janvier 2024",
-    "description": "Submit your proposal before January 31st",
+    "description": "Submit your proposal before January 24th",
     "maincta_text": "Soumettre un article :)",
     "secondarycta_text": "Envoyez-nous un e-mail",
     "description_1": "Lisez ce qui suit si vous souhaitez en savoir plus sur les sujets qui intéressent le plus les participants de notre communauté",
@@ -97,7 +97,7 @@
     "when": "Bientôt",
     "length": "24 Mars 2024",
     "type": "About",
-    "description": "L'Open Source Day en est à sa troisième édition à Florence, en Italie ! Cette année, nous avons décidé de faire encore plus fort ! Dans cette édition, nous allons avoir deux jours de conférence, pleine de gens passionnés par l'environnement open source : mainteneurs, junior dev, senior dev, ingénieur manager, full stack, et ainsi de suite participeront à l'événement. N'hésitez pas à discuter avec les intervenants et les sponsors."
+    "description": "L'Open Source Day en est à sa quatrième édition à Florence, en Italie ! Dans cette édition, nous allons avoir une seule journée de conférence, pleine de gens passionnés par l'environnement open source : mainteneurs, junior dev, senior dev, ingénieur manager, full stack, et ainsi de suite participeront à l'événement. N'hésitez pas à discuter avec les intervenants et les sponsors."
   },
   "2021": {
     "subtitle": "Open Source Day 2021",

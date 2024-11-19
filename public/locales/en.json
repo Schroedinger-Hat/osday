@@ -3,19 +3,19 @@
     "where": "Florence",
     "when": "Closed",
     "lenght": "Closed",
-    "description": "Submit your proposal before January 31st",
+    "description": "Submit your proposal before January 24th",
     "maincta_text": "Submit paper :)",
     "secondarycta_text": "Send us an email",
-    "description_1": "Read along if you would like to know more about the topics that are of higher interest for our community attendees",
-    "description_2": "You can find all the community info on our website"
+    "description_1": "Read along if you would like to know more about the topics that are of higher interest for our association attendees",
+    "description_2": "You can find all the association info on our website"
   },
   "Cfv": {
     "where": "Florence",
     "when": "Started",
-    "lenght": "Closes in Jan 2024",
+    "lenght": "Closes in Jan 2025",
     "description": "Would you like to help us organize the event? Let's get in touch and get to know each other!",
     "maincta_text": "Send us a mail :)",
-    "description_1": "You can find all the information about the community on our website"
+    "description_1": "You can find all the information about the association on our website"
   },
   "Landing": {
     "title": "We are coming, again. Stay tuned.",
@@ -23,7 +23,7 @@
   },
   "Header": {
     "menu_label": "Menu button opens sidebar with links",
-    "sh_alt": "Schroedingers Hat Community Logo - Join the open source community",
+    "sh_alt": "Schroedingers Hat association Logo - Join the open source association",
     "home_link": "Home",
     "agenda_link": "Agenda",
     "venue_link": "Venue",
@@ -95,9 +95,9 @@
     "subtitle": "About",
     "where": "Florence",
     "when": "Coming soon",
-    "length": "March 7-8, 2024",
+    "length": "March 21st, 2025",
     "type": "About",
-    "description": "The Open Source Day is at its third edition in Florence, Italy! This year we decided to go even bigger! In this edition we are going to have two full days of conference, full of people passionate about the open source environment: maintainers, junior dev, senior dev, engineer manager, full stack, and so on will attend the event. Feel free to have a chat with the speakers and the sponsors."
+    "description": "The Open Source Day is at its fourth edition in Florence, Italy! In this edition we are going to have a single day of conference, full of people passionate about the open source environment: maintainers, junior dev, senior dev, engineer manager, full stack, and so on will attend the event. Feel free to have a chat with the speakers and the sponsors."
   },
   "2021": {
     "subtitle": "Open Source Day 2021",

@@ -91,6 +91,7 @@ export const cfpTypes: TTypeCard[] = [
   },
 ];
 
+// @TODO - add talks2024
 export const talks2023: TTalkCard[] = [
   {
     id: "liran1",

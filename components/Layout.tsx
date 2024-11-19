@@ -81,7 +81,7 @@ export default function Layout({
                 <meta property="og:type" content="article" />
                 <meta property="og:image" content={metas.image ? metas.image : 'https://osday.dev/intro-2025.png'} />
                 <meta property="og:url" content={metas.url ? metas.url : 'https://2025.osday.dev'} />
-                <meta property="og:description" content={metas.description ? metas.description : "Open Source Day 2025 coming soon on March 2025. Stay tuned on our socials"} />
+                <meta property="og:description" content={metas.description ? metas.description : "Open Source Day 2025 coming on 21 March 2025. Stay tuned on our socials"} />
                 <meta property="og:site_name" content="Open Source Day 2025" />
                 
                 <meta name="twitter:card" content="summary_large_image" />

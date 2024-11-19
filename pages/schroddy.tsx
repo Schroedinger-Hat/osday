@@ -11,7 +11,7 @@ export async function getStaticProps({ locale }: { locale: any }) {
       metas: {
         title: 'Schroddy, Open Source Day 2025 - Florence',
         description:
-          'Open Source Day 2025 coming on March 2025. Stay tuned on our social'
+          'Open Source Day 2025 coming on 21st March 2025. Stay tuned on our social'
       },
       messages: (await import(`../public/locales/${locale}.json`)).default
     }

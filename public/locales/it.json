@@ -3,11 +3,11 @@
     "where": "Firenze",
     "when": "Iniziata",
     "lenght": "Chiude a Gennaio 2024",
-    "description": "Submit your proposal before January 31st",
+    "description": "Submit your proposal before January 24th",
     "maincta_text": "Applica il tuo paper :)",
     "secondarycta_text": "Inviaci una mail",
-    "description_1": "Continua a leggere se vuoi saperne di più sugli argomenti di maggiore interesse per i partecipanti alla nostra comunità",
-    "description_2": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
+    "description_1": "Continua a leggere se vuoi saperne di più sugli argomenti di maggiore interesse per i partecipanti alla nostra associazione",
+    "description_2": "Potete trovare tutte le informazioni sulla associazione sul nostro sito web"
   },
   "Cfv": {
     "where": "Firenze",
@@ -15,7 +15,7 @@
     "lenght": "Chiude a Febbraio 2024",
     "description": "Vorresti aiutarci a organizzare l'evento? Entriamo in contatto e conosciamoci!",
     "maincta_text": "Inviaci una mail :)",
-    "description_1": "Potete trovare tutte le informazioni sulla comunità sul nostro sito web"
+    "description_1": "Potete trovare tutte le informazioni sulla associazione sul nostro sito web"
   },
   "Landing": {
     "title": "Stiamo tornando, ancora una volta.",
@@ -23,7 +23,7 @@
   },
   "Header": {
     "menu_label": "Il pulsante del menu apre la barra laterale con i collegamenti",
-    "sh_alt": "Logo Community Schroedingers Hat - Unisciti alla Community",
+    "sh_alt": "Logo associazione Schroedingers Hat - Unisciti alla associazione",
     "home_link": "Home",
     "agenda_link": "Agenda",
     "venue_link": "Sede",
@@ -97,7 +97,7 @@
     "when": "Coming soon",
     "length": "24 Marzo 2024",
     "type": "About",
-    "description": "L'Open Source Day e' arrivato alla sua terza edizione a Firenze, Italia! Quest'anno abbiamo deciso di puntare in alto per una conferenza ancora più in grande! In questa edizione avremo due giorni di conferenza, piena di persone appassionate del mondo open source: maintainers, junior dev, senior dev, engineer manager, full stack, e molti altri saranno all'evento. Sentitevi liberi di parlare e discutere con gli speakers e con gli sponsors."
+    "description": "L'Open Source Day è alla sua quarta edizione a Firenze, Italia! In questa edizione avremo un'unica giornata di conferenza, piena di persone appassionate dell'ambiente open source: manutentori, junior dev, senior dev, engineer manager, full stack e così via parteciperanno all'evento. Sentitevi liberi di chiacchierare con i relatori e gli sponsor."
   },
   "2021": {
     "subtitle": "Open Source Day 2021",
@@ -112,7 +112,7 @@
     "type": "Agenda",
     "description": "Ecco l'agenda ufficiale dell'OSDay2024",
     "heading": "Visita la pagina della <cfp>CFP</cfp> o contattaci direttamente @ <link>SH</link>",
-    "heading_2": "Puoi trovare tutte le informazioni sulla nostra community sul nostro sito, <link>Schroedingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!",
+    "heading_2": "Puoi trovare tutte le informazioni sulla nostra associazione sul nostro sito, <link>Schroedingers Hat</link> e se avete domande riguardanti l'inclusività, la diversità o l'accessibilità, non esitate a contattarci in qualsiasi momento!",
     "maincta_text": "Applica il tuo paper :)",
     "secondarycta_text": "Inviaci una mail",
     "agenda_1": "Vuoi partecipare come Speaker?",
@@ -155,7 +155,7 @@
     "when": "Coming soon",
     "length": "24 Marzo 2024",
     "type": "Speakers",
-    "description": "Abbiamo ricevuto più di 140 candidature da oltre 100 relatori. La votazione della comunità si è svolta su Discord.",
+    "description": "Abbiamo ricevuto più di 140 candidature da oltre 100 relatori. La votazione della associazione si è svolta su Discord.",
     "tbd": {
       "id": "tbd",
       "name": "TBD",
