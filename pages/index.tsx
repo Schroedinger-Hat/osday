@@ -1,5 +1,5 @@
 import TalkCard from "../components/TalkCard";
-import { TTalkCard, talks2023 } from "../constants";
+import { TTalkCard, talks2023, talks2024 } from "../constants";
 import Main from "../components/Main";
 import SponsorTable from "../components/SponsorTable";
 import Link from "next/link";
@@ -8,21 +8,33 @@ export default function Home() {
   return (
     <>
       <Main />
-      <div style={{marginBottom: '4em'}} className="container-stream-link">
+      <div style={{ marginBottom: "4em" }} className="container-stream-link">
         {/*<Link href="/agenda" className="button">
           Click to discover the agenda!
         </Link>*/}
       </div>
       <SponsorTable isVisible></SponsorTable>
-      {<section className="talks_2023">
-        <h1>Last edition talks:</h1>
-        <div className="talks_container">
-          {/* @TODO - add talks 2024 */}
-          {talks2023.map((talk: TTalkCard) => {
+      {
+        <section className="talks_2024">
+          <h1>Some of 2024 edition talks:</h1>
+          <div className="talks_container">
+            {/* @TODO - add talks 2024 */}
+            {talks2024.map((talk: TTalkCard) => {
               return <TalkCard key={talk.id} {...talk} />;
             })}
-        </div>
-      </section>}
+          </div>
+        </section>
+      }
+      {
+        <section className="talks_2023">
+          <h1>2023 edition talks:</h1>
+          <div className="talks_container">
+            {talks2023.map((talk: TTalkCard) => {
+              return <TalkCard key={talk.id} {...talk} />;
+            })}
+          </div>
+        </section>
+      }
     </>
   );
 }

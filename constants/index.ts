@@ -91,7 +91,85 @@ export const cfpTypes: TTypeCard[] = [
   },
 ];
 
-// @TODO - add talks2024
+export const talks2024: TTalkCard[] = [
+  {
+    id: "fiorucci1",
+    description:
+      "Stefano Fiorucci - Large Language Models for Devs: from zero to your first LLM application",
+    link: "https://www.youtube.com/watch?v=L6sUztYJXT8",
+    picture: "",
+    author: "fiorucci",
+  },
+  {
+    id: "agata1",
+    description: "Agata Hidalgo - Open Debate: AI",
+    link: "https://www.youtube.com/watch?v=uY1rqVR-Tts",
+    picture: "",
+    author: "agata",
+  },
+  {
+    id: "napoletano1",
+    description:
+      "Francesco Napoletano - 10 secrets to still be a rockstar developer after 40 - #7 will surprise you!",
+    link: "https://www.youtube.com/watch?v=FuvbGNPPBLw",
+    picture: "",
+    author: "napoletano",
+  },
+  {
+    id: "christina1",
+    description:
+      "Christina Dahlén - Why Writing To Disk Is Faster: Building a Message Broker",
+    link: "https://www.youtube.com/watch?v=dHAggkzaMTE",
+    picture: "",
+    author: "christina",
+  },
+  {
+    id: "albano1",
+    description:
+      "Alessandro Albano - 🇮🇹 Designing Accessible and Inclusive Software: An Opportunity for All",
+    link: "https://www.youtube.com/watch?v=11Mji2mbBUk",
+    picture: "",
+    author: "albano",
+  },
+  {
+    id: "corti2",
+    description:
+      "Francesco Corti - From the origin to the future of open source model and business",
+    link: "https://www.youtube.com/watch?v=di9796xHIkE",
+    picture: "",
+    author: "corti2",
+  },
+  {
+    id: "roman1",
+    description: "Roman Khavronenko - How to monitor the monitoring",
+    link: "https://www.youtube.com/watch?v=CJcKUIoD-gs",
+    picture: "",
+    author: "roman",
+  },
+  {
+    id: "irine1",
+    description: "Irine Kokilashvili - Nanocl: Our Open Source Story",
+    link: "https://www.youtube.com/watch?v=nlzsSHcTZVI",
+    picture: "",
+    author: "irine",
+  },
+  {
+    id: "omar1",
+    description:
+      "Omar Diop - Perfect Pitch: Unveiling the Mathematical Symphony Behind a Guitar Tuner",
+    link: "https://www.youtube.com/watch?v=W9HBHDogaFU",
+    picture: "",
+    author: "omar",
+  },
+  {
+    id: "pj1",
+    description: "PJ Hagerty - Open Source Isn't What It Used to Be",
+    link: "https://www.youtube.com/watch?v=49gIHFsFBiQ",
+    picture: "",
+    author: "pj",
+  },
+];
+
 export const talks2023: TTalkCard[] = [
   {
     id: "liran1",
@@ -187,4 +265,4 @@ export const YT_LIVE_LINKS: MapStream = {
   alpha2: "https://youtube.com/live/8owI4xBEIl0",
   beta1: "https://youtube.com/live/te8tNwnej0M",
   beta2: "https://youtube.com/live/Va6vIYCVxj0",
-}
+};
