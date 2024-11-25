@@ -75,6 +75,7 @@ export default function Ticket() {
 
               <p>{shared ? t('copied') : t('copy')}</p>
               <a
+                suppressHydrationWarning
                 type='button'
                 onClick={() => shareHandle()}
                 className='ticket-share button button-lg'
