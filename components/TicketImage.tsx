@@ -263,7 +263,7 @@ const TicketImage = ({
             fillRule: "nonzero",
             stroke: "none",
           }}
-          transform="matrix(1,0,0,-1,349.5107,78.541)"
+          transform="matrix(1, 0, 0, -1, 362.511, 78.541)"
         >
           <tspan
             id="tspan66"
