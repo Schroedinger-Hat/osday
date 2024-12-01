@@ -1884,10 +1884,9 @@ div.image .img {
       padding: 0;
 
       li {
-        width: 100%;
+        min-width: 100%;
         font-size: 16px;
         margin: 0;
-        padding: 10px 22px;
         color: white;
         transition: color 0.2s ease-out;
         transition: background-color 0.2s ease-out;
@@ -1900,6 +1899,11 @@ div.image .img {
       li:hover {
         background-color: #fff;
         color: #000;
+      }
+
+      li a {
+        padding: 10px 22px;
+        display: block;
       }
     }
   }
@@ -1924,6 +1928,8 @@ div.image .img {
     padding: 0 12px;
     font-size: 18px;
     margin-bottom: 10px;
+    display: block;
+    width: 100%;
   }
 
   & .mobile-title + .link {
