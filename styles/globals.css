@@ -1845,44 +1845,85 @@ div.image .img {
 }
 
 .header-dropdown {
-  align-items: center;
-  background-color: transparent;
   display: flex;
-  justify-items: items-center;
-  margin-right: 12px;
-  margin-bottom: 0px;
   position: relative;
+  align-items: center;
+  margin-right: 12px;
+  margin-bottom: 0;
 
   @media (max-width: 768px) {
-    margin-bottom: 12px;
-    margin-right: 0px;
+    display: none;
+    margin: 0 0 12px 0;
   }
 
   .content {
-    background: #171717;
-    border: 0.25px solid;
-    border-color: rgba(255, 255, 255, 0.6);
-    border-radius: 8px;
-    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-    display: none;
     position: absolute;
-    top: 45px;
+    top: 42px;
     z-index: 1;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    background: #171717;
+    border: 0.25px solid rgba(255, 255, 255, 0.6);
+    border-radius: 8px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease-out;
+    overflow: hidden;
 
     &.visible {
-      display: block;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+
+    .list {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 0;
+
+      li {
+        width: 100%;
+        font-size: 16px;
+        margin: 0;
+        padding: 10px 22px;
+        color: white;
+        transition: color 0.2s ease-out;
+        transition: background-color 0.2s ease-out;
+      }
+
+      li:not(:last-child) {
+        border-bottom: 1px solid white;
+      }
+
+      li:hover {
+        background-color: #fff;
+        color: #000;
+      }
     }
   }
+}
 
-  .list {
-    align-items: center;
+.editions-mobile {
+  display: none;
+
+  @media (max-width: 768px) {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 0;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
 
-    & > li {
-      font-size: 16px;
+  & .link {
+    padding: 0 12px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
+
+    &:first-child {
+      margin-top: 4px;
     }
   }
 }
