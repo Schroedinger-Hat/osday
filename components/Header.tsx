@@ -420,7 +420,7 @@ const EditionsList = ({ editions, t }: EditionsListProps) => (
 
 const MobileEditions = ({ editions, t }: EditionsListProps) => (
   <div className="editions-mobile">
-    {t("editions.title")}
+    <span className="mobile-title">{t("editions.title")}</span>
     {editions.map((edition) => (
       <Link
         className="link"
