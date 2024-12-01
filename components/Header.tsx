@@ -135,23 +135,7 @@ export default function Header() {
                         {t('cfv_link')}
                     </Link>
                     */}
-          <Link
-            onClick={closeSideBar}
-            target="_blank"
-            href={"https://2023.osday.dev"}
-          >
-            {t("edition")}
-          </Link>
-          <Link
-            onClick={closeSideBar}
-            target="_blank"
-            href={"https://2024.osday.dev"}
-          >
-            {t("edition24")}
-          </Link>
-          <Link onClick={closeSideBar} href={"/edition2021"}>
-            {t("edition21")}
-          </Link>
+          <HeaderDropdown />
           {/* <a
             className="button"
             target="_blank"
