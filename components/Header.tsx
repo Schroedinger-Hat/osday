@@ -302,29 +302,6 @@ export default function Header() {
         */}
       </ul>
       <ul>
-        <li>
-          <Link href={"/edition2021"} target="_blank">
-            {t("edition21")}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="button"
-            target="_blank"
-            href={"https://2023.osday.dev"}
-          >
-            {t("edition")}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="button"
-            target="_blank"
-            href={"https://2024.osday.dev"}
-          >
-            {t("edition24")}
-          </Link>
-        </li>
         {/*<li>
           <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
         </li>
@@ -366,6 +343,7 @@ export default function Header() {
           ) : null}
         </li>
       */}
+        <HeaderDropdown />
         <li className="language-switcher">
           <a onClick={(e) => setLanguage(e)} href="#">
             {availableLocales[languageCode]}
@@ -415,4 +393,47 @@ function substringNotification(notification: string): string {
     return notification.substring(0, 35) + "...";
   }
   return notification;
+}
+
+function HeaderDropdown() {
+  const t = useTranslations("Header");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const EDITIONS = [
+    {
+      name: "2024",
+      url: "https://2024.osday.dev",
+      text: "24",
+    },
+    {
+      name: "2023",
+      url: "https://2023.osday.dev",
+      text: "23",
+    },
+    {
+      name: "2021",
+      url: "edition2021",
+      text: "21",
+    },
+  ] as const;
+
+  const listItems = EDITIONS.map((edition) => (
+    <li key={edition.name}>
+      <Link href={edition.url} className="button" target="_blank">
+        {t(`editions.${edition.text}`)}
+      </Link>
+    </li>
+  ));
+
+  return (
+    <button
+      className="header-dropdown button"
+      onClick={() => setIsOpen(!isOpen)}
+    >
+      {t("editions.title")}
+      <div className={`content ${isOpen ? "visible" : ""}`}>
+        <ul className="list">{listItems}</ul>
+      </div>
+    </button>
+  );
 }
