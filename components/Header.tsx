@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
@@ -135,23 +135,7 @@ export default function Header() {
                         {t('cfv_link')}
                     </Link>
                     */}
-          <Link
-            onClick={closeSideBar}
-            target="_blank"
-            href={"https://2023.osday.dev"}
-          >
-            {t("edition")}
-          </Link>
-          <Link
-            onClick={closeSideBar}
-            target="_blank"
-            href={"https://2024.osday.dev"}
-          >
-            {t("edition24")}
-          </Link>
-          <Link onClick={closeSideBar} href={"/edition2021"}>
-            {t("edition21")}
-          </Link>
+          <HeaderDropdown />
           {/* <a
             className="button"
             target="_blank"
@@ -318,29 +302,6 @@ export default function Header() {
         */}
       </ul>
       <ul>
-        <li>
-          <Link href={"/edition2021"} target="_blank">
-            {t("edition21")}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="button"
-            target="_blank"
-            href={"https://2023.osday.dev"}
-          >
-            {t("edition")}
-          </Link>
-        </li>
-        <li>
-          <Link
-            className="button"
-            target="_blank"
-            href={"https://2024.osday.dev"}
-          >
-            {t("edition24")}
-          </Link>
-        </li>
         {/*<li>
           <Image width={50} height={50} src="/erwin.png" alt={t('erwin_alt')} />
         </li>
@@ -382,6 +343,7 @@ export default function Header() {
           ) : null}
         </li>
       */}
+        <HeaderDropdown />
         <li className="language-switcher">
           <a onClick={(e) => setLanguage(e)} href="#">
             {availableLocales[languageCode]}
@@ -431,4 +393,102 @@ function substringNotification(notification: string): string {
     return notification.substring(0, 35) + "...";
   }
   return notification;
+}
+
+interface Edition {
+  name: string;
+  url: string;
+  text: string;
+}
+
+interface EditionsListProps {
+  editions: readonly Edition[];
+  t: (key: string) => string;
+}
+
+const EditionsList = ({ editions, t }: EditionsListProps) => (
+  <ul className="list">
+    {editions.map((edition) => (
+      <li key={edition.name}>
+        <Link href={edition.url} target="_blank">
+          {t(`editions.${edition.text}`)}
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
+
+const MobileEditions = ({ editions, t }: EditionsListProps) => (
+  <div className="editions-mobile">
+    <span className="mobile-title">{t("editions.title")}</span>
+    {editions.map((edition) => (
+      <Link
+        className="link"
+        key={edition.name}
+        href={edition.url}
+        target="_blank"
+      >
+        {t(`editions.${edition.text}`)}
+      </Link>
+    ))}
+  </div>
+);
+
+function HeaderDropdown() {
+  const t = useTranslations("Header");
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  const EDITIONS = [
+    {
+      name: "2024",
+      url: "https://2024.osday.dev",
+      text: "24",
+    },
+    {
+      name: "2023",
+      url: "https://2023.osday.dev",
+      text: "23",
+    },
+    {
+      name: "2021",
+      url: "edition2021",
+      text: "21",
+    },
+  ] as const;
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  return (
+    <div ref={dropdownRef}>
+      <button
+        className="header-dropdown button"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+      >
+        {t("editions.title")}
+        <div
+          className={`content ${isOpen ? "visible" : ""}`}
+          role="menu"
+          aria-hidden={!isOpen}
+        >
+          <EditionsList editions={EDITIONS} t={t} />
+        </div>
+      </button>
+      <MobileEditions editions={EDITIONS} t={t} />
+    </div>
+  );
 }

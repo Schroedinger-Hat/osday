@@ -39,6 +39,12 @@
     "edition": "Edition 2023",
     "edition24": "Edition 2024",
     "edition21": "Edition 2021",
+    "editions": {
+      "title": "Editions",
+      "21": "2021",
+      "23": "2023",
+      "24": "2024"
+    },
     "notification": {
       "n1": "The conference was incredible! Thank you for participating!"
     }
