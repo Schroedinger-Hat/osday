@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { slide as Menu } from "react-burger-menu";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/router";
@@ -395,9 +395,49 @@ function substringNotification(notification: string): string {
   return notification;
 }
 
+interface Edition {
+  name: string;
+  url: string;
+  text: string;
+}
+
+interface EditionsListProps {
+  editions: readonly Edition[];
+  t: (key: string) => string;
+}
+
+const EditionsList = ({ editions, t }: EditionsListProps) => (
+  <ul className="list">
+    {editions.map((edition) => (
+      <li key={edition.name}>
+        <Link href={edition.url} target="_blank">
+          {t(`editions.${edition.text}`)}
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
+
+const MobileEditions = ({ editions, t }: EditionsListProps) => (
+  <div className="editions-mobile">
+    {t("editions.title")}
+    {editions.map((edition) => (
+      <Link
+        className="link"
+        key={edition.name}
+        href={edition.url}
+        target="_blank"
+      >
+        {t(`editions.${edition.text}`)}
+      </Link>
+    ))}
+  </div>
+);
+
 function HeaderDropdown() {
   const t = useTranslations("Header");
   const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   const EDITIONS = [
     {
@@ -417,23 +457,38 @@ function HeaderDropdown() {
     },
   ] as const;
 
-  const listItems = EDITIONS.map((edition) => (
-    <li key={edition.name}>
-      <Link href={edition.url} className="button" target="_blank">
-        {t(`editions.${edition.text}`)}
-      </Link>
-    </li>
-  ));
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   return (
-    <button
-      className="header-dropdown button"
-      onClick={() => setIsOpen(!isOpen)}
-    >
-      {t("editions.title")}
-      <div className={`content ${isOpen ? "visible" : ""}`}>
-        <ul className="list">{listItems}</ul>
-      </div>
-    </button>
+    <div ref={dropdownRef}>
+      <button
+        className="header-dropdown button fade-slide"
+        onClick={() => setIsOpen(!isOpen)}
+        aria-expanded={isOpen}
+        aria-haspopup="true"
+      >
+        {t("editions.title")}
+        <div
+          className={`content ${isOpen ? "visible" : ""}`}
+          role="menu"
+          aria-hidden={!isOpen}
+        >
+          <EditionsList editions={EDITIONS} t={t} />
+        </div>
+      </button>
+      <MobileEditions editions={EDITIONS} t={t} />
+    </div>
   );
 }
