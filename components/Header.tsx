@@ -474,7 +474,7 @@ function HeaderDropdown() {
   return (
     <div ref={dropdownRef}>
       <button
-        className="header-dropdown button fade-slide"
+        className="header-dropdown button"
         onClick={() => setIsOpen(!isOpen)}
         aria-expanded={isOpen}
         aria-haspopup="true"
