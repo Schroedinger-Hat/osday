@@ -5,6 +5,37 @@ type TSponsorTable = {
   isVisible: boolean
 };
 
+interface CommunitySponsor {
+  href: string;
+  src: string;
+  alt: string;
+  width?: number;
+  height?: number;
+}
+
+const communitySponsors: CommunitySponsor[] = [
+  {
+    href: "https://www.theredcode.it/",
+    src: "/the-red-code.png",
+    alt: "TheRedCode",
+    width: 300,
+  },
+  {
+    href: "https://kube.events/",
+    src: "/kube-events.svg",
+    alt: "KubeEvents Logo",
+    width: 100,
+    height: 100
+  },
+  {
+    href: "https://kube.careers/",
+    src: "/kube-careers.svg",
+    alt: "KubeCareers Logo",
+    width: 80,
+    height: 80
+  }
+];
+
 const SponsorTable = ({isVisible}: TSponsorTable) => {
   if (isVisible) {
     return (
@@ -216,6 +247,27 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
             <a href="https://www.securitycert.it/" target="_blank" rel="noreferrer">
               <Image width={150} height={150} src="/Logo_Securitycert.svg" alt="SecurityCert"/>
             </a>
+            <a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank" rel="noreferrer">
+              <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule"/>
+            </a>
+            <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
+              <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
+            </a>
+          </div> */}
+          <h3 className="sponsors_tier">Community</h3>
+          <div className="sponsors_logo">
+            {communitySponsors.map(({ href, src, alt, width, height }) => {
+              return (
+                <a key={href} href={href} target="_blank" rel="noreferrer">
+                  <Image
+                    width={width ?? 80}
+                    height={height ?? 80}
+                    src={src}
+                    alt={alt}
+                  />
+                </a>
+              );
+            })}
           </div>
           {/*
                 <h3 className="sponsors_tier">Patronage</h3>
