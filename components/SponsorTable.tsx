@@ -48,6 +48,15 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
               <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca"/>
             </a>
           </div>
+          <h3 className="sponsors_tier">Gold</h3>
+          <div className="sponsors_logo">
+            <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
+              <Image width={250} height={100} src="/nephila_logo.svg" alt="Nephila"/>
+            </a>
+            <a href="https://www.gadfly.ai/" target="_blank" rel="noreferrer">
+              <Image width={250} height={100} src="/gadfly_logo.png" alt="Gadfly AI"/>
+            </a>
+          </div>
           {/* <h3 className="sponsors_tier">Diamond</h3>
                 <div className="sponsors_logo">
                     <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
@@ -118,9 +127,9 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
               <Image width={250} height={100} src="/netdata.svg" alt="Netdata"/>
             </a>
             {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
-            {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
-            {/*</a>*/}
-            {/*<a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
+          {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
+          {/*</a>*/}
+          {/*<a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
               <Image width={250} height={66} src="/victoria-metrics.svg" alt="VictoriaMetrics"/>
             </a>
             <a href="https://learnn.com/" target="_blank" rel="noreferrer">
@@ -180,7 +189,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
                     <a href="https://www.github.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
                     </a> */}
-            {/*<a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank"
+          {/*<a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank"
                rel="noreferrer">
               <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule"/>
             </a>
@@ -233,7 +242,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
                     <a href="https://linktr.ee/continuousdelivery" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/logo-CD.svg" alt="Continous Delivery" />
                     </a> */}
-            {/*<a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
+          {/*<a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
               <Image width={100} height={100} src="/pensieri_in_codice-logo.svg"
                      alt="Pensieri in codice"/>
             </a>
@@ -256,7 +265,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
           </div> */}
           <h3 className="sponsors_tier">Community</h3>
           <div className="sponsors_logo">
-            {communitySponsors.map(({ href, src, alt, width, height }) => {
+            {communitySponsors.map(({href, src, alt, width, height}) => {
               return (
                 <a key={href} href={href} target="_blank" rel="noreferrer">
                   <Image
