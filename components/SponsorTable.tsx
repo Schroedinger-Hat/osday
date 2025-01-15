@@ -54,7 +54,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
               <Image width={250} height={100} src="/nephila_logo.svg" alt="Nephila"/>
             </a>
             <a href="https://www.gadfly.ai/" target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/gadfly_logo.png" alt="Gadfly AI"/>
+              <Image width={250} height={100} src="/gadfly_logo.svg" alt="Gadfly AI"/>
             </a>
           </div>
           {/* <h3 className="sponsors_tier">Diamond</h3>
