@@ -13,7 +13,6 @@ export default function Home() {
           Click to discover the agenda!
         </Link>*/}
       </div>
-      <SponsorTable isVisible></SponsorTable>
       {
         <section className="talks_2024">
           <h1>Some of 2024 edition talks:</h1>
