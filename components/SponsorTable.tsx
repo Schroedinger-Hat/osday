@@ -7,21 +7,13 @@ type TSponsorTable = {
 
 interface Sponsor {
   alt: string;
-  height: number;
-  href: string;
-  src: string;
-  width: number;
-}
-
-interface CommunitySponsor {
-  alt: string;
   height?: number;
   href: string;
   src: string;
   width?: number;
 }
 
-const communitySponsors: CommunitySponsor[] = [
+const communitySponsors: Sponsor[] = [
   {
     alt: "TheRedCode",
     href: "https://www.theredcode.it/",
@@ -44,47 +36,53 @@ const communitySponsors: CommunitySponsor[] = [
   }
 ];
 
+const goldSponsors: Sponsor[] = [
+  {
+    alt: "Gadfly logo",
+    href: "https://gadfly.ai",
+    src: "/sponsors/2025/gadfly.svg",
+    width: 300,
+    height: 125
+  }
+]
+
+const diamondSponsors: Sponsor[] = [
+  {
+    alt: "HeroDevs logo",
+    href: "https://www.herodevs.com/",
+    src: "/sponsors/2025/herodevs.svg",
+    width: 300,
+    height: 100
+  }
+]
+
+const supporterSponsor: Sponsor[] = [
+  {
+    alt: "Nana Bianca",
+    href: "https://www.nanabianca.it/",
+    src: "/nanabianca_logo.svg",
+    width: 400,
+    height: 200
+  }
+]
+
 interface SponsorTier {
   name: string;
-  sponsors: (Sponsor | CommunitySponsor)[];
+  sponsors: Sponsor[];
 }
 
 const sponsorTiers: SponsorTier[] = [
   {
     name: "Supporter",
-    sponsors: [
-      {
-        href: "https://www.nanabianca.it/",
-        src: "/nanabianca_logo.svg",
-        alt: "Nana Bianca",
-        width: 400,
-        height: 200
-      }
-    ]
+    sponsors: supporterSponsor
   },
   {
     name: 'Diamond',
-    sponsors: [
-      {
-        href: 'https://www.herodevs.com/',
-        src: '/sponsors/2025/herodevs.svg',
-        alt: 'HeroDevs logo',
-        width: 300,
-        height: 100
-      }
-    ]
+    sponsors: diamondSponsors
   },
   {
     name: "Gold",
-    sponsors: [
-      {
-        href: "https://gadfly.ai",
-        src: "/sponsors/2025/gadfly.svg",
-        alt: "Gadfly logo",
-        width: 300,
-        height: 125
-      }
-    ]
+    sponsors: goldSponsors
   },
   {
     name: "Community",
