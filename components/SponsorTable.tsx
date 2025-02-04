@@ -5,289 +5,119 @@ type TSponsorTable = {
   isVisible: boolean
 };
 
-interface CommunitySponsor {
+interface Sponsor {
+  alt: string;
+  height: number;
   href: string;
   src: string;
+  width: number;
+}
+
+interface CommunitySponsor {
   alt: string;
-  width?: number;
   height?: number;
+  href: string;
+  src: string;
+  width?: number;
 }
 
 const communitySponsors: CommunitySponsor[] = [
   {
+    alt: "TheRedCode",
     href: "https://www.theredcode.it/",
     src: "/the-red-code.png",
-    alt: "TheRedCode",
     width: 300,
   },
   {
+    alt: "KubeEvents Logo",
+    height: 100,
     href: "https://kube.events/",
     src: "/kube-events.svg",
-    alt: "KubeEvents Logo",
     width: 100,
-    height: 100
   },
   {
+    alt: "KubeCareers Logo",
+    height: 80,
     href: "https://kube.careers/",
     src: "/kube-careers.svg",
-    alt: "KubeCareers Logo",
     width: 80,
-    height: 80
+  }
+];
+
+interface SponsorTier {
+  name: string;
+  sponsors: (Sponsor | CommunitySponsor)[];
+}
+
+const sponsorTiers: SponsorTier[] = [
+  {
+    name: "Supporter",
+    sponsors: [
+      {
+        href: "https://www.nanabianca.it/",
+        src: "/nanabianca_logo.svg",
+        alt: "Nana Bianca",
+        width: 400,
+        height: 200
+      }
+    ]
+  },
+  {
+    name: 'Diamond',
+    sponsors: [
+      {
+        href: 'https://www.herodevs.com/',
+        src: '/sponsors/2025/herodevs.svg',
+        alt: 'HeroDevs logo',
+        width: 300,
+        height: 100
+      }
+    ]
+  },
+  {
+    name: "Gold",
+    sponsors: [
+      {
+        href: "https://gadfly.ai",
+        src: "/sponsors/2025/gadfly.svg",
+        alt: "Gadfly logo",
+        width: 300,
+        height: 125
+      }
+    ]
+  },
+  {
+    name: "Community",
+    sponsors: communitySponsors
   }
 ];
 
 const SponsorTable = ({isVisible}: TSponsorTable) => {
-  if (isVisible) {
-    return (
-      <>
-        <section className="current_sponsors">
-          <h2 className="sponsors_thanks" style={{textAlign: "center"}}>Thanks to our sponsors</h2>
-          <h3 className="sponsors_tier">Supporter</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
-              <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca"/>
-            </a>
-          </div>
-          {/* <h3 className="sponsors_tier">Diamond</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
-                    <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca" />
-                    </a>
-                </div>
-                */}
-          {/*<h3 className="sponsors_tier">Platinum</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.spindox.it/en/" target="_blank" rel="noreferrer">
-              <Image width={500} height={200} src="/Spindox_logo.png" alt="Spindox"/>
-            </a>
-          </div>
-          <div className="sponsors_logo">
-            <a href="http://www.suse.com/" target="_blank" rel="noreferrer">
-              <Image width={500} height={200} src="/Suse_logo.png" alt="Suse"/>
-            </a>
-          </div>
-          {/* <h3 className="sponsors_tier">Diamond</h3>
-                <div className="sponsors_logo">
-                    <a href="https://devmy.it/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={100} src="/devmy_logo.svg" alt="devmy" />
-                    </a>
-                    <a href="https://sighup.io/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={100} src="/sighup_logo.svg" alt="SIGHUP" />
-                    </a>
-                    <a href="https://www.20tab.com/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={100} src="/20tab_logo.svg" alt="20tab" />
-                    </a>
-                    <a href="https://www.ovhcloud.com/" target="_blank" rel="noreferrer">
-                    <Image width={200} height={100} src="/ovhcloud_logo.svg" alt="OVHcloud" />
-                    </a>
-                    <a href="https://www.develer.com/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={70} src="/develer_logo.png" alt="Develer" />
-                    </a>
-                    <a href="https://www.shopware.com/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={200} src="/shopware_logo.svg" alt="Shopware" />
-                    </a>
-                    <a href="https://lavorodigitaleitalia.it/" target="_blank" rel="noreferrer">
-                    <Image width={200} height={150} src="/lavorio-digitale-italia_logo.png" alt="Lavorio Digitale Italia" />
-                    </a>
-                </div>*/}
-          <h3 className="sponsors_tier">Gold</h3>
-            <div className="sponsors_logo">
-              <a href="https://gadfly.ai" target="_blank" rel="noreferrer">
-                <Image width={300} height={125} src="/sponsors/2025/Gadfly_logo_grey.svg" alt="Gadfly logo"/>
-              </a>
-            </div>
-          {/*<h3 className="sponsors_tier">Gold</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.claranet.com/it" target="_blank" rel="noreferrer">
-              <Image width={300} height={125} src="/CLARANET.png" alt="Claranet"/>
-            </a>
-          </div>
-          <h3 className="sponsors_tier">Silver</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.nephila.digital/" target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/nephila_logo.svg" alt="Nephila"/>
-            </a>
-            <a href="https://www.sparkfabrik.com/" target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/sparkfabrik_logo.svg" alt="Sparkfabrik"/>
-            </a>
-            <a href="https://www.birdie.care/" target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/birdie.svg" alt="Birdie"/>
-            </a>
-            <a href="https://transact-ecsel.eu/" target="_blank" rel="noreferrer">
-              <Image width={150} height={100} src="/transact_silver.svg" alt="transact"/>
-            </a>
-            <a href="https://haystack.deepset.ai/?utm_campaign=developer-relations&utm_source=osday-italy&utm_medium=website"
-               target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/haystack_deepset_logo.svg" alt="Haystack (by deepset)"/>
-            </a>
-            <a href="https://www.netdata.cloud/" target="_blank" rel="noreferrer">
-              <Image width={250} height={100} src="/netdata.svg" alt="Netdata"/>
-            </a>
-            {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
-            {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
-            {/*</a>*/}
-            {/*<a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
-              <Image width={250} height={66} src="/victoria-metrics.svg" alt="VictoriaMetrics"/>
-            </a>
-            <a href="https://learnn.com/" target="_blank" rel="noreferrer">
-              <Image width={150} height={100} src="/learnn.svg" alt="Learnn"/>
-            </a>
-            <a href="https://www.elastic.co/" target="_blank" rel="noreferrer">
-              <Image width={150} height={100} src="/elastic.svg" alt="Elastic"/>
-            </a>
-            <a href="https://patchstack.com/" target="_blank" rel="noreferrer">
-              <Image width={184} height={21} src="/patchstack_logo.svg" alt="Patchstack"/>
-            </a>
-            <a href="https://sourcegraph.com/" target="_blank" rel="noreferrer">
-              <Image width={150} height={50} src="/sourcegraph.svg" alt="Sourcegraph"/>
-            </a>
-            <a href="https://mia-platform.eu/" target="_blank" rel="noreferrer">
-              <Image width={250} height={130} src="/mia-platform.png" alt="Mia Platform"/>
-            </a>
-          </div>
-          {/* <h3 className="sponsors_tier">Media</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.wearedevelopers.com/" target="_blank" rel="noreferrer">
-                    <Image width={200} height={150} src="/WeAreDevelopers_logo.svg" alt="WeAreDevelopers" />
-                    </a>
-                    <a href="https://kube.events/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/kube-events_logo.svg" alt="Kube Events" />
-                    </a>
-                    <a href="https://kube.careers/" target="_blank" rel="noreferrer">
-                    <Image width={80} height={80} src="/kube-careers_logo.svg" alt="Kube Careers" />
-                    </a>
-                    <a href="https://codemotion.com/" target="_blank" rel="noreferrer">
-                    <Image width={300} height={150} src="/codemotion_logo.svg" alt="Codemotion" />
-                    </a>
-                    <a href="https://www.linkedin.com/company/datapizza" target="_blank" rel="noreferrer">
-                    <Image width={330} height={100} src="/datapizza_logo.png" alt="Datapizza" />
-                    </a>
-                </div> */}
-          {/*<h3 className="sponsors_tier">Media</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.wearedevelopers.com/" target="_blank" rel="noreferrer">
-              <Image width={200} height={150} src="/WeAreDevelopers_logo.svg" alt="WeAreDevelopers"/>
-            </a>
-            <a href="https://kube.events/" target="_blank" rel="noreferrer">
-              <Image width={100} height={100} src="/kube-events_logo.svg" alt="Kube Events"/>
-            </a>
-            <a href="https://kube.careers/" target="_blank" rel="noreferrer">
-              <Image width={80} height={80} src="/kube-careers_logo.svg" alt="Kube Careers"/>
-            </a>
-          </div>
-          <h3 className="sponsors_tier">Swag</h3>
-          <div className="sponsors_logo">
-            {/* <a href="https://www.gitkraken.com/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/gitkraken-logo-light-sq.svg" alt="Gitkraken" />
-                    </a>
-                    <a href="https://www.jetbrains.com/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/jb_beam.svg" alt="JetBrains" />
-                    </a>
-                    <a href="https://www.github.com/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
-                    </a> */}
-            {/*<a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank"
-               rel="noreferrer">
-              <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule"/>
-            </a>
-            {/* <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
-                    <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
-                    </a> */}
-          {/*</div>
-          <h3 className="sponsors_tier">Community</h3>
-          <div className="sponsors_logo">
-            <a href="https://www.grusp.org/" target="_blank" rel="noreferrer">
-              <Image width={100} height={100} src="/grusp_logo.svg" alt="Grusp"/>
-            </a>
-            <a href="https://www.theredcode.it/" target="_blank" rel="noreferrer">
-              <Image width={80} height={80} src="/the-red-code_logo.png" alt="TheRedCode"/>
-            </a>
-            {/*
-                    <a href="https://pisa.dev/" target="_blank" rel="noreferrer">
-                    <Image width={150} height={150} src="/pisa-dev_logo.svg" alt="PisaDev" />
-                    </a>
-                    <a href="https://firenze.dev/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/firenze-dev_logo.svg" alt="Firenzedev" />
-                    </a>
-                    <a href="https://www.pignolalug.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/plug_logo.png" alt="Plug" />
-                    </a>
-                    <a href="https://pointerpodcast.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/pointerpodcast_logo.png" alt="Pointer Podcast" />
-                    </a>
-                    <a href="https://www.productmanagementday.com/" target="_blank" rel="noreferrer">
-                    <Image width={150} height={150} src="/productmanagementday_logo.png" alt="PMD" />
-                    </a>
-                    <a href="https://www.associazionefrida.it/" target="_blank" rel="noreferrer">
-                    <Image width={150} height={100} src="/frida_logo.png" alt="Frida" />
-                    </a>
-                    <a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/pensieri_in_codice-logo.svg" alt="Pensieri in codice" />
-                    </a>
-                    <a href="https://www.eddiehub.org/" target="_blank" rel="noreferrer">
-                    <Image width={80} height={100} src="/eddiehub_logo.png" alt="EddieHub" />
-                    </a>
-                    <a href="https://www.devdreams.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/devdreams-logo.png" alt="DevDreams" />
-                    </a>
-                    <a href="https://www.gdgpisa.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/logo-gdg-pisa.svg" alt="GDG Pisa" />
-                    </a>
-                    <a href="https://t.me/+IxwjMC4ytMU4YjRk" target="_blank" rel="noreferrer">
-                    <Image width={120} height={100} src="/hr-feat-ict_logo.png" alt="HR feat. ICT" />
-                    </a>
-                    <a href="https://linktr.ee/continuousdelivery" target="_blank" rel="noreferrer">
-                    <Image width={150} height={150} src="/logo-CD.svg" alt="Continous Delivery" />
-                    </a> */}
-            {/*<a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
-              <Image width={100} height={100} src="/pensieri_in_codice-logo.svg"
-                     alt="Pensieri in codice"/>
-            </a>
+  if (!isVisible) return null;
 
-            <a href="https://italiaopensource.com/" target="_blank" rel="noreferrer">
-              <Image width={150} height={150} src="/logo-italia-opensource.png" alt="Italia Open-Source"/>
-            </a>
-            <a href="https://latinasintech.org/" target="_blank" rel="noreferrer">
-              <Image width={150} height={150} src="/latinasintech.png" alt="Latinas In Tech"/>
-            </a>
-            <a href="https://www.securitycert.it/" target="_blank" rel="noreferrer">
-              <Image width={150} height={150} src="/Logo_Securitycert.svg" alt="SecurityCert"/>
-            </a>
-            <a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank" rel="noreferrer">
-              <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule"/>
-            </a>
-            <a href="https://www.treedom.net/" target="_blank" rel="noreferrer">
-              <Image width={175} height={100} src="/treedom_logo.png" alt="Treedom" />
-            </a>
-          </div> */}
-          <h3 className="sponsors_tier">Community</h3>
+  return (
+    <section className="current_sponsors">
+      <h2 className="sponsors_thanks" style={{textAlign: "center"}}>Thanks to our sponsors</h2>
+
+      {sponsorTiers.map((tier) => (
+        <div key={tier.name}>
+          <h3 className="sponsors_tier">{tier.name}</h3>
           <div className="sponsors_logo">
-            {communitySponsors.map(({ href, src, alt, width, height }) => {
-              return (
-                <a key={href} href={href} target="_blank" rel="noreferrer">
-                  <Image
-                    width={width ?? 80}
-                    height={height ?? 80}
-                    src={src}
-                    alt={alt}
-                  />
-                </a>
-              );
-            })}
+            {tier.sponsors.map((sponsor) => (
+              <a key={sponsor.href} href={sponsor.href} target="_blank" rel="noreferrer">
+                <Image
+                  width={sponsor.width ?? 80}
+                  height={sponsor.height ?? 80}
+                  src={sponsor.src}
+                  alt={sponsor.alt}
+                />
+              </a>
+            ))}
           </div>
-          {/*
-                <h3 className="sponsors_tier">Patronage</h3>
-                <div className="sponsors_logo">
-                    <a href="https://www.comune.fi.it/" target="_blank" rel="noreferrer">
-                    <Image width={100} height={100} src="/patrocinio_firenze.png" alt="Comune di Firenze" />
-                    </a>
-                </div>
-                */}
-        </section>
-      </>
-    );
-  }
-  return null;
+        </div>
+      ))}
+    </section>
+  );
 };
 
 export default SponsorTable;
