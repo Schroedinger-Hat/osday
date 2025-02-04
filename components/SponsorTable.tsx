@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
 import Image from "next/image";
 
 type TSponsorTable = {
-  isVisible: boolean;
+  isVisible: boolean
 };
 
 interface CommunitySponsor {
@@ -25,38 +25,27 @@ const communitySponsors: CommunitySponsor[] = [
     src: "/kube-events.svg",
     alt: "KubeEvents Logo",
     width: 100,
-    height: 100,
+    height: 100
   },
   {
     href: "https://kube.careers/",
     src: "/kube-careers.svg",
     alt: "KubeCareers Logo",
     width: 80,
-    height: 80,
-  },
+    height: 80
+  }
 ];
 
-const SponsorTable = ({ isVisible }: TSponsorTable) => {
+const SponsorTable = ({isVisible}: TSponsorTable) => {
   if (isVisible) {
     return (
       <>
         <section className="current_sponsors">
-          <h2 className="sponsors_thanks" style={{ textAlign: "center" }}>
-            Thanks to our sponsors
-          </h2>
+          <h2 className="sponsors_thanks" style={{textAlign: "center"}}>Thanks to our sponsors</h2>
           <h3 className="sponsors_tier">Supporter</h3>
           <div className="sponsors_logo">
-            <a
-              href="https://www.nanabianca.it/"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <Image
-                width={400}
-                height={200}
-                src="/nanabianca_logo.svg"
-                alt="Nana Bianca"
-              />
+            <a href="https://www.nanabianca.it/" target="_blank" rel="noreferrer">
+              <Image width={400} height={200} src="/nanabianca_logo.svg" alt="Nana Bianca"/>
             </a>
           </div>
           {/* <h3 className="sponsors_tier">Diamond</h3>
@@ -102,16 +91,11 @@ const SponsorTable = ({ isVisible }: TSponsorTable) => {
                     </a>
                 </div>*/}
           <h3 className="sponsors_tier">Gold</h3>
-          <div className="sponsors_logo">
-            <a href="https://gadfly.ai/" target="_blank" rel="noreferrer">
-              <Image
-                width={300}
-                height={125}
-                src="/sponsors/2025/Gadfly_logo_grey.svg"
-                alt="Claranet"
-              />
-            </a>
-          </div>
+            <div className="sponsors_logo">
+              <a href="https://gadfly.ai" target="_blank" rel="noreferrer">
+                <Image width={300} height={125} src="/sponsors/2025/Gadfly_logo_grey.svg" alt="Gadfly logo"/>
+              </a>
+            </div>
           {/*<h3 className="sponsors_tier">Gold</h3>
           <div className="sponsors_logo">
             <a href="https://www.claranet.com/it" target="_blank" rel="noreferrer">
@@ -140,9 +124,9 @@ const SponsorTable = ({ isVisible }: TSponsorTable) => {
               <Image width={250} height={100} src="/netdata.svg" alt="Netdata"/>
             </a>
             {/*<a href="https://platformatic.dev/" target="_blank" rel="noreferrer">*/}
-          {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
-          {/*</a>*/}
-          {/*<a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
+            {/*<Image width={250} height={100} src="/platformatic_logo.svg" alt="Platformatic" />*/}
+            {/*</a>*/}
+            {/*<a href="https://victoriametrics.com/" target="_blank" rel="noreferrer">
               <Image width={250} height={66} src="/victoria-metrics.svg" alt="VictoriaMetrics"/>
             </a>
             <a href="https://learnn.com/" target="_blank" rel="noreferrer">
@@ -202,7 +186,7 @@ const SponsorTable = ({ isVisible }: TSponsorTable) => {
                     <a href="https://www.github.com/" target="_blank" rel="noreferrer">
                     <Image width={100} height={100} src="/github_logo.svg" alt="GitHub" />
                     </a> */}
-          {/*<a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank"
+            {/*<a href="https://www.stickermule.com/it/adesivi-personalizzati" target="_blank"
                rel="noreferrer">
               <Image width={200} height={200} src="/stickermule_logo.svg" alt="Stickermule"/>
             </a>
@@ -255,7 +239,7 @@ const SponsorTable = ({ isVisible }: TSponsorTable) => {
                     <a href="https://linktr.ee/continuousdelivery" target="_blank" rel="noreferrer">
                     <Image width={150} height={150} src="/logo-CD.svg" alt="Continous Delivery" />
                     </a> */}
-          {/*<a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
+            {/*<a href="https://pensieriincodice.it/" target="_blank" rel="noreferrer">
               <Image width={100} height={100} src="/pensieri_in_codice-logo.svg"
                      alt="Pensieri in codice"/>
             </a>
