@@ -103,11 +103,9 @@ export default function Header() {
           <Link onClick={closeSideBar} href={"/cfp"}>
             {t("cfp_link")}
           </Link>
-          {/*
-                      <Link onClick={closeSideBar} href={'/agenda'}>
-                        {t('agenda_link')}
-                      </Link>
-                        */}
+          <Link onClick={closeSideBar} href={'/agenda'}>
+            {t('agenda_link')}
+          </Link>
           {/*<Link onClick={closeSideBar} href={'/'}>
                         {t('home_link')}
                       </Link>
@@ -118,9 +116,9 @@ export default function Header() {
                         {t('about_link')}
                       </Link>
                       */}
-          {/* <Link onClick={closeSideBar} href={'/speakers'}>
-                        {t('speakers_Link')}
-                      </Link> */}
+          <Link onClick={closeSideBar} href={'/speakers'}>
+            {t('speakers_Link')}
+          </Link>
           <Link onClick={closeSideBar} href={"/gallery"}>
             Gallery
           </Link>
@@ -243,9 +241,9 @@ export default function Header() {
         <li>
           <Link href={"/cfp"}>{t("cfp_link")}</Link>
         </li>
-        {/* <li>
+        <li>
           <Link href={"/agenda"}>{t("agenda_link")}</Link>
-        </li> */}
+        </li>
         {/*<li>
           <Link href={'/'}>{t('home_link')}</Link>
         </li>
@@ -263,9 +261,10 @@ export default function Header() {
         >
           {t('photo_link')}
             </a>
+        */}
         <li>
           <Link href={"/speakers"}>{t("speakers_Link")}</Link>
-        </li>*/}
+        </li>
         <li>
           <Link href={"/gallery"}>Gallery</Link>
         </li>
