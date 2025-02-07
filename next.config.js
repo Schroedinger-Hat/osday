@@ -1,11 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  reactStrictMode: true,
-  swcMinify: true,
-  i18n: {
-    locales: ['en', 'it', 'es', 'fr'],
-    defaultLocale: 'en'
-  }
-};
+/**
+ * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially useful
+ * for Docker builds.
+ */
+import "./src/env.js";
 
-module.exports = nextConfig;
+/** @type {import("next").NextConfig} */
+const config = {};
+
+export default config;
