@@ -47,10 +47,6 @@ export default function Agenda() {
           <div className="container">
             <div className='agenda-nav-container'>
               {ViewButton}
-              <div className='agenda-nav '>
-                {NavBar(1)}
-                {NavBar(2)}
-              </div>
             </div>
 
         {/*
