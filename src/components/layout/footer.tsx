@@ -1,8 +1,12 @@
+"use client";
+
 import Link from "next/link";
 import { Typography } from "../atoms/typography/Typography";
 import { Paragraph } from "../atoms/typography/Paragraph";
 import { Heading } from "../atoms/typography/Heading";
 import { Linkedin, Youtube } from "lucide-react";
+import { useFontContext } from "~/lib/context/font-context";
+import { cn } from "~/lib/utils";
 
 const footerSections = [
   {
@@ -29,8 +33,10 @@ const footerSections = [
 ];
 
 export function Footer() {
+  const { isComicSans, toggleComicSans } = useFontContext();
+
   return (
-    <footer className="border-t">
+    <footer className={cn("border-t", isComicSans && "font-['Comic Sans MS']")}>
       <div className="container mx-auto max-w-7xl">
         <div className="container px-4 py-8 md:px-6 md:py-12">
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
@@ -95,15 +101,24 @@ export function Footer() {
               © {new Date().getFullYear()}, Schrödinger Hat
             </Typography>
 
-            <Link
-              href="https://nextjs.org"
-              className="hidden hover:underline md:block"
-              target="_blank"
-            >
+            <div className="hidden md:block">
               <Typography variant="muted" className="m-0">
-                Powered by Next.js
+                {isComicSans ? (
+                  <span>Much better with Comic Sans , right?</span>
+                ) : (
+                  <span>
+                    Annoying font? Could be worse. Could be{" "}
+                    <button
+                      onClick={toggleComicSans}
+                      className="underline hover:text-foreground"
+                    >
+                      Comic Sans
+                    </button>
+                    .
+                  </span>
+                )}
               </Typography>
-            </Link>
+            </div>
           </div>
         </div>
       </div>
