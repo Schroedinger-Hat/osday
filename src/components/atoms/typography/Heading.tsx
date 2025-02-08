@@ -17,16 +17,15 @@ export function Heading({
   boost = false,
   className,
 }: HeadingProps) {
-  const baseStyles =
-    "font-medium text-gray-900 font-lexend tracking-tighter text-slate-800";
+  const baseStyles = "font-title font-medium text-gray-900 text-slate-800";
   const hugeStyles =
-    "mb-8 font-lexend font-medium leading-none tracking-tight text-slate-800 text-5xl md:text-9xl md:tracking-[-7px]";
+    "font-title mb-8 font-medium leading-none text-slate-800 text-5xl md:text-9xl";
 
   // Normal styles
-  const level1Styles = "mb-2 md:mb-6 text-4xl md:text-5xl";
-  const level2Styles = "mb-2 md:mb-4 text-2xl md:text-3xl";
-  const level3Styles = "mb-2 md:mb-4 text-2xl";
-  const level4Styles = "mb-2 md:mb-4 text-xl";
+  const level1Styles = "mb-2 md:mb-6 text-4xl md:text-7xl";
+  const level2Styles = "mb-2 md:mb-4 text-2xl md:text-5xl";
+  const level3Styles = "mb-2 md:mb-4 text-2xl md:text-3xl";
+  const level4Styles = "mb-2 md:mb-4 text-2xl";
 
   // Boosted styles
   const level1StylesBoosted = "mb-2 md:mb-6 text-5xl md:text-6xl";

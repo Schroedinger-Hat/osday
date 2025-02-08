@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-comic-neue)", ...fontFamily.sans],
+        sans: ["var(--font-acme)", ...fontFamily.sans],
         title: ["var(--font-cartoon-town)", ...fontFamily.sans],
       },
       borderRadius: {

@@ -6,19 +6,23 @@ import { TRPCReactProvider } from "~/trpc/react";
 import { Header } from "~/components/layout/header";
 import { Footer } from "~/components/layout/footer";
 import localFont from "next/font/local";
-import { Comic_Neue } from "next/font/google";
+import { Acme } from "next/font/google";
 import { cn } from "~/lib/utils";
+import { FontProvider } from "~/lib/context/font-context";
+import schroddy from "../assets/images/schroddy.svg";
+import Image from "next/image";
+import { AnimatedSchroddy } from "~/components/layout/animated-schroddy";
 
 // Font files can be colocated inside of `pages`
 const cartoonTown = localFont({
-  src: "./assets/fonts/cartoon-town.ttf",
+  src: "../assets/fonts/cartoon-town.ttf",
   variable: "--font-cartoon-town",
 });
 
-const comicNeue = Comic_Neue({
+const acme = Acme({
   subsets: ["latin"],
-  weight: ["400", "700"],
-  variable: "--font-comic-neue",
+  weight: ["400"],
+  variable: "--font-acme",
 });
 
 export const metadata: Metadata = {
@@ -31,27 +35,30 @@ export default function RootLayout({
   children,
 }: Readonly<{ children: React.ReactNode }>) {
   return (
-    <html
-      lang="en"
-      className={cn(
-        comicNeue.variable,
-        cartoonTown.variable,
-        "font-sans", // Comic Neue as default font
-      )}
-    >
-      <body>
-        <TRPCReactProvider>
-          <HydrateClient>
-            <div className="flex min-h-screen flex-col">
-              <Header />
-              <main className="flex-1">
-                <div className="mx-auto w-full max-w-7xl">{children}</div>
-              </main>
-              <Footer />
-            </div>
-          </HydrateClient>
-        </TRPCReactProvider>
-      </body>
-    </html>
+    <FontProvider>
+      <html
+        lang="en"
+        className={cn(
+          acme.variable,
+          cartoonTown.variable,
+          "font-sans transition-all duration-300", // Added transition for smooth font change
+        )}
+      >
+        <body>
+          <AnimatedSchroddy src={schroddy} />
+          <TRPCReactProvider>
+            <HydrateClient>
+              <div className="flex min-h-screen flex-col">
+                <Header />
+                <main className="flex-1">
+                  <div className="mx-auto w-full max-w-7xl">{children}</div>
+                </main>
+                <Footer />
+              </div>
+            </HydrateClient>
+          </TRPCReactProvider>
+        </body>
+      </html>
+    </FontProvider>
   );
 }
