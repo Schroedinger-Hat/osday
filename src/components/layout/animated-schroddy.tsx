@@ -10,7 +10,7 @@ interface AnimatedSchroddyProps {
 
 export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
   return (
-    <div className="pointer-events-none fixed inset-0 overflow-hidden">
+    <div className="pointer-events-none absolute inset-x-0 top-0 h-screen overflow-hidden">
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: "-20%" }}
@@ -28,6 +28,7 @@ export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
           width={600}
           height={600}
           className="-rotate-12 opacity-25"
+          priority
         />
       </motion.div>
     </div>

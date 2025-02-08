@@ -1,8 +1,9 @@
+import Image from "next/image";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Paragraph } from "~/components/atoms/typography/Paragraph";
 import { Typography } from "~/components/atoms/typography/Typography";
-
+import schroddySticker from "~/assets/images/schroddy-sticker.png";
 export default function HomePage() {
   return (
     <main>
@@ -70,6 +71,10 @@ export default function HomePage() {
           Open Source Day is made possible by the generous support of our
           sponsors.
         </Paragraph>
+      </SectionContainer>
+
+      <SectionContainer className="flex justify-center">
+        <Image src={schroddySticker} alt="Schroddy" width={240} height={240} />
       </SectionContainer>
     </main>
   );
