@@ -5,6 +5,15 @@
 import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
-const config = {};
+const config = {
+  images: {
+    remotePatterns: [
+      {
+        hostname: "cdn.sanity.io",
+        protocol: "https",
+      },
+    ],
+  },
+};
 
 export default config;

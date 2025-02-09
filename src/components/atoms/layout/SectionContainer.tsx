@@ -25,7 +25,7 @@ const paddings = {
   header: "py-16 md:py-24",
   default: "py-8 md:py-16",
   little: "py-4 md:py-8",
-  none: "py-0",
+  none: "py-0 px-0 md:py-0 md:px-0 lg:px-0 2lx:px-0",
 };
 
 const spacings = {

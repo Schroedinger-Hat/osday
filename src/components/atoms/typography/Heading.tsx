@@ -17,9 +17,9 @@ export function Heading({
   boost = false,
   className,
 }: HeadingProps) {
-  const baseStyles = "font-title font-medium text-gray-900 text-slate-800";
+  const baseStyles = "font-title font-medium";
   const hugeStyles =
-    "font-title mb-8 font-medium leading-none text-slate-800 text-5xl md:text-9xl";
+    "font-title mb-8 font-medium leading-none text-5xl md:text-9xl";
 
   // Normal styles
   const level1Styles = "mb-2 md:mb-6 text-4xl md:text-7xl";

@@ -15,10 +15,10 @@ export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
         initial={{ x: "100%" }}
         animate={{ x: "-20%" }}
         transition={{
-          delay: 5,
-          duration: 1,
-          type: "spring",
-          stiffness: 100,
+          delay: 4,
+          duration: 0.6,
+          type: "ease",
+          ease: ["easeOut"],
         }}
         className="absolute -right-48 top-24"
       >

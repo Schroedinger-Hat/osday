@@ -4,7 +4,7 @@ import { cn } from "~/lib/utils";
 import { type VariantProps, cva } from "class-variance-authority";
 import { type ElementType } from "react";
 
-const typographyVariants = cva("text-slate-900", {
+const typographyVariants = cva("", {
   variants: {
     variant: {
       h1: "scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl",
@@ -14,14 +14,14 @@ const typographyVariants = cva("text-slate-900", {
       p: "leading-7 [&:not(:first-child)]:mt-6",
       blockquote: "mt-6 border-l-2 border-slate-300 pl-6 italic",
       list: "my-6 ml-6 list-disc [&>li]:mt-2",
-      lead: "text-xl text-slate-700",
+      lead: "text-xl",
       large: "text-lg font-semibold",
       medium: "text-base font-semibold",
       small: "text-sm font-medium leading-none",
-      muted: "text-sm text-slate-500",
+      muted: "text-sm",
       link: "font-medium text-primary underline underline-offset-4 hover:text-primary/80",
       navigation: "text-sm font-semibold leading-none uppercase",
-      navigationMobile: "text-xl text-slate-800 font-semibold",
+      navigationMobile: "text-xl font-semibold",
     },
     weight: {
       normal: "font-normal",
