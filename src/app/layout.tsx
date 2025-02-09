@@ -47,15 +47,7 @@ export default function RootLayout({
         <body>
           <AnimatedSchroddy src={schroddy} />
           <TRPCReactProvider>
-            <HydrateClient>
-              <div className="flex min-h-screen flex-col">
-                <Header />
-                <main className="flex-1">
-                  <div className="mx-auto w-full max-w-7xl">{children}</div>
-                </main>
-                <Footer />
-              </div>
-            </HydrateClient>
+            <HydrateClient>{children}</HydrateClient>
           </TRPCReactProvider>
         </body>
       </html>

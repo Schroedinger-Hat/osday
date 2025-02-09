@@ -17,10 +17,6 @@ const mainRoutes = [
     label: "Tickets",
   },
   {
-    href: "/speakers",
-    label: "Speakers",
-  },
-  {
     href: "/schedule",
     label: "Schedule",
   },
@@ -36,32 +32,51 @@ const mainRoutes = [
 
 const secondaryRoutes = [
   {
-    href: "/2024",
-    label: "2024 Edition",
-  },
-  {
-    href: "/contact",
-    label: "Contact us",
-  },
-  {
     href: "/faqs",
     label: "FAQs",
   },
   {
-    href: "/refund-policies",
-    label: "Refund Policies",
+    href: "/speakers-faq",
+    label: "Speakers FAQ",
+  },
+  {
+    href: "/press-kit",
+    label: "Press Kit",
   },
   {
     href: "/code-of-conduct",
     label: "Code of conduct",
   },
   {
-    href: "/visa",
-    label: "Visa",
+    href: "/jobs",
+    label: "Job Board",
   },
   {
-    href: "/t-shirt",
-    label: "T-Shirt",
+    href: "/previous-events",
+    label: "Previous Events",
+  },
+  {
+    href: "/volunteers",
+    label: "Volunteers",
+  },
+];
+
+const legalRoutes = [
+  {
+    href: "/page/code-of-conduct",
+    label: "Code of Conduct",
+  },
+  {
+    href: "/page/cookie-policy",
+    label: "Cookie Policy",
+  },
+  {
+    href: "/page/privacy",
+    label: "Privacy Policy",
+  },
+  {
+    href: "/page/contacts",
+    label: "Contact",
   },
 ];
 
@@ -83,7 +98,7 @@ export function Header() {
               <Button
                 asChild
                 variant="default"
-                className="font-title rounded-r-none text-2xl"
+                className="rounded-r-none font-title text-2xl"
               >
                 <Link href="/tickets">Tickets</Link>
               </Button>
@@ -120,14 +135,14 @@ export function Header() {
                       </SheetClose>
                     </div>
 
-                    <div className="mt-24 grid grid-cols-1 gap-24">
+                    <div className="mt-24 grid grid-cols-1 gap-4">
                       {/* Main Navigation */}
-                      <nav className="grid grid-cols-2 gap-x-8 gap-y-8">
+                      <nav className="mb-20 grid grid-cols-2 gap-x-8 gap-y-8">
                         {mainRoutes.map((route) => (
                           <Link
                             key={route.href}
                             href={route.href}
-                            className="font-title relative text-7xl font-bold tracking-wide after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:origin-left after:-rotate-2 after:bg-primary after:transition-all after:duration-150 hover:after:w-[66.666%]"
+                            className="relative font-title text-7xl font-bold tracking-wide after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:origin-left after:-rotate-2 after:bg-primary after:transition-all after:duration-150 hover:after:w-[66.666%]"
                             onClick={() => setIsOpen(false)}
                           >
                             {route.label}
@@ -136,8 +151,22 @@ export function Header() {
                       </nav>
 
                       {/* Secondary Navigation */}
-                      <nav className="flex flex-wrap gap-x-12 gap-y-4">
+                      <nav className="mb-4 flex flex-wrap gap-x-12 gap-y-4">
                         {secondaryRoutes.map((route) => (
+                          <Link
+                            key={route.href}
+                            href={route.href}
+                            className="font-title text-2xl font-medium hover:text-primary"
+                            onClick={() => setIsOpen(false)}
+                          >
+                            {route.label}
+                          </Link>
+                        ))}
+                      </nav>
+
+                      {/* Legal Navigation */}
+                      <nav className="flex flex-wrap gap-x-12 gap-y-4">
+                        {legalRoutes.map((route) => (
                           <Link
                             key={route.href}
                             href={route.href}

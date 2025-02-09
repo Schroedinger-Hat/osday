@@ -13,7 +13,7 @@ const footerSections = [
     title: "Event",
     links: [
       { href: "/how-to-reach", label: "How to reach us" },
-      { href: "/code-of-conduct", label: "Code of Conduct" },
+      { href: "/page/code-of-conduct", label: "Code of Conduct" },
       { href: "/faqs", label: "FAQs" },
       { href: "/speaker-faqs", label: "Speaker FAQs" },
       { href: "/volunteers", label: "Volunteers" },
@@ -23,11 +23,11 @@ const footerSections = [
   {
     title: "Utils",
     links: [
-      { href: "/privacy-policy", label: "Privacy Policy" },
-      { href: "/cookie-policy", label: "Cookie Policy" },
+      { href: "/page/privacy", label: "Privacy Policy" },
+      { href: "/page/cookie-policy", label: "Cookie Policy" },
       { href: "/press-kit", label: "Press Kit" },
       { href: "/previous-events", label: "Previous Events" },
-      { href: "/contacts", label: "Contacts" },
+      { href: "/page/contacts", label: "Contacts" },
     ],
   },
 ];
