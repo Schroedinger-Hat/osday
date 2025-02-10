@@ -43,7 +43,15 @@ const goldSponsors: Sponsor[] = [
     src: "/sponsors/2025/gadfly.svg",
     width: 300,
     height: 125
+  },
+  {
+    alt: "Nephila Logo",
+    href: "https://www.nephila.digital/en/",
+    src: "/sponsors/2025/nephila.svg",
+    width: 300,
+    height: 125
   }
+
 ]
 
 const diamondSponsors: Sponsor[] = [
