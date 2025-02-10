@@ -5,13 +5,11 @@ import { Paragraph } from "~/components/atoms/typography/Paragraph";
 import { Typography } from "~/components/atoms/typography/Typography";
 import schroddySticker from "~/assets/images/schroddy-sticker.png";
 import type { Partner, Author } from "~/sanity/sanity.types";
-import type { Speaker } from "~/types/sanity";
 import { sanityClient } from "~/sanity/lib/client";
-import { Debug } from "~/components/atoms/debug";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { urlFor } from "~/sanity/lib/image";
-import type { TimelineItem } from "~/components/molecules/TalksTable";
-import { TalksTable } from "~/components/molecules/TalksTable";
+import type { TimelineItem } from "~/components/molecules/talks-table";
+import { TalksTable } from "~/components/molecules/talks-table";
 import Hero from "../_components/hero";
 import Link from "next/link";
 
@@ -73,6 +71,29 @@ export default async function HomePage() {
       </SectionContainer>
 
       <SectionContainer>
+        <Heading level={2}>A jam-packed one day schedule</Heading>
+        <Typography variant="h3" className="mb-4">
+          Filled to the brim with talks, insights, and networking opportunities.
+        </Typography>
+        <TalksTable talks={timeline} />
+      </SectionContainer>
+
+      <SectionContainer withBackground>
+        <Heading level={2} className="italic">
+          &quot;Stesso posto stesso bar&quot;
+        </Heading>
+        <Typography>
+          Like the previous year OSDay will be held in the comfy and welcoming
+          walls of Nana Bianca, in Florence.
+          <br />
+          You can find all the informations about the venue in the{" "}
+          <Link href="/venue" className="underline">
+            dedicated page
+          </Link>
+        </Typography>
+      </SectionContainer>
+
+      <SectionContainer>
         <Heading level={2}>Speakers</Heading>
         <Typography variant="h3">
           Gain practical insights from seasoned professionals at leading
@@ -98,14 +119,6 @@ export default async function HomePage() {
             </div>
           ))}
         </div>
-      </SectionContainer>
-
-      <SectionContainer>
-        <Heading level={2}>A jam-packed one day schedule</Heading>
-        <Typography variant="h3" className="mb-4">
-          Filled to the brim with talks, insights, and networking opportunities.
-        </Typography>
-        <TalksTable talks={timeline} />
       </SectionContainer>
 
       <SectionContainer withBackground>

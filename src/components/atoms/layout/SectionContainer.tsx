@@ -80,7 +80,9 @@ export function SectionContainer({
   );
 
   if (withBackground) {
-    return <div className="bg-slate-100">{contentDiv}</div>;
+    return (
+      <div className="bg-almost-ultramarine/80 text-white">{contentDiv}</div>
+    );
   }
 
   return contentDiv;

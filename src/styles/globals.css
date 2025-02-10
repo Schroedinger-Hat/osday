@@ -1,8 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 @layer base {
   :root {
+    --fiery-red: 6 63% 46%;
+    --dark-navy: 236 43% 12%;
+    --almost-ultramarine: 221 44% 46%;
+    --creamy-sand: 27 60% 82%;
+
     --background: 0 0% 100%;
     --background-secondary: 27 60% 82%; /* #EDCFB7 */
     --foreground: 236 43% 12%; /* #12142D */

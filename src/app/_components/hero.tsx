@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Typography } from "~/components/atoms/typography/Typography";
 
 const stats = [
-  { label: "Speakers", value: "11" },
+  { label: "Speakers", value: "14" },
   { label: "Attendees", value: "349" },
   { label: "Venue", value: "Nana Bianca" },
   { label: "Location", value: "Florence, Italy" },
@@ -17,7 +17,7 @@ export default function Hero() {
       <div className="container mx-auto flex max-w-6xl flex-col py-20">
         {/* Name */}
         <div className="mb-16">
-          <Image src={logo} alt="Open Source Day" width={131} height={266} />
+          <Image src={logo} alt="Open Source Day" width={100} height={200} />
         </div>
 
         <Heading level={1} huge>

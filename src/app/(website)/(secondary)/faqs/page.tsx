@@ -1,7 +1,10 @@
+import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
+import { FaqBlock } from "~/components/organisms/faq-block";
+
 export default function FAQsPage() {
   return (
-    <div className="container py-8">
-      <h1 className="text-4xl font-bold">FAQs</h1>
-    </div>
+    <SectionContainer padding="header">
+      <FaqBlock groupKey="osday25" title="FAQs" description="" />
+    </SectionContainer>
   );
 }
