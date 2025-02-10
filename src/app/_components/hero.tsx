@@ -6,7 +6,7 @@ import { Typography } from "~/components/atoms/typography/Typography";
 
 const stats = [
   { label: "Speakers", value: "14" },
-  { label: "Attendees", value: "349" },
+  { label: "When", value: "21st of March" },
   { label: "Venue", value: "Nana Bianca" },
   { label: "Location", value: "Florence, Italy" },
 ];
@@ -28,11 +28,16 @@ export default function Hero() {
 
         <div className="mt-12 grid gap-8 sm:grid-cols-2 md:grid-cols-4">
           {stats.map((stat) => (
-            <div key={stat.label} className={cn("flex flex-col gap-1")}>
-              <Typography variant="lead" className="text-background">
+            <div key={stat.label} className={cn("flex flex-col")}>
+              <Typography
+                variant="small"
+                className="mb-0 font-bold uppercase text-background md:mb-0"
+              >
                 {stat.label}
               </Typography>
-              <Typography variant="h2">{stat.value}</Typography>
+              <Typography variant="h3" className="font-semibold">
+                {stat.value}
+              </Typography>
             </div>
           ))}
         </div>

@@ -10,6 +10,8 @@ import {
   SheetClose,
 } from "~/components/ui/sheet";
 import { Menu, X } from "lucide-react";
+import { useScrollDirection } from "~/hooks/use-scroll-direction";
+import { usePathname } from "next/navigation";
 
 const mainRoutes = [
   {
@@ -80,16 +82,47 @@ const legalRoutes = [
   },
 ];
 
+function useScrollPosition() {
+  const [scrollPosition, setScrollPosition] = React.useState(0);
+
+  React.useEffect(() => {
+    const handleScroll = () => {
+      setScrollPosition(window.scrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // Get initial position
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  return scrollPosition;
+}
+
 export function Header() {
   const [isOpen, setIsOpen] = React.useState(false);
+  const scrollDirection = useScrollDirection();
+  const scrollPosition = useScrollPosition();
+  const pathname = usePathname();
+
+  const showLogo = pathname === "/" ? scrollPosition > 400 : true;
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b bg-background">
+    <header
+      className={`sticky w-full bg-fiery-red transition-all duration-300 ${
+        scrollDirection === "down" ? "-top-16" : "top-0"
+      } z-50`}
+    >
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-14 items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
-            <span className="font-title text-3xl">OSDAY25</span>
+          {/* Logo with conditional visibility */}
+          <Link
+            href="/"
+            className={`flex items-center space-x-2 transition-opacity duration-300 ${
+              showLogo ? "opacity-100" : "opacity-0"
+            }`}
+          >
+            <span className="font-title text-3xl text-white">OSDAY25</span>
           </Link>
 
           {/* Right side buttons */}
@@ -98,7 +131,7 @@ export function Header() {
               <Button
                 asChild
                 variant="default"
-                className="rounded-r-none font-title text-2xl"
+                className="rounded-r-none font-title text-2xl text-white"
               >
                 <Link href="/tickets">Tickets</Link>
               </Button>

@@ -9,6 +9,7 @@ interface SectionContainerProps {
   padding?: "header" | "default" | "little" | "none";
   spacing?: "small" | "medium" | "large" | "none";
   withBackground?: boolean;
+  backgroundType?: "default" | "hero";
   notAnimated?: boolean;
   animationDelay?: number;
 }
@@ -42,6 +43,7 @@ export function SectionContainer({
   padding = "default",
   spacing = "none",
   withBackground = false,
+  backgroundType = "default",
   notAnimated = false,
   animationDelay = 0,
 }: SectionContainerProps) {
@@ -81,7 +83,15 @@ export function SectionContainer({
 
   if (withBackground) {
     return (
-      <div className="bg-almost-ultramarine/80 text-white">{contentDiv}</div>
+      <div
+        className={cn(
+          backgroundType === "default"
+            ? "bg-almost-ultramarine/80 text-white"
+            : "bg-fiery-red text-white",
+        )}
+      >
+        {contentDiv}
+      </div>
     );
   }
 

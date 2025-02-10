@@ -40,7 +40,7 @@ export default async function HomePage() {
       photo,
       biography,
       slug
-    }
+    } | order(firstName asc, lastName asc)
   `);
 
   const timeline: TimelineItem[] = await sanityClient.fetch(`
@@ -71,8 +71,15 @@ export default async function HomePage() {
       </SectionContainer>
 
       <SectionContainer>
+        <Heading level={2}>Missed us?</Heading>
+        <Typography variant="large" className="mb-4">
+          We are back with a new edition of Open Source Day.
+        </Typography>
+      </SectionContainer>
+
+      <SectionContainer>
         <Heading level={2}>A jam-packed one day schedule</Heading>
-        <Typography variant="h3" className="mb-4">
+        <Typography variant="large" className="mb-4">
           Filled to the brim with talks, insights, and networking opportunities.
         </Typography>
         <TalksTable talks={timeline} />
@@ -99,18 +106,18 @@ export default async function HomePage() {
           Gain practical insights from seasoned professionals at leading
           companies.
         </Typography>
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4">
           {speakers.map((speaker) => (
             <div key={speaker._id} className="flex flex-col items-center">
               <Image
                 src={urlFor(speaker.photo)
                   .auto("format")
-                  .width(200)
-                  .height(200)
+                  .width(140)
+                  .height(140)
                   .url()}
                 alt={getAuthorFullName(speaker)}
-                width={200}
-                height={200}
+                width={140}
+                height={140}
                 className="mb-4 rounded-lg object-cover"
               />
               <span className="text-lg font-medium">
