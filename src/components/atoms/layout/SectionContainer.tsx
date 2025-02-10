@@ -86,7 +86,7 @@ export function SectionContainer({
       <div
         className={cn(
           backgroundType === "default"
-            ? "bg-almost-ultramarine/80 text-white"
+            ? "bg-dark-navy/85 text-white"
             : "bg-fiery-red text-white",
         )}
       >

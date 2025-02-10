@@ -138,7 +138,10 @@ export default async function HomePage() {
         <div className="flex flex-col gap-8">
           {diamondSponsors.length > 0 && (
             <div>
-              <Typography variant="h3" className="mb-2">
+              <Typography
+                variant="large"
+                className="mb-2 font-semibold uppercase"
+              >
                 Diamond Sponsors
               </Typography>
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
@@ -165,7 +168,10 @@ export default async function HomePage() {
 
           {goldSponsors.length > 0 && (
             <div>
-              <Typography variant="h3" className="mb-2">
+              <Typography
+                variant="large"
+                className="mb-2 font-semibold uppercase"
+              >
                 Gold Sponsors
               </Typography>
               <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
@@ -192,7 +198,10 @@ export default async function HomePage() {
 
           {communityPartners.length > 0 && (
             <div>
-              <Typography variant="h3" className="mb-2">
+              <Typography
+                variant="large"
+                className="mb-2 font-semibold uppercase"
+              >
                 Community Partners
               </Typography>
               <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">

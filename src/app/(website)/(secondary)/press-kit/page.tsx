@@ -14,26 +14,16 @@ import logoOsdayBackgroundPng from "~/assets/images/press-kit/logo-background.pn
 export default function PressKitPage() {
   return (
     <main>
-      <SectionContainer size="full" padding="header">
-        <div className="container mx-auto max-w-4xl px-4">
-          <div className="flex flex-col items-center text-center">
-            <div className="max-w-4xl">
-              <h1 className="font-lexend mb-8 text-[100px] font-medium leading-none tracking-[-7px] text-slate-800">
-                Press Kit
-              </h1>
-            </div>
-            <div className="max-w-2xl">
-              <h2 className="text-[22px] font-normal text-slate-800">
-                So you have decided to tell a story about us?
-                <br />
-                Cool, we prepared some assets for you to use
-              </h2>
-            </div>
-          </div>
-        </div>
+      <SectionContainer padding="header" withBackground backgroundType="hero">
+        <Heading level={2}>Press Kit</Heading>
+        <Typography variant="h3">
+          So you have decided to tell a story about us?
+          <br />
+          Cool, we prepared some assets for you to use
+        </Typography>
       </SectionContainer>
 
-      <SectionContainer withBackground>
+      <SectionContainer>
         <Heading level={3}>Logo</Heading>
         <div className="flex flex-col gap-8 lg:flex-row">
           <div className="flex-1">
@@ -107,7 +97,7 @@ export default function PressKitPage() {
         </div>
       </SectionContainer>
 
-      <SectionContainer withBackground>
+      <SectionContainer>
         <div className="flex flex-col gap-16 lg:flex-row">
           <div className="flex-1">
             <Heading level={3}>Colors</Heading>
@@ -222,7 +212,7 @@ export default function PressKitPage() {
         </div>
       </SectionContainer>
 
-      <SectionContainer withBackground>
+      <SectionContainer>
         <div className="flex flex-col gap-16 lg:flex-row">
           <div className="flex-1">
             <Heading level={2}>Contact</Heading>

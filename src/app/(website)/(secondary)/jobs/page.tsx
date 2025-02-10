@@ -1,7 +1,17 @@
+import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
+import { Heading } from "~/components/atoms/typography/Heading";
+import { Typography } from "~/components/atoms/typography/Typography";
+
 export default function JobBoardPage() {
   return (
-    <div className="container py-8">
-      <h1 className="text-4xl font-bold">Job Board</h1>
-    </div>
+    <>
+      <SectionContainer withBackground backgroundType="hero">
+        <Heading level={2}>Job Board</Heading>
+        <Typography variant="h3">
+          Take a look at the job board with all the latest job opportunities
+          from our partners.
+        </Typography>
+      </SectionContainer>
+    </>
   );
 }
