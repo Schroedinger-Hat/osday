@@ -7,7 +7,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["var(--font-acme)", ...fontFamily.sans],
+        sans: ["var(--font-inter)", ...fontFamily.sans],
         title: ["var(--font-cartoon-town)", ...fontFamily.sans],
       },
       borderRadius: {
@@ -16,6 +16,10 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       colors: {
+        "fiery-red": "hsl(var(--fiery-red))",
+        "dark-navy": "hsl(var(--dark-navy))",
+        "almost-ultramarine": "hsl(var(--almost-ultramarine))",
+        "creamy-sand": "hsl(var(--creamy-sand))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {
@@ -56,6 +60,28 @@ export default {
           "4": "hsl(var(--chart-4))",
           "5": "hsl(var(--chart-5))",
         },
+      },
+      keyframes: {
+        "accordion-down": {
+          from: {
+            height: "0",
+          },
+          to: {
+            height: "var(--radix-accordion-content-height)",
+          },
+        },
+        "accordion-up": {
+          from: {
+            height: "var(--radix-accordion-content-height)",
+          },
+          to: {
+            height: "0",
+          },
+        },
+      },
+      animation: {
+        "accordion-down": "accordion-down 0.2s ease-out",
+        "accordion-up": "accordion-up 0.2s ease-out",
       },
     },
   },

@@ -27,7 +27,7 @@ export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
           alt="Schroddy"
           width={600}
           height={600}
-          className="-rotate-12 opacity-25"
+          className="-rotate-12 opacity-20"
           priority
         />
       </motion.div>
