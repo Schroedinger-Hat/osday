@@ -113,7 +113,7 @@ export default function PressKitPage() {
             <Heading level={3}>Colors</Heading>
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 rounded-lg bg-[#C0392B]"></div>
+                <div className="h-16 w-16 rounded-lg bg-[#C4493A]"></div>
                 <div>
                   <Typography variant="medium" className="font-medium">
                     Fiery Red

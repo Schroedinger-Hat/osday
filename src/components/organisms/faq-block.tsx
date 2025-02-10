@@ -44,7 +44,7 @@ export async function FaqBlock({
   return (
     <div>
       <div className="pb-0 text-left md:pb-4 md:text-center">
-        <Heading level={2}>{title}</Heading>
+        {title && <Heading level={2}>{title}</Heading>}
         {description && (
           <Typography variant="medium" className="text-left">
             {description}
@@ -54,7 +54,7 @@ export async function FaqBlock({
       <Accordion type="single" collapsible className="">
         {faqs.map((faq) => (
           <AccordionItem key={faq._id} value={faq._id}>
-            <AccordionTrigger className="text-left md:text-center">
+            <AccordionTrigger className="text-left font-title text-xl md:text-center">
               {faq.question}
             </AccordionTrigger>
             <AccordionContent>
