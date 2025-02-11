@@ -43,6 +43,13 @@ const goldSponsors: Sponsor[] = [
     src: "/sponsors/2025/gadfly.svg",
     width: 300,
     height: 125
+  },
+  {
+    alt: "Nethesis logo",
+    href: "https://www.nethesis.it/",
+    src: "/sponsors/2025/nethesis.svg",
+    width: 300,
+    height: 125
   }
 ]
 
