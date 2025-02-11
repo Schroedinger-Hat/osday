@@ -15,7 +15,7 @@ import { usePathname } from "next/navigation";
 
 const mainRoutes = [
   {
-    href: "/tickets",
+    href: "https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257",
     label: "Tickets",
   },
   {
@@ -46,7 +46,7 @@ const secondaryRoutes = [
     label: "Press Kit",
   },
   {
-    href: "/code-of-conduct",
+    href: "/legal/code-of-conduct",
     label: "Code of conduct",
   },
   {
@@ -133,7 +133,9 @@ export function Header() {
                 variant="default"
                 className="rounded-r-none font-title text-2xl text-white"
               >
-                <Link href="/tickets">Tickets</Link>
+                <Link href="https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257">
+                  Tickets
+                </Link>
               </Button>
               <Sheet open={isOpen} onOpenChange={setIsOpen}>
                 <SheetTrigger asChild>

@@ -54,10 +54,13 @@ export function TalksTable({ talks }: TalksTableProps) {
               variant="large"
               className="flex h-full items-center justify-center font-title text-xl tracking-wide text-white"
             >
-              {new Date(item.startDateTime).toLocaleTimeString([], {
-                hour: "2-digit",
-                minute: "2-digit",
-              })}
+              {new Date(item.startDateTime)
+                .toLocaleTimeString("en-US", {
+                  hour: "2-digit",
+                  minute: "2-digit",
+                  hour12: false,
+                })
+                .replace(/^24:/, "00:")}
             </Typography>
           </div>
 

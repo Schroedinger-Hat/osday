@@ -3,29 +3,19 @@ import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Paragraph } from "~/components/atoms/typography/Paragraph";
 import { Typography } from "~/components/atoms/typography/Typography";
-import schroddySticker from "~/assets/images/schroddy-sticker.png";
-import type { Partner, Author } from "~/sanity/sanity.types";
+import type { Author } from "~/sanity/sanity.types";
 import { sanityClient } from "~/sanity/lib/client";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { urlFor } from "~/sanity/lib/image";
 import type { TimelineItem } from "~/components/molecules/talks-table";
 import { TalksTable } from "~/components/molecules/talks-table";
+import { SponsorsList } from "~/components/molecules/sponsors-list";
 import Hero from "../_components/hero";
 import Link from "next/link";
 import auditorium from "~/assets/images/venue/auditorium.jpg";
+import { SchroddySticker } from "~/components/atoms/schroddy-sticker";
+
 export default async function HomePage() {
-  const diamondSponsors: Partner[] = await sanityClient.fetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
-  );
-
-  const goldSponsors: Partner[] = await sanityClient.fetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "gold"] | order(orderRank asc)`,
-  );
-
-  const communityPartners: Partner[] = await sanityClient.fetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == false && nonBusinessType == "community"] | order(orderRank asc)`,
-  );
-
   const speakers: Author[] = await sanityClient.fetch(`
     *[_type == "event" && slug.current == "open-source-day-2025"][0].authors[]->{
       _id,
@@ -82,6 +72,7 @@ export default async function HomePage() {
         <Typography variant="large" className="mb-4">
           Filled to the brim with talks, insights, and networking opportunities.
         </Typography>
+
         <TalksTable talks={timeline} />
       </SectionContainer>
 
@@ -114,23 +105,23 @@ export default async function HomePage() {
 
       <SectionContainer>
         <Heading level={2}>Speakers</Heading>
-        <Typography variant="h3">
+        <Typography variant="large">
           Gain practical insights from seasoned professionals at leading
           companies.
         </Typography>
-        <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {speakers.map((speaker) => (
             <div key={speaker._id} className="flex flex-col items-center">
               <Image
                 src={urlFor(speaker.photo)
                   .auto("format")
-                  .width(140)
-                  .height(140)
+                  .width(192)
+                  .height(192)
                   .url()}
                 alt={getAuthorFullName(speaker)}
-                width={140}
-                height={140}
-                className="mb-4 rounded-lg object-cover shadow-md"
+                width={192}
+                height={192}
+                className="mb-1 rounded-md object-cover shadow-md"
               />
               <span className="text-lg font-medium">
                 {getAuthorFullName(speaker)}
@@ -147,101 +138,11 @@ export default async function HomePage() {
           sponsors.
         </Paragraph>
 
-        <div className="flex flex-col gap-8">
-          {diamondSponsors.length > 0 && (
-            <div>
-              <Typography
-                variant="large"
-                className="mb-2 font-semibold uppercase"
-              >
-                Diamond Sponsors
-              </Typography>
-              <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
-                {diamondSponsors.map((sponsor) => (
-                  <Link
-                    href={sponsor.website ?? "#"}
-                    key={sponsor._id}
-                    className="flex items-center justify-center"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={urlFor(sponsor.image).width(308).height(128).url()}
-                      alt={sponsor.name ?? ""}
-                      width={308}
-                      height={128}
-                      className="h-auto w-full object-contain shadow-md"
-                    />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {goldSponsors.length > 0 && (
-            <div>
-              <Typography
-                variant="large"
-                className="mb-2 font-semibold uppercase"
-              >
-                Gold Sponsors
-              </Typography>
-              <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
-                {goldSponsors.map((sponsor) => (
-                  <Link
-                    href={sponsor.website ?? "#"}
-                    key={sponsor._id}
-                    className="flex items-center justify-center"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={urlFor(sponsor.image).width(308).height(128).url()}
-                      alt={sponsor.name ?? ""}
-                      width={308}
-                      height={128}
-                      className="h-auto w-full object-contain shadow-md"
-                    />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {communityPartners.length > 0 && (
-            <div>
-              <Typography
-                variant="large"
-                className="mb-2 font-semibold uppercase"
-              >
-                Community Partners
-              </Typography>
-              <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                {communityPartners.map((partner) => (
-                  <Link
-                    href={partner.website ?? "#"}
-                    key={partner._id}
-                    className="flex items-center justify-center"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Image
-                      src={urlFor(partner.image).width(308).height(128).url()}
-                      alt={partner.name ?? ""}
-                      width={308}
-                      height={128}
-                      className="h-auto w-full object-contain shadow-md"
-                    />
-                  </Link>
-                ))}
-              </div>
-            </div>
-          )}
-        </div>
+        <SponsorsList />
       </SectionContainer>
 
       <SectionContainer className="flex justify-center">
-        <Image src={schroddySticker} alt="Schroddy" width={240} height={240} />
+        <SchroddySticker />
       </SectionContainer>
     </main>
   );
