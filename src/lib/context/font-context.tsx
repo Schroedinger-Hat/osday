@@ -17,19 +17,19 @@ export function FontProvider({ children }: { children: React.ReactNode }) {
 
     if (isComicSans) {
       // Store original fonts in data attributes for restoration
-      root.dataset.originalAcme =
-        getComputedStyle(root).getPropertyValue("--font-acme");
+      root.dataset.originalInter =
+        getComputedStyle(root).getPropertyValue("--font-inter");
       root.dataset.originalCartoonTown = getComputedStyle(
         root,
       ).getPropertyValue("--font-cartoon-town");
 
       // Replace both fonts with Comic Sans
-      root.style.setProperty("--font-acme", "'Comic Sans MS', cursive");
+      root.style.setProperty("--font-inter", "'Comic Sans MS', cursive");
       root.style.setProperty("--font-cartoon-town", "'Comic Sans MS', cursive");
     } else {
       // Restore original fonts from data attributes
-      if (root.dataset.originalAcme) {
-        root.style.setProperty("--font-acme", root.dataset.originalAcme);
+      if (root.dataset.originalInter) {
+        root.style.setProperty("--font-inter", root.dataset.originalInter);
       }
       if (root.dataset.originalCartoonTown) {
         root.style.setProperty(

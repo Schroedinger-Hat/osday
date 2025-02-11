@@ -104,7 +104,7 @@ export function Footer() {
             <div className="hidden md:block">
               <Typography variant="muted" className="m-0">
                 {isComicSans ? (
-                  <span>Much better with Comic Sans , right?</span>
+                  <span>Much better with Comic Sans, right?</span>
                 ) : (
                   <span>
                     Annoying font? Could be worse. Could be{" "}

@@ -8,7 +8,8 @@ import { sanityClient } from "~/sanity/lib/client";
 import { urlFor } from "~/sanity/lib/image";
 import type { PortableTextBlock } from "@portabletext/types";
 import { Typography } from "~/components/atoms/typography/Typography";
-
+import Link from "next/link";
+import { ArrowLeft01Icon } from "hugeicons-react";
 interface Speaker {
   _id: string;
   firstName?: string;
@@ -87,6 +88,15 @@ export default async function TalkDetailPage({
                 {talk.type.charAt(0).toUpperCase() + talk.type.slice(1)}
               </span>
             )}
+            <Link
+              href="/schedule"
+              className="inline-flex items-center gap-2 text-white/90 transition-colors hover:text-white"
+            >
+              <ArrowLeft01Icon className="h-4 w-4" />
+              <Typography variant="muted" className="font-bold uppercase">
+                Back to Schedule
+              </Typography>
+            </Link>
           </div>
         </div>
       </SectionContainer>
