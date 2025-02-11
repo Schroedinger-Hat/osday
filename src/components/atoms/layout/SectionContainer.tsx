@@ -14,6 +14,11 @@ interface SectionContainerProps {
   animationDelay?: number;
 }
 
+interface EmptySectionContainerProps {
+  className?: string;
+  padding?: "header" | "default" | "little" | "none";
+}
+
 const sizes = {
   tiny: "max-w-2xl",
   narrow: "max-w-3xl",
@@ -36,6 +41,12 @@ const spacings = {
   none: "",
 };
 
+export function EmptySectionContainer({
+  className,
+  padding = "default",
+}: EmptySectionContainerProps) {
+  return <div className={cn("mx-auto", paddings[padding], className)}></div>;
+}
 export function SectionContainer({
   children,
   className,

@@ -1,15 +1,20 @@
 import { Car, MapPin, Plane, Train } from "lucide-react";
 import Image from "next/image";
-import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
+import {
+  EmptySectionContainer,
+  SectionContainer,
+} from "~/components/atoms/layout/SectionContainer";
 import Link from "next/link";
+import { Heading } from "~/components/atoms/typography/Heading";
+import { Typography } from "~/components/atoms/typography/Typography";
+import { GoogleMapsEmbed } from "@next/third-parties/google";
 
 import nanaBig1 from "~/assets/images/venue/nana-big-1.jpg";
 import nanaBig2 from "~/assets/images/venue/nana-big-2.jpg";
 import nanaSmall1 from "~/assets/images/venue/nana-small-1.jpg";
 import nanaSmall2 from "~/assets/images/venue/nana-small-2.jpg";
 import nanaSmall3 from "~/assets/images/venue/nana-small-3.jpg";
-import { Heading } from "~/components/atoms/typography/Heading";
-import { Typography } from "~/components/atoms/typography/Typography";
+import { env } from "~/env";
 
 export default function VenuePage() {
   return (
@@ -46,7 +51,7 @@ export default function VenuePage() {
 
         <div className="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
           <div className="space-y-4">
-            <div className="relative aspect-video overflow-hidden rounded-lg">
+            <div className="relative aspect-video overflow-hidden rounded-md shadow-md">
               <Image
                 src={nanaBig1}
                 alt="Nana Bianca exterior"
@@ -59,7 +64,7 @@ export default function VenuePage() {
             </p>
           </div>
           <div className="space-y-4">
-            <div className="relative aspect-video overflow-hidden rounded-lg">
+            <div className="relative aspect-video overflow-hidden rounded-md shadow-md">
               <Image
                 src={nanaBig2}
                 alt="Nana Bianca main hall"
@@ -90,7 +95,7 @@ export default function VenuePage() {
           ].map((image, index) => (
             <div
               key={index}
-              className="relative aspect-square overflow-hidden rounded-lg"
+              className="relative aspect-square overflow-hidden rounded-md shadow-md"
             >
               <Image
                 src={image.src || "/placeholder.svg"}
@@ -169,6 +174,22 @@ export default function VenuePage() {
           </Link>
         </Typography>
       </SectionContainer>
+
+      <SectionContainer padding="none">
+        <div className="overflow-hidden rounded-md shadow-md">
+          {env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY && (
+            <GoogleMapsEmbed
+              apiKey={env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}
+              height={400}
+              width="100%"
+              mode="place"
+              q="Nana+Bianca,Firenze"
+            />
+          )}
+        </div>
+      </SectionContainer>
+
+      <EmptySectionContainer />
     </>
   );
 }

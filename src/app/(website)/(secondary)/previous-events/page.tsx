@@ -1,13 +1,15 @@
-import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
+import {
+  EmptySectionContainer,
+  SectionContainer,
+} from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
-import { Card, CardContent, CardHeader, CardTitle } from "~/components/ui/card";
 import Image from "next/image";
+import Link from "next/link";
 
 import osday24 from "~/assets/images/previous-editions/osday24.png";
 import osday23 from "~/assets/images/previous-editions/osday23.jpg";
 import osday21 from "~/assets/images/previous-editions/osday21.jpg";
-import Link from "next/link";
 
 export default function PreviousEventsPage() {
   return (
@@ -20,7 +22,7 @@ export default function PreviousEventsPage() {
       </SectionContainer>
 
       {/* OSDay 24, OSDay 23, OSDay 21 */}
-      <SectionContainer>
+      <SectionContainer padding="header">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <Link href="https://2024.osday.dev">
             <div className="aspect-video overflow-hidden rounded-lg shadow-md">
@@ -42,6 +44,7 @@ export default function PreviousEventsPage() {
           </Link>
         </div>
       </SectionContainer>
+      <EmptySectionContainer />
     </>
   );
 }

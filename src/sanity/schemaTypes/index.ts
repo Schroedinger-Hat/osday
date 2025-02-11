@@ -10,6 +10,7 @@ import { jobPostType } from "./jobPostType";
 import { eventSeriesType } from "./eventSeriesType";
 import { blogPostType } from "./blogPostType";
 import { timelineType } from "./timelineType";
+import { partnerJobPostType } from "./partnerJobPostType";
 
 export const schema = {
   types: [
@@ -25,5 +26,6 @@ export const schema = {
     eventSeriesType,
     blogPostType,
     timelineType,
+    partnerJobPostType,
   ],
 };

@@ -28,6 +28,16 @@ export const timelineType = defineType({
       },
     },
     {
+      name: "backgroundImage",
+      title: "Background Image",
+      type: "image",
+      description:
+        "Background image for the timeline card. Recommended size: 800x600px",
+      options: {
+        hotspot: true, // Enables UI for selecting what areas of an image should be cropped
+      },
+    },
+    {
       name: "startDateTime",
       title: "Start Date & Time",
       type: "datetime",
