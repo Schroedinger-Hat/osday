@@ -1,6 +1,15 @@
 import { createEnv } from "@t3-oss/env-nextjs";
 import { z } from "zod";
 
+/** @param {string | undefined} value */
+const isRequiredInProduction = (value) => {
+  // Required in production, optional in development/test
+  if (process.env.NODE_ENV === "production") {
+    return value !== undefined && value.length > 0;
+  }
+  return true;
+};
+
 export const env = createEnv({
   /**
    * Specify your server-side environment variables schema here. This way you can ensure the app
@@ -22,6 +31,14 @@ export const env = createEnv({
     NEXT_PUBLIC_DISABLE_ANIMATIONS: z.string().default("false"),
     NEXT_PUBLIC_SANITY_PROJECT_ID: z.string(),
     NEXT_PUBLIC_SANITY_DATASET: z.string(),
+    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY: z
+      .string()
+      .min(1)
+      .optional()
+      .refine(
+        isRequiredInProduction,
+        "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is required in production",
+      ),
   },
 
   /**
@@ -34,6 +51,8 @@ export const env = createEnv({
     NEXT_PUBLIC_DISABLE_ANIMATIONS: process.env.NEXT_PUBLIC_DISABLE_ANIMATIONS,
     NEXT_PUBLIC_SANITY_PROJECT_ID: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
     NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
+    NEXT_PUBLIC_GOOGLE_MAPS_API_KEY:
+      process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

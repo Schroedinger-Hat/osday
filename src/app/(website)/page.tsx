@@ -12,7 +12,7 @@ import type { TimelineItem } from "~/components/molecules/talks-table";
 import { TalksTable } from "~/components/molecules/talks-table";
 import Hero from "../_components/hero";
 import Link from "next/link";
-
+import auditorium from "~/assets/images/venue/auditorium.jpg";
 export default async function HomePage() {
   const diamondSponsors: Partner[] = await sanityClient.fetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
@@ -73,7 +73,7 @@ export default async function HomePage() {
       <SectionContainer>
         <Heading level={2}>Missed us?</Heading>
         <Typography variant="large" className="mb-4">
-          We are back with a new edition of Open Source Day.
+          We are back with a new edition of Open Source Day. TODO: Add text
         </Typography>
       </SectionContainer>
 
@@ -86,18 +86,30 @@ export default async function HomePage() {
       </SectionContainer>
 
       <SectionContainer withBackground>
-        <Heading level={2} className="italic">
-          &quot;Stesso posto stesso bar&quot;
-        </Heading>
-        <Typography>
-          Like the previous year OSDay will be held in the comfy and welcoming
-          walls of Nana Bianca, in Florence.
-          <br />
-          You can find all the informations about the venue in the{" "}
-          <Link href="/venue" className="underline">
-            dedicated page
-          </Link>
-        </Typography>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+          <div className="md:col-span-3">
+            <Heading level={2} className="italic">
+              &quot;Stesso posto stesso bar&quot;
+            </Heading>
+            <Typography>
+              Like the previous year OSDay will be held in the comfy and
+              welcoming walls of Nana Bianca, in Florence.
+              <br />
+              You can find all the informations about the venue in the{" "}
+              <Link href="/venue" className="underline">
+                dedicated page
+              </Link>
+            </Typography>
+          </div>
+          <div className="relative aspect-video md:col-span-2">
+            <Image
+              src={auditorium}
+              alt="Nana Bianca venue"
+              fill
+              className="rounded-lg object-cover shadow-md"
+            />
+          </div>
+        </div>
       </SectionContainer>
 
       <SectionContainer>
@@ -118,7 +130,7 @@ export default async function HomePage() {
                 alt={getAuthorFullName(speaker)}
                 width={140}
                 height={140}
-                className="mb-4 rounded-lg object-cover"
+                className="mb-4 rounded-lg object-cover shadow-md"
               />
               <span className="text-lg font-medium">
                 {getAuthorFullName(speaker)}
@@ -158,7 +170,7 @@ export default async function HomePage() {
                       alt={sponsor.name ?? ""}
                       width={308}
                       height={128}
-                      className="h-auto w-full object-contain"
+                      className="h-auto w-full object-contain shadow-md"
                     />
                   </Link>
                 ))}
@@ -188,7 +200,7 @@ export default async function HomePage() {
                       alt={sponsor.name ?? ""}
                       width={308}
                       height={128}
-                      className="h-auto w-full object-contain"
+                      className="h-auto w-full object-contain shadow-md"
                     />
                   </Link>
                 ))}
@@ -218,7 +230,7 @@ export default async function HomePage() {
                       alt={partner.name ?? ""}
                       width={308}
                       height={128}
-                      className="h-auto w-full object-contain"
+                      className="h-auto w-full object-contain shadow-md"
                     />
                   </Link>
                 ))}

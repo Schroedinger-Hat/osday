@@ -104,5 +104,6 @@ export const structure: StructureResolver = async (S, context) => {
 
       // Conference specifics
       S.documentTypeListItem("timeline").icon(schemaIcons.timeline),
+      S.documentTypeListItem("partnerJobPost").icon(schemaIcons.jobPost),
     ]);
 };

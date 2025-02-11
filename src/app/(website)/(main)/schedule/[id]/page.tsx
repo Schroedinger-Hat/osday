@@ -1,0 +1,151 @@
+import { format } from "date-fns";
+import Image from "next/image";
+import { notFound } from "next/navigation";
+import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
+import { Heading } from "~/components/atoms/typography/Heading";
+import { PortableText } from "@portabletext/react";
+import { sanityClient } from "~/sanity/lib/client";
+import { urlFor } from "~/sanity/lib/image";
+import type { PortableTextBlock } from "@portabletext/types";
+import { Typography } from "~/components/atoms/typography/Typography";
+
+interface Speaker {
+  _id: string;
+  firstName?: string;
+  lastName?: string;
+  pronouns?: string;
+  title?: string;
+  photo?: {
+    asset?: {
+      _ref: string;
+    };
+  };
+  biography?: PortableTextBlock[];
+}
+
+interface Talk {
+  _id: string;
+  _type: string;
+  type: string;
+  startDateTime: string;
+  endDateTime?: string;
+  title: string;
+  abstract?: PortableTextBlock[];
+  backgroundImage?: {
+    asset?: {
+      _ref: string;
+    };
+  };
+  speaker?: Speaker;
+}
+
+export default async function TalkDetailPage({
+  params,
+}: {
+  params: { id: string };
+}) {
+  const talk = await sanityClient.fetch<Talk | null>(
+    `*[_type == "timeline" && _id == $id][0]{
+      _id,
+      _type,
+      type,
+      startDateTime,
+      endDateTime,
+      title,
+      abstract,
+      backgroundImage,
+      "speaker": speaker->{
+        _id,
+        firstName,
+        lastName,
+        pronouns,
+        title,
+        photo,
+        biography
+      }
+    }`,
+    { id: params.id },
+  );
+
+  if (!talk) {
+    notFound();
+  }
+
+  return (
+    <>
+      <SectionContainer withBackground backgroundType="hero">
+        <div className="relative">
+          <div className="space-y-4">
+            <time className="block font-title text-2xl tracking-wider text-white/90">
+              {format(new Date(talk.startDateTime), "HH:mm")}
+              {talk.endDateTime &&
+                ` - ${format(new Date(talk.endDateTime), "HH:mm")}`}
+            </time>
+            <Heading level={1}>{talk.title}</Heading>
+            {talk.type !== "talk" && (
+              <span className="inline-block rounded bg-white/20 px-2.5 py-1 text-sm font-medium text-white backdrop-blur-sm">
+                {talk.type.charAt(0).toUpperCase() + talk.type.slice(1)}
+              </span>
+            )}
+          </div>
+        </div>
+      </SectionContainer>
+
+      <SectionContainer>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+          <div className="col-span-3 space-y-8">
+            <Heading level={3}>Abstract</Heading>
+            {talk.abstract && (
+              <div className="prose prose-invert max-w-none">
+                <PortableText value={talk.abstract} />
+              </div>
+            )}
+          </div>
+
+          {talk.speaker && (
+            <aside className="space-y-6 lg:col-span-2">
+              <div className="overflow-hidden rounded-md bg-dark-navy text-white shadow-md">
+                <div className="aspect-square">
+                  {talk.speaker.photo?.asset ? (
+                    <Image
+                      src={urlFor(talk.speaker.photo)
+                        .width(400)
+                        .height(400)
+                        .url()}
+                      alt={`${talk.speaker.firstName} ${talk.speaker.lastName}`}
+                      width={400}
+                      height={400}
+                      className="h-full w-full object-cover"
+                    />
+                  ) : (
+                    <div className="flex h-full items-center justify-center bg-gray-700">
+                      <span className="text-4xl">
+                        {talk.speaker.firstName?.[0]}
+                        {talk.speaker.lastName?.[0]}
+                      </span>
+                    </div>
+                  )}
+                </div>
+                <div className="space-y-2 p-4">
+                  <Heading level={3} className="mb-0 md:mb-0">
+                    {talk.speaker.firstName} {talk.speaker.lastName}
+                  </Heading>
+                  {talk.speaker.title && (
+                    <Typography variant="muted">
+                      {talk.speaker.title}
+                    </Typography>
+                  )}
+                  {talk.speaker.biography && (
+                    <div className="pt-4">
+                      <PortableText value={talk.speaker.biography} />
+                    </div>
+                  )}
+                </div>
+              </div>
+            </aside>
+          )}
+        </div>
+      </SectionContainer>
+    </>
+  );
+}
