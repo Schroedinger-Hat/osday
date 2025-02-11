@@ -7,6 +7,8 @@ import "./src/env.js";
 /** @type {import("next").NextConfig} */
 const config = {
   images: {
+    dangerouslyAllowSVG: true,
+    formats: ["image/avif", "image/webp"],
     remotePatterns: [
       {
         hostname: "cdn.sanity.io",
