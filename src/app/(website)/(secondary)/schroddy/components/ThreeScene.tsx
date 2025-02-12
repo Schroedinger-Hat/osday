@@ -1,12 +1,10 @@
 "use client";
 
-import { FC, Suspense, useEffect, useRef } from "react";
+import { type FC, Suspense, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
 import { useLoader } from "@react-three/fiber";
-import { MeshPhongMaterial } from "three";
-import { Center, useGLTF } from "@react-three/drei";
-import * as THREE from "three";
+import { Center } from "@react-three/drei";
 
 export const ThreeScene: FC = () => {
   const stl = useLoader(STLLoader, ["./assets/trophy2024.stl"]);

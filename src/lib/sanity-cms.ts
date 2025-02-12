@@ -1,4 +1,4 @@
-import { Author } from "~/sanity/sanity.types";
+import { type Author } from "~/sanity/sanity.types";
 
 /**
  * Gets the full name of an author

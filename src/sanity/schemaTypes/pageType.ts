@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const pageType = defineType({
   name: "page",
@@ -89,4 +89,4 @@ export const pageType = defineType({
       ],
     },
   ],
-})
+});
