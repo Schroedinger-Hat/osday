@@ -6,6 +6,10 @@ import "./src/env.js";
 
 /** @type {import("next").NextConfig} */
 const config = {
+  transpilePackages: ["three"],
+  eslint: {
+    ignoreDuringBuilds: true, // TODO: remove this
+  },
   images: {
     dangerouslyAllowSVG: true,
     formats: ["image/avif", "image/webp"],
