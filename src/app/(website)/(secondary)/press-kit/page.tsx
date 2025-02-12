@@ -3,6 +3,10 @@ import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import Image from "next/image";
 import { Linkedin01Icon, YoutubeIcon } from "hugeicons-react";
+import type { FC, SVGProps } from "react";
+
+// Images
+type LogoType = FC<SVGProps<SVGElement>> & { src: string };
 
 import logoOsday from "~/assets/images/press-kit/logo-dark.svg";
 import logoOsdayPng from "~/assets/images/press-kit/logo-dark.png";
@@ -34,7 +38,7 @@ export default function PressKitPage() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">In Black</p>
                 <br />
-                <a href={logoOsday.src} download>
+                <a href={(logoOsday as LogoType).src} download>
                   <Typography as="span" variant="small">
                     Download SVG
                   </Typography>
@@ -57,7 +61,7 @@ export default function PressKitPage() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">In Red</p>
                 <br />
-                <a href={logoOsdayRed.src} download>
+                <a href={(logoOsdayRed as LogoType).src} download>
                   <Typography as="span" variant="small">
                     Download SVG
                   </Typography>
@@ -80,7 +84,7 @@ export default function PressKitPage() {
               <div className="mt-4 text-center">
                 <p className="text-sm text-gray-600">With Background</p>
                 <br />
-                <a href={logoOsdayBackground.src} download>
+                <a href={(logoOsdayBackground as LogoType).src} download>
                   <Typography as="span" variant="small">
                     Download SVG
                   </Typography>

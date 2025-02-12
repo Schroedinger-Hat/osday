@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const eventType = defineType({
   name: "event",
@@ -23,16 +23,22 @@ export const eventType = defineType({
       title: "Slug",
       type: "slug",
       options: {
-        source: async (doc: { series?: { _ref: string }; title?: string }, { getClient }) => {
-          const client = getClient({ apiVersion: "2023-05-03" })
+        source: async (
+          doc: { series?: { _ref: string }; title?: string },
+          { getClient },
+        ) => {
+          const client = getClient({ apiVersion: "2023-05-03" });
 
-          if (!doc.series || !doc.title) return ""
+          if (!doc.series || !doc.title) return "";
 
-          const series = await client.fetch(`*[_type == "eventSeries" && _id == $seriesId][0].slug.current`, {
-            seriesId: doc.series._ref,
-          })
+          const series = await client.fetch(
+            `*[_type == "eventSeries" && _id == $seriesId][0].slug.current`,
+            {
+              seriesId: doc.series._ref,
+            },
+          );
 
-          return series ? `${series}/${doc.title}` : doc.title
+          return series ? `${series}/${doc.title}` : doc.title;
         },
         maxLength: 96,
       },
@@ -75,7 +81,8 @@ export const eventType = defineType({
     {
       name: "cardImage",
       title: "Card Image",
-      description: "The image used for the event card, social sharing always uses cover if available",
+      description:
+        "The image used for the event card, social sharing always uses cover if available",
       type: "string",
       options: {
         list: [
@@ -151,14 +158,16 @@ export const eventType = defineType({
     {
       name: "coolBecause",
       title: "Cool Because",
-      description: "Explain why visitors should join this event (marketing pitch)",
+      description:
+        "Explain why visitors should join this event (marketing pitch)",
       type: "array",
       of: [
         {
           type: "string",
         },
       ],
-      validation: (Rule) => Rule.max(3).warning("Consider keeping it to 3 key points"),
+      validation: (Rule) =>
+        Rule.max(3).warning("Consider keeping it to 3 key points"),
     },
     {
       name: "authors",
@@ -181,17 +190,19 @@ export const eventType = defineType({
       series: "series.title",
     },
     prepare(selection) {
-      const { title, authors, media, series } = selection
+      const { title, authors, media, series } = selection;
 
-      const authorText = authors?.length ? `${authors.length} authors` : "No authors"
+      const authorText = authors?.length
+        ? `${authors.length} authors`
+        : "No authors";
 
-      const subtitle = series ? `[${series}] ${authorText}` : authorText
+      const subtitle = series ? `[${series}] ${authorText}` : authorText;
 
       return {
         title,
         subtitle,
         media,
-      }
+      };
     },
   },
   initialValue: {
@@ -204,4 +215,4 @@ export const eventType = defineType({
       by: [{ field: "eventPeriod.startDate", direction: "desc" }],
     },
   ],
-})
+});

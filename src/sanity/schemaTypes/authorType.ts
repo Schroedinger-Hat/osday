@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const authorType = defineType({
   name: "author",
@@ -52,7 +52,9 @@ export const authorType = defineType({
       type: "slug",
       options: {
         source: (document) => {
-          return [document.firstName, document.lastName].filter(Boolean).join("-")
+          return [document.firstName, document.lastName]
+            .filter(Boolean)
+            .join("-");
         },
         maxLength: 96,
       },
@@ -80,4 +82,4 @@ export const authorType = defineType({
       by: [{ field: "firstName", direction: "asc" }],
     },
   ],
-})
+});

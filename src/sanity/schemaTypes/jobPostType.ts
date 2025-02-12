@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const jobPostType = defineType({
   name: "jobPost",
@@ -61,7 +61,7 @@ export const jobPostType = defineType({
       return {
         title: `${title}${!isActive ? " (Inactive)" : ""}`,
         subtitle: `${isActive ? "Open" : "Closed"} - ${effort} effort`,
-      }
+      };
     },
   },
   orderings: [
@@ -76,4 +76,4 @@ export const jobPostType = defineType({
       by: [{ field: "title", direction: "asc" }],
     },
   ],
-})
+});

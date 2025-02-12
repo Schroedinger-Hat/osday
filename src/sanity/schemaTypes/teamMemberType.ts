@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const teamMemberType = defineType({
   name: "teamMember",
@@ -56,12 +56,12 @@ export const teamMemberType = defineType({
       media: "image",
     },
     prepare(selection) {
-      const { title, surname, subtitle, media } = selection
+      const { title, surname, subtitle, media } = selection;
       return {
         title: `${title} ${surname}`,
         subtitle,
         media,
-      }
+      };
     },
   },
-})
+});

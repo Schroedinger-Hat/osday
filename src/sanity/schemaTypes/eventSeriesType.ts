@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const eventSeriesType = defineType({
   name: "eventSeries",
@@ -32,4 +32,4 @@ export const eventSeriesType = defineType({
       title: "title",
     },
   },
-})
+});

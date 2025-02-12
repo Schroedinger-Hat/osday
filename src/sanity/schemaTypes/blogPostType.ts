@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const blogPostType = defineType({
   name: "blogPost",
@@ -120,15 +120,17 @@ export const blogPostType = defineType({
       media: "headerImage",
     },
     prepare: ({ title, author0, author1, media }) => {
-      const authors = [author0, author1].filter(Boolean)
+      const authors = [author0, author1].filter(Boolean);
       const subtitle =
-        authors.length > 0 ? `by ${authors.join(" & ")}${authors.length > 2 ? " & others" : ""}` : ""
+        authors.length > 0
+          ? `by ${authors.join(" & ")}${authors.length > 2 ? " & others" : ""}`
+          : "";
 
       return {
         title,
         subtitle,
         media,
-      }
+      };
     },
   },
   orderings: [
@@ -138,4 +140,4 @@ export const blogPostType = defineType({
       by: [{ field: "publishedAt", direction: "desc" }],
     },
   ],
-})
+});
