@@ -1,28 +1,42 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { FC, Suspense, useEffect, useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 import { STLLoader } from "three/examples/jsm/loaders/STLLoader";
 import { useLoader } from "@react-three/fiber";
 import { MeshPhongMaterial } from "three";
-import { Center } from "@react-three/drei";
+import { Center, useGLTF } from "@react-three/drei";
+import * as THREE from "three";
 
-export default function ThreeScene() {
-  const meshRef = useRef<THREE.Mesh>(null);
-  const stlGeometry = useLoader(STLLoader, "/schroddy/trophy2024.stl");
+export const ThreeScene: FC = () => {
+  const stl = useLoader(STLLoader, ["./assets/trophy2024.stl"]);
+  const group = useRef<any>(null!);
+  const materialProps = {
+    name: undefined,
+    color: "#e60309",
+    opacity: 1,
+    visible: true,
+    roughness: 0.7,
+    metalness: 0.05,
+    clearcoat: 0.05,
+    clearcoatRoughness: 0.4,
+    envMapIntensity: 0.2,
+  };
 
-  // Rotate the model on each frame
-  useFrame((state, delta) => {
-    if (meshRef.current) {
-      meshRef.current.rotation.y += delta * 0.5; // Adjust rotation speed here
-    }
+  useFrame(() => {
+    group.current.rotation.z -= 0.005;
   });
 
   return (
-    <Center>
-      <mesh ref={meshRef} geometry={stlGeometry}>
-        <meshPhongMaterial color="#eb4634" specular="#ccccff" shininess={100} />
-      </mesh>
-    </Center>
+    <Suspense fallback={"loader.."}>
+      <Center>
+        <group rotation={[-1, 0, 0]} ref={group}>
+          <mesh scale={5} castShadow receiveShadow>
+            <primitive attach="geometry" object={stl[0]}></primitive>
+            <meshPhysicalMaterial {...materialProps} />
+          </mesh>
+        </group>
+      </Center>
+    </Suspense>
   );
-}
+};
