@@ -7,12 +7,14 @@ interface TypewriterTextProps {
   text: string;
   className?: string;
   delay?: number;
+  speed?: number;
 }
 
 export function TypewriterText({
   text,
   className,
   delay = 0,
+  speed = 20,
 }: TypewriterTextProps) {
   const [displayText, setDisplayText] = useState("");
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -23,10 +25,10 @@ export function TypewriterText({
     const timeout = setTimeout(() => {
       setDisplayText((prev) => prev + text[currentIndex]);
       setCurrentIndex((prev) => prev + 1);
-    }, 20); // Faster typing speed
+    }, speed);
 
     return () => clearTimeout(timeout);
-  }, [currentIndex, text]);
+  }, [currentIndex, text, speed]);
 
   useEffect(() => {
     // Initial delay before starting the animation

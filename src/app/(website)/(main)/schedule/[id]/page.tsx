@@ -39,12 +39,10 @@ interface Talk {
   };
   speaker?: Speaker;
 }
-
-export default async function TalkDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
+async function getTalk(id: string) {
   const talk = await sanityClient.fetch<Talk | null>(
     `*[_type == "timeline" && _id == $id][0]{
       _id,
@@ -65,8 +63,14 @@ export default async function TalkDetailPage({
         biography
       }
     }`,
-    { id: params.id },
+    { id: id },
   );
+  return talk;
+}
+
+export default async function TalkDetailPage({ params }: PageProps) {
+  const { id } = await params;
+  const talk = await getTalk(id);
 
   if (!talk) {
     notFound();
@@ -158,4 +162,12 @@ export default async function TalkDetailPage({
       </SectionContainer>
     </>
   );
+}
+
+export async function generateStaticParams() {
+  const talks = await sanityClient.fetch<Talk[]>(`*[_type == "timeline"]`);
+
+  return talks.map((talk) => ({
+    id: talk._id,
+  }));
 }
