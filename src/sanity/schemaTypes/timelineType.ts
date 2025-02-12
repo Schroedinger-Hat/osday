@@ -99,21 +99,15 @@ export const timelineType = defineType({
       type: "type",
       startTime: "startDateTime",
     },
-    prepare({
-      title,
-      track,
-      type,
-      startTime,
-    }: {
-      title: string;
-      track: number;
-      type: string;
-      startTime: string;
-    }) {
-      const date = startTime ? new Date(startTime).toLocaleTimeString() : "";
+    prepare(selection: any) {
+      const { title, track, type, startTime } = selection;
+      const trackNumber = typeof track === "number" ? track : Number(track);
+      const date = startTime
+        ? new Date(startTime as string).toLocaleTimeString()
+        : "";
       return {
         title,
-        subtitle: `Track ${track} | ${type} | ${date}`,
+        subtitle: `Track ${trackNumber} | ${type} | ${date}`,
       };
     },
   },

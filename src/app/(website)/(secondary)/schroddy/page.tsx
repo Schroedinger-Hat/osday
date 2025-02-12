@@ -4,10 +4,10 @@ import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { TypewriterText } from "~/components/atoms/typography/TypewriterText";
-import { Suspense, useState, useEffect } from "react";
-import { Canvas } from "@react-three/fiber";
-import { PerspectiveCamera, Environment } from "@react-three/drei";
-import { ThreeScene } from "./components/ThreeScene";
+import { useState, useEffect } from "react";
+
+import Image from "next/image";
+import trophy2024Render from "~/assets/images/trophy2024-render.png";
 
 const SPECS_TEXT = `Codename: schroddy.stl
 Material: Polylactic Acid
@@ -30,6 +30,7 @@ Manufacturing Tolerances: Precise enough to impress, but not enough to rival aer
 Vibrational Frequency: Classified
 Radioactive Emissions: Not great not terrible
 Quantum Entanglement Potential: Currently untested
+
 Structural Integrity: Surprisingly solid for something that isn't meant to be thrown`;
 
 export default function SchroddyPage() {
@@ -58,31 +59,16 @@ export default function SchroddyPage() {
 
       <SectionContainer className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div className="flex items-center justify-center">
-          <Canvas
-            camera={{ position: [0, 0, 5], fov: 50 }}
-            flat
-            linear
-            className="aspect-square rounded-md bg-gray-300 p-8 shadow-md"
-          >
-            <Suspense fallback={null}>
-              <PerspectiveCamera
-                makeDefault
-                fov={60}
-                aspect={windowState.innerWidth / windowState.innerHeight}
-                position={[3, 0.15, 1]}
-                near={10}
-                far={10000}
-                position-z={1050}
-              ></PerspectiveCamera>
-              <ThreeScene />
-              <Environment preset="studio" />
-              <ambientLight intensity={0.1} />
-            </Suspense>
-          </Canvas>
+          <Image
+            src={trophy2024Render}
+            alt="Schroddy"
+            width={768}
+            height={768}
+          />
         </div>
         <div className="flex items-center">
           <div className="w-full max-w-full whitespace-pre-wrap break-words font-mono text-sm">
-            <TypewriterText text={SPECS_TEXT} />
+            <TypewriterText text={SPECS_TEXT} speed={30} />
           </div>
         </div>
       </SectionContainer>
