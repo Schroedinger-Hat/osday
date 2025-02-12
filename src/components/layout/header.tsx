@@ -38,16 +38,12 @@ const secondaryRoutes = [
     label: "FAQs",
   },
   {
-    href: "/speakers-faq",
+    href: "/speaker-faqs",
     label: "Speakers FAQ",
   },
   {
     href: "/press-kit",
     label: "Press Kit",
-  },
-  {
-    href: "/legal/code-of-conduct",
-    label: "Code of conduct",
   },
   {
     href: "/jobs",

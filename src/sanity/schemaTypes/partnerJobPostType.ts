@@ -48,6 +48,25 @@ export const partnerJobPostType = defineType({
       initialValue: true,
       description: "Whether this position is currently open",
     },
+    {
+      name: "ctaConfig",
+      title: "Call to Action Configuration",
+      type: "object",
+      fields: [
+        {
+          name: "title",
+          title: "CTA Title",
+          type: "string",
+          initialValue: "Apply for this position",
+        },
+        {
+          name: "link",
+          title: "Application Link",
+          type: "string",
+          description: "Direct link to apply for this position",
+        },
+      ],
+    },
   ],
   preview: {
     select: {

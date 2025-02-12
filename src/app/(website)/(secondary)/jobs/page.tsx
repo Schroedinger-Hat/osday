@@ -1,14 +1,14 @@
 import { PortableText } from "@portabletext/react";
 import { format } from "date-fns";
-import { Tag } from "lucide-react";
 import Image from "next/image";
+import Link from "next/link";
 import { groq } from "next-sanity";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { Badge } from "~/components/ui/badge";
-import { Card, CardContent, CardHeader } from "~/components/ui/card";
-import { Separator } from "~/components/ui/separator";
+import { Button } from "~/components/ui/button";
+import { Card, CardContent } from "~/components/ui/card";
 import { sanityClient } from "~/sanity/lib/client";
 
 type PartnerJobPost = {
@@ -30,7 +30,7 @@ type PartnerJobPost = {
 const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(publishedAt desc) {
   _id,
   title,
-  description,
+  description[0..1],
   tags,
   publishedAt,
   partner->{
@@ -44,7 +44,6 @@ const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(
 }`;
 
 async function getPartnerJobs(): Promise<PartnerJobPost[]> {
-  if (!sanityClient) throw new Error("Sanity client is not initialized");
   return sanityClient.fetch<PartnerJobPost[]>(jobsQuery);
 }
 
@@ -64,7 +63,7 @@ export default async function JobBoardPage() {
       <SectionContainer>
         <div className="grid gap-6">
           {jobs?.map((job) => (
-            <Card key={job._id} className="p-8">
+            <Card key={job._id} className="group relative overflow-hidden p-8">
               <div className="flex items-center justify-between gap-4">
                 <Heading level={3} className="flex-1">
                   {job.title}
@@ -103,6 +102,12 @@ export default async function JobBoardPage() {
 
               <div className="prose prose-gray dark:prose-invert max-w-none">
                 <PortableText value={job.description} />
+              </div>
+
+              <div className="mt-6">
+                <Button asChild>
+                  <Link href={`/jobs/${job._id}`}>View Full Description</Link>
+                </Button>
               </div>
             </Card>
           ))}
