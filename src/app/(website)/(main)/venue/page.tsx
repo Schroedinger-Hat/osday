@@ -8,13 +8,19 @@ import Link from "next/link";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { GoogleMapsEmbed } from "@next/third-parties/google";
+import { env } from "~/env";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 import nanaBig1 from "~/assets/images/venue/nana-big-1.jpg";
 import nanaBig2 from "~/assets/images/venue/nana-big-2.jpg";
 import nanaSmall1 from "~/assets/images/venue/nana-small-1.jpg";
 import nanaSmall2 from "~/assets/images/venue/nana-small-2.jpg";
 import nanaSmall3 from "~/assets/images/venue/nana-small-3.jpg";
-import { env } from "~/env";
+
+export const metadata = constructMetadata({
+  title: "Venue",
+  description: "Venue for OSDay25",
+});
 
 export default function VenuePage() {
   return (

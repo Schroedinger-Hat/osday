@@ -4,6 +4,7 @@ import { Typography } from "~/components/atoms/typography/Typography";
 import Image from "next/image";
 import { Linkedin01Icon, YoutubeIcon } from "hugeicons-react";
 import type { FC, SVGProps } from "react";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 // Images
 type LogoType = FC<SVGProps<SVGElement>> & { src: string };
@@ -14,6 +15,11 @@ import logoOsdayRed from "~/assets/images/press-kit/logo-red.svg";
 import logoOsdayRedPng from "~/assets/images/press-kit/logo-red.png";
 import logoOsdayBackground from "~/assets/images/press-kit/logo-background.svg";
 import logoOsdayBackgroundPng from "~/assets/images/press-kit/logo-background.png";
+
+export const metadata = constructMetadata({
+  title: "Press Kit",
+  description: "Press Kit for OSDay25",
+});
 
 export default function PressKitPage() {
   return (

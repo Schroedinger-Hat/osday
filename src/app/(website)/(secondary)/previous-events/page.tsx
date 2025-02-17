@@ -6,10 +6,16 @@ import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import Image from "next/image";
 import Link from "next/link";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 import osday24 from "~/assets/images/previous-editions/osday24.png";
 import osday23 from "~/assets/images/previous-editions/osday23.jpg";
 import osday21 from "~/assets/images/previous-editions/osday21.jpg";
+
+export const metadata = constructMetadata({
+  title: "Previous Events",
+  description: "Previous Events for OSDay25",
+});
 
 export default function PreviousEventsPage() {
   return (

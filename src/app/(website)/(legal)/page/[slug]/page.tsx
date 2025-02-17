@@ -8,10 +8,15 @@ import { Typography } from "~/components/atoms/typography/Typography";
 import type { Page } from "~/sanity/sanity.types";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { createPortableTextComponents } from "~/components/atoms/portableTextComponents";
-
+import { constructMetadata } from "~/lib/utils/metadata";
 interface PageProps {
   params: Promise<{ slug: string }>;
 }
+
+export const metadata = constructMetadata({
+  title: "Legal",
+  description: "Legal for OSDay25",
+});
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;

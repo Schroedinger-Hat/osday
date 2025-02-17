@@ -5,9 +5,15 @@ import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { TypewriterText } from "~/components/atoms/typography/TypewriterText";
 import { useState, useEffect } from "react";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 import Image from "next/image";
 import trophy2024Render from "~/assets/images/trophy2024-render.png";
+
+export const metadata = constructMetadata({
+  title: "Schroddy",
+  description: "Schroddy for OSDay25",
+});
 
 const SPECS_TEXT = `Codename: schroddy.stl
 Material: Polylactic Acid

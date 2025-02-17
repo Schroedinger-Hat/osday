@@ -10,6 +10,7 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -45,6 +46,11 @@ const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(
     }
   }
 }`;
+
+export const metadata = constructMetadata({
+  title: "Job Board",
+  description: "Job Board for OSDay25",
+});
 
 async function getPartnerJobs(): Promise<PartnerJobPost[]> {
   return sanityFetch(jobsQuery, undefined, {

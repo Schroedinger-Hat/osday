@@ -8,9 +8,15 @@ import { urlFor } from "~/sanity/lib/image";
 import type { TimelineItem } from "~/components/molecules/talks-table";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+
+export const metadata = constructMetadata({
+  title: "Schedule",
+  description: "Schedule for OSDay25",
+});
 
 // Temporary background gradients until we have images
 const TYPE_BACKGROUNDS = {

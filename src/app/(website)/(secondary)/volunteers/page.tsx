@@ -1,6 +1,12 @@
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
+import { constructMetadata } from "~/lib/utils/metadata";
+
+export const metadata = constructMetadata({
+  title: "Volunteers",
+  description: "Volunteers for OSDay25",
+});
 
 export default function VolunteersPage() {
   return (
