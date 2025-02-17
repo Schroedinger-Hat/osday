@@ -1,5 +1,5 @@
-import type { MetadataRoute } from "next"
-import { BASE_URL } from "../lib/utils/withFullUrl"
+import type { MetadataRoute } from "next";
+import { BASE_URL } from "../lib/utils/withFullUrl";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -9,5 +9,5 @@ export default function robots(): MetadataRoute.Robots {
       disallow: "/private/",
     },
     sitemap: `${BASE_URL}/sitemap.xml`,
-  }
+  };
 }

@@ -1,9 +1,9 @@
-import type { MetadataRoute } from "next"
-import { sanityClient } from "../sanity/lib/client"
-import { urlFor } from "../sanity/lib/image"
-import { BASE_URL } from "../lib/utils/withFullUrl"
+import type { MetadataRoute } from "next";
+import { sanityClient } from "../sanity/lib/client";
+import { urlFor } from "../sanity/lib/image";
+import { BASE_URL } from "../lib/utils/withFullUrl";
 
-const STATIC_LAST_MODIFIED = new Date("2024-12-01")
+const STATIC_LAST_MODIFIED = new Date("2024-12-01");
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Core website pages
@@ -65,13 +65,17 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${BASE_URL}/watch`,
       lastModified: STATIC_LAST_MODIFIED,
     },
-  ]
+  ];
 
   // Fetch all dynamic pages from Sanity
   const [pages, blogPosts, speakers, events, videos] = await Promise.all([
     // Generic CMS pages
     sanityClient.fetch<
-      Array<{ slug: { current: string }; _updatedAt: string; headerImage?: { asset: any } }>
+      Array<{
+        slug: { current: string };
+        _updatedAt: string;
+        headerImage?: { asset: any };
+      }>
     >(
       `*[_type == "page" && defined(slug.current)]{
         slug,
@@ -81,7 +85,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     ),
     // Blog posts
     sanityClient.fetch<
-      Array<{ slug: { current: string }; _updatedAt: string; headerImage?: { asset: any } }>
+      Array<{
+        slug: { current: string };
+        _updatedAt: string;
+        headerImage?: { asset: any };
+      }>
     >(
       `*[_type == "blogPost" && defined(slug.current)]{
         slug,
@@ -90,7 +98,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }`,
     ),
     // Speaker profiles
-    sanityClient.fetch<Array<{ slug: { current: string }; _updatedAt: string; photo?: { asset: any } }>>(
+    sanityClient.fetch<
+      Array<{
+        slug: { current: string };
+        _updatedAt: string;
+        photo?: { asset: any };
+      }>
+    >(
       `*[_type == "author" && defined(slug.current)]{
         slug,
         _updatedAt,
@@ -100,10 +114,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     // Events
     sanityClient.fetch<
       Array<{
-        slug: { current: string }
-        _updatedAt: string
-        cover?: { asset: any }
-        background?: { asset: any }
+        slug: { current: string };
+        _updatedAt: string;
+        cover?: { asset: any };
+        background?: { asset: any };
       }>
     >(
       `*[_type == "event" && defined(slug.current)]{
@@ -114,40 +128,56 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       }`,
     ),
     // Videos
-    sanityClient.fetch<Array<{ slug: { current: string }; _updatedAt: string }>>(
+    sanityClient.fetch<
+      Array<{ slug: { current: string }; _updatedAt: string }>
+    >(
       `*[_type == "video" && defined(slug.current)] | order(publishedAt desc){
         slug,
         _updatedAt
       }`,
     ),
-  ])
+  ]);
 
   // Map generic CMS pages
   const pageRoutes = pages.map((page) => ({
     url: `${BASE_URL}/page/${page.slug.current}`,
     lastModified: new Date(page._updatedAt),
     ...(page.headerImage?.asset && {
-      images: [urlFor(page.headerImage.asset).format("jpg").width(800).height(450).url()],
+      images: [
+        urlFor(page.headerImage.asset)
+          .format("jpg")
+          .width(800)
+          .height(450)
+          .url(),
+      ],
     }),
-  }))
+  }));
 
   // Map blog posts
   const blogRoutes = blogPosts.map((post) => ({
     url: `${BASE_URL}/blog/${post.slug.current}`,
     lastModified: new Date(post._updatedAt),
     ...(post.headerImage?.asset && {
-      images: [urlFor(post.headerImage.asset).format("jpg").width(800).height(450).url()],
+      images: [
+        urlFor(post.headerImage.asset)
+          .format("jpg")
+          .width(800)
+          .height(450)
+          .url(),
+      ],
     }),
-  }))
+  }));
 
   // Map speaker profiles
   const speakerRoutes = speakers.map((speaker) => ({
     url: `${BASE_URL}/speaker/${speaker.slug.current}`,
     lastModified: new Date(speaker._updatedAt),
     ...(speaker.photo?.asset && {
-      images: [urlFor(speaker.photo.asset).format("jpg").width(800).height(450).url()],
+      images: [
+        urlFor(speaker.photo.asset).format("jpg").width(800).height(450).url(),
+      ],
     }),
-  }))
+  }));
 
   // Map events
   const eventRoutes = events.map((event) => ({
@@ -162,13 +192,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
           .url(),
       ],
     }),
-  }))
+  }));
 
   // Map videos
   const videoRoutes = videos.map((video) => ({
     url: `${BASE_URL}/watch/${video.slug.current}`,
     lastModified: new Date(video._updatedAt),
-  }))
+  }));
 
-  return [...mainRoutes, ...pageRoutes, ...blogRoutes, ...speakerRoutes, ...eventRoutes, ...videoRoutes]
+  return [
+    ...mainRoutes,
+    ...pageRoutes,
+    ...blogRoutes,
+    ...speakerRoutes,
+    ...eventRoutes,
+    ...videoRoutes,
+  ];
 }

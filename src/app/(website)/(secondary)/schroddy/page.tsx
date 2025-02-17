@@ -1,10 +1,7 @@
-"use client";
-
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { TypewriterText } from "~/components/atoms/typography/TypewriterText";
-import { useState, useEffect } from "react";
 import { constructMetadata } from "~/lib/utils/metadata";
 
 import Image from "next/image";
@@ -40,17 +37,6 @@ Quantum Entanglement Potential: Currently untested
 Structural Integrity: Surprisingly solid for something that isn't meant to be thrown`;
 
 export default function SchroddyPage() {
-  const [windowState, setWindowState] = useState({
-    innerWidth: 1600,
-    innerHeight: 900,
-  });
-
-  useEffect(() => {
-    if (window) {
-      setWindowState(window);
-    }
-  }, []);
-
   return (
     <>
       <SectionContainer withBackground backgroundType="hero">
