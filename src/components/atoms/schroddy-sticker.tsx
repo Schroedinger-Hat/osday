@@ -6,7 +6,8 @@ import { useEffect, useState, useRef } from "react";
 import schroddySticker from "~/assets/images/schroddy-sticker.png";
 import { cn } from "~/lib/utils";
 
-export function SchroddySticker() {
+// Desktop interactive version
+function DesktopSchroddy() {
   const router = useRouter();
   const [isDetached, setIsDetached] = useState(false);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -24,14 +25,20 @@ export function SchroddySticker() {
       const dy = e.clientY - centerY;
       const distance = Math.sqrt(dx * dx + dy * dy);
 
-      // Calculate initial movement away from click
-      const moveX = (dx / distance) * -100;
-      const moveY = (dy / distance) * -100;
+      // Calculate movement away from click with a larger distance (300px)
+      const moveX = (dx / distance) * -300;
+      const moveY = (dy / distance) * -300;
 
-      // Set initial position including the movement
+      // Ensure Schroddy stays within viewport bounds
       setPosition({
-        x: rect.left + moveX,
-        y: rect.top + moveY,
+        x: Math.min(
+          Math.max(rect.left + moveX, 20),
+          window.innerWidth - rect.width - 20,
+        ),
+        y: Math.min(
+          Math.max(rect.top + moveY, 20),
+          window.innerHeight - rect.height - 20,
+        ),
       });
       setIsDetached(true);
     }
@@ -83,12 +90,11 @@ export function SchroddySticker() {
 
   return (
     <>
-      {/* Original Schroddy that follows layout */}
       <div
         ref={containerRef}
         onClick={handleFirstClick}
         className={cn(
-          "cursor-pointer select-none transition-all duration-200 hover:scale-110",
+          "transition-scale cursor-pointer select-none duration-200 hover:scale-110",
           isDetached && "opacity-0",
         )}
       >
@@ -101,7 +107,6 @@ export function SchroddySticker() {
         />
       </div>
 
-      {/* Detached floating Schroddy */}
       {isDetached && (
         <div
           ref={detachedRef}
@@ -123,6 +128,38 @@ export function SchroddySticker() {
           />
         </div>
       )}
+    </>
+  );
+}
+
+// Mobile simple link version
+function MobileSchroddy() {
+  return (
+    <a
+      href="/schroddy"
+      className="cursor-pointer select-none transition-all duration-200 hover:scale-110"
+    >
+      <Image
+        src={schroddySticker}
+        alt="Schroddy"
+        width={240}
+        height={240}
+        className="pointer-events-none"
+      />
+    </a>
+  );
+}
+
+// Main component with viewport detection
+export function SchroddySticker() {
+  return (
+    <>
+      <div className="hidden md:block">
+        <DesktopSchroddy />
+      </div>
+      <div className="block md:hidden">
+        <MobileSchroddy />
+      </div>
     </>
   );
 }

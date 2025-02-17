@@ -109,7 +109,7 @@ export default async function HomePage() {
           Gain practical insights from seasoned professionals at leading
           companies.
         </Typography>
-        <div className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+        <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
           {speakers.map((speaker) => (
             <div key={speaker._id} className="flex flex-col items-center">
               <Image

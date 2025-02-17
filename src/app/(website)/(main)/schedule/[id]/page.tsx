@@ -106,7 +106,7 @@ export default async function TalkDetailPage({ params }: PageProps) {
       </SectionContainer>
 
       <SectionContainer>
-        <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
+        <div className="grid grid-cols-1 gap-0 space-y-8 md:grid-cols-5 md:gap-8">
           <div className="col-span-3 space-y-8">
             <Heading level={3}>Abstract</Heading>
             {talk.abstract && (
