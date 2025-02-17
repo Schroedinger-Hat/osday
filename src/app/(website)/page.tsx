@@ -4,7 +4,6 @@ import { Heading } from "~/components/atoms/typography/Heading";
 import { Paragraph } from "~/components/atoms/typography/Paragraph";
 import { Typography } from "~/components/atoms/typography/Typography";
 import type { Author } from "~/sanity/sanity.types";
-import { sanityClient } from "~/sanity/lib/client";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { urlFor } from "~/sanity/lib/image";
 import type { TimelineItem } from "~/components/molecules/talks-table";
@@ -14,10 +13,14 @@ import Hero from "../_components/hero";
 import Link from "next/link";
 import auditorium from "~/assets/images/venue/auditorium.jpg";
 import { SchroddySticker } from "~/components/atoms/schroddy-sticker";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 export default async function HomePage() {
-  const speakers: Author[] = await sanityClient.fetch(`
-    *[_type == "event" && slug.current == "open-source-day-2025"][0].authors[]->{
+  const speakers: Author[] = await sanityFetch(
+    `*[_type == "event" && slug.current == "open-source-day-2025"][0].authors[]->{
       _id,
       _type,
       _createdAt,
@@ -30,11 +33,16 @@ export default async function HomePage() {
       photo,
       biography,
       slug
-    } | order(firstName asc, lastName asc)
-  `);
+    } | order(firstName asc, lastName asc)`,
+    undefined,
+    {
+      cacheDuration: 30, // Cache for 30 seconds
+      tags: [getCacheTag.speakers(), getCacheTag.event("open-source-day-2025")],
+    },
+  );
 
-  const timeline: TimelineItem[] = await sanityClient.fetch(`
-    *[_type == "timeline" && type == "talk"] | order(startDateTime asc) {
+  const timeline: TimelineItem[] = await sanityFetch(
+    `*[_type == "timeline" && type == "talk"] | order(startDateTime asc) {
       _id,
       _type,
       type,
@@ -51,8 +59,13 @@ export default async function HomePage() {
         firstName,
         lastName
       }
-    }
-  `);
+    }`,
+    undefined,
+    {
+      cacheDuration: 30, // Cache for 30 seconds
+      tags: [getCacheTag.timeline()],
+    },
+  );
 
   return (
     <main>

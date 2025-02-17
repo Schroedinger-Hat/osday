@@ -7,7 +7,7 @@ import {
   AccordionTrigger,
 } from "~/components/ui/accordion";
 import { PortableText } from "@portabletext/react";
-import { sanityClient } from "~/sanity/lib/client";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 
 type FAQ = {
   _id: string;
@@ -22,15 +22,17 @@ interface FaqBlockProps {
 }
 
 async function getFAQs(groupKey: string): Promise<FAQ[]> {
-  return sanityClient.fetch(
-    `
-    *[_type == "faq" && groupKey == $groupKey] | order(order asc) {
+  return sanityFetch(
+    `*[_type == "faq" && groupKey == $groupKey] | order(orderRank asc) {
       _id,
       question,
       answer,
-    }
-  `,
+    }`,
     { groupKey },
+    {
+      cacheDuration: 30, // Cache for 30 seconds
+      tags: [getCacheTag.faqs(), getCacheTag.faqs(groupKey)],
+    },
   );
 }
 

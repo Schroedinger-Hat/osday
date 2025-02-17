@@ -9,7 +9,10 @@ import { Typography } from "~/components/atoms/typography/Typography";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card, CardContent } from "~/components/ui/card";
-import { sanityClient } from "~/sanity/lib/client";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 type PartnerJobPost = {
   _id: string;
@@ -44,7 +47,10 @@ const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(
 }`;
 
 async function getPartnerJobs(): Promise<PartnerJobPost[]> {
-  return sanityClient.fetch<PartnerJobPost[]>(jobsQuery);
+  return sanityFetch(jobsQuery, undefined, {
+    cacheDuration: 30, // Cache for 30 seconds
+    tags: [getCacheTag.jobs()],
+  });
 }
 
 export default async function JobBoardPage() {
