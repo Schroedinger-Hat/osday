@@ -8,7 +8,7 @@ import { Inter } from "next/font/google";
 import { cn } from "~/lib/utils";
 import { FontProvider } from "~/lib/context/font-context";
 import schroddy from "../assets/images/schroddy.svg";
-import { AnimatedSchroddy } from "~/components/layout/animated-schroddy";
+import { AnimatedSchroddy } from "~/components/molecules/animated-schroddy";
 
 // Font files can be colocated inside of `pages`
 const cartoonTown = localFont({

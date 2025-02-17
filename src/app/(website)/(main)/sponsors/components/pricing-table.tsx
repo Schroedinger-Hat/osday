@@ -57,29 +57,29 @@ export default function PricingTable() {
 
   return (
     <div className="mx-auto w-full max-w-6xl p-4">
-      <div className="grid grid-cols-4 gap-x-4">
+      {/* Desktop View */}
+      <div className="hidden md:grid md:grid-cols-4 md:gap-x-4">
         {/* Header */}
         <div className="col-span-1" />
         <div className="flex items-center justify-center rounded-md bg-fiery-red p-4 text-white shadow-md">
-          <Heading level={4} className="mb-0 md:mb-0">
+          <Heading level={4} className="mb-0">
             Community
           </Heading>
         </div>
         <div className="flex items-center justify-center rounded-md bg-fiery-red p-4 text-white shadow-md">
-          <Heading level={4} className="mb-0 md:mb-0">
+          <Heading level={4} className="mb-0">
             Gold
           </Heading>
         </div>
         <div className="flex items-center justify-center rounded-md bg-fiery-red p-4 text-white shadow-md">
-          <Heading level={4} className="mb-0 md:mb-0">
+          <Heading level={4} className="mb-0">
             Diamond
           </Heading>
         </div>
 
-        {/* Features Grid */}
+        {/* Features Grid - Desktop */}
         {features.map((feature, index) => (
           <>
-            {/* Feature Name */}
             <div
               key={`name-${index}`}
               className="flex items-center border-b border-gray-800 py-4"
@@ -88,24 +88,18 @@ export default function PricingTable() {
                 {feature.name}
               </Typography>
             </div>
-
-            {/* Community */}
             <div
               key={`community-${index}`}
               className="flex justify-center border-b border-gray-800 py-4"
             >
               <FeatureIcon isEnabled={feature.community} />
             </div>
-
-            {/* Gold */}
             <div
               key={`gold-${index}`}
               className="flex justify-center border-b border-gray-800 py-4"
             >
               <FeatureIcon isEnabled={feature.gold} />
             </div>
-
-            {/* Diamond */}
             <div
               key={`diamond-${index}`}
               className="flex justify-center border-b border-gray-800 py-4"
@@ -115,7 +109,7 @@ export default function PricingTable() {
           </>
         ))}
 
-        {/* Pricing */}
+        {/* Pricing - Desktop */}
         <div className="col-span-1" />
         <div className="p-4 text-center">
           <Link
@@ -142,6 +136,102 @@ export default function PricingTable() {
           >
             email us
           </Link>
+        </div>
+      </div>
+
+      {/* Mobile View */}
+      <div className="flex flex-col space-y-8 md:hidden">
+        {/* Community Plan */}
+        <div className="rounded-lg border border-gray-200 shadow-sm">
+          <div className="bg-fiery-red p-4 text-center text-white">
+            <Heading level={4} className="mb-0">
+              Community
+            </Heading>
+          </div>
+          <div className="p-4">
+            <ul className="space-y-4">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-center justify-between">
+                  <Typography variant="small" className="font-bold uppercase">
+                    {feature.name}
+                  </Typography>
+                  <FeatureIcon isEnabled={feature.community} />
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-center">
+              <Link
+                href="mailto:events@schoedinger-hat.org"
+                className="italic text-red-500 hover:underline"
+              >
+                email us
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Gold Plan */}
+        <div className="rounded-lg border border-gray-200 shadow-sm">
+          <div className="bg-fiery-red p-4 text-center text-white">
+            <Heading level={4} className="mb-0">
+              Gold
+            </Heading>
+            <Typography variant="large" className="mt-2">
+              € 1000
+            </Typography>
+          </div>
+          <div className="p-4">
+            <ul className="space-y-4">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-center justify-between">
+                  <Typography variant="small" className="font-bold uppercase">
+                    {feature.name}
+                  </Typography>
+                  <FeatureIcon isEnabled={feature.gold} />
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-center">
+              <Link
+                href="mailto:events@schoedinger-hat.org"
+                className="italic text-red-500 hover:underline"
+              >
+                email us
+              </Link>
+            </div>
+          </div>
+        </div>
+
+        {/* Diamond Plan */}
+        <div className="rounded-lg border border-gray-200 shadow-sm">
+          <div className="bg-fiery-red p-4 text-center text-white">
+            <Heading level={4} className="mb-0">
+              Diamond
+            </Heading>
+            <Typography variant="large" className="mt-2">
+              € 2000
+            </Typography>
+          </div>
+          <div className="p-4">
+            <ul className="space-y-4">
+              {features.map((feature, index) => (
+                <li key={index} className="flex items-center justify-between">
+                  <Typography variant="small" className="font-bold uppercase">
+                    {feature.name}
+                  </Typography>
+                  <FeatureIcon isEnabled={feature.diamond} />
+                </li>
+              ))}
+            </ul>
+            <div className="mt-6 text-center">
+              <Link
+                href="mailto:events@schoedinger-hat.org"
+                className="italic text-red-500 hover:underline"
+              >
+                email us
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </div>

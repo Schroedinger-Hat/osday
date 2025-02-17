@@ -13,10 +13,10 @@ const stats = [
 
 export default function Hero() {
   return (
-    <div className="min-h-[80vh] w-full overflow-hidden bg-[#C4493A]">
-      <div className="container mx-auto flex max-w-6xl flex-col py-20">
+    <div className="min-h-[80vh] w-full overflow-hidden bg-[#C4493A] px-4 md:px-6 lg:px-8 2xl:px-0">
+      <div className="container mx-auto flex max-w-6xl flex-col py-8 md:py-20">
         {/* Name */}
-        <div className="mb-16">
+        <div className="mb-16 flex justify-center md:justify-start">
           <Image src={logo} alt="Open Source Day" width={100} height={200} />
         </div>
 

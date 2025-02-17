@@ -78,7 +78,7 @@ export default function VenuePage() {
           </div>
         </div>
 
-        <div className="mt-4 grid grid-cols-3 gap-4">
+        <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
             {
               src: nanaSmall1,
@@ -95,7 +95,7 @@ export default function VenuePage() {
           ].map((image, index) => (
             <div
               key={index}
-              className="relative aspect-square overflow-hidden rounded-md shadow-md"
+              className="relative aspect-video overflow-hidden rounded-md shadow-md md:aspect-square"
             >
               <Image
                 src={image.src || "/placeholder.svg"}
@@ -175,7 +175,7 @@ export default function VenuePage() {
         </Typography>
       </SectionContainer>
 
-      <SectionContainer padding="none">
+      <SectionContainer>
         <div className="overflow-hidden rounded-md shadow-md">
           {env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY && (
             <GoogleMapsEmbed

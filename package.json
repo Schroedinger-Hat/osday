@@ -29,6 +29,7 @@
     "@radix-ui/react-navigation-menu": "^1.2.5",
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
+    "@radix-ui/react-visually-hidden": "^1.1.2",
     "@sanity/code-input": "^5.1.1",
     "@sanity/color-input": "^4.0.1",
     "@sanity/google-maps-input": "^4.0.1",
