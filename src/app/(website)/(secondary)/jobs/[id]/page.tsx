@@ -181,7 +181,6 @@ export async function generateStaticParams() {
       tags: [getCacheTag.jobs()],
     },
   );
-
   return jobs.map((job) => ({
     id: job._id,
   }));

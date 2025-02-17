@@ -2,9 +2,14 @@ import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { FaqBlock } from "~/components/organisms/faq-block";
-
+import { constructMetadata } from "~/lib/utils/metadata";
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
+
+export const metadata = constructMetadata({
+  title: "Speaker FAQs",
+  description: "Speaker FAQs for OSDay25",
+});
 
 export default function SpeakerFAQsPage() {
   return (

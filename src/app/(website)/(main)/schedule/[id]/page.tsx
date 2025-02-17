@@ -10,6 +10,7 @@ import { Typography } from "~/components/atoms/typography/Typography";
 import Link from "next/link";
 import { ArrowLeft01Icon } from "hugeicons-react";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -75,6 +76,16 @@ async function getTalk(id: string) {
       tags: [getCacheTag.timeline()],
     },
   );
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = await params;
+  const talk = await getTalk(id);
+
+  return constructMetadata({
+    title: talk?.title,
+    description: talk?.abstract?.[0]?.children?.[0]?.text,
+  });
 }
 
 export default async function TalkDetailPage({ params }: PageProps) {
