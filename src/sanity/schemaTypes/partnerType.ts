@@ -38,6 +38,7 @@ export const partnerType = defineType({
           { title: "Gold", value: "gold" },
           { title: "Platinum", value: "platinum" },
           { title: "Diamond", value: "diamond" },
+          { title: "Supporter", value: "supporter" },
         ],
       },
       hidden: (({ document }) =>
