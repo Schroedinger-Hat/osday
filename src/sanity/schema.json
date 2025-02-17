@@ -3137,6 +3137,10 @@
             {
               "type": "string",
               "value": "diamond"
+            },
+            {
+              "type": "string",
+              "value": "supporter"
             }
           ]
         },
