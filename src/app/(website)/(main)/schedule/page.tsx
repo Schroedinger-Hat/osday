@@ -4,10 +4,13 @@ import Link from "next/link";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
-import { sanityClient } from "~/sanity/lib/client";
 import { urlFor } from "~/sanity/lib/image";
 import type { TimelineItem } from "~/components/molecules/talks-table";
 import { getAuthorFullName } from "~/lib/sanity-cms";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 // Temporary background gradients until we have images
 const TYPE_BACKGROUNDS = {
@@ -86,8 +89,8 @@ function TimelineCard({ item }: { item: TimelineItem }) {
 }
 
 export default async function SchedulePage() {
-  const timeline: TimelineItem[] = await sanityClient.fetch(`
-    *[_type == "timeline"] | order(startDateTime asc) {
+  const timeline: TimelineItem[] = await sanityFetch(
+    `*[_type == "timeline"] | order(startDateTime asc) {
       _id,
       _type,
       type,
@@ -101,8 +104,13 @@ export default async function SchedulePage() {
         firstName,
         lastName
       }
-    }
-  `);
+    }`,
+    undefined,
+    {
+      cacheDuration: 30, // Cache for 30 seconds
+      tags: [getCacheTag.timeline()],
+    },
+  );
 
   return (
     <>

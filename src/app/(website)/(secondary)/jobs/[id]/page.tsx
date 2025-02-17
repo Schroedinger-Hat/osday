@@ -11,7 +11,10 @@ import { Typography } from "~/components/atoms/typography/Typography";
 import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
-import { sanityClient } from "~/sanity/lib/client";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
 
 type JobPost = {
   _id: string;
@@ -53,8 +56,14 @@ const jobQuery = groq`*[_type == "partnerJobPost" && _id == $id][0] {
 }`;
 
 async function getJob(id: string): Promise<JobPost | null> {
-  if (!sanityClient) throw new Error("Sanity client is not initialized");
-  return sanityClient.fetch<JobPost>(jobQuery, { id });
+  return sanityFetch(
+    jobQuery,
+    { id },
+    {
+      cacheDuration: 30, // Cache for 30 seconds
+      tags: [getCacheTag.jobs(), getCacheTag.jobs(id)],
+    },
+  );
 }
 
 interface PageProps {
@@ -164,8 +173,13 @@ export default async function JobDetailPage({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  const jobs = await sanityClient.fetch<{ _id: string }[]>(
+  const jobs = await sanityFetch<{ _id: string }[]>(
     groq`*[_type == "partnerJobPost" && isActive == true]._id`,
+    undefined,
+    {
+      cacheDuration: 30,
+      tags: [getCacheTag.jobs()],
+    },
   );
 
   return jobs.map((job) => ({

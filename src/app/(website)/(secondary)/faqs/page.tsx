@@ -3,6 +3,9 @@ import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { FaqBlock } from "~/components/organisms/faq-block";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default function FAQsPage() {
   return (
     <>

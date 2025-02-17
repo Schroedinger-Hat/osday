@@ -2,24 +2,44 @@ import Image from "next/image";
 import Link from "next/link";
 import { Typography } from "~/components/atoms/typography/Typography";
 import type { Partner } from "~/sanity/sanity.types";
-import { sanityClient } from "~/sanity/lib/client";
 import { urlFor } from "~/sanity/lib/image";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 
 export async function SponsorsList() {
-  const supporterSponsors: Partner[] = await sanityClient.fetch(
+  const supporterSponsors: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "supporter"] | order(orderRank asc)`,
+    undefined,
+    {
+      cacheDuration: 30,
+      tags: [getCacheTag.sponsors()],
+    },
   );
 
-  const diamondSponsors: Partner[] = await sanityClient.fetch(
+  const diamondSponsors: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
+    undefined,
+    {
+      cacheDuration: 30,
+      tags: [getCacheTag.sponsors()],
+    },
   );
 
-  const goldSponsors: Partner[] = await sanityClient.fetch(
+  const goldSponsors: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "gold"] | order(orderRank asc)`,
+    undefined,
+    {
+      cacheDuration: 30,
+      tags: [getCacheTag.sponsors()],
+    },
   );
 
-  const communityPartners: Partner[] = await sanityClient.fetch(
+  const communityPartners: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == false && nonBusinessType == "community"] | order(orderRank asc)`,
+    undefined,
+    {
+      cacheDuration: 30,
+      tags: [getCacheTag.sponsors()],
+    },
   );
 
   return (

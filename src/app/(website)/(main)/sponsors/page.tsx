@@ -5,6 +5,10 @@ import { Typography } from "~/components/atoms/typography/Typography";
 import { Button } from "~/components/ui/button";
 import PricingTable from "./components/pricing-table";
 import { SponsorsList } from "~/components/molecules/sponsors-list";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export default function SponsorsPage() {
   return (
     <>

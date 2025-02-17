@@ -4,12 +4,16 @@ import { notFound } from "next/navigation";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { PortableText } from "@portabletext/react";
-import { sanityClient } from "~/sanity/lib/client";
 import { urlFor } from "~/sanity/lib/image";
 import type { PortableTextBlock } from "@portabletext/types";
 import { Typography } from "~/components/atoms/typography/Typography";
 import Link from "next/link";
 import { ArrowLeft01Icon } from "hugeicons-react";
+import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 interface Speaker {
   _id: string;
   firstName?: string;
@@ -39,11 +43,13 @@ interface Talk {
   };
   speaker?: Speaker;
 }
+
 interface PageProps {
   params: Promise<{ id: string }>;
 }
+
 async function getTalk(id: string) {
-  const talk = await sanityClient.fetch<Talk | null>(
+  return sanityFetch<Talk | null>(
     `*[_type == "timeline" && _id == $id][0]{
       _id,
       _type,
@@ -63,9 +69,12 @@ async function getTalk(id: string) {
         biography
       }
     }`,
-    { id: id },
+    { id },
+    {
+      cacheDuration: 30, // Cache for 30 seconds
+      tags: [getCacheTag.timeline()],
+    },
   );
-  return talk;
 }
 
 export default async function TalkDetailPage({ params }: PageProps) {
@@ -165,7 +174,10 @@ export default async function TalkDetailPage({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  const talks = await sanityClient.fetch<Talk[]>(`*[_type == "timeline"]`);
+  const talks = await sanityFetch<Talk[]>(`*[_type == "timeline"]`, undefined, {
+    cacheDuration: 30,
+    tags: [getCacheTag.timeline()],
+  });
 
   return talks.map((talk) => ({
     id: talk._id,
