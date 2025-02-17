@@ -6,6 +6,10 @@ import { sanityClient } from "~/sanity/lib/client";
 import { urlFor } from "~/sanity/lib/image";
 
 export async function SponsorsList() {
+  const supporterSponsors: Partner[] = await sanityClient.fetch(
+    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "supporter"] | order(orderRank asc)`,
+  );
+
   const diamondSponsors: Partner[] = await sanityClient.fetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
   );
@@ -20,6 +24,33 @@ export async function SponsorsList() {
 
   return (
     <div className="flex flex-col gap-8">
+      {supporterSponsors.length > 0 && (
+        <div>
+          <Typography variant="large" className="mb-2 font-semibold uppercase">
+            Supporter Sponsors
+          </Typography>
+          <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
+            {supporterSponsors.map((sponsor) => (
+              <Link
+                href={sponsor.website ?? "#"}
+                key={sponsor._id}
+                className="flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={urlFor(sponsor.image).width(308).height(128).url()}
+                  alt={sponsor.name ?? ""}
+                  width={308}
+                  height={128}
+                  className="h-auto w-full object-contain shadow-md"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
       {diamondSponsors.length > 0 && (
         <div>
           <Typography variant="large" className="mb-2 font-semibold uppercase">

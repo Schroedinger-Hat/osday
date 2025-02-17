@@ -458,7 +458,7 @@ export type Partner = {
   };
   description?: string;
   isBusinessPartner?: boolean;
-  businessTier?: "silver" | "gold" | "platinum" | "diamond";
+  businessTier?: "silver" | "gold" | "platinum" | "diamond" | "supporter";
   nonBusinessType?: "community" | "media";
   website?: string;
   partnershipPeriod?: {
