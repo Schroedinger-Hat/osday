@@ -294,6 +294,13 @@
     "description_2": "Torneremo nel 2025, rimanete sintonizzati e unitevi a noi su Discord o LinkedIn."
   },
   "Sponsor": {
+    "tier": {
+      "community": "Partner Comunitario",
+      "diamond": "Diamante",
+      "gold": "Oro",
+      "patronage": "Patrocinio",
+      "supporter": "Sostenitore"
+    },
     "title": "Open Source Day 2025",
     "subtitle": "Desiderate diventare sponsor dell' Open Source Day 2025?",
     "where": "Firenze",

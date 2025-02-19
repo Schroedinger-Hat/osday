@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import { useTranslations } from 'next-intl';
 
 type TSponsorTable = {
   isVisible: boolean
@@ -126,6 +127,7 @@ const sponsorTiers: SponsorTier[] = [
 ];
 
 const SponsorTable = ({isVisible}: TSponsorTable) => {
+  const t = useTranslations('Sponsor');
   if (!isVisible) return null;
 
   return (
@@ -134,7 +136,7 @@ const SponsorTable = ({isVisible}: TSponsorTable) => {
 
       {sponsorTiers.map((tier) => (
         <div key={tier.name}>
-          <h3 className="sponsors_tier">{tier.name}</h3>
+          <h3 className="sponsors_tier">{t(`tier.${tier.name.toLowerCase()}`)}</h3>
           <div className="sponsors_logo">
             {tier.sponsors.map((sponsor) => (
               <a key={sponsor.href} href={sponsor.href} target="_blank" rel="noreferrer">

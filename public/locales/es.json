@@ -294,6 +294,13 @@
     "description_2": "Volveremos en 2025, permanece atento y únete a nosotros en Discord o LinkedIn."
   },
   "Sponsor": {
+    "tier": {
+      "community": "Comunidad",
+      "diamond": "Diamante",
+      "gold": "Oro",
+      "patronage": "Patrocinio",
+      "supporter": "Apoyo"
+    },
     "title": "Open Source Day 2025",
     "subtitle": "¿Desea convertirse en patrocinador del Día del Código Abierto 2024?",
     "where": "Florence",
