@@ -74,7 +74,9 @@ export default async function HomePage() {
       <SectionContainer>
         <Heading level={2}>Missed us?</Heading>
         <Typography variant="large" className="mb-4">
-          We are back with a new edition of Open Source Day. TODO: Add text
+          We are back with a new edition of Open Source Day. Join us live on the 21st of March at Nana Bianca in Florence
+          to enjoy a day full of talks, insights, and networking opportunities.
+          Have you grabbed your ticket yet?
         </Typography>
       </SectionContainer>
 
