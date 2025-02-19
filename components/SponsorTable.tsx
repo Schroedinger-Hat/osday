@@ -38,6 +38,13 @@ const communitySponsors: Sponsor[] = [
 
 const goldSponsors: Sponsor[] = [
   {
+    alt: "Sparkfabrik Logo",
+    href: "https://www.sparkfabrik.com/",
+    src: "/sponsors/2025/sparkfabrik.svg",
+    width: 300,
+    height: 125
+  },
+  {
     alt: "Gadfly logo",
     href: "https://gadfly.ai",
     src: "/sponsors/2025/gadfly.svg",
