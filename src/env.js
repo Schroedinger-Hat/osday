@@ -39,13 +39,7 @@ export const env = createEnv({
         isRequiredInProduction,
         "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is required in production",
       ),
-    NEXT_PUBLIC_GA_ID: z
-      .string()
-      .optional()
-      .refine(
-        isRequiredInProduction,
-        "NEXT_PUBLIC_GA_ID is required in production",
-      ),
+    NEXT_PUBLIC_GA_ID: z.string().optional(),
   },
 
   /**
