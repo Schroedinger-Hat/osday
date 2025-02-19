@@ -41,8 +41,8 @@ const useEventChecks = () => {
   const isAfterEvent = new Date() > new Date("2025-03-21T18:00:00");
 
   return {
-    shouldHideStats: true,
-    isDayOfEvent: true,
+    shouldHideStats: isDayOfEvent || isAfterEvent,
+    isDayOfEvent,
     isAfterEvent,
   };
 };
