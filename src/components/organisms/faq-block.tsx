@@ -56,8 +56,10 @@ export async function FaqBlock({
       <Accordion type="single" collapsible className="">
         {faqs.map((faq) => (
           <AccordionItem key={faq._id} value={faq._id}>
-            <AccordionTrigger className="text-left font-title text-xl md:text-center">
-              {faq.question}
+            <AccordionTrigger>
+              <Typography variant="large" className="pt-4 font-bold">
+                {faq.question}
+              </Typography>
             </AccordionTrigger>
             <AccordionContent>
               <PortableText value={faq.answer} />
