@@ -2,13 +2,6 @@ import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import { constructMetadata } from "~/lib/utils/metadata";
-// import {
-// IconCode,
-// IconHeartHandshake,
-// IconClipboardCheck,
-// IconSocial,
-// IconPencil,
-// } from "@tabler/icons-react";
 import { Card } from "~/components/ui/card";
 import Link from "next/link";
 import { Button } from "~/components/ui/button";
