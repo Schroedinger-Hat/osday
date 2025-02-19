@@ -41,8 +41,8 @@ const useEventChecks = () => {
   const isAfterEvent = new Date() > new Date("2025-03-21T18:00:00");
 
   return {
-    shouldHideStats: isDayOfEvent || isAfterEvent,
-    isDayOfEvent,
+    shouldHideStats: true,
+    isDayOfEvent: true,
     isAfterEvent,
   };
 };
@@ -258,9 +258,10 @@ async function DayOfEvent() {
 
       <div className="space-y-6">
         <div className="space-y-4">
-          <Typography variant="h3" className="text-primary">
-            Now Playing: {currentEvent.title}
+          <Typography variant="small" className="mb-2 font-bold uppercase">
+            Current Talk
           </Typography>
+          <Heading level={3}>{currentEvent.title}</Heading>
           {currentEvent.author && (
             <Typography className="text-gray-600">
               with {getAuthorFullName(currentEvent.author)}
