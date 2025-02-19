@@ -35,7 +35,7 @@ export function Image({
       fill={fill}
       priority={priority}
       className={cn(
-        rounded && "rounded-lg",
+        rounded && "rounded-md",
         fill && "object-cover",
         !withContainer && className,
       )}
@@ -48,7 +48,7 @@ export function Image({
 
   return (
     <div
-      className={cn(relative && "relative", rounded && "rounded-lg", className)}
+      className={cn(relative && "relative", rounded && "rounded-md", className)}
       style={
         !fill
           ? {

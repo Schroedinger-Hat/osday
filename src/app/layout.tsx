@@ -9,6 +9,10 @@ import { FontProvider } from "~/lib/context/font-context";
 import schroddy from "../assets/images/schroddy.svg";
 import { AnimatedSchroddy } from "~/components/molecules/animated-schroddy";
 import { constructMetadata } from "~/lib/utils/metadata";
+import { env } from "~/env";
+import { GoogleAnalytics } from "@next/third-parties/google";
+import { SpeedInsights } from "@vercel/speed-insights/next";
+
 // Font files can be colocated inside of `pages`
 const cartoonTown = localFont({
   src: "../assets/fonts/cartoon-town.ttf",
@@ -62,6 +66,11 @@ export default function RootLayout({
           <TRPCReactProvider>
             <HydrateClient>{children}</HydrateClient>
           </TRPCReactProvider>
+
+          <SpeedInsights />
+          {env.NEXT_PUBLIC_GA_ID && (
+            <GoogleAnalytics gaId={env.NEXT_PUBLIC_GA_ID} />
+          )}
         </body>
       </html>
     </FontProvider>

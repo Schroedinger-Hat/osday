@@ -31,19 +31,19 @@ export default function PreviousEventsPage() {
       <SectionContainer padding="header">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
           <Link href="https://2024.osday.dev">
-            <div className="aspect-video overflow-hidden rounded-lg shadow-md">
+            <div className="aspect-video overflow-hidden rounded-md shadow-md">
               <Image src={osday24} alt="Event 1" />
             </div>
             <Heading level={3}>OSDay 24</Heading>
           </Link>
           <Link href="https://2023.osday.dev">
-            <div className="aspect-video overflow-hidden rounded-lg shadow-md">
+            <div className="aspect-video overflow-hidden rounded-md shadow-md">
               <Image src={osday23} alt="Event 2" />
             </div>
             <Heading level={3}>OSDay 23</Heading>
           </Link>
           <Link href="https://osday.dev/edition2021">
-            <div className="aspect-video overflow-hidden rounded-lg shadow-md">
+            <div className="aspect-video overflow-hidden rounded-md shadow-md">
               <Image src={osday21} alt="Event 3" />
             </div>
             <Heading level={3}>OSDay 21</Heading>

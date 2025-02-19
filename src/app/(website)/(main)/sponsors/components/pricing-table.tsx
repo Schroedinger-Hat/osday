@@ -142,7 +142,7 @@ export default function PricingTable() {
       {/* Mobile View */}
       <div className="flex flex-col space-y-8 md:hidden">
         {/* Community Plan */}
-        <div className="rounded-lg border border-gray-200 shadow-sm">
+        <div className="rounded-md border border-gray-200 shadow-md">
           <div className="bg-fiery-red p-4 text-center text-white">
             <Heading level={4} className="mb-0">
               Community
@@ -171,7 +171,7 @@ export default function PricingTable() {
         </div>
 
         {/* Gold Plan */}
-        <div className="rounded-lg border border-gray-200 shadow-sm">
+        <div className="rounded-md border border-gray-200 shadow-md">
           <div className="bg-fiery-red p-4 text-center text-white">
             <Heading level={4} className="mb-0">
               Gold
@@ -203,7 +203,7 @@ export default function PricingTable() {
         </div>
 
         {/* Diamond Plan */}
-        <div className="rounded-lg border border-gray-200 shadow-sm">
+        <div className="rounded-md border border-gray-200 shadow-md">
           <div className="bg-fiery-red p-4 text-center text-white">
             <Heading level={4} className="mb-0">
               Diamond

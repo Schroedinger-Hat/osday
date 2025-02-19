@@ -37,8 +37,8 @@ export default function PressKitPage() {
         <Heading level={3}>Logo</Heading>
         <div className="flex flex-col gap-8 lg:flex-row">
           <div className="flex-1">
-            <div className="rounded-lg border border-gray-200 bg-slate-200 p-8">
-              <div className="aspect-square w-full rounded-lg p-4">
+            <div className="rounded-md border border-gray-200 bg-slate-200 p-8">
+              <div className="aspect-square w-full rounded-md p-4">
                 <Image src={logoOsday} alt="Logo" />
               </div>
               <div className="mt-4 text-center">
@@ -60,8 +60,8 @@ export default function PressKitPage() {
           </div>
 
           <div className="flex-1">
-            <div className="rounded-lg border border-gray-200 bg-slate-200 p-8">
-              <div className="aspect-square w-full rounded-lg p-4">
+            <div className="rounded-md border border-gray-200 bg-slate-200 p-8">
+              <div className="aspect-square w-full rounded-md p-4">
                 <Image src={logoOsdayRed} alt="Logo" />
               </div>
               <div className="mt-4 text-center">
@@ -83,8 +83,8 @@ export default function PressKitPage() {
           </div>
 
           <div className="flex-1">
-            <div className="rounded-lg border border-gray-200 bg-slate-200 p-8">
-              <div className="aspect-square w-full rounded-lg p-4">
+            <div className="rounded-md border border-gray-200 bg-slate-200 p-8">
+              <div className="aspect-square w-full rounded-md p-4">
                 <Image src={logoOsdayBackground} alt="Logo" />
               </div>
               <div className="mt-4 text-center">
@@ -113,7 +113,7 @@ export default function PressKitPage() {
             <Heading level={3}>Colors</Heading>
             <div className="mt-8 space-y-4">
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 rounded-lg bg-[#C4493A]"></div>
+                <div className="h-16 w-16 rounded-md bg-[#C4493A]"></div>
                 <div>
                   <Typography variant="medium" className="font-medium">
                     Fiery Red
@@ -125,7 +125,7 @@ export default function PressKitPage() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 rounded-lg bg-[#12142D]"></div>
+                <div className="h-16 w-16 rounded-md bg-[#12142D]"></div>
                 <div>
                   <Typography variant="medium" className="font-medium">
                     Dark Navy
@@ -137,7 +137,7 @@ export default function PressKitPage() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 rounded-lg bg-[#4263AA]"></div>
+                <div className="h-16 w-16 rounded-md bg-[#4263AA]"></div>
                 <div>
                   <Typography variant="medium" className="font-medium">
                     Almost Ultramarine
@@ -149,7 +149,7 @@ export default function PressKitPage() {
               </div>
 
               <div className="flex items-center gap-4">
-                <div className="h-16 w-16 rounded-lg bg-[#EDCFB7]"></div>
+                <div className="h-16 w-16 rounded-md bg-[#EDCFB7]"></div>
                 <div>
                   <Typography variant="medium" className="font-medium">
                     Creamy Sand
