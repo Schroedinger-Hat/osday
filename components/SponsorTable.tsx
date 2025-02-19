@@ -60,6 +60,13 @@ const diamondSponsors: Sponsor[] = [
     src: "/sponsors/2025/herodevs.svg",
     width: 300,
     height: 100
+  },
+  {
+    alt: "Aruba Logo",
+    href: "https://www.aruba.it/",
+    src: "/sponsors/2025/arubait.png",
+    width: 200,
+    height: 100
   }
 ]
 
