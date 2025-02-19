@@ -39,6 +39,13 @@ export const env = createEnv({
         isRequiredInProduction,
         "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is required in production",
       ),
+    NEXT_PUBLIC_GA_ID: z
+      .string()
+      .optional()
+      .refine(
+        isRequiredInProduction,
+        "NEXT_PUBLIC_GA_ID is required in production",
+      ),
   },
 
   /**
@@ -53,6 +60,7 @@ export const env = createEnv({
     NEXT_PUBLIC_SANITY_DATASET: process.env.NEXT_PUBLIC_SANITY_DATASET,
     NEXT_PUBLIC_GOOGLE_MAPS_API_KEY:
       process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
+    NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

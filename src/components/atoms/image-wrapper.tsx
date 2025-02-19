@@ -21,7 +21,7 @@ export function ImageWrapper({
   return (
     <div
       className={cn(
-        "flex items-center justify-center rounded-lg bg-slate-50 p-8",
+        "flex items-center justify-center rounded-md bg-slate-50 p-8",
         className,
       )}
     >

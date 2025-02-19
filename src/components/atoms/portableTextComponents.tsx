@@ -101,7 +101,7 @@ export const createPortableTextComponents = (
             alt={value.alt ?? ""}
             width={1200}
             height={800}
-            className="mx-auto w-full rounded-lg"
+            className="mx-auto w-full rounded-md"
             withContainer={false}
           />
           {value.caption && (

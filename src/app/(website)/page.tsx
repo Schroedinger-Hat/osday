@@ -69,9 +69,7 @@ export default async function HomePage() {
 
   return (
     <main>
-      <SectionContainer padding="none" size="full">
-        <Hero />
-      </SectionContainer>
+      <Hero />
 
       <SectionContainer>
         <Heading level={2}>Missed us?</Heading>
@@ -110,7 +108,7 @@ export default async function HomePage() {
               src={auditorium}
               alt="Nana Bianca venue"
               fill
-              className="rounded-lg object-cover shadow-md"
+              className="rounded-md object-cover shadow-md"
             />
           </div>
         </div>
