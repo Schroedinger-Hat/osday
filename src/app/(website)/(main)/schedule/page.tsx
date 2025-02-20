@@ -1,4 +1,3 @@
-import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
@@ -55,7 +54,11 @@ function TimelineCard({ item }: { item: TimelineItem }) {
       <div className="absolute inset-0 m-2 flex flex-col justify-between rounded-sm bg-black/80 p-4">
         <div className="space-y-3">
           <time className="block font-title text-2xl tracking-wider text-white/90">
-            {format(new Date(item.startDateTime), "HH:mm")}
+            {new Intl.DateTimeFormat("it-IT", {
+              hour: "2-digit",
+              minute: "2-digit",
+              timeZone: "Europe/Rome",
+            }).format(new Date(item.startDateTime))}
           </time>
 
           <div className="space-y-2">
