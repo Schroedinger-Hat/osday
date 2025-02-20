@@ -37,7 +37,6 @@
     "@sanity/orderable-document-list": "^1.2.2",
     "@sanity/vision": "^3.67.1",
     "@t3-oss/env-nextjs": "^0.10.1",
-    "@tabler/icons-react": "^3.30.0",
     "@tanstack/react-query": "^5.50.0",
     "@trpc/client": "^11.0.0-rc.446",
     "@trpc/react-query": "^11.0.0-rc.446",
