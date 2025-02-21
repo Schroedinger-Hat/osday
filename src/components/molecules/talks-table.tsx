@@ -47,13 +47,11 @@ export function TalksTable({ talks }: TalksTableProps) {
             <div className="flex gap-6 md:gap-8">
               <div className="w-[62px] justify-end text-right md:w-[82px]">
                 <div className="text-bold text-sm font-black md:text-base">
-                  {new Date(item.startDateTime)
-                    .toLocaleTimeString("it-IT", {
-                      hour: "2-digit",
-                      minute: "2-digit",
-                      hour12: false,
-                    })
-                    .replace(/^24:/, "00:")}
+                  {new Intl.DateTimeFormat("it-IT", {
+                    hour: "2-digit",
+                    minute: "2-digit",
+                    timeZone: "Europe/Rome",
+                  }).format(new Date(item.startDateTime))}
                 </div>
               </div>
               <div className="flex flex-1 flex-col gap-1">
