@@ -5,7 +5,7 @@ import { TypewriterText } from "~/components/atoms/typography/TypewriterText";
 import { constructMetadata } from "~/lib/utils/metadata";
 
 import Image from "next/image";
-import trophy2024Render from "~/assets/images/trophy2024-render.png";
+import trophy2025Render from "~/assets/images/trophy2025-render.png";
 
 export const metadata = constructMetadata({
   title: "Schroddy",
@@ -52,15 +52,15 @@ export default function SchroddyPage() {
       <SectionContainer className="grid grid-cols-1 gap-8 lg:grid-cols-2">
         <div className="flex items-center justify-center">
           <Image
-            src={trophy2024Render}
+            src={trophy2025Render}
             alt="Schroddy"
-            width={768}
-            height={768}
+            width={559}
+            height={994}
           />
         </div>
         <div className="flex items-center">
           <div className="w-full max-w-full whitespace-pre-wrap break-words font-mono text-sm">
-            <TypewriterText text={SPECS_TEXT} speed={30} />
+            <TypewriterText text={SPECS_TEXT} speed={18} />
           </div>
         </div>
       </SectionContainer>
