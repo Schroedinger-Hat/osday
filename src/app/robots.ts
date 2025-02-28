@@ -6,7 +6,7 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: "*",
       allow: "/",
-      disallow: "/private/",
+      disallow: "/sanity-cms/",
     },
     sitemap: `${BASE_URL}/sitemap.xml`,
   };
