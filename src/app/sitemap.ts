@@ -4,72 +4,90 @@ import { urlFor } from "../sanity/lib/image";
 import { BASE_URL } from "../lib/utils/withFullUrl";
 
 const STATIC_LAST_MODIFIED = new Date("2024-12-01");
+const STATIC_CHANGE_FREQUENCY = "yearly";
+
+/**
+ * Encodes special characters in URLs for XML compatibility
+ * Used to ensure sitemap URLs are properly escaped
+ */
+function encodeXMLUrl(url: string): string {
+  return url
+    .replace(/&/g, "&amp;")
+    .replace(/'/g, "&apos;")
+    .replace(/"/g, "&quot;")
+    .replace(/>/g, "&gt;")
+    .replace(/</g, "&lt;");
+}
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // Core website pages
-  const mainRoutes = [
+  const mainRoutes: MetadataRoute.Sitemap = [
     /*
     Static pages
     */
     // Home page
     {
-      url: BASE_URL,
+      url: encodeXMLUrl(BASE_URL),
       lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
-    // Association pages
+    // Main pages
     {
-      url: `${BASE_URL}/association/about-us`,
+      url: encodeXMLUrl(`${BASE_URL}/schedule`),
       lastModified: STATIC_LAST_MODIFIED,
-    },
-    {
-      url: `${BASE_URL}/association/join`,
-      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
     {
-      url: `${BASE_URL}/association/press-kit`,
+      url: encodeXMLUrl(`${BASE_URL}/sponsors`),
       lastModified: STATIC_LAST_MODIFIED,
-    },
-    // Contribute pages
-    {
-      url: `${BASE_URL}/contribute/as-individual`,
-      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
     {
-      url: `${BASE_URL}/contribute/as-partner`,
+      url: encodeXMLUrl(`${BASE_URL}/venue`),
       lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
+    },
+    // Secondary pages
+    {
+      url: encodeXMLUrl(`${BASE_URL}/faqs`),
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
     {
-      url: `${BASE_URL}/contribute/as-speaker`,
+      url: encodeXMLUrl(`${BASE_URL}/speakers-faqs`),
       lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
     {
-      url: `${BASE_URL}/contribute/as-sponsor`,
+      url: encodeXMLUrl(`${BASE_URL}/jobs`),
       lastModified: STATIC_LAST_MODIFIED,
-    },
-    // Partecipate section
-    {
-      url: `${BASE_URL}/partecipate/local-communities`,
-      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
     {
-      url: `${BASE_URL}/partecipate/projects`,
+      url: encodeXMLUrl(`${BASE_URL}/press-kit`),
       lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
-    // Speakers section
     {
-      url: `${BASE_URL}/speakers`,
+      url: encodeXMLUrl(`${BASE_URL}/previous-events`),
       lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
-    // Watch section
     {
-      url: `${BASE_URL}/watch`,
+      url: encodeXMLUrl(`${BASE_URL}/schroddy`),
       lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
+    },
+    {
+      url: encodeXMLUrl(`${BASE_URL}/volunteers`),
+      lastModified: STATIC_LAST_MODIFIED,
+      changeFrequency: STATIC_CHANGE_FREQUENCY,
     },
   ];
 
   // Fetch all dynamic pages from Sanity
-  const [pages, blogPosts, speakers, events, videos] = await Promise.all([
-    // Generic CMS pages
+  const [pages, schedule] = await Promise.all([
+    // Pages
     sanityClient.fetch<
       Array<{
         slug: { current: string };
@@ -83,129 +101,60 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
         headerImage
       }`,
     ),
-    // Blog posts
+    // Schedule
     sanityClient.fetch<
       Array<{
-        slug: { current: string };
+        _id: string;
         _updatedAt: string;
-        headerImage?: { asset: any };
+        type: string;
+        backgroundImage?: { asset: any };
       }>
     >(
-      `*[_type == "blogPost" && defined(slug.current)]{
-        slug,
+      `*[_type == "timeline" && (type == "talk" || type == "keynote")]{
+        _id,
         _updatedAt,
-        headerImage
-      }`,
-    ),
-    // Speaker profiles
-    sanityClient.fetch<
-      Array<{
-        slug: { current: string };
-        _updatedAt: string;
-        photo?: { asset: any };
-      }>
-    >(
-      `*[_type == "author" && defined(slug.current)]{
-        slug,
-        _updatedAt,
-        photo
-      }`,
-    ),
-    // Events
-    sanityClient.fetch<
-      Array<{
-        slug: { current: string };
-        _updatedAt: string;
-        cover?: { asset: any };
-        background?: { asset: any };
-      }>
-    >(
-      `*[_type == "event" && defined(slug.current)]{
-        slug,
-        _updatedAt,
-        cover,
-        background
-      }`,
-    ),
-    // Videos
-    sanityClient.fetch<
-      Array<{ slug: { current: string }; _updatedAt: string }>
-    >(
-      `*[_type == "video" && defined(slug.current)] | order(publishedAt desc){
-        slug,
-        _updatedAt
+        type,
+        backgroundImage
       }`,
     ),
   ]);
 
   // Map generic CMS pages
-  const pageRoutes = pages.map((page) => ({
-    url: `${BASE_URL}/page/${page.slug.current}`,
+  const pageRoutes: MetadataRoute.Sitemap = pages.map((page) => ({
+    url: encodeXMLUrl(`${BASE_URL}/page/${page.slug.current}`),
     lastModified: new Date(page._updatedAt),
+    changeFrequency: STATIC_CHANGE_FREQUENCY,
     ...(page.headerImage?.asset && {
       images: [
-        urlFor(page.headerImage.asset)
-          .format("jpg")
-          .width(800)
-          .height(450)
-          .url(),
+        encodeXMLUrl(
+          urlFor(page.headerImage.asset)
+            .format("jpg")
+            .width(800)
+            .height(600)
+            .url(),
+        ),
       ],
     }),
   }));
 
-  // Map blog posts
-  const blogRoutes = blogPosts.map((post) => ({
-    url: `${BASE_URL}/blog/${post.slug.current}`,
-    lastModified: new Date(post._updatedAt),
-    ...(post.headerImage?.asset && {
+  // Map schedule
+  const scheduleRoutes: MetadataRoute.Sitemap = schedule.map((schedule) => ({
+    url: encodeXMLUrl(`${BASE_URL}/schedule/${schedule._id}`),
+    lastModified: new Date(schedule._updatedAt),
+    changeFrequency: STATIC_CHANGE_FREQUENCY,
+    ...(schedule.backgroundImage && {
       images: [
-        urlFor(post.headerImage.asset)
-          .format("jpg")
-          .width(800)
-          .height(450)
-          .url(),
+        encodeXMLUrl(
+          urlFor(schedule.backgroundImage)
+            .format("jpg")
+            .width(800)
+            .height(600)
+            .url(),
+        ),
       ],
     }),
   }));
 
-  // Map speaker profiles
-  const speakerRoutes = speakers.map((speaker) => ({
-    url: `${BASE_URL}/speaker/${speaker.slug.current}`,
-    lastModified: new Date(speaker._updatedAt),
-    ...(speaker.photo?.asset && {
-      images: [
-        urlFor(speaker.photo.asset).format("jpg").width(800).height(450).url(),
-      ],
-    }),
-  }));
-
-  // Map events
-  const eventRoutes = events.map((event) => ({
-    url: `${BASE_URL}/partecipate/events/${event.slug.current}`,
-    lastModified: new Date(event._updatedAt),
-    ...((event.cover?.asset || event.background?.asset) && {
-      images: [
-        urlFor(event.cover?.asset || event.background?.asset)
-          .format("jpg")
-          .width(800)
-          .height(450)
-          .url(),
-      ],
-    }),
-  }));
-
-  // Map videos
-  const videoRoutes = videos.map((video) => ({
-    url: `${BASE_URL}/watch/${video.slug.current}`,
-    lastModified: new Date(video._updatedAt),
-  }));
-
-  return [
-    ...mainRoutes,
-    ...pageRoutes,
-    ...blogRoutes,
-    ...speakerRoutes,
-    ...eventRoutes,
-    ...videoRoutes,
-  ];
+  // Combine all routes and return
+  return [...mainRoutes, ...pageRoutes, ...scheduleRoutes];
 }
