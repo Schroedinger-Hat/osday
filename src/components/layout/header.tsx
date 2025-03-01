@@ -53,7 +53,7 @@ export function Header() {
             <Button
               asChild
               variant="default"
-              className="rounded-r-none font-title text-2xl text-white"
+              className="rounded-r-none font-title text-2xl"
             >
               <Link href="https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257">
                 Tickets
