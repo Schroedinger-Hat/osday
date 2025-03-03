@@ -4,7 +4,6 @@ import { urlFor } from "~/sanity/lib/image";
 import { sanityClient } from "~/sanity/lib/client";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Image } from "~/components/atoms/media/Image";
-import { Typography } from "~/components/atoms/typography/Typography";
 import type { Page } from "~/sanity/sanity.types";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { createPortableTextComponents } from "~/components/atoms/portableTextComponents";
@@ -26,7 +25,10 @@ export async function generateMetadata({ params }: PageProps) {
 
   return constructMetadata({
     title: page?.title,
-    description: page?.content?.[0]?.children?.[0]?.text,
+    description:
+      page?.content?.[0]?._type === "block"
+        ? page.content[0].children?.[0]?.text
+        : undefined,
     path: `/page/${slug}`,
   });
 }
