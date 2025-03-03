@@ -14,6 +14,7 @@ const footerSections = [
     links: [
       { href: "/venue", label: "How to reach us" },
       { href: "/volunteers", label: "Volunteers" },
+      { href: "/gamification", label: "Gamification" },
       { href: "/jobs", label: "Job Board" },
       { href: "/press-kit", label: "Press Kit" },
       { href: "/previous-events", label: "Previous Events" },

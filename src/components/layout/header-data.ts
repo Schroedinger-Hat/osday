@@ -42,6 +42,10 @@ export const secondaryRoutes = [
     href: "/volunteers",
     label: "Volunteers",
   },
+  {
+    href: "/gamification",
+    label: "Gamification",
+  },
 ];
 
 export const legalRoutes = [
