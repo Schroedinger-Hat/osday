@@ -85,6 +85,7 @@ export async function generateMetadata({ params }: PageProps) {
   return constructMetadata({
     title: talk?.title,
     description: talk?.abstract?.[0]?.children?.[0]?.text,
+    path: `/schedule/${id}`,
   });
 }
 

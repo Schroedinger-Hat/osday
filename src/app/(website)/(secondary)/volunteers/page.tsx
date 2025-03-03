@@ -11,6 +11,7 @@ export const metadata = constructMetadata({
   title: "Volunteers",
   description:
     "Join us as a volunteer for OSDay25 and help make open source more accessible",
+  path: "/volunteers",
 });
 
 export default function VolunteersPage() {

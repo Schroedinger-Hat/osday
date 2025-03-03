@@ -10,6 +10,7 @@ export const revalidate = 0;
 export const metadata = constructMetadata({
   title: "FAQs",
   description: "FAQs for OSDay25",
+  path: "/faqs",
 });
 
 export default function FAQsPage() {

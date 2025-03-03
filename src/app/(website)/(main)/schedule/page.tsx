@@ -15,6 +15,7 @@ export const revalidate = 0;
 export const metadata = constructMetadata({
   title: "Schedule",
   description: "Schedule for OSDay25",
+  path: "/schedule",
 });
 
 // Temporary background gradients until we have images

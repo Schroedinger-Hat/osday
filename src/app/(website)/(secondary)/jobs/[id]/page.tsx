@@ -12,6 +12,7 @@ import { Badge } from "~/components/ui/badge";
 import { Button } from "~/components/ui/button";
 import { Card } from "~/components/ui/card";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
+import { constructMetadata } from "~/lib/utils/metadata";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -68,6 +69,17 @@ async function getJob(id: string): Promise<JobPost | null> {
 
 interface PageProps {
   params: Promise<{ id: string }>;
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { id } = await params;
+  const job = await getJob(id);
+
+  return constructMetadata({
+    title: job?.title,
+    description: job?.description?.[0]?.children?.[0]?.text,
+    path: `/jobs/${id}`,
+  });
 }
 
 export default async function JobDetailPage({ params }: PageProps) {

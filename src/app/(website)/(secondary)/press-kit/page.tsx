@@ -19,6 +19,7 @@ import logoOsdayBackgroundPng from "~/assets/images/press-kit/logo-background.pn
 export const metadata = constructMetadata({
   title: "Press Kit",
   description: "Press Kit for OSDay25",
+  path: "/press-kit",
 });
 
 export default function PressKitPage() {

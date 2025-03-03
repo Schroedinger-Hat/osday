@@ -9,6 +9,7 @@ export const revalidate = 0;
 export const metadata = constructMetadata({
   title: "Speaker FAQs",
   description: "Speaker FAQs for OSDay25",
+  path: "/speaker-faqs",
 });
 
 export default function SpeakerFAQsPage() {
