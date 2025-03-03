@@ -13,20 +13,28 @@ interface PageProps {
   params: Promise<{ slug: string }>;
 }
 
-export const metadata = constructMetadata({
-  title: "Legal",
-  description: "Legal for OSDay25",
-});
+async function getPage(slug: string): Promise<Page | null> {
+  return sanityClient.fetch<Page | null>(
+    `*[_type == "page" && slug.current == $slug][0]`,
+    { slug },
+  );
+}
+
+export async function generateMetadata({ params }: PageProps) {
+  const { slug } = await params;
+  const page = await getPage(slug);
+
+  return constructMetadata({
+    title: page?.title,
+    description: page?.content?.[0]?.children?.[0]?.text,
+    path: `/page/${slug}`,
+  });
+}
 
 export default async function Page({ params }: PageProps) {
   const { slug } = await params;
 
-  const pageData = await sanityClient.fetch<Page | null>(
-    `*[_type == "page" && slug.current == $slug][0]`,
-    {
-      slug,
-    },
-  );
+  const pageData = await getPage(slug);
 
   if (!pageData) {
     notFound();

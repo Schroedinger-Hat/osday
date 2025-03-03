@@ -50,6 +50,7 @@ const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(
 export const metadata = constructMetadata({
   title: "Job Board",
   description: "Job Board for OSDay25",
+  path: "/jobs",
 });
 
 async function getPartnerJobs(): Promise<PartnerJobPost[]> {

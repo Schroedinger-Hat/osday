@@ -1,9 +1,10 @@
 import type { Metadata } from "next";
-import { BASE_URL } from "./withFullUrl";
+import { BASE_URL, withCanonicalUrl } from "./withFullUrl";
 
 interface MetadataProps {
   title?: string;
   description?: string;
+  path?: string;
   overrides?: Partial<Metadata>;
 }
 
@@ -14,16 +15,20 @@ const defaultDescription =
 export function constructMetadata({
   title = defaultTitle,
   description = defaultDescription,
+  path = "",
   overrides,
 }: MetadataProps = {}): Metadata {
   const metadata: Metadata = {
     title,
     description,
     metadataBase: new URL(BASE_URL),
+    alternates: {
+      canonical: withCanonicalUrl(path),
+    },
     openGraph: {
       type: "website",
       locale: "en_US",
-      url: BASE_URL,
+      url: withCanonicalUrl(path),
       siteName: "OSDay25",
       title,
       description,

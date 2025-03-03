@@ -12,6 +12,7 @@ export const revalidate = 0;
 export const metadata = constructMetadata({
   title: "Sponsors",
   description: "Sponsors for OSDay25",
+  path: "/sponsors",
 });
 
 export default function SponsorsPage() {

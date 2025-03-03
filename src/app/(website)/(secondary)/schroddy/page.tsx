@@ -10,6 +10,7 @@ import trophy2025Render from "~/assets/images/trophy2025-render.png";
 export const metadata = constructMetadata({
   title: "Schroddy",
   description: "Schroddy for OSDay25",
+  path: "/schroddy",
 });
 
 const SPECS_TEXT = `Codename: schroddy.stl

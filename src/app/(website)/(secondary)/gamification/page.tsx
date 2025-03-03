@@ -1,16 +1,18 @@
-import { SectionContainer } from "~/components/atoms/layout/SectionContainer"
-import { Heading } from "~/components/atoms/typography/Heading"
-import { Typography } from "~/components/atoms/typography/Typography"
-import { constructMetadata } from "~/lib/utils/metadata"
-import { Card } from "~/components/ui/card"
-import { Trophy, Star, Target, Award } from "lucide-react"
-import { Button } from "~/components/ui/button"
-import Link from "next/link"
+import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
+import { Heading } from "~/components/atoms/typography/Heading";
+import { Typography } from "~/components/atoms/typography/Typography";
+import { constructMetadata } from "~/lib/utils/metadata";
+import { Card } from "~/components/ui/card";
+import { Trophy, Star, Target, Award } from "lucide-react";
+import { Button } from "~/components/ui/button";
+import Link from "next/link";
 
 export const metadata = constructMetadata({
   title: "Gamification",
-  description: "Learn about the gamification elements at OSDay25 and how you can earn points and awards",
-})
+  description:
+    "Learn about the gamification elements at OSDay25 and how you can earn points and awards",
+  path: "/gamification",
+});
 
 export default function GamificationPage() {
   return (
@@ -45,8 +47,9 @@ export default function GamificationPage() {
               <Heading level={4}>Redeemable Awards</Heading>
             </div>
             <Typography variant="medium">
-              Redeem your points for special awards, from conference merchandise to
-              sponsor giveaways. Show off your awards on your social media profile!
+              Redeem your points for special awards, from conference merchandise
+              to sponsor giveaways. Show off your awards on your social media
+              profile!
             </Typography>
           </Card>
 
@@ -67,22 +70,27 @@ export default function GamificationPage() {
               <Heading level={4}>Special Rewards</Heading>
             </div>
             <Typography variant="medium">
-              Top performers will receive special recognition and exclusive prizes.
-              Stay engaged throughout the conference to maximize your chances!
+              Top performers will receive special recognition and exclusive
+              prizes. Stay engaged throughout the conference to maximize your
+              chances!
             </Typography>
           </Card>
         </div>
-        <div className="flex flex-col space-y-4 mt-8">
+        <div className="mt-8 flex flex-col space-y-4">
           <Heading level={3}>How to Participate</Heading>
           <Typography>
-            Getting started is easy! Use our mobile web app to track your progress and see where you stand
-            on the leaderboard.
+            Getting started is easy! Use our mobile web app to track your
+            progress and see where you stand on the leaderboard.
           </Typography>
-          <Link href="https://gamification.osday.dev" target="_blank" rel="noopener noreferrer">
+          <Link
+            href="https://gamification.osday.dev"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             <Button>Open Gamification App</Button>
           </Link>
         </div>
       </SectionContainer>
     </>
-  )
-} 
+  );
+}
