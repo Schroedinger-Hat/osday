@@ -33,6 +33,15 @@ export async function SponsorsList() {
     },
   );
 
+  const silverSponsors: Partner[] = await sanityFetch(
+    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "silver"] | order(orderRank asc)`,
+    undefined,
+    {
+      cacheDuration: 30,
+      tags: [getCacheTag.sponsors()],
+    },
+  );
+
   const communityPartners: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == false && nonBusinessType == "community"] | order(orderRank asc)`,
     undefined,
@@ -105,6 +114,33 @@ export async function SponsorsList() {
           </Typography>
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 md:grid-cols-3">
             {goldSponsors.map((sponsor) => (
+              <Link
+                href={sponsor.website ?? "#"}
+                key={sponsor._id}
+                className="flex items-center justify-center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={urlFor(sponsor.image).width(308).height(128).url()}
+                  alt={sponsor.name ?? ""}
+                  width={308}
+                  height={128}
+                  className="h-auto w-full object-contain shadow-md"
+                />
+              </Link>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {silverSponsors.length > 0 && (
+        <div>
+          <Typography variant="large" className="mb-2 font-semibold uppercase">
+            Silver Sponsors
+          </Typography>
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+            {silverSponsors.map((sponsor) => (
               <Link
                 href={sponsor.website ?? "#"}
                 key={sponsor._id}
