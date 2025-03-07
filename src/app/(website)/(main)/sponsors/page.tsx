@@ -31,7 +31,7 @@ export default function SponsorsPage() {
           Are you interested ? Send us an email! :)
         </Typography>
         <div className="flex gap-4">
-          <Link href="mailto:events@schoedinger-hat.org">
+          <Link href="mailto:osday@schroedinger-hat.org">
             <Button>Contact us</Button>
           </Link>
           <Link href="/assets/osday25-sponsorship.pdf">
