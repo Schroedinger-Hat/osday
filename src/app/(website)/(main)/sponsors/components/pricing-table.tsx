@@ -113,7 +113,7 @@ export default function PricingTable() {
         <div className="col-span-1" />
         <div className="p-4 text-center">
           <Link
-            href="mailto:events@schoedinger-hat.org"
+            href="mailto:osday@schroedinger-hat.org"
             className="italic text-red-500 hover:underline"
           >
             email us
@@ -122,7 +122,7 @@ export default function PricingTable() {
         <div className="p-4 text-center">
           <Typography variant="large">€ 1000</Typography>
           <Link
-            href="mailto:events@schoedinger-hat.org"
+            href="mailto:osday@schroedinger-hat.org"
             className="italic text-red-500 hover:underline"
           >
             email us
@@ -131,7 +131,7 @@ export default function PricingTable() {
         <div className="p-4 text-center">
           <Typography variant="large">€ 2000</Typography>
           <Link
-            href="mailto:events@schoedinger-hat.org"
+            href="mailto:osday@schroedinger-hat.org"
             className="italic text-red-500 hover:underline"
           >
             email us
@@ -161,7 +161,7 @@ export default function PricingTable() {
             </ul>
             <div className="mt-6 text-center">
               <Link
-                href="mailto:events@schoedinger-hat.org"
+                href="mailto:osday@schroedinger-hat.org"
                 className="italic text-red-500 hover:underline"
               >
                 email us
@@ -193,7 +193,7 @@ export default function PricingTable() {
             </ul>
             <div className="mt-6 text-center">
               <Link
-                href="mailto:events@schoedinger-hat.org"
+                href="mailto:osday@schroedinger-hat.org"
                 className="italic text-red-500 hover:underline"
               >
                 email us
@@ -225,7 +225,7 @@ export default function PricingTable() {
             </ul>
             <div className="mt-6 text-center">
               <Link
-                href="mailto:events@schoedinger-hat.org"
+                href="mailto:osday@schroedinger-hat.org"
                 className="italic text-red-500 hover:underline"
               >
                 email us
