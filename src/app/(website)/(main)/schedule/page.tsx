@@ -8,6 +8,7 @@ import type { TimelineItem } from "~/components/molecules/talks-table";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { constructMetadata } from "~/lib/utils/metadata";
+import { cn } from "~/lib/utils";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -31,8 +32,8 @@ function TimelineCard({ item }: { item: TimelineItem }) {
   const type = item.type as keyof typeof TYPE_BACKGROUNDS;
   const backgroundGradient = TYPE_BACKGROUNDS[type] ?? TYPE_BACKGROUNDS.talk;
 
-  // Only make talks and keynotes clickable
-  const isClickable = ["talk", "keynote"].includes(type);
+  // Only make talks clickable
+  const isClickable = type === "talk";
 
   const content = (
     <>
@@ -47,12 +48,17 @@ function TimelineCard({ item }: { item: TimelineItem }) {
         />
       ) : (
         <div
-          className={`absolute inset-0 bg-gradient-to-br ${backgroundGradient} transition-transform duration-300 group-hover:scale-105`}
+          className={`absolute inset-0 bg-gradient-to-br ${backgroundGradient} opacity-50 transition-transform duration-300 group-hover:scale-105`}
         />
       )}
 
       {/* Content */}
-      <div className="absolute inset-0 m-2 flex flex-col justify-between rounded-sm bg-black/80 p-4">
+      <div
+        className={cn(
+          "absolute inset-0 m-2 flex flex-col justify-between rounded-sm bg-black/80 p-4",
+          !isClickable && "border-2 border-dashed border-white",
+        )}
+      >
         <div className="space-y-3">
           <time className="block font-title text-2xl tracking-wider text-white/90">
             {new Intl.DateTimeFormat("it-IT", {
@@ -83,9 +89,10 @@ function TimelineCard({ item }: { item: TimelineItem }) {
     </>
   );
 
-  const className = `group relative aspect-[4/3] overflow-hidden rounded-md shadow-md ${
-    isClickable ? "cursor-pointer transition hover:scale-[1.02]" : ""
-  }`;
+  const className = cn(
+    "group relative aspect-[4/3] overflow-hidden rounded-md shadow-md",
+    isClickable && "cursor-pointer transition hover:scale-[1.02]",
+  );
 
   if (isClickable) {
     return (
@@ -96,6 +103,16 @@ function TimelineCard({ item }: { item: TimelineItem }) {
   }
 
   return <div className={className}>{content}</div>;
+}
+
+function HourGroup({ items }: { items: TimelineItem[] }) {
+  return (
+    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {items.map((item) => (
+        <TimelineCard key={item._id} item={item} />
+      ))}
+    </div>
+  );
 }
 
 export default async function SchedulePage() {
@@ -122,6 +139,26 @@ export default async function SchedulePage() {
     },
   );
 
+  // Group items by hour
+  const groupedTimeline = timeline.reduce<Record<string, TimelineItem[]>>(
+    (acc, item) => {
+      const hour = new Intl.DateTimeFormat("it-IT", {
+        hour: "2-digit",
+        timeZone: "Europe/Rome",
+      }).format(new Date(item.startDateTime));
+
+      if (!acc[hour]) {
+        acc[hour] = [];
+      }
+      acc[hour].push(item);
+      return acc;
+    },
+    {},
+  );
+
+  // Sort hours
+  const sortedHours = Object.keys(groupedTimeline).sort();
+
   return (
     <>
       <SectionContainer withBackground backgroundType="hero">
@@ -132,9 +169,9 @@ export default async function SchedulePage() {
       </SectionContainer>
 
       <SectionContainer>
-        <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {timeline.map((item) => (
-            <TimelineCard key={item._id} item={item} />
+        <div className="space-y-8">
+          {sortedHours.map((hour) => (
+            <HourGroup key={hour} items={groupedTimeline[hour] ?? []} />
           ))}
         </div>
       </SectionContainer>
