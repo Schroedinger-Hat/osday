@@ -4,7 +4,7 @@ import Link from "next/link";
 import { Typography } from "../atoms/typography/Typography";
 import { Paragraph } from "../atoms/typography/Paragraph";
 import { Heading } from "../atoms/typography/Heading";
-import { Linkedin, Youtube } from "lucide-react";
+import { Linkedin, Youtube, Send } from "lucide-react";
 import { useFontContext } from "~/lib/context/font-context";
 import { cn } from "~/lib/utils";
 
@@ -87,6 +87,13 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground"
                 >
                   <Youtube className="h-5 w-5" />
+                  <span className="sr-only">YouTube</span>
+                </Link>
+                <Link
+                  href="https://t.me/+KCvIgZtR9BY1MDFk"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  <Send className="h-5 w-5" />
                   <span className="sr-only">YouTube</span>
                 </Link>
               </div>
