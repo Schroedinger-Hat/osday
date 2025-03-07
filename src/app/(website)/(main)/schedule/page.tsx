@@ -57,30 +57,37 @@ function TimelineCard({ item }: { item: TimelineItem }) {
       <div
         className={cn(
           "absolute inset-0 m-2 flex flex-col justify-between rounded-sm bg-black/80 p-4",
-          !isClickable && "border-2 border-dashed border-white",
+          !isClickable && "border-2 border-dashed border-white bg-black/40",
         )}
       >
         <div className="space-y-3">
-          <time className="block font-title text-2xl tracking-wider text-white/90">
+          <Heading
+            level={3}
+            className="mb-0 text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,0.50)] md:mb-0"
+          >
             {asFormattedTime(item.startDateTime)}
-          </time>
+          </Heading>
 
-          <div className="space-y-2">
-            <h3 className="text-xl font-semibold leading-tight text-white">
-              {item.title}
-            </h3>
-          </div>
+          <Typography variant="h4" className="leading-tight text-white">
+            {item.title}
+          </Typography>
         </div>
 
         {item.author && (
-          <div className="rounded-full py-1.5 text-sm font-medium text-white/90 backdrop-blur-sm">
+          <Typography
+            variant="small"
+            className="rounded-md bg-white/20 p-2 font-semibold text-white/90"
+          >
             {getAuthorFullName(item.author)}
-          </div>
+          </Typography>
         )}
         {!item.author && (
-          <span className="inline-block rounded bg-white/20 px-2.5 py-1 text-sm font-medium text-white backdrop-blur-sm">
+          <Typography
+            variant="small"
+            className="rounded-md bg-white/20 p-2 font-semibold text-white/90"
+          >
             {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
-          </span>
+          </Typography>
         )}
       </div>
     </>
@@ -104,7 +111,7 @@ function TimelineCard({ item }: { item: TimelineItem }) {
 
 function HourGroup({ items }: { items: TimelineItem[] }) {
   return (
-    <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div className="grid grid-cols-1 gap-4 border-b-2 border-dotted border-primary/30 pb-4 sm:grid-cols-2 lg:grid-cols-3">
       {items.map((item) => (
         <TimelineCard key={item._id} item={item} />
       ))}
@@ -139,10 +146,7 @@ export default async function SchedulePage() {
   // Group items by hour
   const groupedTimeline = timeline.reduce<Record<string, TimelineItem[]>>(
     (acc, item) => {
-      const hour = new Intl.DateTimeFormat("it-IT", {
-        hour: "2-digit",
-        timeZone: "Europe/Rome",
-      }).format(new Date(item.startDateTime));
+      const hour = asFormattedTime(item.startDateTime, true);
 
       if (!acc[hour]) {
         acc[hour] = [];
@@ -166,7 +170,7 @@ export default async function SchedulePage() {
       </SectionContainer>
 
       <SectionContainer>
-        <div className="space-y-8">
+        <div className="space-y-4">
           {sortedHours.map((hour) => (
             <HourGroup key={hour} items={groupedTimeline[hour] ?? []} />
           ))}
