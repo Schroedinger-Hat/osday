@@ -94,7 +94,7 @@ export function Footer() {
                   className="text-muted-foreground hover:text-foreground"
                 >
                   <Send className="h-5 w-5" />
-                  <span className="sr-only">YouTube</span>
+                  <span className="sr-only">Telegram</span>
                 </Link>
               </div>
             </div>
