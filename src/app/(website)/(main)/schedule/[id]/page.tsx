@@ -11,6 +11,7 @@ import Link from "next/link";
 import { ArrowLeft01Icon } from "hugeicons-react";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { constructMetadata } from "~/lib/utils/metadata";
+import { asFormattedTime } from "~/lib/utils/date";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -103,9 +104,8 @@ export default async function TalkDetailPage({ params }: PageProps) {
         <div className="relative">
           <div className="space-y-4">
             <time className="block font-title text-2xl tracking-wider text-white/90">
-              {format(new Date(talk.startDateTime), "HH:mm")}
-              {talk.endDateTime &&
-                ` - ${format(new Date(talk.endDateTime), "HH:mm")}`}
+              {asFormattedTime(talk.startDateTime)}
+              {talk.endDateTime && ` - ${asFormattedTime(talk.endDateTime)}`}
             </time>
             <Heading level={1}>{talk.title}</Heading>
             {talk.type !== "talk" && (
