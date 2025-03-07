@@ -176,7 +176,7 @@ export default function VenuePage() {
 
         <Typography variant="muted" className="mt-4 border-t pt-4">
           If you need help, or need more information send us an{" "}
-          <Link href="mailto:info@opensourceday.it" className="underline">
+          <Link href="mailto:osday@schroedinger-hat.org" className="underline">
             email
           </Link>
         </Typography>
