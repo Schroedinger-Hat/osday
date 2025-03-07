@@ -8,6 +8,7 @@ import type { TimelineItem } from "~/components/molecules/talks-table";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { constructMetadata } from "~/lib/utils/metadata";
+import { asFormattedTime } from "~/lib/utils/date";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -55,11 +56,7 @@ function TimelineCard({ item }: { item: TimelineItem }) {
       <div className="absolute inset-0 m-2 flex flex-col justify-between rounded-sm bg-black/80 p-4">
         <div className="space-y-3">
           <time className="block font-title text-2xl tracking-wider text-white/90">
-            {new Intl.DateTimeFormat("it-IT", {
-              hour: "2-digit",
-              minute: "2-digit",
-              timeZone: "Europe/Rome",
-            }).format(new Date(item.startDateTime))}
+            {asFormattedTime(item.startDateTime)}
           </time>
 
           <div className="space-y-2">

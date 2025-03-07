@@ -2,7 +2,7 @@ import { getAuthorFullName } from "~/lib/sanity-cms";
 import type { Author as SanityAuthor } from "~/sanity/sanity.types";
 import { Typography } from "../atoms/typography/Typography";
 import Link from "next/link";
-
+import { asFormattedTime } from "~/lib/utils/date";
 export interface TimelineItem {
   _id: string;
   _type: "timeline";
@@ -47,11 +47,7 @@ export function TalksTable({ talks }: TalksTableProps) {
             <div className="flex gap-6 md:gap-8">
               <div className="w-[62px] justify-end text-right md:w-[82px]">
                 <div className="text-bold text-sm font-black md:text-base">
-                  {new Intl.DateTimeFormat("it-IT", {
-                    hour: "2-digit",
-                    minute: "2-digit",
-                    timeZone: "Europe/Rome",
-                  }).format(new Date(item.startDateTime))}
+                  {asFormattedTime(item.startDateTime)}
                 </div>
               </div>
               <div className="flex flex-1 flex-col gap-1">
