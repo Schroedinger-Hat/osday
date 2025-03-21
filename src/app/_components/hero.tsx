@@ -188,7 +188,7 @@ async function DayOfEvent() {
             </div>
 
             <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="https://www.youtube.com/live/YOUR_STREAM_ID">
+              <Link href="https://www.youtube.com/live/_IdH5YTBAGs?si=ntYP76pcJOpsKA8M">
                 <Button variant="default">Join the Stream</Button>
               </Link>
             </div>
@@ -229,7 +229,7 @@ async function DayOfEvent() {
           </div>
 
           <div className="flex flex-col gap-4 sm:flex-row">
-            <Link href="https://www.youtube.com/live/YOUR_STREAM_ID">
+            <Link href="https://www.youtube.com/live/_IdH5YTBAGs?si=ntYP76pcJOpsKA8M">
               <Button variant="default">Join the Stream</Button>
             </Link>
           </div>
@@ -270,7 +270,7 @@ async function DayOfEvent() {
         </div>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Link href="https://www.youtube.com/live/YOUR_STREAM_ID">
+          <Link href="https://www.youtube.com/live/_IdH5YTBAGs?si=ntYP76pcJOpsKA8M">
             <Button variant="default">Join the Stream</Button>
           </Link>
         </div>
