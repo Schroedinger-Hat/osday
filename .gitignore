@@ -48,3 +48,6 @@ yarn-error.log*
 # idea files
 .idea
 .history
+
+# sanity
+.sanity
