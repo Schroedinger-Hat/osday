@@ -11,7 +11,7 @@ import { getAuthorFullName } from "~/lib/sanity-cms";
 import type { Author } from "~/sanity/sanity.types";
 import { Button } from "~/components/ui/button";
 
-import eventRecap from "~/assets/images/osday25/event-recap.jpg";
+import eventRecap2025 from "~/assets/images/osday25/event-recap-2025.jpg";
 import defaultEventImage from "~/assets/images/venue/auditorium.jpg";
 
 const stats = [
@@ -284,7 +284,7 @@ function AfterEvent() {
     <div className="grid grid-cols-1 items-center gap-8 md:grid-cols-2">
       <div className="relative aspect-video shadow-md">
         <Image
-          src={eventRecap}
+          src={eventRecap2025}
           alt="OSDay25 Event Recap"
           fill
           className="rounded-md object-cover"
