@@ -13,7 +13,7 @@
   <h1>OpenSourceDay</h1>
 
   <a href="https://github.com/Schroedinger-Hat/osday">
-    <img src="public/sh.png" alt="Logo" width="80" height="80">
+    <img src="src/assets/images/schroddy-sticker.png" alt="Logo" width="200" height="160">
   </a>
 
   <p align="center">

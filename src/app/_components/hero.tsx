@@ -303,7 +303,7 @@ function AfterEvent() {
         </div>
 
         <div className="flex flex-col gap-4 sm:flex-row">
-          <Link href="https://docs.google.com/forms/d/e/1FAIpQLSdmzGVDF7x1IwUUO_PiaofzvWphaYNUnT-hDZ3CbDbQBVpZGQ/viewform?usp=header">
+          <Link href="https://docs.google.com/forms/d/e/1FAIpQLScTCqbkSk4OQOVppSJh9cgJGSB624exJaDqskDZk9SSAFb3FQ/viewform?usp=header">
             <Button variant="default">Leave Feedback</Button>
           </Link>
         </div>
