@@ -1,5 +1,0 @@
-version: "1"
-rules:
-  - base: 2025
-    upstream: Schroedinger-Hat:2025
-    mergeMethod: hardreset

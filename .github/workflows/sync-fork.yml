@@ -1,0 +1,35 @@
+name: Sync Fork with Upstream
+
+on:
+  schedule:
+    # Run every 5 minutes
+    - cron: '*/5 * * * *'
+  # Allow manual triggering
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    name: Sync Fork with Upstream
+    # Only run on forks, not on the original repository
+    if: github.repository != 'Schrodinger-Hat/osday'
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.event.repository.default_branch }}
+
+      - name: Add upstream remote
+        run: |
+          git remote add upstream https://github.com/Schrodinger-Hat/osday.git
+          git fetch upstream
+
+      - name: Sync fork with upstream default branch
+        run: |
+          git checkout ${{ github.event.repository.default_branch }}
+          git merge upstream/${{ github.event.repository.default_branch }}
+          git push origin ${{ github.event.repository.default_branch }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
