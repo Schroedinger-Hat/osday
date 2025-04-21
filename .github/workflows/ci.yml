@@ -3,7 +3,7 @@ name: CI
 on:
   push:
     branches:
-      - feature/ci-test
+      - 2025
 
 jobs:
   lint-fix:
