@@ -12,7 +12,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Sync Fork with Upstream
     # Only run on forks, not on the original repository
-    if: github.repository != 'Schrodinger-Hat/osday'
+    if: github.repository != 'Schroedinger-Hat/osday'
 
     steps:
       - name: Checkout repository
@@ -23,7 +23,7 @@ jobs:
 
       - name: Add upstream remote
         run: |
-          git remote add upstream https://github.com/Schrodinger-Hat/osday.git
+          git remote add upstream https://github.com/Schroedinger-Hat/osday.git
           git fetch upstream
 
       - name: Sync fork with upstream default branch
