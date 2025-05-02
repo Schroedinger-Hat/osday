@@ -42,6 +42,7 @@
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contributing">Contributing</a></li>
     <li><a href="#contact">Contact</a></li>
+    <li><a href="#maintainers">Maintainers</a></li>
   </ol>
 </details>
 
