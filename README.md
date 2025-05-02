@@ -122,3 +122,45 @@ Project Link: [https://github.com/Schroedinger-Hat/osday](https://github.com/Sch
 [stars-url]: https://github.com/Schroedinger-Hat/osday/stargazers
 [issues-shield]: https://img.shields.io/github/issues/Schroedinger-Hat/osday.svg?style=for-the-badge
 [issues-url]: https://github.com/Schroedinger-Hat/osday/issues
+
+## Maintainers
+
+<div align="center">
+  <table>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/TheJoin95">
+          <img src="https://github.com/TheJoin95.png" width="100px;" alt="Miki Lombardi"/>
+          <br />
+          <sub>
+            <b>Miki Lombardi</b>
+          </sub>
+        </a>
+        <br />
+        <span>💻 Maintainer</span>
+      </td>
+      <td align="center">
+        <a href="https://github.com/Readpato">
+          <img src="https://github.com/Readpato.png" width="100px;" alt="Patrick Raedler"/>
+          <br />
+          <sub>
+            <b>Patrick Raedler</b>
+          </sub>
+        </a>
+        <br />
+        <span>💻 Maintainer</span>
+      </td>
+      <td align="center">
+        <a href="https://github.com/LobeTia">
+          <img src="https://github.com/LobeTia.png" width="100px;" alt="Mattia Lobertini"/>
+          <br />
+          <sub>
+            <b>Mattia Lobertini</b>
+          </sub>
+        </a>
+        <br />
+        <span>💻 Maintainer</span>
+      </td>
+    </tr>
+  </table>
+</div>
