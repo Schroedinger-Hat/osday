@@ -20,6 +20,9 @@ export const env = createEnv({
     NODE_ENV: z
       .enum(["development", "test", "production"])
       .default("development"),
+    SANITY_API_TOKEN: z.string().optional(),
+    SANITY_API_VERSION: z.string().optional(),
+    ALGOLIA_SEARCH_API_KEY: z.string().optional(),
   },
 
   /**
@@ -40,6 +43,9 @@ export const env = createEnv({
         "NEXT_PUBLIC_GOOGLE_MAPS_API_KEY is required in production",
       ),
     NEXT_PUBLIC_GA_ID: z.string().optional(),
+    NEXT_PUBLIC_ALGOLIA_APP_ID: z.string().optional(),
+    NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: z.string().optional(),
+    NEXT_PUBLIC_ALGOLIA_INDEX_NAME: z.string().optional(),
   },
 
   /**
@@ -55,6 +61,12 @@ export const env = createEnv({
     NEXT_PUBLIC_GOOGLE_MAPS_API_KEY:
       process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY,
     NEXT_PUBLIC_GA_ID: process.env.NEXT_PUBLIC_GA_ID,
+    NEXT_PUBLIC_ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_ID,
+    NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY: process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY,
+    NEXT_PUBLIC_ALGOLIA_INDEX_NAME: process.env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME,
+    SANITY_API_TOKEN: process.env.SANITY_API_TOKEN,
+    SANITY_API_VERSION: process.env.SANITY_API_VERSION,
+    ALGOLIA_SEARCH_API_KEY: process.env.ALGOLIA_SEARCH_API_KEY,
   },
   /**
    * Run `build` or `dev` with `SKIP_ENV_VALIDATION` to skip env validation. This is especially

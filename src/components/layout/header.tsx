@@ -2,11 +2,18 @@
 
 import * as React from "react";
 import Link from "next/link";
+import dynamic from "next/dynamic";
 import { Button } from "~/components/ui/button";
 import { useScrollDirection } from "~/hooks/use-scroll-direction";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "./mobile-nav";
 import { DesktopNav } from "./desktop-nav";
+
+// Import search button with client-side only rendering
+const SearchButton = dynamic(
+  () => import("~/components/search/search-button").then((mod) => mod.SearchButton),
+  { ssr: false }
+);
 
 function useScrollPosition() {
   const [scrollPosition, setScrollPosition] = React.useState(0);
@@ -49,7 +56,8 @@ export function Header() {
             <span className="font-title text-3xl text-white">OSDAY25</span>
           </Link>
 
-          <div className="flex items-center">
+          <div className="flex items-center space-x-2">
+            <SearchButton />
             <Button
               asChild
               variant="default"
