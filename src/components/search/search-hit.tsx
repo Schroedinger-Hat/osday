@@ -1,38 +1,38 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { useRouter } from "next/navigation"
-import type { Hit } from "instantsearch.js"
+import Link from "next/link";
+import { useRouter } from "next/navigation";
+import type { Hit } from "instantsearch.js";
 
 // Define the structure of a search hit
 interface SearchHitData {
-  objectID: string
-  title: string
-  url: string
-  type: string
-  description?: string
-  image?: string
-  lastModified?: string
-  [key: string]: any // Add index signature for type compatibility
+  objectID: string;
+  title: string;
+  url: string;
+  type: string;
+  description?: string;
+  image?: string;
+  lastModified?: string;
+  [key: string]: any; // Add index signature for type compatibility
 }
 
 // Component for rendering individual search result hits
 interface SearchHitProps {
-  hit: Hit<SearchHitData>
-  onClick: () => void
+  hit: Hit<SearchHitData>;
+  onClick: () => void;
 }
 
 export function SearchHit({ hit, onClick }: SearchHitProps) {
-  const router = useRouter()
+  const router = useRouter();
 
   const handleClick = () => {
-    onClick()
-    router.push(hit.url)
-  }
+    onClick();
+    router.push(hit.url);
+  };
 
   // Format the type for display
-  const typeDisplay = hit.type?.replace(/_/g, " ")
-  
+  const typeDisplay = hit.type?.replace(/_/g, " ");
+
   return (
     <Link
       href={hit.url}
@@ -57,5 +57,5 @@ export function SearchHit({ hit, onClick }: SearchHitProps) {
         )}
       </div>
     </Link>
-  )
-} 
+  );
+}

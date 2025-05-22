@@ -4,51 +4,52 @@
  * Run with: npx tsx src/app/api/algolia/reindex/trigger-reindex.ts
  */
 
-import dotenv from "dotenv"
+import dotenv from "dotenv";
 
 // Load environment variables
 try {
-  dotenv.config()
+  dotenv.config();
 } catch (err) {
-  console.warn("Failed to load .env file:", err)
+  console.warn("Failed to load .env file:", err);
 }
 
 // Get the API key from environment or use default
-const API_KEY = process.env.ALGOLIA_REINDEX_API_KEY || "osday-secret-key"
+const API_KEY = process.env.ALGOLIA_REINDEX_API_KEY || "osday-secret-key";
 
 // Set the base URL (use localhost for development, production URL otherwise)
-const BASE_URL = process.env.VERCEL_URL 
+const BASE_URL = process.env.VERCEL_URL
   ? `https://${process.env.VERCEL_URL}`
-  : 'http://localhost:3000'
+  : "http://localhost:3000";
 
 async function triggerReindex() {
-  console.log("🔄 Triggering Algolia reindexing via API endpoint...")
-  
+  console.log("🔄 Triggering Algolia reindexing via API endpoint...");
+
   try {
     const response = await fetch(`${BASE_URL}/api/algolia/reindex`, {
-      method: 'POST',
+      method: "POST",
       headers: {
-        'Content-Type': 'application/json',
-        'x-api-key': API_KEY
-      }
-    })
-    
+        "Content-Type": "application/json",
+        "x-api-key": API_KEY,
+      },
+    });
+
     if (!response.ok) {
-      const error = await response.json()
-      throw new Error(`API responded with ${response.status}: ${error.message || error.error || JSON.stringify(error)}`)
+      const error = await response.json();
+      throw new Error(
+        `API responded with ${response.status}: ${error.message || error.error || JSON.stringify(error)}`,
+      );
     }
-    
-    const result = await response.json()
-    
-    console.log("✅ Reindexing successful:")
-    console.log(`- ${result.count} items indexed`)
-    console.log(`- ${result.message}`)
-    
+
+    const result = await response.json();
+
+    console.log("✅ Reindexing successful:");
+    console.log(`- ${result.count} items indexed`);
+    console.log(`- ${result.message}`);
   } catch (error) {
-    console.error("❌ Reindexing failed:", error)
-    process.exit(1)
+    console.error("❌ Reindexing failed:", error);
+    process.exit(1);
   }
 }
 
 // Run the function
-triggerReindex() 
+triggerReindex();

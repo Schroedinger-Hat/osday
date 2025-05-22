@@ -11,8 +11,9 @@ import { DesktopNav } from "./desktop-nav";
 
 // Import search button with client-side only rendering
 const SearchButton = dynamic(
-  () => import("~/components/search/search-button").then((mod) => mod.SearchButton),
-  { ssr: false }
+  () =>
+    import("~/components/search/search-button").then((mod) => mod.SearchButton),
+  { ssr: false },
 );
 
 function useScrollPosition() {
