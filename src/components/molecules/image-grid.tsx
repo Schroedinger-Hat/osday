@@ -13,17 +13,10 @@ interface ImageGridProps {
   title: string;
 }
 
-const images = [
-  gallery1,
-  gallery2,
-  gallery3,
-  gallery4,
-  gallery5,
-];
+const images = [gallery1, gallery2, gallery3, gallery4, gallery5];
 
 export default function ImageGrid({ title }: ImageGridProps) {
-
-    // Define grid classes for each image index
+  // Define grid classes for each image index
   const gridClasses = [
     // index 0
     "md:row-span-2 md:col-span-1 w-full h-full object-cover rounded-md shadow-md",
@@ -45,17 +38,17 @@ export default function ImageGrid({ title }: ImageGridProps) {
       <Heading level={2} className="italic">
         {title}
       </Heading>
-      <div className="grid grid-cols-1 gap-4 md:grid-cols-4 grid-rows-5 md:grid-rows-2">
-      {displayedImages.map((img, i) => {
-        return (
-          <Image
-            key={i}
-            src={img}
-            alt={`Image ${i + 1} from ${title}`}
-            className={gridClasses[i] || gridClasses[0]}
-          />
-        );
-      })}
+      <div className="grid grid-cols-1 grid-rows-5 gap-4 md:grid-cols-4 md:grid-rows-2">
+        {displayedImages.map((img, i) => {
+          return (
+            <Image
+              key={i}
+              src={img}
+              alt={`Image ${i + 1} from ${title}`}
+              className={gridClasses[i] || gridClasses[0]}
+            />
+          );
+        })}
       </div>
       <div className="mt-8 text-center">
         <Link href="https://photos.app.goo.gl/R8aE9RZuZ6cMM7NH9">
