@@ -15,6 +15,7 @@ import auditorium from "~/assets/images/venue/auditorium.jpg";
 import { SchroddySticker } from "~/components/atoms/schroddy-sticker";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { Button } from "~/components/ui/button";
+import ImageGrid from "~/components/molecules/image-grid";
 
 import tShirt from "~/assets/images/osday25/tee.png";
 
@@ -149,6 +150,8 @@ export default async function HomePage() {
           </div>
         </div>
       </SectionContainer>
+
+      <ImageGrid title="Memories from 0sday 2025 Edition" />
 
       <SectionContainer withBackground backgroundType="hero">
         <Heading level={2}>A jam-packed one day schedule</Heading>
