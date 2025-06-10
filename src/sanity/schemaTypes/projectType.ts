@@ -1,4 +1,4 @@
-import { defineType } from "sanity";
+import { defineType } from "sanity"
 
 export const projectType = defineType({
   name: "project",
@@ -10,6 +10,12 @@ export const projectType = defineType({
       title: "Title",
       type: "string",
       validation: (Rule) => Rule.required(),
+    },
+    {
+      name: "sortIndex",
+      title: "Appearance in list (the lowest, the better)",
+      type: "number",
+      validation: (Rule) => Rule.required().min(0).max(1000),
     },
     {
       name: "slug",
@@ -43,10 +49,8 @@ export const projectType = defineType({
         Rule.uri({
           scheme: ["https"],
         }).custom((url: string) => {
-          if (!url) return true;
-          return url.startsWith("https://github.com/")
-            ? true
-            : "Must be a GitHub URL";
+          if (!url) return true
+          return url.startsWith("https://github.com/") ? true : "Must be a GitHub URL"
         }),
     },
     {
@@ -101,6 +105,18 @@ export const projectType = defineType({
       },
       validation: (Rule) => Rule.required(),
     },
+    {
+      name: "maintainers",
+      title: "Maintainers",
+      type: "array",
+      of: [
+        {
+          type: "reference",
+          to: [{ type: "teamMember" }],
+        },
+      ],
+      validation: (Rule) => Rule.required().min(1).max(3),
+    },
   ],
   preview: {
     select: {
@@ -112,7 +128,7 @@ export const projectType = defineType({
         title,
         subtitle: "",
         media,
-      };
+      }
     },
   },
-});
+})
