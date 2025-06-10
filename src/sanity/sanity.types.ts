@@ -61,6 +61,95 @@ export type SanityFileAsset = {
   source?: SanityAssetSourceData;
 };
 
+export type PartnerJobPost = {
+  _id: string;
+  _type: "partnerJobPost";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  title?: string;
+  description?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  partner?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "partner";
+  };
+  tags?: Array<string>;
+  publishedAt?: string;
+  isActive?: boolean;
+  ctaConfig?: {
+    title?: string;
+    link?: string;
+  };
+};
+
+export type Timeline = {
+  _id: string;
+  _type: "timeline";
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  track?: 1 | 2 | 3 | 4;
+  backgroundImage?: {
+    asset?: {
+      _ref: string;
+      _type: "reference";
+      _weak?: boolean;
+      [internalGroqTypeReferenceTo]?: "sanity.imageAsset";
+    };
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    _type: "image";
+  };
+  startDateTime?: string;
+  endDateTime?: string;
+  title?: string;
+  titleShort?: string;
+  type?: "logistic" | "keynote" | "talk" | "Break" | "drink";
+  abstract?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: "span";
+      _key: string;
+    }>;
+    style?: "normal" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "blockquote";
+    listItem?: "bullet" | "number";
+    markDefs?: Array<{
+      href?: string;
+      _type: "link";
+      _key: string;
+    }>;
+    level?: number;
+    _type: "block";
+    _key: string;
+  }>;
+  speaker?: {
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    [internalGroqTypeReferenceTo]?: "author";
+  };
+};
+
 export type BlogPost = {
   _id: string;
   _type: "blogPost";
@@ -175,6 +264,7 @@ export type Project = {
   _updatedAt: string;
   _rev: string;
   title?: string;
+  sortIndex?: number;
   slug?: Slug;
   description?: Array<{
     children?: Array<{
@@ -201,6 +291,13 @@ export type Project = {
   launchedAt?: string;
   lookingFor?: Array<string>;
   language?: "typescript" | "javascript" | "python" | "go" | "rust";
+  maintainers?: Array<{
+    _ref: string;
+    _type: "reference";
+    _weak?: boolean;
+    _key: string;
+    [internalGroqTypeReferenceTo]?: "teamMember";
+  }>;
 };
 
 export type Faq = {
@@ -241,6 +338,7 @@ export type TeamMember = {
   name?: string;
   surname?: string;
   role?: string;
+  githubUrl?: string;
   image?: {
     asset?: {
       _ref: string;
@@ -680,6 +778,8 @@ export type AllSanitySchemaTypes =
   | SanityImagePalette
   | SanityImageDimensions
   | SanityFileAsset
+  | PartnerJobPost
+  | Timeline
   | BlogPost
   | JobPost
   | Project

@@ -1,4 +1,3 @@
-import { format } from "date-fns";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";

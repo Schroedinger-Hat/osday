@@ -20,6 +20,9 @@
     "preview": "next build && next start",
     "start": "next start",
     "typecheck": "tsc --noEmit",
+    "sanity:pipeline": "cd src/sanity && npm run sanity:schema && npm run sanity:types",
+    "sanity:schema": "cd src/sanity && sanity schema extract",
+    "sanity:types": "cd src/sanity && sanity typegen generate",
     "search:standalone": "tsx src/app/api/algolia/reindex/standalone-reindex.ts"
   },
   "dependencies": {
