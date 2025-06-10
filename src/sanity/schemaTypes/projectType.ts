@@ -1,4 +1,4 @@
-import { defineType } from "sanity"
+import { defineType } from "sanity";
 
 export const projectType = defineType({
   name: "project",
@@ -49,8 +49,10 @@ export const projectType = defineType({
         Rule.uri({
           scheme: ["https"],
         }).custom((url: string) => {
-          if (!url) return true
-          return url.startsWith("https://github.com/") ? true : "Must be a GitHub URL"
+          if (!url) return true;
+          return url.startsWith("https://github.com/")
+            ? true
+            : "Must be a GitHub URL";
         }),
     },
     {
@@ -128,7 +130,7 @@ export const projectType = defineType({
         title,
         subtitle: "",
         media,
-      }
+      };
     },
   },
-})
+});
