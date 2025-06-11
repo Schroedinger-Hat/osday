@@ -43,7 +43,7 @@ export default function PreviousEventsPage() {
             </div>
             <Heading level={3}>OSDay 23</Heading>
           </Link>
-          <Link href="https://osday.dev/edition2021">
+          <Link href="https://2024.osday.dev/edition2021">
             <div className="aspect-video overflow-hidden rounded-md shadow-md">
               <Image src={osday21} alt="Event 3" />
             </div>
