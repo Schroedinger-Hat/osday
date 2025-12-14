@@ -185,7 +185,7 @@ export default async function JobDetailPage({ params }: PageProps) {
 }
 
 export async function generateStaticParams() {
-  const jobs = await sanityFetch<{ _id: string }[]>(
+  const jobs = await sanityFetch<string[]>(
     groq`*[_type == "partnerJobPost" && isActive == true]._id`,
     undefined,
     {
@@ -193,7 +193,7 @@ export async function generateStaticParams() {
       tags: [getCacheTag.jobs()],
     },
   );
-  return jobs.map((job) => ({
-    id: job._id,
+  return jobs.map((id) => ({
+    id,
   }));
 }
