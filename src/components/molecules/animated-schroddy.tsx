@@ -17,7 +17,6 @@ export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
         transition={{
           delay: 4,
           duration: 0.6,
-          type: "ease",
           ease: ["easeOut"],
         }}
         className="absolute -right-48 top-24"
