@@ -62,7 +62,7 @@ In 2023 we get back on organising the open source day but bigger. 300 in-person 
 
 In 2024 we wanted to have fun so we decided to create a multi track in a two days conference with people coming all around the globe with more than 32 speakers. Still 10k budget.
 
-In 2025..?
+In 2027..?
 
 You can find some event photos on [Flickr](https://www.flickr.com/photos/197981994@N04/albums/with/72177720315430384) and the replays on our [YouTube channel](https://youtube.com/c/SchrödingerHat).
 
