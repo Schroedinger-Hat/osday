@@ -50,8 +50,8 @@ export async function POST(request: Request) {
 
         const title =
           path === "/"
-            ? "Open Source Day 2025 - Home"
-            : `${segments[segments.length - 1]?.replace(/-/g, " ")} - Open Source Day 2025`;
+            ? "Open Source Day 2026 - Home"
+            : `${segments[segments.length - 1]?.replace(/-/g, " ")} - Open Source Day 2026`;
 
         return {
           objectID: path,
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
           path,
           title: toTitleCase(title),
           type,
-          description: `Open Source Day 2025 - ${toTitleCase(type)}`,
+          description: `Open Source Day 2026 - ${toTitleCase(type)}`,
           lastModified: new Date().toISOString(),
         };
       }),

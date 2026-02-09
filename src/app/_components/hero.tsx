@@ -37,8 +37,8 @@ type TimelineItem = {
 const useEventChecks = () => {
   // Mock check that returns true
   const isDayOfEvent =
-    new Date().toDateString() === new Date("2025-03-21").toDateString();
-  const isAfterEvent = new Date() > new Date("2025-03-21T18:00:00");
+    new Date().toDateString() === new Date("2026-04-24").toDateString();
+  const isAfterEvent = new Date() > new Date("2026-04-24T18:00:00");
 
   return {
     shouldHideStats: isDayOfEvent || isAfterEvent,

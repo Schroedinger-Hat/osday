@@ -133,6 +133,7 @@ export const partnerType = defineType({
           { title: "As Partners", value: "partners" },
           { title: "About Us", value: "about" },
           { title: "OSDay 2025", value: "osday25" },
+          { title: "OSDay 2026", value: "osday26" },
         ],
         layout: "checkbox",
       },

@@ -24,7 +24,7 @@ export const revalidate = 0;
 
 export default async function HomePage() {
   const speakers: Author[] = await sanityFetch(
-    `*[_type == "event" && slug.current == "open-source-day-2025"][0].authors[]->{
+    `*[_type == "event" && slug.current == "open-source-day-202"][0].authors[]->{
       _id,
       _type,
       _createdAt,
@@ -41,7 +41,7 @@ export default async function HomePage() {
     undefined,
     {
       cacheDuration: 30, // Cache for 30 seconds
-      tags: [getCacheTag.speakers(), getCacheTag.event("open-source-day-2025")],
+      tags: [getCacheTag.speakers(), getCacheTag.event("open-source-day-2026")],
     },
   );
 
