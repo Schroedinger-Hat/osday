@@ -10,7 +10,7 @@ import Link from "next/link";
 export const metadata = constructMetadata({
   title: "Gamification",
   description:
-    "Learn about the gamification elements at OSDay25 and how you can earn points and awards",
+    "Learn about the gamification elements at OSDAY26 and how you can earn points and awards",
   path: "/gamification",
 });
 
@@ -18,7 +18,7 @@ export default function GamificationPage() {
   return (
     <>
       <SectionContainer withBackground backgroundType="hero">
-        <Heading level={2}>Gamification at OSDay25</Heading>
+        <Heading level={2}>Gamification at OSDAY26</Heading>
         <Typography variant="h3">
           Make your conference experience more exciting by participating in our
           gamification system. Earn points, redeem awards, and compete with

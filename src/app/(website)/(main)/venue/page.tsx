@@ -19,7 +19,7 @@ import nanaSmall3 from "~/assets/images/venue/nana-small-3.jpg";
 
 export const metadata = constructMetadata({
   title: "Venue",
-  description: "Venue for OSDay25",
+  description: "Venue for OSDAY26",
   path: "/venue",
 });
 

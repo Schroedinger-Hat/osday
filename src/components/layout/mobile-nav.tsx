@@ -29,7 +29,7 @@ export function MobileNav() {
           </Button>
         </SheetTrigger>
         <VisuallyHidden>
-          <SheetTitle>OSDAY25</SheetTitle>
+          <SheetTitle>OSDAY26</SheetTitle>
         </VisuallyHidden>
         <SheetContent
           side="left"
@@ -38,7 +38,7 @@ export function MobileNav() {
           <div className="relative h-full">
             <div className="sticky top-0 z-10 flex h-14 items-center justify-between bg-background px-4 sm:px-6">
               <Link href="/" className="flex items-center space-x-2">
-                <span className="font-title text-3xl">OSDAY25</span>
+                <span className="font-title text-3xl">OSDAY26</span>
               </Link>
               <SheetClose asChild>
                 <Button

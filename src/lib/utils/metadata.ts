@@ -8,9 +8,9 @@ interface MetadataProps {
   overrides?: Partial<Metadata>;
 }
 
-const defaultTitle = "OSDay25: For who loves Open Source";
+const defaultTitle = "OSDAY26: For who loves Open Source";
 const defaultDescription =
-  "OSDay25 is a one-day conference for who loves Open Source";
+  "OSDAY26 is a one-day conference for who loves Open Source";
 
 export function constructMetadata({
   title = defaultTitle,
@@ -29,7 +29,7 @@ export function constructMetadata({
       type: "website",
       locale: "en_US",
       url: withCanonicalUrl(path),
-      siteName: "OSDay25",
+      siteName: "OSDAY26",
       title,
       description,
       images: [
@@ -37,7 +37,7 @@ export function constructMetadata({
           url: "/og-image.png",
           width: 1200,
           height: 630,
-          alt: "OSDay25 Open Source Conference",
+          alt: "OSDAY26 Open Source Conference",
         },
       ],
     },

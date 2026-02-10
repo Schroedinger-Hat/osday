@@ -46,7 +46,7 @@ export default async function HomePage() {
   );
 
   const timeline: TimelineItem[] = await sanityFetch(
-    `*[_type == "timeline" && type == "talk"] | order(startDateTime asc) {
+    `*[_type == "timeline" && year == 2026 && type == "talk"] | order(startDateTime asc) {
       _id,
       _type,
       type,
@@ -78,13 +78,13 @@ export default async function HomePage() {
       <SectionContainer size="tiny">
         <Heading level={2}>Missed us?</Heading>
         <Typography variant="large" className="mb-4">
-          We're thrilled to announce the latest edition of Open Source Day—an
+          We're thrilled to announce the latest edition of Open Source Day, an
           unmissable gathering of developers, tech enthusiasts, and
           forward-thinking innovators.
           <br />
-          On <b>March 21st</b>, join us at the vibrant <i>Nana Bianca</i> venue
-          in Florence for a full day of talks that dive deep into today's most
-          exciting open source trends.
+          On <b>April 24st</b>, join us at the vibrant{" "}
+          <i>The Social Hub Belfiore</i> venue in Florence for a full day of
+          talks that dive deep into today's most exciting open source trends.
           <br />
           Connect with like-minded peers, learn from top industry experts, and
           discover how open collaboration is shaping the future of technology.
@@ -168,27 +168,35 @@ export default async function HomePage() {
           Gain practical insights from seasoned professionals at leading
           companies.
         </Typography>
-        <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
-          {speakers.map((speaker) => (
-            <div key={speaker._id} className="relative aspect-square">
-              <Image
-                src={urlFor(speaker.photo)
-                  .auto("format")
-                  .width(400)
-                  .height(400)
-                  .url()}
-                alt={getAuthorFullName(speaker)}
-                fill
-                className="object-cover"
-              />
-              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4 pt-6">
-                <Typography variant="medium" className="font-bold text-white">
-                  {getAuthorFullName(speaker)}
-                </Typography>
+        {Array.isArray(speakers) && speakers.length > 0 ? (
+          <div className="mt-8 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4">
+            {speakers.map((speaker) => (
+              <div key={speaker._id} className="relative aspect-square">
+                <Image
+                  src={urlFor(speaker.photo)
+                    .auto("format")
+                    .width(400)
+                    .height(400)
+                    .url()}
+                  alt={getAuthorFullName(speaker)}
+                  fill
+                  className="object-cover"
+                />
+                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/90 to-transparent p-4 pt-6">
+                  <Typography variant="medium" className="font-bold text-white">
+                    {getAuthorFullName(speaker)}
+                  </Typography>
+                </div>
               </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        ) : (
+          <div className="mt-8 flex flex-col items-center justify-center py-12">
+            <Typography variant="medium" className="max-w-md text-center">
+              Speaker list coming soon. Stay tuned!
+            </Typography>
+          </div>
+        )}
       </SectionContainer>
 
       <SectionContainer withBackground>

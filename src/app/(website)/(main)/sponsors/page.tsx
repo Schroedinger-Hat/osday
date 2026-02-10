@@ -11,7 +11,7 @@ export const revalidate = 0;
 
 export const metadata = constructMetadata({
   title: "Sponsors",
-  description: "Sponsors for OSDay25",
+  description: "Sponsors for OSDAY26",
   path: "/sponsors",
 });
 

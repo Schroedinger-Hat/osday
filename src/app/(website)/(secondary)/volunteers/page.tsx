@@ -10,7 +10,7 @@ import { LifeBuoy, Pencil, Ticket, Users } from "lucide-react";
 export const metadata = constructMetadata({
   title: "Volunteers",
   description:
-    "Join us as a volunteer for OSDay25 and help make open source more accessible",
+    "Join us as a volunteer for OSDAY26 and help make open source more accessible",
   path: "/volunteers",
 });
 
@@ -81,7 +81,7 @@ export default function VolunteersPage() {
           {/* <IconHeartHandshake size={60} className="text-primary" /> */}
           <Heading level={3}>Ready to Make an Impact?</Heading>
           <Typography>
-            Join our volunteer team and be part of making OSDay25 an amazing
+            Join our volunteer team and be part of making OSDAY26 an amazing
             experience for everyone.
             <br />
             We welcome contributors of all skill levels and backgrounds.

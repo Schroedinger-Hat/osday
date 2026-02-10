@@ -32,41 +32,58 @@ interface TalksTableProps {
 }
 
 export function TalksTable({ talks }: TalksTableProps) {
+  const hasTalks = Array.isArray(talks) && talks.length > 0;
+
   return (
     <div className="relative">
-      {/* Continuous vertical line */}
-      <div className="absolute bottom-0 left-[72px] top-0 w-px bg-black md:left-[98px]"></div>
-
       <div className="space-y-4 md:space-y-8">
-        {talks.map((item) => (
-          <Link
-            key={item._id}
-            href={`/schedule/${item._id}`}
-            className="block transition-opacity hover:opacity-80"
-          >
-            <div className="flex gap-6 md:gap-8">
-              <div className="w-[62px] justify-end text-right md:w-[82px]">
-                <div className="text-bold text-sm font-black md:text-base">
-                  {asFormattedTime(item.startDateTime)}
+        {hasTalks ? (
+          <>
+            {/* Continuous vertical line */}
+            <div className="absolute bottom-0 left-[72px] top-0 w-px bg-black md:left-[98px]" />
+            {talks.map((item) => (
+              <Link
+                key={item._id}
+                href={`/schedule/${item._id}`}
+                className="block transition-opacity hover:opacity-80"
+              >
+                <div className="flex gap-6 md:gap-8">
+                  <div className="w-[62px] justify-end text-right md:w-[82px]">
+                    <div className="text-bold text-sm font-black md:text-base">
+                      {asFormattedTime(item.startDateTime)}
+                    </div>
+                  </div>
+                  <div className="flex flex-1 flex-col gap-1">
+                    {item.author && (
+                      <Typography
+                        variant="medium"
+                        className="text-lg font-bold"
+                      >
+                        {getAuthorFullName(item.author)}
+                      </Typography>
+                    )}
+                    <Typography
+                      variant="medium"
+                      className="max-w-xs md:max-w-xl"
+                      as="p"
+                    >
+                      {item.title}
+                    </Typography>
+                  </div>
                 </div>
-              </div>
-              <div className="flex flex-1 flex-col gap-1">
-                {item.author && (
-                  <Typography variant="medium" className="text-lg font-bold">
-                    {getAuthorFullName(item.author)}
-                  </Typography>
-                )}
-                <Typography
-                  variant="medium"
-                  className="max-w-xs md:max-w-xl"
-                  as="p"
-                >
-                  {item.title}
-                </Typography>
-              </div>
-            </div>
-          </Link>
-        ))}
+              </Link>
+            ))}
+          </>
+        ) : (
+          <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
+            <Typography as="span" variant="large" className="mb-2">
+              Stay tuned!
+            </Typography>
+            <Typography variant="medium" className="max-w-md text-center">
+              Check back for upcoming talks and more details.
+            </Typography>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -47,7 +47,7 @@ const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(
 
 export const metadata = constructMetadata({
   title: "Jobs TV",
-  description: "Auto-rotating job board display for OSDay25",
+  description: "Auto-rotating job board display for OSDAY26",
   path: "/jobs-tv",
 });
 

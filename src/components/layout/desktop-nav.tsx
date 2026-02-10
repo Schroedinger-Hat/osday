@@ -41,7 +41,7 @@ export function DesktopNav() {
         <div className="mx-auto h-full max-w-7xl px-8">
           <div className="flex h-14 items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
-              <span className="font-title text-3xl">OSDAY25</span>
+              <span className="font-title text-3xl">OSDAY26</span>
             </Link>
             <Button
               variant="default"

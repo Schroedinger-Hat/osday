@@ -28,6 +28,13 @@ export const timelineType = defineType({
       },
     },
     {
+      name: "year",
+      title: "Year",
+      type: "number",
+      initialValue: 2026,
+      validation: (Rule) => Rule.required().min(2025).max(2026),
+    },
+    {
       name: "backgroundImage",
       title: "Background Image",
       type: "image",

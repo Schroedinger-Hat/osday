@@ -16,7 +16,7 @@ export const revalidate = 0;
 
 export const metadata = constructMetadata({
   title: "Schedule",
-  description: "Schedule for OSDay25",
+  description: "Schedule for OSDAY26",
   path: "/schedule",
 });
 

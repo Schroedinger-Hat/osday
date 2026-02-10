@@ -260,7 +260,7 @@ async function getAllContentForIndex() {
       backgroundImage?: { asset: Record<string, unknown> };
     }>
   >(
-    `*[_type == "timeline" && (type == "talk" || type == "keynote")]{
+    `*[_type == "timeline" && year == 2026 && (type == "talk" || type == "keynote")]{
       _id,
       _updatedAt,
       type,

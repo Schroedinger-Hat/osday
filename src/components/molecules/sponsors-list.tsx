@@ -7,7 +7,7 @@ import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 
 export async function SponsorsList() {
   const supporterSponsors: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "supporter"] | order(orderRank asc)`,
+    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "supporter"] | order(orderRank asc)`,
     undefined,
     {
       cacheDuration: 30,
@@ -16,7 +16,7 @@ export async function SponsorsList() {
   );
 
   const diamondSponsors: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
+    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
     undefined,
     {
       cacheDuration: 30,
@@ -25,7 +25,7 @@ export async function SponsorsList() {
   );
 
   const goldSponsors: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "gold"] | order(orderRank asc)`,
+    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "gold"] | order(orderRank asc)`,
     undefined,
     {
       cacheDuration: 30,
@@ -34,7 +34,7 @@ export async function SponsorsList() {
   );
 
   const silverSponsors: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == true && businessTier == "silver"] | order(orderRank asc)`,
+    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "silver"] | order(orderRank asc)`,
     undefined,
     {
       cacheDuration: 30,
@@ -43,7 +43,7 @@ export async function SponsorsList() {
   );
 
   const communityPartners: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday25" in visibility && isBusinessPartner == false && nonBusinessType == "community"] | order(orderRank asc)`,
+    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == false && nonBusinessType == "community"] | order(orderRank asc)`,
     undefined,
     {
       cacheDuration: 30,

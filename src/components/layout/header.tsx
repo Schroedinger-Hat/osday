@@ -54,11 +54,11 @@ export function Header() {
               showLogo ? "opacity-100" : "opacity-0"
             }`}
           >
-            <span className="font-title text-3xl text-white">OSDAY25</span>
+            <span className="font-title text-3xl text-white">OSDAY26</span>
           </Link>
 
           <div className="flex items-center space-x-2">
-            <SearchButton />
+            {/* <SearchButton /> */}
             <Button
               asChild
               variant="default"

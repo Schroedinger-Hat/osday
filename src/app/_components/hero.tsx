@@ -15,9 +15,9 @@ import eventRecap2025 from "~/assets/images/osday25/event-recap-2025.jpg";
 import defaultEventImage from "~/assets/images/venue/auditorium.jpg";
 
 const stats = [
-  { label: "Speakers", value: "14" },
-  { label: "When", value: "21st of March" },
-  { label: "Venue", value: "Nana Bianca" },
+  { label: "Speakers", value: "20" },
+  { label: "When", value: "24th of April" },
+  { label: "Venue", value: "The Social Hub Belfiore" },
   { label: "Location", value: "Florence, Italy" },
 ];
 
@@ -111,7 +111,7 @@ async function DayOfEvent() {
   const currentTime = Number(now.getHours()) * 60 + Number(now.getMinutes());
 
   const timeline: TimelineItem[] = await sanityFetch(
-    `*[_type == "timeline"] | order(startDateTime asc) {
+    `*[_type == "timeline" && year == 2026] | order(startDateTime asc) {
       _id,
       type,
       startDateTime,
@@ -285,7 +285,7 @@ function AfterEvent() {
       <div className="relative aspect-video shadow-md">
         <Image
           src={eventRecap2025}
-          alt="OSDay25 Event Recap"
+          alt="OSDAY26 Event Recap"
           fill
           className="rounded-md object-cover"
         />

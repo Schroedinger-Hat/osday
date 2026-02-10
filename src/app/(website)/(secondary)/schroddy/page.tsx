@@ -9,7 +9,7 @@ import trophy2025Render from "~/assets/images/trophy2025-render.png";
 
 export const metadata = constructMetadata({
   title: "Schroddy",
-  description: "Schroddy for OSDay25",
+  description: "Schroddy for OSDAY26",
   path: "/schroddy",
 });
 

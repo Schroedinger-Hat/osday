@@ -8,7 +8,7 @@ export const revalidate = 0;
 
 export const metadata = constructMetadata({
   title: "Speaker FAQs",
-  description: "Speaker FAQs for OSDay25",
+  description: "Speaker FAQs for OSDAY26",
   path: "/speaker-faqs",
 });
 

@@ -14,7 +14,7 @@ import osday21 from "~/assets/images/previous-editions/osday21.jpg";
 
 export const metadata = constructMetadata({
   title: "Previous Events",
-  description: "Previous Events for OSDay25",
+  description: "Previous Events for OSDAY26",
   path: "/previous-events",
 });
 
