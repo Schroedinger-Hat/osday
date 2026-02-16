@@ -50,15 +50,11 @@ export default function VenuePage() {
           <Heading level={2}>About the space</Heading>
 
           <Typography>
-            <b>The Social Hub Firenze Belfiore</b> is not your typical venue—
-            it&apos;s where community meets creativity! This innovative nine-floor
-            space blends hotel accommodation, dynamic coworking areas, and vibrant
-            event spaces into one buzzing ecosystem. With a stunning rooftop pool
-            and bar offering panoramic Florence views, an on-site gym, games room,
-            restaurant (Ammodino), and bakery (Menchetti), it&apos;s designed for
-            connection, collaboration, and celebration. Hosting around 600 events
-            annually, The Social Hub is the perfect playground for open source
-            enthusiasts to learn, network, and innovate together!
+          The Social Hub Firenze Belfiore combines hotel accommodation, coworking spaces, and large-scale event facilities within a nine-floor venue designed for collaboration.
+          <br/>
+          The location features a rooftop pool and bar with panoramic views of Florence, an on-site gym, games room, restaurant (Ammodino), and bakery (Menchetti). It hosts approximately 600 events per year, making it a well-established setting for conferences and community gatherings.<br/>
+          <br/>
+          The space supports focused sessions, informal networking, and extended on-site participation.
           </Typography>
         </div>
 
