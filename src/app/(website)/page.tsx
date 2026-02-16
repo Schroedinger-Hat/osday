@@ -83,7 +83,7 @@ export default async function HomePage() {
           forward-thinking innovators.
           <br />
           On <b>April 24st</b>, join us at the vibrant{" "}
-          <i>The Social Hub Belfiore</i> venue in Florence for a full day of
+          <i>The Social Hub Firenze Belfiore</i> in Florence for a full day of
           talks that dive deep into today's most exciting open source trends.
           <br />
           Connect with like-minded peers, learn from top industry experts, and
@@ -128,13 +128,18 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="md:col-span-3">
             <Heading level={2} className="italic">
-              &quot;Stesso posto stesso bar&quot;
+              &quot;New year, new venue!&quot;
             </Heading>
             <Typography>
-              Like the previous year OSDay will be held in the comfy and
-              welcoming walls of Nana Bianca, in Florence.
+              Ready for something fresh? This year, OSDay is chaning basecamp! We're
+              thrilled to welcome you to <b>The Social Hub Firenze Belfiore</b>,
+              a new nine-floor innovation playground where tech meets
+              community. 
+              <br/>Expect rooftop bars with killer views, coworking spaces
+              to hack between talks, and a community that screams "let's build
+              something amazing together!"
               <br />
-              You can find all the informations about the venue in the{" "}
+              You can find all the details about our exciting new venue in the{" "}
               <Link href="/venue" className="underline">
                 dedicated page
               </Link>
@@ -143,7 +148,7 @@ export default async function HomePage() {
           <div className="relative aspect-video md:col-span-2">
             <Image
               src={auditorium}
-              alt="Nana Bianca venue"
+              alt="Event venue"
               fill
               className="rounded-md object-cover shadow-md"
             />

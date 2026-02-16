@@ -11,11 +11,11 @@ import { GoogleMapsEmbed } from "@next/third-parties/google";
 import { env } from "~/env";
 import { constructMetadata } from "~/lib/utils/metadata";
 
-import nanaBig1 from "~/assets/images/venue/nana-big-1.jpg";
-import nanaBig2 from "~/assets/images/venue/nana-big-2.jpg";
-import nanaSmall1 from "~/assets/images/venue/nana-small-1.jpg";
-import nanaSmall2 from "~/assets/images/venue/nana-small-2.jpg";
-import nanaSmall3 from "~/assets/images/venue/nana-small-3.jpg";
+import tshBig1 from "~/assets/images/venue/tsh-big-1.jpg";
+import tshBig2 from "~/assets/images/venue/tsh-big-2.jpg";
+import tshSmall1 from "~/assets/images/venue/tsh-small-1.jpg";
+import tshSmall2 from "~/assets/images/venue/tsh-small-2.jpg";
+import tshSmall3 from "~/assets/images/venue/tsh-small-3.jpg";
 
 export const metadata = constructMetadata({
   title: "Venue",
@@ -29,30 +29,36 @@ export default function VenuePage() {
       <SectionContainer withBackground backgroundType="hero">
         <Heading level={2}>Venue</Heading>
         <Typography variant="h3">
-          The event is hosted by Nana Bianca, in the heart of Florence
+          We're at The Social Hub Firenze Belfiore! close to the city center.
           <br />
         </Typography>
         <Link
-          href="https://maps.app.goo.gl/adfauYT9pLbSbWm37"
+          href="https://maps.app.goo.gl/4N8HSAX6DERG8tDQ8"
           className="mt-4 flex items-start space-x-2"
+          target="_blank"
         >
           <MapPin className="mt-1 h-5 w-5 text-white" />
           <Typography variant="large">
-            Piazza di Cestello 10, 50124, Florence, Italy
+            Viale Belfiore, 55, 50144, Florence, Italy
           </Typography>
         </Link>
       </SectionContainer>
 
       <SectionContainer>
-        {/* Nana Bianca Section */}
+        {/* The Social Hub Section */}
         <div className="space-y-4">
           <Heading level={2}>About the space</Heading>
 
           <Typography>
-            Nana Bianca is a startup studio and digital innovation hub located
-            in a historic building along the Arno River. The space combines
-            Florence&apos;s rich heritage with modern technology, providing an
-            inspiring environment for innovation and collaboration.
+            <b>The Social Hub Firenze Belfiore</b> is not your typical venue—
+            it&apos;s where community meets creativity! This innovative nine-floor
+            space blends hotel accommodation, dynamic coworking areas, and vibrant
+            event spaces into one buzzing ecosystem. With a stunning rooftop pool
+            and bar offering panoramic Florence views, an on-site gym, games room,
+            restaurant (Ammodino), and bakery (Menchetti), it&apos;s designed for
+            connection, collaboration, and celebration. Hosting around 600 events
+            annually, The Social Hub is the perfect playground for open source
+            enthusiasts to learn, network, and innovate together!
           </Typography>
         </div>
 
@@ -60,27 +66,27 @@ export default function VenuePage() {
           <div className="space-y-4">
             <div className="relative aspect-video overflow-hidden rounded-md shadow-md">
               <Image
-                src={nanaBig1}
-                alt="Nana Bianca exterior"
+                src={tshBig1}
+                alt="Coworking space"
                 fill
                 className="object-cover transition-transform hover:scale-105"
               />
             </div>
             <p className="text-sm text-muted-foreground">
-              The coworking space you can use to work between talks
-            </p>
+              Event and conference spaces for our talks and workshops
+            </p>  
           </div>
           <div className="space-y-4">
             <div className="relative aspect-video overflow-hidden rounded-md shadow-md">
               <Image
-                src={nanaBig2}
-                alt="Nana Bianca main hall"
+                src={tshBig2}
+                alt="Conference room"
                 fill
                 className="object-cover transition-transform hover:scale-105"
               />
             </div>
             <p className="text-sm text-muted-foreground">
-              One of the many room of the conference center
+              
             </p>
           </div>
         </div>
@@ -88,16 +94,16 @@ export default function VenuePage() {
         <div className="mt-4 grid grid-cols-1 gap-4 md:grid-cols-3">
           {[
             {
-              src: nanaSmall1,
-              alt: "Meeting area",
+              src: tshSmall1,
+              alt: "Community spaces",
             },
             {
-              src: nanaSmall2,
-              alt: "Innovation lab",
+              src: tshSmall2,
+              alt: "Collaboration areas",
             },
             {
-              src: nanaSmall3,
-              alt: "Networking space",
+              src: tshSmall3,
+              alt: "Event spaces",
             },
           ].map((image, index) => (
             <div
@@ -123,8 +129,8 @@ export default function VenuePage() {
             <Train className="mt-1 h-6 w-6 shrink-0 text-muted-foreground" />
             <Typography variant="medium">
               From the main station Firenze SMN, you can reach the venue by walk
-              (15min.), or take a bus (lines C4/6 stop: Soderini Torrino Santa
-              Rosa)
+              (approximately 10 minutes), or take the tram T2 (direction Piazza
+              dell&apos;Unità, stop: Belfiore)
             </Typography>
           </div>
 
@@ -168,8 +174,8 @@ export default function VenuePage() {
               >
                 paid parking.
               </Link>{" "}
-              The nearest to the venue are: Porta al Prato - Leopolda, Stazione
-              S.M.N and S. Lorenzo - Mercato Centrale
+              The nearest parking to the venue are: Fortezza da Basso, Porta al
+              Prato - Leopolda, and Stazione S.M.N
             </Typography>
           </div>
         </div>
@@ -190,7 +196,7 @@ export default function VenuePage() {
               height={400}
               width="100%"
               mode="place"
-              q="Nana+Bianca,Firenze"
+              q="The+Social+Hub+Firenze+Belfiore"
             />
           )}
         </div>
