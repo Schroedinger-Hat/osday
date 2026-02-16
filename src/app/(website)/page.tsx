@@ -131,18 +131,14 @@ export default async function HomePage() {
               &quot;New year, new venue!&quot;
             </Heading>
             <Typography>
-              Ready for something fresh? This year, OSDay is chaning basecamp! We're
-              thrilled to welcome you to <b>The Social Hub Firenze Belfiore</b>,
-              a new nine-floor innovation playground where tech meets
-              community. 
-              <br/>Expect rooftop bars with killer views, coworking spaces
-              to hack between talks, and a community that screams "let's build
-              something amazing together!"
-              <br />
-              You can find all the details about our exciting new venue in the{" "}
+              Ready for our new basecamp? This year, OSDay moves to The Social Hub Firenze Belfiore, a nine-floor venue designed for collaboration, technology, and community.
+              <br/>
+              The space includes rooftop terraces, dedicated coworking areas, and flexible rooms built for discussion and hands-on sessions.<br/> 
+              <br/>
+              Full venue details are available on the{" "}
               <Link href="/venue" className="underline">
                 dedicated page
-              </Link>
+              </Link>.             
             </Typography>
           </div>
           <div className="relative aspect-video md:col-span-2">
