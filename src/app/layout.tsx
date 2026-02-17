@@ -41,7 +41,10 @@ export default function RootLayout({
         )}
       >
         <head>
-          <script src='https://js.tito.io/v2/with/test_mode,development_mode' async></script>
+          <script
+            src="https://js.tito.io/v2/with/test_mode,development_mode"
+            async
+          ></script>
 
           <link
             rel="icon"

@@ -38,9 +38,8 @@ export default function VenuePage() {
         <div className="py-20 text-center">
           {/* @ts-expect-error - custom element from Tito */}
           <tito-widget event="schroedinger-hat/osday-2026"></tito-widget>
-
         </div>
-        </SectionContainer>
+      </SectionContainer>
 
       <EmptySectionContainer />
     </>

@@ -64,9 +64,7 @@ export function Header() {
               variant="default"
               className="rounded-r-none font-title text-2xl"
             >
-              <Link href="/tickets">
-                Tickets
-              </Link>
+              <Link href="/tickets">Tickets</Link>
             </Button>
             <MobileNav />
             <DesktopNav />
