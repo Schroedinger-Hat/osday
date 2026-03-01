@@ -50,11 +50,19 @@ export default function VenuePage() {
           <Heading level={2}>About the space</Heading>
 
           <Typography>
-          The Social Hub Firenze Belfiore combines hotel accommodation, coworking spaces, and large-scale event facilities within a nine-floor venue designed for collaboration.
-          <br/>
-          The location features a rooftop pool and bar with panoramic views of Florence, an on-site gym, games room, restaurant (Ammodino), and bakery (Menchetti). It hosts approximately 600 events per year, making it a well-established setting for conferences and community gatherings.<br/>
-          <br/>
-          The space supports focused sessions, informal networking, and extended on-site participation.
+            The Social Hub Firenze Belfiore combines hotel accommodation,
+            coworking spaces, and large-scale event facilities within a
+            nine-floor venue designed for collaboration.
+            <br />
+            The location features a rooftop pool and bar with panoramic views of
+            Florence, an on-site gym, games room, restaurant (Ammodino), and
+            bakery (Menchetti). It hosts approximately 600 events per year,
+            making it a well-established setting for conferences and community
+            gatherings.
+            <br />
+            <br />
+            The space supports focused sessions, informal networking, and
+            extended on-site participation.
           </Typography>
         </div>
 
@@ -70,7 +78,7 @@ export default function VenuePage() {
             </div>
             <p className="text-sm text-muted-foreground">
               Event and conference spaces for our talks and workshops
-            </p>  
+            </p>
           </div>
           <div className="space-y-4">
             <div className="relative aspect-video overflow-hidden rounded-md shadow-md">
@@ -81,9 +89,7 @@ export default function VenuePage() {
                 className="object-cover transition-transform hover:scale-105"
               />
             </div>
-            <p className="text-sm text-muted-foreground">
-              
-            </p>
+            <p className="text-sm text-muted-foreground"></p>
           </div>
         </div>
 
