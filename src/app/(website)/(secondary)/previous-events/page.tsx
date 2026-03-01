@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { constructMetadata } from "~/lib/utils/metadata";
 
+import osday25 from "~/assets/images/previous-editions/osday25.png";
 import osday24 from "~/assets/images/previous-editions/osday24.png";
 import osday23 from "~/assets/images/previous-editions/osday23.jpg";
 import osday21 from "~/assets/images/previous-editions/osday21.jpg";
@@ -31,7 +32,13 @@ export default function PreviousEventsPage() {
       {/* OSDay 24, OSDay 23, OSDay 21 */}
       <SectionContainer padding="header">
         <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-          <Link href="https://2024.osday.dev">
+          <Link href="https://2025.osday.dev">
+            <div className="aspect-video overflow-hidden rounded-md shadow-md">
+              <Image src={osday25} alt="Event 1" />
+            </div>
+            <Heading level={3}>OSDay 25</Heading>
+          </Link>
+          <Link href="https://2025.osday.dev">
             <div className="aspect-video overflow-hidden rounded-md shadow-md">
               <Image src={osday24} alt="Event 1" />
             </div>
