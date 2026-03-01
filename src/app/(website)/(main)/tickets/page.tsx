@@ -23,7 +23,7 @@ export const revalidate = 0;
 
 export default async function TicketsPage() {
   const speakers: Author[] = await sanityFetch(
-    `*[_type == "event" && slug.current == "open-source-day-202"][0].authors[]->{
+    `*[_type == "event" && slug.current == "open-source-day-2026"][0].authors[]->{
       _id,
       _type,
       _createdAt,
@@ -100,7 +100,7 @@ export default async function TicketsPage() {
         </Typography>
 
         {Array.isArray(speakers) && speakers.length > 0 ? (
-          <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-4">
+          <div className="mt-8 grid grid-cols-2 gap-0 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
             {speakers.map((speaker) => (
               <div key={speaker._id} className="relative aspect-square">
                 <Image

@@ -121,7 +121,7 @@ function HourGroup({ items }: { items: TimelineItem[] }) {
 
 export default async function SchedulePage() {
   const timeline: TimelineItem[] = await sanityFetch(
-    `*[_type == "timeline"] | order(startDateTime asc) {
+    `*[_type == "timeline" && year == 2026] | order(startDateTime asc) {
       _id,
       _type,
       type,
@@ -171,9 +171,27 @@ export default async function SchedulePage() {
 
       <SectionContainer>
         <div className="space-y-4">
-          {sortedHours.map((hour) => (
-            <HourGroup key={hour} items={groupedTimeline[hour] ?? []} />
-          ))}
+          {timeline.length === 0 ? (
+            <div className="flex flex-col items-center justify-center py-24">
+              <Typography variant="large" className="mb-6 max-w-md text-center">
+                Schedule coming soon. Stay tuned!
+              </Typography>
+              {/* Modal pattern: visually emphasized / homepage style */}
+              <div className="max-w-md rounded-lg border bg-background px-6 py-8 text-center shadow-lg">
+                <Typography variant="medium" className="mb-2">
+                  We&apos;re finalizing the event timeline.
+                </Typography>
+                <Typography variant="small" className="text-muted-foreground">
+                  Talks and session times will be published here as soon as the
+                  schedule is ready.
+                </Typography>
+              </div>
+            </div>
+          ) : (
+            sortedHours.map((hour) => (
+              <HourGroup key={hour} items={groupedTimeline[hour] ?? []} />
+            ))
+          )}
         </div>
       </SectionContainer>
     </>

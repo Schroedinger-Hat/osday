@@ -120,7 +120,6 @@ export default function PricingTable() {
           </Link>
         </div>
         <div className="p-4 text-center">
-          <Typography variant="large">€ 1000</Typography>
           <Link
             href="mailto:osday@schroedinger-hat.org"
             className="italic text-red-500 hover:underline"
@@ -129,7 +128,6 @@ export default function PricingTable() {
           </Link>
         </div>
         <div className="p-4 text-center">
-          <Typography variant="large">€ 2000</Typography>
           <Link
             href="mailto:osday@schroedinger-hat.org"
             className="italic text-red-500 hover:underline"
@@ -176,9 +174,6 @@ export default function PricingTable() {
             <Heading level={4} className="mb-0">
               Gold
             </Heading>
-            <Typography variant="large" className="mt-2">
-              € 1000
-            </Typography>
           </div>
           <div className="p-4">
             <ul className="space-y-4">
@@ -208,9 +203,6 @@ export default function PricingTable() {
             <Heading level={4} className="mb-0">
               Diamond
             </Heading>
-            <Typography variant="large" className="mt-2">
-              € 2000
-            </Typography>
           </div>
           <div className="p-4">
             <ul className="space-y-4">

@@ -24,7 +24,7 @@ export const revalidate = 0;
 
 export default async function HomePage() {
   const speakers: Author[] = await sanityFetch(
-    `*[_type == "event" && slug.current == "open-source-day-202"][0].authors[]->{
+    `*[_type == "event" && slug.current == "open-source-day-2026"][0].authors[]->{
       _id,
       _type,
       _createdAt,
@@ -160,7 +160,7 @@ export default async function HomePage() {
       <ImageGrid title="Memories from 0sday 2025 Edition" />
 
       <SectionContainer withBackground backgroundType="hero">
-        <Heading level={2}>A jam-packed one day schedule</Heading>
+        <Heading level={2}>A jam-packed two day schedule</Heading>
         <Typography variant="large" className="mb-10">
           Filled to the brim with talks, insights, and networking opportunities.
         </Typography>
