@@ -201,26 +201,27 @@ export function TalksTable({ talks }: TalksTableProps) {
                   </div>
                 ))}
 
-                {/* Both tracks present → side-by-side */}
+                {/* Both tracks present → side-by-side on sm+, stacked on mobile */}
                 {isParallelRow && (
-                  <div
-                    className="grid grid-cols-2 gap-2"
-                    style={{
-                      height: durationToPx(
-                        Math.max(
-                          ...[...track1, ...track2].map((i) =>
-                            getDuration(i, startMin),
-                          ),
+                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                    <div
+                      style={{
+                        height: durationToPx(
+                          Math.max(...track1.map((i) => getDuration(i, startMin))),
                         ),
-                      ),
-                    }}
-                  >
-                    <div className="h-full">
+                      }}
+                    >
                       {track1.map((item) => (
                         <TalkCell key={item._id} item={item} />
                       ))}
                     </div>
-                    <div className="h-full">
+                    <div
+                      style={{
+                        height: durationToPx(
+                          Math.max(...track2.map((i) => getDuration(i, startMin))),
+                        ),
+                      }}
+                    >
                       {track2.map((item) => (
                         <TalkCell key={item._id} item={item} />
                       ))}

@@ -309,7 +309,7 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
 
       {/* Track column headers */}
       {hasMultiTrack && (
-        <div className="mb-2 grid grid-cols-2 gap-2 px-1">
+        <div className="mb-2 hidden grid-cols-2 gap-2 px-1 sm:grid">
           <Typography
             variant="small"
             className="font-semibold uppercase tracking-wide text-muted-foreground"
@@ -351,26 +351,29 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                 </div>
               ))}
 
-              {/* Both tracks present → side-by-side */}
+              {/* Both tracks present → side-by-side on sm+, stacked on mobile */}
               {isParallelRow && (
-                <div
-                  className="grid grid-cols-2 gap-2"
-                  style={{
-                    height: durationToPx(
-                      Math.max(
-                        ...[...track1, ...track2].map((i) =>
-                          getDuration(i, startMin),
-                        ),
+                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                  <div
+                    className="flex flex-col"
+                    style={{
+                      minHeight: durationToPx(
+                        Math.max(...track1.map((i) => getDuration(i, startMin))),
                       ),
-                    ),
-                  }}
-                >
-                  <div className="flex flex-col">
+                    }}
+                  >
                     {track1.map((item) => (
                       <ScheduleCard key={item._id} item={item} />
                     ))}
                   </div>
-                  <div className="flex flex-col">
+                  <div
+                    className="flex flex-col"
+                    style={{
+                      minHeight: durationToPx(
+                        Math.max(...track2.map((i) => getDuration(i, startMin))),
+                      ),
+                    }}
+                  >
                     {track2.map((item) => (
                       <ScheduleCard key={item._id} item={item} />
                     ))}
