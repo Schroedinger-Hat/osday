@@ -139,24 +139,22 @@ function durationToPx(minutes: number): number {
 
 function AuthorAvatar({
   author,
-  ringClass,
 }: {
   author: NonNullable<TimelineItem["author"]>;
-  ringClass?: string;
 }) {
   const initials =
-    ((author.firstName?.[0] ?? "") + (author.lastName?.[0] ?? "")).toUpperCase() || "?";
-
-  const baseRing = cn("ring-2 ring-offset-1", ringClass);
+    (
+      (author.firstName?.[0] ?? "") + (author.lastName?.[0] ?? "")
+    ).toUpperCase() || "?";
 
   if (author.photo?.asset) {
     return (
       <Image
         src={urlFor(author.photo).width(56).height(56).url()}
         alt={getAuthorFullName(author)}
-        width={28}
-        height={28}
-        className={cn("rounded-full object-cover", baseRing)}
+        width={38}
+        height={38}
+        className={cn("rounded-sm object-cover")}
       />
     );
   }
@@ -165,7 +163,6 @@ function AuthorAvatar({
     <span
       className={cn(
         "flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-[10px] font-semibold",
-        baseRing,
       )}
     >
       {initials}
@@ -190,11 +187,13 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
           )}
         >
           <TypeIcon type={item.type} className={cfg.iconClass} />
-          {typeLabel(item.type)}
         </span>
         <span className="text-xs text-muted-foreground">
-          {asFormattedTime(item.startDateTime)}
-          {item.endDateTime && ` – ${asFormattedTime(item.endDateTime)}`}
+          {typeLabel(item.type)} •{" "}
+          <strong>
+            {asFormattedTime(item.startDateTime)}
+            {item.endDateTime && ` – ${asFormattedTime(item.endDateTime)}`}
+          </strong>
         </span>
       </div>
 
@@ -210,10 +209,13 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
       {/* Bottom row: author name + avatar */}
       {item.author && (
         <div className="flex items-center justify-between gap-2">
-          <Typography variant="small" className="truncate text-muted-foreground">
+          <Typography
+            variant="small"
+            className="truncate text-muted-foreground"
+          >
             {getAuthorFullName(item.author)}
           </Typography>
-          <AuthorAvatar author={item.author} ringClass={cfg.ring} />
+          <AuthorAvatar author={item.author} />
         </div>
       )}
     </div>
@@ -263,7 +265,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
     (i) => getDayKey(i.startDateTime) === selectedDay,
   );
 
-  const hasMultiTrack = visibleItems.some((t) => t.track === 1 || t.track === 2);
+  const hasMultiTrack = visibleItems.some(
+    (t) => t.track === 1 || t.track === 2,
+  );
 
   // Group by start minute
   const slotMap = new Map<number, TimelineItem[]>();
@@ -339,7 +343,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                 <div
                   key={item._id}
                   className="flex flex-col"
-                  style={{ minHeight: durationToPx(getDuration(item, startMin)) }}
+                  style={{
+                    minHeight: durationToPx(getDuration(item, startMin)),
+                  }}
                 >
                   <ScheduleCard item={item} />
                 </div>
@@ -378,7 +384,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                   <div
                     key={item._id}
                     className="flex flex-col"
-                    style={{ minHeight: durationToPx(getDuration(item, startMin)) }}
+                    style={{
+                      minHeight: durationToPx(getDuration(item, startMin)),
+                    }}
                   >
                     <ScheduleCard item={item} />
                   </div>

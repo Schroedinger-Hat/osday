@@ -84,18 +84,17 @@ function TalkCell({ item }: { item: TimelineItem }) {
       href={`/schedule/${item._id}`}
       className="flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card px-3 py-2 text-card-foreground transition-opacity hover:border-primary/50 hover:opacity-80"
     >
+      <Typography variant="small" className="font-bold leading-snug" as="p">
+        {item.titleShort}
+      </Typography>
       {item.author && (
-        <Typography variant="small" className="truncate font-bold leading-snug">
+        <Typography
+          variant="small"
+          className="line-clamp-3 leading-snug text-muted-foreground"
+        >
           {getAuthorFullName(item.author)}
         </Typography>
       )}
-      <Typography
-        variant="small"
-        className="line-clamp-3 leading-snug text-muted-foreground"
-        as="p"
-      >
-        {item.title}
-      </Typography>
     </Link>
   );
 }
@@ -129,7 +128,9 @@ export function TalksTable({ talks }: TalksTableProps) {
     );
   }
 
-  const hasMultiTrack = visibleTalks.some((t) => t.track === 1 || t.track === 2);
+  const hasMultiTrack = visibleTalks.some(
+    (t) => t.track === 1 || t.track === 2,
+  );
 
   // Group talks by start time → one visual row per unique start minute
   const slotMap = new Map<number, TimelineItem[]>();
@@ -192,7 +193,9 @@ export function TalksTable({ talks }: TalksTableProps) {
                 {shared.map((item) => (
                   <div
                     key={item._id}
-                    style={{ height: durationToPx(getDuration(item, startMin)) }}
+                    style={{
+                      height: durationToPx(getDuration(item, startMin)),
+                    }}
                   >
                     <TalkCell item={item} />
                   </div>
@@ -204,7 +207,11 @@ export function TalksTable({ talks }: TalksTableProps) {
                     className="grid grid-cols-2 gap-2"
                     style={{
                       height: durationToPx(
-                        Math.max(...[...track1, ...track2].map((i) => getDuration(i, startMin))),
+                        Math.max(
+                          ...[...track1, ...track2].map((i) =>
+                            getDuration(i, startMin),
+                          ),
+                        ),
                       ),
                     }}
                   >
@@ -226,7 +233,9 @@ export function TalksTable({ talks }: TalksTableProps) {
                   [...track1, ...track2].map((item) => (
                     <div
                       key={item._id}
-                      style={{ height: durationToPx(getDuration(item, startMin)) }}
+                      style={{
+                        height: durationToPx(getDuration(item, startMin)),
+                      }}
                     >
                       <TalkCell item={item} />
                     </div>
