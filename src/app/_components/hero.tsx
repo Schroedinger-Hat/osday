@@ -15,7 +15,7 @@ import eventRecap2025 from "~/assets/images/osday25/event-recap-2025.jpg";
 import defaultEventImage from "~/assets/images/venue/auditorium.jpg";
 
 const stats = [
-  { label: "Speakers", value: "18" },
+  { label: "Speakers", value: "16" },
   { label: "When", value: "24th of April" },
   { label: "Venue", value: "The Social Hub Belfiore" },
   { label: "Location", value: "Florence, Italy" },
