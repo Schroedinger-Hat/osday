@@ -64,6 +64,15 @@ export default async function HomePage() {
         _rev,
         firstName,
         lastName
+      },
+      "coSpeaker": coSpeaker->{
+        _id,
+        _type,
+        _createdAt,
+        _updatedAt,
+        _rev,
+        firstName,
+        lastName
       }
     }`,
     undefined,

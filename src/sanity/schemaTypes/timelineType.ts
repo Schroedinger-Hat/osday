@@ -99,6 +99,12 @@ export const timelineType = defineType({
       type: "reference",
       to: [{ type: "author" }],
     },
+    {
+      name: "coSpeaker",
+      title: "Co-Speaker",
+      type: "reference",
+      to: [{ type: "author" }],
+    },
   ],
   preview: {
     select: {

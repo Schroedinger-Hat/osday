@@ -33,6 +33,12 @@ export default async function SchedulePage() {
         firstName,
         lastName,
         photo
+      },
+      "coSpeaker": coSpeaker->{
+        _id,
+        firstName,
+        lastName,
+        photo
       }
     }`,
     undefined,

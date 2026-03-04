@@ -31,6 +31,7 @@ export interface TimelineItem {
     };
   };
   author?: SanityAuthor;
+  coSpeaker?: SanityAuthor;
 }
 
 interface TalksTableProps {
@@ -93,6 +94,7 @@ function TalkCell({ item }: { item: TimelineItem }) {
           className="line-clamp-3 leading-snug text-muted-foreground"
         >
           {getAuthorFullName(item.author)}
+          {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
         </Typography>
       )}
     </Link>

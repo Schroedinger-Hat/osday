@@ -206,7 +206,7 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
         {item.title}
       </Typography>
 
-      {/* Bottom row: author name + avatar */}
+      {/* Bottom row: author name(s) + avatar(s) */}
       {item.author && (
         <div className="flex items-center justify-between gap-2">
           <Typography
@@ -214,8 +214,14 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
             className="truncate text-muted-foreground"
           >
             {getAuthorFullName(item.author)}
+            {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
           </Typography>
-          <AuthorAvatar author={item.author} />
+          <div className="flex shrink-0 -space-x-2">
+            {item.coSpeaker && (
+              <AuthorAvatar author={item.coSpeaker} />
+            )}
+            <AuthorAvatar author={item.author} />
+          </div>
         </div>
       )}
     </div>

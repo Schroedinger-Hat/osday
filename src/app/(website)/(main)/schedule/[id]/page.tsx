@@ -43,6 +43,7 @@ interface Talk {
     };
   };
   speaker?: Speaker;
+  coSpeaker?: Speaker;
 }
 
 interface PageProps {
@@ -61,6 +62,15 @@ async function getTalk(id: string) {
       abstract,
       backgroundImage,
       "speaker": speaker->{
+        _id,
+        firstName,
+        lastName,
+        pronouns,
+        title,
+        photo,
+        biography
+      },
+      "coSpeaker": coSpeaker->{
         _id,
         firstName,
         lastName,
@@ -136,46 +146,46 @@ export default async function TalkDetailPage({ params }: PageProps) {
             )}
           </div>
 
-          {talk.speaker && (
-            <aside className="space-y-6 lg:col-span-2">
-              <div className="overflow-hidden rounded-md bg-dark-navy text-white shadow-md">
-                <div className="aspect-square">
-                  {talk.speaker.photo?.asset ? (
-                    <Image
-                      src={urlFor(talk.speaker.photo)
-                        .width(400)
-                        .height(400)
-                        .url()}
-                      alt={`${talk.speaker.firstName} ${talk.speaker.lastName}`}
-                      width={400}
-                      height={400}
-                      className="h-full w-full object-cover"
-                    />
-                  ) : (
-                    <div className="flex h-full items-center justify-center bg-gray-700">
-                      <span className="text-4xl">
-                        {talk.speaker.firstName?.[0]}
-                        {talk.speaker.lastName?.[0]}
-                      </span>
-                    </div>
-                  )}
+          {(talk.speaker ?? talk.coSpeaker) && (
+            <aside className="space-y-4 lg:col-span-2">
+              {[talk.speaker, talk.coSpeaker].filter(Boolean).map((sp) => (
+                <div
+                  key={sp!._id}
+                  className="overflow-hidden rounded-md bg-dark-navy text-white shadow-md"
+                >
+                  <div className="aspect-square">
+                    {sp!.photo?.asset ? (
+                      <Image
+                        src={urlFor(sp!.photo).width(400).height(400).url()}
+                        alt={`${sp!.firstName} ${sp!.lastName}`}
+                        width={400}
+                        height={400}
+                        className="h-full w-full object-cover"
+                      />
+                    ) : (
+                      <div className="flex h-full items-center justify-center bg-gray-700">
+                        <span className="text-4xl">
+                          {sp!.firstName?.[0]}
+                          {sp!.lastName?.[0]}
+                        </span>
+                      </div>
+                    )}
+                  </div>
+                  <div className="space-y-2 p-4">
+                    <Heading level={3} className="mb-0 md:mb-0">
+                      {sp!.firstName} {sp!.lastName}
+                    </Heading>
+                    {sp!.title && (
+                      <Typography variant="muted">{sp!.title}</Typography>
+                    )}
+                    {sp!.biography && (
+                      <div className="pt-4">
+                        <PortableText value={sp!.biography} />
+                      </div>
+                    )}
+                  </div>
                 </div>
-                <div className="space-y-2 p-4">
-                  <Heading level={3} className="mb-0 md:mb-0">
-                    {talk.speaker.firstName} {talk.speaker.lastName}
-                  </Heading>
-                  {talk.speaker.title && (
-                    <Typography variant="muted">
-                      {talk.speaker.title}
-                    </Typography>
-                  )}
-                  {talk.speaker.biography && (
-                    <div className="pt-4">
-                      <PortableText value={talk.speaker.biography} />
-                    </div>
-                  )}
-                </div>
-              </div>
+              ))}
             </aside>
           )}
         </div>
