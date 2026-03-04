@@ -17,7 +17,7 @@ import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { Button } from "~/components/ui/button";
 import ImageGrid from "~/components/molecules/image-grid";
 
-import tShirt from "~/assets/images/osday25/tee.png";
+import tShirt from "~/assets/images/osday26/tee.png";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -119,9 +119,12 @@ export default async function HomePage() {
           <div className="order-1 space-y-4 md:order-2 md:col-span-3">
             <Heading level={2}>Tee with Your Ticket</Heading>
             <Typography>
-            Last year, many of you told us that buying the T-shirt separately meant you couldn’t wear it during the event.
-<br/>
-This year, you can add the Open Source Day T-shirt when you purchase your ticket. Select your size at checkout, and your shirt will be ready for pickup at check-in.
+              Last year, many of you told us that buying the T-shirt separately
+              meant you couldn’t wear it during the event.
+              <br />
+              This year, you can add the Open Source Day T-shirt when you
+              purchase your ticket. Select your size at checkout, and your shirt
+              will be ready for pickup at check-in.
             </Typography>
             <Button>
               <Link href="/tickets">Get your ticket</Link>
