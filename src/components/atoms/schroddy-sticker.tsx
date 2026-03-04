@@ -155,7 +155,8 @@ export function SchroddySticker() {
   return (
     <>
       <div className="hidden md:block">
-        <DesktopSchroddy />
+        {/* <DesktopSchroddy /> */}
+        <MobileSchroddy />
       </div>
       <div className="block md:hidden">
         <MobileSchroddy />
