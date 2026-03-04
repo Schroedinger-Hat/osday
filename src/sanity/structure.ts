@@ -18,24 +18,30 @@ export const structure: StructureResolver = async (S, context) => {
 
   const timelineGroups = [
     ...timelineYears.map((year) =>
-      orderableDocumentListDeskItem({
-        type: "timeline",
-        S,
-        context,
-        title: `${year} Schedule`,
-        filter: `year == ${year}`,
-        id: `timeline-year-${year}`,
-        icon: schemaIcons.timeline,
-      }),
+      S.listItem()
+        .id(`timeline-year-${year}`)
+        .title(`${year} Schedule`)
+        .icon(schemaIcons.timeline)
+        .child(
+          S.documentList()
+            .id(`timeline-year-${year}-list`)
+            .title(`${year} Schedule`)
+            .schemaType("timeline")
+            .filter('_type == "timeline" && year == $year')
+            .params({ year }),
+        ),
     ),
-    orderableDocumentListDeskItem({
-      type: "timeline",
-      S,
-      context,
-      title: "All",
-      id: "timeline-year-all",
-      icon: schemaIcons.timeline,
-    }),
+    S.listItem()
+      .id("timeline-year-all")
+      .title("All")
+      .icon(schemaIcons.timeline)
+      .child(
+        S.documentList()
+          .id("timeline-year-all-list")
+          .title("All Timeline Items")
+          .schemaType("timeline")
+          .filter('_type == "timeline"'),
+      ),
   ];
 
   // Add type for the items array
