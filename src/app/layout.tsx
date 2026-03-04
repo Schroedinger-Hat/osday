@@ -41,6 +41,8 @@ export default function RootLayout({
         )}
       >
         <head>
+          <script src="https://js.tito.io/v2" async></script>
+
           <link
             rel="icon"
             type="image/png"

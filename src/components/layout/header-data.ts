@@ -1,6 +1,6 @@
 export const mainRoutes = [
   {
-    href: "https://www.eventbrite.it/e/open-source-day-2025-tickets-1044930835257",
+    href: "/tickets",
     label: "Tickets",
   },
   {
