@@ -5,6 +5,7 @@ Global working agreements for Codex CLI.
 ## Documents to always consider
 
 Before implementing read the following files in the root directory:
+
 - HARDENING.md
 - IMPLEMENTATION.md
 - PREVIEW_GUIDE.md
@@ -99,11 +100,11 @@ Maintain a single continuity file for the current workspace: `.agent/CONTINUITY.
 
 Update `.agent/CONTINUITY.md` only when there is a meaningful delta in:
 
-  - `[PLANS]`: "Plans Log" is a guide for the next contributor as much as checklists for you.
-  - `[DECISIONS]`: "Decisions Log" is used to record all decisions made.
-  - `[PROGRESS]`: "Progress Log" is used to record course changes mid-implementation, documenting why and reflecting upon the implications.
-  - `[DISCOVERIES]`: "Discoveries Log" is for when when you discover optimizer behavior, performance tradeoffs, unexpected bugs, or inverse/unapply semantics that shaped your approach, capture those observations with short evidence snippets (test output is ideal.
-  - `[OUTCOMES]`: "Outcomes Log" is used at completion of a major task or the full plan, summarizing what was achieved, what remains, and lessons learned.
+- `[PLANS]`: "Plans Log" is a guide for the next contributor as much as checklists for you.
+- `[DECISIONS]`: "Decisions Log" is used to record all decisions made.
+- `[PROGRESS]`: "Progress Log" is used to record course changes mid-implementation, documenting why and reflecting upon the implications.
+- `[DISCOVERIES]`: "Discoveries Log" is for when when you discover optimizer behavior, performance tradeoffs, unexpected bugs, or inverse/unapply semantics that shaped your approach, capture those observations with short evidence snippets (test output is ideal.
+- `[OUTCOMES]`: "Outcomes Log" is used at completion of a major task or the full plan, summarizing what was achieved, what remains, and lessons learned.
 
 ### Anti-drift / anti-bloat rules
 
@@ -112,7 +113,7 @@ Update `.agent/CONTINUITY.md` only when there is a meaningful delta in:
   - a date in ISO timestamp (e.g., `2026-01-13T09:42Z`)
   - a provenance tag: `[USER]`, `[CODE]`, `[TOOL]`, `[ASSUMPTION]`
   - If unknown, write `UNCONFIRMED` (never guess). If something changes, supersede it explicitly (don't silently rewrite history).
-- Keep the file bounded, short and high-signal (anti-bloat). 
+- Keep the file bounded, short and high-signal (anti-bloat).
 - If sections begin to become bloated, compress older items into milestone (`[MILESTONE]`) bullets.
 
 ## Definition of done
