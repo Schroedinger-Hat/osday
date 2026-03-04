@@ -5,7 +5,6 @@ import { getAuthorFullName } from "~/lib/sanity-cms";
 import type { Author as SanityAuthor } from "~/sanity/sanity.types";
 import { Typography } from "../atoms/typography/Typography";
 import Link from "next/link";
-import { asFormattedTime } from "~/lib/utils/date";
 import { cn } from "~/lib/utils";
 
 export interface TimelineItem {
@@ -54,6 +53,55 @@ function getDayLabel(dayKey: string, index: number): string {
   return `Day ${index + 1} · ${formatted}`;
 }
 
+// ─── Grid constants ────────────────────────────────────────────────────────────
+
+const SLOT_MINUTES = 15;
+const SLOT_HEIGHT_PX = 32; // px per 15-min slot
+
+// ─── Time helpers ──────────────────────────────────────────────────────────────
+
+function getMinutesInDay(dateStr: string): number {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Rome",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+  }).formatToParts(new Date(dateStr));
+  const hour = Number(parts.find((p) => p.type === "hour")?.value ?? 0) % 24;
+  const minute = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
+  return hour * 60 + minute;
+}
+
+function durationToPx(minutes: number): number {
+  return Math.max(minutes / SLOT_MINUTES, 2) * SLOT_HEIGHT_PX;
+}
+
+// ─── Talk cell ─────────────────────────────────────────────────────────────────
+
+function TalkCell({ item }: { item: TimelineItem }) {
+  return (
+    <Link
+      href={`/schedule/${item._id}`}
+      className="flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card px-3 py-2 text-card-foreground transition-opacity hover:border-primary/50 hover:opacity-80"
+    >
+      {item.author && (
+        <Typography variant="small" className="truncate font-bold leading-snug">
+          {getAuthorFullName(item.author)}
+        </Typography>
+      )}
+      <Typography
+        variant="small"
+        className="line-clamp-3 leading-snug text-muted-foreground"
+        as="p"
+      >
+        {item.title}
+      </Typography>
+    </Link>
+  );
+}
+
+// ─── Main component ────────────────────────────────────────────────────────────
+
 export function TalksTable({ talks }: TalksTableProps) {
   const hasTalks = Array.isArray(talks) && talks.length > 0;
 
@@ -67,6 +115,37 @@ export function TalksTable({ talks }: TalksTableProps) {
   const visibleTalks = isMultiDay
     ? talks.filter((t) => getDayKey(t.startDateTime) === selectedDay)
     : talks;
+
+  if (!hasTalks) {
+    return (
+      <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
+        <Typography as="span" variant="large" className="mb-2">
+          Stay tuned!
+        </Typography>
+        <Typography variant="medium" className="max-w-md text-center">
+          Check back for upcoming talks and more details.
+        </Typography>
+      </div>
+    );
+  }
+
+  const hasMultiTrack = visibleTalks.some((t) => t.track === 1 || t.track === 2);
+
+  // Group talks by start time → one visual row per unique start minute
+  const slotMap = new Map<number, TimelineItem[]>();
+  for (const item of visibleTalks) {
+    const min = getMinutesInDay(item.startDateTime);
+    if (!slotMap.has(min)) slotMap.set(min, []);
+    slotMap.get(min)!.push(item);
+  }
+  const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
+
+  const getDuration = (item: TimelineItem, startMin: number) => {
+    const endMin = item.endDateTime
+      ? getMinutesInDay(item.endDateTime)
+      : startMin + 45;
+    return Math.max(endMin - startMin, SLOT_MINUTES);
+  };
 
   return (
     <div>
@@ -90,64 +169,73 @@ export function TalksTable({ talks }: TalksTableProps) {
         </div>
       )}
 
-      <div className="relative">
-        <div className="space-y-4 md:space-y-8">
-          {visibleTalks.length > 0 ? (
-            <>
-              {/* Continuous vertical line */}
-              <div className="absolute bottom-0 left-[72px] top-0 w-px bg-black md:left-[98px]" />
-              {visibleTalks.map((item) => (
-                <Link
-                  key={item._id}
-                  href={`/schedule/${item._id}`}
-                  className="block transition-opacity hover:opacity-80"
-                >
-                  <div className="flex gap-6 md:gap-8">
-                    <div className="w-[62px] justify-end text-right md:w-[82px]">
-                      <div className="text-bold text-sm font-black md:text-base">
-                        {asFormattedTime(item.startDateTime)}
-                      </div>
+      {visibleTalks.length === 0 ? (
+        <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
+          <Typography as="span" variant="large" className="mb-2">
+            Nothing here yet.
+          </Typography>
+        </div>
+      ) : (
+        <div className="flex flex-col gap-2">
+          {sortedSlots.map(([startMin, items]) => {
+            const track1 = items.filter((i) => i.track === 1);
+            const track2 = items.filter((i) => i.track === 2);
+            const shared = items.filter(
+              (i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2,
+            );
+            const isParallelRow =
+              hasMultiTrack && track1.length > 0 && track2.length > 0;
+
+            return (
+              <div key={startMin} className="flex flex-col gap-2">
+                {/* Shared / full-width items */}
+                {shared.map((item) => (
+                  <div
+                    key={item._id}
+                    style={{ height: durationToPx(getDuration(item, startMin)) }}
+                  >
+                    <TalkCell item={item} />
+                  </div>
+                ))}
+
+                {/* Both tracks present → side-by-side */}
+                {isParallelRow && (
+                  <div
+                    className="grid grid-cols-2 gap-2"
+                    style={{
+                      height: durationToPx(
+                        Math.max(...[...track1, ...track2].map((i) => getDuration(i, startMin))),
+                      ),
+                    }}
+                  >
+                    <div className="h-full">
+                      {track1.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
                     </div>
-                    <div className="flex flex-1 flex-col gap-1">
-                      {item.author && (
-                        <Typography
-                          variant="medium"
-                          className="text-lg font-bold"
-                        >
-                          {getAuthorFullName(item.author)}
-                        </Typography>
-                      )}
-                      <Typography
-                        variant="medium"
-                        className="max-w-xs md:max-w-xl"
-                        as="p"
-                      >
-                        {item.title}
-                      </Typography>
+                    <div className="h-full">
+                      {track2.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
                     </div>
                   </div>
-                </Link>
-              ))}
-            </>
-          ) : hasTalks ? (
-            // Has talks but none match selected day — shouldn't happen, but just in case
-            <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
-              <Typography as="span" variant="large" className="mb-2">
-                Nothing here yet.
-              </Typography>
-            </div>
-          ) : (
-            <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
-              <Typography as="span" variant="large" className="mb-2">
-                Stay tuned!
-              </Typography>
-              <Typography variant="medium" className="max-w-md text-center">
-                Check back for upcoming talks and more details.
-              </Typography>
-            </div>
-          )}
+                )}
+
+                {/* Only one track present (no parallel partner) → full-width */}
+                {!isParallelRow &&
+                  [...track1, ...track2].map((item) => (
+                    <div
+                      key={item._id}
+                      style={{ height: durationToPx(getDuration(item, startMin)) }}
+                    >
+                      <TalkCell item={item} />
+                    </div>
+                  ))}
+              </div>
+            );
+          })}
         </div>
-      </div>
+      )}
     </div>
   );
 }
