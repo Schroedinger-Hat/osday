@@ -3,22 +3,103 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import {
+  Calendar03Icon,
+  Mic01Icon,
+  BubbleChatIcon,
+  Coffee02Icon,
+  DrinkIcon,
+} from "hugeicons-react";
 import { cn } from "~/lib/utils";
 import { asFormattedTime } from "~/lib/utils/date";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import { urlFor } from "~/sanity/lib/image";
-import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
 import type { TimelineItem } from "./talks-table";
 
-const TYPE_BACKGROUNDS: Record<string, string> = {
-  talk: "from-purple-600 to-blue-600",
-  keynote: "from-rose-600 to-orange-600",
-  Break: "from-green-600 to-teal-600",
-  break: "from-green-600 to-teal-600",
-  logistic: "from-violet-600 to-indigo-600",
-  drink: "from-amber-600 to-yellow-600",
+// ─── Constants ─────────────────────────────────────────────────────────────────
+
+const SLOT_MINUTES = 15;
+const SLOT_HEIGHT_PX = 32;
+
+// ─── Per-type visual config ─────────────────────────────────────────────────────
+
+const TYPE_CONFIG: Record<
+  string,
+  { border: string; bg: string; iconClass: string; badge: string; ring: string }
+> = {
+  talk: {
+    border: "border-l-purple-500",
+    bg: "bg-purple-500/8",
+    iconClass: "text-purple-500",
+    badge: "bg-purple-500/15 text-purple-600 dark:text-purple-400",
+    ring: "ring-purple-400/60",
+  },
+  keynote: {
+    border: "border-l-rose-500",
+    bg: "bg-rose-500/8",
+    iconClass: "text-rose-500",
+    badge: "bg-rose-500/15 text-rose-600 dark:text-rose-400",
+    ring: "ring-rose-400/60",
+  },
+  break: {
+    border: "border-l-green-500",
+    bg: "bg-green-500/8",
+    iconClass: "text-green-500",
+    badge: "bg-green-500/15 text-green-600 dark:text-green-400",
+    ring: "ring-green-400/60",
+  },
+  Break: {
+    border: "border-l-green-500",
+    bg: "bg-green-500/8",
+    iconClass: "text-green-500",
+    badge: "bg-green-500/15 text-green-600 dark:text-green-400",
+    ring: "ring-green-400/60",
+  },
+  logistic: {
+    border: "border-l-gray-400",
+    bg: "bg-gray-500/8",
+    iconClass: "text-gray-400",
+    badge: "bg-gray-500/15 text-gray-500 dark:text-gray-400",
+    ring: "ring-gray-400/60",
+  },
+  drink: {
+    border: "border-l-amber-500",
+    bg: "bg-amber-500/8",
+    iconClass: "text-amber-500",
+    badge: "bg-amber-500/15 text-amber-600 dark:text-amber-400",
+    ring: "ring-amber-400/60",
+  },
 };
+
+const DEFAULT_CONFIG = TYPE_CONFIG.talk!;
+
+// ─── Type icon (inline, size 16) ────────────────────────────────────────────────
+
+function TypeIcon({ type, className }: { type: string; className?: string }) {
+  const props = { size: 16, className: cn("shrink-0", className) };
+  switch (type) {
+    case "logistic":
+      return <Calendar03Icon {...props} />;
+    case "keynote":
+      return <BubbleChatIcon {...props} />;
+    case "talk":
+      return <Mic01Icon {...props} />;
+    case "break":
+    case "Break":
+      return <Coffee02Icon {...props} />;
+    case "drink":
+      return <DrinkIcon {...props} />;
+    default:
+      return null;
+  }
+}
+
+function typeLabel(type: string): string {
+  return type.charAt(0).toUpperCase() + type.slice(1);
+}
+
+// ─── Day helpers ────────────────────────────────────────────────────────────────
 
 function getDayKey(dateStr: string): string {
   return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome" }).format(
@@ -36,106 +117,133 @@ function getDayLabel(dayKey: string, index: number): string {
   return `Day ${index + 1} · ${formatted}`;
 }
 
-function TimelineCard({ item }: { item: TimelineItem }) {
-  const backgroundGradient =
-    TYPE_BACKGROUNDS[item.type] ?? "from-purple-600 to-blue-600";
-  const isClickable = item.type === "talk";
+// ─── Time helpers ───────────────────────────────────────────────────────────────
+
+function getMinutesInDay(dateStr: string): number {
+  const parts = new Intl.DateTimeFormat("en-US", {
+    timeZone: "Europe/Rome",
+    hour: "numeric",
+    minute: "numeric",
+    hour12: false,
+  }).formatToParts(new Date(dateStr));
+  const hour = Number(parts.find((p) => p.type === "hour")?.value ?? 0) % 24;
+  const minute = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
+  return hour * 60 + minute;
+}
+
+function durationToPx(minutes: number): number {
+  return Math.max(minutes / SLOT_MINUTES, 2) * SLOT_HEIGHT_PX;
+}
+
+// ─── Avatar ─────────────────────────────────────────────────────────────────────
+
+function AuthorAvatar({
+  author,
+  ringClass,
+}: {
+  author: NonNullable<TimelineItem["author"]>;
+  ringClass?: string;
+}) {
+  const initials =
+    ((author.firstName?.[0] ?? "") + (author.lastName?.[0] ?? "")).toUpperCase() || "?";
+
+  const baseRing = cn("ring-2 ring-offset-1", ringClass);
+
+  if (author.photo?.asset) {
+    return (
+      <Image
+        src={urlFor(author.photo).width(56).height(56).url()}
+        alt={getAuthorFullName(author)}
+        width={28}
+        height={28}
+        className={cn("rounded-full object-cover", baseRing)}
+      />
+    );
+  }
+
+  return (
+    <span
+      className={cn(
+        "flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-[10px] font-semibold",
+        baseRing,
+      )}
+    >
+      {initials}
+    </span>
+  );
+}
+
+// ─── ScheduleCard ───────────────────────────────────────────────────────────────
+
+function ScheduleCard({ item }: { item: TimelineItem }) {
+  const isClickable = item.type === "talk" || item.type === "keynote";
+  const cfg = TYPE_CONFIG[item.type] ?? DEFAULT_CONFIG;
 
   const content = (
-    <>
-      {item.backgroundImage ? (
-        <Image
-          src={urlFor(item.backgroundImage).width(800).height(600).url()}
-          alt=""
-          fill
-          className="object-cover transition-transform duration-300 group-hover:scale-105"
-          sizes="(min-width: 1024px) 50vw, 100vw"
-        />
-      ) : (
-        <div
-          className={`absolute inset-0 bg-gradient-to-br ${backgroundGradient} opacity-50 transition-transform duration-300 group-hover:scale-105`}
-        />
-      )}
+    <div className="flex flex-col gap-2">
+      {/* Top row: type badge (icon + label) · time */}
+      <div className="flex items-center gap-2">
+        <span
+          className={cn(
+            "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide",
+            cfg.badge,
+          )}
+        >
+          <TypeIcon type={item.type} className={cfg.iconClass} />
+          {typeLabel(item.type)}
+        </span>
+        <span className="text-xs text-muted-foreground">
+          {asFormattedTime(item.startDateTime)}
+          {item.endDateTime && ` – ${asFormattedTime(item.endDateTime)}`}
+        </span>
+      </div>
 
-      <div
-        className={cn(
-          "absolute inset-0 m-2 flex flex-col justify-between rounded-sm bg-black/80 p-4",
-          !isClickable && "border-2 border-dashed border-white bg-black/40",
-        )}
+      {/* Title */}
+      <Typography
+        variant="small"
+        className="line-clamp-2 flex-1 font-bold leading-snug"
+        as="p"
       >
-        <div className="space-y-3">
-          <Heading
-            level={3}
-            className="mb-0 text-white drop-shadow-[2px_2px_0px_rgba(0,0,0,0.50)] md:mb-0"
-          >
-            {asFormattedTime(item.startDateTime)}
-          </Heading>
-          <Typography variant="h4" className="leading-tight text-white">
-            {item.title}
-          </Typography>
-        </div>
+        {item.title}
+      </Typography>
 
-        {item.author ? (
-          <Typography
-            variant="small"
-            className="rounded-md bg-white/20 p-2 font-semibold text-white/90"
-          >
+      {/* Bottom row: author name + avatar */}
+      {item.author && (
+        <div className="flex items-center justify-between gap-2">
+          <Typography variant="small" className="truncate text-muted-foreground">
             {getAuthorFullName(item.author)}
           </Typography>
-        ) : (
-          <Typography
-            variant="small"
-            className="rounded-md bg-white/20 p-2 font-semibold text-white/90"
-          >
-            {item.type.charAt(0).toUpperCase() + item.type.slice(1)}
-          </Typography>
-        )}
-      </div>
-    </>
+          <AuthorAvatar author={item.author} ringClass={cfg.ring} />
+        </div>
+      )}
+    </div>
   );
 
-  const className = cn(
-    "group relative aspect-[4/3] overflow-hidden rounded-md shadow-md",
-    isClickable && "cursor-pointer transition hover:scale-[1.02]",
+  const shellClass = cn(
+    "flex-1 flex flex-col rounded-md border border-border/60 border-l-4 px-3 py-2.5 gap-2 shadow-sm",
+    cfg.border,
+    cfg.bg,
+    isClickable &&
+      "cursor-pointer transition-all duration-150 hover:shadow-md hover:-translate-y-0.5 hover:border-l-4",
   );
 
   if (isClickable) {
     return (
-      <Link href={`/schedule/${item._id}`} className={className}>
+      <Link href={`/schedule/${item._id}`} className={shellClass}>
         {content}
       </Link>
     );
   }
-  return <div className={className}>{content}</div>;
+  return <div className={shellClass}>{content}</div>;
 }
 
-// slot → track number → items
-type SlotData = Map<number, TimelineItem[]>;
-
-function groupByDayAndSlot(items: TimelineItem[]) {
-  const days = new Map<string, Map<string, SlotData>>();
-
-  for (const item of items) {
-    const dayKey = getDayKey(item.startDateTime);
-    const hourKey = asFormattedTime(item.startDateTime, true);
-
-    if (!days.has(dayKey)) days.set(dayKey, new Map());
-    const slots = days.get(dayKey)!;
-
-    if (!slots.has(hourKey)) slots.set(hourKey, new Map());
-    const slot = slots.get(hourKey)!;
-
-    const track = item.track ?? 0;
-    if (!slot.has(track)) slot.set(track, []);
-    slot.get(track)!.push(item);
-  }
-
-  return days;
-}
+// ─── ScheduleView ───────────────────────────────────────────────────────────────
 
 export function ScheduleView({ items }: { items: TimelineItem[] }) {
-  const days = groupByDayAndSlot(items);
-  const dayKeys = Array.from(days.keys()).sort();
+  const dayKeys = items.length
+    ? [...new Set(items.map((i) => getDayKey(i.startDateTime)))].sort()
+    : [];
+
   const [selectedDay, setSelectedDay] = useState(dayKeys[0] ?? "");
 
   if (dayKeys.length === 0) {
@@ -151,12 +259,27 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
     );
   }
 
-  const currentDaySlots = days.get(selectedDay) ?? new Map<string, SlotData>();
-  const slotKeys = Array.from(currentDaySlots.keys()).sort();
-  // Day is multi-track if any slot has items on both track 1 and track 2 (track 0 = shared, excluded)
-  const isMultiTrack = Array.from(currentDaySlots.values()).some(
-    (slot) => slot.has(1) && slot.has(2),
+  const visibleItems = items.filter(
+    (i) => getDayKey(i.startDateTime) === selectedDay,
   );
+
+  const hasMultiTrack = visibleItems.some((t) => t.track === 1 || t.track === 2);
+
+  // Group by start minute
+  const slotMap = new Map<number, TimelineItem[]>();
+  for (const item of visibleItems) {
+    const min = getMinutesInDay(item.startDateTime);
+    if (!slotMap.has(min)) slotMap.set(min, []);
+    slotMap.get(min)!.push(item);
+  }
+  const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
+
+  const getDuration = (item: TimelineItem, startMin: number) => {
+    const endMin = item.endDateTime
+      ? getMinutesInDay(item.endDateTime)
+      : startMin + 45;
+    return Math.max(endMin - startMin, SLOT_MINUTES);
+  };
 
   return (
     <div>
@@ -181,8 +304,8 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
       )}
 
       {/* Track column headers */}
-      {isMultiTrack && (
-        <div className="mb-2 grid grid-cols-2 gap-4 px-1">
+      {hasMultiTrack && (
+        <div className="mb-2 grid grid-cols-2 gap-2 px-1">
           <Typography
             variant="small"
             className="font-semibold uppercase tracking-wide text-muted-foreground"
@@ -198,52 +321,66 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
         </div>
       )}
 
-      {/* Time slots */}
-      <div className="space-y-4">
-        {slotKeys.map((slotKey) => {
-          const slot = currentDaySlots.get(slotKey)!;
-          const sharedItems = slot.get(0) ?? [];
-          const hasTracked = slot.has(1) || slot.has(2);
-          const isSlotMultiTrack = slot.has(1) && slot.has(2);
+      {/* Slot rows */}
+      <div className="flex flex-col gap-2">
+        {sortedSlots.map(([startMin, slotItems]) => {
+          const track1 = slotItems.filter((i) => i.track === 1);
+          const track2 = slotItems.filter((i) => i.track === 2);
+          const shared = slotItems.filter(
+            (i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2,
+          );
+          const isParallelRow =
+            hasMultiTrack && track1.length > 0 && track2.length > 0;
 
           return (
-            <div
-              key={slotKey}
-              className="space-y-4 border-b-2 border-dotted border-primary/30 pb-4"
-            >
-              {/* Track 0: always full-width */}
-              {sharedItems.length > 0 && (
-                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                  {sharedItems.map((item) => (
-                    <TimelineCard key={item._id} item={item} />
-                  ))}
+            <div key={startMin} className="flex flex-col gap-2">
+              {/* Shared / full-width */}
+              {shared.map((item) => (
+                <div
+                  key={item._id}
+                  className="flex flex-col"
+                  style={{ minHeight: durationToPx(getDuration(item, startMin)) }}
+                >
+                  <ScheduleCard item={item} />
+                </div>
+              ))}
+
+              {/* Both tracks present → side-by-side */}
+              {isParallelRow && (
+                <div
+                  className="grid grid-cols-2 gap-2"
+                  style={{
+                    height: durationToPx(
+                      Math.max(
+                        ...[...track1, ...track2].map((i) =>
+                          getDuration(i, startMin),
+                        ),
+                      ),
+                    ),
+                  }}
+                >
+                  <div className="flex flex-col">
+                    {track1.map((item) => (
+                      <ScheduleCard key={item._id} item={item} />
+                    ))}
+                  </div>
+                  <div className="flex flex-col">
+                    {track2.map((item) => (
+                      <ScheduleCard key={item._id} item={item} />
+                    ))}
+                  </div>
                 </div>
               )}
 
-              {/* Tracked items */}
-              {hasTracked &&
-                (isSlotMultiTrack ? (
-                  // Track 1 + Track 2 side by side
-                  <div className="grid grid-cols-2 gap-4">
-                    <div className="space-y-4">
-                      {(slot.get(1) ?? []).map((item) => (
-                        <TimelineCard key={item._id} item={item} />
-                      ))}
-                    </div>
-                    <div className="space-y-4">
-                      {(slot.get(2) ?? []).map((item) => (
-                        <TimelineCard key={item._id} item={item} />
-                      ))}
-                    </div>
-                  </div>
-                ) : (
-                  // Single track → responsive grid
-                  <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    {[...(slot.get(1) ?? []), ...(slot.get(2) ?? [])].map(
-                      (item) => (
-                        <TimelineCard key={item._id} item={item} />
-                      ),
-                    )}
+              {/* Only one track → full-width */}
+              {!isParallelRow &&
+                [...track1, ...track2].map((item) => (
+                  <div
+                    key={item._id}
+                    className="flex flex-col"
+                    style={{ minHeight: durationToPx(getDuration(item, startMin)) }}
+                  >
+                    <ScheduleCard item={item} />
                   </div>
                 ))}
             </div>

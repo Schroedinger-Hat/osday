@@ -31,7 +31,8 @@ export default async function SchedulePage() {
       "author": speaker->{
         _id,
         firstName,
-        lastName
+        lastName,
+        photo
       }
     }`,
     undefined,
