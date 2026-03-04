@@ -13,7 +13,7 @@ export const structure: StructureResolver = async (S, context) => {
   `);
 
   const timelineYears: number[] = await client.fetch(
-    `array::unique(*[_type == "timeline"].year | order(@))`,
+    `array::unique(*[_type == "timeline"].year)`,
   );
 
   const timelineGroups = [
