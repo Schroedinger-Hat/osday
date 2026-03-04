@@ -12,6 +12,32 @@ export const structure: StructureResolver = async (S, context) => {
     array::unique(*[_type == "faq"].groupKey | order(@))
   `);
 
+  const timelineYears: number[] = await client.fetch(
+    `array::unique(*[_type == "timeline"].year | order(@))`,
+  );
+
+  const timelineGroups = [
+    ...timelineYears.map((year) =>
+      orderableDocumentListDeskItem({
+        type: "timeline",
+        S,
+        context,
+        title: `${year} Schedule`,
+        filter: `year == ${year}`,
+        id: `timeline-year-${year}`,
+        icon: schemaIcons.timeline,
+      }),
+    ),
+    orderableDocumentListDeskItem({
+      type: "timeline",
+      S,
+      context,
+      title: "All",
+      id: "timeline-year-all",
+      icon: schemaIcons.timeline,
+    }),
+  ];
+
   // Add type for the items array
   const faqGroups = [
     // Dynamic group items based on existing groupKeys
@@ -103,7 +129,10 @@ export const structure: StructureResolver = async (S, context) => {
       S.divider(),
 
       // Conference specifics
-      S.documentTypeListItem("timeline").icon(schemaIcons.timeline),
+      S.listItem()
+        .title("Timeline")
+        .icon(schemaIcons.timeline)
+        .child(S.list().title("Years").items(timelineGroups as any)),
       S.documentTypeListItem("partnerJobPost").icon(schemaIcons.jobPost),
     ]);
 };

@@ -17,9 +17,10 @@ export const timelineType = defineType({
       title: "Track",
       type: "number",
       initialValue: 1,
-      validation: (Rule) => Rule.required().min(1).max(4).integer(),
+      validation: (Rule) => Rule.required().min(0).max(4).integer(),
       options: {
         list: [
+          { title: "Shared (full width)", value: 0 },
           { title: "Track 1", value: 1 },
           { title: "Track 2", value: 2 },
           { title: "Track 3", value: 3 },
@@ -114,7 +115,7 @@ export const timelineType = defineType({
         : "";
       return {
         title,
-        subtitle: `Track ${trackNumber} | ${type} | ${date}`,
+        subtitle: `${trackNumber === 0 ? "Shared" : `Track ${trackNumber}`} | ${type} | ${date}`,
       };
     },
   },

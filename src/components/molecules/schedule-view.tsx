@@ -109,11 +109,8 @@ function TimelineCard({ item }: { item: TimelineItem }) {
   return <div className={className}>{content}</div>;
 }
 
-interface SlotData {
-  shared: TimelineItem[];
-  track1: TimelineItem[];
-  track2: TimelineItem[];
-}
+// slot → track number → items
+type SlotData = Map<number, TimelineItem[]>;
 
 function groupByDayAndSlot(items: TimelineItem[]) {
   const days = new Map<string, Map<string, SlotData>>();
@@ -125,14 +122,12 @@ function groupByDayAndSlot(items: TimelineItem[]) {
     if (!days.has(dayKey)) days.set(dayKey, new Map());
     const slots = days.get(dayKey)!;
 
-    if (!slots.has(hourKey)) {
-      slots.set(hourKey, { shared: [], track1: [], track2: [] });
-    }
+    if (!slots.has(hourKey)) slots.set(hourKey, new Map());
     const slot = slots.get(hourKey)!;
 
-    if (item.track === 1) slot.track1.push(item);
-    else if (item.track === 2) slot.track2.push(item);
-    else slot.shared.push(item);
+    const track = item.track ?? 0;
+    if (!slot.has(track)) slot.set(track, []);
+    slot.get(track)!.push(item);
   }
 
   return days;
@@ -158,8 +153,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
 
   const currentDaySlots = days.get(selectedDay) ?? new Map<string, SlotData>();
   const slotKeys = Array.from(currentDaySlots.keys()).sort();
+  // Day is multi-track if any slot has items on both track 1 and track 2 (track 0 = shared, excluded)
   const isMultiTrack = Array.from(currentDaySlots.values()).some(
-    (s) => s.track2.length > 0,
+    (slot) => slot.has(1) && slot.has(2),
   );
 
   return (
@@ -206,39 +202,48 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
       <div className="space-y-4">
         {slotKeys.map((slotKey) => {
           const slot = currentDaySlots.get(slotKey)!;
-          const hasTrackedItems =
-            slot.track1.length > 0 || slot.track2.length > 0;
+          const sharedItems = slot.get(0) ?? [];
+          const hasTracked = slot.has(1) || slot.has(2);
+          const isSlotMultiTrack = slot.has(1) && slot.has(2);
 
           return (
             <div
               key={slotKey}
               className="space-y-4 border-b-2 border-dotted border-primary/30 pb-4"
             >
-              {/* Full-width items (no track assigned) */}
-              {slot.shared.map((item) => (
-                <TimelineCard key={item._id} item={item} />
-              ))}
+              {/* Track 0: always full-width */}
+              {sharedItems.length > 0 && (
+                <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                  {sharedItems.map((item) => (
+                    <TimelineCard key={item._id} item={item} />
+                  ))}
+                </div>
+              )}
 
               {/* Tracked items */}
-              {hasTrackedItems &&
-                (isMultiTrack ? (
+              {hasTracked &&
+                (isSlotMultiTrack ? (
+                  // Track 1 + Track 2 side by side
                   <div className="grid grid-cols-2 gap-4">
                     <div className="space-y-4">
-                      {slot.track1.map((item) => (
+                      {(slot.get(1) ?? []).map((item) => (
                         <TimelineCard key={item._id} item={item} />
                       ))}
                     </div>
                     <div className="space-y-4">
-                      {slot.track2.map((item) => (
+                      {(slot.get(2) ?? []).map((item) => (
                         <TimelineCard key={item._id} item={item} />
                       ))}
                     </div>
                   </div>
                 ) : (
+                  // Single track → responsive grid
                   <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                    {[...slot.track1, ...slot.track2].map((item) => (
-                      <TimelineCard key={item._id} item={item} />
-                    ))}
+                    {[...(slot.get(1) ?? []), ...(slot.get(2) ?? [])].map(
+                      (item) => (
+                        <TimelineCard key={item._id} item={item} />
+                      ),
+                    )}
                   </div>
                 ))}
             </div>

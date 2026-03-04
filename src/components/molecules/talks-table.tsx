@@ -12,7 +12,7 @@ export interface TimelineItem {
   _id: string;
   _type: "timeline";
   type: string;
-  track?: 1 | 2 | 3 | 4;
+  track?: 0 | 1 | 2 | 3 | 4;
   startDateTime: string;
   endDateTime?: string;
   title: string;
