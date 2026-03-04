@@ -155,7 +155,7 @@ export default async function HomePage() {
       <ImageGrid title="Memories from 0sday 2025 Edition" />
 
       <SectionContainer withBackground backgroundType="hero">
-        <Heading level={2}>A jam-packed one day schedule</Heading>
+        <Heading level={2}>Two days, two tracks</Heading>
         <Typography variant="large" className="mb-10">
           Filled to the brim with talks, insights, and networking opportunities.
         </Typography>
