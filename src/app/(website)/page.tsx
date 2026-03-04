@@ -111,25 +111,20 @@ export default async function HomePage() {
           <div className="relative order-2 aspect-square md:order-1 md:col-span-2">
             <Image
               src={tShirt}
-              alt="Open Source Day t-shirt"
+              alt="Tee with Your Ticket"
               fill
               className="rounded-md object-cover"
             />
           </div>
           <div className="order-1 space-y-4 md:order-2 md:col-span-3">
-            <Heading level={2}>Grab a ticket, and a tee?</Heading>
+            <Heading level={2}>Tee with Your Ticket</Heading>
             <Typography>
-              We also have a brand-new Open Source Day tee!
-              <br />
-              Choose between a vibrant, colorful design or a sleek, minimalist
-              style. Grab yours online or at the event, and show off your open
-              source love.
-              <br />
-              Fun games await those who show up in their tee for a chance to win
-              exclusive prizes!
+            Last year, many of you told us that buying the T-shirt separately meant you couldn’t wear it during the event.
+<br/>
+This year, you can add the Open Source Day T-shirt when you purchase your ticket. Select your size at checkout, and your shirt will be ready for pickup at check-in.
             </Typography>
             <Button>
-              <Link href="https://shop.schroedinger-hat.org/">Visit store</Link>
+              <Link href="/tickets">Get your ticket</Link>
             </Button>
           </div>
         </div>

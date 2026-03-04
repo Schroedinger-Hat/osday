@@ -139,8 +139,10 @@ function durationToPx(minutes: number): number {
 
 function AuthorAvatar({
   author,
+  className,
 }: {
   author: NonNullable<TimelineItem["author"]>;
+  className?: string;
 }) {
   const initials =
     (
@@ -154,7 +156,7 @@ function AuthorAvatar({
         alt={getAuthorFullName(author)}
         width={38}
         height={38}
-        className={cn("rounded-sm object-cover")}
+        className={cn("rounded-sm object-cover", className)}
       />
     );
   }
@@ -163,6 +165,7 @@ function AuthorAvatar({
     <span
       className={cn(
         "flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-[10px] font-semibold",
+        className,
       )}
     >
       {initials}
@@ -216,11 +219,11 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
             {getAuthorFullName(item.author)}
             {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
           </Typography>
-          <div className="flex shrink-0 -space-x-2">
+          <div className="flex shrink-0 -space-x-1.5">
+            <AuthorAvatar author={item.author} className={item.coSpeaker ? "relative z-10 ring-2 ring-card" : undefined} />
             {item.coSpeaker && (
-              <AuthorAvatar author={item.coSpeaker} />
+              <AuthorAvatar author={item.coSpeaker} className="ring-2 ring-card" />
             )}
-            <AuthorAvatar author={item.author} />
           </div>
         </div>
       )}
