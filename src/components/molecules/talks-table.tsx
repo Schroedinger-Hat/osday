@@ -209,7 +209,9 @@ export function TalksTable({ talks }: TalksTableProps) {
                     <div
                       style={{
                         height: durationToPx(
-                          Math.max(...track1.map((i) => getDuration(i, startMin))),
+                          Math.max(
+                            ...track1.map((i) => getDuration(i, startMin)),
+                          ),
                         ),
                       }}
                     >
@@ -220,7 +222,9 @@ export function TalksTable({ talks }: TalksTableProps) {
                     <div
                       style={{
                         height: durationToPx(
-                          Math.max(...track2.map((i) => getDuration(i, startMin))),
+                          Math.max(
+                            ...track2.map((i) => getDuration(i, startMin)),
+                          ),
                         ),
                       }}
                     >

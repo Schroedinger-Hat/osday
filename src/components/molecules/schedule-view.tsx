@@ -220,9 +220,17 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
             {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
           </Typography>
           <div className="flex shrink-0 -space-x-1.5">
-            <AuthorAvatar author={item.author} className={item.coSpeaker ? "relative z-10 ring-2 ring-card" : undefined} />
+            <AuthorAvatar
+              author={item.author}
+              className={
+                item.coSpeaker ? "relative z-10 ring-2 ring-card" : undefined
+              }
+            />
             {item.coSpeaker && (
-              <AuthorAvatar author={item.coSpeaker} className="ring-2 ring-card" />
+              <AuthorAvatar
+                author={item.coSpeaker}
+                className="ring-2 ring-card"
+              />
             )}
           </div>
         </div>
@@ -367,7 +375,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                     className="flex flex-col"
                     style={{
                       minHeight: durationToPx(
-                        Math.max(...track1.map((i) => getDuration(i, startMin))),
+                        Math.max(
+                          ...track1.map((i) => getDuration(i, startMin)),
+                        ),
                       ),
                     }}
                   >
@@ -379,7 +389,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                     className="flex flex-col"
                     style={{
                       minHeight: durationToPx(
-                        Math.max(...track2.map((i) => getDuration(i, startMin))),
+                        Math.max(
+                          ...track2.map((i) => getDuration(i, startMin)),
+                        ),
                       ),
                     }}
                   >
