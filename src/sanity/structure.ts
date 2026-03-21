@@ -138,7 +138,11 @@ export const structure: StructureResolver = async (S, context) => {
       S.listItem()
         .title("Timeline")
         .icon(schemaIcons.timeline)
-        .child(S.list().title("Years").items(timelineGroups as any)),
+        .child(
+          S.list()
+            .title("Years")
+            .items(timelineGroups as any),
+        ),
       S.documentTypeListItem("partnerJobPost").icon(schemaIcons.jobPost),
     ]);
 };
