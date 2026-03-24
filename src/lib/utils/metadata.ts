@@ -8,9 +8,9 @@ interface MetadataProps {
   overrides?: Partial<Metadata>;
 }
 
-const defaultTitle = "OSDAY26: For those who loves Open Source";
+const defaultTitle = "OSDAY26: For those who love Open Source";
 const defaultDescription =
-  "OSDAY26 is a one-day conference for those who loves Open Source";
+  "OSDAY26 is a one-day conference for those who love Open Source";
 
 export function constructMetadata({
   title = defaultTitle,
