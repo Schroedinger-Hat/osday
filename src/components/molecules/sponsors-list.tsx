@@ -126,16 +126,16 @@ export async function SponsorsList() {
               <Link
                 href={sponsor.website ?? "#"}
                 key={sponsor._id}
-                className="flex items-center justify-center"
+                className="flex h-32 items-center justify-center rounded-xl bg-white p-3 shadow-md"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={urlFor(sponsor.image).width(308).height(128).url()}
+                  src={urlFor(sponsor.image).width(1200).height(320).url()}
                   alt={sponsor.name ?? ""}
-                  width={308}
-                  height={128}
-                  className="h-auto w-full object-contain shadow-md"
+                  width={800}
+                  height={320}
+                  className="h-full w-full object-contain"
                 />
               </Link>
             ))}
@@ -153,16 +153,16 @@ export async function SponsorsList() {
               <Link
                 href={sponsor.website ?? "#"}
                 key={sponsor._id}
-                className="flex items-center justify-center"
+                className="flex h-32 items-center justify-center rounded-xl bg-white p-4 shadow-md"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <Image
-                  src={urlFor(sponsor.image).width(308).height(128).url()}
+                  src={urlFor(sponsor.image).width(1200).height(320).url()}
                   alt={sponsor.name ?? ""}
-                  width={308}
-                  height={128}
-                  className="h-auto w-full object-contain shadow-md"
+                  width={800}
+                  height={320}
+                  className="h-full w-full object-contain"
                 />
               </Link>
             ))}
