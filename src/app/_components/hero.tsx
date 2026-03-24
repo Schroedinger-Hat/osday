@@ -66,7 +66,7 @@ export default function Hero() {
             </div>
 
             <Heading level={1} huge>
-              FOR THOSE WHO LOVES
+              FOR THOSE WHO LOVE
               <br />
               OPEN SOURCE
             </Heading>
