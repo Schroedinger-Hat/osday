@@ -203,7 +203,7 @@ export default function PressKitPage() {
             <Heading level={3}>What we do, in detail</Heading>
             <Typography variant="blockquote">
               Open Source Day is an international conference dedicated to
-              open-source solutions, scheduled for March, in Florence, Italy.
+              open-source solutions, scheduled for March/April, in Florence, Italy.
               The event aims to introduce open-source technologies to public and
               business institutions, promoting them as secure, efficient, and
               cost-effective alternatives to proprietary software.

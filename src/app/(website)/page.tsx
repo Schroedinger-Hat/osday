@@ -93,7 +93,7 @@ export default async function HomePage() {
           unmissable gathering of developers, tech enthusiasts, and
           forward-thinking innovators.
           <br />
-          On <b>April 24st</b>, join us at the vibrant{" "}
+          On <b>April 24th/25th</b>, join us at the vibrant{" "}
           <i>The Social Hub Firenze Belfiore</i> in Florence for a full day of
           talks that dive deep into today's most exciting open source trends.
           <br />

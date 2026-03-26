@@ -16,7 +16,7 @@ import defaultEventImage from "~/assets/images/venue/auditorium.jpg";
 
 const stats = [
   { label: "Speakers", value: "16" },
-  { label: "When", value: "24th of April" },
+  { label: "When", value: "24th/25th of April" },
   { label: "Venue", value: "The Social Hub Belfiore" },
   { label: "Location", value: "Florence, Italy" },
 ];
