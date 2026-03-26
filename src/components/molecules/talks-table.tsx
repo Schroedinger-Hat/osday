@@ -154,7 +154,7 @@ export function TalksTable({ talks }: TalksTableProps) {
     <div>
       {/* Day tabs */}
       {isMultiDay && (
-        <div className="mb-8 flex flex-wrap gap-2 justify-center">
+        <div className="mb-8 flex flex-wrap justify-center gap-2">
           {dayKeys.map((dk, i) => (
             <button
               key={dk}
