@@ -154,16 +154,16 @@ export function TalksTable({ talks }: TalksTableProps) {
     <div>
       {/* Day tabs */}
       {isMultiDay && (
-        <div className="mb-8 flex flex-wrap gap-2">
+        <div className="mb-8 flex flex-wrap justify-center gap-3">
           {dayKeys.map((dk, i) => (
             <button
               key={dk}
               onClick={() => setSelectedDay(dk)}
               className={cn(
-                "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
+                "rounded-full border-2 px-6 py-2 text-base font-semibold transition-colors",
                 selectedDay === dk
                   ? "border-primary bg-primary text-primary-foreground"
-                  : "border-primary/30 hover:border-primary/60",
+                  : "border-primary bg-primary/10 text-primary hover:bg-primary/20",
               )}
             >
               {getDayLabel(dk, i)}

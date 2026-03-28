@@ -93,9 +93,14 @@ export default async function HomePage() {
           unmissable gathering of developers, tech enthusiasts, and
           forward-thinking innovators.
           <br />
-          On <b>April 24st</b>, join us at the vibrant{" "}
+          <br />
+          On <b>April 24th</b>, join us at the vibrant{" "}
           <i>The Social Hub Firenze Belfiore</i> in Florence for a full day of
           talks that dive deep into today's most exciting open source trends.
+          <br />
+          <br />
+          On <b>April 25th</b>, we will host a day of hands-on workshops to
+          deepen your skills and collaborate with fellow developers.
           <br />
           Connect with like-minded peers, learn from top industry experts, and
           discover how open collaboration is shaping the future of technology.
