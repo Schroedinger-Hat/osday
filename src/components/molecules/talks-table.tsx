@@ -75,7 +75,7 @@ function TalkCell({ item }: { item: TimelineItem }) {
       href={`/schedule/${item._id}`}
       className="block overflow-hidden rounded border-[0.5px] border-fiery-red bg-white transition-opacity hover:opacity-80"
     >
-      <div className="flex flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5">
+      <div className="flex min-h-24 flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5">
         <p className="text-lg font-bold leading-snug tracking-tight text-black">
           {item.titleShort ?? item.title}
         </p>
@@ -172,7 +172,7 @@ export function TalksTable({ talks }: TalksTableProps) {
             </div>
           )}
 
-          <div className="flex flex-col gap-6">
+          <div className="flex flex-col gap-4">
             {sortedSlots.map(([startMin, items]) => {
               const track1 = items.filter((i) => i.track === 1);
               const track2 = items.filter((i) => i.track === 2);
