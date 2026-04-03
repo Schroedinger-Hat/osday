@@ -145,21 +145,23 @@ export function TalksTable({ talks }: TalksTableProps) {
     <div>
       {/* Day tabs */}
       {isMultiDay && (
-        <div className="mb-8 flex flex-wrap justify-center gap-4 py-8">
-          {dayKeys.map((dk, i) => (
-            <button
-              key={dk}
-              onClick={() => setSelectedDay(dk)}
-              className={cn(
-                "rounded-full border px-5 py-3.5 text-base font-bold tracking-tight transition-colors",
-                selectedDay === dk
-                  ? "border-white/20 bg-white text-black"
-                  : "border-white/20 bg-black/20 text-white",
-              )}
-            >
-              {getDayLabel(dk, i)}
-            </button>
-          ))}
+        <div className="flex justify-center py-8">
+          <div className="flex rounded-full bg-black/20 p-1">
+            {dayKeys.map((dk, i) => (
+              <button
+                key={dk}
+                onClick={() => setSelectedDay(dk)}
+                className={cn(
+                  "rounded-full px-5 py-3.5 text-base font-bold tracking-tight transition-colors",
+                  selectedDay === dk
+                    ? "bg-white text-black"
+                    : "text-white",
+                )}
+              >
+                {getDayLabel(dk, i)}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
