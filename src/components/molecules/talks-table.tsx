@@ -75,7 +75,7 @@ function TalkCell({ item }: { item: TimelineItem }) {
       href={`/schedule/${item._id}`}
       className="block overflow-hidden rounded border-[0.5px] border-fiery-red bg-white transition-all hover:border-fiery-red/50 hover:opacity-80 hover:bg-red-100"
     >
-      <div className="flex min-h-24 flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5">
+      <div className="flex flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5 sm:min-h-24">
         <p className="text-lg font-bold leading-snug tracking-tight text-black">
           {item.titleShort ?? item.title}
         </p>
