@@ -5,6 +5,8 @@ import { getAuthorFullName } from "~/lib/sanity-cms";
 import type { Author as SanityAuthor } from "~/sanity/sanity.types";
 import Link from "next/link";
 import { cn } from "~/lib/utils";
+import { Typography } from "../atoms/typography/Typography";
+import { Button } from "../ui/button";
 
 export interface TimelineItem {
   _id: string;
@@ -76,14 +78,14 @@ function TalkCell({ item }: { item: TimelineItem }) {
       className="block overflow-hidden rounded border-[0.5px] border-fiery-red bg-white transition-all hover:border-fiery-red/50 hover:opacity-80 hover:bg-red-100"
     >
       <div className="flex flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5 sm:min-h-24">
-        <p className="text-lg font-bold leading-snug tracking-tight text-black">
+        <Typography variant="large" className="leading-snug tracking-tight text-black font-bold">
           {item.titleShort ?? item.title}
-        </p>
+        </Typography>
         {item.author && (
-          <p className="text-base font-medium leading-snug text-muted-foreground">
+          <Typography variant="muted" className="leading-snug text-muted-foreground font-medium">
             {getAuthorFullName(item.author)}
             {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
-          </p>
+          </Typography>
         )}
       </div>
     </Link>
@@ -109,10 +111,12 @@ export function TalksTable({ talks }: TalksTableProps) {
   if (!hasTalks) {
     return (
       <div className="flex flex-col items-center justify-center py-4">
-        <p className="mb-2 text-lg font-semibold text-white">Stay tuned!</p>
-        <p className="max-w-md text-center text-base font-semibold text-white">
+        <Typography as="span" variant="large" className="mb-2 text-white">
+          Stay tuned!
+        </Typography>
+        <Typography variant="medium" className="max-w-md text-center text-white">
           Check back for upcoming talks and more details.
-        </p>
+        </Typography>
       </div>
     );
   }
@@ -167,9 +171,9 @@ export function TalksTable({ talks }: TalksTableProps) {
 
       {visibleTalks.length === 0 ? (
         <div className="flex flex-col items-center justify-center py-4">
-          <p className="mb-2 text-lg font-semibold text-white">
+          <Typography variant="large" className="mb-2 text-white">
             Nothing here yet.
-          </p>
+          </Typography>
         </div>
       ) : (
         <div className="rounded-lg bg-white px-4 py-6 sm:px-8">
@@ -179,9 +183,9 @@ export function TalksTable({ talks }: TalksTableProps) {
               <>
                 {allShared.length > 0 && (
                   <div>
-                    <p className="mb-3 font-title text-2xl tracking-tight text-fiery-red">
+                    <Typography variant="h3" className="mb-3 font-title tracking-tight text-fiery-red text-2xl">
                       Track A+B
-                    </p>
+                    </Typography>
                     <div className="flex flex-col gap-4">
                       {allShared.map((item) => (
                         <TalkCell key={item._id} item={item} />
@@ -191,9 +195,9 @@ export function TalksTable({ talks }: TalksTableProps) {
                 )}
                 {allTrack1.length > 0 && (
                   <div>
-                    <p className="mb-3 font-title text-2xl tracking-tight text-fiery-red">
+                    <Typography variant="h3" className="mb-3 font-title tracking-tight text-fiery-red text-2xl">
                       Track A
-                    </p>
+                    </Typography>
                     <div className="flex flex-col gap-4">
                       {allTrack1.map((item) => (
                         <TalkCell key={item._id} item={item} />
@@ -203,9 +207,9 @@ export function TalksTable({ talks }: TalksTableProps) {
                 )}
                 {allTrack2.length > 0 && (
                   <div>
-                    <p className="mb-3 font-title text-2xl tracking-tight text-fiery-red">
+                    <Typography variant="h3" className="mb-3 font-title tracking-tight text-fiery-red">
                       Track B
-                    </p>
+                    </Typography>
                     <div className="flex flex-col gap-4">
                       {allTrack2.map((item) => (
                         <TalkCell key={item._id} item={item} />
@@ -225,12 +229,12 @@ export function TalksTable({ talks }: TalksTableProps) {
           <div className="hidden sm:flex sm:flex-col sm:gap-4">
             {hasMultiTrack && (
               <div className="mb-6 flex gap-8">
-                <p className="flex-1 font-title text-3xl tracking-tight text-fiery-red">
+                <Typography variant="h3" className="flex-1 font-title tracking-tight text-fiery-red">
                   Track A
-                </p>
-                <p className="flex-1 font-title text-3xl tracking-tight text-fiery-red">
+                </Typography>
+                <Typography variant="h3" className="flex-1 font-title tracking-tight text-fiery-red">
                   Track B
-                </p>
+                </Typography>
               </div>
             )}
 
@@ -274,6 +278,12 @@ export function TalksTable({ talks }: TalksTableProps) {
           </div>
         </div>
       )}
+
+      <div className="mt-8 flex justify-center">
+        <Button asChild variant="default" className="rounded-r-none font-title text-2xl">
+          <Link href="/schedule">Full schedule</Link>
+        </Button>
+      </div>
     </div>
   );
 }
