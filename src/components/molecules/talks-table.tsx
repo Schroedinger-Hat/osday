@@ -180,6 +180,28 @@ export function TalksTable({ talks }: TalksTableProps) {
         </div>
       ) : (
         <div className="flex flex-col gap-2">
+          {hasMultiTrack && (
+            <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+							<div className="border-2 px-6 py-2 text-base font-semibold transition-colors border-primary bg-primary/10 text-primary">
+								<Typography
+									variant="small"
+									className="hidden text-center font-bold uppercase tracking-wide sm:block"
+									as="p"
+								>
+									Track A
+								</Typography>
+							</div>
+							<div className="border-2 px-6 py-2 text-base font-semibold transition-colors border-primary bg-primary/10 text-primary">
+								<Typography
+									variant="small"
+									className="hidden text-center font-bold uppercase tracking-wide sm:block"
+									as="p"
+								>
+									Track B
+								</Typography>
+							</div>
+            </div>
+          )}
           {sortedSlots.map(([startMin, items]) => {
             const track1 = items.filter((i) => i.track === 1);
             const track2 = items.filter((i) => i.track === 2);
