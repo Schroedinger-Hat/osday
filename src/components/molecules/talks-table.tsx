@@ -130,6 +130,17 @@ export function TalksTable({ talks }: TalksTableProps) {
   }
   const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
 
+  // Derived flat lists for mobile grouped view
+  const allShared = visibleTalks
+    .filter((i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2)
+    .sort((a, b) => getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime));
+  const allTrack1 = visibleTalks
+    .filter((i) => i.track === 1)
+    .sort((a, b) => getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime));
+  const allTrack2 = visibleTalks
+    .filter((i) => i.track === 2)
+    .sort((a, b) => getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime));
+
   return (
     <div>
       {/* Day tabs */}
@@ -160,19 +171,67 @@ export function TalksTable({ talks }: TalksTableProps) {
         </div>
       ) : (
         <div className="rounded-lg bg-white px-4 py-6 sm:px-8">
-          {/* Track headers */}
-          {hasMultiTrack && (
-            <div className="mb-6 hidden gap-6 sm:flex sm:gap-8">
-              <p className="flex-1 font-title text-3xl tracking-tight text-fiery-red">
-                Track A
-              </p>
-              <p className="flex-1 font-title text-3xl tracking-tight text-fiery-red">
-                Track B
-              </p>
-            </div>
-          )}
+          {/* ── Mobile layout: grouped by track ── */}
+          <div className="flex flex-col gap-6 sm:hidden">
+            {hasMultiTrack ? (
+              <>
+                {allShared.length > 0 && (
+                  <div>
+                    <p className="mb-3 font-title text-2xl tracking-tight text-fiery-red">
+                      Track A+B
+                    </p>
+                    <div className="flex flex-col gap-4">
+                      {allShared.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {allTrack1.length > 0 && (
+                  <div>
+                    <p className="mb-3 font-title text-2xl tracking-tight text-fiery-red">
+                      Track A
+                    </p>
+                    <div className="flex flex-col gap-4">
+                      {allTrack1.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+                {allTrack2.length > 0 && (
+                  <div>
+                    <p className="mb-3 font-title text-2xl tracking-tight text-fiery-red">
+                      Track B
+                    </p>
+                    <div className="flex flex-col gap-4">
+                      {allTrack2.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              allShared.map((item) => (
+                <TalkCell key={item._id} item={item} />
+              ))
+            )}
+          </div>
 
-          <div className="flex flex-col gap-4">
+          {/* ── Desktop layout: two-column, slot-based ── */}
+          <div className="hidden sm:flex sm:flex-col sm:gap-4">
+            {hasMultiTrack && (
+              <div className="mb-6 flex gap-8">
+                <p className="flex-1 font-title text-3xl tracking-tight text-fiery-red">
+                  Track A
+                </p>
+                <p className="flex-1 font-title text-3xl tracking-tight text-fiery-red">
+                  Track B
+                </p>
+              </div>
+            )}
+
             {sortedSlots.map(([startMin, items]) => {
               const track1 = items.filter((i) => i.track === 1);
               const track2 = items.filter((i) => i.track === 2);
@@ -184,14 +243,12 @@ export function TalksTable({ talks }: TalksTableProps) {
 
               return (
                 <div key={startMin} className="flex flex-col gap-4">
-                  {/* Shared / full-width items */}
                   {shared.map((item) => (
                     <TalkCell key={item._id} item={item} />
                   ))}
 
-                  {/* Both tracks present → side-by-side on sm+, stacked on mobile */}
                   {isParallelRow && (
-                    <div className="flex flex-col gap-4 sm:flex-row sm:gap-8">
+                    <div className="flex gap-8">
                       <div className="flex flex-1 flex-col gap-4">
                         {track1.map((item) => (
                           <TalkCell key={item._id} item={item} />
@@ -205,7 +262,6 @@ export function TalksTable({ talks }: TalksTableProps) {
                     </div>
                   )}
 
-                  {/* Only one track present (no parallel partner) → full-width */}
                   {!isParallelRow &&
                     [...track1, ...track2].map((item) => (
                       <TalkCell key={item._id} item={item} />
