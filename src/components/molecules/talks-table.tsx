@@ -153,9 +153,9 @@ export function TalksTable({ talks }: TalksTableProps) {
     getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime);
 
   // Derived flat lists for mobile grouped view
-  const allShared = visibleTalks.filter(isShared).sort(sortByStart);
-  const allTrack1 = visibleTalks.filter(isTrack1).sort(sortByStart);
-  const allTrack2 = visibleTalks.filter(isTrack2).sort(sortByStart);
+  const sharedTalks = visibleTalks.filter(isShared).sort(sortByStart);
+  const trackATalks = visibleTalks.filter(isTrack1).sort(sortByStart);
+  const trackBTalks = visibleTalks.filter(isTrack2).sort(sortByStart);
 
   return (
     <div>
@@ -191,7 +191,7 @@ export function TalksTable({ talks }: TalksTableProps) {
           <div className="flex flex-col gap-6 sm:hidden">
             {hasMultiTrack ? (
               <>
-                {allShared.length > 0 && (
+                {sharedTalks.length > 0 && (
                   <div>
                     <Typography
                       variant="h3"
@@ -200,13 +200,13 @@ export function TalksTable({ talks }: TalksTableProps) {
                       Track A+B
                     </Typography>
                     <div className="flex flex-col gap-4">
-                      {allShared.map((item) => (
+                      {sharedTalks.map((item) => (
                         <TalkCell key={item._id} item={item} />
                       ))}
                     </div>
                   </div>
                 )}
-                {allTrack1.length > 0 && (
+                {trackATalks.length > 0 && (
                   <div>
                     <Typography
                       variant="h3"
@@ -215,13 +215,13 @@ export function TalksTable({ talks }: TalksTableProps) {
                       Track A
                     </Typography>
                     <div className="flex flex-col gap-4">
-                      {allTrack1.map((item) => (
+                      {trackATalks.map((item) => (
                         <TalkCell key={item._id} item={item} />
                       ))}
                     </div>
                   </div>
                 )}
-                {allTrack2.length > 0 && (
+                {trackBTalks.length > 0 && (
                   <div>
                     <Typography
                       variant="h3"
@@ -230,7 +230,7 @@ export function TalksTable({ talks }: TalksTableProps) {
                       Track B
                     </Typography>
                     <div className="flex flex-col gap-4">
-                      {allTrack2.map((item) => (
+                      {trackBTalks.map((item) => (
                         <TalkCell key={item._id} item={item} />
                       ))}
                     </div>
@@ -238,7 +238,7 @@ export function TalksTable({ talks }: TalksTableProps) {
                 )}
               </>
             ) : (
-              allShared.map((item) => <TalkCell key={item._id} item={item} />)
+              sharedTalks.map((item) => <TalkCell key={item._id} item={item} />)
             )}
           </div>
 
