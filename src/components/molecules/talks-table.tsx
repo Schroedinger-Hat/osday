@@ -75,7 +75,8 @@ function getMinutesInDay(dateStr: string): number {
   return hour * 60 + minute;
 }
 
-const isShared = (i: TimelineItem) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
+const isShared = (i: TimelineItem) =>
+  (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
 const isTrackA = (i: TimelineItem) => i.track === 1;
 const isTrackB = (i: TimelineItem) => i.track === 2;
 
