@@ -39,35 +39,48 @@ interface TalksTableProps {
   talks: TimelineItem[];
 }
 
+const dayKeyFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Rome",
+});
+const dayLabelFormatter = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+});
+const minutesFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: "Europe/Rome",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: false,
+});
+
 function getDayKey(dateStr: string): string {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome" }).format(
-    new Date(dateStr),
-  );
+  return dayKeyFormatter.format(new Date(dateStr));
 }
 
 function getDayLabel(dayKey: string, index: number): string {
   const [y, m, d] = dayKey.split("-").map(Number);
-  const formatted = new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "short",
-    timeZone: "UTC",
-  }).format(new Date(Date.UTC(y!, m! - 1, d!)));
+  const formatted = dayLabelFormatter.format(
+    new Date(Date.UTC(y!, m! - 1, d!)),
+  );
   return `Day ${index + 1} · ${formatted}`;
 }
 
 // ─── Time helpers ──────────────────────────────────────────────────────────────
 
 function getMinutesInDay(dateStr: string): number {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "Europe/Rome",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: false,
-  }).formatToParts(new Date(dateStr));
+  const parts = minutesFormatter.formatToParts(new Date(dateStr));
   const hour = Number(parts.find((p) => p.type === "hour")?.value ?? 0) % 24;
   const minute = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
   return hour * 60 + minute;
 }
+
+const isShared = (i: TimelineItem) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
+const isTrack1 = (i: TimelineItem) => i.track === 1;
+const isTrack2 = (i: TimelineItem) => i.track === 2;
+
+const sortByStart = (a: TimelineItem, b: TimelineItem) =>
+  getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime);
 
 // ─── Talk cell ─────────────────────────────────────────────────────────────────
 
@@ -142,15 +155,6 @@ export function TalksTable({ talks }: TalksTableProps) {
     slotMap.get(min)!.push(item);
   }
   const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
-
-  // Logical conditions
-  const isShared = (i: TimelineItem) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
-  const isTrack1 = (i: TimelineItem) => i.track === 1;
-  const isTrack2 = (i: TimelineItem) => i.track === 2;
-
-  // Helper
-  const sortByStart = (a: TimelineItem, b: TimelineItem) =>
-    getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime);
 
   // Derived flat lists for mobile grouped view
   const sharedTalks = visibleTalks.filter(isShared).sort(sortByStart);
