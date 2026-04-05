@@ -76,8 +76,8 @@ function getMinutesInDay(dateStr: string): number {
 }
 
 const isShared = (i: TimelineItem) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
-const isTrack1 = (i: TimelineItem) => i.track === 1;
-const isTrack2 = (i: TimelineItem) => i.track === 2;
+const isTrackA = (i: TimelineItem) => i.track === 1;
+const isTrackB = (i: TimelineItem) => i.track === 2;
 
 const sortByStart = (a: TimelineItem, b: TimelineItem) =>
   getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime);
@@ -158,8 +158,8 @@ export function TalksTable({ talks }: TalksTableProps) {
 
   // Derived flat lists for mobile grouped view
   const sharedTalks = visibleTalks.filter(isShared).sort(sortByStart);
-  const trackATalks = visibleTalks.filter(isTrack1).sort(sortByStart);
-  const trackBTalks = visibleTalks.filter(isTrack2).sort(sortByStart);
+  const trackATalks = visibleTalks.filter(isTrackA).sort(sortByStart);
+  const trackBTalks = visibleTalks.filter(isTrackB).sort(sortByStart);
 
   return (
     <div>
@@ -266,8 +266,8 @@ export function TalksTable({ talks }: TalksTableProps) {
             )}
 
             {sortedSlots.map(([startMin, items]) => {
-              const track1 = items.filter(isTrack1);
-              const track2 = items.filter(isTrack2);
+              const track1 = items.filter(isTrackA);
+              const track2 = items.filter(isTrackB);
               const shared = items.filter(isShared);
               const isParallelRow =
                 hasMultiTrack && track1.length > 0 && track2.length > 0;
