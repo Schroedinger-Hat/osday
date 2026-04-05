@@ -143,25 +143,19 @@ export function TalksTable({ talks }: TalksTableProps) {
   }
   const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
 
+  // Logical conditions
+  const isShared = (i: TimelineItem) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
+  const isTrack1 = (i: TimelineItem) => i.track === 1;
+  const isTrack2 = (i: TimelineItem) => i.track === 2;
+
+  // Helper
+  const sortByStart = (a: TimelineItem, b: TimelineItem) =>
+    getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime);
+
   // Derived flat lists for mobile grouped view
-  const allShared = visibleTalks
-    .filter((i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2)
-    .sort(
-      (a, b) =>
-        getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime),
-    );
-  const allTrack1 = visibleTalks
-    .filter((i) => i.track === 1)
-    .sort(
-      (a, b) =>
-        getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime),
-    );
-  const allTrack2 = visibleTalks
-    .filter((i) => i.track === 2)
-    .sort(
-      (a, b) =>
-        getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime),
-    );
+  const allShared = visibleTalks.filter(isShared).sort(sortByStart);
+  const allTrack1 = visibleTalks.filter(isTrack1).sort(sortByStart);
+  const allTrack2 = visibleTalks.filter(isTrack2).sort(sortByStart);
 
   return (
     <div>
@@ -268,11 +262,9 @@ export function TalksTable({ talks }: TalksTableProps) {
             )}
 
             {sortedSlots.map(([startMin, items]) => {
-              const track1 = items.filter((i) => i.track === 1);
-              const track2 = items.filter((i) => i.track === 2);
-              const shared = items.filter(
-                (i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2,
-              );
+              const track1 = items.filter(isTrack1);
+              const track2 = items.filter(isTrack2);
+              const shared = items.filter(isShared);
               const isParallelRow =
                 hasMultiTrack && track1.length > 0 && track2.length > 0;
 
