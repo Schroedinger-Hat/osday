@@ -3,9 +3,10 @@
 import { useState } from "react";
 import { getAuthorFullName } from "~/lib/sanity-cms";
 import type { Author as SanityAuthor } from "~/sanity/sanity.types";
-import { Typography } from "../atoms/typography/Typography";
 import Link from "next/link";
 import { cn } from "~/lib/utils";
+import { Typography } from "../atoms/typography/Typography";
+import { Button } from "../ui/button";
 
 export interface TimelineItem {
   _id: string;
@@ -38,44 +39,49 @@ interface TalksTableProps {
   talks: TimelineItem[];
 }
 
+const dayKeyFormatter = new Intl.DateTimeFormat("en-CA", {
+  timeZone: "Europe/Rome",
+});
+const dayLabelFormatter = new Intl.DateTimeFormat("en-GB", {
+  day: "numeric",
+  month: "short",
+  timeZone: "UTC",
+});
+const minutesFormatter = new Intl.DateTimeFormat("en-US", {
+  timeZone: "Europe/Rome",
+  hour: "numeric",
+  minute: "numeric",
+  hour12: false,
+});
+
 function getDayKey(dateStr: string): string {
-  return new Intl.DateTimeFormat("en-CA", { timeZone: "Europe/Rome" }).format(
-    new Date(dateStr),
-  );
+  return dayKeyFormatter.format(new Date(dateStr));
 }
 
 function getDayLabel(dayKey: string, index: number): string {
   const [y, m, d] = dayKey.split("-").map(Number);
-  const formatted = new Intl.DateTimeFormat("en-GB", {
-    day: "numeric",
-    month: "short",
-    timeZone: "UTC",
-  }).format(new Date(Date.UTC(y!, m! - 1, d!)));
+  const formatted = dayLabelFormatter.format(
+    new Date(Date.UTC(y!, m! - 1, d!)),
+  );
   return `Day ${index + 1} · ${formatted}`;
 }
-
-// ─── Grid constants ────────────────────────────────────────────────────────────
-
-const SLOT_MINUTES = 15;
-const SLOT_HEIGHT_PX = 32; // px per 15-min slot
 
 // ─── Time helpers ──────────────────────────────────────────────────────────────
 
 function getMinutesInDay(dateStr: string): number {
-  const parts = new Intl.DateTimeFormat("en-US", {
-    timeZone: "Europe/Rome",
-    hour: "numeric",
-    minute: "numeric",
-    hour12: false,
-  }).formatToParts(new Date(dateStr));
+  const parts = minutesFormatter.formatToParts(new Date(dateStr));
   const hour = Number(parts.find((p) => p.type === "hour")?.value ?? 0) % 24;
   const minute = Number(parts.find((p) => p.type === "minute")?.value ?? 0);
   return hour * 60 + minute;
 }
 
-function durationToPx(minutes: number): number {
-  return Math.max(minutes / SLOT_MINUTES, 2) * SLOT_HEIGHT_PX;
-}
+const isShared = (i: TimelineItem) =>
+  (i.track ?? 0) === 0 || (i.track ?? 0) > 2;
+const isTrackA = (i: TimelineItem) => i.track === 1;
+const isTrackB = (i: TimelineItem) => i.track === 2;
+
+const sortByStart = (a: TimelineItem, b: TimelineItem) =>
+  getMinutesInDay(a.startDateTime) - getMinutesInDay(b.startDateTime);
 
 // ─── Talk cell ─────────────────────────────────────────────────────────────────
 
@@ -83,20 +89,25 @@ function TalkCell({ item }: { item: TimelineItem }) {
   return (
     <Link
       href={`/schedule/${item._id}`}
-      className="flex h-full flex-col overflow-hidden rounded-sm border border-border bg-card px-3 py-2 text-card-foreground transition-opacity hover:border-primary/50 hover:opacity-80"
+      className="block overflow-hidden rounded border-[0.5px] border-fiery-red bg-white transition-all hover:border-fiery-red/50 hover:bg-red-100 hover:opacity-80"
     >
-      <Typography variant="small" className="font-bold leading-snug" as="p">
-        {item.titleShort}
-      </Typography>
-      {item.author && (
+      <div className="flex flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5 sm:min-h-24">
         <Typography
-          variant="small"
-          className="line-clamp-3 leading-snug text-muted-foreground"
+          variant="large"
+          className="font-bold leading-snug tracking-tight text-black"
         >
-          {getAuthorFullName(item.author)}
-          {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
+          {item.titleShort ?? item.title}
         </Typography>
-      )}
+        {item.author && (
+          <Typography
+            variant="muted"
+            className="font-medium leading-snug text-muted-foreground"
+          >
+            {getAuthorFullName(item.author)}
+            {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
+          </Typography>
+        )}
+      </div>
     </Link>
   );
 }
@@ -119,11 +130,14 @@ export function TalksTable({ talks }: TalksTableProps) {
 
   if (!hasTalks) {
     return (
-      <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
-        <Typography as="span" variant="large" className="mb-2">
+      <div className="flex flex-col items-center justify-center py-4">
+        <Typography as="span" variant="large" className="mb-2 text-white">
           Stay tuned!
         </Typography>
-        <Typography variant="medium" className="max-w-md text-center">
+        <Typography
+          variant="medium"
+          className="max-w-md text-center text-white"
+        >
           Check back for upcoming talks and more details.
         </Typography>
       </div>
@@ -143,115 +157,163 @@ export function TalksTable({ talks }: TalksTableProps) {
   }
   const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
 
-  const getDuration = (item: TimelineItem, startMin: number) => {
-    const endMin = item.endDateTime
-      ? getMinutesInDay(item.endDateTime)
-      : startMin + 45;
-    return Math.max(endMin - startMin, SLOT_MINUTES);
-  };
+  // Derived flat lists for mobile grouped view
+  const sharedTalks = visibleTalks.filter(isShared).sort(sortByStart);
+  const trackATalks = visibleTalks.filter(isTrackA).sort(sortByStart);
+  const trackBTalks = visibleTalks.filter(isTrackB).sort(sortByStart);
 
   return (
     <div>
       {/* Day tabs */}
       {isMultiDay && (
-        <div className="mb-8 flex flex-wrap justify-center gap-3">
-          {dayKeys.map((dk, i) => (
-            <button
-              key={dk}
-              onClick={() => setSelectedDay(dk)}
-              className={cn(
-                "rounded-full border-2 px-6 py-2 text-base font-semibold transition-colors",
-                selectedDay === dk
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-primary bg-primary/10 text-primary hover:bg-primary/20",
-              )}
-            >
-              {getDayLabel(dk, i)}
-            </button>
-          ))}
+        <div className="flex justify-center py-8">
+          <div className="flex rounded-full bg-black/20 p-1">
+            {dayKeys.map((dk, i) => (
+              <button
+                key={dk}
+                onClick={() => setSelectedDay(dk)}
+                className={cn(
+                  "rounded-full px-5 py-3.5 text-base font-bold tracking-tight transition-colors",
+                  selectedDay === dk ? "bg-white text-black" : "text-white",
+                )}
+              >
+                {getDayLabel(dk, i)}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
       {visibleTalks.length === 0 ? (
-        <div className="flex flex-col items-center justify-center border-b border-gray-200 py-4">
-          <Typography as="span" variant="large" className="mb-2">
+        <div className="flex flex-col items-center justify-center py-4">
+          <Typography variant="large" className="mb-2 text-white">
             Nothing here yet.
           </Typography>
         </div>
       ) : (
-        <div className="flex flex-col gap-2">
-          {sortedSlots.map(([startMin, items]) => {
-            const track1 = items.filter((i) => i.track === 1);
-            const track2 = items.filter((i) => i.track === 2);
-            const shared = items.filter(
-              (i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2,
-            );
-            const isParallelRow =
-              hasMultiTrack && track1.length > 0 && track2.length > 0;
-
-            return (
-              <div key={startMin} className="flex flex-col gap-2">
-                {/* Shared / full-width items */}
-                {shared.map((item) => (
-                  <div
-                    key={item._id}
-                    style={{
-                      height: durationToPx(getDuration(item, startMin)),
-                    }}
-                  >
-                    <TalkCell item={item} />
-                  </div>
-                ))}
-
-                {/* Both tracks present → side-by-side on sm+, stacked on mobile */}
-                {isParallelRow && (
-                  <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
-                    <div
-                      style={{
-                        height: durationToPx(
-                          Math.max(
-                            ...track1.map((i) => getDuration(i, startMin)),
-                          ),
-                        ),
-                      }}
+        <div className="rounded-lg bg-white px-4 py-6 sm:px-8">
+          {/* ── Mobile layout: grouped by track ── */}
+          <div className="flex flex-col gap-6 sm:hidden">
+            {hasMultiTrack ? (
+              <>
+                {sharedTalks.length > 0 && (
+                  <div>
+                    <Typography
+                      variant="h3"
+                      className="mb-3 font-title text-2xl tracking-tight text-fiery-red"
                     >
-                      {track1.map((item) => (
-                        <TalkCell key={item._id} item={item} />
-                      ))}
-                    </div>
-                    <div
-                      style={{
-                        height: durationToPx(
-                          Math.max(
-                            ...track2.map((i) => getDuration(i, startMin)),
-                          ),
-                        ),
-                      }}
-                    >
-                      {track2.map((item) => (
+                      Track A+B
+                    </Typography>
+                    <div className="flex flex-col gap-4">
+                      {sharedTalks.map((item) => (
                         <TalkCell key={item._id} item={item} />
                       ))}
                     </div>
                   </div>
                 )}
-
-                {/* Only one track present (no parallel partner) → full-width */}
-                {!isParallelRow &&
-                  [...track1, ...track2].map((item) => (
-                    <div
-                      key={item._id}
-                      style={{
-                        height: durationToPx(getDuration(item, startMin)),
-                      }}
+                {trackATalks.length > 0 && (
+                  <div>
+                    <Typography
+                      variant="h3"
+                      className="mb-3 font-title text-2xl tracking-tight text-fiery-red"
                     >
-                      <TalkCell item={item} />
+                      Track A
+                    </Typography>
+                    <div className="flex flex-col gap-4">
+                      {trackATalks.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
                     </div>
-                  ))}
+                  </div>
+                )}
+                {trackBTalks.length > 0 && (
+                  <div>
+                    <Typography
+                      variant="h3"
+                      className="mb-3 font-title tracking-tight text-fiery-red"
+                    >
+                      Track B
+                    </Typography>
+                    <div className="flex flex-col gap-4">
+                      {trackBTalks.map((item) => (
+                        <TalkCell key={item._id} item={item} />
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </>
+            ) : (
+              sharedTalks.map((item) => <TalkCell key={item._id} item={item} />)
+            )}
+          </div>
+
+          {/* ── Desktop layout: two-column, slot-based ── */}
+          <div className="hidden sm:flex sm:flex-col sm:gap-4">
+            {hasMultiTrack && (
+              <div className="mb-6 flex gap-8">
+                <Typography
+                  variant="h3"
+                  className="flex-1 font-title tracking-tight text-fiery-red"
+                >
+                  Track A
+                </Typography>
+                <Typography
+                  variant="h3"
+                  className="flex-1 font-title tracking-tight text-fiery-red"
+                >
+                  Track B
+                </Typography>
               </div>
-            );
-          })}
+            )}
+
+            {sortedSlots.map(([startMin, items]) => {
+              const track1 = items.filter(isTrackA);
+              const track2 = items.filter(isTrackB);
+              const shared = items.filter(isShared);
+              const isParallelRow =
+                hasMultiTrack && track1.length > 0 && track2.length > 0;
+
+              return (
+                <div key={startMin} className="flex flex-col gap-4">
+                  {shared.map((item) => (
+                    <TalkCell key={item._id} item={item} />
+                  ))}
+
+                  {isParallelRow && (
+                    <div className="flex gap-8">
+                      <div className="flex flex-1 flex-col gap-4">
+                        {track1.map((item) => (
+                          <TalkCell key={item._id} item={item} />
+                        ))}
+                      </div>
+                      <div className="flex flex-1 flex-col gap-4">
+                        {track2.map((item) => (
+                          <TalkCell key={item._id} item={item} />
+                        ))}
+                      </div>
+                    </div>
+                  )}
+
+                  {!isParallelRow &&
+                    [...track1, ...track2].map((item) => (
+                      <TalkCell key={item._id} item={item} />
+                    ))}
+                </div>
+              );
+            })}
+          </div>
         </div>
       )}
+
+      <div className="mt-8 flex justify-center">
+        <Button
+          asChild
+          variant="default"
+          className="rounded-r-none font-title text-2xl"
+        >
+          <Link href="/schedule">Full schedule</Link>
+        </Button>
+      </div>
     </div>
   );
 }
