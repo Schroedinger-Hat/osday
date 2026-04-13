@@ -252,7 +252,7 @@ export type JobPost = {
     _key: string;
   }>;
   location?: string;
-  effort?: "low" | "moderate" | "elevate";
+  effort?: "low" | "moderate" | "elevate" | "part-time" | "full-time";
   isActive?: boolean;
   publishedAt?: string;
 };

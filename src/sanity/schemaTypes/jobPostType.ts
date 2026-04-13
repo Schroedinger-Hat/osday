@@ -32,7 +32,9 @@ export const jobPostType = defineType({
         list: [
           { title: "Low (<4 hours/month)", value: "low" },
           { title: "Moderate (4-8 hours/month)", value: "moderate" },
-          { title: "Elevate (>8 hours/month)", value: "elevate" },
+          { title: "Elevate (8-20 hours/month)", value: "elevate" },
+          { title: "Part-Time (20-36 hours/month)", value: "part-time" },
+          { title: "Full-time (>36 hours/month)", value: "full-time" },
         ],
       },
       validation: (Rule) => Rule.required(),
