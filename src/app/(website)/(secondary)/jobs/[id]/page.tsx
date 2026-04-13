@@ -1,4 +1,4 @@
-import { PortableText } from "@portabletext/react";
+import { PortableText, PortableTextComponents } from "@portabletext/react";
 import { format } from "date-fns";
 import { ArrowLeft01Icon, Globe02Icon } from "hugeicons-react";
 import Image from "next/image";
