@@ -247,7 +247,10 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
                 transition={{ delay: 0.2 }}
                 className="prose prose-gray dark:prose-invert max-w-none"
               >
-                <PortableText value={currentJob.description} components={components}/>
+                <PortableText
+                  value={currentJob.description}
+                  components={components}
+                />
               </motion.div>
 
               {currentJob.partner.website && (
