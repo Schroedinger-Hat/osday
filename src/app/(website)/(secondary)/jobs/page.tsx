@@ -34,7 +34,7 @@ type PartnerJobPost = {
 const jobsQuery = groq`*[_type == "partnerJobPost" && isActive == true] | order(publishedAt desc) {
   _id,
   title,
-  description[0..1],
+  description[0..4],
   tags,
   publishedAt,
   partner->{
