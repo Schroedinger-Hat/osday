@@ -1,11 +1,12 @@
 "use client";
 
-import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
 import { format } from "date-fns";
 import { motion, AnimatePresence } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
+import { createPortableTextComponents } from "~/components/atoms/portableTextComponents";
 import { Badge } from "~/components/ui/badge";
 import { Card } from "~/components/ui/card";
 import { Progress } from "~/components/ui/progress";
@@ -55,56 +56,6 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
   const [currentJobIndex, setCurrentJobIndex] = useState(0);
   const [jobs] = useState(() => shuffleArray(initialJobs));
   const [progress, setProgress] = useState(0);
-
-  const components: PortableTextComponents = {
-    block: {
-      normal: ({ children }) => <p className="mb-4">{children}</p>,
-      h1: ({ children }) => (
-        <h1 className="mb-4 text-3xl font-bold">{children}</h1>
-      ),
-      h2: ({ children }) => (
-        <h2 className="mb-4 text-2xl font-semibold">{children}</h2>
-      ),
-      h3: ({ children }) => (
-        <h3 className="mb-3 text-xl font-semibold">{children}</h3>
-      ),
-      h4: ({ children }) => (
-        <h4 className="mb-2 text-lg font-semibold">{children}</h4>
-      ),
-      h5: ({ children }) => (
-        <h5 className="mb-2 text-base font-medium">{children}</h5>
-      ),
-      blockquote: ({ children }) => (
-        <blockquote className="my-4 border-l-4 pl-4 italic">
-          {children}
-        </blockquote>
-      ),
-    },
-    marks: {
-      strong: ({ children }) => (
-        <strong className="font-semibold">{children}</strong>
-      ),
-      em: ({ children }) => <em className="italic">{children}</em>,
-      link: ({ children, value }) => (
-        <a
-          href={value?.href}
-          className="underline"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          {children}
-        </a>
-      ),
-    },
-    list: {
-      bullet: ({ children }) => (
-        <ul className="mb-4 list-disc pl-6">{children}</ul>
-      ),
-      number: ({ children }) => (
-        <ol className="mb-4 list-decimal pl-6">{children}</ol>
-      ),
-    },
-  };
 
   useEffect(() => {
     const intervalDuration = UPDATE_INTERVAL; // Update progress every 100ms for smooth animation
@@ -245,11 +196,11 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2 }}
-                className="prose prose-gray dark:prose-invert max-w-none"
+                className="max-w-none"
               >
                 <PortableText
                   value={currentJob.description}
-                  components={components}
+                  components={createPortableTextComponents()}
                 />
               </motion.div>
 

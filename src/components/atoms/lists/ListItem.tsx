@@ -8,5 +8,5 @@ interface ListItemProps {
 }
 
 export function ListItem({ children, className }: ListItemProps) {
-  return <li className={cn(className)}>{children}</li>;
+  return <li className={cn("leading-relaxed", className)}>{children}</li>;
 }

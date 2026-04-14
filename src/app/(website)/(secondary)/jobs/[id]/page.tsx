@@ -1,10 +1,11 @@
-import { PortableText, PortableTextComponents } from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
 import { format } from "date-fns";
 import { ArrowLeft01Icon, Globe02Icon } from "hugeicons-react";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { groq } from "next-sanity";
+import { createPortableTextComponents } from "~/components/atoms/portableTextComponents";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
@@ -55,56 +56,6 @@ const jobQuery = groq`*[_type == "partnerJobPost" && _id == $id][0] {
     }
   }
 }`;
-
-const components: PortableTextComponents = {
-  block: {
-    normal: ({ children }) => <p className="mb-4">{children}</p>,
-    h1: ({ children }) => (
-      <h1 className="mb-4 text-3xl font-bold">{children}</h1>
-    ),
-    h2: ({ children }) => (
-      <h2 className="mb-4 text-2xl font-semibold">{children}</h2>
-    ),
-    h3: ({ children }) => (
-      <h3 className="mb-3 text-xl font-semibold">{children}</h3>
-    ),
-    h4: ({ children }) => (
-      <h4 className="mb-2 text-lg font-semibold">{children}</h4>
-    ),
-    h5: ({ children }) => (
-      <h5 className="mb-2 text-base font-medium">{children}</h5>
-    ),
-    blockquote: ({ children }) => (
-      <blockquote className="my-4 border-l-4 pl-4 italic">
-        {children}
-      </blockquote>
-    ),
-  },
-  marks: {
-    strong: ({ children }) => (
-      <strong className="font-semibold">{children}</strong>
-    ),
-    em: ({ children }) => <em className="italic">{children}</em>,
-    link: ({ children, value }) => (
-      <a
-        href={value?.href}
-        className="underline"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        {children}
-      </a>
-    ),
-  },
-  list: {
-    bullet: ({ children }) => (
-      <ul className="mb-4 list-disc pl-6">{children}</ul>
-    ),
-    number: ({ children }) => (
-      <ol className="mb-4 list-decimal pl-6">{children}</ol>
-    ),
-  },
-};
 
 async function getJob(id: string): Promise<JobPost | null> {
   return sanityFetch(
@@ -175,7 +126,10 @@ export default async function JobDetailPage({ params }: PageProps) {
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
           <div className="col-span-3 space-y-8">
             <div className="prose dark:prose-invert max-w-none">
-              <PortableText value={job.description} components={components} />
+              <PortableText
+                value={job.description}
+                components={createPortableTextComponents()}
+              />
             </div>
           </div>
 
