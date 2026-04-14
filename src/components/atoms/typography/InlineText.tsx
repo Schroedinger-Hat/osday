@@ -1,7 +1,6 @@
 "use client";
 
 import { cn } from "~/lib/utils";
-import { Typography } from "./Typography";
 
 interface InlineTextProps {
   children: React.ReactNode;
@@ -16,9 +15,12 @@ export function InlineText({ children, variant, className }: InlineTextProps) {
     code: "rounded bg-gray-100 px-1 py-0.5 font-mono text-sm text-gray-800",
   };
 
+  const Component =
+    variant === "strong" ? "strong" : variant === "em" ? "em" : "code";
+
   return (
-    <Typography variant={"small"} className={cn(styles[variant], className)}>
+    <Component className={cn(styles[variant], className)}>
       {children}
-    </Typography>
+    </Component>
   );
 }

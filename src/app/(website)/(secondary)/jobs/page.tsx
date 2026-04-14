@@ -1,8 +1,9 @@
-import { PortableText } from "@portabletext/react";
 import { format } from "date-fns";
 import Image from "next/image";
 import Link from "next/link";
 import { groq } from "next-sanity";
+import { PortableText } from "@portabletext/react";
+import { createPortableTextComponents } from "~/components/atoms/portableTextComponents";
 import { SectionContainer } from "~/components/atoms/layout/SectionContainer";
 import { Heading } from "~/components/atoms/typography/Heading";
 import { Typography } from "~/components/atoms/typography/Typography";
@@ -114,7 +115,10 @@ export default async function JobBoardPage() {
               </div>
 
               <div className="prose prose-gray dark:prose-invert max-w-none">
-                <PortableText value={job.description} />
+                <PortableText
+                  value={job.description}
+                  components={createPortableTextComponents()}
+                />
               </div>
 
               <div className="mt-6">

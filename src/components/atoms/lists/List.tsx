@@ -14,7 +14,7 @@ export function List({ children, variant, className }: ListProps) {
   return (
     <Component
       className={cn(
-        "list-inside space-y-2 text-gray-700",
+        "mb-4 pl-6 text-xl leading-relaxed",
         {
           "list-disc": variant === "bullet",
           "list-decimal": variant === "number",
