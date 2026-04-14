@@ -57,7 +57,7 @@ export function Header() {
             <span className="font-title text-3xl text-white">OSDAY26</span>
           </Link>
 
-          <div className="flex items-center space-x-2">
+          <div className="flex items-center">
             {/* <SearchButton /> */}
             <Button
               asChild
