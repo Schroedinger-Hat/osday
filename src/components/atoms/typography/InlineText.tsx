@@ -19,8 +19,6 @@ export function InlineText({ children, variant, className }: InlineTextProps) {
     variant === "strong" ? "strong" : variant === "em" ? "em" : "code";
 
   return (
-    <Component className={cn(styles[variant], className)}>
-      {children}
-    </Component>
+    <Component className={cn(styles[variant], className)}>{children}</Component>
   );
 }
