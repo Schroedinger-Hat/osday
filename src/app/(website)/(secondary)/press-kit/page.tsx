@@ -23,6 +23,30 @@ export const metadata = constructMetadata({
 });
 
 export default function PressKitPage() {
+  const logos = [
+    {
+      alt: "OSDAY logo in black",
+      label: "In Black",
+      png: logoOsdayPng.src,
+      src: logoOsday,
+      svg: (logoOsday as LogoType).src,
+    },
+    {
+      alt: "OSDAY logo in red",
+      label: "In Red",
+      png: logoOsdayRedPng.src,
+      src: logoOsdayRed,
+      svg: (logoOsdayRed as LogoType).src,
+    },
+    {
+      alt: "OSDAY logo with background",
+      label: "With Background",
+      png: logoOsdayBackgroundPng.src,
+      src: logoOsdayBackground,
+      svg: (logoOsdayBackground as LogoType).src,
+    },
+  ];
+
   return (
     <main>
       <SectionContainer padding="header" withBackground backgroundType="hero">
@@ -36,75 +60,36 @@ export default function PressKitPage() {
 
       <SectionContainer>
         <Heading level={3}>Logo</Heading>
-        <div className="flex flex-col gap-8 lg:flex-row">
-          <div className="flex-1">
-            <div className="rounded-md border border-gray-200 bg-slate-200 p-8">
-              <div className="aspect-square w-full rounded-md p-4">
-                <Image src={logoOsday} alt="Logo" />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-gray-600">In Black</p>
-                <br />
-                <a href={(logoOsday as LogoType).src} download>
-                  <Typography as="span" variant="small">
-                    Download SVG
-                  </Typography>
-                </a>
-                {" | "}
-                <a href={logoOsdayPng.src} download>
-                  <Typography as="span" variant="small">
-                    Download PNG
-                  </Typography>
-                </a>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex-1">
-            <div className="rounded-md border border-gray-200 bg-slate-200 p-8">
-              <div className="aspect-square w-full rounded-md p-4">
-                <Image src={logoOsdayRed} alt="Logo" />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-gray-600">In Red</p>
-                <br />
-                <a href={(logoOsdayRed as LogoType).src} download>
-                  <Typography as="span" variant="small">
-                    Download SVG
-                  </Typography>
-                </a>
-                {" | "}
-                <a href={logoOsdayRedPng.src} download>
-                  <Typography as="span" variant="small">
-                    Download PNG
-                  </Typography>
-                </a>
+        <div className="grid gap-8 md:grid-cols-2 xl:grid-cols-3">
+          {logos.map((logo) => (
+            <div key={logo.label} className="h-full">
+              <div className="flex h-full flex-col rounded-md border border-gray-200 bg-slate-200 p-6 sm:p-8">
+                <div className="flex min-h-52 items-center justify-center rounded-md p-4 sm:min-h-64">
+                  <Image
+                    src={logo.src}
+                    alt={logo.alt}
+                    className="h-auto w-full max-w-52 object-contain sm:max-w-60 md:max-w-52 lg:max-w-60"
+                    sizes="(max-width: 767px) 208px, (max-width: 1279px) 192px, 240px"
+                  />
+                </div>
+                <div className="mt-4 text-center">
+                  <p className="text-sm text-gray-600">{logo.label}</p>
+                  <br />
+                  <a href={logo.svg} download>
+                    <Typography as="span" variant="small">
+                      Download SVG
+                    </Typography>
+                  </a>
+                  {" | "}
+                  <a href={logo.png} download>
+                    <Typography as="span" variant="small">
+                      Download PNG
+                    </Typography>
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-
-          <div className="flex-1">
-            <div className="rounded-md border border-gray-200 bg-slate-200 p-8">
-              <div className="aspect-square w-full rounded-md p-4">
-                <Image src={logoOsdayBackground} alt="Logo" />
-              </div>
-              <div className="mt-4 text-center">
-                <p className="text-sm text-gray-600">With Background</p>
-                <br />
-                <a href={(logoOsdayBackground as LogoType).src} download>
-                  <Typography as="span" variant="small">
-                    Download SVG
-                  </Typography>
-                </a>
-                {" | "}
-                <a href={logoOsdayBackgroundPng.src} download>
-                  <Typography as="span" variant="small">
-                    Download PNG
-                  </Typography>
-                </a>
-              </div>
-            </div>
-          </div>
+          ))}
         </div>
       </SectionContainer>
 
