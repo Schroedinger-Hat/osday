@@ -94,14 +94,13 @@ function getDayLabel(dayKey: string): string {
   const [year, month, day] = dayKey.split("-").map(Number);
   if (!year || !month || !day) return dayKey;
 
-  return dayLabelFormatter.format(
-    new Date(Date.UTC(year, month - 1, day)),
-  );
+  return dayLabelFormatter.format(new Date(Date.UTC(year, month - 1, day)));
 }
 
 function getSpeakerNames(item: ProgramItem): string | null {
-  const speakers = [item.author, item.coSpeaker]
-    .flatMap((speaker) => (speaker ? [formatSpeakerName(speaker)] : []));
+  const speakers = [item.author, item.coSpeaker].flatMap((speaker) =>
+    speaker ? [formatSpeakerName(speaker)] : [],
+  );
 
   return speakers.length > 0 ? speakers.join(" & ") : null;
 }
@@ -147,8 +146,13 @@ function isSharedItem(track?: number): boolean {
   return track === 0 || track === undefined || track > 2;
 }
 
-function filterItemsForTrack(items: ProgramItem[], track: 1 | 2): ProgramItem[] {
-  return items.filter((item) => item.track === track || isSharedItem(item.track));
+function filterItemsForTrack(
+  items: ProgramItem[],
+  track: 1 | 2,
+): ProgramItem[] {
+  return items.filter(
+    (item) => item.track === track || isSharedItem(item.track),
+  );
 }
 
 function portableTextToPlainText(blocks?: PortableTextBlock[]): string | null {
@@ -378,93 +382,93 @@ export default async function ProgramPage() {
                   : "bg-white"
               }
             >
-                <section className="program-sheet-header border-b border-slate-300 px-6 py-4 print:rounded-none">
-                  <div className="flex items-baseline justify-between gap-4">
-                    <h1 className="text-lg font-semibold tracking-tight text-slate-950">
-                      OSDAY26 Event Program
-                    </h1>
-                    <p className="text-sm font-medium text-slate-700">
-                      {page.title} · {page.dayLabel}
-                    </p>
-                  </div>
-                </section>
+              <section className="program-sheet-header border-b border-slate-300 px-6 py-4 print:rounded-none">
+                <div className="flex items-baseline justify-between gap-4">
+                  <h1 className="text-lg font-semibold tracking-tight text-slate-950">
+                    OSDAY26 Event Program
+                  </h1>
+                  <p className="text-sm font-medium text-slate-700">
+                    {page.title} · {page.dayLabel}
+                  </p>
+                </div>
+              </section>
 
-                <section className="px-6 py-6">
-                  <div>
-                    <div className="program-table overflow-hidden border border-slate-300">
-                      <div className="program-table-header grid grid-cols-[68px_34px_minmax(0,1fr)] bg-slate-100 px-3 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600">
-                        <span>Time</span>
-                        <span>Rm</span>
-                        <span>Session</span>
-                      </div>
+              <section className="px-6 py-6">
+                <div>
+                  <div className="program-table overflow-hidden border border-slate-300">
+                    <div className="program-table-header grid grid-cols-[68px_34px_minmax(0,1fr)] bg-slate-100 px-3 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600">
+                      <span>Time</span>
+                      <span>Rm</span>
+                      <span>Session</span>
+                    </div>
 
-                      <div className="program-table-body divide-y divide-slate-200">
-                        {page.items.map((item) => {
-                          const speakers = getSpeakerNames(item);
-                          const speakerBio = getSpeakerBio(item);
-                          const talkDescription = getTalkDescription(item);
+                    <div className="program-table-body divide-y divide-slate-200">
+                      {page.items.map((item) => {
+                        const speakers = getSpeakerNames(item);
+                        const speakerBio = getSpeakerBio(item);
+                        const talkDescription = getTalkDescription(item);
 
-                          return (
-                            <article
-                              key={item._id}
-                              className="program-row px-3 py-3"
-                            >
-                              <div className="program-row-head grid grid-cols-[68px_34px_minmax(0,1fr)] gap-2.5">
-                                <div className="text-sm font-semibold tabular-nums text-slate-900">
-                                  {asFormattedTime(item.startDateTime)}
-                                  {item.endDateTime && (
-                                    <span className="block text-xs font-medium text-slate-500">
-                                      {asFormattedTime(item.endDateTime)}
-                                    </span>
-                                  )}
-                                </div>
-
-                                <div>
-                                  <span
-                                    title={getTrackLabel(item.track)}
-                                    className="inline-flex min-w-7 justify-center rounded border border-slate-950 bg-white px-1 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-950"
-                                  >
-                                    {getTrackIndicator(item.track)}
+                        return (
+                          <article
+                            key={item._id}
+                            className="program-row px-3 py-3"
+                          >
+                            <div className="program-row-head grid grid-cols-[68px_34px_minmax(0,1fr)] gap-2.5">
+                              <div className="text-sm font-semibold tabular-nums text-slate-900">
+                                {asFormattedTime(item.startDateTime)}
+                                {item.endDateTime && (
+                                  <span className="block text-xs font-medium text-slate-500">
+                                    {asFormattedTime(item.endDateTime)}
                                   </span>
-                                </div>
-
-                                <div className="min-w-0">
-                                  <p className="text-base font-semibold leading-5 text-slate-950">
-                                    {item.titleShort ?? item.title}
-                                  </p>
-                                  <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
-                                    <span>{typeLabel(item.type)}</span>
-                                    {speakers && <span>{speakers}</span>}
-                                  </div>
-                                </div>
-                              </div>
-
-                              <div className="program-row-copy ml-[104px] mt-2 min-w-0">
-                                {speakerBio && (
-                                  <p className="text-sm leading-5 text-slate-700">
-                                    <span className="font-semibold text-slate-900">
-                                      Speaker bio:
-                                    </span>{" "}
-                                    {speakerBio}
-                                  </p>
-                                )}
-                                {talkDescription && (
-                                  <p className="mt-1 text-sm leading-5 text-slate-700">
-                                    <span className="font-semibold text-slate-900">
-                                      Talk:
-                                    </span>{" "}
-                                    {talkDescription}
-                                  </p>
                                 )}
                               </div>
-                            </article>
-                          );
-                        })}
-                      </div>
+
+                              <div>
+                                <span
+                                  title={getTrackLabel(item.track)}
+                                  className="inline-flex min-w-7 justify-center rounded border border-slate-950 bg-white px-1 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-950"
+                                >
+                                  {getTrackIndicator(item.track)}
+                                </span>
+                              </div>
+
+                              <div className="min-w-0">
+                                <p className="text-base font-semibold leading-5 text-slate-950">
+                                  {item.titleShort ?? item.title}
+                                </p>
+                                <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
+                                  <span>{typeLabel(item.type)}</span>
+                                  {speakers && <span>{speakers}</span>}
+                                </div>
+                              </div>
+                            </div>
+
+                            <div className="program-row-copy ml-[104px] mt-2 min-w-0">
+                              {speakerBio && (
+                                <p className="text-sm leading-5 text-slate-700">
+                                  <span className="font-semibold text-slate-900">
+                                    Speaker bio:
+                                  </span>{" "}
+                                  {speakerBio}
+                                </p>
+                              )}
+                              {talkDescription && (
+                                <p className="mt-1 text-sm leading-5 text-slate-700">
+                                  <span className="font-semibold text-slate-900">
+                                    Talk:
+                                  </span>{" "}
+                                  {talkDescription}
+                                </p>
+                              )}
+                            </div>
+                          </article>
+                        );
+                      })}
                     </div>
                   </div>
-                </section>
-              </div>
+                </div>
+              </section>
+            </div>
           ))}
 
           <div className="bg-white print:break-before-page">
