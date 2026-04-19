@@ -10,7 +10,7 @@ interface AnimatedSchroddyProps {
 
 export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
   return (
-    <div className="pointer-events-none absolute inset-x-0 top-0 h-screen overflow-hidden">
+    <div className="animated-schroddy pointer-events-none absolute inset-x-0 top-0 h-screen overflow-hidden">
       <motion.div
         initial={{ x: "100%" }}
         animate={{ x: "-20%" }}

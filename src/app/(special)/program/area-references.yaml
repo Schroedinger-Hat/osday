@@ -1,0 +1,10 @@
+# Update this list to control the final "References" page in /program.
+references:
+  - area: General
+    person_in_charge: Mattia L
+  - area: Location
+    person_in_charge: Lorenzo B
+  - area: Sponsors
+    person_in_charge: Cristiano C
+  - area: Speakers
+    person_in_charge: Davide I
