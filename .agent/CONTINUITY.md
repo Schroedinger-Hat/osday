@@ -1,5 +1,14 @@
 # CONTINUITY
 
+## [OUTCOMES] 2026-04-21T12:00Z [CODE]
+
+**Tickets: Tito `coupon` query → `discount-code`**
+
+- `src/app/(website)/(main)/tickets/page.tsx`: read `searchParams` (Next 15 Promise), map `?coupon=` to `discount-code` on `<tito-widget>` when non-empty after trim; omit attribute otherwise.
+- `src/types/tito-widget.d.ts`: `declare module "react"` JSX intrinsic for `tito-widget` (replaces non-functional JSX comment suppressions).
+
+`npm run typecheck` passed.
+
 ## [OUTCOMES] 2026-03-04T00:00Z [CODE]
 
 **Schedule page redesign — modern card layout**

@@ -24,10 +24,15 @@ const SLOT_HEIGHT_PX = 32;
 
 // ─── Per-type visual config ─────────────────────────────────────────────────────
 
-const TYPE_CONFIG: Record<
-  string,
-  { border: string; bg: string; iconClass: string; badge: string; ring: string }
-> = {
+type TypeConfig = {
+  border: string;
+  bg: string;
+  iconClass: string;
+  badge: string;
+  ring: string;
+};
+
+const TYPE_CONFIG: Record<string, TypeConfig> = {
   talk: {
     border: "border-l-purple-500",
     bg: "bg-purple-500/8",
@@ -72,7 +77,13 @@ const TYPE_CONFIG: Record<
   },
 };
 
-const DEFAULT_CONFIG = TYPE_CONFIG.talk!;
+const DEFAULT_CONFIG: TypeConfig = {
+  border: "border-l-purple-500",
+  bg: "bg-purple-500/8",
+  iconClass: "text-purple-500",
+  badge: "bg-purple-500/15 text-purple-600 dark:text-purple-400",
+  ring: "ring-purple-400/60",
+};
 
 // ─── Type icon (inline, size 16) ────────────────────────────────────────────────
 
@@ -108,12 +119,12 @@ function getDayKey(dateStr: string): string {
 }
 
 function getDayLabel(dayKey: string, index: number): string {
-  const [y, m, d] = dayKey.split("-").map(Number);
+  const [y = 1970, m = 1, d = 1] = dayKey.split("-").map(Number);
   const formatted = new Intl.DateTimeFormat("en-GB", {
     day: "numeric",
     month: "short",
     timeZone: "UTC",
-  }).format(new Date(Date.UTC(y!, m! - 1, d!)));
+  }).format(new Date(Date.UTC(y, m - 1, d)));
   return `Day ${index + 1} · ${formatted}`;
 }
 
@@ -306,21 +317,23 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
     <div>
       {/* Day tabs */}
       {dayKeys.length > 1 && (
-        <div className="mb-8 flex flex-wrap gap-2">
-          {dayKeys.map((dk, i) => (
-            <button
-              key={dk}
-              onClick={() => setSelectedDay(dk)}
-              className={cn(
-                "rounded-full border px-4 py-1.5 text-sm font-medium transition-colors",
-                selectedDay === dk
-                  ? "border-primary bg-primary text-primary-foreground"
-                  : "border-primary/30 hover:border-primary/60",
-              )}
-            >
-              {getDayLabel(dk, i)}
-            </button>
-          ))}
+        <div className="flex justify-center py-8">
+          <div className="flex flex-wrap justify-center rounded-full bg-black/20 p-1">
+            {dayKeys.map((dk, i) => (
+              <button
+                key={dk}
+                onClick={() => setSelectedDay(dk)}
+                className={cn(
+                  "rounded-full px-5 py-3.5 text-base font-bold tracking-tight transition-colors",
+                  selectedDay === dk
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-black/5",
+                )}
+              >
+                {getDayLabel(dk, i)}
+              </button>
+            ))}
+          </div>
         </div>
       )}
 
