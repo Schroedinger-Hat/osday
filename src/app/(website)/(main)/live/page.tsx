@@ -28,7 +28,8 @@ const quickLinks = [
   },
   {
     title: "Gamification",
-    description: "Track points, complete challenges, and climb the leaderboard.",
+    description:
+      "Track points, complete challenges, and climb the leaderboard.",
     href: "/gamification",
     icon: Trophy,
     accent: "bg-dark-navy text-white",
