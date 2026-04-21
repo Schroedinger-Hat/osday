@@ -21,7 +21,24 @@ export const metadata = constructMetadata({
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
 
-export default async function TicketsPage() {
+interface TicketsPageProps {
+  searchParams: Promise<{ coupon?: string | string[] }>;
+}
+
+function resolveCouponParam(
+  coupon: string | string[] | undefined,
+): string | undefined {
+  if (coupon === undefined) return undefined;
+  const raw = Array.isArray(coupon) ? coupon[0] : coupon;
+  const trimmed = raw?.trim() ?? "";
+  if (trimmed.length === 0) return undefined;
+  return trimmed;
+}
+
+export default async function TicketsPage({ searchParams }: TicketsPageProps) {
+  const { coupon: couponParam } = await searchParams;
+  const coupon = resolveCouponParam(couponParam);
+
   const speakers: Author[] = await sanityFetch(
     `*[_type == "event" && slug.current == "open-source-day-2026"][0].authors[]->{
       _id,
@@ -85,8 +102,10 @@ export default async function TicketsPage() {
             you&apos;re done.
           </Typography>
           <div className="rounded-md border bg-background p-4 text-center">
-            {/* @ts-expect-error - custom element from Tito */}
-            <tito-widget event="schroedinger-hat/osday-2026"></tito-widget>
+            <tito-widget
+              event="schroedinger-hat/osday-2026"
+              {...(coupon ? { "discount-code": coupon } : {})}
+            ></tito-widget>
           </div>
         </div>
       </SectionContainer>
