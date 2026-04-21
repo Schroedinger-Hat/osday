@@ -2,6 +2,7 @@ import {
   ArrowUpRight,
   CalendarDays,
   MapPin,
+  Trophy,
   UserRoundPlus,
 } from "lucide-react";
 import Link from "next/link";
@@ -26,18 +27,26 @@ const quickLinks = [
     accent: "bg-fiery-red text-white",
   },
   {
+    title: "Gamification",
+    description:
+      "Track points, complete challenges, and climb the leaderboard.",
+    href: "/gamification",
+    icon: Trophy,
+    accent: "bg-dark-navy text-white",
+  },
+  {
     title: "Venue",
     description: "Open directions, address details, and travel info.",
     href: "/venue",
     icon: MapPin,
-    accent: "bg-dark-navy text-white",
+    accent: "bg-almost-ultramarine text-white",
   },
   {
     title: "Membership",
     description: "Join Schroedinger Hat and support the community.",
     href: "https://schroedinger-hat.org/association/join",
     icon: UserRoundPlus,
-    accent: "bg-almost-ultramarine text-white",
+    accent: "bg-creamy-sand text-dark-navy",
   },
 ] as const;
 
@@ -68,7 +77,7 @@ export default function LivePage() {
             during the event.
           </Typography>
 
-          <div className="grid gap-3 pt-2 md:grid-cols-3">
+          <div className="grid gap-3 pt-2 md:grid-cols-2 xl:grid-cols-4">
             {quickLinks.map((link) => {
               const Icon = link.icon;
 
@@ -93,11 +102,11 @@ export default function LivePage() {
                   <div className="mt-6 space-y-2">
                     <Typography
                       variant="h3"
-                      className="text-2xl font-semibold tracking-tight text-white"
+                      className="text-2xl font-semibold tracking-tight"
                     >
                       {link.title}
                     </Typography>
-                    <Typography className="text-sm leading-6 text-white/85">
+                    <Typography className="text-sm leading-6 opacity-85">
                       {link.description}
                     </Typography>
                   </div>
@@ -109,7 +118,7 @@ export default function LivePage() {
       </SectionContainer>
 
       <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur md:hidden">
-        <div className="mx-auto grid max-w-md grid-cols-3 gap-2">
+        <div className="mx-auto grid max-w-md grid-cols-4 gap-2">
           {quickLinks.map((link) => (
             <Button
               key={link.title}
