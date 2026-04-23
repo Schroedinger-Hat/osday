@@ -344,13 +344,13 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
             variant="small"
             className="font-semibold uppercase tracking-wide text-muted-foreground"
           >
-            Track 1
+            Track A
           </Typography>
           <Typography
             variant="small"
             className="font-semibold uppercase tracking-wide text-muted-foreground"
           >
-            Track 2
+            Track B
           </Typography>
         </div>
       )}
