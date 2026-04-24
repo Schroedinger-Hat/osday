@@ -1,5 +1,14 @@
 # CONTINUITY
 
+## [OUTCOMES] 2026-04-24T12:50Z [CODE]
+
+**Schedule mobile tabs: day + track filtering**
+
+- `src/components/molecules/schedule-view.tsx`: added mobile tab model (`Day N · Track A/B`) with separate mobile state and filtering path by both day and track.
+- Shared-track events now use explicit helper logic and are included in both mobile track tabs for the selected day.
+- Desktop flow preserved: day tabs + existing two-column slot rendering remain unchanged under `sm` and up.
+- Validation: `ReadLints` (targeted file) clean, `npm run typecheck` passed.
+
 ## [OUTCOMES] 2026-04-21T12:00Z [CODE]
 
 **Tickets: Tito `coupon` query → `discount-code`**

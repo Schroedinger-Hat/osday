@@ -128,6 +128,10 @@ function getDayLabel(dayKey: string, index: number): string {
   return `Day ${index + 1} · ${formatted}`;
 }
 
+function isSharedTrack(item: TimelineItem): boolean {
+  return (item.track ?? 0) === 0 || (item.track ?? 0) > 2;
+}
+
 // ─── Time helpers ───────────────────────────────────────────────────────────────
 
 function getMinutesInDay(dateStr: string): number {
@@ -288,6 +292,25 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
     : [];
 
   const [selectedDay, setSelectedDay] = useState(dayKeys[0] ?? "");
+  const mobileTabs = dayKeys.flatMap((dayKey, dayIndex) => [
+    {
+      id: `${dayKey}-track-1`,
+      dayKey,
+      dayIndex,
+      track: 1 as const,
+      label: `Day ${dayIndex + 1} · Track A`,
+    },
+    {
+      id: `${dayKey}-track-2`,
+      dayKey,
+      dayIndex,
+      track: 2 as const,
+      label: `Day ${dayIndex + 1} · Track B`,
+    },
+  ]);
+  const [selectedMobileTab, setSelectedMobileTab] = useState(
+    mobileTabs[0]?.id ?? "",
+  );
 
   if (dayKeys.length === 0) {
     return (
@@ -302,22 +325,43 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
     );
   }
 
-  const visibleItems = items.filter(
+  const visibleDesktopItems = items.filter(
     (i) => getDayKey(i.startDateTime) === selectedDay,
   );
+  const activeMobileTab = mobileTabs.find((tab) => tab.id === selectedMobileTab);
+  const visibleMobileItems = activeMobileTab
+    ? items.filter((item) => {
+        if (getDayKey(item.startDateTime) !== activeMobileTab.dayKey) return false;
+        if (isSharedTrack(item)) return true;
+        return item.track === activeMobileTab.track;
+      })
+    : [];
 
-  const hasMultiTrack = visibleItems.some(
+  const hasMultiTrack = visibleDesktopItems.some(
     (t) => t.track === 1 || t.track === 2,
   );
 
-  // Group by start minute
-  const slotMap = new Map<number, TimelineItem[]>();
-  for (const item of visibleItems) {
+  // Group desktop items by start minute
+  const desktopSlotMap = new Map<number, TimelineItem[]>();
+  for (const item of visibleDesktopItems) {
     const min = getMinutesInDay(item.startDateTime);
-    if (!slotMap.has(min)) slotMap.set(min, []);
-    slotMap.get(min)!.push(item);
+    if (!desktopSlotMap.has(min)) desktopSlotMap.set(min, []);
+    desktopSlotMap.get(min)!.push(item);
   }
-  const sortedSlots = [...slotMap.entries()].sort(([a], [b]) => a - b);
+  const sortedDesktopSlots = [...desktopSlotMap.entries()].sort(
+    ([a], [b]) => a - b,
+  );
+
+  // Group mobile filtered items by start minute
+  const mobileSlotMap = new Map<number, TimelineItem[]>();
+  for (const item of visibleMobileItems) {
+    const min = getMinutesInDay(item.startDateTime);
+    if (!mobileSlotMap.has(min)) mobileSlotMap.set(min, []);
+    mobileSlotMap.get(min)!.push(item);
+  }
+  const sortedMobileSlots = [...mobileSlotMap.entries()].sort(
+    ([a], [b]) => a - b,
+  );
 
   const getDuration = (item: TimelineItem, startMin: number) => {
     const endMin = item.endDateTime
@@ -328,9 +372,31 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
 
   return (
     <div>
-      {/* Day tabs */}
+      {/* Mobile day + track tabs */}
+      {mobileTabs.length > 0 && (
+        <div className="flex justify-center py-8 sm:hidden">
+          <div className="grid w-full max-w-3xl grid-cols-2 gap-2 rounded-2xl bg-black/20 p-1">
+            {mobileTabs.map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setSelectedMobileTab(tab.id)}
+                className={cn(
+                  "rounded-xl px-3 py-2 text-sm font-bold tracking-tight transition-colors",
+                  selectedMobileTab === tab.id
+                    ? "bg-primary text-primary-foreground"
+                    : "text-foreground hover:bg-black/5",
+                )}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Desktop day tabs */}
       {dayKeys.length > 1 && (
-        <div className="flex justify-center py-8">
+        <div className="hidden justify-center py-8 sm:flex">
           <div className="flex flex-wrap justify-center rounded-full bg-black/20 p-1">
             {dayKeys.map((dk, i) => (
               <button
@@ -350,7 +416,34 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
         </div>
       )}
 
-      {/* Track column headers */}
+      {/* Mobile slot rows */}
+      <div className="flex flex-col gap-2 sm:hidden">
+        {sortedMobileSlots.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-6">
+            <Typography variant="medium" className="text-center">
+              No events found for this track yet.
+            </Typography>
+          </div>
+        ) : (
+          sortedMobileSlots.map(([startMin, slotItems]) => (
+            <div key={startMin} className="flex flex-col gap-2">
+              {slotItems.map((item) => (
+                <div
+                  key={`${item._id}-${activeMobileTab?.id ?? "mobile"}`}
+                  className="flex flex-col"
+                  style={{
+                    minHeight: durationToPx(getDuration(item, startMin)),
+                  }}
+                >
+                  <ScheduleCard item={item} />
+                </div>
+              ))}
+            </div>
+          ))
+        )}
+      </div>
+
+      {/* Desktop track column headers */}
       {hasMultiTrack && (
         <div className="mb-2 hidden grid-cols-2 gap-2 px-1 sm:grid">
           <Typography
@@ -368,14 +461,12 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
         </div>
       )}
 
-      {/* Slot rows */}
-      <div className="flex flex-col gap-2">
-        {sortedSlots.map(([startMin, slotItems]) => {
+      {/* Desktop slot rows */}
+      <div className="hidden flex-col gap-2 sm:flex">
+        {sortedDesktopSlots.map(([startMin, slotItems]) => {
           const track1 = slotItems.filter((i) => i.track === 1);
           const track2 = slotItems.filter((i) => i.track === 2);
-          const shared = slotItems.filter(
-            (i) => (i.track ?? 0) === 0 || (i.track ?? 0) > 2,
-          );
+          const shared = slotItems.filter(isSharedTrack);
           const isParallelRow =
             hasMultiTrack && track1.length > 0 && track2.length > 0;
 
@@ -394,25 +485,17 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                 </div>
               ))}
 
-              {/* Both tracks present → side-by-side on sm+, stacked on mobile */}
+              {/* Both tracks present → side-by-side */}
               {isParallelRow && (
-                <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
+                <div className="grid grid-cols-2 gap-2">
                   <div
                     className="flex flex-col gap-1"
                     style={{
                       minHeight: durationToPx(
-                        Math.max(
-                          ...track1.map((i) => getDuration(i, startMin)),
-                        ),
+                        Math.max(...track1.map((i) => getDuration(i, startMin))),
                       ),
                     }}
                   >
-                    <Typography
-                      variant="small"
-                      className="font-semibold uppercase tracking-wide text-muted-foreground sm:hidden"
-                    >
-                      Track A
-                    </Typography>
                     {track1.map((item) => (
                       <ScheduleCard key={item._id} item={item} />
                     ))}
@@ -421,18 +504,10 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                     className="flex flex-col gap-1"
                     style={{
                       minHeight: durationToPx(
-                        Math.max(
-                          ...track2.map((i) => getDuration(i, startMin)),
-                        ),
+                        Math.max(...track2.map((i) => getDuration(i, startMin))),
                       ),
                     }}
                   >
-                    <Typography
-                      variant="small"
-                      className="font-semibold uppercase tracking-wide text-muted-foreground sm:hidden"
-                    >
-                      Track B
-                    </Typography>
                     {track2.map((item) => (
                       <ScheduleCard key={item._id} item={item} />
                     ))}
