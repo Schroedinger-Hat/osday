@@ -186,12 +186,6 @@ async function DayOfEvent() {
                 ready for an amazing day of open source content!
               </Typography>
             </div>
-
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link href="https://www.youtube.com/live/_IdH5YTBAGs?si=ntYP76pcJOpsKA8M">
-                <Button variant="default">Join the Stream</Button>
-              </Link>
-            </div>
           </div>
         </div>
       );
@@ -227,12 +221,6 @@ async function DayOfEvent() {
               </Typography>
             )}
           </div>
-
-          <div className="flex flex-col gap-4 sm:flex-row">
-            <Link href="https://www.youtube.com/live/_IdH5YTBAGs?si=ntYP76pcJOpsKA8M">
-              <Button variant="default">Join the Stream</Button>
-            </Link>
-          </div>
         </div>
       </div>
     );
@@ -267,12 +255,6 @@ async function DayOfEvent() {
               with {getAuthorFullName(currentEvent.author)}
             </Typography>
           )}
-        </div>
-
-        <div className="flex flex-col gap-4 sm:flex-row">
-          <Link href="https://www.youtube.com/live/_IdH5YTBAGs?si=ntYP76pcJOpsKA8M">
-            <Button variant="default">Join the Stream</Button>
-          </Link>
         </div>
       </div>
     </div>

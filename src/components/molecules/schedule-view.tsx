@@ -190,6 +190,9 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
   const isClickable = item.type === "talk" || item.type === "keynote";
   const cfg = TYPE_CONFIG[item.type] ?? DEFAULT_CONFIG;
 
+  const trackLabel =
+    item.track === 1 ? "Track A" : item.track === 2 ? "Track B" : null;
+
   const content = (
     <div className="flex flex-col gap-2">
       {/* Top row: type badge (icon + label) · time */}
@@ -202,6 +205,16 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
         >
           <TypeIcon type={item.type} className={cfg.iconClass} />
         </span>
+        {trackLabel && (
+          <span
+            className={cn(
+              "inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide sm:hidden",
+              cfg.badge,
+            )}
+          >
+            {trackLabel}
+          </span>
+        )}
         <span className="text-xs text-muted-foreground">
           {typeLabel(item.type)} •{" "}
           <strong>
