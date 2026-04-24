@@ -398,7 +398,7 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
               {isParallelRow && (
                 <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                   <div
-                    className="flex flex-col"
+                    className="flex flex-col gap-1"
                     style={{
                       minHeight: durationToPx(
                         Math.max(
@@ -407,12 +407,18 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                       ),
                     }}
                   >
+                    <Typography
+                      variant="small"
+                      className="font-semibold uppercase tracking-wide text-muted-foreground sm:hidden"
+                    >
+                      Track A
+                    </Typography>
                     {track1.map((item) => (
                       <ScheduleCard key={item._id} item={item} />
                     ))}
                   </div>
                   <div
-                    className="flex flex-col"
+                    className="flex flex-col gap-1"
                     style={{
                       minHeight: durationToPx(
                         Math.max(
@@ -421,6 +427,12 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                       ),
                     }}
                   >
+                    <Typography
+                      variant="small"
+                      className="font-semibold uppercase tracking-wide text-muted-foreground sm:hidden"
+                    >
+                      Track B
+                    </Typography>
                     {track2.map((item) => (
                       <ScheduleCard key={item._id} item={item} />
                     ))}
