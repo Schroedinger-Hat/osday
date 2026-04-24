@@ -94,13 +94,13 @@ export default function Hero() {
           </div>
         </div>
       </SectionContainer>
-      {shouldHideStats && (
+      {/* {shouldHideStats && (
         <div className="mx-auto -mt-36 max-w-6xl px-4 md:px-6 lg:px-8 2xl:px-0">
           <div className="rounded-md bg-slate-100 p-8 shadow-lg md:p-12">
             {isAfterEvent ? <AfterEvent /> : <DayOfEvent />}
           </div>
         </div>
-      )}
+      )} */}
     </>
   );
 }
