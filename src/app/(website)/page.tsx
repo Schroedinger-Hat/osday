@@ -19,6 +19,7 @@ import ImageGrid from "~/components/molecules/image-grid";
 
 import tShirt from "~/assets/images/osday26/tee.png";
 import { FreeText } from "~/components/molecules/free-text";
+import { ThankYouMessage } from "~/assets/texts";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -87,7 +88,9 @@ export default async function HomePage() {
     <main>
       <Hero />
 
-      <FreeText />
+      <FreeText heading="Event Highlights">
+        <ThankYouMessage />
+      </FreeText>
 
       <SectionContainer withBackground>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
@@ -102,15 +105,15 @@ export default async function HomePage() {
           <div className="order-1 space-y-4 md:order-2 md:col-span-3">
             <Heading level={2}>Tee with Your Ticket</Heading>
             <Typography>
-              Last year, many of you told us that buying the T-shirt separately
-              meant you couldn’t wear it during the event.
+              Missed out on the T-shirt at the event? No worries — the Open Source
+              Day T-shirt will be available on our association's online store.
               <br />
-              This year, you can add the Open Source Day T-shirt when you
-              purchase your ticket. Select your size at checkout, and your shirt
-              will be ready for pickup at check-in.
+              <br />
+              Head over to the shop, pick your size, and keep the spirit of this
+              year's edition with you!
             </Typography>
             <Button>
-              <Link href="/tickets">Get your ticket</Link>
+              <Link href="https://shop.schroedinger-hat.org/" target="_blank">Go Shopping!</Link>
             </Button>
           </div>
         </div>
@@ -123,7 +126,7 @@ export default async function HomePage() {
               &quot;New year, new venue!&quot;
             </Heading>
             <Typography>
-              Ready for our new basecamp? This year, OSDay moves to The Social
+              Ready for our new basecamp? This year, OSDay moved to The Social
               Hub Firenze Belfiore, a nine-floor venue designed for
               collaboration, technology, and community.
               <br />
