@@ -63,6 +63,9 @@ type AreaReference = {
   personInCharge: string;
 };
 
+const speakerPhotoWidth = 74;
+const speakerPhotoSourceWidth = speakerPhotoWidth * 2;
+
 export const metadata: Metadata = {
   title: "Conference Program",
   description: "Printable conference program for OSDAY26",
@@ -124,9 +127,9 @@ function formatSpeakerName(speaker: ProgramSpeaker): string {
 function getSpeakerPhotoHeight(photo?: SanityImage): number {
   const aspectRatio = photo?.dimensions?.aspectRatio;
 
-  if (!aspectRatio || aspectRatio <= 0) return 74;
+  if (!aspectRatio || aspectRatio <= 0) return speakerPhotoWidth;
 
-  return Math.round(74 / aspectRatio);
+  return Math.round(speakerPhotoWidth / aspectRatio);
 }
 
 function getTrackLabel(track?: number): string {
@@ -476,10 +479,10 @@ export default async function ProgramPage() {
                                       <Image
                                         key={`${item._id}-${speakerName}-${speakerIndex}`}
                                         src={urlFor(speaker.photo)
-                                          .width(148)
+                                          .width(speakerPhotoSourceWidth)
                                           .url()}
                                         alt={speakerName}
-                                        width={74}
+                                        width={speakerPhotoWidth}
                                         height={photoHeight}
                                         className="h-auto w-full rounded-sm"
                                       />
