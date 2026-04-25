@@ -92,22 +92,6 @@ export default async function TicketsPage({ searchParams }: TicketsPageProps) {
             .
           </Typography>
         </div>
-        <br />
-        <br />
-        <div className="space-y-4">
-          <Heading level={3}>Get your ticket</Heading>
-          <Typography>
-            Use the form below to choose your ticket type. A confirmation email
-            with your ticket and all practical information will be sent once
-            you&apos;re done.
-          </Typography>
-          <div className="rounded-md border bg-background p-4 text-center">
-            <tito-widget
-              event="schroedinger-hat/osday-2026"
-              {...(coupon ? { "discount-code": coupon } : {})}
-            ></tito-widget>
-          </div>
-        </div>
       </SectionContainer>
 
       {/* Speakers grid */}
