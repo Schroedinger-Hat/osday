@@ -18,6 +18,7 @@ import { Button } from "~/components/ui/button";
 import ImageGrid from "~/components/molecules/image-grid";
 
 import tShirt from "~/assets/images/osday26/tee.png";
+import { FreeText } from "~/components/molecules/free-text";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -86,30 +87,7 @@ export default async function HomePage() {
     <main>
       <Hero />
 
-      <SectionContainer size="tiny">
-        <Heading level={2}>Missed us?</Heading>
-        <Typography variant="large" className="mb-4">
-          We're thrilled to announce the latest edition of Open Source Day, an
-          unmissable gathering of developers, tech enthusiasts, and
-          forward-thinking innovators.
-          <br />
-          <br />
-          On <b>April 24th</b>, join us at the vibrant{" "}
-          <i>The Social Hub Firenze Belfiore</i> in Florence for a full day of
-          talks that dive deep into today's most exciting open source trends.
-          <br />
-          <br />
-          On <b>April 25th</b>, we will host a day of hands-on workshops to
-          deepen your skills and collaborate with fellow developers.
-          <br />
-          Connect with like-minded peers, learn from top industry experts, and
-          discover how open collaboration is shaping the future of technology.
-          <br />
-          <br />
-          <b>Grab your ticket now</b> and be part of this thriving community of
-          open source trailblazers!
-        </Typography>
-      </SectionContainer>
+      <FreeText />
 
       <SectionContainer withBackground>
         <div className="grid grid-cols-1 gap-8 md:grid-cols-5">
