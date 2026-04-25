@@ -1,9 +1,5 @@
 export const mainRoutes = [
   {
-    href: "/tickets",
-    label: "Tickets",
-  },
-  {
     href: "/schedule",
     label: "Schedule",
   },
