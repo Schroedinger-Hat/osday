@@ -2,6 +2,13 @@ import Image from "next/image";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { Metadata } from "next";
+import {
+  isPortableTextSpan,
+  isPortableTextTextBlock,
+  type Image as SanityImageValue,
+  type ImageDimensions,
+  type PortableTextBlock,
+} from "sanity";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { asFormattedTime } from "~/lib/utils/date";
 import { urlFor } from "~/sanity/lib/image";
@@ -34,19 +41,8 @@ type ProgramItem = {
   };
 };
 
-type PortableTextBlock = {
-  children?: Array<{
-    text?: string;
-  }>;
-};
-
-type SanityImage = {
-  asset?: unknown;
-  dimensions?: {
-    width?: number;
-    height?: number;
-    aspectRatio?: number;
-  };
+type SanityImage = SanityImageValue & {
+  dimensions?: Partial<ImageDimensions>;
 };
 
 type ProgramSpeaker = NonNullable<ProgramItem["author"]>;
@@ -183,8 +179,8 @@ function portableTextToPlainText(blocks?: PortableTextBlock[]): string | null {
   if (!blocks?.length) return null;
 
   const text = blocks
-    .flatMap((block) => block.children ?? [])
-    .map((child) => child.text?.trim() ?? "")
+    .flatMap((block) => (isPortableTextTextBlock(block) ? block.children : []))
+    .map((child) => (isPortableTextSpan(child) ? child.text.trim() : ""))
     .filter(Boolean)
     .join(" ")
     .replace(/\s+/g, " ")
