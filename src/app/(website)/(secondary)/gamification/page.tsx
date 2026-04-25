@@ -77,17 +77,17 @@ export default function GamificationPage() {
           </Card>
         </div>
         <div className="mt-8 flex flex-col space-y-4">
-          <Heading level={3}>How to Participate</Heading>
+          <Heading level={3}>How to Contribute</Heading>
           <Typography>
-            Getting started is easy! Use our mobile web app to track your
-            progress and see where you stand on the leaderboard.
+            Help us make the gamification experience even better by contributing to our open source gamification system! <br />
+            Check out the repository to see how you can get involved and help us create an unforgettable conference experience for everyone!
           </Typography>
           <Link
-            href="https://gamification.osday.dev"
+            href="https://github.com/Schroedinger-Hat/tanglecat"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Button>Open Gamification App</Button>
+            <Button>Open Gamification Repo</Button>
           </Link>
         </div>
       </SectionContainer>
