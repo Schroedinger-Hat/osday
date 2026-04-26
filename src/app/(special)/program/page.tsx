@@ -49,7 +49,7 @@ type ProgramSpeaker = NonNullable<ProgramItem["author"]>;
 type TrackPage = {
   key: string;
   title: string;
-  track: 1 | 2;
+  track: number;
 };
 
 type PrintablePage = TrackPage & {
@@ -132,19 +132,28 @@ function getSpeakerPhotoHeight(photo?: SanityImage): number {
   return Math.round(speakerPhotoWidth / aspectRatio);
 }
 
+function getTrackName(track: number): string {
+  const alphaIndex = track - 1;
+  const charCodeA = "A".charCodeAt(0);
+
+  if (alphaIndex >= 0 && alphaIndex < 26) {
+    return String.fromCharCode(charCodeA + alphaIndex);
+  }
+
+  return String(track);
+}
+
 function getTrackLabel(track?: number): string {
-  if (track === 1) return "Track A";
-  if (track === 2) return "Track B";
   if (track === 0) return "All tracks";
-  if ((track ?? 0) > 2) return "Shared";
+  if (typeof track === "number" && track > 0) {
+    return `Track ${getTrackName(track)}`;
+  }
   return "General";
 }
 
 function getTrackIndicator(track?: number): string {
-  if (track === 1) return "A";
-  if (track === 2) return "B";
   if (track === 0) return "AB";
-  if ((track ?? 0) > 2) return "SH";
+  if (typeof track === "number" && track > 0) return getTrackName(track);
   return "G";
 }
 
@@ -166,16 +175,34 @@ function groupByDay(items: ProgramItem[]) {
 }
 
 function isSharedItem(track?: number): boolean {
-  return track === 0 || track === undefined || track > 2;
+  return track === 0 || track === undefined;
 }
 
 function filterItemsForTrack(
   items: ProgramItem[],
-  track: 1 | 2,
+  track: number,
 ): ProgramItem[] {
   return items.filter(
     (item) => item.track === track || isSharedItem(item.track),
   );
+}
+
+function getTrackPages(items: ProgramItem[]): TrackPage[] {
+  const tracks = new Set(
+    items
+      .map((item) => item.track)
+      .filter(
+        (track): track is number => typeof track === "number" && track > 0,
+      ),
+  );
+
+  return [...tracks]
+    .sort((a, b) => a - b)
+    .map((track) => ({
+      key: `track-${track}`,
+      title: getTrackLabel(track),
+      track,
+    }));
 }
 
 function portableTextToPlainText(blocks?: PortableTextBlock[]): string | null {
@@ -309,10 +336,7 @@ export default async function ProgramPage() {
     getProgram(),
     getAreaReferences(),
   ]);
-  const trackPages: TrackPage[] = [
-    { key: "track-a", title: "Track A", track: 1 },
-    { key: "track-b", title: "Track B", track: 2 },
-  ];
+  const trackPages = getTrackPages(program);
   const printablePages: PrintablePage[] = trackPages.flatMap((page) =>
     groupByDay(filterItemsForTrack(program, page.track)).map(
       ([dayKey, items]) => ({
