@@ -276,7 +276,8 @@ function AfterEvent() {
       <div className="space-y-6">
         <div className="space-y-4">
           <Typography variant="h3" className="text-primary">
-            Connecting the code, celebrating the community. Thank you for joining us!
+            Connecting the code, celebrating the community. Thank you for
+            joining us!
           </Typography>
           <Typography className="text-gray-600">
             We&apos;ll see you next year! In the meantime, we&apos;d love to

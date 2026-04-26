@@ -12,7 +12,7 @@ export default {
         title: ["var(--font-cartoon-town)", ...fontFamily.sans],
       },
       screens: {
-        "xl2": "1100px",
+        xl2: "1100px",
       },
       borderRadius: {
         lg: "var(--radius)",

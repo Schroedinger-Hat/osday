@@ -79,8 +79,10 @@ export default function GamificationPage() {
         <div className="mt-8 flex flex-col space-y-4">
           <Heading level={3}>How to Contribute</Heading>
           <Typography>
-            Help us make the gamification experience even better by contributing to our open source gamification system! <br />
-            Check out the repository to see how you can get involved and help us create an unforgettable conference experience for everyone!
+            Help us make the gamification experience even better by contributing
+            to our open source gamification system! <br />
+            Check out the repository to see how you can get involved and help us
+            create an unforgettable conference experience for everyone!
           </Typography>
           <Link
             href="https://github.com/Schroedinger-Hat/tanglecat"

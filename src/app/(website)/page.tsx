@@ -105,15 +105,18 @@ export default async function HomePage() {
           <div className="order-1 space-y-4 md:order-2 md:col-span-3">
             <Heading level={2}>Tee with Your Ticket</Heading>
             <Typography>
-              Missed out on the T-shirt at the event? No worries — the Open Source
-              Day T-shirt will be available on our association's online store.
+              Missed out on the T-shirt at the event? No worries — the Open
+              Source Day T-shirt will be available on our association's online
+              store.
               <br />
               <br />
               Head over to the shop, pick your size, and keep the spirit of this
               year's edition with you!
             </Typography>
             <Button>
-              <Link href="https://shop.schroedinger-hat.org/" target="_blank">Go Shopping!</Link>
+              <Link href="https://shop.schroedinger-hat.org/" target="_blank">
+                Go Shopping!
+              </Link>
             </Button>
           </div>
         </div>
