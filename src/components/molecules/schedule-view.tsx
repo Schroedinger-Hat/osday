@@ -328,10 +328,13 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
   const visibleDesktopItems = items.filter(
     (i) => getDayKey(i.startDateTime) === selectedDay,
   );
-  const activeMobileTab = mobileTabs.find((tab) => tab.id === selectedMobileTab);
+  const activeMobileTab = mobileTabs.find(
+    (tab) => tab.id === selectedMobileTab,
+  );
   const visibleMobileItems = activeMobileTab
     ? items.filter((item) => {
-        if (getDayKey(item.startDateTime) !== activeMobileTab.dayKey) return false;
+        if (getDayKey(item.startDateTime) !== activeMobileTab.dayKey)
+          return false;
         if (isSharedTrack(item)) return true;
         return item.track === activeMobileTab.track;
       })
@@ -492,7 +495,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                     className="flex flex-col gap-1"
                     style={{
                       minHeight: durationToPx(
-                        Math.max(...track1.map((i) => getDuration(i, startMin))),
+                        Math.max(
+                          ...track1.map((i) => getDuration(i, startMin)),
+                        ),
                       ),
                     }}
                   >
@@ -504,7 +509,9 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
                     className="flex flex-col gap-1"
                     style={{
                       minHeight: durationToPx(
-                        Math.max(...track2.map((i) => getDuration(i, startMin))),
+                        Math.max(
+                          ...track2.map((i) => getDuration(i, startMin)),
+                        ),
                       ),
                     }}
                   >
