@@ -82,7 +82,7 @@
     "dotenv": "^16.5.0",
     "eslint": "^8.57.0",
     "eslint-config-next": "15.1.7",
-    "postcss": "^8.4.39",
+    "postcss": "^8.5.10",
     "prettier": "^3.3.2",
     "prettier-plugin-tailwindcss": "^0.6.5",
     "prisma": "^5.14.0",
