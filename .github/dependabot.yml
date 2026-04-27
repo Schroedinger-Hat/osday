@@ -9,3 +9,54 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      next:
+        patterns:
+          - "next"
+          - "@next/*"
+          - "eslint-config-next"
+      react:
+        patterns:
+          - "react"
+          - "react-dom"
+          - "@types/react"
+          - "@types/react-dom"
+      sanity:
+        patterns:
+          - "sanity"
+          - "@sanity/*"
+          - "next-sanity"
+      trpc:
+        patterns:
+          - "@trpc/*"
+          - "@tanstack/react-query"
+          - "superjson"
+      algolia:
+        patterns:
+          - "@algolia/*"
+          - "algoliasearch"
+          - "instantsearch.js"
+          - "react-instantsearch"
+      radix-ui:
+        patterns:
+          - "@radix-ui/*"
+          - "radix-ui"
+      prisma:
+        patterns:
+          - "prisma"
+          - "@prisma/*"
+      typescript-tooling:
+        patterns:
+          - "typescript"
+          - "@typescript-eslint/*"
+          - "@types/*"
+          - "eslint"
+      styling:
+        patterns:
+          - "tailwindcss"
+          - "tailwind-merge"
+          - "tailwindcss-animate"
+          - "prettier"
+          - "prettier-plugin-tailwindcss"
+          - "class-variance-authority"
+          - "clsx"
