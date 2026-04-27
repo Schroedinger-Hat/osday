@@ -2,8 +2,16 @@ import Image from "next/image";
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 import type { Metadata } from "next";
+import {
+  isPortableTextSpan,
+  isPortableTextTextBlock,
+  type Image as SanityImageValue,
+  type ImageDimensions,
+  type PortableTextBlock,
+} from "sanity";
 import { getCacheTag, sanityFetch } from "~/lib/sanity-fetch";
 import { asFormattedTime } from "~/lib/utils/date";
+import { urlFor } from "~/sanity/lib/image";
 
 export const dynamic = "force-dynamic";
 export const revalidate = 0;
@@ -22,26 +30,26 @@ type ProgramItem = {
     lastName?: string;
     pronouns?: string;
     biography?: PortableTextBlock[];
+    photo?: SanityImage;
   };
   coSpeaker?: {
     firstName?: string;
     lastName?: string;
     pronouns?: string;
     biography?: PortableTextBlock[];
+    photo?: SanityImage;
   };
 };
 
-type PortableTextBlock = {
-  children?: Array<{
-    text?: string;
-  }>;
+type SanityImage = SanityImageValue & {
+  dimensions?: Partial<ImageDimensions>;
 };
 
 type ProgramSpeaker = NonNullable<ProgramItem["author"]>;
 type TrackPage = {
   key: string;
   title: string;
-  track: 1 | 2;
+  track: number;
 };
 
 type PrintablePage = TrackPage & {
@@ -54,6 +62,9 @@ type AreaReference = {
   area: string;
   personInCharge: string;
 };
+
+const SPEAKER_PHOTO_WIDTH = 74;
+const SPEAKER_PHOTO_SOURCE_WIDTH = SPEAKER_PHOTO_WIDTH * 2;
 
 export const metadata: Metadata = {
   title: "Conference Program",
@@ -105,23 +116,44 @@ function getSpeakerNames(item: ProgramItem): string | null {
   return speakers.length > 0 ? speakers.join(" & ") : null;
 }
 
+function getSpeakers(item: ProgramItem): ProgramSpeaker[] {
+  return [item.author, item.coSpeaker].filter(Boolean) as ProgramSpeaker[];
+}
+
 function formatSpeakerName(speaker: ProgramSpeaker): string {
   return [speaker.firstName, speaker.lastName].filter(Boolean).join(" ").trim();
 }
 
+function getSpeakerPhotoHeight(photo?: SanityImage): number {
+  const aspectRatio = photo?.dimensions?.aspectRatio;
+
+  if (!aspectRatio || aspectRatio <= 0) return SPEAKER_PHOTO_WIDTH;
+
+  return Math.round(SPEAKER_PHOTO_WIDTH / aspectRatio);
+}
+
+function getTrackName(track: number): string {
+  const alphaIndex = track - 1;
+  const charCodeA = "A".charCodeAt(0);
+
+  if (alphaIndex >= 0 && alphaIndex < 26) {
+    return String.fromCharCode(charCodeA + alphaIndex);
+  }
+
+  return String(track);
+}
+
 function getTrackLabel(track?: number): string {
-  if (track === 1) return "Track A";
-  if (track === 2) return "Track B";
   if (track === 0) return "All tracks";
-  if ((track ?? 0) > 2) return "Shared";
+  if (typeof track === "number" && track > 0) {
+    return `Track ${getTrackName(track)}`;
+  }
   return "General";
 }
 
 function getTrackIndicator(track?: number): string {
-  if (track === 1) return "A";
-  if (track === 2) return "B";
   if (track === 0) return "AB";
-  if ((track ?? 0) > 2) return "SH";
+  if (typeof track === "number" && track > 0) return getTrackName(track);
   return "G";
 }
 
@@ -143,30 +175,52 @@ function groupByDay(items: ProgramItem[]) {
 }
 
 function isSharedItem(track?: number): boolean {
-  return track === 0 || track === undefined || track > 2;
+  return track === 0 || track === undefined;
 }
 
 function filterItemsForTrack(
   items: ProgramItem[],
-  track: 1 | 2,
+  track: number,
 ): ProgramItem[] {
   return items.filter(
     (item) => item.track === track || isSharedItem(item.track),
   );
 }
 
+function getTrackPages(items: ProgramItem[]): TrackPage[] {
+  const tracks = new Set(
+    items
+      .map((item) => item.track)
+      .filter(
+        (track): track is number => typeof track === "number" && track > 0,
+      ),
+  );
+
+  return [...tracks]
+    .sort((a, b) => a - b)
+    .map((track) => ({
+      key: `track-${track}`,
+      title: getTrackLabel(track),
+      track,
+    }));
+}
+
 function portableTextToPlainText(blocks?: PortableTextBlock[]): string | null {
   if (!blocks?.length) return null;
 
   const text = blocks
-    .flatMap((block) => block.children ?? [])
-    .map((child) => child.text?.trim() ?? "")
+    .flatMap((block) => (isPortableTextTextBlock(block) ? block.children : []))
+    .map((child) => (isPortableTextSpan(child) ? child.text.trim() : ""))
     .filter(Boolean)
     .join(" ")
     .replace(/\s+/g, " ")
     .trim();
 
   return text || null;
+}
+
+function getTalkDescription(item: ProgramItem): string | null {
+  return portableTextToPlainText(item.abstract);
 }
 
 function getSpeakerBio(item: ProgramItem): string | null {
@@ -176,10 +230,6 @@ function getSpeakerBio(item: ProgramItem): string | null {
     .join(" ");
 
   return bios || null;
-}
-
-function getTalkDescription(item: ProgramItem): string | null {
-  return portableTextToPlainText(item.abstract);
 }
 
 function parseAreaReferencesYaml(content: string): AreaReference[] {
@@ -256,13 +306,21 @@ async function getProgram(): Promise<ProgramItem[]> {
         firstName,
         lastName,
         pronouns,
-        biography
+        biography,
+        photo{
+          ...,
+          "dimensions": asset->metadata.dimensions
+        }
       },
       "coSpeaker": coSpeaker->{
         firstName,
         lastName,
         pronouns,
-        biography
+        biography,
+        photo{
+          ...,
+          "dimensions": asset->metadata.dimensions
+        }
       }
     }`,
     undefined,
@@ -278,10 +336,7 @@ export default async function ProgramPage() {
     getProgram(),
     getAreaReferences(),
   ]);
-  const trackPages: TrackPage[] = [
-    { key: "track-a", title: "Track A", track: 1 },
-    { key: "track-b", title: "Track B", track: 2 },
-  ];
+  const trackPages = getTrackPages(program);
   const printablePages: PrintablePage[] = trackPages.flatMap((page) =>
     groupByDay(filterItemsForTrack(program, page.track)).map(
       ([dayKey, items]) => ({
@@ -299,6 +354,13 @@ export default async function ProgramPage() {
         @page {
           size: A4 portrait;
           margin: 24mm 8mm 12mm 8mm;
+
+          @bottom-right {
+            content: counter(page);
+            color: #94a3b8;
+            font-size: 10px;
+            font-family: sans-serif;
+          }
         }
 
         .animated-schroddy {
@@ -311,8 +373,7 @@ export default async function ProgramPage() {
           }
 
           .program-sheet-header,
-          .program-day-header,
-          .program-table-header {
+          .program-day-header {
             break-after: avoid;
             page-break-after: avoid;
           }
@@ -328,17 +389,17 @@ export default async function ProgramPage() {
             page-break-inside: auto;
           }
 
-          .program-row-head {
+          .program-row-meta {
             break-inside: avoid;
             page-break-inside: avoid;
           }
 
-          .program-row-copy {
+          .program-row-content {
             break-inside: auto;
             page-break-inside: auto;
           }
 
-          .program-row-copy p {
+          .program-row-content p {
             orphans: 3;
             widows: 3;
           }
@@ -396,56 +457,90 @@ export default async function ProgramPage() {
               <section className="px-6 py-6">
                 <div>
                   <div className="program-table overflow-hidden border border-slate-300">
-                    <div className="program-table-header grid grid-cols-[68px_34px_minmax(0,1fr)] bg-slate-100 px-3 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600">
-                      <span>Time</span>
-                      <span>Rm</span>
-                      <span>Session</span>
-                    </div>
-
                     <div className="program-table-body divide-y divide-slate-200">
                       {page.items.map((item) => {
                         const speakers = getSpeakerNames(item);
+                        const speakerList = getSpeakers(item);
                         const speakerBio = getSpeakerBio(item);
                         const talkDescription = getTalkDescription(item);
+                        const showSpeakerPhotos = item.type === "talk";
+                        const showRoomTag = !isSharedItem(item.track);
 
                         return (
                           <article
                             key={item._id}
-                            className="program-row px-3 py-3"
+                            className="program-row grid grid-cols-[74px_minmax(0,1fr)] gap-3 px-4 py-4"
                           >
-                            <div className="program-row-head grid grid-cols-[68px_34px_minmax(0,1fr)] gap-2.5">
-                              <div className="text-sm font-semibold tabular-nums text-slate-900">
+                            <aside className="program-row-meta flex flex-col items-center gap-2 text-center">
+                              <div className="w-full text-base font-semibold tabular-nums leading-none text-slate-950">
                                 {asFormattedTime(item.startDateTime)}
                                 {item.endDateTime && (
-                                  <span className="block text-xs font-medium text-slate-500">
+                                  <span className="mt-1 block text-xs font-medium text-slate-500">
                                     {asFormattedTime(item.endDateTime)}
                                   </span>
                                 )}
                               </div>
 
-                              <div>
+                              {showRoomTag && (
                                 <span
                                   title={getTrackLabel(item.track)}
-                                  className="inline-flex min-w-7 justify-center rounded border border-slate-950 bg-white px-1 py-0.5 text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-950"
+                                  className="inline-flex min-w-11 justify-center rounded border border-slate-950 bg-white px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-950"
                                 >
                                   {getTrackIndicator(item.track)}
                                 </span>
-                              </div>
+                              )}
 
-                              <div className="min-w-0">
-                                <p className="text-base font-semibold leading-5 text-slate-950">
-                                  {item.titleShort ?? item.title}
-                                </p>
-                                <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
-                                  <span>{typeLabel(item.type)}</span>
-                                  {speakers && <span>{speakers}</span>}
+                              {showSpeakerPhotos && (
+                                <div className="mt-1 flex w-full flex-wrap justify-center gap-1.5">
+                                  {speakerList.map((speaker, speakerIndex) => {
+                                    const speakerName =
+                                      formatSpeakerName(speaker) || "Speaker";
+                                    const photoHeight = getSpeakerPhotoHeight(
+                                      speaker.photo,
+                                    );
+
+                                    return speaker.photo?.asset ? (
+                                      <Image
+                                        key={`${item._id}-${speakerName}-${speakerIndex}`}
+                                        src={urlFor(speaker.photo)
+                                          .width(SPEAKER_PHOTO_SOURCE_WIDTH)
+                                          .url()}
+                                        alt={speakerName}
+                                        width={SPEAKER_PHOTO_WIDTH}
+                                        height={photoHeight}
+                                        className="h-auto w-full rounded-sm"
+                                      />
+                                    ) : (
+                                      <span
+                                        key={`${item._id}-${speakerName}-${speakerIndex}`}
+                                        className="flex aspect-square w-full items-center justify-center rounded-sm bg-slate-100 text-sm font-semibold text-slate-600"
+                                      >
+                                        {speakerName
+                                          .split(" ")
+                                          .map((part) => part[0])
+                                          .join("")
+                                          .slice(0, 2)
+                                          .toUpperCase() || "?"}
+                                      </span>
+                                    );
+                                  })}
                                 </div>
-                              </div>
-                            </div>
+                              )}
+                            </aside>
 
-                            <div className="program-row-copy ml-[104px] mt-2 min-w-0">
+                            <div className="program-row-content min-w-0">
+                              <p className="text-base font-semibold leading-5 text-slate-950">
+                                {item.titleShort ?? item.title}
+                              </p>
+                              <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
+                                {speakers ? (
+                                  <span>{speakers}</span>
+                                ) : (
+                                  <span>{typeLabel(item.type)}</span>
+                                )}
+                              </div>
                               {speakerBio && (
-                                <p className="text-sm leading-5 text-slate-700">
+                                <p className="mt-2 text-sm leading-5 text-slate-700">
                                   <span className="font-semibold text-slate-900">
                                     Speaker bio:
                                   </span>{" "}
@@ -453,7 +548,7 @@ export default async function ProgramPage() {
                                 </p>
                               )}
                               {talkDescription && (
-                                <p className="mt-1 text-sm leading-5 text-slate-700">
+                                <p className="mt-2 text-sm leading-5 text-slate-700">
                                   <span className="font-semibold text-slate-900">
                                     Talk:
                                   </span>{" "}
