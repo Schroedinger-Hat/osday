@@ -95,7 +95,7 @@
   },
   "packageManager": "npm@10.5.0",
   "engines": {
-    "node": ">=20"
+    "node": ">=24"
   },
   "overrides": {
     "@types/react": "19.2.14",
