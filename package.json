@@ -60,7 +60,7 @@
     "next": "15.5.15",
     "next-sanity": "^9.12.3",
     "radix-ui": "^1.4.3",
-    "react": "^19.2.3",
+    "react": "^19.2.5",
     "react-dom": "^19.2.3",
     "react-hotkeys-hook": "^5.0.1",
     "react-instantsearch": "^7.16.3",
@@ -74,7 +74,7 @@
   "devDependencies": {
     "@types/eslint": "^8.56.10",
     "@types/node": "^20.14.10",
-    "@types/react": "19.0.8",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.0.3",
     "@types/three": "^0.161.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
@@ -98,7 +98,7 @@
     "node": ">=20"
   },
   "overrides": {
-    "@types/react": "19.0.8",
+    "@types/react": "19.2.14",
     "@types/react-dom": "19.0.3"
   }
 }
