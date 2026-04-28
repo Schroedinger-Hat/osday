@@ -36,9 +36,9 @@
     "@radix-ui/react-separator": "^1.1.2",
     "@radix-ui/react-slot": "^1.1.2",
     "@radix-ui/react-visually-hidden": "^1.1.2",
-    "@sanity/code-input": "^6.0.1",
+    "@sanity/code-input": "^7.1.0",
     "@sanity/color-input": "^6.0.3",
-    "@sanity/image-url": "^1.1.0",
+    "@sanity/image-url": "^2.1.1",
     "@sanity/orderable-document-list": "^1.4.0",
     "@sanity/vision": "^5.22.0",
     "@t3-oss/env-nextjs": "^0.10.1",
@@ -73,7 +73,7 @@
   "devDependencies": {
     "@types/node": "^25.6.0",
     "@types/react": "19.2.14",
-    "@types/react-dom": "19.0.3",
+    "@types/react-dom": "19.2.3",
     "@types/three": "^0.161.0",
     "@typescript-eslint/eslint-plugin": "^8.1.0",
     "@typescript-eslint/parser": "^8.1.0",
@@ -97,6 +97,6 @@
   },
   "overrides": {
     "@types/react": "19.2.14",
-    "@types/react-dom": "19.0.3"
+    "@types/react-dom": "19.2.3"
   }
 }
