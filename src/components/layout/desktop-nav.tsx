@@ -16,7 +16,6 @@ export function DesktopNav() {
           variant="default"
           size="icon"
           aria-label="Toggle Menu"
-          className="rounded-l-none border-l"
           onClick={() => setIsOpen(true)}
         >
           <Menu className="h-5 w-5" />
@@ -31,7 +30,6 @@ export function DesktopNav() {
         variant="default"
         size="icon"
         aria-label="Toggle Menu"
-        className="rounded-l-none border-l"
         onClick={() => setIsOpen(true)}
       >
         <Menu className="h-5 w-5" />

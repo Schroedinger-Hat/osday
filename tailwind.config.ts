@@ -11,6 +11,9 @@ export default {
         sans: ["var(--font-inter)", ...fontFamily.sans],
         title: ["var(--font-cartoon-town)", ...fontFamily.sans],
       },
+      screens: {
+        xl2: "1100px",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",

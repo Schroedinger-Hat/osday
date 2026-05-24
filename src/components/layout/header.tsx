@@ -59,13 +59,13 @@ export function Header() {
 
           <div className="flex items-center">
             {/* <SearchButton /> */}
-            <Button
+            {/* <Button
               asChild
               variant="default"
               className="rounded-r-none font-title text-2xl"
             >
               <Link href="/tickets">Tickets</Link>
-            </Button>
+            </Button> */}
             <MobileNav />
             <DesktopNav />
           </div>

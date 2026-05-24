@@ -11,7 +11,7 @@ import { getAuthorFullName } from "~/lib/sanity-cms";
 import type { Author } from "~/sanity/sanity.types";
 import { Button } from "~/components/ui/button";
 
-import eventRecap2025 from "~/assets/images/osday25/event-recap-2025.jpg";
+import eventRecap2025 from "~/assets/images/osday26/Schroddy_low.jpg";
 import defaultEventImage from "~/assets/images/venue/auditorium.jpg";
 
 const stats = [
@@ -94,13 +94,13 @@ export default function Hero() {
           </div>
         </div>
       </SectionContainer>
-      {/* {shouldHideStats && (
+      {shouldHideStats && (
         <div className="mx-auto -mt-36 max-w-6xl px-4 md:px-6 lg:px-8 2xl:px-0">
           <div className="rounded-md bg-slate-100 p-8 shadow-lg md:p-12">
             {isAfterEvent ? <AfterEvent /> : <DayOfEvent />}
           </div>
         </div>
-      )} */}
+      )}
     </>
   );
 }
@@ -276,7 +276,8 @@ function AfterEvent() {
       <div className="space-y-6">
         <div className="space-y-4">
           <Typography variant="h3" className="text-primary">
-            That was a blast, thanks for coming!
+            Connecting the code, celebrating the community. Thank you for
+            joining us!
           </Typography>
           <Typography className="text-gray-600">
             We&apos;ll see you next year! In the meantime, we&apos;d love to
