@@ -1,7 +1,5 @@
 import "~/styles/globals.css";
 
-import { HydrateClient } from "~/trpc/server";
-import { TRPCReactProvider } from "~/trpc/react";
 import localFont from "next/font/local";
 import { Inter } from "next/font/google";
 import { cn } from "~/lib/utils";
@@ -65,9 +63,7 @@ export default function RootLayout({
         </head>
         <body>
           <AnimatedSchroddy src={schroddy} />
-          <TRPCReactProvider>
-            <HydrateClient>{children}</HydrateClient>
-          </TRPCReactProvider>
+          {children}
 
           <SpeedInsights />
           {env.NEXT_PUBLIC_GA_ID && (
