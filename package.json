@@ -10,7 +10,6 @@
     "dev:rage": "rm -rf .next && next dev --turbo",
     "format:check": "prettier --check \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
     "format:write": "prettier --write \"**/*.{ts,tsx,js,jsx,mdx}\" --cache",
-    "postinstall": "prisma generate",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "preview": "next build && next start",
