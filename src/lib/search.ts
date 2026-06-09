@@ -1,8 +1,8 @@
-import algoliasearch from "algoliasearch/lite";
+import { liteClient } from "algoliasearch/lite";
 import { env } from "~/env";
 
 // Initialize the Algolia client
-export const searchClient = algoliasearch(
+export const searchClient = liteClient(
   env.NEXT_PUBLIC_ALGOLIA_APP_ID ?? "",
   env.NEXT_PUBLIC_ALGOLIA_SEARCH_API_KEY ?? "",
 );
