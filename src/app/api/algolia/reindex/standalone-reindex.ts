@@ -147,12 +147,7 @@ function extractTextFromSanityObject(obj: unknown): string {
   // Fallback for primitives
   try {
     // For primitive values only
-    if (
-      typeof obj === "number" ||
-      typeof obj === "boolean" ||
-      obj === null ||
-      obj === undefined
-    ) {
+    if (typeof obj === "number" || typeof obj === "boolean") {
       return String(obj);
     }
     return "";
