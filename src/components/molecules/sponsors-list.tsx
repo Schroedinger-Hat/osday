@@ -15,15 +15,6 @@ export async function SponsorsList() {
     },
   );
 
-  const diamondSponsors: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "diamond"] | order(orderRank asc)`,
-    undefined,
-    {
-      cacheDuration: 30,
-      tags: [getCacheTag.sponsors()],
-    },
-  );
-
   const platinumSponsors: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "platinum"] | order(orderRank asc)`,
     undefined,
@@ -35,15 +26,6 @@ export async function SponsorsList() {
 
   const goldSponsors: Partner[] = await sanityFetch(
     `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "gold"] | order(orderRank asc)`,
-    undefined,
-    {
-      cacheDuration: 30,
-      tags: [getCacheTag.sponsors()],
-    },
-  );
-
-  const silverSponsors: Partner[] = await sanityFetch(
-    `*[_type == "partner" && "osday26" in visibility && isBusinessPartner == true && businessTier == "silver"] | order(orderRank asc)`,
     undefined,
     {
       cacheDuration: 30,

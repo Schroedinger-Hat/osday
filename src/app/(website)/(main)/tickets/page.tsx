@@ -37,7 +37,6 @@ function resolveCouponParam(
 
 export default async function TicketsPage({ searchParams }: TicketsPageProps) {
   const { coupon: couponParam } = await searchParams;
-  const coupon = resolveCouponParam(couponParam);
 
   const speakers: Author[] = await sanityFetch(
     `*[_type == "event" && slug.current == "open-source-day-2026"][0].authors[]->{
