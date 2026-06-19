@@ -66,7 +66,7 @@
   },
   "devDependencies": {
     "@types/node": "^25.9.2",
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3",
     "@types/three": "^0.184.1",
     "@typescript-eslint/eslint-plugin": "^8.61.0",
@@ -89,7 +89,7 @@
     "node": ">=24"
   },
   "overrides": {
-    "@types/react": "19.2.14",
+    "@types/react": "19.2.17",
     "@types/react-dom": "19.2.3"
   }
 }
