@@ -82,7 +82,7 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<SearchHit[]>([]);
-  const [isMac, setIsMac] = useState(false);
+  const [setIsMac] = useState(false);
 
   // Initialize client-side values
   useEffect(() => {

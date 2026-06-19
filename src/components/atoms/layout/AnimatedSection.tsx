@@ -4,7 +4,6 @@ import { motion, useInView } from "framer-motion";
 import { useRef, useEffect, useState } from "react";
 import { cn, disableAnimations } from "~/lib/utils";
 import { DURATION_TEN_FRAMES } from "./const";
-import { env } from "~/env";
 
 interface AnimatedSectionProps {
   children: React.ReactNode;
