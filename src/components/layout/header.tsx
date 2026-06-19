@@ -2,7 +2,6 @@
 
 import * as React from "react";
 import Link from "next/link";
-import dynamic from "next/dynamic";
 import { useScrollDirection } from "~/hooks/use-scroll-direction";
 import { usePathname } from "next/navigation";
 import { MobileNav } from "./mobile-nav";
