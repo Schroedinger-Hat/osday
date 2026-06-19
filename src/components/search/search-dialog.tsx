@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 import * as Dialog from "@radix-ui/react-dialog";
 import { Search as SearchIcon, X as XIcon, Loader2 } from "lucide-react";
 import { searchClient, INDEX_NAME } from "~/lib/search";
-import type { SearchIndex } from "algoliasearch/lite";
+import type { SearchResponse } from "algoliasearch/lite";
 import { cn } from "~/lib/utils";
 
 // Define the structure of a search hit
@@ -89,14 +89,8 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
   const [results, setResults] = useState<SearchHit[]>([]);
   const [isMac, setIsMac] = useState(false);
 
-  // Initialize Algolia search index
-  const [index, setIndex] = useState<SearchIndex | null>(null);
-
   // Initialize client-side values
   useEffect(() => {
-    // Initialize search index
-    setIndex(searchClient.initIndex(INDEX_NAME));
-
     // Detect platform
     setIsMac(navigator?.platform?.includes("Mac") ?? false);
   }, []);
@@ -117,7 +111,7 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
     const value = e.target.value;
     setQuery(value);
 
-    if (!value.trim() || !index) {
+    if (!value.trim()) {
       setResults([]);
       setLoading(false);
       return;
@@ -125,21 +119,28 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
 
     setLoading(true);
     try {
-      const searchResponse = await index.search<SearchHit>(value, {
-        hitsPerPage: 10,
-        attributesToRetrieve: [
-          "title",
-          "url",
-          "type",
-          "description",
-          "image",
-          "lastModified",
+      const searchResponse = await searchClient.search<SearchHit>({
+        requests: [
+          {
+            indexName: INDEX_NAME,
+            query: value,
+            hitsPerPage: 10,
+            attributesToRetrieve: [
+              "title",
+              "url",
+              "type",
+              "description",
+              "image",
+              "lastModified",
+            ],
+            filters: "source:osday",
+          },
         ],
-        queryParameters: {
-          filters: "source:osday",
-        },
       });
-      setResults(searchResponse.hits as SearchHit[]);
+      const result = searchResponse.results[0] as
+        | SearchResponse<SearchHit>
+        | undefined;
+      setResults(result?.hits ?? []);
     } catch (err: unknown) {
       const errorMessage = err instanceof Error ? err.message : String(err);
       console.error("Search error:", errorMessage);

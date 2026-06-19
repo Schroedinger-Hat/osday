@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { env } from "~/env";
-import algoliasearch from "algoliasearch";
+import { algoliasearch } from "algoliasearch";
 import { BASE_URL } from "~/lib/utils/withFullUrl";
 
 // Helper to build full URLs
@@ -35,8 +35,6 @@ export async function POST(request: Request) {
       env.ALGOLIA_SEARCH_API_KEY ?? "",
     );
 
-    const index = client.initIndex(env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME ?? "");
-
     // Get all URLs from sitemap
     const urls = await getAllUrls();
 
@@ -66,7 +64,10 @@ export async function POST(request: Request) {
     );
 
     // Index the records
-    await index.saveObjects(records);
+    await client.saveObjects({
+      indexName: env.NEXT_PUBLIC_ALGOLIA_INDEX_NAME ?? "",
+      objects: records,
+    });
 
     return new NextResponse(
       JSON.stringify({ success: true, count: records.length }),
