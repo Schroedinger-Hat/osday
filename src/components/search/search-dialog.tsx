@@ -49,7 +49,7 @@ function extractTextFromSanityObject(obj: unknown): string {
   }
 
   // For other objects, try to extract from their values
-  if (typeof obj === "object" && obj !== null) {
+  if (typeof obj === "object") {
     try {
       const keys = Object.keys(objTyped);
       return keys.length > 0
@@ -69,12 +69,7 @@ function extractTextFromSanityObject(obj: unknown): string {
   // Fallback: convert to string safely
   try {
     // For primitive values only
-    if (
-      typeof obj === "number" ||
-      typeof obj === "boolean" ||
-      obj === null ||
-      obj === undefined
-    ) {
+    if (typeof obj === "number" || typeof obj === "boolean") {
       return String(obj);
     }
     return "";

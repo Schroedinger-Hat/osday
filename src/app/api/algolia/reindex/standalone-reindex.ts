@@ -127,7 +127,7 @@ function extractTextFromSanityObject(obj: unknown): string {
   }
 
   // For other objects, try to extract from their values
-  if (typeof obj === "object" && obj !== null) {
+  if (typeof obj === "object") {
     try {
       const keys = Object.keys(objTyped);
       if (keys.length === 0) return "";
