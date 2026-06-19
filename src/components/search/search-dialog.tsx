@@ -82,13 +82,6 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(false);
   const [results, setResults] = useState<SearchHit[]>([]);
-  const [setIsMac] = useState(false);
-
-  // Initialize client-side values
-  useEffect(() => {
-    // Detect platform
-    setIsMac(navigator?.platform?.includes("Mac") ?? false);
-  }, []);
 
   // Close dialog with escape key
   useEffect(() => {
