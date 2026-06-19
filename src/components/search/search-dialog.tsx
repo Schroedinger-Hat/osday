@@ -69,7 +69,7 @@ function extractTextFromSanityObject(obj: unknown): string {
   // Fallback: convert to string safely
   try {
     // For primitive values only
-    if (typeof obj === "number" || typeof obj === "boolean" || obj === null) {
+    if (typeof obj === "number" || typeof obj === "boolean") {
       return String(obj);
     }
     return "";
