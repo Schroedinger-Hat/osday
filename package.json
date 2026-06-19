@@ -57,7 +57,7 @@
     "react-dom": "^19.2.5",
     "react-hotkeys-hook": "^5.0.1",
     "react-instantsearch": "^7.33.1",
-    "sanity": "^5.22.0",
+    "sanity": "^6.1.0",
     "server-only": "^0.0.1",
     "superjson": "^2.2.1",
     "tailwind-merge": "^3.0.1",
