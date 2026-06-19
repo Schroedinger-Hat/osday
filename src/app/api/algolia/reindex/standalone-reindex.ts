@@ -1,4 +1,4 @@
-import algoliasearch from "algoliasearch";
+import { algoliasearch } from "algoliasearch";
 import dotenv from "dotenv";
 import { createClient } from "@sanity/client";
 
@@ -322,14 +322,13 @@ async function main() {
 
     // Initialize Algolia client with type assertion since we checked above
     const client = algoliasearch(APP_ID, API_KEY);
-    const index = client.initIndex(INDEX_NAME);
 
     // Get all content
     const records = await getAllContentForIndex();
     console.log(`📋 Found ${records.length} items to index`);
 
     console.log(records);
-    await index.saveObjects(records);
+    await client.saveObjects({ indexName: INDEX_NAME, objects: records });
     console.log(`✅ Successfully indexed ${records.length} items to Algolia`);
   } catch (error) {
     console.error("❌ Error during indexing:", error);
