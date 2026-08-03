@@ -22,7 +22,7 @@
   },
   "dependencies": {
     "@algolia/client-search": "^5.56.0",
-    "@next/third-parties": "16.2.9",
+    "@next/third-parties": "16.2.12",
     "@radix-ui/react-accordion": "^1.2.16",
     "@radix-ui/react-dialog": "^1.1.19",
     "@radix-ui/react-navigation-menu": "^1.2.18",
@@ -73,7 +73,7 @@
     "@typescript-eslint/parser": "^8.64.0",
     "dotenv": "^17.4.2",
     "eslint": "^9.39.4",
-    "eslint-config-next": "16.2.9",
+    "eslint-config-next": "16.2.12",
     "postcss": "8.5.18",
     "prettier": "^3.8.3",
     "prettier-plugin-tailwindcss": "^0.8.0",
