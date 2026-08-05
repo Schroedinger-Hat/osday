@@ -25,16 +25,6 @@ interface TicketsPageProps {
   searchParams: Promise<{ coupon?: string | string[] }>;
 }
 
-function resolveCouponParam(
-  coupon: string | string[] | undefined,
-): string | undefined {
-  if (coupon === undefined) return undefined;
-  const raw = Array.isArray(coupon) ? coupon[0] : coupon;
-  const trimmed = raw?.trim() ?? "";
-  if (trimmed.length === 0) return undefined;
-  return trimmed;
-}
-
 export default async function TicketsPage({ searchParams }: TicketsPageProps) {
   const { coupon: couponParam } = await searchParams;
 
