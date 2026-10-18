@@ -79,7 +79,7 @@ export default function Hero() {
                     <div key={stat.label} className={cn("flex flex-col")}>
                       <Typography
                         variant="small"
-                        className="mb-0 font-bold uppercase text-background md:mb-0"
+                        className="text-background mb-0 font-bold uppercase md:mb-0"
                       >
                         {stat.label}
                       </Typography>

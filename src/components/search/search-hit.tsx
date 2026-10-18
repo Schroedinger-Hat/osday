@@ -41,7 +41,7 @@ export function SearchHit({ hit, onClick }: SearchHitProps) {
     >
       <div className="flex flex-col gap-1">
         <div className="flex items-center justify-between">
-          <span className="font-medium text-fiery-red">{hit.title}</span>
+          <span className="text-fiery-red font-medium">{hit.title}</span>
           {typeDisplay && (
             <span className="rounded-full bg-neutral-200 px-2 py-1 text-xs dark:bg-neutral-700">
               {typeDisplay}

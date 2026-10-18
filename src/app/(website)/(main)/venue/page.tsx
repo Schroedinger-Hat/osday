@@ -76,7 +76,7 @@ export default function VenuePage() {
                 className="object-cover transition-transform hover:scale-105"
               />
             </div>
-            <p className="text-sm text-muted-foreground">
+            <p className="text-muted-foreground text-sm">
               Event and conference spaces for our talks and workshops
             </p>
           </div>
@@ -89,7 +89,7 @@ export default function VenuePage() {
                 className="object-cover transition-transform hover:scale-105"
               />
             </div>
-            <p className="text-sm text-muted-foreground"></p>
+            <p className="text-muted-foreground text-sm"></p>
           </div>
         </div>
 
@@ -128,7 +128,7 @@ export default function VenuePage() {
 
         <div className="space-y-6">
           <div className="flex gap-4">
-            <Train className="mt-1 h-6 w-6 shrink-0 text-muted-foreground" />
+            <Train className="text-muted-foreground mt-1 h-6 w-6 shrink-0" />
             <Typography variant="medium">
               From the main station Firenze SMN, you can reach the venue by walk
               (approximately 10 minutes), or take the tram T2 (direction Piazza
@@ -138,7 +138,7 @@ export default function VenuePage() {
 
           <div className="space-y-4">
             <div className="flex gap-4">
-              <Plane className="mt-1 h-6 w-6 shrink-0 text-muted-foreground" />
+              <Plane className="text-muted-foreground mt-1 h-6 w-6 shrink-0" />
               <div className="space-y-4">
                 <Typography variant="medium">
                   <b>Florence Airport (FLR)</b>
@@ -166,7 +166,7 @@ export default function VenuePage() {
           </div>
 
           <div className="flex gap-4">
-            <Car className="mt-1 h-6 w-6 shrink-0 text-muted-foreground" />
+            <Car className="text-muted-foreground mt-1 h-6 w-6 shrink-0" />
             <Typography variant="medium">
               Here a list of{" "}
               <Link

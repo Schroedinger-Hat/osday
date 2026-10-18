@@ -19,7 +19,7 @@ export function AnimatedSchroddy({ src }: AnimatedSchroddyProps) {
           duration: 0.6,
           ease: ["easeOut"],
         }}
-        className="absolute -right-48 top-24"
+        className="absolute top-24 -right-48"
       >
         <Image
           src={src}

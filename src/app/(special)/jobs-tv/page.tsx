@@ -62,7 +62,7 @@ export default async function JobsTVPage() {
   const jobs = await getPartnerJobs();
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="bg-background min-h-screen">
       <JobsDisplay initialJobs={jobs} />
     </div>
   );

@@ -61,17 +61,17 @@ export default function PricingTable() {
       <div className="hidden md:grid md:grid-cols-4 md:gap-x-4">
         {/* Header */}
         <div className="col-span-1" />
-        <div className="flex items-center justify-center rounded-md bg-fiery-red p-4 text-white shadow-md">
+        <div className="bg-fiery-red flex items-center justify-center rounded-md p-4 text-white shadow-md">
           <Heading level={4} className="mb-0">
             Community
           </Heading>
         </div>
-        <div className="flex items-center justify-center rounded-md bg-fiery-red p-4 text-white shadow-md">
+        <div className="bg-fiery-red flex items-center justify-center rounded-md p-4 text-white shadow-md">
           <Heading level={4} className="mb-0">
             Gold
           </Heading>
         </div>
-        <div className="flex items-center justify-center rounded-md bg-fiery-red p-4 text-white shadow-md">
+        <div className="bg-fiery-red flex items-center justify-center rounded-md p-4 text-white shadow-md">
           <Heading level={4} className="mb-0">
             Diamond
           </Heading>
@@ -114,7 +114,7 @@ export default function PricingTable() {
         <div className="p-4 text-center">
           <Link
             href="mailto:osday@schroedinger-hat.org"
-            className="italic text-red-500 hover:underline"
+            className="text-red-500 italic hover:underline"
           >
             email us
           </Link>
@@ -122,7 +122,7 @@ export default function PricingTable() {
         <div className="p-4 text-center">
           <Link
             href="mailto:osday@schroedinger-hat.org"
-            className="italic text-red-500 hover:underline"
+            className="text-red-500 italic hover:underline"
           >
             email us
           </Link>
@@ -130,7 +130,7 @@ export default function PricingTable() {
         <div className="p-4 text-center">
           <Link
             href="mailto:osday@schroedinger-hat.org"
-            className="italic text-red-500 hover:underline"
+            className="text-red-500 italic hover:underline"
           >
             email us
           </Link>
@@ -160,7 +160,7 @@ export default function PricingTable() {
             <div className="mt-6 text-center">
               <Link
                 href="mailto:osday@schroedinger-hat.org"
-                className="italic text-red-500 hover:underline"
+                className="text-red-500 italic hover:underline"
               >
                 email us
               </Link>
@@ -189,7 +189,7 @@ export default function PricingTable() {
             <div className="mt-6 text-center">
               <Link
                 href="mailto:osday@schroedinger-hat.org"
-                className="italic text-red-500 hover:underline"
+                className="text-red-500 italic hover:underline"
               >
                 email us
               </Link>
@@ -218,7 +218,7 @@ export default function PricingTable() {
             <div className="mt-6 text-center">
               <Link
                 href="mailto:osday@schroedinger-hat.org"
-                className="italic text-red-500 hover:underline"
+                className="text-red-500 italic hover:underline"
               >
                 email us
               </Link>

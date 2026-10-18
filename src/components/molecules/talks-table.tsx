@@ -89,19 +89,19 @@ function TalkCell({ item }: { item: TimelineItem }) {
   return (
     <Link
       href={`/schedule/${item._id}`}
-      className="block overflow-hidden rounded border-[0.5px] border-fiery-red bg-white transition-all hover:border-fiery-red/50 hover:bg-red-100 hover:opacity-80"
+      className="border-fiery-red hover:border-fiery-red/50 block overflow-hidden rounded border-[0.5px] bg-white transition-all hover:bg-red-100 hover:opacity-80"
     >
-      <div className="flex flex-col gap-1 border-l-4 border-fiery-red px-4 py-2.5 sm:min-h-24">
+      <div className="border-fiery-red flex flex-col gap-1 border-l-4 px-4 py-2.5 sm:min-h-24">
         <Typography
           variant="large"
-          className="font-bold leading-snug tracking-tight text-black"
+          className="leading-snug font-bold tracking-tight text-black"
         >
           {item.titleShort ?? item.title}
         </Typography>
         {item.author && (
           <Typography
             variant="muted"
-            className="font-medium leading-snug text-muted-foreground"
+            className="text-muted-foreground leading-snug font-medium"
           >
             {getAuthorFullName(item.author)}
             {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
@@ -200,7 +200,7 @@ export function TalksTable({ talks }: TalksTableProps) {
                   <div>
                     <Typography
                       variant="h3"
-                      className="mb-3 font-title text-2xl tracking-tight text-fiery-red"
+                      className="font-title text-fiery-red mb-3 text-2xl tracking-tight"
                     >
                       Track A+B
                     </Typography>
@@ -215,7 +215,7 @@ export function TalksTable({ talks }: TalksTableProps) {
                   <div>
                     <Typography
                       variant="h3"
-                      className="mb-3 font-title text-2xl tracking-tight text-fiery-red"
+                      className="font-title text-fiery-red mb-3 text-2xl tracking-tight"
                     >
                       Track A
                     </Typography>
@@ -230,7 +230,7 @@ export function TalksTable({ talks }: TalksTableProps) {
                   <div>
                     <Typography
                       variant="h3"
-                      className="mb-3 font-title tracking-tight text-fiery-red"
+                      className="font-title text-fiery-red mb-3 tracking-tight"
                     >
                       Track B
                     </Typography>
@@ -253,13 +253,13 @@ export function TalksTable({ talks }: TalksTableProps) {
               <div className="mb-6 flex gap-8">
                 <Typography
                   variant="h3"
-                  className="flex-1 font-title tracking-tight text-fiery-red"
+                  className="font-title text-fiery-red flex-1 tracking-tight"
                 >
                   Track A
                 </Typography>
                 <Typography
                   variant="h3"
-                  className="flex-1 font-title tracking-tight text-fiery-red"
+                  className="font-title text-fiery-red flex-1 tracking-tight"
                 >
                   Track B
                 </Typography>
@@ -309,7 +309,7 @@ export function TalksTable({ talks }: TalksTableProps) {
         <Button
           asChild
           variant="default"
-          className="rounded-r-none font-title text-2xl"
+          className="font-title rounded-r-none text-2xl"
         >
           <Link href="/schedule">Full schedule</Link>
         </Button>

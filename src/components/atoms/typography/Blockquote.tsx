@@ -11,7 +11,7 @@ export function Blockquote({ children, className }: BlockquoteProps) {
   return (
     <blockquote
       className={cn(
-        "mb-4 border-l-4 border-gray-200 pl-4 italic text-gray-600",
+        "mb-4 border-l-4 border-gray-200 pl-4 text-gray-600 italic",
         className,
       )}
     >

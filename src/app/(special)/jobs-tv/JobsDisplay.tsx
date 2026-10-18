@@ -85,17 +85,17 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
 
   if (!currentJob) {
     return (
-      <Card className="p-6 text-center text-muted-foreground">
+      <Card className="text-muted-foreground p-6 text-center">
         No job posts available at the moment.
       </Card>
     );
   }
 
   return (
-    <div className="fixed inset-0 flex h-screen max-h-[1080px] flex-col bg-background">
+    <div className="bg-background fixed inset-0 flex h-screen max-h-[1080px] flex-col">
       <div className="grid flex-1 grid-cols-4 overflow-hidden">
         {/* Job List - 1/4 width */}
-        <div className="h-full overflow-y-auto border-r border-border bg-muted/50">
+        <div className="border-border bg-muted/50 h-full overflow-y-auto border-r">
           {jobs.map((job, index) => (
             <motion.div
               key={job._id}
@@ -103,7 +103,7 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: index * 0.05 }}
               className={cn(
-                "cursor-pointer border-l-2 p-4 transition-all hover:bg-muted",
+                "hover:bg-muted cursor-pointer border-l-2 p-4 transition-all",
                 index === currentJobIndex
                   ? "border-l-primary bg-muted"
                   : "border-l-transparent",
@@ -115,7 +115,7 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
             >
               <div className="space-y-2">
                 <h3 className="font-semibold">{job.title}</h3>
-                <div className="text-sm text-muted-foreground">
+                <div className="text-muted-foreground text-sm">
                   {job.partner.name}
                 </div>
                 {job.tags && job.tags.length > 0 && (
@@ -148,7 +148,7 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
                   <motion.time
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
-                    className="text-sm text-muted-foreground"
+                    className="text-muted-foreground text-sm"
                   >
                     Posted{" "}
                     {format(new Date(currentJob.publishedAt), "MMM d, yyyy")}
@@ -228,7 +228,7 @@ export function JobsDisplay({ initialJobs }: JobsDisplayProps) {
       {/* Progress bar */}
       <Progress
         value={progress}
-        className="absolute left-0 top-0 h-1.5 rounded-none border-none bg-muted"
+        className="bg-muted absolute top-0 left-0 h-1.5 rounded-none border-none"
         indicatorClassName="bg-fiery-red"
       />
     </div>

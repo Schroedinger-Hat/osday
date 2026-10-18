@@ -33,7 +33,7 @@ export function Header() {
 
   return (
     <header
-      className={`sticky w-full bg-fiery-red transition-all duration-300 ${
+      className={`bg-fiery-red sticky w-full transition-all duration-300 ${
         scrollDirection === "down" ? "-top-16" : "top-0"
       } z-50`}
     >

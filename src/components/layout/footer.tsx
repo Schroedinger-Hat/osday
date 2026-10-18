@@ -68,10 +68,10 @@ export function Footer() {
               <Heading level={3} className="text-sm font-semibold">
                 SCHROEDINGER HAT APS
               </Heading>
-              <Paragraph className="text-sm text-muted-foreground">
+              <Paragraph className="text-muted-foreground text-sm">
                 Via Pino Arpioni 1, Pelago (FI)
               </Paragraph>
-              <Paragraph className="text-sm text-muted-foreground">
+              <Paragraph className="text-muted-foreground text-sm">
                 IT07355400487
               </Paragraph>
               <div className="mt-4 flex space-x-4">
@@ -104,7 +104,7 @@ export function Footer() {
           <div className="mt-12 border-t py-4" />
 
           {/* Bottom Links */}
-          <div className="flex flex-wrap justify-center gap-x-8 gap-y-2 text-muted-foreground md:justify-between">
+          <div className="text-muted-foreground flex flex-wrap justify-center gap-x-8 gap-y-2 md:justify-between">
             <Typography variant="muted" className="m-0">
               © {new Date().getFullYear()}, Schrödinger Hat
             </Typography>
@@ -118,7 +118,7 @@ export function Footer() {
                     Annoying font? Could be worse. Could be{" "}
                     <button
                       onClick={toggleComicSans}
-                      className="underline hover:text-foreground"
+                      className="hover:text-foreground underline"
                     >
                       Comic Sans
                     </button>

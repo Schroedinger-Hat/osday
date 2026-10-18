@@ -112,7 +112,7 @@ export default async function TalkDetailPage({ params }: PageProps) {
       <SectionContainer withBackground backgroundType="hero">
         <div className="relative">
           <div className="space-y-4">
-            <time className="block font-title text-2xl tracking-wider text-white/90">
+            <time className="font-title block text-2xl tracking-wider text-white/90">
               {asFormattedTime(talk.startDateTime)}
               {talk.endDateTime && ` - ${asFormattedTime(talk.endDateTime)}`}
             </time>
@@ -151,7 +151,7 @@ export default async function TalkDetailPage({ params }: PageProps) {
               {[talk.speaker, talk.coSpeaker].filter(Boolean).map((sp) => (
                 <div
                   key={sp!._id}
-                  className="overflow-hidden rounded-md bg-dark-navy text-white shadow-md"
+                  className="bg-dark-navy overflow-hidden rounded-md text-white shadow-md"
                 >
                   <div className="aspect-square">
                     {sp!.photo?.asset ? (

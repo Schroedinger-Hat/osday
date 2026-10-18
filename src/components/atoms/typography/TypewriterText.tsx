@@ -43,7 +43,7 @@ export function TypewriterText({
   return (
     <pre
       className={cn(
-        "w-full whitespace-pre-wrap break-words font-mono leading-relaxed",
+        "w-full font-mono leading-relaxed break-words whitespace-pre-wrap",
         className,
       )}
     >
