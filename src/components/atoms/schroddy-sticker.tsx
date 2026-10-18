@@ -8,7 +8,7 @@ function MobileSchroddy() {
   return (
     <a
       href="/schroddy"
-      className="cursor-pointer select-none transition-all duration-200 hover:scale-110"
+      className="cursor-pointer transition-all duration-200 select-none hover:scale-110"
     >
       <Image
         src={schroddySticker}

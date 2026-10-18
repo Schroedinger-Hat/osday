@@ -33,10 +33,10 @@ export function MobileNav() {
         </VisuallyHidden>
         <SheetContent
           side="left"
-          className="h-full w-full border-none bg-background p-0"
+          className="bg-background h-full w-full border-none p-0"
         >
           <div className="relative h-full">
-            <div className="sticky top-0 z-10 flex h-14 items-center justify-between bg-background px-4 sm:px-6">
+            <div className="bg-background sticky top-0 z-10 flex h-14 items-center justify-between px-4 sm:px-6">
               <Link href="/" className="flex items-center space-x-2">
                 <span className="font-title text-3xl">OSDAY26</span>
               </Link>
@@ -59,7 +59,7 @@ export function MobileNav() {
                   <SheetClose key={route.href} asChild>
                     <Link
                       href={route.href}
-                      className="relative block font-title text-5xl font-bold tracking-wide after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:origin-left after:-rotate-2 after:bg-primary after:transition-all after:duration-150 hover:after:w-[66.666%]"
+                      className="font-title after:bg-primary relative block text-5xl font-bold tracking-wide after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:origin-left after:-rotate-2 after:transition-all after:duration-150 hover:after:w-[66.666%]"
                     >
                       {route.label}
                     </Link>
@@ -73,7 +73,7 @@ export function MobileNav() {
                   <SheetClose key={route.href} asChild>
                     <Link
                       href={route.href}
-                      className="block font-title text-xl font-medium hover:text-primary"
+                      className="font-title hover:text-primary block text-xl font-medium"
                     >
                       {route.label}
                     </Link>
@@ -87,7 +87,7 @@ export function MobileNav() {
                   <SheetClose key={route.href} asChild>
                     <Link
                       href={route.href}
-                      className="block font-title text-xl font-medium hover:text-primary"
+                      className="font-title hover:text-primary block text-xl font-medium"
                     >
                       {route.label}
                     </Link>

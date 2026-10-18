@@ -60,7 +60,7 @@ export default function SchroddyPage() {
           />
         </div>
         <div className="flex items-center">
-          <div className="w-full max-w-full whitespace-pre-wrap break-words font-mono text-sm">
+          <div className="w-full max-w-full font-mono text-sm break-words whitespace-pre-wrap">
             <TypewriterText text={SPECS_TEXT} speed={18} />
           </div>
         </div>

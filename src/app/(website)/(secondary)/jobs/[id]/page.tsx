@@ -96,7 +96,7 @@ export default async function JobDetailPage({ params }: PageProps) {
       <SectionContainer withBackground backgroundType="hero">
         <div className="relative">
           <div className="space-y-4">
-            <time className="block font-title text-2xl tracking-wider text-white/90">
+            <time className="font-title block text-2xl tracking-wider text-white/90">
               Posted {format(new Date(job.publishedAt), "MMM d, yyyy")}
             </time>
             <Heading level={1}>{job.title}</Heading>
@@ -134,7 +134,7 @@ export default async function JobDetailPage({ params }: PageProps) {
           </div>
 
           <aside className="space-y-6 lg:col-span-2">
-            <Card className="overflow-hidden bg-dark-navy text-white">
+            <Card className="bg-dark-navy overflow-hidden text-white">
               <div className="p-6">
                 <div className="mb-6 flex items-center justify-between gap-4">
                   <Heading level={3} className="mb-0">

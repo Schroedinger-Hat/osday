@@ -155,7 +155,7 @@ export default function PressKitPage() {
                 <Typography variant="muted" className="mb-0">
                   Headings
                 </Typography>
-                <Typography as="span" className="mt-0 font-title text-2xl">
+                <Typography as="span" className="font-title mt-0 text-2xl">
                   Cartoon Town
                 </Typography>
               </div>

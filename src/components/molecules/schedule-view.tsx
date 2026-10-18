@@ -179,7 +179,7 @@ function AuthorAvatar({
   return (
     <span
       className={cn(
-        "flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-muted text-[10px] font-semibold",
+        "bg-muted flex h-7 w-7 shrink-0 items-center justify-center rounded-full text-[10px] font-semibold",
         className,
       )}
     >
@@ -203,7 +203,7 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
       <div className="flex items-center gap-2">
         <span
           className={cn(
-            "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide",
+            "inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase",
             cfg.badge,
           )}
         >
@@ -212,14 +212,14 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
         {trackLabel && (
           <span
             className={cn(
-              "inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold uppercase tracking-wide sm:hidden",
+              "inline-flex items-center rounded-full px-2 py-0.5 text-[10px] font-semibold tracking-wide uppercase sm:hidden",
               cfg.badge,
             )}
           >
             {trackLabel}
           </span>
         )}
-        <span className="text-xs text-muted-foreground">
+        <span className="text-muted-foreground text-xs">
           {typeLabel(item.type)} •{" "}
           <strong>
             {asFormattedTime(item.startDateTime)}
@@ -231,7 +231,7 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
       {/* Title */}
       <Typography
         variant="small"
-        className="line-clamp-2 flex-1 font-bold leading-snug"
+        className="line-clamp-2 flex-1 leading-snug font-bold"
         as="p"
       >
         {item.title}
@@ -242,7 +242,7 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
         <div className="flex items-center justify-between gap-2">
           <Typography
             variant="small"
-            className="truncate text-muted-foreground"
+            className="text-muted-foreground truncate"
           >
             {getAuthorFullName(item.author)}
             {item.coSpeaker && ` & ${getAuthorFullName(item.coSpeaker)}`}
@@ -251,13 +251,13 @@ function ScheduleCard({ item }: { item: TimelineItem }) {
             <AuthorAvatar
               author={item.author}
               className={
-                item.coSpeaker ? "relative z-10 ring-2 ring-card" : undefined
+                item.coSpeaker ? "ring-card relative z-10 ring-2" : undefined
               }
             />
             {item.coSpeaker && (
               <AuthorAvatar
                 author={item.coSpeaker}
-                className="ring-2 ring-card"
+                className="ring-card ring-2"
               />
             )}
           </div>
@@ -451,13 +451,13 @@ export function ScheduleView({ items }: { items: TimelineItem[] }) {
         <div className="mb-2 hidden grid-cols-2 gap-2 px-1 sm:grid">
           <Typography
             variant="small"
-            className="font-semibold uppercase tracking-wide text-muted-foreground"
+            className="text-muted-foreground font-semibold tracking-wide uppercase"
           >
             Track A
           </Typography>
           <Typography
             variant="small"
-            className="font-semibold uppercase tracking-wide text-muted-foreground"
+            className="text-muted-foreground font-semibold tracking-wide uppercase"
           >
             Track B
           </Typography>

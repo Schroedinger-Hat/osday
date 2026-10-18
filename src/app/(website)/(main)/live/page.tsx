@@ -60,10 +60,10 @@ export default function LivePage() {
       <SectionContainer
         withBackground
         backgroundType="hero"
-        className="pb-8 pt-10 md:pb-12 md:pt-16"
+        className="pt-10 pb-8 md:pt-16 md:pb-12"
       >
         <div className="space-y-5">
-          <div className="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-[0.2em] text-white/80">
+          <div className="inline-flex rounded-full border border-white/25 bg-white/10 px-3 py-1 text-xs font-semibold tracking-[0.2em] text-white/80 uppercase">
             OSDAY26 Live
           </div>
           <Heading level={1} className="mb-0 max-w-xl text-5xl md:text-7xl">
@@ -97,7 +97,7 @@ export default function LivePage() {
                     <div className="rounded-2xl bg-white/15 p-3">
                       <Icon className="h-6 w-6" />
                     </div>
-                    <ArrowUpRight className="h-5 w-5 opacity-80 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5" />
+                    <ArrowUpRight className="h-5 w-5 opacity-80 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
                   </div>
                   <div className="mt-6 space-y-2">
                     <Typography
@@ -117,7 +117,7 @@ export default function LivePage() {
         </div>
       </SectionContainer>
 
-      <div className="fixed inset-x-0 bottom-0 z-40 border-t border-border bg-background/95 p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur md:hidden">
+      <div className="border-border bg-background/95 fixed inset-x-0 bottom-0 z-40 border-t p-3 pb-[calc(0.75rem+env(safe-area-inset-bottom))] backdrop-blur md:hidden">
         <div className="mx-auto grid max-w-md grid-cols-4 gap-2">
           {quickLinks.map((link) => (
             <Button
@@ -125,7 +125,7 @@ export default function LivePage() {
               asChild
               variant="outline"
               size="sm"
-              className="h-11 rounded-2xl bg-background"
+              className="bg-background h-11 rounded-2xl"
             >
               <Link
                 href={link.href}

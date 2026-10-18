@@ -411,19 +411,19 @@ export default async function ProgramPage() {
           <div className="bg-white print:break-after-page">
             <section className="flex min-h-[250mm] flex-col justify-between border-y-2 border-slate-950 px-8 py-10">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
+                <p className="text-xs font-semibold tracking-[0.35em] text-slate-500 uppercase">
                   Internal print document
                 </p>
               </div>
 
               <div className="space-y-6 text-center">
-                <p className="text-sm font-semibold uppercase tracking-[0.28em] text-slate-500">
+                <p className="text-sm font-semibold tracking-[0.28em] text-slate-500 uppercase">
                   Schroedinger Hat
                 </p>
                 <h1 className="text-6xl font-semibold tracking-tight text-slate-950">
                   OSDAY26
                 </h1>
-                <p className="text-xl font-medium uppercase tracking-[0.2em] text-slate-700">
+                <p className="text-xl font-medium tracking-[0.2em] text-slate-700 uppercase">
                   Event Program
                 </p>
               </div>
@@ -472,7 +472,7 @@ export default async function ProgramPage() {
                             className="program-row grid grid-cols-[74px_minmax(0,1fr)] gap-3 px-4 py-4"
                           >
                             <aside className="program-row-meta flex flex-col items-center gap-2 text-center">
-                              <div className="w-full text-base font-semibold tabular-nums leading-none text-slate-950">
+                              <div className="w-full text-base leading-none font-semibold text-slate-950 tabular-nums">
                                 {asFormattedTime(item.startDateTime)}
                                 {item.endDateTime && (
                                   <span className="mt-1 block text-xs font-medium text-slate-500">
@@ -484,7 +484,7 @@ export default async function ProgramPage() {
                               {showRoomTag && (
                                 <span
                                   title={getTrackLabel(item.track)}
-                                  className="inline-flex min-w-11 justify-center rounded border border-slate-950 bg-white px-2 py-1 text-[10px] font-semibold uppercase tracking-[0.1em] text-slate-950"
+                                  className="inline-flex min-w-11 justify-center rounded border border-slate-950 bg-white px-2 py-1 text-[10px] font-semibold tracking-[0.1em] text-slate-950 uppercase"
                                 >
                                   {getTrackIndicator(item.track)}
                                 </span>
@@ -529,7 +529,7 @@ export default async function ProgramPage() {
                             </aside>
 
                             <div className="program-row-content min-w-0">
-                              <p className="text-base font-semibold leading-5 text-slate-950">
+                              <p className="text-base leading-5 font-semibold text-slate-950">
                                 {item.titleShort ?? item.title}
                               </p>
                               <div className="mt-1 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-slate-600">
@@ -569,7 +569,7 @@ export default async function ProgramPage() {
           <div className="bg-white print:break-before-page">
             <section className="flex min-h-[250mm] flex-col border-y-2 border-slate-950 px-8 py-10">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
+                <p className="text-xs font-semibold tracking-[0.35em] text-slate-500 uppercase">
                   Event Program
                 </p>
                 <h2 className="mt-3 text-4xl font-semibold tracking-tight text-slate-950">
@@ -594,7 +594,7 @@ export default async function ProgramPage() {
           <div className="bg-white print:break-before-page">
             <section className="flex min-h-[250mm] flex-col border-y-2 border-slate-950 px-8 py-10">
               <div>
-                <p className="text-xs font-semibold uppercase tracking-[0.35em] text-slate-500">
+                <p className="text-xs font-semibold tracking-[0.35em] text-slate-500 uppercase">
                   Event Program
                 </p>
                 <h2 className="mt-3 text-4xl font-semibold tracking-tight text-slate-950">
@@ -603,7 +603,7 @@ export default async function ProgramPage() {
               </div>
 
               <div className="mt-8 overflow-hidden border border-slate-300">
-                <div className="grid grid-cols-[minmax(0,1fr)_220px] bg-slate-100 px-4 py-3 text-[11px] font-semibold uppercase tracking-[0.18em] text-slate-600">
+                <div className="grid grid-cols-[minmax(0,1fr)_220px] bg-slate-100 px-4 py-3 text-[11px] font-semibold tracking-[0.18em] text-slate-600 uppercase">
                   <span>Area</span>
                   <span>Person In Charge</span>
                 </div>

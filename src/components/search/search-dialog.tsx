@@ -161,7 +161,7 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 z-50 bg-black/50 backdrop-blur-sm" />
         <Dialog.Title />
-        <Dialog.Content className="fixed left-1/2 top-[20%] z-50 w-[90%] max-w-3xl -translate-x-1/2 rounded-lg bg-white p-4 shadow-xl dark:bg-neutral-900 md:w-full">
+        <Dialog.Content className="fixed top-[20%] left-1/2 z-50 w-[90%] max-w-3xl -translate-x-1/2 rounded-lg bg-white p-4 shadow-xl md:w-full dark:bg-neutral-900">
           <div className="relative">
             <div className="relative">
               <input
@@ -170,9 +170,9 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
                 value={query}
                 onChange={handleSearch}
                 className={cn(
-                  "w-full rounded-md border border-neutral-300 bg-white px-4 py-2 pr-10 text-base outline-none transition-colors placeholder:text-neutral-500",
+                  "w-full rounded-md border border-neutral-300 bg-white px-4 py-2 pr-10 text-base transition-colors outline-none placeholder:text-neutral-500",
                   "dark:border-neutral-700 dark:bg-neutral-800 dark:text-white dark:placeholder:text-neutral-400",
-                  "focus:border-fiery-red focus:ring-1 focus:ring-fiery-red",
+                  "focus:border-fiery-red focus:ring-fiery-red focus:ring-1",
                 )}
                 autoFocus
               />
@@ -199,7 +199,7 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
                       >
                         <div className="flex flex-col gap-1">
                           <div className="flex items-center justify-between">
-                            <span className="font-medium text-fiery-red">
+                            <span className="text-fiery-red font-medium">
                               {typeof hit.title === "string"
                                 ? hit.title
                                 : extractTextFromSanityObject(hit.title)}
@@ -255,7 +255,7 @@ export function SearchDialog({ isOpen, onOpenChange }: SearchDialogProps) {
           <Dialog.Close asChild>
             <button
               onClick={handleClose}
-              className="absolute right-4 top-4 flex h-7 w-7 items-center justify-center rounded-full bg-neutral-100 text-neutral-500 transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700"
+              className="absolute top-4 right-4 flex h-7 w-7 items-center justify-center rounded-full bg-neutral-100 text-neutral-500 transition-colors hover:bg-neutral-200 dark:bg-neutral-800 dark:text-neutral-400 dark:hover:bg-neutral-700"
             >
               <XIcon className="h-4 w-4" />
               <span className="sr-only">Close</span>

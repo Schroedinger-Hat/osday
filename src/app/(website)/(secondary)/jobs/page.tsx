@@ -95,7 +95,7 @@ export default async function JobBoardPage() {
                 )}
               </div>
               <div className="mb-6 space-y-4">
-                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                <div className="text-muted-foreground flex items-center gap-2 text-sm">
                   <span>
                     Posted {format(new Date(job.publishedAt), "MMM d, yyyy")}
                   </span>
@@ -131,7 +131,7 @@ export default async function JobBoardPage() {
 
           {(!jobs || jobs.length === 0) && (
             <Card>
-              <CardContent className="p-6 text-center text-muted-foreground">
+              <CardContent className="text-muted-foreground p-6 text-center">
                 No job posts available at the moment.
               </CardContent>
             </Card>

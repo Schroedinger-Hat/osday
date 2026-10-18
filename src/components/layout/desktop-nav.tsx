@@ -35,7 +35,7 @@ export function DesktopNav() {
         <Menu className="h-5 w-5" />
       </Button>
 
-      <div className="fixed inset-0 z-50 bg-background">
+      <div className="bg-background fixed inset-0 z-50">
         <div className="mx-auto h-full max-w-7xl px-8">
           <div className="flex h-14 items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
@@ -59,7 +59,7 @@ export function DesktopNav() {
                 <Link
                   key={route.href}
                   href={route.href}
-                  className="relative font-title text-7xl font-bold tracking-wide after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:origin-left after:-rotate-2 after:bg-primary after:transition-all after:duration-150 hover:after:w-[66.666%]"
+                  className="font-title after:bg-primary relative text-7xl font-bold tracking-wide after:absolute after:bottom-0 after:left-0 after:h-2 after:w-0 after:origin-left after:-rotate-2 after:transition-all after:duration-150 hover:after:w-[66.666%]"
                   onClick={() => setIsOpen(false)}
                 >
                   {route.label}
@@ -73,7 +73,7 @@ export function DesktopNav() {
                 <Link
                   key={route.href}
                   href={route.href}
-                  className="font-title text-2xl font-medium hover:text-primary"
+                  className="font-title hover:text-primary text-2xl font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {route.label}
@@ -87,7 +87,7 @@ export function DesktopNav() {
                 <Link
                   key={route.href}
                   href={route.href}
-                  className="font-title text-2xl font-medium hover:text-primary"
+                  className="font-title hover:text-primary text-2xl font-medium"
                   onClick={() => setIsOpen(false)}
                 >
                   {route.label}
